@@ -59,6 +59,7 @@ class _SignupTextFieldsState extends State<CustomTextFields> {
 
   @override
   Widget build(BuildContext context) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
     return TextFormField(
       keyboardType: widget.keyboardType,
       validator: widget.validator,
@@ -117,7 +118,8 @@ class _SignupTextFieldsState extends State<CustomTextFields> {
             ),
             borderRadius: BorderRadius.circular(8)),
         enabledBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: Colors.black26, width: 1.3),
+            borderSide: BorderSide(
+                color: Theme.of(context).secondaryHeaderColor, width: 1.3),
             borderRadius: BorderRadius.circular(8)),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
         focusedBorder: OutlineInputBorder(

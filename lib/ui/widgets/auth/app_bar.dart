@@ -38,6 +38,10 @@ AppBar authAppBar(
         if (model.authPageEnum == AuthPageEnum.realAccount) {
           model.setAuthPageEnum = AuthPageEnum.chooseAccount;
         }
+
+        if (model.authPageEnum == AuthPageEnum.created) {
+          model.setAuthPageEnum = AuthPageEnum.chooseAccount;
+        }
       },
     ),
     centerTitle: false,
@@ -56,7 +60,7 @@ AppBar authAppBar(
           subtitle,
           style: CustomThemeData.generateStyle(
             fontSize: McGyver.textSize(context, 1.5),
-            color: isDarkMode ? Colors.white : const Color(0xff667085),
+            color: isDarkMode ? Colors.white54 : const Color(0xff667085),
             fontWeight: FontWeight.normal,
           ),
         ),

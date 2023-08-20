@@ -13,6 +13,7 @@ class ChooseAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: McGyver.rsDoubleW(context, 5),
@@ -67,7 +68,7 @@ class ChooseAccount extends StatelessWidget {
               },
               text: 'Next',
               color: model.radioItem == null
-                  ? Colors.black54
+                  ? (isDarkMode ? const Color(0xff344054) : Colors.black54)
                   : Theme.of(context).primaryColor),
           verticalSpaceMedium(context),
         ],
@@ -90,7 +91,9 @@ class ChooseAccount extends StatelessWidget {
       // },
       child: Card(
         elevation: 0,
-        color: Colors.white,
+        color: isDarkMode
+            ? Theme.of(context).scaffoldBackgroundColor
+            : Colors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
           side: BorderSide(
@@ -107,13 +110,11 @@ class ChooseAccount extends StatelessWidget {
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2),
                 fontWeight: FontWeight.bold,
-                color: isDarkMode
+                color: (e == AuthPageEnum.login
                     ? Theme.of(context).primaryColor
-                    : (e == AuthPageEnum.login
-                        ? Theme.of(context).primaryColor
-                        : e == AuthPageEnum.demoAccount
-                            ? Colors.green
-                            : Colors.red),
+                    : e == AuthPageEnum.demoAccount
+                        ? Colors.green
+                        : Colors.red),
               ),
             ),
             subtitle: Padding(
@@ -126,7 +127,7 @@ class ChooseAccount extends StatelessWidget {
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.4),
                   fontWeight: FontWeight.normal,
-                  color: isDarkMode ? Colors.white : Colors.black54,
+                  color: isDarkMode ? Colors.white54 : Colors.black54,
                 ),
               ),
             ),

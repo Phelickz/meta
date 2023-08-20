@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/utils/theme.dart';
 
 class CustomRadioWidget<T> extends StatelessWidget {
   final T value;
@@ -17,6 +18,7 @@ class CustomRadioWidget<T> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: GestureDetector(
@@ -26,9 +28,9 @@ class CustomRadioWidget<T> extends StatelessWidget {
         child: Container(
           height: this.height,
           width: this.width,
-          decoration: const ShapeDecoration(
-            shape: CircleBorder(),
-            color: Colors.black54,
+          decoration: ShapeDecoration(
+            shape: const CircleBorder(),
+            color: isDarkMode ? Colors.white : Colors.black54,
           ),
           child: Center(
             child: Container(

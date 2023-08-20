@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
+import 'package:meta_trader/ui/widgets/auth/created.dart';
 import 'package:meta_trader/ui/widgets/auth/demo.dart';
 import 'package:meta_trader/ui/widgets/auth/real.dart';
 
@@ -10,7 +11,14 @@ import '../../widgets/auth/broker.dart';
 import '../../widgets/auth/choose_account.dart';
 import '../../widgets/auth/login.dart';
 
-enum AuthPageEnum { broker, chooseAccount, demoAccount, realAccount, login }
+enum AuthPageEnum {
+  broker,
+  chooseAccount,
+  demoAccount,
+  realAccount,
+  login,
+  created
+}
 
 class AuthViewModel extends CustomBaseViewModel {
   Future<void> init() async {}
@@ -70,6 +78,8 @@ class AuthViewModel extends CustomBaseViewModel {
         return DemoPage(model: this);
       case AuthPageEnum.realAccount:
         return RealPage(model: this);
+      case AuthPageEnum.created:
+        return CreatedPage(model: this);
       default:
         return Container();
     }
@@ -84,13 +94,16 @@ class AuthViewModel extends CustomBaseViewModel {
             context, _selectedBrokerName ?? "", 'Choose an account', this);
       case AuthPageEnum.login:
         return authAppBar(
-            context, _selectedBrokerName ?? "", 'Enter login details', this);
+            context, 'Login to Existing Account', 'Enter login details', this);
       case AuthPageEnum.demoAccount:
         return authAppBar(
             context, 'Open A Demo Account', 'Enter your information', this);
       case AuthPageEnum.realAccount:
         return authAppBar(
             context, 'Open A Real Account', 'Enter your information', this);
+      case AuthPageEnum.created:
+        return authAppBar(
+            context, 'Open An Account', 'Created account information', this);
       default:
         return null;
     }

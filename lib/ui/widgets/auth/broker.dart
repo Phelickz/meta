@@ -18,6 +18,11 @@ class BrokerPage extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: TextField(
+            style: CustomThemeData.generateStyle(
+              fontSize: 16,
+              color: isDarkMode ? Colors.white : Colors.black,
+              fontWeight: FontWeight.bold,
+            ),
             controller: model.brokerSearchController,
             onChanged: (String? value) {
               if ((value ?? '').isNotEmpty) {
@@ -28,6 +33,16 @@ class BrokerPage extends StatelessWidget {
             },
             decoration: InputDecoration(
               hintText: 'Search',
+              hintStyle: CustomThemeData.generateStyle(
+                fontSize: 15,
+                color: Theme.of(context).secondaryHeaderColor,
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: Theme.of(context).secondaryHeaderColor,
+                ),
+                borderRadius: BorderRadius.circular(10),
+              ),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
@@ -42,10 +57,14 @@ class BrokerPage extends StatelessWidget {
                           'assets/images/close-square.svg',
                           height: 25,
                           width: 25,
+                          color: Theme.of(context).secondaryHeaderColor,
                         ),
                       ),
                     )
-                  : const Icon(Icons.search),
+                  : Icon(
+                      Icons.search,
+                      color: Theme.of(context).secondaryHeaderColor,
+                    ),
             ),
           ),
         ),
@@ -80,7 +99,10 @@ class BrokerPage extends StatelessWidget {
         model.setAuthPageEnum = AuthPageEnum.chooseAccount;
       },
       trailing: IconButton(
-        icon: const Icon(Icons.info_outline),
+        icon: Icon(
+          Icons.info_outline,
+          color: Theme.of(context).secondaryHeaderColor,
+        ),
         onPressed: () {},
       ),
       leading: Container(

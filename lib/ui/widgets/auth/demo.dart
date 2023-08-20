@@ -37,7 +37,7 @@ class DemoPage extends StatelessWidget {
               'Full Name',
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
-                color: isDarkMode ? Colors.white : const Color(0xff667085),
+                color: isDarkMode ? Colors.white70 : const Color(0xff667085),
               ),
             ),
             verticalSpaceXSmall(context),
@@ -49,7 +49,7 @@ class DemoPage extends StatelessWidget {
               'Login ID',
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
-                color: isDarkMode ? Colors.white : const Color(0xff667085),
+                color: isDarkMode ? Colors.white70 : const Color(0xff667085),
               ),
             ),
             verticalSpaceXSmall(context),
@@ -69,16 +69,17 @@ class DemoPage extends StatelessWidget {
               'Server',
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
-                color: isDarkMode ? Colors.white : const Color(0xff667085),
+                color: isDarkMode ? Colors.white70 : const Color(0xff667085),
               ),
             ),
             verticalSpaceXSmall(context),
-            const CustomTextFields(
+            CustomTextFields(
               hintText: 'DCFXPrime-Real',
               password: false,
               suffixIcon: Icon(
                 Icons.arrow_forward_ios,
                 size: 20,
+                color: Theme.of(context).secondaryHeaderColor,
               ),
             ),
             verticalSpaceSmall(context),
@@ -86,16 +87,17 @@ class DemoPage extends StatelessWidget {
               'Use Hedge',
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
-                color: isDarkMode ? Colors.white : const Color(0xff667085),
+                color: isDarkMode ? Colors.white70 : const Color(0xff667085),
               ),
             ),
             verticalSpaceXSmall(context),
-            const CustomTextFields(
+            CustomTextFields(
               hintText: 'Select Option',
               password: false,
               suffixIcon: Icon(
                 Icons.arrow_forward_ios,
                 size: 20,
+                color: Theme.of(context).secondaryHeaderColor,
               ),
             ),
             verticalSpaceSmall(context),
@@ -103,16 +105,17 @@ class DemoPage extends StatelessWidget {
               'Leverage',
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
-                color: isDarkMode ? Colors.white : const Color(0xff667085),
+                color: isDarkMode ? Colors.white70 : const Color(0xff667085),
               ),
             ),
             verticalSpaceXSmall(context),
-            const CustomTextFields(
+            CustomTextFields(
               hintText: '1:100',
               password: false,
               suffixIcon: Icon(
                 Icons.arrow_forward_ios,
                 size: 20,
+                color: Theme.of(context).secondaryHeaderColor,
               ),
             ),
             verticalSpaceSmall(context),
@@ -120,16 +123,17 @@ class DemoPage extends StatelessWidget {
               'Deposit',
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
-                color: isDarkMode ? Colors.white : const Color(0xff667085),
+                color: isDarkMode ? Colors.white70 : const Color(0xff667085),
               ),
             ),
             verticalSpaceXSmall(context),
-            const CustomTextFields(
+            CustomTextFields(
               hintText: '10000',
               password: false,
               suffixIcon: Icon(
                 Icons.arrow_forward_ios,
                 size: 20,
+                color: Theme.of(context).secondaryHeaderColor,
               ),
             ),
             verticalSpaceSmall(context),
@@ -151,7 +155,7 @@ class DemoPage extends StatelessWidget {
                       fontSize: 13,
                       fontWeight: FontWeight.normal,
                       color:
-                          isDarkMode ? Colors.white : const Color(0xff98A2B3),
+                          isDarkMode ? Colors.white70 : const Color(0xff98A2B3),
                     ),
                   ),
                 )
@@ -160,7 +164,9 @@ class DemoPage extends StatelessWidget {
             verticalSpaceSmall(context),
             CustomButtons.generalButton(
               context: context,
-              onTap: () {},
+              onTap: () {
+                model.setAuthPageEnum = AuthPageEnum.created;
+              },
               text: 'Next',
             ),
             verticalSpaceMedium(context),
@@ -174,10 +180,7 @@ class DemoPage extends StatelessWidget {
       BuildContext context, String title, String subtitle, bool isDarkMode) {
     return ListTile(
       contentPadding: EdgeInsets.zero,
-      onTap: () {
-        model.setSelectedBrokerName = title;
-        model.setAuthPageEnum = AuthPageEnum.chooseAccount;
-      },
+      onTap: () {},
       leading: Container(
         height: 50,
         width: 50,
@@ -197,7 +200,7 @@ class DemoPage extends StatelessWidget {
         style: CustomThemeData.generateStyle(
           fontSize: McGyver.textSize(context, 1.8),
           fontWeight: FontWeight.w700,
-          color: isDarkMode ? Colors.white : const Color(0xff667085),
+          color: isDarkMode ? Colors.white : Colors.black,
         ),
       ),
       subtitle: Text(
