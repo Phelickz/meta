@@ -22,7 +22,6 @@ dependencies:
   # misc
   logger: 1.1.0
   provider:
-  google_fonts: 2.2.0
   one_context:
   get:
   intl:
@@ -31,6 +30,7 @@ dependencies:
   csslib: 0.17.0
   flutter_svg: 
   stacked_themes: 
+  google_fonts: ^5.1.0
   
 dev_dependencies:
   flutter_test:
@@ -51,6 +51,7 @@ flutter:
 # Assets Example
   assets:
     - assets/images/
+    - assets/icons/
 
 # Fonts Example
   fonts:

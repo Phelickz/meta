@@ -27,14 +27,20 @@ class MetaTraderApp extends StatelessWidget {
           // theme: ThemeData(brightness: Brightness.light, fontFamily: 'Gilroy'),
           darkTheme: darkTheme,
         );
+        //
+        // return MaterialApp(
+        //   theme: regularTheme,
+        //   themeMode: themeMode,
+        //   darkTheme: darkTheme,
+        //   home: ProfileView(),
+        // );
       },
     );
   }
 }
 
-
 // getThemeManager(context)
-  // .toggleDarkLightTheme();
+// .toggleDarkLightTheme();
 
 // getThemeManager(context)
 //   .setThemeMode(ThemeMode.light);
