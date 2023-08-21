@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import '../../../../app/responsiveness/res.dart';
 import '../../../../app/utils/theme.dart';
 
-class NotificationTile extends StatelessWidget {
+class NotificationSettingsTile extends StatelessWidget {
   final String title;
   final bool value;
   final Function onChanged;
 
-  const NotificationTile(
+  const NotificationSettingsTile(
       {Key? key,
       required this.title,
       required this.value,
@@ -31,8 +31,8 @@ class NotificationTile extends StatelessWidget {
         trailing: Switch.adaptive(
           value: value,
           activeColor: Colors.blue,
-          onChanged: (value) {
-            onChanged();
+          onChanged: (bool value) {
+            onChanged(value);
           },
         ));
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
-import 'package:meta_trader/ui/widgets/settings/components/notification_tile.dart';
+import 'package:meta_trader/ui/widgets/settings/components/notification_settings_tile.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/utils/theme.dart';
@@ -38,11 +38,16 @@ class NotificationSettingsPage extends StatelessWidget {
           ),
           SizedBox(
             width: double.infinity,
-            child: ListView.builder(
+            child: ListView.separated(
+                separatorBuilder: (context, index) {
+                  return SizedBox(
+                    height: 6.pHeight(context),
+                  );
+                },
                 shrinkWrap: true,
                 itemCount: model.switchValues.length,
                 itemBuilder: (context, index) {
-                  return NotificationTile(
+                  return NotificationSettingsTile(
                       title: model.switchValues[index]["title"],
                       value: model.switchValues[index]["value"],
                       onChanged: (value) {
