@@ -20,6 +20,8 @@ class NotificationSettingsTile extends StatelessWidget {
     var isDarkMode = CustomThemeData.isDarkMode(context);
 
     return ListTile(
+        contentPadding: EdgeInsets.zero,
+        titleAlignment: ListTileTitleAlignment.top,
         title: Text(
           title,
           style: CustomThemeData.generateStyle(

@@ -21,9 +21,10 @@ class NotificationSettingsPage extends StatelessWidget {
         horizontal: McGyver.rsDoubleW(context, 6),
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            height: 15.pHeight(context),
+            height: 10.pHeight(context),
           ),
           Text(
             "App",
@@ -34,14 +35,14 @@ class NotificationSettingsPage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 15.pHeight(context),
+            height: 10.pHeight(context),
           ),
           SizedBox(
             width: double.infinity,
             child: ListView.separated(
                 separatorBuilder: (context, index) {
                   return SizedBox(
-                    height: 6.pHeight(context),
+                    height: 1.pHeight(context),
                   );
                 },
                 shrinkWrap: true,

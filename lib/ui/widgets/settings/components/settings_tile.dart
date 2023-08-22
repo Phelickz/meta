@@ -20,20 +20,23 @@ class BasicSettingsTile extends StatelessWidget {
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
 
-    return ListTile(
-        title: Text(
-          title,
-          style: CustomThemeData.generateStyle(
-            fontSize: McGyver.textSize(context, 1.5),
-            color: isDarkMode ? Colors.white54 : const Color(0xff667085),
-            fontWeight: FontWeight.normal,
-          ),
+    return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+      Text(
+        title,
+        style: CustomThemeData.generateStyle(
+          fontSize: McGyver.textSize(context, 1.5),
+          color: isDarkMode ? Colors.white54 : const Color(0xff667085),
+          fontWeight: FontWeight.normal,
         ),
-        trailing: isArrowTrailing
-            ? Icon(
-                Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
-                color: isDarkMode ? Colors.white : Colors.black,
-              )
-            : secondaryTrailing!);
+      ),
+      isArrowTrailing
+          ? Icon(
+              Platform.isAndroid
+                  ? Icons.arrow_forward
+                  : Icons.arrow_forward_ios,
+              color: isDarkMode ? Colors.white : Colors.black,
+            )
+          : secondaryTrailing!
+    ]);
   }
 }

@@ -9,7 +9,10 @@ import 'package:meta_trader/ui/widgets/settings/color_preference.dart';
 import 'package:meta_trader/ui/widgets/settings/language_settings.dart';
 import 'package:meta_trader/ui/widgets/settings/notification_settings.dart';
 import 'package:meta_trader/ui/widgets/settings/settings.dart';
+import 'package:stacked_themes/stacked_themes.dart';
 
+import '../../../app/locator/locator.dart';
+import '../../../app/services/theme_service.dart';
 import '../../widgets/settings/components/app_bar.dart';
 
 enum SettingsPageEnum {
@@ -22,18 +25,33 @@ enum SettingsPageEnum {
 }
 
 class SettingsViewModel extends CustomBaseViewModel {
+  bool _isDarkMode = false;
+  final _themeService = locator<ThemeServices>();
+
+  // bool get isDarkMode => _isDarkMode;
+
+  // ThemeData get currentTheme =>
+  //     _isDarkMode ? CustomThemeData.darkTheme : CustomThemeData.lightTheme;
+
   List switchValues = [
     {"title": SettingsStringsManager.tradeNotification, "value": false},
-    {"title": SettingsStringsManager.tradeNotification, "value": false},
-    {"title": SettingsStringsManager.tradeNotification, "value": false},
-    {"title": SettingsStringsManager.tradeNotification, "value": false},
-    {"title": SettingsStringsManager.tradeNotification, "value": false},
+    {"title": SettingsStringsManager.forexNews, "value": false},
+    {"title": SettingsStringsManager.socialTradingPrompts, "value": false},
+    {"title": SettingsStringsManager.systemMessages, "value": false},
+    {"title": SettingsStringsManager.risksPrompt, "value": false},
   ];
 
   SettingsPageEnum _settingsPageEnum = SettingsPageEnum.settings;
   SettingsPageEnum get settingsPageEnum => _settingsPageEnum;
   set setSettingsPageEnum(SettingsPageEnum e) {
     _settingsPageEnum = e;
+    rebuildUi();
+  }
+
+  void toggleThemeMode(bool value) {
+    _isDarkMode = !_isDarkMode;
+    _themeService.themeService.setThemeMode(
+        _isDarkMode ? ThemeManagerMode.dark : ThemeManagerMode.light);
     rebuildUi();
   }
 
