@@ -38,7 +38,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
         unselectedLabelStyle: CustomThemeData.generateStyle(
           fontSize: 15,
           // color: isDarkMode ? Colors.white : Colors.black,
-          color: Colors.red,
+          // color: Colors.red,
         ),
         selectedLabelStyle: CustomThemeData.generateStyle(
           fontSize: 15,
