@@ -21,7 +21,11 @@ class ProfilePage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ProfileBar(),
+          ProfileBar(
+            name: model.userName,
+            rank: model.rank,
+            isVerified: model.isVerified,
+          ),
           SizedBox(
             height: 12.pHeight(context),
           ),

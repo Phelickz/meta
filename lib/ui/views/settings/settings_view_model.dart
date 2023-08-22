@@ -41,7 +41,20 @@ class SettingsViewModel extends CustomBaseViewModel {
     {"title": SettingsStringsManager.risksPrompt, "value": false},
   ];
 
-  SettingsPageEnum _settingsPageEnum = SettingsPageEnum.settings;
+  List languages = [
+    "English",
+    "French",
+    "Spanish",
+    "Deutsch",
+    "Bahasa",
+    "Italiano",
+    "vlaams"
+  ];
+
+  String _selectedLanguage = "English";
+  String get selectedLanguage => _selectedLanguage;
+
+  SettingsPageEnum _settingsPageEnum = SettingsPageEnum.languageSettings;
   SettingsPageEnum get settingsPageEnum => _settingsPageEnum;
   set setSettingsPageEnum(SettingsPageEnum e) {
     _settingsPageEnum = e;
@@ -52,6 +65,11 @@ class SettingsViewModel extends CustomBaseViewModel {
     _isDarkMode = !_isDarkMode;
     _themeService.themeService.setThemeMode(
         _isDarkMode ? ThemeManagerMode.dark : ThemeManagerMode.light);
+    rebuildUi();
+  }
+
+  void changeLanguage(String language) {
+    _selectedLanguage = language;
     rebuildUi();
   }
 

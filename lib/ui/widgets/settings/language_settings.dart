@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../../../app/responsiveness/res.dart';
+import '../../../app/utils/strings_manager.dart';
+import '../../../app/utils/theme.dart';
 import '../../views/settings/settings_view_model.dart';
+import '../textfields/textfield.dart';
 
 class LanguageSettingsPage extends StatelessWidget {
   final SettingsViewModel model;
@@ -9,6 +13,51 @@ class LanguageSettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    var isDarkMode = CustomThemeData.isDarkMode(context);
+
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: McGyver.rsDoubleW(context, 6)),
+      child: Column(
+        children: [
+          Container(
+            color: Theme.of(context).scaffoldBackgroundColor,
+            child: CustomTextFields(
+              hintText: SettingsStringsManager.search,
+              suffixIcon: Icon(Icons.search),
+            ),
+          ),
+          Expanded(
+            child: SizedBox(
+              width: double.infinity,
+              child: ListView.builder(
+                  itemCount: model.languages.length,
+                  itemBuilder: (context, index) {
+                    final isSelected =
+                        model.selectedLanguage == model.languages[index];
+
+                    return ListTile(
+                      title: Row(
+                        children: [
+                          Text(model.languages[index]),
+                          Spacer(), // Space to push radio button to the right
+                          Radio<String>(
+                            value: model.languages[index],
+                            groupValue: model.selectedLanguage,
+                            onChanged: (value) {
+                              model.changeLanguage(value!);
+                            },
+                          ),
+                        ],
+                      ),
+                      onTap: () {
+                        model.changeLanguage(model.languages[index]);
+                      },
+                    );
+                  }),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

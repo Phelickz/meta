@@ -8,7 +8,15 @@ import '../../../app/responsiveness/res.dart';
 import '../../../app/utils/theme.dart';
 
 class ProfileBar extends StatelessWidget {
-  const ProfileBar({Key? key}) : super(key: key);
+  final String name;
+  final String rank;
+  final bool isVerified;
+  const ProfileBar(
+      {Key? key,
+      required this.name,
+      required this.rank,
+      required this.isVerified})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +73,7 @@ class ProfileBar extends StatelessWidget {
                             width: 1.pWidth(context),
                           ),
                           Text(
-                            "Silver",
+                            rank,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.6),
                               color: Colors.white,
@@ -93,7 +101,7 @@ class ProfileBar extends StatelessWidget {
                     ),
                     isDarkMode
                         ? Text(
-                            "Unverified",
+                            isVerified ? "Verified " : "Unverified",
                             style: CustomThemeData.generateStyle(
                               fontSize: 8,
                               color: Colors.red,
@@ -109,17 +117,20 @@ class ProfileBar extends StatelessWidget {
                             child: Row(
                               children: [
                                 Text(
-                                  "Unverified",
+                                  isVerified ? "Verified" : "Unverified",
                                   style: CustomThemeData.generateStyle(
                                     fontSize: 8,
-                                    color: Colors.red,
+                                    color:
+                                        isVerified ? Colors.green : Colors.red,
                                   ),
                                 ),
-                                Icon(
-                                  Icons.warning_amber_outlined,
-                                  color: Colors.red,
-                                  size: 16.pWidth(context),
-                                )
+                                isVerified
+                                    ? SizedBox()
+                                    : Icon(
+                                        Icons.warning_amber_outlined,
+                                        color: Colors.red,
+                                        size: 16.pWidth(context),
+                                      )
                               ],
                             ),
                           )

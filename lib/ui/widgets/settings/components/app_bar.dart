@@ -2,8 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
-import 'package:meta_trader/app/utils/strings_manager.dart';
-import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
 
 import '../../../../app/utils/theme.dart';
 import '../../../views/settings/settings_view_model.dart';
@@ -36,22 +34,13 @@ AppBar settingsAppBar(BuildContext context, String title, String subtitle,
           ),
         ),
         model.settingsPageEnum == SettingsPageEnum.languageSettings
-            ? Column(
-                children: [
-                  Text(
-                    subtitle,
-                    style: CustomThemeData.generateStyle(
-                      fontSize: McGyver.textSize(context, 1.5),
-                      color:
-                          isDarkMode ? Colors.white54 : const Color(0xff667085),
-                      fontWeight: FontWeight.normal,
-                    ),
-                  ),
-                  CustomTextFields(
-                    hintText: SettingsStringsManager.search,
-                    suffixIcon: Icon(Icons.search),
-                  )
-                ],
+            ? Text(
+                subtitle,
+                style: CustomThemeData.generateStyle(
+                  fontSize: McGyver.textSize(context, 1.5),
+                  color: isDarkMode ? Colors.white54 : const Color(0xff667085),
+                  fontWeight: FontWeight.normal,
+                ),
               )
             : SizedBox(),
       ],
