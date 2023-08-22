@@ -73,7 +73,7 @@ class IdentityVerificationSuccessPage extends StatelessWidget {
           CustomButtons.generalButton(
               context: context,
               onTap: () {
-                model.push(const DashboardRoute());
+                model.push(const BottomNavBarRoute());
               },
               text: 'Continue'),
           verticalSpaceMedium(context),

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:meta_trader/ui/views/startup/startup_view_model.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
 
 import '../../../app/responsiveness/res.dart';
-import '../../widgets/startup/background.dart';
 import 'dashboard_view_model.dart';
 
 class DashboardView extends StackedView<DashboardViewModel> {
