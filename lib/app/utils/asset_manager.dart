@@ -6,6 +6,11 @@ const String TESTIMAGEPATH = 'assets/testimages';
 class AssetManager {
   static const profile = "$IMAGEPATH/profile.png";
   static const referralImage = "$IMAGEPATH/referralimage.svg";
+  static const metaLogo = "$IMAGEPATH/metalogo.svg";
+  static const metaPngLogo = "$IMAGEPATH/metapnglogo.png";
+
+  static const referralPageImageDark = "$IMAGEPATH/referralpageimagedark.svg";
+  static const referralPageImageLight = "$IMAGEPATH/referralpageimagelight.svg";
 
   static const manageAccountIcon = "$ICONPATH/courthouse.svg";
   static const referralsIcon = "$ICONPATH/people.svg";
@@ -23,4 +28,11 @@ class AssetManager {
   static const settings = "$ICONPATH/setting.svg";
 
   static const forwardArrow = "$ICONPATH/arrowright.svg";
+
+  static const copy = "$ICONPATH/copy.svg";
+  static const agreement = "$ICONPATH/document.svg";
+  static const reward = "$ICONPATH/chart.svg";
+  static const facebook = "$ICONPATH/facebook.svg";
+  static const refresh = "$ICONPATH/refresh.svg";
+  static const convert = "$ICONPATH/convert.svg";
 }

@@ -38,7 +38,14 @@ class LanguageSettingsPage extends StatelessWidget {
                     return ListTile(
                       title: Row(
                         children: [
-                          Text(model.languages[index]),
+                          Text(model.languages[index],
+                              style: CustomThemeData.generateStyle(
+                                fontSize: McGyver.textSize(context, 1.5),
+                                color: isDarkMode
+                                    ? Colors.white54
+                                    : const Color(0xff667085),
+                                fontWeight: FontWeight.normal,
+                              )),
                           Spacer(), // Space to push radio button to the right
                           Radio<String>(
                             value: model.languages[index],
