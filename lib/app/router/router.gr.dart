@@ -38,13 +38,13 @@ abstract class $MetaTraderRouter extends _i14.RootStackRouter {
         child: const _i1.AuthView(),
       );
     },
-    BottomNavBarView.name: (routeData) {
+    BottomNavBarRoute.name: (routeData) {
       return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i2.BottomNavBarView(),
       );
     },
-    DashboardView.name: (routeData) {
+    DashboardRoute.name: (routeData) {
       return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i3.DashboardView(),
@@ -104,7 +104,7 @@ abstract class $MetaTraderRouter extends _i14.RootStackRouter {
         child: const _i12.StartupView(),
       );
     },
-    VerificationView.name: (routeData) {
+    VerificationRoute.name: (routeData) {
       return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i13.VerificationView(),
@@ -129,28 +129,28 @@ class AuthRoute extends _i14.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.BottomNavBarView]
-class BottomNavBarView extends _i14.PageRouteInfo<void> {
-  const BottomNavBarView({List<_i14.PageRouteInfo>? children})
+class BottomNavBarRoute extends _i14.PageRouteInfo<void> {
+  const BottomNavBarRoute({List<_i14.PageRouteInfo>? children})
       : super(
-          BottomNavBarView.name,
+          BottomNavBarRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'BottomNavBarView';
+  static const String name = 'BottomNavBarRoute';
 
   static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i3.DashboardView]
-class DashboardView extends _i14.PageRouteInfo<void> {
-  const DashboardView({List<_i14.PageRouteInfo>? children})
+class DashboardRoute extends _i14.PageRouteInfo<void> {
+  const DashboardRoute({List<_i14.PageRouteInfo>? children})
       : super(
-          DashboardView.name,
+          DashboardRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'DashboardView';
+  static const String name = 'DashboardRoute';
 
   static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
 }
@@ -283,14 +283,14 @@ class StartupRoute extends _i14.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i13.VerificationView]
-class VerificationView extends _i14.PageRouteInfo<void> {
-  const VerificationView({List<_i14.PageRouteInfo>? children})
+class VerificationRoute extends _i14.PageRouteInfo<void> {
+  const VerificationRoute({List<_i14.PageRouteInfo>? children})
       : super(
-          VerificationView.name,
+          VerificationRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'VerificationView';
+  static const String name = 'VerificationRoute';
 
   static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
 }

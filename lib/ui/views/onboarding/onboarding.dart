@@ -15,7 +15,7 @@ import '../../widgets/onboarding/onboarding_one.dart';
 import '../../widgets/startup/background.dart';
 import 'onboarding_view_model.dart';
 
-@RoutePage(name: "OnboardingRoute")
+@RoutePage()
 class OnboardingView extends StackedView<OnboardingViewModel> {
   const OnboardingView({super.key});
 

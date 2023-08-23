@@ -5,7 +5,7 @@ import 'package:meta_trader/ui/widgets/profile/profile_bar.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
 
-@RoutePage(name: "ProfileRoute")
+@RoutePage()
 class ProfileView extends StackedView<ProfileViewModel> {
   const ProfileView({super.key});
 

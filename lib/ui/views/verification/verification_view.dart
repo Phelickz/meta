@@ -6,7 +6,7 @@ import 'package:stacked/stacked.dart';
 
 import '../../../app/responsiveness/res.dart';
 
-@RoutePage(name: "VerificationView")
+@RoutePage()
 class VerificationView extends StackedView<VerificationViewModel> {
   const VerificationView({super.key});
 
