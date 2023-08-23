@@ -9,6 +9,7 @@ import 'package:meta_trader/ui/widgets/settings/color_preference.dart';
 import 'package:meta_trader/ui/widgets/settings/language_settings.dart';
 import 'package:meta_trader/ui/widgets/settings/notification_settings.dart';
 import 'package:meta_trader/ui/widgets/settings/settings.dart';
+import 'package:meta_trader/ui/widgets/settings/update_releases.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
 import '../../../app/locator/locator.dart';
@@ -23,17 +24,13 @@ enum SettingsPageEnum {
   chartColor,
   colorPreference,
   changeBasis,
-  aboutUs
+  aboutUs,
+  updateReleases
 }
 
 class SettingsViewModel extends CustomBaseViewModel {
   bool _isDarkMode = false;
   final _themeService = locator<ThemeServices>();
-
-  // bool get isDarkMode => _isDarkMode;
-
-  // ThemeData get currentTheme =>
-  //     _isDarkMode ? CustomThemeData.darkTheme : CustomThemeData.lightTheme;
 
   List switchValues = [
     {"title": SettingsStringsManager.tradeNotification, "value": false},
@@ -43,7 +40,7 @@ class SettingsViewModel extends CustomBaseViewModel {
     {"title": SettingsStringsManager.risksPrompt, "value": false},
   ];
 
-  List languages = [
+  List _languages = [
     "English",
     "French",
     "Spanish",
@@ -53,22 +50,46 @@ class SettingsViewModel extends CustomBaseViewModel {
     "vlaams"
   ];
 
+  List get languages => _languages;
+
+  List _timeZones = [
+    "Last 24 Hrs",
+    "UTC+1, 00:00 (Device time zone)",
+    "UTC+12, 00:00",
+    "UTC+11, 00:00",
+    "UTC+10, 00:00",
+    "UTC+9, 00:00",
+    "UTC+8, 00:00"
+  ];
+
+  List get timezones => _timeZones;
+  List _updateFeatures = [
+    "WhatsApp addition",
+    "add notice of upcoming signals",
+    "adding different views on the market ection"
+  ];
+
+  List get updateFeatures => _updateFeatures;
+
+  String _selectedTimezone = "Last 24 Hrs";
+  String get selectedTimeZone => _selectedTimezone;
+
   String _selectedLanguage = "English";
   String get selectedLanguage => _selectedLanguage;
 
   String _appVersion = "1.12.2";
   String get appVersion => _appVersion;
 
-  SettingsPageEnum _settingsPageEnum = SettingsPageEnum.settings;
+  SettingsPageEnum _settingsPageEnum = SettingsPageEnum.changeBasis;
   SettingsPageEnum get settingsPageEnum => _settingsPageEnum;
-
-  set appVersion(String version) {
-    _appVersion = version;
-    rebuildUi();
-  }
 
   set setSettingsPageEnum(SettingsPageEnum e) {
     _settingsPageEnum = e;
+    rebuildUi();
+  }
+
+  set appVersion(String version) {
+    _appVersion = version;
     rebuildUi();
   }
 
@@ -81,6 +102,11 @@ class SettingsViewModel extends CustomBaseViewModel {
 
   void changeLanguage(String language) {
     _selectedLanguage = language;
+    rebuildUi();
+  }
+
+  void changeTimezone(String timezone) {
+    _selectedTimezone = timezone;
     rebuildUi();
   }
 
@@ -105,6 +131,8 @@ class SettingsViewModel extends CustomBaseViewModel {
         return ChangeBasisPage(model: this);
       case SettingsPageEnum.aboutUs:
         return AboutUsPage(model: this);
+      case SettingsPageEnum.updateReleases:
+        return UpdateReleasePage(model: this);
       default:
         return Container();
     }
@@ -133,6 +161,8 @@ class SettingsViewModel extends CustomBaseViewModel {
       case SettingsPageEnum.aboutUs:
         return settingsAppBar(
             context, 'About Us', '', this, SettingsPageEnum.aboutUs);
+      case SettingsPageEnum.updateReleases:
+        return null;
       default:
         return null;
     }

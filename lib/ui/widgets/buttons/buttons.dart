@@ -80,4 +80,36 @@ class CustomButtons {
       ),
     );
   }
+
+  static Widget generalTextButton(
+      {required BuildContext context,
+      required Function? onTap,
+      required String text,
+      Color? color,
+      Color textColor = const Color(0xFF8ACDF9),
+      double? width,
+      double? padding,
+      double? textSize,
+      double? borderRadius}) {
+    return SizedBox(
+      width: width ?? McGyver.rsDoubleW(context, 90),
+      child: Center(
+        child: TextButton(
+          onPressed: () {
+            FocusScope.of(context).requestFocus(FocusNode());
+            onTap!();
+          },
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: padding ?? 18),
+            child: Text(
+              text,
+              style: CustomThemeData.generateStyle(
+                  fontSize: McGyver.textSize(context, textSize ?? 1.5),
+                  color: textColor),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
