@@ -1,8 +1,10 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
 import 'auth_view_model.dart';
 
+@RoutePage(name: "AuthRoute")
 class AuthView extends StackedView<AuthViewModel> {
   const AuthView({super.key});
 

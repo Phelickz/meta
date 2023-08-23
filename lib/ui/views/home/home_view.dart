@@ -1,9 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
 
 import './home_view_model.dart';
 
+@RoutePage(name: "HomeRoute")
 class HomeView extends StackedView<HomeViewModel> {
   const HomeView({super.key});
 
