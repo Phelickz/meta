@@ -12,7 +12,9 @@ class MetaTraderRouter extends $MetaTraderRouter {
         AdaptiveRoute(page: OnboardingRoute.page),
         AdaptiveRoute(page: AuthRoute.page),
         AdaptiveRoute(page: HomeRoute.page),
-        AdaptiveRoute(page: ProfileRoute.page),
+        AdaptiveRoute(page: PmAddRoute.page),
+        AdaptiveRoute(page: SettingsRoute.page),
+        AdaptiveRoute(page: ReferralRoute.page),
         AdaptiveRoute(page: PmMainRoute.page),
         AdaptiveRoute(page: PmAddRoute.page),
       ];
