@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/ui/views/auth/auth_view_model.dart';
+import 'package:meta_trader/ui/views/verification/verification_view.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
 
@@ -13,6 +14,7 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // getThemeManager(context).setThemeMode(ThemeMode.light);
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Padding(
       padding: EdgeInsets.symmetric(
@@ -93,7 +95,9 @@ class LoginPage extends StatelessWidget {
             verticalSpaceSmall(context),
             CustomButtons.generalButton(
               context: context,
-              onTap: () {},
+              onTap: () {
+                model.push(const VerificationView());
+              },
               text: 'Sign in',
             ),
             verticalSpaceXSmall(context),

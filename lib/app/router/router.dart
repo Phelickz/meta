@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-
-import 'router.gr.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 
 @AutoRouterConfig()
 class MetaTraderRouter extends $MetaTraderRouter {
@@ -17,5 +16,28 @@ class MetaTraderRouter extends $MetaTraderRouter {
         AdaptiveRoute(page: ReferralRoute.page),
         AdaptiveRoute(page: PmMainRoute.page),
         AdaptiveRoute(page: PmAddRoute.page),
+
+        AdaptiveRoute(page: VerificationView.page),
+        AdaptiveRoute(page: DashboardView.page),
+        AdaptiveRoute(page: BottomNavBarView.page)
       ];
 }
+
+// import '../../ui/views/auth/auth_view.dart';
+// import '../../ui/views/bottomNav/bottom_nav.dart';
+// import '../../ui/views/dashboard/dashboard_view.dart';
+// import '../../ui/views/onboarding/onboarding.dart';
+// import '../../ui/views/verification/verification_view.dart';
+//
+// @AdaptiveAutoRouter(
+//   replaceInRouteName: "View,Route",
+//   routes: <AutoRoute>[
+//     AdaptiveRoute(page: StartupView, initial: true),
+//     AdaptiveRoute(page: HomeView),
+//     AdaptiveRoute(page: OnboardingView),
+//     AdaptiveRoute(page: AuthView),
+//     AdaptiveRoute(page: VerificationView),
+//     AdaptiveRoute(page: DashboardView),
+//     AdaptiveRoute(page: BottomNavBarView)
+//   ],
+// )
