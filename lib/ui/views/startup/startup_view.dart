@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/ui/views/startup/startup_view_model.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
@@ -6,6 +7,7 @@ import 'package:stacked/stacked.dart';
 import '../../../app/responsiveness/res.dart';
 import '../../widgets/startup/background.dart';
 
+@RoutePage(name: "StartupRoute")
 class StartupView extends StackedView<StartupViewModel> {
   const StartupView({super.key});
 

@@ -57,6 +57,12 @@ double blockSize(BuildContext context) {
   return blockSize;
 }
 
+Widget verticalSpaceXXSmall(BuildContext context) {
+  return SizedBox(
+    height: blockSize(context) * 0.7,
+  );
+}
+
 Widget verticalSpaceXSmall(BuildContext context) {
   return SizedBox(
     height: blockSize(context) * 1,
@@ -78,6 +84,12 @@ Widget verticalSpaceMedium(BuildContext context) {
 Widget verticalSpaceLarge(BuildContext context) {
   return SizedBox(
     height: blockSize(context) * 10,
+  );
+}
+
+Widget horizontalSpaceXXSmall(BuildContext context) {
+  return SizedBox(
+    width: blockSize(context) * 0.7,
   );
 }
 

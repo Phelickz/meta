@@ -1,20 +1,19 @@
 import 'package:auto_route/auto_route.dart';
 
-import 'package:meta_trader/ui/views/home/home_view.dart';
-import 'package:meta_trader/ui/views/startup/startup_view.dart';
+import 'router.gr.dart';
 
-import '../../ui/views/auth/auth_view.dart';
-import '../../ui/views/onboarding/onboarding.dart';
-
-export './router.gr.dart';
-
-@AdaptiveAutoRouter(
-  replaceInRouteName: "View,Route",
-  routes: <AutoRoute>[
-    AdaptiveRoute(page: StartupView, initial: true),
-    AdaptiveRoute(page: HomeView),
-    AdaptiveRoute(page: OnboardingView),
-    AdaptiveRoute(page: AuthView)
-  ],
-)
-class $MetaTraderRouter {}
+@AutoRouterConfig()
+class MetaTraderRouter extends $MetaTraderRouter {
+  @override
+  List<AutoRoute> get routes => [
+        // AdaptiveRoute(page: StartupRoute.page),
+        //Should be the commented/below instead of the above
+        AdaptiveRoute(page: StartupRoute.page, initial: true),
+        AdaptiveRoute(page: OnboardingRoute.page),
+        AdaptiveRoute(page: AuthRoute.page),
+        AdaptiveRoute(page: HomeRoute.page),
+        AdaptiveRoute(page: ProfileRoute.page),
+        AdaptiveRoute(page: PmMainRoute.page),
+        AdaptiveRoute(page: PmAddRoute.page),
+      ];
+}

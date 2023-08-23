@@ -1,120 +1,190 @@
-// **************************************************************************
-// AutoRouteGenerator
-// **************************************************************************
-
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
-// AutoRouteGenerator
+// AutoRouterGenerator
 // **************************************************************************
-//
+
 // ignore_for_file: type=lint
+// coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i5;
-import 'package:flutter/material.dart' as _i6;
-import 'package:meta_trader/ui/views/auth/auth_view.dart' as _i4;
+import 'package:auto_route/auto_route.dart' as _i9;
+import 'package:meta_trader/ui/views/auth/auth_view.dart' as _i1;
 import 'package:meta_trader/ui/views/home/home_view.dart' as _i2;
 import 'package:meta_trader/ui/views/onboarding/onboarding.dart' as _i3;
-import 'package:meta_trader/ui/views/startup/startup_view.dart' as _i1;
+import 'package:meta_trader/ui/views/payment_methods/add_payment_method/pm_add_view.dart'
+    as _i4;
+import 'package:meta_trader/ui/views/payment_methods/pm_main/pm_main_view.dart'
+    as _i5;
+import 'package:meta_trader/ui/views/payment_methods/pm_online_bank/pm_online_view.dart'
+    as _i6;
+import 'package:meta_trader/ui/views/profile/profile_view.dart' as _i7;
+import 'package:meta_trader/ui/views/startup/startup_view.dart' as _i8;
 
-class MetaTraderRouter extends _i5.RootStackRouter {
-  MetaTraderRouter([_i6.GlobalKey<_i6.NavigatorState>? navigatorKey])
-      : super(navigatorKey);
+abstract class $MetaTraderRouter extends _i9.RootStackRouter {
+  $MetaTraderRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i5.PageFactory> pagesMap = {
-    StartupRoute.name: (routeData) {
-      return _i5.AdaptivePage<dynamic>(
+  final Map<String, _i9.PageFactory> pagesMap = {
+    AuthRoute.name: (routeData) {
+      return _i9.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.StartupView(),
+        child: const _i1.AuthView(),
       );
     },
     HomeRoute.name: (routeData) {
-      return _i5.AdaptivePage<dynamic>(
+      return _i9.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i2.HomeView(),
       );
     },
     OnboardingRoute.name: (routeData) {
-      return _i5.AdaptivePage<dynamic>(
+      return _i9.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i3.OnboardingView(),
       );
     },
-    AuthRoute.name: (routeData) {
-      return _i5.AdaptivePage<dynamic>(
+    PmAddRoute.name: (routeData) {
+      return _i9.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i4.AuthView(),
+        child: const _i4.PmAddView(),
+      );
+    },
+    PmMainRoute.name: (routeData) {
+      return _i9.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i5.PmMainView(),
+      );
+    },
+    PmOnlineRoute.name: (routeData) {
+      return _i9.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i6.PmOnlineView(),
+      );
+    },
+    ProfileRoute.name: (routeData) {
+      return _i9.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i7.ProfileView(),
+      );
+    },
+    StartupRoute.name: (routeData) {
+      return _i9.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i8.StartupView(),
       );
     },
   };
-
-  @override
-  List<_i5.RouteConfig> get routes => [
-        _i5.RouteConfig(
-          StartupRoute.name,
-          path: '/',
-        ),
-        _i5.RouteConfig(
-          HomeRoute.name,
-          path: '/home-view',
-        ),
-        _i5.RouteConfig(
-          OnboardingRoute.name,
-          path: '/onboarding-view',
-        ),
-        _i5.RouteConfig(
-          AuthRoute.name,
-          path: '/auth-view',
-        ),
-      ];
 }
 
 /// generated route for
-/// [_i1.StartupView]
-class StartupRoute extends _i5.PageRouteInfo<void> {
-  const StartupRoute()
+/// [_i1.AuthView]
+class AuthRoute extends _i9.PageRouteInfo<void> {
+  const AuthRoute({List<_i9.PageRouteInfo>? children})
       : super(
-          StartupRoute.name,
-          path: '/',
+          AuthRoute.name,
+          initialChildren: children,
         );
 
-  static const String name = 'StartupRoute';
+  static const String name = 'AuthRoute';
+
+  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i2.HomeView]
-class HomeRoute extends _i5.PageRouteInfo<void> {
-  const HomeRoute()
+class HomeRoute extends _i9.PageRouteInfo<void> {
+  const HomeRoute({List<_i9.PageRouteInfo>? children})
       : super(
           HomeRoute.name,
-          path: '/home-view',
+          initialChildren: children,
         );
 
   static const String name = 'HomeRoute';
+
+  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i3.OnboardingView]
-class OnboardingRoute extends _i5.PageRouteInfo<void> {
-  const OnboardingRoute()
+class OnboardingRoute extends _i9.PageRouteInfo<void> {
+  const OnboardingRoute({List<_i9.PageRouteInfo>? children})
       : super(
           OnboardingRoute.name,
-          path: '/onboarding-view',
+          initialChildren: children,
         );
 
   static const String name = 'OnboardingRoute';
+
+  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i4.AuthView]
-class AuthRoute extends _i5.PageRouteInfo<void> {
-  const AuthRoute()
+/// [_i4.PmAddView]
+class PmAddRoute extends _i9.PageRouteInfo<void> {
+  const PmAddRoute({List<_i9.PageRouteInfo>? children})
       : super(
-          AuthRoute.name,
-          path: '/auth-view',
+          PmAddRoute.name,
+          initialChildren: children,
         );
 
-  static const String name = 'AuthRoute';
+  static const String name = 'PmAddRoute';
+
+  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i5.PmMainView]
+class PmMainRoute extends _i9.PageRouteInfo<void> {
+  const PmMainRoute({List<_i9.PageRouteInfo>? children})
+      : super(
+          PmMainRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'PmMainRoute';
+
+  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i6.PmOnlineView]
+class PmOnlineRoute extends _i9.PageRouteInfo<void> {
+  const PmOnlineRoute({List<_i9.PageRouteInfo>? children})
+      : super(
+          PmOnlineRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'PmOnlineRoute';
+
+  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i7.ProfileView]
+class ProfileRoute extends _i9.PageRouteInfo<void> {
+  const ProfileRoute({List<_i9.PageRouteInfo>? children})
+      : super(
+          ProfileRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ProfileRoute';
+
+  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i8.StartupView]
+class StartupRoute extends _i9.PageRouteInfo<void> {
+  const StartupRoute({List<_i9.PageRouteInfo>? children})
+      : super(
+          StartupRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'StartupRoute';
+
+  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
 }

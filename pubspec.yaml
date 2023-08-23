@@ -8,52 +8,44 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  
-  # state management
-  stacked: ^3.4.1
-
-  # navigation
-  auto_route: 4.2.1
-
-  # inversion of control
-  get_it: 7.2.0
-  injectable: 1.5.4
-  
-  # misc
-  logger: 1.1.0
-  provider:
-  one_context:
-  get:
-  intl:
-  device_preview:
-  flutter_spinkit: 
+  auto_route: 7.8.0
   csslib: 0.17.0
-  flutter_svg: 
-  stacked_themes: 
-  google_fonts: ^5.1.0
+  device_preview: 
   
+  flutter_spinkit: 
+  flutter_svg: 
+  get:
+  get_it: 7.2.0
+  google_fonts: ^5.1.0
+  injectable: ^2.3.0
+  intl: 
+  logger: 1.1.0
+  one_context: 
+  provider: 
+  stacked: ^3.4.1
+  stacked_themes: 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   # Generators
-  build_runner: 2.2.0
-  auto_route_generator: 4.0.0
-  injectable_generator: 1.5.3
+  auto_route_generator: ^7.3.1
+  build_runner: ^2.4.6
   flutter_launcher_icons: ^0.9.0
+  injectable_generator: ^2.4.0
 
   # linting
   flutter_lints: ^1.0.0
-  
+
 flutter:
   uses-material-design: true
 
-# Assets Example
+  # Assets Example
   assets:
     - assets/images/
-    - assets/icons/
 
-# Fonts Example
+  # Fonts Example
   fonts:
     - family: Gilroy
       fonts:

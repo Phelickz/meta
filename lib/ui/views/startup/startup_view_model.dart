@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
 import 'package:meta_trader/app/locator/locator.dart';
-import 'package:meta_trader/app/router/router.dart';
 import 'package:meta_trader/app/services/router_service.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 
 class StartupViewModel extends CustomBaseViewModel {
   final RouterService _routerService = locator<RouterService>();
