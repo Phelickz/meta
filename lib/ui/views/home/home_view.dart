@@ -1,5 +1,4 @@
-// ignore_for_file: deprecated_member_use
-
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -10,11 +9,13 @@ import 'package:meta_trader/ui/widgets/home/trading_tools.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:meta_trader/ui/widgets/sliverappbar/fade_scroll_app_bar.dart';
 import 'package:stacked/stacked.dart';
+
+import './home_view_model.dart';
 import '../../widgets/home/higher_success_rates.dart';
 import '../../widgets/home/market_news.dart';
 import '../../widgets/home/trade_features.dart';
-import './home_view_model.dart';
 
+@RoutePage(name: "HomeRoute")
 class HomeView extends StackedView<HomeViewModel> {
   const HomeView({super.key});
 

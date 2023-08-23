@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
-import 'package:meta_trader/app/router/router.dart';
 import 'package:meta_trader/ui/views/auth/auth_view_model.dart';
+import 'package:meta_trader/ui/views/verification/verification_view.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
 
@@ -96,7 +96,7 @@ class LoginPage extends StatelessWidget {
             CustomButtons.generalButton(
               context: context,
               onTap: () {
-                model.push(const VerificationRoute());
+                model.push(const VerificationView());
               },
               text: 'Sign in',
             ),

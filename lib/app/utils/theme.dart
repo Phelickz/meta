@@ -11,9 +11,10 @@ class CustomThemeData {
     secondaryHeaderColor: const Color(0xffD0D5DD),
   );
   static ThemeData darkTheme = ThemeData(
-      primaryColor: const Color(0xff0C95EF),
-      scaffoldBackgroundColor: const Color(0xff0C2031),
-      secondaryHeaderColor: const Color(0xff98A2B3));
+    primaryColor: const Color(0xff0C95EF),
+    scaffoldBackgroundColor: const Color(0xff0C2031),
+    secondaryHeaderColor: const Color(0xff98A2B3),
+  );
 
   // static TextStyle generateStyle(
   //     {required double fontSize,

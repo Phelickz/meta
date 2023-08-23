@@ -1,3 +1,4 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
@@ -5,6 +6,7 @@ import 'package:stacked/stacked.dart';
 import '../../../app/responsiveness/res.dart';
 import 'dashboard_view_model.dart';
 
+@RoutePage(name: "DashboardView")
 class DashboardView extends StackedView<DashboardViewModel> {
   const DashboardView({super.key});
 

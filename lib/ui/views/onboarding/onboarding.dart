@@ -1,6 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
-import 'package:meta_trader/app/router/router.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/onboarding/onboarding_four.dart';
 import 'package:meta_trader/ui/widgets/onboarding/onboarding_three.dart';
@@ -14,6 +15,7 @@ import '../../widgets/onboarding/onboarding_one.dart';
 import '../../widgets/startup/background.dart';
 import 'onboarding_view_model.dart';
 
+@RoutePage(name: "OnboardingRoute")
 class OnboardingView extends StackedView<OnboardingViewModel> {
   const OnboardingView({super.key});
 

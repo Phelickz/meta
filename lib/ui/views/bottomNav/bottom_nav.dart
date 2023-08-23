@@ -1,10 +1,12 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/home/home_view.dart';
 
+@RoutePage(name: "BottomNavBarView")
 class BottomNavBarView extends StatefulWidget {
   const BottomNavBarView({super.key});
 
