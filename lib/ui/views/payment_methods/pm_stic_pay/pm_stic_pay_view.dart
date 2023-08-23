@@ -1,7 +1,6 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:meta_trader/ui/widgets/textfields/label_text_field.dart';
 import 'package:stacked/stacked.dart';
 
 import '../../../../app/responsiveness/res.dart';
@@ -9,11 +8,12 @@ import '../../../../app/responsiveness/size.dart';
 import '../../../../app/utils/theme.dart';
 import '../../../widgets/buttons/buttons.dart';
 import '../../../widgets/skeleton.dart';
+import '../../../widgets/textfields/label_text_field.dart';
 import '../payment_method_viewmodel.dart';
 
-@RoutePage(name: "PmOnlineRoute")
-class PmOnlineView extends StackedView<PaymentMethodViewModel> {
-  const PmOnlineView({super.key});
+@RoutePage()
+class PmSticPayView extends StackedView<PaymentMethodViewModel> {
+  const PmSticPayView({super.key});
 
   @override
   // A builder function that gives us a ViewModel
@@ -65,7 +65,7 @@ class PmOnlineView extends StackedView<PaymentMethodViewModel> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Online Bank",
+                          "SticPay",
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 2.1),
                             fontWeight: FontWeight.bold,
@@ -75,7 +75,7 @@ class PmOnlineView extends StackedView<PaymentMethodViewModel> {
                           ),
                         ),
                         Text(
-                          "Edit online bank",
+                          "Enter SticPay account details",
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.6),
                             fontWeight: FontWeight.w500,
@@ -85,21 +85,6 @@ class PmOnlineView extends StackedView<PaymentMethodViewModel> {
                           ),
                         ),
                       ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                    width: 20,
-                    child: SvgPicture.asset(
-                      "assets/images/trash.svg",
-                      width: 20,
-                      height: 20,
-                      colorFilter: ColorFilter.mode(
-                        isDarkMode
-                            ? const Color(0xff98A2B3)
-                            : const Color(0xFF667085),
-                        BlendMode.srcIn,
-                      ),
                     ),
                   ),
                 ],
@@ -116,21 +101,12 @@ class PmOnlineView extends StackedView<PaymentMethodViewModel> {
                     children: [
                       verticalSpaceXSmall(context),
                       const LabelTextField(
-                        label: "Account Name",
-                        hintText: "Susan Blake",
-                        isEnabled: false,
+                        label: "Email Address",
+                        hintText: "Enter Email address",
                       ),
                       const LabelTextField(
-                        label: "Account Number",
-                        hintText: "23458755632",
-                      ),
-                      const LabelTextField(
-                        label: "Bank Name",
-                        hintText: "Enter bank name",
-                      ),
-                      const LabelTextField(
-                        label: "Account opening branch (optional)",
-                        hintText: "Enter bank branch information",
+                        label: "Pay ID",
+                        hintText: "Enter Pay ID",
                       ),
                     ],
                   ),
@@ -144,7 +120,7 @@ class PmOnlineView extends StackedView<PaymentMethodViewModel> {
               child: CustomButtons.generalButton(
                 context: context,
                 onTap: () {},
-                text: 'Save Changes',
+                text: 'Save',
               ),
             ),
             verticalSpaceSmall(context),
