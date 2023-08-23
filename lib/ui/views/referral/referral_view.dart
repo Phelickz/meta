@@ -4,7 +4,7 @@ import 'package:meta_trader/ui/views/referral/referral_view_model.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
 
-@RoutePage(name: "ReferralRoute")
+@RoutePage()
 class ReferralView extends StackedView<ReferralViewModel> {
   const ReferralView({super.key});
 

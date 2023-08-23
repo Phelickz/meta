@@ -17,7 +17,7 @@ import '../../widgets/home/higher_success_rates.dart';
 import '../../widgets/home/market_news.dart';
 import '../../widgets/home/trade_features.dart';
 
-@RoutePage(name: "HomeRoute")
+@RoutePage()
 class HomeView extends StackedView<HomeViewModel> {
   const HomeView({super.key});
 

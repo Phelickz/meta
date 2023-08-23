@@ -7,7 +7,7 @@ import 'package:stacked/stacked.dart';
 import '../../../app/responsiveness/res.dart';
 import '../../widgets/startup/background.dart';
 
-@RoutePage(name: "StartupRoute")
+@RoutePage()
 class StartupView extends StackedView<StartupViewModel> {
   const StartupView({super.key});
 

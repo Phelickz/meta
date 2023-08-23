@@ -4,7 +4,7 @@ import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
 import 'auth_view_model.dart';
 
-@RoutePage(name: "AuthRoute")
+@RoutePage()
 class AuthView extends StackedView<AuthViewModel> {
   const AuthView({super.key});
 

@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 
-@AutoRouterConfig()
+@AutoRouterConfig(replaceInRouteName: 'View,Route')
 class MetaTraderRouter extends $MetaTraderRouter {
   @override
   List<AutoRoute> get routes => [
@@ -17,9 +17,9 @@ class MetaTraderRouter extends $MetaTraderRouter {
         AdaptiveRoute(page: PmMainRoute.page),
         AdaptiveRoute(page: PmAddRoute.page),
 
-        AdaptiveRoute(page: VerificationView.page),
-        AdaptiveRoute(page: DashboardView.page),
-        AdaptiveRoute(page: BottomNavBarView.page)
+        AdaptiveRoute(page: VerificationRoute.page),
+        AdaptiveRoute(page: DashboardRoute.page),
+        AdaptiveRoute(page: BottomNavBarRoute.page)
       ];
 }
 

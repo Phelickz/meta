@@ -96,7 +96,7 @@ class LoginPage extends StatelessWidget {
             CustomButtons.generalButton(
               context: context,
               onTap: () {
-                model.push(const VerificationView());
+                model.push(const VerificationRoute());
               },
               text: 'Sign in',
             ),
