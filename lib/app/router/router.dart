@@ -19,6 +19,11 @@ class MetaTraderRouter extends $MetaTraderRouter {
         AdaptiveRoute(page: PmOnlineRoute.page),
         AdaptiveRoute(page: PmBinancePayRoute.page),
         AdaptiveRoute(page: PmNetellerRoute.page),
-        AdaptiveRoute(page: PmSticPayRoute.page, initial: true),
+        AdaptiveRoute(page: PmSticPayRoute.page),
+        AdaptiveRoute(page: PmBitcoinRoute.page),
+        AdaptiveRoute(
+          page: PmPerfectMoneyRoute.page,
+          initial: true,
+        ),
       ];
 }

@@ -1,32 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../app/responsiveness/res.dart';
+import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
 
-class LabelTextField extends StatelessWidget {
+class LabelDropdown extends StatelessWidget {
   final String label;
-  final String hintText;
-  final TextInputType? keyboardType;
-  final TextEditingController? controller;
-  final bool isEnabled;
-  const LabelTextField({
+  final String? value;
+  final List<String> options;
+  final Function(String?) onChanged;
+  const LabelDropdown({
     super.key,
     required this.label,
-    required this.hintText,
-    this.keyboardType,
-    this.controller,
-    this.isEnabled = true,
+    this.value,
+    required this.onChanged,
+    required this.options,
   });
 
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
-
     var textStyle = CustomThemeData.generateStyle(
       fontSize: McGyver.textSize(context, 2.0),
       color: isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF667085),
       fontWeight: FontWeight.normal,
+    );
+
+    Widget dropDownIcon = SizedBox(
+      height: 20,
+      width: 20,
+      child: SvgPicture.asset(
+        "assets/images/arrow_right.svg",
+        width: 18,
+        height: 18,
+        colorFilter: ColorFilter.mode(
+          isDarkMode ? const Color(0xff98A2B3) : const Color(0xFF667085),
+          BlendMode.srcIn,
+        ),
+      ),
     );
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,33 +62,28 @@ class LabelTextField extends StatelessWidget {
           alignment: Alignment.center,
           padding: const EdgeInsets.symmetric(horizontal: 20),
           decoration: BoxDecoration(
-            color: !isEnabled
-                ? isDarkMode
-                    ? const Color(0xff052844)
-                    : const Color(0xFF98A2B3).withOpacity(0.2)
-                : Colors.transparent,
             border: Border.all(
               color: const Color(0xFF667085),
             ),
             borderRadius: BorderRadius.circular(9),
           ),
-          child: TextField(
-            enabled: isEnabled,
-            controller: controller ?? TextEditingController(),
-            style: textStyle,
-            keyboardType: keyboardType ?? TextInputType.name,
-            decoration: InputDecoration(
-              hintText: hintText,
-              hintStyle: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 2.0),
-                fontWeight: FontWeight.normal,
-                color: const Color(0xFF98A2B3),
-              ),
-              border: InputBorder.none,
+          child: DropdownButton<String>(
+            isExpanded: true,
+            value: value,
+            underline: const SizedBox.shrink(),
+            hint: Text(
+              value ?? "Select",
+              style: const TextStyle(
+                  fontWeight: FontWeight.w500, color: Colors.grey),
             ),
+            style: textStyle,
+            icon: dropDownIcon,
+            onChanged: onChanged,
+            items: options
+                .map((e) => DropdownMenuItem(value: e, child: Text(e)))
+                .toList(),
           ),
-        ),
-        verticalSpaceSmall(context),
+        )
       ],
     );
   }
