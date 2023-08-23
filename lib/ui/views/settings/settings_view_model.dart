@@ -13,6 +13,7 @@ import 'package:stacked_themes/stacked_themes.dart';
 
 import '../../../app/locator/locator.dart';
 import '../../../app/services/theme_service.dart';
+import '../../widgets/settings/about_us.dart';
 import '../../widgets/settings/components/app_bar.dart';
 
 enum SettingsPageEnum {
@@ -21,7 +22,8 @@ enum SettingsPageEnum {
   languageSettings,
   chartColor,
   colorPreference,
-  changeBasis
+  changeBasis,
+  aboutUs
 }
 
 class SettingsViewModel extends CustomBaseViewModel {
@@ -54,8 +56,17 @@ class SettingsViewModel extends CustomBaseViewModel {
   String _selectedLanguage = "English";
   String get selectedLanguage => _selectedLanguage;
 
-  SettingsPageEnum _settingsPageEnum = SettingsPageEnum.languageSettings;
+  String _appVersion = "1.12.2";
+  String get appVersion => _appVersion;
+
+  SettingsPageEnum _settingsPageEnum = SettingsPageEnum.aboutUs;
   SettingsPageEnum get settingsPageEnum => _settingsPageEnum;
+
+  set appVersion(String version) {
+    _appVersion = version;
+    rebuildUi();
+  }
+
   set setSettingsPageEnum(SettingsPageEnum e) {
     _settingsPageEnum = e;
     rebuildUi();
@@ -92,6 +103,8 @@ class SettingsViewModel extends CustomBaseViewModel {
         return ChartColorPage(model: this);
       case SettingsPageEnum.changeBasis:
         return ChangeBasisPage(model: this);
+      case SettingsPageEnum.aboutUs:
+        return AboutUsPage(model: this);
       default:
         return Container();
     }
@@ -112,6 +125,8 @@ class SettingsViewModel extends CustomBaseViewModel {
         return settingsAppBar(context, 'Color Preference', "", this);
       case SettingsPageEnum.changeBasis:
         return settingsAppBar(context, 'Change Basis', '', this);
+      case SettingsPageEnum.aboutUs:
+        return settingsAppBar(context, 'About Us', '', this);
       default:
         return null;
     }
