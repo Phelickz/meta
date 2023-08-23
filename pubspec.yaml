@@ -8,21 +8,28 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  # state management
+  stacked: ^3.4.1
+
+  # navigation
   auto_route: 7.8.0
+
+  # inversion of control
+  get_it: 7.2.0
+  injectable: ^2.3.0
+
+  # misc
   csslib: 0.17.0
   device_preview: 
-  
   flutter_spinkit: 
   flutter_svg: 
   get:
-  get_it: 7.2.0
   google_fonts: ^5.1.0
-  injectable: ^2.3.0
   intl: 
   logger: 1.1.0
   one_context: 
   provider: 
-  stacked: ^3.4.1
   stacked_themes: 
 
 dev_dependencies:
@@ -44,6 +51,7 @@ flutter:
   # Assets Example
   assets:
     - assets/images/
+    - assets/icons/
 
   # Fonts Example
   fonts:
