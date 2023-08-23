@@ -1,8 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:meta_trader/ui/views/settings/settings_view_model.dart';
-
 import '../../../../app/responsiveness/res.dart';
 import '../../../../app/utils/theme.dart';
 
