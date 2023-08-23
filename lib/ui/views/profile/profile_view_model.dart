@@ -36,5 +36,7 @@ class ProfileViewModel extends CustomBaseViewModel {
     return ProfilePage(model: this);
   }
 
-  AppBar? returnAppBar(BuildContext context) {}
+  AppBar? returnAppBar(BuildContext context) {
+    return AppBar();
+  }
 }

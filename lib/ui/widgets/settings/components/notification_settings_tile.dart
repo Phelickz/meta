@@ -25,9 +25,9 @@ class NotificationSettingsTile extends StatelessWidget {
         title: Text(
           title,
           style: CustomThemeData.generateStyle(
-            fontSize: McGyver.textSize(context, 1.5),
-            color: isDarkMode ? Colors.white54 : const Color(0xff667085),
-            fontWeight: FontWeight.normal,
+            fontSize: McGyver.textSize(context, 1.6),
+            color: isDarkMode ? Colors.white : const Color(0xff667085),
+            fontWeight: FontWeight.w700,
           ),
         ),
         trailing: Switch.adaptive(

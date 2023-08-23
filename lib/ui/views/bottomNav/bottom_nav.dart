@@ -6,6 +6,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/home/home_view.dart';
 
+import '../profile/profile_view.dart';
+
 @RoutePage(name: "BottomNavBarView")
 class BottomNavBarView extends StatefulWidget {
   const BottomNavBarView({super.key});
@@ -22,7 +24,8 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
     const TabScreen(title: 'Tab 2'),
     const TabScreen(title: 'Tab 3'),
     const TabScreen(title: 'Tab 4'),
-    const TabScreen(title: 'Tab 5'),
+    // const TabScreen(title: 'Tab 5'),
+    const ProfileView(),
   ];
 
   @override

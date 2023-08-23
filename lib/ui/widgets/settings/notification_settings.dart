@@ -29,9 +29,9 @@ class NotificationSettingsPage extends StatelessWidget {
           Text(
             "App",
             style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 1.5),
+              fontSize: McGyver.textSize(context, 1.7),
               color: isDarkMode ? Colors.white54 : const Color(0xff667085),
-              fontWeight: FontWeight.normal,
+              fontWeight: FontWeight.w700,
             ),
           ),
           SizedBox(

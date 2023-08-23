@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -152,10 +154,10 @@ class HomeView extends StackedView<HomeViewModel> {
               SizedBox(
                 height: McGyver.rsDoubleH(context, 13),
                 width: McGyver.rsDoubleW(context, 100),
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   // scrollDirection: Axis.horizontal,
-                  children: const [
+                  children: [
                     TradingTools(
                       image: 'assets/images/trade.svg',
                       text: 'Social Trading',

@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -22,14 +24,16 @@ class ReferralTile extends StatelessWidget {
           height: 36.pHeight(context),
           padding: EdgeInsets.symmetric(horizontal: 8.pWidth(context)),
           decoration: BoxDecoration(
-              color: isDarkMode ? Color(0xff052844) : Color(0xffD3ECFD),
+              color: isDarkMode
+                  ? const Color(0xff052844)
+                  : const Color(0xffD3ECFD),
               shape: BoxShape.circle),
           child: SizedBox(
               height: 20.pHeight(context),
               width: 20.pWidth(context),
               child: SvgPicture.asset(
                 icon,
-                color: Color(0xff20A0F3),
+                color: const Color(0xff20A0F3),
               )),
         ),
         SizedBox(

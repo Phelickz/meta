@@ -7,11 +7,13 @@ import '../../../../app/utils/theme.dart';
 import '../../../views/settings/settings_view_model.dart';
 
 AppBar settingsAppBar(BuildContext context, String title, String subtitle,
-    SettingsViewModel model) {
+    SettingsViewModel model, SettingsPageEnum settingsPageEnum) {
   var isDarkMode = CustomThemeData.isDarkMode(context);
   return AppBar(
     elevation: 0,
-    backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+    backgroundColor: isDarkMode
+        ? const Color(0xff052844)
+        : Theme.of(context).scaffoldBackgroundColor,
     automaticallyImplyLeading: false,
     leading: IconButton(
         icon: Icon(
@@ -19,7 +21,11 @@ AppBar settingsAppBar(BuildContext context, String title, String subtitle,
           color: isDarkMode ? Colors.white : Colors.black,
         ),
         onPressed: () {
-          model.goBack();
+          if (settingsPageEnum == SettingsPageEnum.settings) {
+            model.goBack();
+          } else {
+            model.setSettingsPageEnum = SettingsPageEnum.settings;
+          }
         }),
     centerTitle: false,
     title: Column(
@@ -42,7 +48,7 @@ AppBar settingsAppBar(BuildContext context, String title, String subtitle,
                   fontWeight: FontWeight.normal,
                 ),
               )
-            : SizedBox(),
+            : const SizedBox(),
       ],
     ),
   );

@@ -27,7 +27,10 @@ class HigherSuccessRates extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Image.asset('assets/images/btc.png'),
+                  Image.asset(
+                    'assets/images/btc.png',
+                    width: 25,
+                  ),
                   horizontalSpaceXSmall(context),
                   Text(
                     'Profit_goddess',

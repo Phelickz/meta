@@ -59,7 +59,7 @@ class SettingsViewModel extends CustomBaseViewModel {
   String _appVersion = "1.12.2";
   String get appVersion => _appVersion;
 
-  SettingsPageEnum _settingsPageEnum = SettingsPageEnum.aboutUs;
+  SettingsPageEnum _settingsPageEnum = SettingsPageEnum.settings;
   SettingsPageEnum get settingsPageEnum => _settingsPageEnum;
 
   set appVersion(String version) {
@@ -113,20 +113,26 @@ class SettingsViewModel extends CustomBaseViewModel {
   AppBar? returnAppBar(BuildContext context) {
     switch (_settingsPageEnum) {
       case SettingsPageEnum.settings:
-        return settingsAppBar(context, "Settings", '', this);
-      case SettingsPageEnum.notificationSettings:
-        return settingsAppBar(context, 'Notification Settings', '', this);
-      case SettingsPageEnum.languageSettings:
         return settingsAppBar(
-            context, 'Language Settings', 'choose app language', this);
+            context, "Settings", '', this, SettingsPageEnum.settings);
+      case SettingsPageEnum.notificationSettings:
+        return settingsAppBar(context, 'Notification Settings', '', this,
+            SettingsPageEnum.notificationSettings);
+      case SettingsPageEnum.languageSettings:
+        return settingsAppBar(context, 'Language Settings',
+            'Change app language', this, SettingsPageEnum.languageSettings);
       case SettingsPageEnum.chartColor:
-        return settingsAppBar(context, 'Chart Color', '', this);
+        return settingsAppBar(
+            context, 'Chart Color', '', this, SettingsPageEnum.chartColor);
       case SettingsPageEnum.colorPreference:
-        return settingsAppBar(context, 'Color Preference', "", this);
+        return settingsAppBar(context, 'Color Preference', "", this,
+            SettingsPageEnum.colorPreference);
       case SettingsPageEnum.changeBasis:
-        return settingsAppBar(context, 'Change Basis', '', this);
+        return settingsAppBar(
+            context, 'Change Basis', '', this, SettingsPageEnum.changeBasis);
       case SettingsPageEnum.aboutUs:
-        return settingsAppBar(context, 'About Us', '', this);
+        return settingsAppBar(
+            context, 'About Us', '', this, SettingsPageEnum.aboutUs);
       default:
         return null;
     }
