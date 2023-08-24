@@ -12,6 +12,8 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
   int _counter = 0;
   int get counter => _counter;
 
+  bool get hasEmptyPaymentMethod => false;
+
   void incrementCounter() {
     _counter++;
     rebuildUi();

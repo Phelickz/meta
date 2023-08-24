@@ -54,7 +54,7 @@ class PmTetherView extends StackedView<PaymentMethodViewModel> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "SticPay",
+                          "TetherUSD",
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 2.2),
                             fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ class PmTetherView extends StackedView<PaymentMethodViewModel> {
                           ),
                         ),
                         Text(
-                          "Enter SticPay account details",
+                          "Add TetherUSD details",
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.7),
                             fontWeight: FontWeight.w500,
