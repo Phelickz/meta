@@ -1,6 +1,6 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:meta_trader/ui/widgets/payment_method/custom_back_button.dart';
 import 'package:stacked/stacked.dart';
 
 import '../../../../app/responsiveness/res.dart';
@@ -44,20 +44,8 @@ class PmSkrillView extends StackedView<PaymentMethodViewModel> {
               ),
               child: Row(
                 children: [
-                  SizedBox(
-                    height: 15,
-                    width: 15,
-                    child: SvgPicture.asset(
-                      "assets/images/arrow_left.svg",
-                      width: 15,
-                      height: 15,
-                      colorFilter: ColorFilter.mode(
-                        isDarkMode
-                            ? const Color(0xff98A2B3)
-                            : const Color(0xFF667085),
-                        BlendMode.srcIn,
-                      ),
-                    ),
+                  CustomBackButton(
+                    onTap: () => viewModel.goBack(),
                   ),
                   horizontalSpaceMedium(context),
                   Expanded(
@@ -67,7 +55,7 @@ class PmSkrillView extends StackedView<PaymentMethodViewModel> {
                         Text(
                           "Skrill",
                           style: CustomThemeData.generateStyle(
-                            fontSize: McGyver.textSize(context, 2.1),
+                            fontSize: McGyver.textSize(context, 2.2),
                             fontWeight: FontWeight.bold,
                             color: isDarkMode
                                 ? const Color(0xFFD0D5DD)

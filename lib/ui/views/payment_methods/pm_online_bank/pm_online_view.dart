@@ -8,6 +8,7 @@ import '../../../../app/responsiveness/res.dart';
 import '../../../../app/responsiveness/size.dart';
 import '../../../../app/utils/theme.dart';
 import '../../../widgets/buttons/buttons.dart';
+import '../../../widgets/payment_method/custom_back_button.dart';
 import '../../../widgets/skeleton.dart';
 import '../payment_method_viewmodel.dart';
 
@@ -44,20 +45,8 @@ class PmOnlineView extends StackedView<PaymentMethodViewModel> {
               ),
               child: Row(
                 children: [
-                  SizedBox(
-                    height: 15,
-                    width: 15,
-                    child: SvgPicture.asset(
-                      "assets/images/arrow_left.svg",
-                      width: 15,
-                      height: 15,
-                      colorFilter: ColorFilter.mode(
-                        isDarkMode
-                            ? const Color(0xff98A2B3)
-                            : const Color(0xFF667085),
-                        BlendMode.srcIn,
-                      ),
-                    ),
+                  CustomBackButton(
+                    onTap: () => viewModel.goBack(),
                   ),
                   horizontalSpaceMedium(context),
                   Expanded(
@@ -67,7 +56,7 @@ class PmOnlineView extends StackedView<PaymentMethodViewModel> {
                         Text(
                           "Online Bank",
                           style: CustomThemeData.generateStyle(
-                            fontSize: McGyver.textSize(context, 2.1),
+                            fontSize: McGyver.textSize(context, 2.2),
                             fontWeight: FontWeight.bold,
                             color: isDarkMode
                                 ? const Color(0xFFD0D5DD)
@@ -77,7 +66,7 @@ class PmOnlineView extends StackedView<PaymentMethodViewModel> {
                         Text(
                           "Edit online bank",
                           style: CustomThemeData.generateStyle(
-                            fontSize: McGyver.textSize(context, 1.6),
+                            fontSize: McGyver.textSize(context, 1.7),
                             fontWeight: FontWeight.w500,
                             color: isDarkMode
                                 ? const Color(0xFF667085)
@@ -88,12 +77,10 @@ class PmOnlineView extends StackedView<PaymentMethodViewModel> {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
-                    width: 20,
+                    height: McGyver.rsDoubleH(context, 2.8),
+                    width: McGyver.rsDoubleH(context, 2.8),
                     child: SvgPicture.asset(
                       "assets/images/trash.svg",
-                      width: 20,
-                      height: 20,
                       colorFilter: ColorFilter.mode(
                         isDarkMode
                             ? const Color(0xff98A2B3)

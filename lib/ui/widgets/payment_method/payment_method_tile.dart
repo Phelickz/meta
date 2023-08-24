@@ -23,44 +23,51 @@ class PaymentMethodTile extends StatelessWidget {
       padding: const EdgeInsets.symmetric(
         vertical: 8,
       ),
-      child: Row(
-        children: [
-          vm.payemntMethodIcon(paymentMethodEnum),
-          horizontalSpaceSmall(context),
-          Expanded(
-            child: Text(
-              vm.paymentMethodLabel(paymentMethodEnum),
-              style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 2.1),
-                fontWeight: FontWeight.bold,
-                color: isDarkMode
-                    ? const Color(0xFFD0D5DD)
-                    : const Color(0xFF667085),
+      child: GestureDetector(
+        onTap: () {
+          vm.onTap(paymentMethodEnum);
+        },
+        child: Row(
+          children: [
+            vm.payemntMethodIcon(paymentMethodEnum, context),
+            horizontalSpaceSmall(context),
+            Expanded(
+              child: Text(
+                vm.paymentMethodLabel(paymentMethodEnum),
+                style: CustomThemeData.generateStyle(
+                  fontSize: McGyver.textSize(context, 2.1),
+                  fontWeight: FontWeight.bold,
+                  color: isDarkMode
+                      ? const Color(0xFFD0D5DD)
+                      : const Color(0xFF667085),
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 22,
-            width: 22,
-            child: SvgPicture.asset(
-              "assets/images/tick_circle.svg",
-            ),
-          ),
-          horizontalSpaceXXSmall(context),
-          SizedBox(
-            height: 20,
-            width: 20,
-            child: SvgPicture.asset(
-              "assets/images/arrow_right.svg",
-              width: 18,
-              height: 18,
-              colorFilter: ColorFilter.mode(
-                isDarkMode ? const Color(0xff98A2B3) : const Color(0xFF667085),
-                BlendMode.srcIn,
+            SizedBox(
+              height: 22,
+              width: 22,
+              child: SvgPicture.asset(
+                "assets/images/tick_circle.svg",
               ),
             ),
-          )
-        ],
+            horizontalSpaceXXSmall(context),
+            SizedBox(
+              height: 20,
+              width: 20,
+              child: SvgPicture.asset(
+                "assets/images/arrow_right.svg",
+                width: 18,
+                height: 18,
+                colorFilter: ColorFilter.mode(
+                  isDarkMode
+                      ? const Color(0xff98A2B3)
+                      : const Color(0xFF667085),
+                  BlendMode.srcIn,
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

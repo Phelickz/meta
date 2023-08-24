@@ -29,7 +29,7 @@ class AddPaymentMethodTile extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          vm.payemntMethodIcon(paymentMethodEnum),
+          vm.payemntMethodIcon(paymentMethodEnum, context),
           horizontalSpaceSmall(context),
           Expanded(
             child: Column(
@@ -38,7 +38,7 @@ class AddPaymentMethodTile extends StatelessWidget {
                 Text(
                   vm.paymentMethodLabel(paymentMethodEnum),
                   style: CustomThemeData.generateStyle(
-                    fontSize: McGyver.textSize(context, 2.1),
+                    fontSize: McGyver.textSize(context, 2.2),
                     fontWeight: FontWeight.bold,
                     color: isDarkMode
                         ? const Color(0xFFD0D5DD)
