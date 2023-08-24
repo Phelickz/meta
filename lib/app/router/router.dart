@@ -7,7 +7,10 @@ class MetaTraderRouter extends $MetaTraderRouter {
   List<AutoRoute> get routes => [
         // AdaptiveRoute(page: StartupRoute.page),
         //Should be the commented/below instead of the above
-        AdaptiveRoute(page: StartupRoute.page),
+        AdaptiveRoute(
+          page: StartupRoute.page,
+          initial: true,
+        ),
         AdaptiveRoute(page: OnboardingRoute.page),
         AdaptiveRoute(page: AuthRoute.page),
         AdaptiveRoute(page: HomeRoute.page),
@@ -28,10 +31,7 @@ class MetaTraderRouter extends $MetaTraderRouter {
         AdaptiveRoute(page: PmBitcoinRoute.page),
         AdaptiveRoute(page: PmPerfectMoneyRoute.page),
         AdaptiveRoute(page: PmAddPaymentSuccessRoute.page),
-        AdaptiveRoute(
-          page: PmQrcodeRoute.page,
-          initial: true,
-        ),
+        AdaptiveRoute(page: PmQrcodeRoute.page),
 
         AdaptiveRoute(page: VerificationRoute.page),
         AdaptiveRoute(page: DashboardRoute.page),
