@@ -44,20 +44,18 @@ class PaymentMethodTile extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 22,
-              width: 22,
+              height: McGyver.rsDoubleW(context, 6),
+              width: McGyver.rsDoubleW(context, 6),
               child: SvgPicture.asset(
                 "assets/images/tick_circle.svg",
               ),
             ),
             horizontalSpaceXXSmall(context),
             SizedBox(
-              height: 20,
-              width: 20,
+              height: McGyver.rsDoubleW(context, 5),
+              width: McGyver.rsDoubleW(context, 5),
               child: SvgPicture.asset(
                 "assets/images/arrow_right.svg",
-                width: 18,
-                height: 18,
                 colorFilter: ColorFilter.mode(
                   isDarkMode
                       ? const Color(0xff98A2B3)

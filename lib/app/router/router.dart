@@ -9,7 +9,7 @@ class MetaTraderRouter extends $MetaTraderRouter {
         //Should be the commented/below instead of the above
         AdaptiveRoute(
           page: StartupRoute.page,
-          initial: true,
+          // initial: true,
         ),
         AdaptiveRoute(page: OnboardingRoute.page),
         AdaptiveRoute(page: AuthRoute.page),
@@ -35,7 +35,11 @@ class MetaTraderRouter extends $MetaTraderRouter {
 
         AdaptiveRoute(page: VerificationRoute.page),
         AdaptiveRoute(page: DashboardRoute.page),
-        AdaptiveRoute(page: BottomNavBarRoute.page)
+        AdaptiveRoute(page: BottomNavBarRoute.page),
+        AdaptiveRoute(
+          page: SecurityRoute.page,
+          initial: true,
+        )
       ];
 }
 
