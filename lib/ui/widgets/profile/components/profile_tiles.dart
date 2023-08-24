@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:meta_trader/app/utils/colorManager.dart';
+import 'package:meta_trader/app/responsiveness/res.dart';
+import 'package:meta_trader/app/utils/color_manager.dart';
 
 import '../../../../app/utils/theme.dart';
 
@@ -10,7 +11,7 @@ class ProfileTiles extends StatelessWidget {
   final String leadingIcon;
   final String? trailingIcon;
   final VoidCallback? onTap;
-  ProfileTiles(
+  const ProfileTiles(
       {Key? key,
       required this.title,
       required this.subTitle,
@@ -29,7 +30,7 @@ class ProfileTiles extends StatelessWidget {
         onTap: onTap,
         leading: Container(
           alignment: Alignment.center,
-          padding: EdgeInsets.symmetric(vertical: 10),
+          padding: const EdgeInsets.symmetric(vertical: 10),
           width: 20,
           // height: 20,
           child: SvgPicture.asset(leadingIcon),
@@ -37,15 +38,15 @@ class ProfileTiles extends StatelessWidget {
         title: Text(
           title,
           style: CustomThemeData.generateStyle(
-            fontSize: 15,
-            fontWeight: FontWeight.w400,
+            fontSize: McGyver.textSize(context, 1.9),
+            fontWeight: FontWeight.w700,
             color: isDarkMode ? ColorManager.darkText : ColorManager.lightText,
           ),
         ),
         subtitle: Text(
           subTitle,
           style: CustomThemeData.generateStyle(
-            fontSize: 10,
+            fontSize: McGyver.textSize(context, 1.2),
             fontWeight: FontWeight.w400,
             color: isDarkMode ? ColorManager.darkText : ColorManager.lightText,
           ),

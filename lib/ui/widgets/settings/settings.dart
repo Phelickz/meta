@@ -31,26 +31,37 @@ class SettingsPage extends StatelessWidget {
             Text(
               "General",
               style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.5),
+                fontSize: McGyver.textSize(context, 1.7),
                 color: isDarkMode ? Colors.white54 : const Color(0xff667085),
-                fontWeight: FontWeight.normal,
+                fontWeight: FontWeight.w900,
               ),
             ),
             SizedBox(
               height: 28.pHeight(context),
             ),
-            BasicSettingsTile(title: "Push Notifications"),
+            BasicSettingsTile(
+              title: "Push Notifications",
+              onTap: () {
+                model.setSettingsPageEnum =
+                    SettingsPageEnum.notificationSettings;
+              },
+            ),
             verticalSpaceSmall(context),
-            BasicSettingsTile(title: "Language"),
+            BasicSettingsTile(
+              title: "Language",
+              onTap: () {
+                model.setSettingsPageEnum = SettingsPageEnum.languageSettings;
+              },
+            ),
             SizedBox(
               height: 40.pHeight(context),
             ),
             Text(
               "Appearance",
               style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.5),
+                fontSize: McGyver.textSize(context, 1.7),
                 color: isDarkMode ? Colors.white54 : const Color(0xff667085),
-                fontWeight: FontWeight.normal,
+                fontWeight: FontWeight.w900,
               ),
             ),
             SizedBox(
@@ -62,44 +73,73 @@ class SettingsPage extends StatelessWidget {
                 onChanged: (value) {
                   model.toggleThemeMode(value);
                 }),
-            BasicSettingsTile(title: "Chart Color"),
+            verticalSpaceXSmall(context),
+            BasicSettingsTile(
+              title: "Chart Color",
+              onTap: () {
+                model.setSettingsPageEnum = SettingsPageEnum.chartColor;
+              },
+            ),
             verticalSpaceSmall(context),
-            BasicSettingsTile(title: "Color Preference"),
+            BasicSettingsTile(
+              title: "Color Preference",
+              onTap: () {
+                model.setSettingsPageEnum = SettingsPageEnum.colorPreference;
+              },
+            ),
             SizedBox(
               height: 48.pHeight(context),
             ),
-            Text("Market",
-                style: CustomThemeData.generateStyle(
-                  fontSize: McGyver.textSize(context, 1.5),
-                  color: isDarkMode ? Colors.white54 : const Color(0xff667085),
-                  fontWeight: FontWeight.normal,
-                )),
+            Text(
+              "Market",
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 1.7),
+                color: isDarkMode ? Colors.white54 : const Color(0xff667085),
+                fontWeight: FontWeight.w900,
+              ),
+            ),
             verticalSpaceSmall(context),
-            BasicSettingsTile(title: "Change Basis"),
+            BasicSettingsTile(
+              title: "Change Basis",
+              onTap: () {
+                model.setSettingsPageEnum = SettingsPageEnum.changeBasis;
+              },
+            ),
             SizedBox(
               height: 52.pHeight(context),
             ),
-            Text("Others",
-                style: CustomThemeData.generateStyle(
-                  fontSize: McGyver.textSize(context, 1.5),
-                  color: isDarkMode ? Colors.white54 : const Color(0xff667085),
-                  fontWeight: FontWeight.normal,
-                )),
+            Text(
+              "Others",
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 1.7),
+                color: isDarkMode ? Colors.white54 : const Color(0xff667085),
+                fontWeight: FontWeight.w900,
+              ),
+            ),
             verticalSpaceSmall(context),
             BasicSettingsTile(
               title: "Privacy Policy",
               isArrowTrailing: false,
-              secondaryTrailing: SizedBox(),
+              secondaryTrailing: const SizedBox(),
+              onTap: () {
+                // model.setSettingsPageEnum = SettingsPageEnum.;
+              },
             ),
             verticalSpaceSmall(context),
             BasicSettingsTile(
               title: "About Us",
+              onTap: () {
+                model.setSettingsPageEnum = SettingsPageEnum.aboutUs;
+              },
             ),
             verticalSpaceSmall(context),
             BasicSettingsTile(
-              title: "Current version",
+              title: "Current Version",
               isArrowTrailing: false,
-              secondaryTrailing: SizedBox(),
+              secondaryTrailing: const SizedBox(),
+              onTap: () {
+                // model.setSettingsPageEnum = SettingsPageEnum.;
+              },
             ),
           ],
         ),

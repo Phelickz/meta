@@ -12,7 +12,7 @@ import '../../../widgets/skeleton.dart';
 import '../payment_method_viewmodel.dart';
 import '../pm_main/pm_main_view.dart';
 
-@RoutePage(name: "PmAddRoute")
+@RoutePage()
 class PmAddView extends StackedView<PaymentMethodViewModel> {
   const PmAddView({super.key});
 

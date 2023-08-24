@@ -59,7 +59,7 @@ class _SignupTextFieldsState extends State<CustomTextFields> {
 
   @override
   Widget build(BuildContext context) {
-    var isDarkMode = CustomThemeData.isDarkMode(context);
+    // var isDarkMode = CustomThemeData.isDarkMode(context);
     return TextFormField(
       keyboardType: widget.keyboardType,
       validator: widget.validator,

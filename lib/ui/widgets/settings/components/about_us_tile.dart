@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 
 import '../../../../app/utils/theme.dart';
@@ -11,7 +12,7 @@ class AboutUsTile extends StatelessWidget {
   final String leading;
   final bool isArrowTrailing;
   final Widget? secondaryTrailing;
-  AboutUsTile(
+  const AboutUsTile(
       {Key? key,
       required this.title,
       required this.leading,
@@ -31,18 +32,18 @@ class AboutUsTile extends StatelessWidget {
       Text(
         title,
         style: CustomThemeData.generateStyle(
-          fontSize: 16,
-          color: isDarkMode ? Colors.white54 : const Color(0xff667085),
-          fontWeight: FontWeight.normal,
+          fontSize: McGyver.textSize(context, 1.7),
+          color: isDarkMode ? Colors.white : const Color(0xff667085),
+          fontWeight: FontWeight.bold,
         ),
       ),
-      Spacer(),
+      const Spacer(),
       isArrowTrailing
           ? Icon(
               Platform.isAndroid
                   ? Icons.arrow_forward
                   : Icons.arrow_forward_ios,
-              color: isDarkMode ? Colors.white : Colors.black,
+              color: isDarkMode ? Colors.white70 : Colors.black,
             )
           : secondaryTrailing!
     ]);

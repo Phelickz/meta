@@ -21,7 +21,7 @@ enum PaymentMethodEnum {
   tether,
 }
 
-@RoutePage(name: "PmMainRoute")
+@RoutePage()
 class PmMainView extends StackedView<PaymentMethodViewModel> {
   const PmMainView({super.key});
 

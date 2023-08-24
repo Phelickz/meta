@@ -1,4 +1,4 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
 
 class ColorManager {
   static const lightText = Color(0xFF667085);

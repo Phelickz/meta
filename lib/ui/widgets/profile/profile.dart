@@ -4,10 +4,8 @@ import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/ui/widgets/profile/components/circular_icon_button.dart';
 import 'package:meta_trader/ui/widgets/profile/components/profile_tiles.dart';
-import 'package:meta_trader/ui/widgets/profile/profile_bar.dart';
 
 import '../../../app/responsiveness/res.dart';
-import '../../../app/utils/theme.dart';
 import '../../views/profile/profile_view_model.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -16,16 +14,11 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var isDarkMode = CustomThemeData.isDarkMode(context);
+    // var isDarkMode = CustomThemeData.isDarkMode(context);
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ProfileBar(
-            name: model.userName,
-            rank: model.rank,
-            isVerified: model.isVerified,
-          ),
           SizedBox(
             height: 12.pHeight(context),
           ),
@@ -41,7 +34,7 @@ class ProfilePage extends StatelessWidget {
                   child: SvgPicture.asset(AssetManager.referralImage),
                 ),
                 SizedBox(height: 32.pHeight(context)),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ProfileIconButton(
@@ -57,7 +50,7 @@ class ProfilePage extends StatelessWidget {
                 SizedBox(
                   height: 12.pHeight(context),
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ProfileIconButton(
@@ -71,30 +64,30 @@ class ProfilePage extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 32.pHeight(context)),
-                ProfileTiles(
+                const ProfileTiles(
                   title: "Withdrawal/Deposit History",
                   subTitle: "view your withdrawal and deposit history",
                   leadingIcon: AssetManager.withdrawal,
                   trailingIcon: AssetManager.forwardArrow,
                 ),
-                ProfileTiles(
+                const ProfileTiles(
                   title: "Payment Methods",
                   subTitle: "update payment methods",
                   leadingIcon: AssetManager.paymentMethod,
                   trailingIcon: AssetManager.forwardArrow,
                 ),
-                ProfileTiles(
+                const ProfileTiles(
                   title: "Help and Support",
                   subTitle: "file a complaint with our team",
                   leadingIcon: AssetManager.withdrawal,
                   trailingIcon: AssetManager.forwardArrow,
                 ),
-                ProfileTiles(
+                const ProfileTiles(
                   title: "Rate the app",
                   subTitle: "give us a review on appstore",
                   leadingIcon: AssetManager.rate,
                 ),
-                ProfileTiles(
+                const ProfileTiles(
                   title: "Logout",
                   subTitle: "view your withdrawal and deposit history",
                   leadingIcon: AssetManager.logout,

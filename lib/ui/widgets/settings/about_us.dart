@@ -39,22 +39,22 @@ class AboutUsPage extends StatelessWidget {
           SizedBox(
             height: 30.pHeight(context),
           ),
-          AboutUsTile(
+          const AboutUsTile(
               title: "Service Agreement", leading: AssetManager.agreement),
           SizedBox(
             height: 20.pHeight(context),
           ),
-          AboutUsTile(
+          const AboutUsTile(
               title: "Like us on facebook", leading: AssetManager.facebook),
           SizedBox(
             height: 20.pHeight(context),
           ),
-          AboutUsTile(
+          const AboutUsTile(
               title: "Follow us on Twitter", leading: AssetManager.facebook),
           SizedBox(
             height: 20.pHeight(context),
           ),
-          AboutUsTile(
+          const AboutUsTile(
               title: "Join us on Telegram", leading: AssetManager.facebook),
           SizedBox(
             height: 20.pHeight(context),

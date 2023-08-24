@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
-import 'package:meta_trader/ui/widgets/auth/radio_button.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
-import 'package:stacked_themes/stacked_themes.dart';
 
 import '../../views/auth/auth_view_model.dart';
 

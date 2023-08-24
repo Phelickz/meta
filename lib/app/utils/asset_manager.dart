@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 const String IMAGEPATH = 'assets/images';
 const String ICONPATH = 'assets/icons';
 const String ASSETPATH = 'assets';
@@ -9,11 +11,16 @@ class AssetManager {
   static const metaLogo = "$IMAGEPATH/metalogo.svg";
   static const metaPngLogo = "$IMAGEPATH/metapnglogo.png";
 
+  static const updateImageLight = "$IMAGEPATH/updatelight.svg";
+  static const updateImageDark = "$IMAGEPATH/updatedark.svg";
+
   static const referralPageImageDark = "$IMAGEPATH/referralpageimagedark.svg";
   static const referralPageImageLight = "$IMAGEPATH/referralpageimagelight.svg";
 
   static const manageAccountIcon = "$ICONPATH/courthouse.svg";
   static const referralsIcon = "$ICONPATH/people.svg";
+  static const emptyNotifications = "$ICONPATH/messagetext.svg";
+
   static const tradeHistoryIcon = "$ICONPATH/note.svg";
   static const loyaltyRewards = "$ICONPATH/cup.svg";
   static const notificationsIcon = "$ICONPATH/notification.svg";

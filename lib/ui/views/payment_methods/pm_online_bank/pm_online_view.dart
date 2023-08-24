@@ -11,7 +11,7 @@ import '../../../widgets/buttons/buttons.dart';
 import '../../../widgets/skeleton.dart';
 import '../payment_method_viewmodel.dart';
 
-@RoutePage(name: "PmOnlineRoute")
+@RoutePage()
 class PmOnlineView extends StackedView<PaymentMethodViewModel> {
   const PmOnlineView({super.key});
 
