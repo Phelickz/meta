@@ -21,6 +21,7 @@ enum PaymentMethodEnum {
   skrill,
   sticPay,
   tether,
+  none,
 }
 
 @RoutePage()

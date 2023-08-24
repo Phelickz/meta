@@ -5,6 +5,7 @@ import 'package:stacked/stacked.dart';
 
 import '../../../../app/responsiveness/res.dart';
 import '../../../../app/responsiveness/size.dart';
+import '../../../../app/router/router.gr.dart';
 import '../../../../app/utils/theme.dart';
 import '../../../widgets/buttons/buttons.dart';
 import '../../../widgets/payment_method/custom_back_button.dart';
@@ -115,7 +116,9 @@ class PmBitcoinView extends StackedView<PaymentMethodViewModel> {
               ),
               child: CustomButtons.generalButton(
                 context: context,
-                onTap: () {},
+                onTap: () {
+                  viewModel.push(const PmAddPaymentSuccessRoute());
+                },
                 text: 'Save',
               ),
             ),

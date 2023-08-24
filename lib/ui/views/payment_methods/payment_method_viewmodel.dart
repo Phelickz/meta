@@ -17,8 +17,7 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
     rebuildUi();
   }
 
-  PaymentMethodEnum _selectedAddPaymentMethodEnum =
-      PaymentMethodEnum.onlineBank;
+  PaymentMethodEnum _selectedAddPaymentMethodEnum = PaymentMethodEnum.none;
   PaymentMethodEnum get selectedAddPaymentMethodEnum =>
       _selectedAddPaymentMethodEnum;
 
@@ -29,6 +28,10 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
 
   bool isSelectedAddPaymentMethod(PaymentMethodEnum payment) {
     return _selectedAddPaymentMethodEnum == payment;
+  }
+
+  void goToAddPaymentMethodSucess() {
+    push(const PmAddPaymentSuccessRoute());
   }
 
   void onTap(PaymentMethodEnum payment) {
@@ -56,6 +59,8 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
         break;
       case PaymentMethodEnum.tether:
         push(const PmTetherRoute());
+        break;
+      default:
         break;
     }
   }
@@ -149,7 +154,7 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
       case PaymentMethodEnum.tether:
         return "Tether (USDT ERC20)";
       default:
-        return "Undefined Method Label";
+        return "Tether";
     }
   }
 }

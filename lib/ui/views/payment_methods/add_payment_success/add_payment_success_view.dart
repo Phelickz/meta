@@ -82,7 +82,8 @@ class PmAddPaymentSuccessView extends StackedView<PaymentMethodViewModel> {
                   ),
                   children: [
                     TextSpan(
-                      text: 'TetherUSD',
+                      text: viewModel.paymentMethodLabel(
+                          viewModel.selectedAddPaymentMethodEnum),
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 2),
                         fontWeight: FontWeight.w500,

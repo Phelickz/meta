@@ -130,7 +130,9 @@ class PmOnlineView extends StackedView<PaymentMethodViewModel> {
               ),
               child: CustomButtons.generalButton(
                 context: context,
-                onTap: () {},
+                onTap: () {
+                  viewModel.goToAddPaymentMethodSucess();
+                },
                 text: 'Save Changes',
               ),
             ),
