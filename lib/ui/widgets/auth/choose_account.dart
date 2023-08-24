@@ -28,7 +28,7 @@ class ChooseAccount extends StatelessWidget {
             context,
             model.radioItem == 'login',
             true,
-            (value) => {model.setRadio = 'login'},
+            (value) => model.setRadio = 'login',
           ),
           verticalSpaceSmall(context),
           returnTile(
@@ -38,7 +38,7 @@ class ChooseAccount extends StatelessWidget {
             context,
             model.radioItem == 'demo',
             true,
-            (value) => {model.setRadio = 'demo'},
+            (value) => model.setRadio = 'demo',
           ),
           verticalSpaceSmall(context),
           returnTile(
@@ -48,7 +48,7 @@ class ChooseAccount extends StatelessWidget {
             context,
             model.radioItem == 'real',
             true,
-            (value) => {model.setRadio = 'real'},
+            (value) => model.setRadio = 'real',
           ),
           const Spacer(),
           CustomButtons.generalButton(

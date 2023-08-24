@@ -1,7 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
+import 'package:meta_trader/ui/views/fund_account/fund_account_view.dart';
 
-@AutoRouterConfig()
+@AutoRouterConfig(
+  replaceInRouteName: "View,Route",
+)
 class MetaTraderRouter extends $MetaTraderRouter {
   @override
   List<AutoRoute> get routes => [
@@ -19,7 +22,8 @@ class MetaTraderRouter extends $MetaTraderRouter {
 
         AdaptiveRoute(page: VerificationView.page),
         AdaptiveRoute(page: DashboardView.page),
-        AdaptiveRoute(page: BottomNavBarView.page)
+        AdaptiveRoute(page: BottomNavBarView.page),
+        AdaptiveRoute(page: FundAccountRoute.page)
       ];
 }
 
