@@ -10,7 +10,7 @@ import '../../../widgets/skeleton.dart';
 import '../payment_method_viewmodel.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 
-@RoutePage(name: "PmAddPaymentSuccessRoute")
+@RoutePage()
 class PmAddPaymentSuccessView extends StackedView<PaymentMethodViewModel> {
   const PmAddPaymentSuccessView({super.key});
 

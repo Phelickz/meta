@@ -12,9 +12,9 @@ import '../../../widgets/skeleton.dart';
 import '../../../widgets/textfields/label_text_field.dart';
 import '../payment_method_viewmodel.dart';
 
-@RoutePage(name: "PmBinancePayRoute")
-class PmOnlineView extends StackedView<PaymentMethodViewModel> {
-  const PmOnlineView({super.key});
+@RoutePage()
+class PmBinancePayView extends StackedView<PaymentMethodViewModel> {
+  const PmBinancePayView({super.key});
 
   @override
   // A builder function that gives us a ViewModel
