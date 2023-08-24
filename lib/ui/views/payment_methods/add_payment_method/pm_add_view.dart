@@ -134,7 +134,9 @@ class PmAddView extends StackedView<PaymentMethodViewModel> {
                     verticalSpaceXSmall(context),
                     CustomButtons.generalButton(
                       context: context,
-                      onTap: () {},
+                      onTap: () {
+                        viewModel.onTap(viewModel.selectedAddPaymentMethodEnum);
+                      },
                       text: 'Continue',
                     ),
                     verticalSpaceSmall(context),

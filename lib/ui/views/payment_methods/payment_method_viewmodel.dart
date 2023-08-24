@@ -17,13 +17,19 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
     rebuildUi();
   }
 
-  //  PaymentMethodEnum _paymentMethodEnum = PaymentMethodEnum.onlineBank;
-  // PaymentMethodEnum get paymentMethodEnum => _paymentMethodEnum;
+  PaymentMethodEnum _selectedAddPaymentMethodEnum =
+      PaymentMethodEnum.onlineBank;
+  PaymentMethodEnum get selectedAddPaymentMethodEnum =>
+      _selectedAddPaymentMethodEnum;
 
-  // set setAuthPageEnum(AuthPageEnum e) {
-  //   _paymentMethodEnum = e;
-  //   rebuildUi();
-  // }
+  void onswitchAddPaymentMethod(PaymentMethodEnum payment) {
+    _selectedAddPaymentMethodEnum = payment;
+    rebuildUi();
+  }
+
+  bool isSelectedAddPaymentMethod(PaymentMethodEnum payment) {
+    return _selectedAddPaymentMethodEnum == payment;
+  }
 
   void onTap(PaymentMethodEnum payment) {
     switch (payment) {
