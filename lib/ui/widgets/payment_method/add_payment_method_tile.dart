@@ -5,7 +5,6 @@ import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
 import '../../views/payment_methods/payment_method_viewmodel.dart';
-import '../../views/payment_methods/pm_main/pm_main_view.dart';
 
 class AddPaymentMethodTile extends StatelessWidget {
   final PaymentMethodViewModel vm;

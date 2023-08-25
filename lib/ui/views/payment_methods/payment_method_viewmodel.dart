@@ -1,20 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:meta_trader/app/router/router.gr.dart';
+import 'package:meta_trader/ui/widgets/payment_method/app_bar.dart';
+import 'package:meta_trader/ui/widgets/payment_method/binance_pay.dart';
+import 'package:meta_trader/ui/widgets/payment_method/neteller.dart';
+import 'package:meta_trader/ui/widgets/payment_method/online_bank.dart';
+import 'package:meta_trader/ui/widgets/payment_method/payment_method_main.dart';
+import 'package:meta_trader/ui/widgets/payment_method/perfect_money.dart';
+import 'package:meta_trader/ui/widgets/payment_method/qrcode.dart';
 
 import '../../../app/core/custom_base_view_model.dart';
 import '../../../app/responsiveness/res.dart';
-import 'pm_main/pm_main_view.dart';
+import '../../widgets/payment_method/add_payment_method.dart';
+import '../../widgets/payment_method/add_payment_method_success.dart';
+import '../../widgets/payment_method/skrill.dart';
+import '../../widgets/payment_method/stic_pay.dart';
+import '../../widgets/payment_method/tether.dart';
 
-enum PaymentmethodPageEnum {
+enum PaymentMethodPageEnum {
   main,
+  onlineBank,
+  binancePay,
+  neteller,
+  bitcoin,
+  perfectMoney,
+  skrill,
+  sticPay,
+  tether,
+  qrCode,
   addPaymentMethod,
-  autoLock,
-  devices,
-  phoneVerify,
-  emailVerify,
-  password,
-  addPasskey,
+  addPaymentMethodSuccess,
+}
+
+enum PaymentMethodEnum {
+  onlineBank,
+  binancePay,
+  neteller,
+  bitcoin,
+  perfectMoney,
+  skrill,
+  sticPay,
+  tether,
+  none,
 }
 
 class PaymentMethodViewModel extends CustomBaseViewModel {
@@ -27,6 +53,14 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
 
   void incrementCounter() {
     _counter++;
+    rebuildUi();
+  }
+
+  PaymentMethodPageEnum _paymentMethodPageEnum = PaymentMethodPageEnum.main;
+  PaymentMethodPageEnum get paymentMethodPageEnum => _paymentMethodPageEnum;
+
+  set paymentMethodPageEnum(PaymentMethodPageEnum e) {
+    _paymentMethodPageEnum = e;
     rebuildUi();
   }
 
@@ -43,35 +77,31 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
     return _selectedAddPaymentMethodEnum == payment;
   }
 
-  void goToAddPaymentMethodSucess() {
-    push(const PmAddPaymentSuccessRoute());
-  }
-
   void onTap(PaymentMethodEnum payment) {
     switch (payment) {
       case PaymentMethodEnum.onlineBank:
-        push(const PmOnlineRoute());
+        paymentMethodPageEnum = PaymentMethodPageEnum.onlineBank;
         break;
       case PaymentMethodEnum.binancePay:
-        push(const PmBinancePayRoute());
+        paymentMethodPageEnum = PaymentMethodPageEnum.binancePay;
         break;
       case PaymentMethodEnum.neteller:
-        push(const PmNetellerRoute());
+        paymentMethodPageEnum = PaymentMethodPageEnum.neteller;
         break;
       case PaymentMethodEnum.bitcoin:
-        push(const PmBitcoinRoute());
+        paymentMethodPageEnum = PaymentMethodPageEnum.bitcoin;
         break;
       case PaymentMethodEnum.perfectMoney:
-        push(const PmPerfectMoneyRoute());
+        paymentMethodPageEnum = PaymentMethodPageEnum.perfectMoney;
         break;
       case PaymentMethodEnum.skrill:
-        push(const PmSkrillRoute());
+        paymentMethodPageEnum = PaymentMethodPageEnum.skrill;
         break;
       case PaymentMethodEnum.sticPay:
-        push(const PmSticPayRoute());
+        paymentMethodPageEnum = PaymentMethodPageEnum.sticPay;
         break;
       case PaymentMethodEnum.tether:
-        push(const PmTetherRoute());
+        paymentMethodPageEnum = PaymentMethodPageEnum.tether;
         break;
       default:
         break;
@@ -168,6 +198,122 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
         return "Tether (USDT ERC20)";
       default:
         return "Tether";
+    }
+  }
+
+  Widget returnPage() {
+    switch (_paymentMethodPageEnum) {
+      case PaymentMethodPageEnum.main:
+        return PaymentMethodMainPage(viewModel: this);
+      case PaymentMethodPageEnum.binancePay:
+        return BinancePayPage(viewModel: this);
+      case PaymentMethodPageEnum.neteller:
+        return NetellerPage(viewModel: this);
+      case PaymentMethodPageEnum.onlineBank:
+        return OnlineBankPage(viewModel: this);
+      case PaymentMethodPageEnum.perfectMoney:
+        return PerfectMoneyPage(viewModel: this);
+      case PaymentMethodPageEnum.qrCode:
+        return QrcodePage(viewModel: this);
+      case PaymentMethodPageEnum.skrill:
+        return SkrillPage(viewModel: this);
+      case PaymentMethodPageEnum.sticPay:
+        return SticPayPage(viewModel: this);
+      case PaymentMethodPageEnum.tether:
+        return TetherPage(viewModel: this);
+      case PaymentMethodPageEnum.addPaymentMethodSuccess:
+        return AddPaymentMethodSuccessPage(viewModel: this);
+      case PaymentMethodPageEnum.addPaymentMethod:
+        return AddPaymentMethodPage(viewModel: this);
+      default:
+        return Container();
+    }
+  }
+
+  Widget returnAppBar(BuildContext context) {
+    switch (_paymentMethodPageEnum) {
+      case PaymentMethodPageEnum.main:
+        return paymentMethodAppBar(
+          context,
+          'Payment Methods',
+          '',
+          this,
+          'assets/images/add_square.svg',
+        );
+      case PaymentMethodPageEnum.binancePay:
+        return paymentMethodAppBar(
+          context,
+          'BinancePay',
+          'Add BinancePay details',
+          this,
+          'assets/images/trash.svg',
+        );
+      case PaymentMethodPageEnum.neteller:
+        return paymentMethodAppBar(
+          context,
+          'Neteller',
+          'Enter Neteller account details',
+          this,
+        );
+      case PaymentMethodPageEnum.bitcoin:
+        return paymentMethodAppBar(
+          context,
+          'Bitcoin',
+          'Add Bitcoin details',
+          this,
+        );
+      case PaymentMethodPageEnum.skrill:
+        return paymentMethodAppBar(
+          context,
+          'Skrill',
+          'Enter Skrill account details',
+          this,
+        );
+      case PaymentMethodPageEnum.perfectMoney:
+        return paymentMethodAppBar(
+          context,
+          'Perfect Money',
+          'Enter payment details',
+          this,
+        );
+      case PaymentMethodPageEnum.sticPay:
+        return paymentMethodAppBar(
+          context,
+          'SticPay',
+          'Enter SticPay account details',
+          this,
+        );
+      case PaymentMethodPageEnum.tether:
+        return paymentMethodAppBar(
+          context,
+          'TetherUSD',
+          'Add TetherUSD details',
+          this,
+        );
+      case PaymentMethodPageEnum.qrCode:
+        return paymentMethodAppBar(
+          context,
+          'BinancePay',
+          'Scan QR code',
+          this,
+        );
+      case PaymentMethodPageEnum.onlineBank:
+        return paymentMethodAppBar(
+          context,
+          'Online Bank',
+          'Edit online bank',
+          this,
+          'assets/images/trash.svg',
+        );
+      case PaymentMethodPageEnum.addPaymentMethod:
+        return paymentMethodAppBar(
+          context,
+          'Online Bank',
+          'Edit online bank',
+          this,
+        );
+      default:
+        return Container();
     }
   }
 }

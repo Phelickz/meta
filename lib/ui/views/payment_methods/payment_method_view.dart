@@ -3,27 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
 import '../../../../app/utils/theme.dart';
-import '../../../widgets/payment_method/custom_back_button.dart';
-import '../../../widgets/skeleton.dart';
 import '../../widgets/skeleton.dart';
-import '../payment_method_viewmodel.dart';
 import 'payment_method_viewmodel.dart';
 
-enum PaymentMethodEnum {
-  onlineBank,
-  binancePay,
-  neteller,
-  bitcoin,
-  perfectMoney,
-  skrill,
-  sticPay,
-  tether,
-  none,
-}
-
 @RoutePage()
-class PmMainView extends StackedView<PaymentMethodViewModel> {
-  const PmMainView({super.key});
+class PaymentMethodView extends StackedView<PaymentMethodViewModel> {
+  const PaymentMethodView({super.key});
 
   @override
   // A builder function that gives us a ViewModel
