@@ -33,7 +33,7 @@ class CustomButtons {
           child: Text(
             text,
             style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, textSize ?? 1.5),
+                fontSize: McGyver.textSize(context, textSize ?? 1.6),
                 color: textColor),
           ),
         ),

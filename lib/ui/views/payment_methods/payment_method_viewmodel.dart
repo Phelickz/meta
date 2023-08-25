@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 
 import '../../../app/core/custom_base_view_model.dart';
+import '../../../app/responsiveness/res.dart';
 import 'pm_main/pm_main_view.dart';
 
 class PaymentMethodViewModel extends CustomBaseViewModel {
@@ -10,25 +12,67 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
   int _counter = 0;
   int get counter => _counter;
 
+  bool get hasEmptyPaymentMethod => false;
+
   void incrementCounter() {
     _counter++;
     rebuildUi();
   }
 
-  //  PaymentMethodEnum _paymentMethodEnum = PaymentMethodEnum.onlineBank;
-  // PaymentMethodEnum get paymentMethodEnum => _paymentMethodEnum;
+  PaymentMethodEnum _selectedAddPaymentMethodEnum = PaymentMethodEnum.none;
+  PaymentMethodEnum get selectedAddPaymentMethodEnum =>
+      _selectedAddPaymentMethodEnum;
 
-  // set setAuthPageEnum(AuthPageEnum e) {
-  //   _paymentMethodEnum = e;
-  //   rebuildUi();
-  // }
+  void onswitchAddPaymentMethod(PaymentMethodEnum payment) {
+    _selectedAddPaymentMethodEnum = payment;
+    rebuildUi();
+  }
 
-  Widget payemntMethodIcon(PaymentMethodEnum payment) {
+  bool isSelectedAddPaymentMethod(PaymentMethodEnum payment) {
+    return _selectedAddPaymentMethodEnum == payment;
+  }
+
+  void goToAddPaymentMethodSucess() {
+    push(const PmAddPaymentSuccessRoute());
+  }
+
+  void onTap(PaymentMethodEnum payment) {
+    switch (payment) {
+      case PaymentMethodEnum.onlineBank:
+        push(const PmOnlineRoute());
+        break;
+      case PaymentMethodEnum.binancePay:
+        push(const PmBinancePayRoute());
+        break;
+      case PaymentMethodEnum.neteller:
+        push(const PmNetellerRoute());
+        break;
+      case PaymentMethodEnum.bitcoin:
+        push(const PmBitcoinRoute());
+        break;
+      case PaymentMethodEnum.perfectMoney:
+        push(const PmPerfectMoneyRoute());
+        break;
+      case PaymentMethodEnum.skrill:
+        push(const PmSkrillRoute());
+        break;
+      case PaymentMethodEnum.sticPay:
+        push(const PmSticPayRoute());
+        break;
+      case PaymentMethodEnum.tether:
+        push(const PmTetherRoute());
+        break;
+      default:
+        break;
+    }
+  }
+
+  Widget payemntMethodIcon(PaymentMethodEnum payment, BuildContext context) {
     switch (payment) {
       case PaymentMethodEnum.onlineBank:
         return Container(
-          width: 40,
-          height: 40,
+          width: McGyver.rsDoubleH(context, 5),
+          height: McGyver.rsDoubleH(context, 5),
           padding: const EdgeInsets.all(
             8,
           ),
@@ -43,8 +87,8 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
         );
       case PaymentMethodEnum.binancePay:
         return SizedBox(
-          width: 40,
-          height: 40,
+          width: McGyver.rsDoubleH(context, 4),
+          height: McGyver.rsDoubleH(context, 4),
           child: Image.asset(
             "assets/images/binance_pay.png",
             width: 20,
@@ -52,64 +96,40 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
           ),
         );
       case PaymentMethodEnum.neteller:
-        return SizedBox(
-          width: 40,
-          height: 40,
-          child: Image.asset(
-            "assets/images/neteller.png",
-            width: 40,
-            height: 40,
-          ),
+        return Image.asset(
+          "assets/images/neteller.png",
+          width: McGyver.rsDoubleH(context, 5),
+          height: McGyver.rsDoubleH(context, 5),
         );
       case PaymentMethodEnum.bitcoin:
-        return SizedBox(
-          width: 40,
-          height: 40,
-          child: Image.asset(
-            "assets/images/btc.png",
-            width: 40,
-            height: 40,
-          ),
+        return Image.asset(
+          "assets/images/btc.png",
+          width: McGyver.rsDoubleH(context, 5),
+          height: McGyver.rsDoubleH(context, 5),
         );
       case PaymentMethodEnum.perfectMoney:
-        return SizedBox(
-          width: 40,
-          height: 40,
-          child: Image.asset(
-            "assets/images/perfect_money.png",
-            width: 40,
-            height: 40,
-          ),
+        return Image.asset(
+          "assets/images/perfect_money.png",
+          width: McGyver.rsDoubleH(context, 5),
+          height: McGyver.rsDoubleH(context, 5),
         );
       case PaymentMethodEnum.skrill:
-        return SizedBox(
-          width: 40,
-          height: 40,
-          child: Image.asset(
-            "assets/images/skrill.png",
-            width: 40,
-            height: 40,
-          ),
+        return Image.asset(
+          "assets/images/skrill.png",
+          width: McGyver.rsDoubleH(context, 5),
+          height: McGyver.rsDoubleH(context, 5),
         );
       case PaymentMethodEnum.sticPay:
-        return SizedBox(
-          width: 40,
-          height: 40,
-          child: Image.asset(
-            "assets/images/stic_pay.png",
-            width: 40,
-            height: 40,
-          ),
+        return Image.asset(
+          "assets/images/stic_pay.png",
+          width: McGyver.rsDoubleH(context, 5),
+          height: McGyver.rsDoubleH(context, 5),
         );
       case PaymentMethodEnum.tether:
-        return SizedBox(
-          width: 40,
-          height: 40,
-          child: Image.asset(
-            "assets/images/tether.png",
-            width: 40,
-            height: 40,
-          ),
+        return Image.asset(
+          "assets/images/tether.png",
+          width: McGyver.rsDoubleH(context, 5),
+          height: McGyver.rsDoubleH(context, 5),
         );
 
       default:
@@ -136,7 +156,7 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
       case PaymentMethodEnum.tether:
         return "Tether (USDT ERC20)";
       default:
-        return "Undefined Method Label";
+        return "Tether";
     }
   }
 }
