@@ -6,6 +6,17 @@ import '../../../app/core/custom_base_view_model.dart';
 import '../../../app/responsiveness/res.dart';
 import 'pm_main/pm_main_view.dart';
 
+enum PaymentmethodPageEnum {
+  main,
+  addPaymentMethod,
+  autoLock,
+  devices,
+  phoneVerify,
+  emailVerify,
+  password,
+  addPasskey,
+}
+
 class PaymentMethodViewModel extends CustomBaseViewModel {
   Future<void> init() async {}
 
