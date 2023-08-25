@@ -5,7 +5,7 @@ import 'package:meta_trader/ui/views/payment_methods/payment_method_viewmodel.da
 
 import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
-import '../payment_method/custom_back_button.dart';
+import 'custom_back_button.dart';
 
 Widget paymentMethodAppBar(BuildContext context, String title, String subtitle,
     PaymentMethodViewModel model,

@@ -8,7 +8,6 @@ class CustomThemeData {
     // primaryColor: const Color(0xff925012),
     primaryColor: const Color(0xff0C95EF),
     scaffoldBackgroundColor: const Color(0xffF9FAFB),
-    secondaryHeaderColor: const Color(0xffD0D5DD),
     textTheme: TextTheme(
       titleLarge: GoogleFonts.dmSans(
           color: const Color(0xff667085),
@@ -27,6 +26,7 @@ class CustomThemeData {
           fontSize: 8,
           fontWeight: FontWeight.w400),
     ),
+    secondaryHeaderColor: const Color(0xff98A2B3),
   );
   static ThemeData darkTheme = ThemeData(
       primaryColor: const Color(0xff0B7FCB),
