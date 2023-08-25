@@ -25,34 +25,42 @@ class CustomRadioWidget<T> extends StatelessWidget {
         onTap: () {
           onChanged(this.value);
         },
-        child: Container(
-          height: this.height,
-          width: this.width,
-          decoration: ShapeDecoration(
-            shape: const CircleBorder(),
-            color: isDarkMode ? Colors.white : Colors.black54,
-          ),
-          child: Center(
-            child: Container(
-              height: this.height - 2,
-              width: this.width - 2,
-              decoration: ShapeDecoration(
-                shape: const CircleBorder(),
-                gradient: LinearGradient(
-                  colors: value == groupValue
-                      ? const [
-                          Color(0xFFE13684),
-                          Color(0xFFFF6EEC),
-                        ]
-                      : [
-                          Theme.of(context).scaffoldBackgroundColor,
-                          Theme.of(context).scaffoldBackgroundColor,
-                        ],
+        child: value == groupValue
+            ? Icon(
+                Icons.check_circle_rounded,
+                size: 15,
+                color: isDarkMode
+                    ? const Color(0xff77C5F8)
+                    : Theme.of(context).primaryColor,
+              )
+            : Container(
+                height: this.height,
+                width: this.width,
+                decoration: ShapeDecoration(
+                  shape: const CircleBorder(),
+                  color: isDarkMode ? Colors.white : Colors.black54,
+                ),
+                child: Center(
+                  child: Container(
+                    height: this.height - 2,
+                    width: this.width - 2,
+                    decoration: ShapeDecoration(
+                      shape: const CircleBorder(),
+                      gradient: LinearGradient(
+                        colors: value == groupValue
+                            ? const [
+                                Color(0xFFE13684),
+                                Color(0xFFFF6EEC),
+                              ]
+                            : [
+                                Theme.of(context).scaffoldBackgroundColor,
+                                Theme.of(context).scaffoldBackgroundColor,
+                              ],
+                      ),
+                    ),
+                  ),
                 ),
               ),
-            ),
-          ),
-        ),
       ),
     );
   }

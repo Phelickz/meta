@@ -39,25 +39,7 @@ class MetaTraderRouter extends $MetaTraderRouter {
         AdaptiveRoute(
           page: SecurityRoute.page,
           initial: true,
-        )
+        ),
+        AdaptiveRoute(page: FundAccountRoute.page)
       ];
 }
-
-// import '../../ui/views/auth/auth_view.dart';
-// import '../../ui/views/bottomNav/bottom_nav.dart';
-// import '../../ui/views/dashboard/dashboard_view.dart';
-// import '../../ui/views/onboarding/onboarding.dart';
-// import '../../ui/views/verification/verification_view.dart';
-//
-// @AdaptiveAutoRouter(
-//   replaceInRouteName: "View,Route",
-//   routes: <AutoRoute>[
-//     AdaptiveRoute(page: StartupView, initial: true),
-//     AdaptiveRoute(page: HomeView),
-//     AdaptiveRoute(page: OnboardingView),
-//     AdaptiveRoute(page: AuthView),
-//     AdaptiveRoute(page: VerificationView),
-//     AdaptiveRoute(page: DashboardView),
-//     AdaptiveRoute(page: BottomNavBarView)
-//   ],
-// )
