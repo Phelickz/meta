@@ -1,13 +1,16 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
+import 'package:meta_trader/app/utils/asset_manager.dart';
+import 'package:meta_trader/app/utils/dimensions.dart';
 
 import '../../../../app/utils/theme.dart';
 import '../../views/notifications/notifications_view_model.dart';
 
-AppBar notificationsAppBar(
-    BuildContext context, String title, NotificationViewModel model) {
+AppBar notificationsAppBar(BuildContext context, String title,
+    NotificationViewModel model, NotificationStateEnum notificationStateEnum) {
   var isDarkMode = CustomThemeData.isDarkMode(context);
   return AppBar(
     elevation: 0,
@@ -30,5 +33,20 @@ AppBar notificationsAppBar(
         fontWeight: FontWeight.bold,
       ),
     ),
+    actions: [
+      model.notificationStateEnum == NotificationStateEnum.hasNotifications
+          ? Padding(
+              padding: EdgeInsets.only(right: 24.pWidth(context)),
+              child: InkWell(
+                onTap: () {
+                  model.openOptionsBottomSheet(context);
+                },
+                child: SvgPicture.asset(
+                  AssetManager.edit,
+                ),
+              ),
+            )
+          : const SizedBox(),
+    ],
   );
 }

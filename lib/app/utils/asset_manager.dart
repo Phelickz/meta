@@ -30,6 +30,8 @@ class AssetManager {
   static const paymentMethod = "$ICONPATH/walletmoney.svg";
   static const help = "$ICONPATH/messagequestion.svg";
   static const rate = "$ICONPATH/star.svg";
+  static const edit = "$ICONPATH/edit.svg";
+
   static const logout = "$ICONPATH/logout.svg";
   static const crown = "$ICONPATH/crown.svg";
   static const settings = "$ICONPATH/setting.svg";

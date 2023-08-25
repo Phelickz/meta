@@ -58,7 +58,7 @@ class CustomButtons {
           elevation: 0,
           backgroundColor: Colors.white,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(borderRadius ?? 6),
+            borderRadius: BorderRadius.circular(borderRadius ?? 12),
             side: BorderSide(
               color: Theme.of(context).primaryColor.withOpacity(0.6),
             ),
@@ -107,6 +107,46 @@ class CustomButtons {
                   fontSize: McGyver.textSize(context, textSize ?? 1.5),
                   color: textColor),
             ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  static Widget buttonWithoutBackground(
+      {required BuildContext context,
+      required Function? onTap,
+      required String text,
+      Color? color,
+      Color textColor = Colors.black,
+      double? width,
+      double? padding,
+      double? textSize,
+      double? borderRadius}) {
+    return SizedBox(
+      width: width ?? McGyver.rsDoubleW(context, 90),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          elevation: 0,
+          backgroundColor: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(borderRadius ?? 12),
+            side: BorderSide(
+              color: Theme.of(context).primaryColor.withOpacity(0.6),
+            ),
+          ),
+        ),
+        onPressed: () {
+          FocusScope.of(context).requestFocus(FocusNode());
+          onTap!();
+        },
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: padding ?? 18),
+          child: Text(
+            text,
+            style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, textSize ?? 1.5),
+                color: textColor),
           ),
         ),
       ),

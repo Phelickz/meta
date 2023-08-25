@@ -33,7 +33,7 @@ class MetaTraderApp extends StatelessWidget {
         //   theme: regularTheme,
         //   themeMode: themeMode,
         //   darkTheme: darkTheme,
-        //   home: NotificationView(),
+        //   home: ProfileView(),
         // );
       },
     );
