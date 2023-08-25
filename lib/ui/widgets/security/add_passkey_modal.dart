@@ -126,7 +126,7 @@ class AddPasskeyModal extends StatelessWidget {
             child: SvgPicture.asset(
               assetName,
               colorFilter: ColorFilter.mode(
-                isDarkMode ? const Color(0xff98A2B3) : const Color(0xFF20A0F3),
+                isDarkMode ? const Color(0xff94D1F9) : const Color(0xFF20A0F3),
                 BlendMode.srcIn,
               ),
             ),

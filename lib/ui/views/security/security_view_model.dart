@@ -31,6 +31,21 @@ class SecurityViewModel extends CustomBaseViewModel {
     rebuildUi();
   }
 
+  bool isPatternLockEnabled = false;
+  bool isFaceLockEnabled = false;
+
+  void onPatternLockChanged(bool val) {
+    isPatternLockEnabled = val;
+    rebuildUi();
+  }
+
+  void onFaceLockChanged(bool val) {
+    isFaceLockEnabled = val;
+    rebuildUi();
+  }
+
+  bool get isPasskeyEmpty => true;
+
   Widget returnPage() {
     switch (_securityPageEnum) {
       case SecurityPageEnum.main:
