@@ -6,6 +6,7 @@ import 'package:meta_trader/ui/widgets/profile/components/circular_icon_button.d
 import 'package:meta_trader/ui/widgets/profile/components/profile_tiles.dart';
 
 import '../../../app/responsiveness/res.dart';
+import '../../../app/router/router.gr.dart';
 import '../../views/profile/profile_view_model.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -71,11 +72,14 @@ class ProfilePage extends StatelessWidget {
                   leadingIcon: AssetManager.withdrawal,
                   trailingIcon: AssetManager.forwardArrow,
                 ),
-                const ProfileTiles(
+                ProfileTiles(
                   title: "Payment Methods",
                   subTitle: "update payment methods",
                   leadingIcon: AssetManager.paymentMethod,
                   trailingIcon: AssetManager.forwardArrow,
+                  onTap: () {
+                    model.push(const PmMainRoute());
+                  },
                 ),
                 const ProfileTiles(
                   title: "Help and Support",

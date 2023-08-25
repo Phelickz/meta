@@ -119,30 +119,37 @@ class PmMainView extends StackedView<PaymentMethodViewModel> {
                                     : const Color(0xFF475467),
                               ),
                             ),
+                            verticalSpaceSmall(context),
                             PaymentMethodTile(
                               vm: viewModel,
                               paymentMethodEnum: PaymentMethodEnum.onlineBank,
                             ),
+                            verticalSpaceXSmall(context),
                             PaymentMethodTile(
                               vm: viewModel,
                               paymentMethodEnum: PaymentMethodEnum.binancePay,
                             ),
+                            verticalSpaceXSmall(context),
                             PaymentMethodTile(
                               vm: viewModel,
                               paymentMethodEnum: PaymentMethodEnum.neteller,
                             ),
+                            verticalSpaceXSmall(context),
                             PaymentMethodTile(
                               vm: viewModel,
                               paymentMethodEnum: PaymentMethodEnum.perfectMoney,
                             ),
+                            verticalSpaceXSmall(context),
                             PaymentMethodTile(
                               vm: viewModel,
                               paymentMethodEnum: PaymentMethodEnum.skrill,
                             ),
+                            verticalSpaceXSmall(context),
                             PaymentMethodTile(
                               vm: viewModel,
                               paymentMethodEnum: PaymentMethodEnum.sticPay,
                             ),
+                            verticalSpaceXSmall(context),
                             PaymentMethodTile(
                               vm: viewModel,
                               paymentMethodEnum: PaymentMethodEnum.tether,

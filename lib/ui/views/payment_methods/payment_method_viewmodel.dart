@@ -71,8 +71,8 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
     switch (payment) {
       case PaymentMethodEnum.onlineBank:
         return Container(
-          width: McGyver.rsDoubleH(context, 5),
-          height: McGyver.rsDoubleH(context, 5),
+          width: McGyver.rsDoubleH(context, 4),
+          height: McGyver.rsDoubleH(context, 4),
           padding: const EdgeInsets.all(
             8,
           ),
@@ -98,38 +98,38 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
       case PaymentMethodEnum.neteller:
         return Image.asset(
           "assets/images/neteller.png",
-          width: McGyver.rsDoubleH(context, 5),
-          height: McGyver.rsDoubleH(context, 5),
+          width: McGyver.rsDoubleH(context, 4),
+          height: McGyver.rsDoubleH(context, 4),
         );
       case PaymentMethodEnum.bitcoin:
         return Image.asset(
           "assets/images/btc.png",
-          width: McGyver.rsDoubleH(context, 5),
-          height: McGyver.rsDoubleH(context, 5),
+          width: McGyver.rsDoubleH(context, 4),
+          height: McGyver.rsDoubleH(context, 4),
         );
       case PaymentMethodEnum.perfectMoney:
         return Image.asset(
           "assets/images/perfect_money.png",
-          width: McGyver.rsDoubleH(context, 5),
-          height: McGyver.rsDoubleH(context, 5),
+          width: McGyver.rsDoubleH(context, 4),
+          height: McGyver.rsDoubleH(context, 4),
         );
       case PaymentMethodEnum.skrill:
         return Image.asset(
           "assets/images/skrill.png",
-          width: McGyver.rsDoubleH(context, 5),
-          height: McGyver.rsDoubleH(context, 5),
+          width: McGyver.rsDoubleH(context, 4),
+          height: McGyver.rsDoubleH(context, 4),
         );
       case PaymentMethodEnum.sticPay:
         return Image.asset(
           "assets/images/stic_pay.png",
-          width: McGyver.rsDoubleH(context, 5),
-          height: McGyver.rsDoubleH(context, 5),
+          width: McGyver.rsDoubleH(context, 4),
+          height: McGyver.rsDoubleH(context, 4),
         );
       case PaymentMethodEnum.tether:
         return Image.asset(
           "assets/images/tether.png",
-          width: McGyver.rsDoubleH(context, 5),
-          height: McGyver.rsDoubleH(context, 5),
+          width: McGyver.rsDoubleH(context, 4),
+          height: McGyver.rsDoubleH(context, 4),
         );
 
       default:
