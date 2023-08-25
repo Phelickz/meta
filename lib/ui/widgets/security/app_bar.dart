@@ -38,7 +38,7 @@ Widget securityAppBar(BuildContext context, String title, String subtitle,
             }
 
             if (model.securityPageEnum == SecurityPageEnum.password) {
-              model.securityPageEnum = SecurityPageEnum.password;
+              model.securityPageEnum = SecurityPageEnum.main;
             }
 
             if (model.securityPageEnum == SecurityPageEnum.autoLock) {
@@ -46,6 +46,9 @@ Widget securityAppBar(BuildContext context, String title, String subtitle,
             }
             if (model.securityPageEnum == SecurityPageEnum.devices) {
               model.securityPageEnum = SecurityPageEnum.main;
+            }
+            if (model.securityPageEnum == SecurityPageEnum.addPasskey) {
+              model.securityPageEnum = SecurityPageEnum.passkey;
             }
           },
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/ui/widgets/security/add_passkey.dart';
 import 'package:meta_trader/ui/widgets/security/app_bar.dart';
 import 'package:meta_trader/ui/widgets/security/auto_lock.dart';
 import 'package:meta_trader/ui/widgets/security/email_verify.dart';
@@ -18,6 +19,7 @@ enum SecurityPageEnum {
   phoneVerify,
   emailVerify,
   password,
+  addPasskey,
 }
 
 class SecurityViewModel extends CustomBaseViewModel {
@@ -45,6 +47,8 @@ class SecurityViewModel extends CustomBaseViewModel {
         return EmailVerificationPage(model: this);
       case SecurityPageEnum.password:
         return PasswordPage(model: this);
+      case SecurityPageEnum.addPasskey:
+        return AddPasskeyPage(model: this);
       default:
         return Container();
     }
@@ -91,6 +95,13 @@ class SecurityViewModel extends CustomBaseViewModel {
         return securityAppBar(
           context,
           'Devices',
+          '',
+          this,
+        );
+      case SecurityPageEnum.addPasskey:
+        return securityAppBar(
+          context,
+          'Add Passkey',
           '',
           this,
         );
