@@ -9,12 +9,37 @@ class CustomThemeData {
     primaryColor: const Color(0xff0C95EF),
     scaffoldBackgroundColor: const Color(0xffF9FAFB),
     secondaryHeaderColor: const Color(0xffD0D5DD),
+    textTheme: TextTheme(
+      titleLarge: GoogleFonts.dmSans(
+          color: Color(0xff667085), fontSize: 18, fontWeight: FontWeight.w600),
+      titleMedium: GoogleFonts.dmSans(
+          color: Color(0xff667085), fontSize: 16, fontWeight: FontWeight.w600),
+      titleSmall: GoogleFonts.dmSans(
+          color: Color(0xff667085), fontSize: 10, fontWeight: FontWeight.w400),
+      bodySmall: GoogleFonts.dmSans(
+          color: Color(0xff667085), fontSize: 8, fontWeight: FontWeight.w400),
+    ),
   );
   static ThemeData darkTheme = ThemeData(
-    primaryColor: const Color(0xff0C95EF),
-    scaffoldBackgroundColor: const Color(0xff0C2031),
-    secondaryHeaderColor: const Color(0xff98A2B3),
-  );
+      primaryColor: const Color(0xff0C95EF),
+      scaffoldBackgroundColor: const Color(0xff0C2031),
+      secondaryHeaderColor: const Color(0xff98A2B3),
+      textTheme: TextTheme(
+        titleLarge: GoogleFonts.dmSans(
+            color: Color(0xffD0D5DD),
+            fontSize: 18,
+            fontWeight: FontWeight.w600),
+        titleMedium: GoogleFonts.dmSans(
+            color: Color(0xffD0D5DD),
+            fontSize: 16,
+            fontWeight: FontWeight.w600),
+        titleSmall: GoogleFonts.dmSans(
+            color: Color(0xffD0D5DD),
+            fontSize: 10,
+            fontWeight: FontWeight.w400),
+        bodyMedium: GoogleFonts.dmSans(
+            color: Color(0xffD0D5DD), fontSize: 8, fontWeight: FontWeight.w400),
+      ));
 
   // static TextStyle generateStyle(
   //     {required double fontSize,

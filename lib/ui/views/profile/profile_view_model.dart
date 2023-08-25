@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/ui/widgets/profile/components/verification_bar.dart';
 import 'package:meta_trader/ui/widgets/profile/profile.dart';
 
 import '../../../app/core/custom_base_view_model.dart';
@@ -8,7 +9,7 @@ enum ProfileStateEnum { unVerified, halfVerified, verified }
 class ProfileViewModel extends CustomBaseViewModel {
   Future<void> init() async {}
 
-  String _userName = "Susan Blake";
+  String _userName = "Susan";
   String get userName => _userName;
 
   String _rank = "Silver";
@@ -16,6 +17,9 @@ class ProfileViewModel extends CustomBaseViewModel {
 
   bool _isVerified = false;
   bool get isVerified => _isVerified;
+
+  int _verificationState = 2;
+  int get verificationState => _verificationState;
 
   set userName(String name) {
     _userName = name;
@@ -30,6 +34,32 @@ class ProfileViewModel extends CustomBaseViewModel {
   set isVerified(bool verification) {
     _isVerified = verification;
     rebuildUi();
+  }
+
+  set verificationState(int currentState) {
+    _verificationState = currentState;
+    rebuildUi();
+  }
+
+  ProfileStateEnum _profileStateEnum = ProfileStateEnum.verified;
+  ProfileStateEnum get profileStateEnum => _profileStateEnum;
+
+  set setProfileStateEnum(ProfileStateEnum e) {
+    _profileStateEnum = e;
+    rebuildUi();
+  }
+
+  Widget returnVerifiedBar() {
+    switch (_profileStateEnum) {
+      case ProfileStateEnum.unVerified:
+        return VerificationBar(model: this);
+      case ProfileStateEnum.halfVerified:
+        return VerificationBar(model: this);
+      case ProfileStateEnum.verified:
+        return SizedBox();
+      default:
+        return SizedBox();
+    }
   }
 
   Widget returnPage() {

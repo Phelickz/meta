@@ -29,6 +29,7 @@ class ProfilePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                model.returnVerifiedBar(),
                 InkWell(
                   onTap: () {},
                   child: SvgPicture.asset(AssetManager.referralImage),

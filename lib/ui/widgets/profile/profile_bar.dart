@@ -208,7 +208,7 @@ PreferredSize profileAppBar(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Welcome, Susan",
+                "Welcome, ${model.userName}",
                 style: CustomThemeData.generateStyle(
                   fontSize: 18,
                   color: isDarkMode ? Colors.white : Colors.white,
@@ -238,7 +238,7 @@ PreferredSize profileAppBar(
                             width: 5,
                           ),
                           Text(
-                            'Silver',
+                            model.rank,
                             style: CustomThemeData.generateStyle(
                                 fontSize: 9,
                                 fontWeight: FontWeight.w500,
