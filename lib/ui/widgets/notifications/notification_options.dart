@@ -17,7 +17,7 @@ class NotificationOptionsBottomSheet extends StatelessWidget {
       height: 170,
       color: Theme.of(context).scaffoldBackgroundColor,
       child: ClipRRect(
-        borderRadius: BorderRadius.vertical(
+        borderRadius: const BorderRadius.vertical(
             top: Radius.circular(10.0)), // Customize the radius
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

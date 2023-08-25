@@ -65,7 +65,7 @@ class UpdateReleasePage extends StatelessWidget {
                                 width: 190.pWidth(context),
                                 child: Row(
                                   children: [
-                                    Text(
+                                    const Text(
                                       '•',
                                       style: TextStyle(
                                           fontSize: 24,

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/ui/widgets/notifications/components/notifications_tile.dart';
 
 import '../../../app/responsiveness/res.dart';
-import '../../../app/utils/theme.dart';
 import '../../views/notifications/notifications_view_model.dart';
 
 class NotificationPage extends StatelessWidget {
@@ -14,8 +13,6 @@ class NotificationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var isDarkMode = CustomThemeData.isDarkMode(context);
-
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: McGyver.rsDoubleW(context, 6),

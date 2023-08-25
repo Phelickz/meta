@@ -1,4 +1,3 @@
-import 'package:auto_route/annotations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:meta_trader/ui/widgets/dropdown/label_dropdown.dart';
 import 'package:stacked/stacked.dart';
@@ -8,12 +7,11 @@ import '../../../../app/responsiveness/size.dart';
 import '../../../../app/router/router.gr.dart';
 import '../../../../app/utils/theme.dart';
 import '../../../widgets/buttons/buttons.dart';
-import '../../../widgets/payment_method/custom_back_button.dart';
 import '../../../widgets/skeleton.dart';
 import '../../../widgets/textfields/label_text_field.dart';
 import '../payment_method_viewmodel.dart';
 
-@RoutePage()
+// @RoutePage()
 class PmBitcoinView extends StackedView<PaymentMethodViewModel> {
   const PmBitcoinView({super.key});
 
@@ -46,9 +44,9 @@ class PmBitcoinView extends StackedView<PaymentMethodViewModel> {
               ),
               child: Row(
                 children: [
-                  CustomBackButton(
-                    onTap: () => viewModel.goBack(),
-                  ),
+                  // CustomBackButton(
+                  //   onTap: () => viewModel.goBack(),
+                  // ),
                   horizontalSpaceMedium(context),
                   Expanded(
                     child: Column(

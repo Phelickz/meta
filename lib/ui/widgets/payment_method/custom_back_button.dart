@@ -4,9 +4,9 @@ import 'package:flutter_svg/svg.dart';
 import '../../../app/responsiveness/res.dart';
 import '../../../app/utils/theme.dart';
 
-class CustomBackButton extends StatelessWidget {
+class CustomBackButtons extends StatelessWidget {
   final Function() onTap;
-  const CustomBackButton({super.key, required this.onTap});
+  const CustomBackButtons({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +15,10 @@ class CustomBackButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         padding: EdgeInsets.all(
-          McGyver.rsDoubleH(context, 1.5),
+          McGyver.rsDoubleH(context, 1.8),
         ),
-        height: McGyver.rsDoubleH(context, 5),
-        width: McGyver.rsDoubleH(context, 5),
+        height: McGyver.rsDoubleH(context, 4),
+        width: McGyver.rsDoubleH(context, 4),
         child: SvgPicture.asset(
           "assets/images/arrow_left.svg",
           colorFilter: ColorFilter.mode(
@@ -29,4 +29,21 @@ class CustomBackButton extends StatelessWidget {
       ),
     );
   }
+}
+
+class CustomBackButtonss extends StatelessWidget {
+  final Function() onTap;
+  const CustomBackButtonss({super.key, required this.onTap});
+
+  @override
+  PreferredSize build(BuildContext context) {
+    return PreferredSize(
+      preferredSize: const Size.fromHeight(2),
+      child: AppBar(),
+    );
+  }
+}
+
+PreferredSizeWidget customBackButton() {
+  return AppBar();
 }

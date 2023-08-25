@@ -4,7 +4,7 @@ class CustomVerificationIndicator extends StatelessWidget {
   final int currentState;
   final int total;
 
-  CustomVerificationIndicator(this.currentState, this.total);
+  const CustomVerificationIndicator(this.currentState, this.total, {super.key});
 
   @override
   Widget build(BuildContext context) {

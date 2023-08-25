@@ -39,7 +39,9 @@ class EmptyNotificationPage extends StatelessWidget {
                     horizontal: 12.pWidth(context),
                     vertical: 12.pHeight(context)),
                 decoration: BoxDecoration(
-                    color: isDarkMode ? Color(0xff052844) : Color(0xffD3ECFD),
+                    color: isDarkMode
+                        ? const Color(0xff052844)
+                        : const Color(0xffD3ECFD),
                     borderRadius: BorderRadius.circular(20)),
                 child: SvgPicture.asset(
                   AssetManager.emptyNotifications,
