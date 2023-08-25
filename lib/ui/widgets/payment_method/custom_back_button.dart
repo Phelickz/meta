@@ -11,11 +11,14 @@ class CustomBackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
-    return GestureDetector(
+    return InkWell(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.all(
-          McGyver.rsDoubleH(context, 1.5),
+        padding: EdgeInsets.only(
+          left: McGyver.rsDoubleH(context, 1),
+          right: McGyver.rsDoubleH(context, 1.5),
+          top: McGyver.rsDoubleH(context, 1.5),
+          bottom: McGyver.rsDoubleH(context, 1.5),
         ),
         height: McGyver.rsDoubleH(context, 5),
         width: McGyver.rsDoubleH(context, 5),
