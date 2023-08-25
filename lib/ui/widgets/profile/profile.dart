@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/ui/widgets/profile/components/circular_icon_button.dart';
 import 'package:meta_trader/ui/widgets/profile/components/profile_tiles.dart';
 
 import '../../../app/responsiveness/res.dart';
-import '../../../app/router/router.gr.dart';
 import '../../views/profile/profile_view_model.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -78,7 +78,7 @@ class ProfilePage extends StatelessWidget {
                   leadingIcon: AssetManager.paymentMethod,
                   trailingIcon: AssetManager.forwardArrow,
                   onTap: () {
-                    model.push(const PmMainRoute());
+                    model.push(const PaymentMethodRoute());
                   },
                 ),
                 const ProfileTiles(
