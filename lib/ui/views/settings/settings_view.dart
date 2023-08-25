@@ -4,7 +4,7 @@ import 'package:meta_trader/ui/views/settings/settings_view_model.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
 
-@RoutePage(name: "SettingsRoute")
+@RoutePage()
 class SettingsView extends StackedView<SettingsViewModel> {
   const SettingsView({super.key});
 

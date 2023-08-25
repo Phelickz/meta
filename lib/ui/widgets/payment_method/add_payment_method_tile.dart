@@ -19,90 +19,100 @@ class AddPaymentMethodTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
-    return Container(
-      margin: const EdgeInsets.only(bottom: 20),
-      padding: const EdgeInsets.only(left: 12, right: 12, top: 12),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: isDarkMode ? const Color(0xFF0C2031) : Colors.white,
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          vm.payemntMethodIcon(paymentMethodEnum),
-          horizontalSpaceSmall(context),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  vm.paymentMethodLabel(paymentMethodEnum),
-                  style: CustomThemeData.generateStyle(
-                    fontSize: McGyver.textSize(context, 2.1),
-                    fontWeight: FontWeight.bold,
-                    color: isDarkMode
-                        ? const Color(0xFFD0D5DD)
-                        : const Color(0xFF667085),
+    return GestureDetector(
+      onTap: () => vm.onswitchAddPaymentMethod(paymentMethodEnum),
+      child: Container(
+        margin: const EdgeInsets.only(bottom: 20),
+        padding: const EdgeInsets.only(left: 12, right: 12, top: 12),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: isDarkMode ? const Color(0xFF0C2031) : Colors.white,
+        ),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            vm.payemntMethodIcon(paymentMethodEnum, context),
+            horizontalSpaceSmall(context),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    vm.paymentMethodLabel(paymentMethodEnum),
+                    style: CustomThemeData.generateStyle(
+                      fontSize: McGyver.textSize(context, 2.2),
+                      fontWeight: FontWeight.bold,
+                      color: isDarkMode
+                          ? const Color(0xFFD0D5DD)
+                          : const Color(0xFF667085),
+                    ),
                   ),
+                  verticalSpaceXXSmall(context),
+                  Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          _infoLeftText("Average time:", context),
+                          _infoRightText("Instant", context),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          _infoLeftText("Duration:", context),
+                          _infoRightText("up to 30mins", context),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          _infoLeftText("Fee:", context),
+                          _infoRightText("0%", context),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          _infoLeftText("Limit:", context),
+                          _infoRightText("10-200,000 USD", context),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            horizontalSpaceSmall(context),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  height: 50,
                 ),
-                verticalSpaceXXSmall(context),
-                Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        _infoLeftText("Average time:", context),
-                        _infoRightText("Instant", context),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        _infoLeftText("Duration:", context),
-                        _infoRightText("up to 30mins", context),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        _infoLeftText("Fee:", context),
-                        _infoRightText("0%", context),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        _infoLeftText("Limit:", context),
-                        _infoRightText("10-200,000 USD", context),
-                      ],
-                    ),
-                  ],
+                vm.isSelectedAddPaymentMethod(paymentMethodEnum)
+                    ? SizedBox(
+                        height: 22,
+                        width: 22,
+                        child: SvgPicture.asset(
+                          "assets/images/checkbox.svg",
+                        ),
+                      )
+                    : SizedBox(
+                        height: 22,
+                        width: 22,
+                        child: SvgPicture.asset(
+                          "assets/images/uncheckbox.svg",
+                        ),
+                      ),
+                const SizedBox(
+                  height: 50,
+                  width: 2,
                 ),
               ],
             ),
-          ),
-          horizontalSpaceSmall(context),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                color: Colors.red,
-                height: 50,
-              ),
-              SizedBox(
-                height: 22,
-                width: 22,
-                child: SvgPicture.asset(
-                  "assets/images/uncheckbox.svg",
-                ),
-              ),
-              const SizedBox(
-                height: 50,
-                width: 2,
-              ),
-            ],
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

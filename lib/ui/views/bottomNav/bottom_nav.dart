@@ -8,7 +8,7 @@ import 'package:meta_trader/ui/views/home/home_view.dart';
 
 import '../profile/profile_view.dart';
 
-@RoutePage(name: "BottomNavBarView")
+@RoutePage()
 class BottomNavBarView extends StatefulWidget {
   const BottomNavBarView({super.key});
 

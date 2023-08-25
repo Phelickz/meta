@@ -6,7 +6,7 @@ import 'package:stacked/stacked.dart';
 import '../../../app/responsiveness/res.dart';
 import 'dashboard_view_model.dart';
 
-@RoutePage(name: "DashboardView")
+@RoutePage()
 class DashboardView extends StackedView<DashboardViewModel> {
   const DashboardView({super.key});
 

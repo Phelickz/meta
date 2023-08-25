@@ -5,7 +5,7 @@ import 'package:stacked/stacked.dart';
 
 import 'notifications_view_model.dart';
 
-@RoutePage(name: "NotificationRoute")
+@RoutePage()
 class NotificationView extends StackedView<NotificationViewModel> {
   const NotificationView({super.key});
 
