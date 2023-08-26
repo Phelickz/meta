@@ -21,6 +21,14 @@ class CustomThemeData {
           color: const Color(0xff667085),
           fontSize: 10,
           fontWeight: FontWeight.w400),
+      bodyLarge: GoogleFonts.dmSans(
+          color: const Color(0xff667085),
+          fontSize: 16,
+          fontWeight: FontWeight.w400),
+      bodyMedium: GoogleFonts.dmSans(
+          color: const Color(0xff667085),
+          fontSize: 10,
+          fontWeight: FontWeight.w400),
       bodySmall: GoogleFonts.dmSans(
           color: const Color(0xff667085),
           fontSize: 8,
@@ -29,7 +37,7 @@ class CustomThemeData {
     secondaryHeaderColor: const Color(0xff98A2B3),
   );
   static ThemeData darkTheme = ThemeData(
-      primaryColor: const Color(0xff0C95EF),
+      primaryColor: const Color(0xff0B7FCB),
       scaffoldBackgroundColor: const Color(0xff0C2031),
       secondaryHeaderColor: const Color(0xff98A2B3),
       textTheme: TextTheme(
@@ -44,10 +52,18 @@ class CustomThemeData {
         titleSmall: GoogleFonts.dmSans(
             color: const Color(0xffD0D5DD),
             fontSize: 10,
+            fontWeight: FontWeight.w600),
+        bodyLarge: GoogleFonts.dmSans(
+            color: const Color(0xffD0D5DD),
+            fontSize: 16,
             fontWeight: FontWeight.w400),
         bodyMedium: GoogleFonts.dmSans(
             color: const Color(0xffD0D5DD),
-            fontSize: 8,
+            fontSize: 10,
+            fontWeight: FontWeight.w400),
+        bodySmall: GoogleFonts.dmSans(
+            color: const Color(0xffD0D5DD),
+          fontSize: 8,
             fontWeight: FontWeight.w400),
       ));
 

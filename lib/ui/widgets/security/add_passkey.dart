@@ -6,9 +6,9 @@ import '../../../app/responsiveness/res.dart';
 import '../../../app/utils/theme.dart';
 import '../../views/security/security_view_model.dart';
 
-class SecurityMainPage extends StatelessWidget {
+class AddPasskeyPage extends StatelessWidget {
   final SecurityViewModel model;
-  const SecurityMainPage({super.key, required this.model});
+  const AddPasskeyPage({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class SecurityMainPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Two-Factor Authentication",
+                "Security Verification Requirements",
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2.2),
                   fontWeight: FontWeight.bold,
@@ -35,7 +35,7 @@ class SecurityMainPage extends StatelessWidget {
                 ),
               ),
               Text(
-                "To protect your account, it is required for you to turn on at least one 2FA",
+                "You need to complete all of the following verification to continue",
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
                   fontWeight: FontWeight.w500,
@@ -48,19 +48,10 @@ class SecurityMainPage extends StatelessWidget {
           ),
           verticalSpaceSmall(context),
           SecurityOptionTile(
-            assetName: "assets/images/shield_security.svg",
-            vm: model,
-            hasLeadingIcon: true,
-            hasStatus: true,
-            label: "Passkey",
-            status: SecurityOptionStatus.confirmed,
-            onTap: () => model.securityPageEnum = SecurityPageEnum.passkey,
-          ),
-          SecurityOptionTile(
             assetName: "assets/images/message_text.svg",
             vm: model,
             hasLeadingIcon: true,
-            label: "Email",
+            label: "Email Verification",
             status: SecurityOptionStatus.unconfirmed,
             hasStatus: true,
             onTap: () => model.securityPageEnum = SecurityPageEnum.emailVerify,
@@ -73,47 +64,6 @@ class SecurityMainPage extends StatelessWidget {
             status: SecurityOptionStatus.unconfirmed,
             hasStatus: true,
             onTap: () => model.securityPageEnum = SecurityPageEnum.phoneVerify,
-          ),
-          SecurityOptionTile(
-            assetName: "assets/images/password_check.svg",
-            vm: model,
-            label: "Password",
-            hasStatus: true,
-            hasLeadingIcon: true,
-            status: SecurityOptionStatus.confirmed,
-            onTap: () => model.securityPageEnum = SecurityPageEnum.password,
-          ),
-          verticalSpaceMedium(context),
-          Text(
-            "Others",
-            style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 2.2),
-              fontWeight: FontWeight.bold,
-              color: isDarkMode
-                  ? const Color(0xFFD0D5DD)
-                  : const Color(0xFF344054),
-            ),
-          ),
-          verticalSpaceXXSmall(context),
-          SecurityOptionTile(
-            assetName: "assets/images/password_check.svg",
-            vm: model,
-            label: "Auto-Lock",
-            onTap: () => model.securityPageEnum = SecurityPageEnum.autoLock,
-          ),
-          SecurityOptionTile(
-            assetName: "assets/images/password_check.svg",
-            vm: model,
-            label: "Devices",
-            onTap: () => model.securityPageEnum = SecurityPageEnum.devices,
-          ),
-          verticalSpaceSmall(context),
-          SecurityOptionTile(
-            assetName: "assets/images/password_check.svg",
-            vm: model,
-            label: "Disable Account",
-            hasRedLabel: true,
-            onTap: () {},
           ),
         ],
       ),

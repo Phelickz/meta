@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:meta_trader/app/responsiveness/res.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
-import '../../views/payment_methods/payment_method_viewmodel.dart';
+import '../../views/security/security_view_model.dart';
 import '../buttons/buttons.dart';
 
-class EmptyPaymentMethod extends StatelessWidget {
-  final PaymentMethodViewModel viewModel;
-  const EmptyPaymentMethod({super.key, required this.viewModel});
+class EmptyPasskey extends StatelessWidget {
+  final SecurityViewModel model;
+  const EmptyPasskey({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
-    return SizedBox(
-      width: double.infinity,
+    return Expanded(
       child: Column(
         children: [
           verticalSpaceLarge(context),
@@ -33,13 +32,16 @@ class EmptyPaymentMethod extends StatelessWidget {
                   McGyver.rsDoubleH(context, 2),
                 )),
             child: SizedBox(
-                height: McGyver.rsDoubleH(context, 8),
-                width: McGyver.rsDoubleH(context, 8),
-                child: SvgPicture.asset("assets/images/empty_payment.svg")),
+              height: McGyver.rsDoubleH(context, 8),
+              width: McGyver.rsDoubleH(context, 8),
+              child: SvgPicture.asset(
+                "assets/images/shield_security_empty.svg",
+              ),
+            ),
           ),
           verticalSpaceSmall(context),
           Text(
-            "No payment method added ",
+            " Passkeys added Yet",
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.8),
               fontWeight: FontWeight.bold,
@@ -54,10 +56,9 @@ class EmptyPaymentMethod extends StatelessWidget {
           CustomButtons.generalButton(
             context: context,
             onTap: () {
-              viewModel.paymentMethodPageEnum =
-                  PaymentMethodPageEnum.addPaymentMethod;
+              model.securityPageEnum = SecurityPageEnum.addPasskey;
             },
-            text: 'Add Payment Method',
+            text: 'Add A Passkey',
           ),
         ],
       ),
