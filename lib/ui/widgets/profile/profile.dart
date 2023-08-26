@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
-import 'package:meta_trader/ui/views/help_and_support/help_and_support_view.dart';
 import 'package:meta_trader/ui/widgets/profile/components/circular_icon_button.dart';
 import 'package:meta_trader/ui/widgets/profile/components/profile_tiles.dart';
 
