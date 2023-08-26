@@ -34,7 +34,7 @@ class MetaTraderApp extends StatelessWidget {
         //   themeMode: themeMode,
         //   darkTheme: darkTheme,
         //   home: HelpAndSupportView(),
-        // );
+        // );push
       },
     );
   }
