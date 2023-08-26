@@ -68,6 +68,9 @@ class LabelPasswordField extends StatelessWidget {
                 Icons.remove_red_eye_outlined,
               ),
               hintText: hintText,
+              suffixIconColor: isDarkMode
+                  ? const Color(0xFF667085)
+                  : const Color(0xFF98A2B3),
               hintStyle: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2.0),
                 fontWeight: FontWeight.normal,
