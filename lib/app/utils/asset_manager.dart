@@ -46,4 +46,8 @@ class AssetManager {
   static const convert = "$ICONPATH/convert.svg";
   static const chat = "$ICONPATH/chat.svg";
   static const faq = "$ICONPATH/faq.svg";
+  static const attachment = "$ICONPATH/attachment.svg";
+  static const mic = "$ICONPATH/mic.svg";
+  static const messageTyping = "$ICONPATH/messagetyping.svg";
+  static const messages = "$ICONPATH/messages.svg";
 }

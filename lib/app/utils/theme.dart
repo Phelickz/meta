@@ -21,6 +21,14 @@ class CustomThemeData {
           color: const Color(0xff667085),
           fontSize: 10,
           fontWeight: FontWeight.w400),
+      labelLarge: GoogleFonts.dmSans(
+          color: const Color(0xff667085),
+          fontSize: 14,
+          fontWeight: FontWeight.w600),
+      labelMedium: GoogleFonts.dmSans(
+          color: const Color(0xff667085),
+          fontSize: 14,
+          fontWeight: FontWeight.w400),
       bodyLarge: GoogleFonts.dmSans(
           color: const Color(0xff667085),
           fontSize: 16,
@@ -53,6 +61,18 @@ class CustomThemeData {
             color: const Color(0xffD0D5DD),
             fontSize: 10,
             fontWeight: FontWeight.w600),
+        labelLarge: GoogleFonts.dmSans(
+            color: const Color(0xffD0D5DD),
+            fontSize: 14,
+            fontWeight: FontWeight.w600),
+        labelMedium: GoogleFonts.dmSans(
+            color: const Color(0xffD0D5DD),
+            fontSize: 14,
+            fontWeight: FontWeight.w400),
+        labelSmall: GoogleFonts.dmSans(
+            color: const Color(0xffD0D5DD),
+            fontSize: 12,
+            fontWeight: FontWeight.w500),
         bodyLarge: GoogleFonts.dmSans(
             color: const Color(0xffD0D5DD),
             fontSize: 16,
@@ -63,7 +83,7 @@ class CustomThemeData {
             fontWeight: FontWeight.w400),
         bodySmall: GoogleFonts.dmSans(
             color: const Color(0xffD0D5DD),
-          fontSize: 8,
+            fontSize: 8,
             fontWeight: FontWeight.w400),
       ));
 
@@ -90,6 +110,24 @@ class CustomThemeData {
     return GoogleFonts.dmSans(
         // fontFamily: 'Gilroy',
         color: color,
+        fontSize: fontSize,
+        fontWeight: fontWeight,
+        height: lineHeight,
+        fontStyle: FontStyle.normal,
+        decoration: TextDecoration.none);
+  }
+
+  static TextStyle generateColoredStyle(
+      {required double fontSize,
+      FontWeight fontWeight = FontWeight.normal,
+      Color color = Colors.black,
+      double? lineHeight,
+      required BuildContext context}) {
+    return GoogleFonts.dmSans(
+        // fontFamily: 'Gilroy',
+        color: isDarkMode(context)
+            ? const Color(0xffD0D5DD)
+            : const Color(0xff667085),
         fontSize: fontSize,
         fontWeight: fontWeight,
         height: lineHeight,

@@ -76,7 +76,7 @@ class _SignupTextFieldsState extends State<CustomTextFields> {
             color: Colors.black87,
           ),
       decoration: InputDecoration(
-        // contentPadding: const EdgeInsets.only(left: 10, top: 5, bottom: 5),
+        contentPadding: const EdgeInsets.only(left: 10, top: 5, bottom: 5),
         filled: widget.filledWithColor ?? false,
         fillColor: widget.filledWithColor == true
             ? isDarkMode
