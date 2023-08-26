@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
+import '../../views/security/security_view_model.dart';
 import '../buttons/buttons.dart';
 
 class PasskeyAddedSuccessPage extends StatelessWidget {
-  const PasskeyAddedSuccessPage({super.key});
+  final SecurityViewModel model;
+  const PasskeyAddedSuccessPage({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -88,7 +90,9 @@ class PasskeyAddedSuccessPage extends StatelessWidget {
           ),
           child: CustomButtons.generalButton(
             context: context,
-            onTap: () {},
+            onTap: () {
+              model.securityPageEnum = SecurityPageEnum.passkey;
+            },
             text: 'Continue',
           ),
         ),
