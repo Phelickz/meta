@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:meta_trader/app/responsiveness/size.dart';
-import 'package:meta_trader/ui/widgets/security/security_option_tile.dart';
+import 'package:meta_trader/ui/widgets/textfields/label_password_field.dart';
+import 'package:meta_trader/ui/widgets/textfields/label_text_field.dart';
 
 import '../../../app/responsiveness/res.dart';
+import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
 import '../../views/security/security_view_model.dart';
+import '../buttons/buttons.dart';
 
-class AddPasskeyPage extends StatelessWidget {
+class AddPasskeyEnterPage extends StatelessWidget {
   final SecurityViewModel model;
-  const AddPasskeyPage({super.key, required this.model});
+  const AddPasskeyEnterPage({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class AddPasskeyPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Security Verification Requirements",
+                "Enter a unique 4-digit passkey",
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2.2),
                   fontWeight: FontWeight.bold,
@@ -35,7 +37,7 @@ class AddPasskeyPage extends StatelessWidget {
                 ),
               ),
               Text(
-                "You need to complete all of the following verification to continue",
+                "Your passkey will be used to authorize your withdrawals. Please you are not advised to share this with anyone.",
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
                   fontWeight: FontWeight.w500,
@@ -47,28 +49,23 @@ class AddPasskeyPage extends StatelessWidget {
             ],
           ),
           verticalSpaceSmall(context),
-          SecurityOptionTile(
-            assetName: "assets/images/message_text.svg",
-            vm: model,
-            hasLeadingIcon: true,
-            label: "Email Verification",
-            status: SecurityOptionStatus.unconfirmed,
-            hasStatus: true,
-            // onTap: () => model.securityPageEnum = SecurityPageEnum.emailVerify,
-            onTap: () =>
-                model.securityPageEnum = SecurityPageEnum.addPasskeyEnter,
+          const LabelTextField(
+            label: "Passkey",
+            hintText: "Enter 4-digits passkey",
           ),
-          SecurityOptionTile(
-            assetName: "assets/images/mobile.svg",
-            vm: model,
-            hasLeadingIcon: true,
-            label: "Phone Number",
-            status: SecurityOptionStatus.unconfirmed,
-            hasStatus: true,
-            // onTap: () => model.securityPageEnum = SecurityPageEnum.phoneVerify,
-            onTap: () =>
-                model.securityPageEnum = SecurityPageEnum.addPasskeyEnter,
+          const LabelPasswordField(
+            label: "Password",
+            hintText: "Enter Your password",
           ),
+          verticalSpaceSmall(context),
+          verticalSpaceSmall(context),
+          CustomButtons.generalButton(
+            text: "Continue",
+            context: context,
+            onTap: () {
+              model.securityPageEnum = SecurityPageEnum.passkeyAddedSuccess;
+            },
+          )
         ],
       ),
     );
