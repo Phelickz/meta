@@ -56,6 +56,7 @@ class AddPasskeyPage extends StatelessWidget {
             hasStatus: true,
             onTap: () => model.securityPageEnum = SecurityPageEnum.emailVerify,
           ),
+          verticalSpaceXSmall(context),
           SecurityOptionTile(
             assetName: "assets/images/mobile.svg",
             vm: model,

@@ -9,13 +9,19 @@ import 'package:meta_trader/ui/widgets/help_and_support/help_and_support.dart';
 import '../../../app/locator/locator.dart';
 import '../../../app/services/theme_service.dart';
 
-enum HelpAndSupportPageEnum { helpAndSupport, customerSupport, faq }
+enum HelpAndSupportPageEnum {
+  helpAndSupport,
+  customerSupport,
+  faq,
+  sendAMessage
+}
 
 class HelpAndSupportViewModel extends CustomBaseViewModel {
   bool _isDarkMode = false;
   final _themeService = locator<ThemeServices>();
 
-  HelpAndSupportPageEnum _helpAndSupportPageEnum = HelpAndSupportPageEnum.faq;
+  HelpAndSupportPageEnum _helpAndSupportPageEnum =
+      HelpAndSupportPageEnum.helpAndSupport;
   HelpAndSupportPageEnum get helpAndSupportPageEnum => _helpAndSupportPageEnum;
 
   set setHelpAndSupportPageEnum(HelpAndSupportPageEnum e) {
@@ -47,7 +53,9 @@ class HelpAndSupportViewModel extends CustomBaseViewModel {
       case HelpAndSupportPageEnum.faq:
         return FAQPage(model: this);
       case HelpAndSupportPageEnum.customerSupport:
-        return SizedBox();
+        return const Placeholder();
+      case HelpAndSupportPageEnum.sendAMessage:
+        return const Placeholder();
 
       default:
         return Container();

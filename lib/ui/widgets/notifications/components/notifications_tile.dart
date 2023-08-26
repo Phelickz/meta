@@ -30,9 +30,16 @@ class NotificationTile extends StatelessWidget {
         height: 36,
         padding: EdgeInsets.symmetric(horizontal: 8.pWidth(context)),
         decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            border: Border.all(color: Theme.of(context).primaryColor)),
-        child: SvgPicture.asset(AssetManager.emptyNotifications),
+          color: const Color(0xffD3ECFD),
+          shape: BoxShape.circle,
+          border: Border.all(
+            color: Theme.of(context).primaryColor.withOpacity(0.5),
+          ),
+        ),
+        child: SvgPicture.asset(
+          AssetManager.emptyNotifications,
+          color: Theme.of(context).primaryColor,
+        ),
       ),
       title: Text(
         title,

@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/ui/views/help_and_support/help_and_support_view.dart';
 import 'package:meta_trader/ui/widgets/profile/components/circular_icon_button.dart';
 import 'package:meta_trader/ui/widgets/profile/components/profile_tiles.dart';
 
@@ -36,15 +37,20 @@ class ProfilePage extends StatelessWidget {
                   child: SvgPicture.asset(AssetManager.referralImage),
                 ),
                 SizedBox(height: 32.pHeight(context)),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ProfileIconButton(
+                    const ProfileIconButton(
                         icon: AssetManager.manageAccountIcon,
                         title: "Manage Account"),
                     ProfileIconButton(
-                        icon: AssetManager.referralsIcon, title: "Referrals"),
-                    ProfileIconButton(
+                      icon: AssetManager.referralsIcon,
+                      title: "Referrals",
+                      onTap: () {
+                        model.push(const ReferralRoute());
+                      },
+                    ),
+                    const ProfileIconButton(
                         icon: AssetManager.tradeHistoryIcon,
                         title: "Trade History"),
                   ],
@@ -52,17 +58,26 @@ class ProfilePage extends StatelessWidget {
                 SizedBox(
                   height: 12.pHeight(context),
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ProfileIconButton(
+                    const ProfileIconButton(
                         icon: AssetManager.loyaltyRewards,
                         title: "Loyalty Rewards"),
                     ProfileIconButton(
-                        icon: AssetManager.notificationsIcon,
-                        title: "Notifications"),
+                      icon: AssetManager.notificationsIcon,
+                      title: "Notifications",
+                      onTap: () {
+                        model.push(const NotificationRoute());
+                      },
+                    ),
                     ProfileIconButton(
-                        icon: AssetManager.security, title: "Security"),
+                      icon: AssetManager.security,
+                      title: "Security",
+                      onTap: () {
+                        model.push(const SecurityRoute());
+                      },
+                    ),
                   ],
                 ),
                 SizedBox(height: 32.pHeight(context)),
@@ -81,11 +96,14 @@ class ProfilePage extends StatelessWidget {
                     model.push(const PaymentMethodRoute());
                   },
                 ),
-                const ProfileTiles(
+                ProfileTiles(
                   title: "Help and Support",
                   subTitle: "file a complaint with our team",
                   leadingIcon: AssetManager.withdrawal,
                   trailingIcon: AssetManager.forwardArrow,
+                  onTap: () {
+                    model.push(const HelpAndSupportRoute());
+                  },
                 ),
                 const ProfileTiles(
                   title: "Rate the app",

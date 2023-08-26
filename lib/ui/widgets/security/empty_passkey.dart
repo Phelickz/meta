@@ -14,7 +14,7 @@ class EmptyPasskey extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
-    return Expanded(
+    return SingleChildScrollView(
       child: Column(
         children: [
           verticalSpaceLarge(context),

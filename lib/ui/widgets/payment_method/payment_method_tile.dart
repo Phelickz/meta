@@ -20,7 +20,7 @@ class PaymentMethodTile extends StatelessWidget {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Padding(
       padding: const EdgeInsets.symmetric(
-        vertical: 8,
+        vertical: 12,
       ),
       child: GestureDetector(
         onTap: () {
