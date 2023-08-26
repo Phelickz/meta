@@ -44,4 +44,6 @@ class AssetManager {
   static const facebook = "$ICONPATH/facebook.svg";
   static const refresh = "$ICONPATH/refresh.svg";
   static const convert = "$ICONPATH/convert.svg";
+  static const chat = "$ICONPATH/chat.svg";
+  static const faq = "$ICONPATH/faq.svg";
 }
