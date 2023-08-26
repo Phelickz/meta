@@ -1,24 +1,22 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-import '../../../../app/responsiveness/res.dart';
-import '../../../../app/responsiveness/size.dart';
-import '../../../widgets/buttons/buttons.dart';
-import '../../../widgets/textfields/label_text_field.dart';
-import '../payment_method_viewmodel.dart';
+import '../../../app/responsiveness/res.dart';
+import '../../../app/responsiveness/size.dart';
+import '../../views/payment_methods/payment_method_viewmodel.dart';
+import '../buttons/buttons.dart';
+import '../textfields/label_text_field.dart';
 
-// @RoutePage()
-class PmSticPayView extends StatelessWidget {
-  const PmSticPayView({super.key, this.viewModel});
-  final PaymentMethodViewModel? viewModel;
+class NetellerPage extends StatelessWidget {
+  final PaymentMethodViewModel viewModel;
+  const NetellerPage({
+    super.key,
+    required this.viewModel,
+  });
 
   @override
-  // A builder function that gives us a ViewModel
-  Widget build(
-    BuildContext context,
-  ) {
-    return SafeArea(
+  Widget build(BuildContext context) {
+    return Expanded(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
             child: SingleChildScrollView(
@@ -50,7 +48,8 @@ class PmSticPayView extends StatelessWidget {
             child: CustomButtons.generalButton(
               context: context,
               onTap: () {
-                viewModel?.goToAddPaymentMethodSucess();
+                viewModel.paymentMethodPageEnum =
+                    PaymentMethodPageEnum.addPaymentMethodSuccess;
               },
               text: 'Save',
             ),

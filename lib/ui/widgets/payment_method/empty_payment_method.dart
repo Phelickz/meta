@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 
 import '../../../app/responsiveness/size.dart';
-import '../../../app/router/router.gr.dart';
 import '../../../app/utils/theme.dart';
 import '../../views/payment_methods/payment_method_viewmodel.dart';
 import '../buttons/buttons.dart';
@@ -55,7 +54,8 @@ class EmptyPaymentMethod extends StatelessWidget {
           CustomButtons.generalButton(
             context: context,
             onTap: () {
-              viewModel.push(const PmAddPaymentSuccessRoute());
+              viewModel.paymentMethodPageEnum =
+                  PaymentMethodPageEnum.addPaymentMethod;
             },
             text: 'Add Payment Method',
           ),

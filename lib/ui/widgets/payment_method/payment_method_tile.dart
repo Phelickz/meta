@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/ui/views/payment_methods/payment_method_viewmodel.dart';
-import 'package:meta_trader/ui/views/payment_methods/pm_main/pm_main_view.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
