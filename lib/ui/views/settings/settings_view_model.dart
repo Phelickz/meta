@@ -8,7 +8,9 @@ import 'package:meta_trader/ui/widgets/settings/chart_color.dart';
 import 'package:meta_trader/ui/widgets/settings/color_preference.dart';
 import 'package:meta_trader/ui/widgets/settings/language_settings.dart';
 import 'package:meta_trader/ui/widgets/settings/notification_settings.dart';
+import 'package:meta_trader/ui/widgets/settings/privacy_policy.dart';
 import 'package:meta_trader/ui/widgets/settings/settings.dart';
+import 'package:meta_trader/ui/widgets/settings/terms_of_use.dart';
 import 'package:meta_trader/ui/widgets/settings/update_releases.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
@@ -25,7 +27,9 @@ enum SettingsPageEnum {
   colorPreference,
   changeBasis,
   aboutUs,
-  updateReleases
+  updateReleases,
+  privacyPolicy,
+  termsOfUSe
 }
 
 class SettingsViewModel extends CustomBaseViewModel {
@@ -83,6 +87,56 @@ class SettingsViewModel extends CustomBaseViewModel {
   SettingsPageEnum _settingsPageEnum = SettingsPageEnum.settings;
   SettingsPageEnum get settingsPageEnum => _settingsPageEnum;
 
+  Map privacyPolicy = {
+    "introduction":
+        "Thank you for choosing Meta trader  as your trusted forex trading platform. We are committed to safeguarding your privacy and protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data. By accessing or using our services, you agree to the practices described in this policy.",
+    "data": [
+      {
+        "heading": "Information Collection",
+        "description":
+            "We may collect various types of information from you when you use our platform or services, including:",
+        "data": [
+          {
+            "subheading": "Personal Information",
+            "description":
+                "This may include your name, email address, phone number, residential address, date of birth, government-issued identification, and other necessary details required for account registration and compliance with financial regulations."
+          },
+          {
+            "subheading": "Financial Information",
+            "description":
+                "To facilitate transactions, we may collect details related to your bank account, credit/debit card information, and transaction history."
+          },
+          {
+            "subheading": "Device and Usag e Information",
+            "description":
+                "We may automatically collect information about your device, operating system, browser type, IP address, and interactions with our platform to improve our services and user experience."
+          },
+          {
+            "subheading": "Cookies and Tracking Technologies",
+            "description":
+                "We may use cookies and similar technologies to gather information about your usage patterns and preferences while using our platform. This helps us to optimize our website, improve navigation, and personalize your experience"
+          },
+        ]
+      },
+      {
+        "heading": "Data Sharing And Disclosure",
+        "description":
+            "We use the collected information for the following purposes",
+        "data": [
+          {
+            "subheading": "Account Creation",
+            "description":
+                "To create and maintain your account, verify your identity, and provide customer support."
+          },
+          {
+            "subheading": "Forex Trading Services",
+            "description":
+                "To process your trades, transactions, and withdrawals in accordance with your instructions."
+          },
+        ]
+      },
+    ],
+  };
   set setSettingsPageEnum(SettingsPageEnum e) {
     _settingsPageEnum = e;
     rebuildUi();
@@ -133,6 +187,10 @@ class SettingsViewModel extends CustomBaseViewModel {
         return AboutUsPage(model: this);
       case SettingsPageEnum.updateReleases:
         return UpdateReleasePage(model: this);
+      case SettingsPageEnum.termsOfUSe:
+        return TermsOfUsePage(model: this);
+      case SettingsPageEnum.privacyPolicy:
+        return PrivacyPolicyPage(model: this);
       default:
         return Container();
     }
@@ -161,6 +219,14 @@ class SettingsViewModel extends CustomBaseViewModel {
       case SettingsPageEnum.aboutUs:
         return settingsAppBar(
             context, 'About Us', '', this, SettingsPageEnum.aboutUs);
+
+      case SettingsPageEnum.privacyPolicy:
+        return settingsAppBar(context, 'Privacy policy', '', this,
+            SettingsPageEnum.privacyPolicy);
+
+      case SettingsPageEnum.termsOfUSe:
+        return settingsAppBar(
+            context, 'Terms of use', '', this, SettingsPageEnum.termsOfUSe);
       case SettingsPageEnum.updateReleases:
         return null;
       default:
