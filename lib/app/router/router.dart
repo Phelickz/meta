@@ -9,7 +9,7 @@ class MetaTraderRouter extends $MetaTraderRouter {
         //Should be the commented/below instead of the above
         AdaptiveRoute(
           page: StartupRoute.page,
-          // initial: true,
+          initial: true,
         ),
         AdaptiveRoute(page: OnboardingRoute.page),
         AdaptiveRoute(page: AuthRoute.page),
@@ -22,14 +22,14 @@ class MetaTraderRouter extends $MetaTraderRouter {
           page: PmMainRoute.page,
         ),
         AdaptiveRoute(page: PmAddRoute.page),
-        AdaptiveRoute(page: PmOnlineRoute.page),
-        AdaptiveRoute(page: PmBinancePayRoute.page),
-        AdaptiveRoute(page: PmNetellerRoute.page),
-        AdaptiveRoute(page: PmSticPayRoute.page),
-        AdaptiveRoute(page: PmTetherRoute.page),
-        AdaptiveRoute(page: PmSkrillRoute.page),
-        AdaptiveRoute(page: PmBitcoinRoute.page),
-        AdaptiveRoute(page: PmPerfectMoneyRoute.page),
+        // AdaptiveRoute(page: PmOnlineRoute.page), //they are being managed in the state now. its better like that so that they can share the paymentmethodviewmodel
+        // AdaptiveRoute(page: PmBinancePayRoute.page),
+        // AdaptiveRoute(page: PmNetellerRoute.page),
+        // AdaptiveRoute(page: PmSticPayRoute.page),
+        // AdaptiveRoute(page: PmTetherRoute.page),
+        // AdaptiveRoute(page: PmSkrillRoute.page),
+        // AdaptiveRoute(page: PmBitcoinRoute.page),
+        // AdaptiveRoute(page: PmPerfectMoneyRoute.page),
         AdaptiveRoute(page: PmAddPaymentSuccessRoute.page),
         AdaptiveRoute(page: PmQrcodeRoute.page),
 
@@ -38,26 +38,8 @@ class MetaTraderRouter extends $MetaTraderRouter {
         AdaptiveRoute(page: BottomNavBarRoute.page),
         AdaptiveRoute(
           page: SecurityRoute.page,
-          initial: true,
-        )
+          // initial: true,
+        ),
+        AdaptiveRoute(page: FundAccountRoute.page)
       ];
 }
-
-// import '../../ui/views/auth/auth_view.dart';
-// import '../../ui/views/bottomNav/bottom_nav.dart';
-// import '../../ui/views/dashboard/dashboard_view.dart';
-// import '../../ui/views/onboarding/onboarding.dart';
-// import '../../ui/views/verification/verification_view.dart';
-//
-// @AdaptiveAutoRouter(
-//   replaceInRouteName: "View,Route",
-//   routes: <AutoRoute>[
-//     AdaptiveRoute(page: StartupView, initial: true),
-//     AdaptiveRoute(page: HomeView),
-//     AdaptiveRoute(page: OnboardingView),
-//     AdaptiveRoute(page: AuthView),
-//     AdaptiveRoute(page: VerificationView),
-//     AdaptiveRoute(page: DashboardView),
-//     AdaptiveRoute(page: BottomNavBarView)
-//   ],
-// )

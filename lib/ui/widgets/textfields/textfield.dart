@@ -15,6 +15,8 @@ class CustomTextFields extends StatefulWidget {
   final String? Function(String?)? validator;
   final TextInputType? keyboardType;
   final InputDecoration? inputDecoration;
+  final BoxConstraints? suffixIconConstraints;
+  // final bool ignore;
   const CustomTextFields({
     Key? key,
     this.prefixIcon,
@@ -29,6 +31,7 @@ class CustomTextFields extends StatefulWidget {
     this.inputDecoration,
     this.hintText,
     this.filledWithColor = false,
+    this.suffixIconConstraints,
   }) : super(key: key);
 
   @override
@@ -59,7 +62,7 @@ class _SignupTextFieldsState extends State<CustomTextFields> {
 
   @override
   Widget build(BuildContext context) {
-    // var isDarkMode = CustomThemeData.isDarkMode(context);
+    var isDarkMode = CustomThemeData.isDarkMode(context);
     return TextFormField(
       keyboardType: widget.keyboardType,
       validator: widget.validator,
@@ -76,8 +79,11 @@ class _SignupTextFieldsState extends State<CustomTextFields> {
         // contentPadding: const EdgeInsets.only(left: 10, top: 5, bottom: 5),
         filled: widget.filledWithColor ?? false,
         fillColor: widget.filledWithColor == true
-            ? const Color(0xffE2E8F0)
+            ? isDarkMode
+                ? const Color(0xff052844)
+                : const Color(0xffE4E7EC)
             : Theme.of(context).colorScheme.secondary,
+        suffixIconConstraints: widget.suffixIconConstraints,
         suffixIcon: widget.password!
             ? IconButton(
                 icon: _visible

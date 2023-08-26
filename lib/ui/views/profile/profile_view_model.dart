@@ -56,9 +56,9 @@ class ProfileViewModel extends CustomBaseViewModel {
       case ProfileStateEnum.halfVerified:
         return VerificationBar(model: this);
       case ProfileStateEnum.verified:
-        return SizedBox();
+        return const SizedBox();
       default:
-        return SizedBox();
+        return const SizedBox();
     }
   }
 

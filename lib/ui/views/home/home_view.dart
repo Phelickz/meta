@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/widgets/home/price_sentiments.dart';
 import 'package:meta_trader/ui/widgets/home/trading_tools.dart';
@@ -86,15 +87,18 @@ class HomeView extends StackedView<HomeViewModel> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             bottomIcons(
-                context, 'assets/images/money-recive.svg', 'Deposit Funds'),
+                context, 'assets/images/money-recive.svg', 'Deposit Funds', () {
+              viewModel.push(const FundAccountRoute());
+            }),
+            const SizedBox(width: 10),
+            bottomIcons(context, 'assets/images/money-send.svg',
+                'Withdraw Funds', () {}),
             const SizedBox(width: 10),
             bottomIcons(
-                context, 'assets/images/money-send.svg', 'Withdraw Funds'),
+                context, 'assets/images/gift.svg', 'Loyalty Rewards', () {}),
             const SizedBox(width: 10),
-            bottomIcons(context, 'assets/images/gift.svg', 'Loyalty Rewards'),
-            const SizedBox(width: 10),
-            bottomIcons(
-                context, 'assets/images/note-2.svg', 'Transaction History'),
+            bottomIcons(context, 'assets/images/note-2.svg',
+                'Transaction History', () {}),
           ],
         ),
         child: Padding(
@@ -486,41 +490,46 @@ class HomeView extends StackedView<HomeViewModel> {
     );
   }
 
-  Widget bottomIcons(BuildContext context, String image, String text) {
+  Widget bottomIcons(
+      BuildContext context, String image, String text, void Function()? onTap) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
-    return Column(
-      children: [
-        Container(
-          decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(
-                color:
-                    isDarkMode ? Theme.of(context).primaryColor : Colors.white,
-              )),
-          child: Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Center(
-              child: SvgPicture.asset(
-                image,
-                color: isDarkMode ? const Color(0xff47B0F5) : Colors.white,
+    return GestureDetector(
+      onTap: onTap,
+      child: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: isDarkMode
+                      ? Theme.of(context).primaryColor
+                      : Colors.white,
+                )),
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Center(
+                child: SvgPicture.asset(
+                  image,
+                  color: isDarkMode ? const Color(0xff47B0F5) : Colors.white,
+                ),
               ),
             ),
           ),
-        ),
-        verticalSpaceXSmall(context),
-        Text(
-          text,
-          style: CustomThemeData.generateStyle(
-            fontSize: McGyver.textSize(
-              context,
-              1.2,
+          verticalSpaceXSmall(context),
+          Text(
+            text,
+            style: CustomThemeData.generateStyle(
+              fontSize: McGyver.textSize(
+                context,
+                1.2,
+              ),
+              fontWeight: FontWeight.normal,
+              color: isDarkMode ? const Color(0xffD0D5DD) : Colors.white,
             ),
-            fontWeight: FontWeight.normal,
-            color: isDarkMode ? const Color(0xffD0D5DD) : Colors.white,
           ),
-        ),
-        verticalSpaceSmall(context)
-      ],
+          verticalSpaceSmall(context)
+        ],
+      ),
     );
   }
 
