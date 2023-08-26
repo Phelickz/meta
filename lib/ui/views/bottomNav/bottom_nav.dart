@@ -31,77 +31,82 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
-    return Scaffold(
-      body: _tabs[_currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        elevation: 0,
-        unselectedItemColor: isDarkMode ? Colors.white54 : Colors.black54,
-        selectedItemColor: Theme.of(context).primaryColor,
-        backgroundColor:
-            isDarkMode ? const Color(0xff052844) : const Color(0xffD3ECFD),
-        unselectedLabelStyle: CustomThemeData.generateStyle(
-          fontSize: 15,
-          // color: isDarkMode ? Colors.white : Colors.black,
-          // color: Colors.red,
+    return WillPopScope(
+      onWillPop: () async {
+        return false;
+      },
+      child: Scaffold(
+        body: _tabs[_currentIndex],
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          elevation: 0,
+          unselectedItemColor: isDarkMode ? Colors.white54 : Colors.black54,
+          selectedItemColor: Theme.of(context).primaryColor,
+          backgroundColor:
+              isDarkMode ? const Color(0xff052844) : const Color(0xffD3ECFD),
+          unselectedLabelStyle: CustomThemeData.generateStyle(
+            fontSize: 15,
+            // color: isDarkMode ? Colors.white : Colors.black,
+            // color: Colors.red,
+          ),
+          selectedLabelStyle: CustomThemeData.generateStyle(
+            fontSize: 15,
+            color: isDarkMode ? Colors.white : Theme.of(context).primaryColor,
+          ),
+          currentIndex: _currentIndex,
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          items: [
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                'assets/images/home.svg',
+                color: _currentIndex != 0
+                    ? const Color(0xff667085)
+                    : Theme.of(context).primaryColor,
+              ),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                'assets/images/chart-success.svg',
+                color: _currentIndex != 1
+                    ? const Color(0xff667085)
+                    : Theme.of(context).primaryColor,
+              ),
+              label: 'Quotes',
+            ),
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                'assets/images/chart.svg',
+                color: _currentIndex != 2
+                    ? const Color(0xff667085)
+                    : Theme.of(context).primaryColor,
+              ),
+              label: 'Chart',
+            ),
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                'assets/images/status-up.svg',
+                color: _currentIndex != 3
+                    ? const Color(0xff667085)
+                    : Theme.of(context).primaryColor,
+              ),
+              label: 'Trade',
+            ),
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                'assets/images/user.svg',
+                color: _currentIndex != 4
+                    ? const Color(0xff667085)
+                    : Theme.of(context).primaryColor,
+              ),
+              label: 'Profile',
+            ),
+          ],
         ),
-        selectedLabelStyle: CustomThemeData.generateStyle(
-          fontSize: 15,
-          color: isDarkMode ? Colors.white : Theme.of(context).primaryColor,
-        ),
-        currentIndex: _currentIndex,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        items: [
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/images/home.svg',
-              color: _currentIndex != 0
-                  ? const Color(0xff667085)
-                  : Theme.of(context).primaryColor,
-            ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/images/chart-success.svg',
-              color: _currentIndex != 1
-                  ? const Color(0xff667085)
-                  : Theme.of(context).primaryColor,
-            ),
-            label: 'Quotes',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/images/chart.svg',
-              color: _currentIndex != 2
-                  ? const Color(0xff667085)
-                  : Theme.of(context).primaryColor,
-            ),
-            label: 'Chart',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/images/status-up.svg',
-              color: _currentIndex != 3
-                  ? const Color(0xff667085)
-                  : Theme.of(context).primaryColor,
-            ),
-            label: 'Trade',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/images/user.svg',
-              color: _currentIndex != 4
-                  ? const Color(0xff667085)
-                  : Theme.of(context).primaryColor,
-            ),
-            label: 'Profile',
-          ),
-        ],
       ),
     );
   }

@@ -6,7 +6,6 @@ import '../../../../app/responsiveness/res.dart';
 import '../../../../app/responsiveness/size.dart';
 import '../../../../app/utils/theme.dart';
 import '../../../widgets/buttons/buttons.dart';
-import '../../../widgets/payment_method/custom_back_button.dart';
 import '../../../widgets/skeleton.dart';
 import '../payment_method_viewmodel.dart';
 
@@ -43,9 +42,9 @@ class PmQrcodeView extends StackedView<PaymentMethodViewModel> {
               ),
               child: Row(
                 children: [
-                  CustomBackButton(
-                    onTap: () => viewModel.goBack(),
-                  ),
+                  // CustomBackButton(
+                  //   onTap: () => viewModel.goBack(),
+                  // ),
                   horizontalSpaceMedium(context),
                   Expanded(
                     child: Column(

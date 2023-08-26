@@ -56,7 +56,7 @@ class PmAddPaymentSuccessView extends StackedView<PaymentMethodViewModel> {
                 "Payment Method Added Successfully",
                 textAlign: TextAlign.center,
                 style: CustomThemeData.generateStyle(
-                  fontSize: McGyver.textSize(context, 3),
+                  fontSize: McGyver.textSize(context, 2.7),
                   fontWeight: FontWeight.w700,
                   color: isDarkMode
                       ? const Color(0xFFF2F4F7)
@@ -74,7 +74,7 @@ class PmAddPaymentSuccessView extends StackedView<PaymentMethodViewModel> {
                 text: TextSpan(
                   text: 'Now you can make withdrawals via ',
                   style: CustomThemeData.generateStyle(
-                    fontSize: McGyver.textSize(context, 2),
+                    fontSize: McGyver.textSize(context, 1.8),
                     fontWeight: FontWeight.w500,
                     color: isDarkMode
                         ? const Color(0xff667085)
