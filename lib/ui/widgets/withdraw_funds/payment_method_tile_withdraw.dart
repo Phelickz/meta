@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/ui/views/payment_methods/payment_method_viewmodel.dart';
+import 'package:meta_trader/ui/views/withdraw_funds/withdraw_funds_view_model.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
 
-class PaymentMethodTile extends StatelessWidget {
-  final PaymentMethodViewModel vm;
+class PaymentMethodTileWithdraw extends StatelessWidget {
+  final WithdrawFundViewModel vm;
   final PaymentMethodEnum paymentMethodEnum;
-  const PaymentMethodTile({
+  final void Function()? onTap;
+  const PaymentMethodTileWithdraw({
     super.key,
     required this.vm,
     required this.paymentMethodEnum,
+    this.onTap,
   });
 
   @override
@@ -23,9 +26,7 @@ class PaymentMethodTile extends StatelessWidget {
         vertical: 12,
       ),
       child: GestureDetector(
-        onTap: () {
-          vm.onTap(paymentMethodEnum);
-        },
+        onTap: onTap,
         child: Row(
           children: [
             vm.payemntMethodIcon(paymentMethodEnum, context),
@@ -40,13 +41,6 @@ class PaymentMethodTile extends StatelessWidget {
                       ? const Color(0xFFD0D5DD)
                       : const Color(0xFF667085),
                 ),
-              ),
-            ),
-            SizedBox(
-              height: McGyver.rsDoubleW(context, 6),
-              width: McGyver.rsDoubleW(context, 6),
-              child: SvgPicture.asset(
-                "assets/images/tick_circle.svg",
               ),
             ),
             horizontalSpaceXXSmall(context),

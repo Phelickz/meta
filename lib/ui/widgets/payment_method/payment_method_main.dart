@@ -38,6 +38,7 @@ class PaymentMethodMainPage extends StatelessWidget {
                             : const Color(0xFF475467),
                       ),
                     ),
+                    verticalSpaceXSmall(context),
                     PaymentMethodTile(
                       vm: viewModel,
                       paymentMethodEnum: PaymentMethodEnum.onlineBank,

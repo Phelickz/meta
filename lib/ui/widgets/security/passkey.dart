@@ -19,31 +19,32 @@ class PasskeyPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return model.isPasskeyEmpty
-        ? Expanded(
-            child: Column(
-              children: [
-                verticalSpaceXSmall(context),
-                Expanded(
-                  child: ListView.builder(
-                    itemBuilder: (_, index) => const PasskeyTile(),
-                    itemCount: 2,
-                  ),
+        ? Column(
+            children: [
+              verticalSpaceXSmall(context),
+              Expanded(
+                child: ListView.separated(
+                  itemBuilder: (_, index) => const PasskeyTile(),
+                  itemCount: 2,
+                  separatorBuilder: (BuildContext context, int index) {
+                    return verticalSpaceXSmall(context);
+                  },
                 ),
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: McGyver.rsDoubleW(context, 6),
-                  ),
-                  child: CustomButtons.generalButton(
-                    context: context,
-                    onTap: () {
-                      showAddPasskeyModal(context, isDarkMode);
-                    },
-                    text: 'Add A Passkey',
-                  ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: McGyver.rsDoubleW(context, 6),
                 ),
-                verticalSpaceMedium(context),
-              ],
-            ),
+                child: CustomButtons.generalButton(
+                  context: context,
+                  onTap: () {
+                    showAddPasskeyModal(context, isDarkMode);
+                  },
+                  text: 'Add A Passkey',
+                ),
+              ),
+              verticalSpaceMedium(context),
+            ],
           )
         : EmptyPasskey(model: model);
   }

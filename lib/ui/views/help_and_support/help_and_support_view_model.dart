@@ -1,9 +1,8 @@
-// ignore_for_file: prefer_final_fields
+// ignore_for_file: prefer_final_fields, unused_field
 
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
 import 'package:meta_trader/ui/widgets/help_and_support/app_bar.dart';
-
 import 'package:meta_trader/ui/widgets/help_and_support/customer_support.dart';
 import 'package:meta_trader/ui/widgets/help_and_support/empty.dart';
 import 'package:meta_trader/ui/widgets/help_and_support/empty_icon.dart';
@@ -13,7 +12,12 @@ import 'package:meta_trader/ui/widgets/help_and_support/help_and_support.dart';
 import '../../../app/locator/locator.dart';
 import '../../../app/services/theme_service.dart';
 
-enum HelpAndSupportPageEnum { helpAndSupport, customerSupport, faq }
+enum HelpAndSupportPageEnum {
+  helpAndSupport,
+  customerSupport,
+  faq,
+  sendAMessage
+}
 
 enum CustomerSupportEnum {
   emptyIcon,
@@ -28,14 +32,13 @@ class HelpAndSupportViewModel extends CustomBaseViewModel {
   final _themeService = locator<ThemeServices>();
 
   HelpAndSupportPageEnum _helpAndSupportPageEnum = HelpAndSupportPageEnum.faq;
-  
+
   HelpAndSupportPageEnum get helpAndSupportPageEnum => _helpAndSupportPageEnum;
 
   set setHelpAndSupportPageEnum(HelpAndSupportPageEnum e) {
     _helpAndSupportPageEnum = e;
     rebuildUi();
   }
-
 
   CustomerSupportEnum _customerSupportEnum = CustomerSupportEnum.emptyIcon;
   CustomerSupportEnum get customerSupportEnum => _customerSupportEnum;
@@ -63,7 +66,6 @@ class HelpAndSupportViewModel extends CustomBaseViewModel {
     }
   ];
 
-
   List _suggestionsList = [
     "I need a favor",
     "How do I withdraw",
@@ -78,7 +80,6 @@ class HelpAndSupportViewModel extends CustomBaseViewModel {
       case HelpAndSupportPageEnum.faq:
         return FAQPage(model: this);
       case HelpAndSupportPageEnum.customerSupport:
-
         return CustomerSupportPage(model: this);
 
       default:
@@ -113,7 +114,6 @@ class HelpAndSupportViewModel extends CustomBaseViewModel {
         return helpAndSupportAppBar(
             context, "FAQ", "", this, HelpAndSupportPageEnum.faq);
       case HelpAndSupportPageEnum.customerSupport:
-
         return helpAndSupportAppBar(
             context, "Customer care", "Online", this, helpAndSupportPageEnum);
 

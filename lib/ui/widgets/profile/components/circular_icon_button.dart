@@ -9,19 +9,22 @@ import '../../../../app/utils/theme.dart';
 class ProfileIconButton extends StatelessWidget {
   final String icon;
   final String title;
-  const ProfileIconButton({Key? key, required this.icon, required this.title})
+  final void Function()? onTap;
+  const ProfileIconButton(
+      {Key? key, required this.icon, required this.title, this.onTap})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
 
-    return SizedBox(
-      width: 100.pWidth(context),
-      child: Column(
-        children: [
-          InkWell(
-            child: Container(
+    return InkWell(
+      onTap: onTap,
+      child: SizedBox(
+        width: 100.pWidth(context),
+        child: Column(
+          children: [
+            Container(
               padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
               width: 32.pWidth(context),
               height: 32.pHeight(context),
@@ -30,20 +33,20 @@ class ProfileIconButton extends StatelessWidget {
                   shape: BoxShape.circle,
                   border: Border.all(color: Theme.of(context).primaryColor)),
             ),
-          ),
-          SizedBox(
-            height: 12.pHeight(context),
-          ),
-          Text(
-            title,
-            style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 1.4),
-              fontWeight: FontWeight.w400,
-              color:
-                  isDarkMode ? ColorManager.darkText : ColorManager.lightText,
+            SizedBox(
+              height: 12.pHeight(context),
             ),
-          )
-        ],
+            Text(
+              title,
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 1.4),
+                fontWeight: FontWeight.w400,
+                color:
+                    isDarkMode ? ColorManager.darkText : ColorManager.lightText,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

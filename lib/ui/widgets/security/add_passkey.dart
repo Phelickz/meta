@@ -58,6 +58,7 @@ class AddPasskeyPage extends StatelessWidget {
             onTap: () =>
                 model.securityPageEnum = SecurityPageEnum.addPasskeyEnter,
           ),
+          verticalSpaceXSmall(context),
           SecurityOptionTile(
             assetName: "assets/images/mobile.svg",
             vm: model,
