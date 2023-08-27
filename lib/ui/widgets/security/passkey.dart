@@ -17,7 +17,6 @@ class PasskeyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var isDarkMode = CustomThemeData.isDarkMode(context);
     return model.isPasskeyEmpty
         ? Expanded(
             child: Column(
@@ -36,7 +35,7 @@ class PasskeyPage extends StatelessWidget {
                   child: CustomButtons.generalButton(
                     context: context,
                     onTap: () {
-                      showAddPasskeyModal(context, isDarkMode);
+                      showAddPasskeyModal(context);
                     },
                     text: 'Add A Passkey',
                   ),
@@ -48,7 +47,8 @@ class PasskeyPage extends StatelessWidget {
         : EmptyPasskey(model: model);
   }
 
-  void showAddPasskeyModal(BuildContext context, bool isDarkMode) {
+  void showAddPasskeyModal(BuildContext context) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
     showModalBottomSheet(
         backgroundColor:
             isDarkMode ? const Color(0xFF0C2031) : const Color(0xFFFAFDFF),
