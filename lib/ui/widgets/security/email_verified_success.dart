@@ -3,10 +3,15 @@ import 'package:flutter/material.dart';
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
+import '../../views/security/security_view_model.dart';
 import '../buttons/buttons.dart';
 
-class PhoneVerifiedSuccessPage extends StatelessWidget {
-  const PhoneVerifiedSuccessPage({super.key});
+class EmailVerifiedSuccessPage extends StatelessWidget {
+  final SecurityViewModel model;
+  const EmailVerifiedSuccessPage({
+    super.key,
+    required this.model,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +36,7 @@ class PhoneVerifiedSuccessPage extends StatelessWidget {
                   ),
           ),
         ),
+        verticalSpaceSmall(context),
         Padding(
           padding: EdgeInsets.symmetric(
             horizontal: McGyver.rsDoubleW(context, 10),
@@ -75,20 +81,21 @@ class PhoneVerifiedSuccessPage extends StatelessWidget {
                     ),
                   ),
                   const TextSpan(
-                    text:
-                        ' Your email account Susan@gmail.com has been verified successfully',
+                    text: ' has been verified successfully',
                   )
                 ]),
           ),
         ),
-        verticalSpaceMedium(context),
+        verticalSpaceLarge(context),
         Padding(
           padding: EdgeInsets.symmetric(
             horizontal: McGyver.rsDoubleW(context, 6),
           ),
           child: CustomButtons.generalButton(
             context: context,
-            onTap: () {},
+            onTap: () {
+              model.securityPageEnum = SecurityPageEnum.addPasskeyEnter;
+            },
             text: 'Continue',
           ),
         ),

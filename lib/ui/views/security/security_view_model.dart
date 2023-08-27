@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/ui/widgets/security/add_passkey.dart';
 import 'package:meta_trader/ui/widgets/security/app_bar.dart';
 import 'package:meta_trader/ui/widgets/security/auto_lock.dart';
+import 'package:meta_trader/ui/widgets/security/email_verified_success.dart';
 import 'package:meta_trader/ui/widgets/security/email_verify.dart';
 import 'package:meta_trader/ui/widgets/security/passkey.dart';
+import 'package:meta_trader/ui/widgets/security/passkey_added_success.dart';
 import 'package:meta_trader/ui/widgets/security/phone_verify.dart';
 import 'package:meta_trader/ui/widgets/security/security_main.dart';
 
 import '../../../../app/core/custom_base_view_model.dart';
+import '../../widgets/security/add_passkey_enter.dart';
 import '../../widgets/security/devices.dart';
 import '../../widgets/security/password.dart';
 
@@ -20,6 +23,9 @@ enum SecurityPageEnum {
   emailVerify,
   password,
   addPasskey,
+  addPasskeyEnter,
+  passkeyAddedSuccess,
+  emailVerifySuccess,
 }
 
 class SecurityViewModel extends CustomBaseViewModel {
@@ -64,6 +70,12 @@ class SecurityViewModel extends CustomBaseViewModel {
         return PasswordPage(model: this);
       case SecurityPageEnum.addPasskey:
         return AddPasskeyPage(model: this);
+      case SecurityPageEnum.addPasskeyEnter:
+        return AddPasskeyEnterPage(model: this);
+      case SecurityPageEnum.passkeyAddedSuccess:
+        return PasskeyAddedSuccessPage(model: this);
+      case SecurityPageEnum.emailVerifySuccess:
+        return EmailVerifiedSuccessPage(model: this);
       default:
         return Container();
     }
@@ -85,6 +97,7 @@ class SecurityViewModel extends CustomBaseViewModel {
           '',
           this,
         );
+
       case SecurityPageEnum.emailVerify:
         return securityAppBar2(
           context,
@@ -114,6 +127,7 @@ class SecurityViewModel extends CustomBaseViewModel {
           this,
         );
       case SecurityPageEnum.addPasskey:
+      case SecurityPageEnum.addPasskeyEnter:
         return securityAppBar2(
           context,
           'Add Passkey',

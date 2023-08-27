@@ -50,6 +50,9 @@ Widget securityAppBar(BuildContext context, String title, String subtitle,
             if (model.securityPageEnum == SecurityPageEnum.addPasskey) {
               model.securityPageEnum = SecurityPageEnum.passkey;
             }
+            if (model.securityPageEnum == SecurityPageEnum.addPasskeyEnter) {
+              model.securityPageEnum = SecurityPageEnum.addPasskey;
+            }
           },
         ),
         horizontalSpaceMedium(context),
