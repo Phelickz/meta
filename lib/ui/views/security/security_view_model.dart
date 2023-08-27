@@ -6,6 +6,7 @@ import 'package:meta_trader/ui/widgets/security/email_verified_success.dart';
 import 'package:meta_trader/ui/widgets/security/email_verify.dart';
 import 'package:meta_trader/ui/widgets/security/passkey.dart';
 import 'package:meta_trader/ui/widgets/security/passkey_added_success.dart';
+import 'package:meta_trader/ui/widgets/security/phone_verified_success.dart';
 import 'package:meta_trader/ui/widgets/security/phone_verify.dart';
 import 'package:meta_trader/ui/widgets/security/security_main.dart';
 
@@ -26,6 +27,7 @@ enum SecurityPageEnum {
   addPasskeyEnter,
   passkeyAddedSuccess,
   emailVerifySuccess,
+  phoneVerifySuccess,
 }
 
 class SecurityViewModel extends CustomBaseViewModel {
@@ -76,6 +78,8 @@ class SecurityViewModel extends CustomBaseViewModel {
         return PasskeyAddedSuccessPage(model: this);
       case SecurityPageEnum.emailVerifySuccess:
         return EmailVerifiedSuccessPage(model: this);
+      case SecurityPageEnum.phoneVerifySuccess:
+        return PhoneVerifiedSuccessPage(model: this);
       default:
         return Container();
     }
