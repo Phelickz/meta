@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../app/responsiveness/size.dart';
 import '../../views/security/security_view_model.dart';
-import 'device_tile.dart';
+import 'components/device_tile.dart';
 
 class DevicesPage extends StatelessWidget {
   final SecurityViewModel model;

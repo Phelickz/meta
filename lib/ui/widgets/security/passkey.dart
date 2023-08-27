@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:meta_trader/ui/widgets/security/passkey_tile.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
 import '../../views/security/security_view_model.dart';
 import '../buttons/buttons.dart';
-import 'add_passkey_modal.dart';
-import 'empty_passkey.dart';
+import 'components/add_passkey_modal.dart';
+import 'components/empty_passkey.dart';
+import 'components/passkey_tile.dart';
 
 class PasskeyPage extends StatelessWidget {
   final SecurityViewModel model;

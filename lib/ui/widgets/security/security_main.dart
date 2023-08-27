@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
-import 'package:meta_trader/ui/widgets/security/security_option_tile.dart';
-
 import '../../../app/responsiveness/res.dart';
 import '../../../app/utils/theme.dart';
 import '../../views/security/security_view_model.dart';
+import 'components/security_option_tile.dart';
 
 class SecurityMainPage extends StatelessWidget {
   final SecurityViewModel model;
