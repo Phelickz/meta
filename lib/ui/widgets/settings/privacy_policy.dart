@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/ui/widgets/settings/components/policy_template.dart';
 
 import '../../../app/responsiveness/res.dart';
-import '../../../app/utils/theme.dart';
 import '../../views/settings/settings_view_model.dart';
 
 class PrivacyPolicyPage extends StatelessWidget {
@@ -12,7 +11,6 @@ class PrivacyPolicyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var isDarkMode = CustomThemeData.isDarkMode(context);
     final privacyPolicyList = model.privacyPolicy["data"];
 
     return Padding(

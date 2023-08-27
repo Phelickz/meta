@@ -68,7 +68,8 @@ AppBar helpAndSupportAppBar(
                 child: SvgPicture.asset(
                   AssetManager.chat,
 
-                  color: Color(0x98A2B3),
+                  // ignore: deprecated_member_use
+                  color: const Color(0x0098a2b3),
                 ),
               ),
             )
