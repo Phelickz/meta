@@ -11,56 +11,62 @@ class TradeFeatures extends StatelessWidget {
       {super.key,
       required this.image,
       required this.title,
-      required this.subtitle});
+      required this.subtitle,
+      this.onTap});
   final String image;
   final String title;
   final String subtitle;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
-    return Card(
-      color:
-          isDarkMode ? Theme.of(context).scaffoldBackgroundColor : Colors.white,
-      shape: RoundedRectangleBorder(
-        side: BorderSide(
-          color: isDarkMode ? Colors.white24 : Colors.black12,
+    return GestureDetector(
+      onTap: onTap,
+      child: Card(
+        color: isDarkMode
+            ? Theme.of(context).scaffoldBackgroundColor
+            : Colors.white,
+        shape: RoundedRectangleBorder(
+          side: BorderSide(
+            color: isDarkMode ? Colors.white24 : Colors.black12,
+          ),
+          borderRadius: BorderRadius.circular(10),
         ),
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: SizedBox(
-          width: McGyver.rsDoubleW(context, 30),
-          height: McGyver.rsDoubleH(context, 18),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              SvgPicture.asset(
-                image,
-                color: isDarkMode
-                    ? const Color(0xff8ACDF9)
-                    : Theme.of(context).primaryColor,
-              ),
-              verticalSpaceXSmall(context),
-              Text(
-                title,
-                style: CustomThemeData.generateStyle(
-                  fontSize: McGyver.textSize(context, 1.7),
-                  color: isDarkMode ? Colors.white70 : Colors.black,
-                  fontWeight: FontWeight.normal,
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: SizedBox(
+            width: McGyver.rsDoubleW(context, 30),
+            height: McGyver.rsDoubleH(context, 18),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SvgPicture.asset(
+                  image,
+                  color: isDarkMode
+                      ? const Color(0xff8ACDF9)
+                      : Theme.of(context).primaryColor,
                 ),
-              ),
-              verticalSpaceXSmall(context),
-              Text(
-                subtitle,
-                style: CustomThemeData.generateStyle(
-                  fontSize: McGyver.textSize(context, 1.3),
-                  color: isDarkMode ? Colors.white70 : Colors.black54,
+                verticalSpaceXSmall(context),
+                Text(
+                  title,
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 1.7),
+                    color: isDarkMode ? Colors.white70 : Colors.black,
+                    fontWeight: FontWeight.normal,
+                  ),
                 ),
-              )
-            ],
+                verticalSpaceXSmall(context),
+                Text(
+                  subtitle,
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 1.3),
+                    color: isDarkMode ? Colors.white70 : Colors.black54,
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
