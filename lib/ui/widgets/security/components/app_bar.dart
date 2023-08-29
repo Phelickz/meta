@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 
-import '../../../app/responsiveness/size.dart';
-import '../../../app/utils/theme.dart';
-import '../../views/security/security_view_model.dart';
-import '../payment_method/custom_back_button.dart';
+import '../../../../app/responsiveness/size.dart';
+import '../../../../app/utils/theme.dart';
+import '../../../views/security/security_view_model.dart';
+import 'custom_back_button.dart';
 
 Widget securityAppBar(BuildContext context, String title, String subtitle,
     SecurityViewModel model) {

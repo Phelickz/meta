@@ -137,10 +137,13 @@ class PasswordPage extends StatelessWidget {
                     ),
                   ),
                   CustomButtons.generalTextButton(
-                    width: McGyver.rsDoubleW(context, 30),
+                    width: McGyver.rsDoubleW(context, 27),
                     text: "Contact Broker",
                     padding: McGyver.rsDoubleH(context, 0.1),
                     context: context,
+                    textColor: isDarkMode
+                        ? const Color(0xFF42B0F8)
+                        : const Color(0xFF20A0F3),
                     onTap: () {},
                   ),
                 ],

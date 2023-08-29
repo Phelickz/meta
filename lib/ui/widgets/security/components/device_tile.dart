@@ -2,10 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../app/responsiveness/res.dart';
-import '../../../app/responsiveness/size.dart';
-import '../../../app/utils/theme.dart';
-import '../../views/security/security_view_model.dart';
+import '../../../../app/responsiveness/res.dart';
+import '../../../../app/responsiveness/size.dart';
+import '../../../../app/utils/theme.dart';
+import '../../../views/security/security_view_model.dart';
 
 class DeviceModel {
   final String name;

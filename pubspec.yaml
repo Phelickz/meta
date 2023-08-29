@@ -35,6 +35,8 @@ dependencies:
 
   persistent_bottom_nav_bar: ^5.0.2
   fade_scroll_app_bar: ^0.0.7
+
+  date_format: ^2.0.7
   
 dev_dependencies:
   flutter_test:

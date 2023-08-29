@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/ui/views/security/security_view_model.dart';
 
-import '../../../app/responsiveness/res.dart';
-import '../../../app/responsiveness/size.dart';
-import '../../../app/utils/theme.dart';
+import '../../../../app/responsiveness/res.dart';
+import '../../../../app/responsiveness/size.dart';
+import '../../../../app/utils/theme.dart';
 
 enum SecurityOptionStatus { confirmed, unconfirmed }
 

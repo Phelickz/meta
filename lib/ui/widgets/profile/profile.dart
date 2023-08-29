@@ -36,33 +36,41 @@ class ProfilePage extends StatelessWidget {
                   child: SvgPicture.asset(AssetManager.referralImage),
                 ),
                 SizedBox(height: 32.pHeight(context)),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ProfileIconButton(
+                    const ProfileIconButton(
                         icon: AssetManager.manageAccountIcon,
                         title: "Manage Account"),
-                    ProfileIconButton(
+                    const ProfileIconButton(
                         icon: AssetManager.referralsIcon, title: "Referrals"),
                     ProfileIconButton(
-                        icon: AssetManager.tradeHistoryIcon,
-                        title: "Trade History"),
+                      icon: AssetManager.tradeHistoryIcon,
+                      title: "Trade History",
+                      onTap: () {
+                        model.push(const TradeHistoryRoute());
+                      },
+                    ),
                   ],
                 ),
                 SizedBox(
                   height: 12.pHeight(context),
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ProfileIconButton(
+                    const ProfileIconButton(
                         icon: AssetManager.loyaltyRewards,
                         title: "Loyalty Rewards"),
-                    ProfileIconButton(
+                    const ProfileIconButton(
                         icon: AssetManager.notificationsIcon,
                         title: "Notifications"),
                     ProfileIconButton(
-                        icon: AssetManager.security, title: "Security"),
+                        icon: AssetManager.security,
+                        title: "Security",
+                        onTap: () {
+                          model.push(const SecurityRoute());
+                        }),
                   ],
                 ),
                 SizedBox(height: 32.pHeight(context)),
