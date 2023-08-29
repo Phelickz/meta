@@ -125,18 +125,23 @@ class HomeView extends StackedView<HomeViewModel> {
                 width: McGyver.rsDoubleW(context, 100),
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  children: const [
+                  children: [
                     TradeFeatures(
+                      onTap: () {},
                       image: 'assets/images/trade.svg',
                       title: 'Social Trading',
                       subtitle: 'Copy and earn with experienced traders',
                     ),
                     TradeFeatures(
+                      onTap: () {
+                        viewModel.push(const ForexNewsRoute());
+                      },
                       image: 'assets/images/trade.svg',
                       title: 'Forex News',
                       subtitle: 'Stay up to date with forex news',
                     ),
                     TradeFeatures(
+                      onTap: () {},
                       image: 'assets/images/trade.svg',
                       title: 'Chart Analysis',
                       subtitle: 'Copy and earn with experienced traders',
