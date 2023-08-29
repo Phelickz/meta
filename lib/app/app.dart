@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/locator/locator.dart';
 import 'package:meta_trader/app/services/router_service.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/ui/views/trade_history/trade_history_view.dart';
 import 'package:stacked_themes/stacked_themes.dart';
-
-import '../ui/views/security/security_view.dart';
 
 class MetaTraderApp extends StatelessWidget {
   const MetaTraderApp({super.key});
@@ -35,7 +34,7 @@ class MetaTraderApp extends StatelessWidget {
           theme: regularTheme,
           themeMode: themeMode,
           darkTheme: darkTheme,
-          home: const SecurityView(),
+          home: const TradeHistoryView(),
         );
       },
     );
