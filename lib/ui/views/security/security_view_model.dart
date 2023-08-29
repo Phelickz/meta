@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/ui/widgets/security/add_passkey.dart';
-import 'package:meta_trader/ui/widgets/security/app_bar.dart';
 import 'package:meta_trader/ui/widgets/security/auto_lock.dart';
 import 'package:meta_trader/ui/widgets/security/email_verified_success.dart';
 import 'package:meta_trader/ui/widgets/security/email_verify.dart';
 import 'package:meta_trader/ui/widgets/security/passkey.dart';
 import 'package:meta_trader/ui/widgets/security/passkey_added_success.dart';
+import 'package:meta_trader/ui/widgets/security/phone_verified_success.dart';
 import 'package:meta_trader/ui/widgets/security/phone_verify.dart';
 import 'package:meta_trader/ui/widgets/security/security_main.dart';
 
 import '../../../../app/core/custom_base_view_model.dart';
 import '../../widgets/security/add_passkey_enter.dart';
+import '../../widgets/security/components/app_bar.dart';
 import '../../widgets/security/devices.dart';
 import '../../widgets/security/password.dart';
 
@@ -26,6 +27,7 @@ enum SecurityPageEnum {
   addPasskeyEnter,
   passkeyAddedSuccess,
   emailVerifySuccess,
+  phoneVerifySuccess,
 }
 
 class SecurityViewModel extends CustomBaseViewModel {
@@ -76,6 +78,8 @@ class SecurityViewModel extends CustomBaseViewModel {
         return PasskeyAddedSuccessPage(model: this);
       case SecurityPageEnum.emailVerifySuccess:
         return EmailVerifiedSuccessPage(model: this);
+      case SecurityPageEnum.phoneVerifySuccess:
+        return PhoneVerifiedSuccessPage(model: this);
       default:
         return Container();
     }

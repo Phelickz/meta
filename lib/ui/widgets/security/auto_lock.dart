@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../app/responsiveness/size.dart';
 import '../../views/security/security_view_model.dart';
-import 'auto_lock_tile.dart';
+import 'components/auto_lock_tile.dart';
 
 class AutoLockPage extends StatelessWidget {
   final SecurityViewModel model;

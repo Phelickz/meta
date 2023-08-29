@@ -88,7 +88,7 @@ class EmailVerificationPage extends StatelessWidget {
           padding: EdgeInsets.symmetric(
             horizontal: McGyver.rsDoubleW(context, 6),
           ),
-          child: CustomButtons.buttonWithoutBackground(
+          child: CustomButtons.outlineButton(
             context: context,
             onTap: () {},
             text: 'Resend code',
