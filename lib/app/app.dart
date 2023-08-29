@@ -34,11 +34,7 @@ class MetaTraderApp extends StatelessWidget {
         //   theme: regularTheme,
         //   themeMode: themeMode,
         //   darkTheme: darkTheme,
-<<<<<<< Updated upstream
         //   home: const ProfileView(),
-=======
-        //   home: const BrokerInfomationView(),
->>>>>>> Stashed changes
         // );
       },
     );
