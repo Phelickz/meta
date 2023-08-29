@@ -50,4 +50,7 @@ class AssetManager {
   static const mic = "$ICONPATH/mic.svg";
   static const messageTyping = "$ICONPATH/messagetyping.svg";
   static const messages = "$ICONPATH/messages.svg";
+  static const filter = "$ICONPATH/filter.svg";
+  static const transaction = "$ICONPATH/transaction.svg";
+  static const internalTransfer = "$ICONPATH/internaltransfer.svg";
 }

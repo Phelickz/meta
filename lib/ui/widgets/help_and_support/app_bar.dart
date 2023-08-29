@@ -67,8 +67,7 @@ AppBar helpAndSupportAppBar(
                 onTap: () {},
                 child: SvgPicture.asset(
                   AssetManager.chat,
-
-                  color: Color(0x98A2B3),
+                  color: Color(0xff98A2B3),
                 ),
               ),
             )
