@@ -26,6 +26,7 @@ class MetaTraderApp extends StatelessWidget {
           themeMode: themeMode,
           // theme: ThemeData(brightness: Brightness.light, fontFamily: 'Gilroy'),
           darkTheme: darkTheme,
+          
         );
 
         // return MaterialApp(
@@ -33,7 +34,11 @@ class MetaTraderApp extends StatelessWidget {
         //   theme: regularTheme,
         //   themeMode: themeMode,
         //   darkTheme: darkTheme,
+<<<<<<< Updated upstream
         //   home: const ProfileView(),
+=======
+        //   home: const BrokerInfomationView(),
+>>>>>>> Stashed changes
         // );
       },
     );

@@ -10,6 +10,7 @@ class AssetManager {
   static const referralImage = "$IMAGEPATH/referralimage.svg";
   static const metaLogo = "$IMAGEPATH/metalogo.svg";
   static const metaPngLogo = "$IMAGEPATH/metapnglogo.png";
+  static const brokerLogo = "$IMAGEPATH/logo.png";
 
   static const updateImageLight = "$IMAGEPATH/updatelight.svg";
   static const updateImageDark = "$IMAGEPATH/updatedark.svg";
@@ -50,4 +51,9 @@ class AssetManager {
   static const mic = "$ICONPATH/mic.svg";
   static const messageTyping = "$ICONPATH/messagetyping.svg";
   static const messages = "$ICONPATH/messages.svg";
+
+  static const add = "$ICONPATH/add-square.svg";
+  static const filter = "$ICONPATH/setting-4.svg";
+  static const closeSquare = "$ICONPATH/close-square.svg";
+  static const infoCircle = "$ICONPATH/info-circle.svg";
 }
