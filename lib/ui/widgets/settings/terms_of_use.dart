@@ -12,7 +12,6 @@ class TermsOfUsePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var isDarkMode = CustomThemeData.isDarkMode(context);
     final privacyPolicyList = model.privacyPolicy["data"];
 
     return Padding(

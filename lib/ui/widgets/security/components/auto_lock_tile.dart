@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../app/responsiveness/res.dart';
-import '../../../app/responsiveness/size.dart';
-import '../../../app/utils/theme.dart';
+import '../../../../app/responsiveness/res.dart';
+import '../../../../app/responsiveness/size.dart';
+import '../../../../app/utils/theme.dart';
 
 class AutoLockTile extends StatelessWidget {
   final bool value;

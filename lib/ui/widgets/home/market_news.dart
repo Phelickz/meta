@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 
 class MarketNews extends StatelessWidget {
@@ -58,7 +59,7 @@ class MarketNews extends StatelessWidget {
                   'Maimi Crypto Aspirations Boosted by Borderless Capital\'s \$25 Million Fund Lorem Ipsum',
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.4),
-                    color: isDarkMode ? Colors.white70 : Colors.black45,
+                    color: isDarkMode ? ColorManager.darkText : Colors.black45,
                   ),
                 ),
               ],

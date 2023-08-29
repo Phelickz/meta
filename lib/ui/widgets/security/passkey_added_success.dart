@@ -83,7 +83,7 @@ class PasskeyAddedSuccessPage extends StatelessWidget {
                 ]),
           ),
         ),
-        verticalSpaceMedium(context),
+        verticalSpaceLarge(context),
         Padding(
           padding: EdgeInsets.symmetric(
             horizontal: McGyver.rsDoubleW(context, 6),

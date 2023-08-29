@@ -49,9 +49,13 @@ class ProfilePage extends StatelessWidget {
                         model.push(const ReferralRoute());
                       },
                     ),
-                    const ProfileIconButton(
-                        icon: AssetManager.tradeHistoryIcon,
-                        title: "Trade History"),
+                    ProfileIconButton(
+                      icon: AssetManager.tradeHistoryIcon,
+                      title: "Trade History",
+                      onTap: () {
+                        model.push(const TradeHistoryRoute());
+                      },
+                    ),
                   ],
                 ),
                 SizedBox(
