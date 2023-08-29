@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:stacked_themes/stacked_themes.dart';
 
 class CustomThemeData {
   static ThemeData lightTheme = ThemeData(
@@ -135,6 +136,7 @@ class CustomThemeData {
   }
 
   static bool isDarkMode(BuildContext context) {
-    return true;
+    return getThemeManager(context).getSelectedTheme().themeMode ==
+        ThemeMode.dark;
   }
 }
