@@ -14,54 +14,51 @@ class EmptyPasskey extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
-    return Expanded(
-      child: Column(
-        children: [
-          verticalSpaceLarge(context),
-          Container(
-            height: McGyver.rsDoubleH(context, 10),
-            width: McGyver.rsDoubleH(context, 10),
-            padding: EdgeInsets.all(
-              McGyver.rsDoubleH(context, 1.5),
-            ),
-            decoration: BoxDecoration(
-                color: isDarkMode
-                    ? const Color(0xFF052844)
-                    : const Color(0xFFD3ECFD),
-                borderRadius: BorderRadius.circular(
-                  McGyver.rsDoubleH(context, 2),
-                )),
-            child: SizedBox(
-              height: McGyver.rsDoubleH(context, 8),
-              width: McGyver.rsDoubleH(context, 8),
-              child: SvgPicture.asset(
-                "assets/images/shield_security_empty.svg",
-              ),
-            ),
+    return Column(
+      children: [
+        verticalSpaceLarge(context),
+        Container(
+          height: McGyver.rsDoubleH(context, 10),
+          width: McGyver.rsDoubleH(context, 10),
+          padding: EdgeInsets.all(
+            McGyver.rsDoubleH(context, 1.5),
           ),
-          verticalSpaceSmall(context),
-          Text(
-            " Passkeys added Yet",
-            style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 1.8),
-              fontWeight: FontWeight.bold,
+          decoration: BoxDecoration(
               color: isDarkMode
-                  ? const Color(0xFFD0D5DD)
-                  : const Color(0xFF98A2B3),
+                  ? const Color(0xFF052844)
+                  : const Color(0xFFD3ECFD),
+              borderRadius: BorderRadius.circular(
+                McGyver.rsDoubleH(context, 2),
+              )),
+          child: SizedBox(
+            height: McGyver.rsDoubleH(context, 8),
+            width: McGyver.rsDoubleH(context, 8),
+            child: SvgPicture.asset(
+              "assets/images/shield_security_empty.svg",
             ),
           ),
-          SizedBox(
-            height: McGyver.rsDoubleH(context, 48),
+        ),
+        verticalSpaceSmall(context),
+        Text(
+          " Passkeys added Yet",
+          style: CustomThemeData.generateStyle(
+            fontSize: McGyver.textSize(context, 1.8),
+            fontWeight: FontWeight.bold,
+            color:
+                isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF98A2B3),
           ),
-          CustomButtons.generalButton(
-            context: context,
-            onTap: () {
-              model.securityPageEnum = SecurityPageEnum.addPasskey;
-            },
-            text: 'Add A Passkey',
-          ),
-        ],
-      ),
+        ),
+        SizedBox(
+          height: McGyver.rsDoubleH(context, 48),
+        ),
+        CustomButtons.generalButton(
+          context: context,
+          onTap: () {
+            model.securityPageEnum = SecurityPageEnum.addPasskey;
+          },
+          text: 'Add A Passkey',
+        ),
+      ],
     );
   }
 }

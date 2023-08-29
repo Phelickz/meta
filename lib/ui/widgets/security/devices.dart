@@ -22,21 +22,19 @@ class DevicesPage extends StatelessWidget {
           location: "New Jersey, USA ",
           date: "2023.7.13 20:40:08"),
     ];
-    return Expanded(
-      child: Column(
-        children: [
-          verticalSpaceXSmall(context),
-          Expanded(
-            child: ListView.builder(
-              itemBuilder: (_, index) => DeviceTile(
-                device: devices[index],
-                viewModel: model,
-              ),
-              itemCount: 2,
+    return Column(
+      children: [
+        verticalSpaceXSmall(context),
+        Expanded(
+          child: ListView.builder(
+            itemBuilder: (_, index) => DeviceTile(
+              device: devices[index],
+              viewModel: model,
             ),
+            itemCount: 2,
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

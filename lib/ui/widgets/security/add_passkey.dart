@@ -12,64 +12,59 @@ class AddPasskeyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
-    return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: McGyver.rsDoubleW(context, 6),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          verticalSpaceXSmall(context),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Security Verification Requirements",
-                style: CustomThemeData.generateStyle(
-                  fontSize: McGyver.textSize(context, 2.2),
-                  fontWeight: FontWeight.bold,
-                  color: isDarkMode
-                      ? const Color(0xFFD0D5DD)
-                      : const Color(0xFF344054),
-                ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        verticalSpaceXSmall(context),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Security Verification Requirements",
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 2.2),
+                fontWeight: FontWeight.bold,
+                color: isDarkMode
+                    ? const Color(0xFFD0D5DD)
+                    : const Color(0xFF344054),
               ),
-              Text(
-                "You need to complete all of the following verification to continue",
-                style: CustomThemeData.generateStyle(
-                  fontSize: McGyver.textSize(context, 1.6),
-                  fontWeight: FontWeight.w500,
-                  color: isDarkMode
-                      ? const Color(0xFF667085)
-                      : const Color(0xFF667085),
-                ),
+            ),
+            Text(
+              "You need to complete all of the following verification to continue",
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 1.6),
+                fontWeight: FontWeight.w500,
+                color: isDarkMode
+                    ? const Color(0xFF667085)
+                    : const Color(0xFF667085),
               ),
-            ],
-          ),
-          verticalSpaceSmall(context),
-          SecurityOptionTile(
-            assetName: "assets/images/message_text.svg",
-            vm: model,
-            hasLeadingIcon: true,
-            label: "Email Verification",
-            status: SecurityOptionStatus.unconfirmed,
-            hasStatus: true,
-            // onTap: () => model.securityPageEnum = SecurityPageEnum.emailVerify,
-            onTap: () =>
-                model.securityPageEnum = SecurityPageEnum.addPasskeyEnter,
-          ),
-          SecurityOptionTile(
-            assetName: "assets/images/mobile.svg",
-            vm: model,
-            hasLeadingIcon: true,
-            label: "Phone Number",
-            status: SecurityOptionStatus.unconfirmed,
-            hasStatus: true,
-            // onTap: () => model.securityPageEnum = SecurityPageEnum.phoneVerify,
-            onTap: () =>
-                model.securityPageEnum = SecurityPageEnum.addPasskeyEnter,
-          ),
-        ],
-      ),
+            ),
+          ],
+        ),
+        verticalSpaceSmall(context),
+        SecurityOptionTile(
+          assetName: "assets/images/message_text.svg",
+          vm: model,
+          hasLeadingIcon: true,
+          label: "Email Verification",
+          status: SecurityOptionStatus.unconfirmed,
+          hasStatus: true,
+          // onTap: () => model.securityPageEnum = SecurityPageEnum.emailVerify,
+          onTap: () =>
+              model.securityPageEnum = SecurityPageEnum.addPasskeyEnter,
+        ),
+        SecurityOptionTile(
+          assetName: "assets/images/mobile.svg",
+          vm: model,
+          hasLeadingIcon: true,
+          label: "Phone Number",
+          status: SecurityOptionStatus.unconfirmed,
+          hasStatus: true,
+          // onTap: () => model.securityPageEnum = SecurityPageEnum.phoneVerify,
+          onTap: () =>
+              model.securityPageEnum = SecurityPageEnum.addPasskeyEnter,
+        ),
+      ],
     );
   }
 }

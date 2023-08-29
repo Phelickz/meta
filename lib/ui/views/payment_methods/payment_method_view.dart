@@ -22,15 +22,8 @@ class PaymentMethodView extends StackedView<PaymentMethodViewModel> {
       isBusy: viewModel.isBusy,
       backgroundColor:
           isDarkMode ? const Color(0xFF0C2031) : const Color(0xFFFAFDFF),
-      bodyPadding: EdgeInsets.zero,
-      body: SafeArea(
-        child: Column(
-          children: [
-            viewModel.returnAppBar(context),
-            viewModel.returnPage(),
-          ],
-        ),
-      ),
+      appBar: viewModel.returnAppBar(context),
+      body: viewModel.returnPage(),
     );
   }
 
