@@ -85,7 +85,7 @@ class SecurityViewModel extends CustomBaseViewModel {
     }
   }
 
-  Widget returnAppBar(BuildContext context) {
+  AppBar? returnAppBar(BuildContext context) {
     switch (_securityPageEnum) {
       case SecurityPageEnum.main:
         return securityAppBar(
@@ -132,7 +132,7 @@ class SecurityViewModel extends CustomBaseViewModel {
           this,
         );
       default:
-        return Container();
+        return null;
     }
   }
 }

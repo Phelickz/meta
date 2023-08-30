@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
 import '../../views/payment_methods/payment_method_viewmodel.dart';
 import '../buttons/buttons.dart';
@@ -12,57 +11,50 @@ class AddPaymentMethodPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 6),
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          verticalSpaceXSmall(context),
+          AddPaymentMethodTile(
+            vm: viewModel,
+            paymentMethodEnum: PaymentMethodEnum.onlineBank,
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              verticalSpaceXSmall(context),
-              AddPaymentMethodTile(
-                vm: viewModel,
-                paymentMethodEnum: PaymentMethodEnum.onlineBank,
-              ),
-              AddPaymentMethodTile(
-                vm: viewModel,
-                paymentMethodEnum: PaymentMethodEnum.binancePay,
-              ),
-              AddPaymentMethodTile(
-                vm: viewModel,
-                paymentMethodEnum: PaymentMethodEnum.neteller,
-              ),
-              AddPaymentMethodTile(
-                vm: viewModel,
-                paymentMethodEnum: PaymentMethodEnum.perfectMoney,
-              ),
-              AddPaymentMethodTile(
-                vm: viewModel,
-                paymentMethodEnum: PaymentMethodEnum.skrill,
-              ),
-              AddPaymentMethodTile(
-                vm: viewModel,
-                paymentMethodEnum: PaymentMethodEnum.sticPay,
-              ),
-              AddPaymentMethodTile(
-                vm: viewModel,
-                paymentMethodEnum: PaymentMethodEnum.tether,
-              ),
-              verticalSpaceXSmall(context),
-              CustomButtons.generalButton(
-                context: context,
-                onTap: () {
-                  viewModel.onTap(viewModel.selectedAddPaymentMethodEnum);
-                },
-                text: 'Continue',
-              ),
-              verticalSpaceSmall(context),
-              verticalSpaceXSmall(context),
-            ],
+          AddPaymentMethodTile(
+            vm: viewModel,
+            paymentMethodEnum: PaymentMethodEnum.binancePay,
           ),
-        ),
+          AddPaymentMethodTile(
+            vm: viewModel,
+            paymentMethodEnum: PaymentMethodEnum.neteller,
+          ),
+          AddPaymentMethodTile(
+            vm: viewModel,
+            paymentMethodEnum: PaymentMethodEnum.perfectMoney,
+          ),
+          AddPaymentMethodTile(
+            vm: viewModel,
+            paymentMethodEnum: PaymentMethodEnum.skrill,
+          ),
+          AddPaymentMethodTile(
+            vm: viewModel,
+            paymentMethodEnum: PaymentMethodEnum.sticPay,
+          ),
+          AddPaymentMethodTile(
+            vm: viewModel,
+            paymentMethodEnum: PaymentMethodEnum.tether,
+          ),
+          verticalSpaceXSmall(context),
+          CustomButtons.generalButton(
+            context: context,
+            onTap: () {
+              viewModel.onTap(viewModel.selectedAddPaymentMethodEnum);
+            },
+            text: 'Continue',
+          ),
+          verticalSpaceSmall(context),
+          verticalSpaceXSmall(context),
+        ],
       ),
     );
   }

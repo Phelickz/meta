@@ -19,23 +19,18 @@ class PasskeyAddedSuccessPage extends StatelessWidget {
         SizedBox(
           height: McGyver.rsDoubleH(context, 50),
           width: McGyver.rsDoubleW(context, 100),
-          child: Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: McGyver.rsDoubleW(context, 10),
-            ),
-            child: isDarkMode
-                ? Image.asset(
-                    "assets/images/success_illustration_dark.png",
-                    fit: BoxFit.contain,
-                  )
-                : Image.asset(
-                    "assets/images/success_illustration_light.png",
-                  ),
-          ),
+          child: isDarkMode
+              ? Image.asset(
+                  "assets/images/success_illustration_dark.png",
+                  fit: BoxFit.contain,
+                )
+              : Image.asset(
+                  "assets/images/success_illustration_light.png",
+                ),
         ),
         Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 10),
+            horizontal: McGyver.rsDoubleW(context, 4),
           ),
           child: Text(
             "Passkey Added Successfully",
@@ -52,7 +47,7 @@ class PasskeyAddedSuccessPage extends StatelessWidget {
         verticalSpaceSmall(context),
         Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 10),
+            horizontal: McGyver.rsDoubleW(context, 4),
           ),
           child: RichText(
             textAlign: TextAlign.center,
@@ -84,17 +79,12 @@ class PasskeyAddedSuccessPage extends StatelessWidget {
           ),
         ),
         verticalSpaceLarge(context),
-        Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 6),
-          ),
-          child: CustomButtons.generalButton(
-            context: context,
-            onTap: () {
-              model.securityPageEnum = SecurityPageEnum.passkey;
-            },
-            text: 'Continue',
-          ),
+        CustomButtons.generalButton(
+          context: context,
+          onTap: () {
+            model.securityPageEnum = SecurityPageEnum.passkey;
+          },
+          text: 'Continue',
         ),
       ],
     );

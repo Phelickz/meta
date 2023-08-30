@@ -18,31 +18,24 @@ class PasskeyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return model.isPasskeyEmpty
-        ? Expanded(
-            child: Column(
-              children: [
-                verticalSpaceXSmall(context),
-                Expanded(
-                  child: ListView.builder(
-                    itemBuilder: (_, index) => const PasskeyTile(),
-                    itemCount: 2,
-                  ),
+        ? Column(
+            children: [
+              verticalSpaceXSmall(context),
+              Expanded(
+                child: ListView.builder(
+                  itemBuilder: (_, index) => const PasskeyTile(),
+                  itemCount: 2,
                 ),
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: McGyver.rsDoubleW(context, 6),
-                  ),
-                  child: CustomButtons.generalButton(
-                    context: context,
-                    onTap: () {
-                      showAddPasskeyModal(context);
-                    },
-                    text: 'Add A Passkey',
-                  ),
-                ),
-                verticalSpaceMedium(context),
-              ],
-            ),
+              ),
+              CustomButtons.generalButton(
+                context: context,
+                onTap: () {
+                  showAddPasskeyModal(context);
+                },
+                text: 'Add A Passkey',
+              ),
+              verticalSpaceMedium(context),
+            ],
           )
         : EmptyPasskey(model: model);
   }

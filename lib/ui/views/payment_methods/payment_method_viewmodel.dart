@@ -230,7 +230,7 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
     }
   }
 
-  Widget returnAppBar(BuildContext context) {
+  AppBar? returnAppBar(BuildContext context) {
     switch (_paymentMethodPageEnum) {
       case PaymentMethodPageEnum.main:
         return paymentMethodAppBar(
@@ -313,7 +313,7 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
           this,
         );
       default:
-        return Container();
+        return null;
     }
   }
 }

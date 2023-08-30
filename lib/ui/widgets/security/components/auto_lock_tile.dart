@@ -26,8 +26,6 @@ class AutoLockTile extends StatelessWidget {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Container(
       margin: EdgeInsets.only(
-        left: McGyver.rsDoubleW(context, 6),
-        right: McGyver.rsDoubleW(context, 6),
         bottom: McGyver.rsDoubleH(context, 2),
       ),
       child: Row(

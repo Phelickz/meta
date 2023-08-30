@@ -12,34 +12,32 @@ class TradeHistoryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        children: [
-          CustomHeadTab(
-            firstTabName: "Positions",
-            secondTabName: "Orders",
-            thirdTabName: "Deals",
-            onSelectTab: (val) {
-              viewModel.tabSelectedNotifier.value = val;
-            },
-          ),
-          ValueListenableBuilder<int>(
-            valueListenable: viewModel.tabSelectedNotifier,
-            builder: (context, index, child) {
-              return Expanded(
-                child: IndexedStack(
-                  index: index,
-                  children: const [
-                    PositionComponent(),
-                    OrderComponent(),
-                    DealComponent(),
-                  ],
-                ),
-              );
-            },
-          )
-        ],
-      ),
+    return Column(
+      children: [
+        CustomHeadTab(
+          firstTabName: "Positions",
+          secondTabName: "Orders",
+          thirdTabName: "Deals",
+          onSelectTab: (val) {
+            viewModel.tabSelectedNotifier.value = val;
+          },
+        ),
+        ValueListenableBuilder<int>(
+          valueListenable: viewModel.tabSelectedNotifier,
+          builder: (context, index, child) {
+            return Expanded(
+              child: IndexedStack(
+                index: index,
+                children: const [
+                  PositionComponent(),
+                  OrderComponent(),
+                  DealComponent(),
+                ],
+              ),
+            );
+          },
+        )
+      ],
     );
   }
 }
