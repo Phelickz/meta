@@ -96,8 +96,10 @@ class HomeView extends StackedView<HomeViewModel> {
               viewModel.push(const WithdrawFundRoute());
             }),
             const SizedBox(width: 10),
-            bottomIcons(
-                context, 'assets/images/gift.svg', 'Loyalty Rewards', () {}),
+            bottomIcons(context, 'assets/images/gift.svg', 'Loyalty Rewards',
+                () {
+              viewModel.push(const LoyaltyRewardsRoute());
+            }),
             const SizedBox(width: 10),
             bottomIcons(context, 'assets/images/note-2.svg',
                 'Transaction History', () {}),
