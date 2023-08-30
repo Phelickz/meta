@@ -28,13 +28,13 @@ class MetaTraderApp extends StatelessWidget {
           darkTheme: darkTheme,
         );
 
-        //   return MaterialApp(
-        //     debugShowCheckedModeBanner: false,
-        //     theme: regularTheme,
-        //     themeMode: themeMode,
-        //     darkTheme: darkTheme,
-        //     home: const TradeHistoryView(),
-        //   );
+        // return MaterialApp(
+        //   debugShowCheckedModeBanner: false,
+        //   theme: regularTheme,
+        //   themeMode: themeMode,
+        //   darkTheme: darkTheme,
+        //   home: const TradeView(),
+        // );
       },
     );
   }

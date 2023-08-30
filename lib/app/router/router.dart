@@ -22,6 +22,7 @@ class MetaTraderRouter extends $MetaTraderRouter {
         AdaptiveRoute(page: SecurityRoute.page),
         AdaptiveRoute(page: FundAccountRoute.page),
         AdaptiveRoute(page: PaymentMethodRoute.page),
-        AdaptiveRoute(page: TradeHistoryRoute.page)
+        AdaptiveRoute(page: TradeHistoryRoute.page),
+        AdaptiveRoute(page: TradeRoute.page)
       ];
 }
