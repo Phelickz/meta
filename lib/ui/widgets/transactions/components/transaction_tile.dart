@@ -39,11 +39,12 @@ class WithdrawalTile extends StatelessWidget {
           height: 36,
           padding: EdgeInsets.symmetric(horizontal: 8.pWidth(context)),
           decoration: BoxDecoration(
-            color: isDarkMode ? Color(0xffFECDCA) : Color(0xffFEE4E2),
+            color:
+                isDarkMode ? const Color(0xffFECDCA) : const Color(0xffFEE4E2),
             shape: BoxShape.circle,
           ),
           child: SvgPicture.asset(AssetManager.transaction,
-              color: Color(0xff7A271A))),
+              color: const Color(0xff7A271A))),
       title: Text(
         title,
         style: Theme.of(context).textTheme.titleMedium,
@@ -63,15 +64,15 @@ class WithdrawalTile extends StatelessWidget {
                 fontSize: 8,
                 context: context,
                 lightTextColor: (status == "Successful")
-                    ? Color(0xff20A0F3)
+                    ? const Color(0xff20A0F3)
                     : (status == "Pending")
-                        ? Color(0xffF79009)
-                        : Color(0xffF04438),
+                        ? const Color(0xffF79009)
+                        : const Color(0xffF04438),
                 darkTextColor: (status == "Successful")
-                    ? Color(0xff77C5F8)
+                    ? const Color(0xff77C5F8)
                     : (status == "Pending")
-                        ? Color(0xffFEC84B)
-                        : Color(0xffFDA29B)),
+                        ? const Color(0xffFEC84B)
+                        : const Color(0xffFDA29B)),
           ),
         ],
       ),
@@ -124,11 +125,14 @@ class DepositTile extends StatelessWidget {
           height: 36,
           padding: EdgeInsets.symmetric(horizontal: 8.pWidth(context)),
           decoration: BoxDecoration(
-            color: isDarkMode ? Color(0xff073961) : Color(0xffD3ECFD),
+            color:
+                isDarkMode ? const Color(0xff073961) : const Color(0xffD3ECFD),
             shape: BoxShape.circle,
           ),
           child: SvgPicture.asset(AssetManager.transaction,
-              color: isDarkMode ? Color(0xff20A0F3) : Color(0xff20A0F3))),
+              color: isDarkMode
+                  ? const Color(0xff20A0F3)
+                  : const Color(0xff20A0F3))),
       title: Text(
         title,
         style: Theme.of(context).textTheme.titleMedium,
@@ -148,15 +152,15 @@ class DepositTile extends StatelessWidget {
                 fontSize: 8,
                 context: context,
                 lightTextColor: (status == "Successful")
-                    ? Color(0xff20A0F3)
+                    ? const Color(0xff20A0F3)
                     : (status == "Pending")
-                        ? Color(0xffF79009)
-                        : Color(0xffF04438),
+                        ? const Color(0xffF79009)
+                        : const Color(0xffF04438),
                 darkTextColor: (status == "Successful")
-                    ? Color(0xff77C5F8)
+                    ? const Color(0xff77C5F8)
                     : (status == "Pending")
-                        ? Color(0xffFEC84B)
-                        : Color(0xffFDA29B)),
+                        ? const Color(0xffFEC84B)
+                        : const Color(0xffFDA29B)),
           ),
         ],
       ),
@@ -209,11 +213,12 @@ class InternalTransferTile extends StatelessWidget {
           height: 36,
           padding: EdgeInsets.symmetric(horizontal: 8.pWidth(context)),
           decoration: BoxDecoration(
-            color: isDarkMode ? Color(0xffBDB4FE) : Color(0xffD9D6FE),
+            color:
+                isDarkMode ? const Color(0xffBDB4FE) : const Color(0xffD9D6FE),
             shape: BoxShape.circle,
           ),
           child: SvgPicture.asset(AssetManager.internalTransfer,
-              color: Color(0xff3E1C96))),
+              color: const Color(0xff3E1C96))),
       title: Text(
         title,
         style: Theme.of(context).textTheme.titleMedium,
@@ -233,15 +238,15 @@ class InternalTransferTile extends StatelessWidget {
                 fontSize: 8,
                 context: context,
                 lightTextColor: (status == "Successful")
-                    ? Color(0xff20A0F3)
+                    ? const Color(0xff20A0F3)
                     : (status == "Pending")
-                        ? Color(0xffF79009)
-                        : Color(0xffF04438),
+                        ? const Color(0xffF79009)
+                        : const Color(0xffF04438),
                 darkTextColor: (status == "Successful")
-                    ? Color(0xff77C5F8)
+                    ? const Color(0xff77C5F8)
                     : (status == "Pending")
-                        ? Color(0xffFEC84B)
-                        : Color(0xffFDA29B)),
+                        ? const Color(0xffFEC84B)
+                        : const Color(0xffFDA29B)),
           ),
         ],
       ),

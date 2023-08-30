@@ -61,6 +61,7 @@ class Search extends StatelessWidget {
                               'assets/images/close-square.svg',
                               height: 25,
                               width: 25,
+                              // ignore: deprecated_member_use
                               color: Theme.of(context).secondaryHeaderColor,
                             ),
                           ),

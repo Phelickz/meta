@@ -40,7 +40,8 @@ AppBar transactionsAppBar(
           onTap: () {},
           child: SvgPicture.asset(
             AssetManager.filter,
-            color: Color(0xff98A2B3),
+            // ignore: deprecated_member_use
+            color: const Color(0xff98A2B3),
           ),
         ),
       )

@@ -21,11 +21,11 @@ class TransactionsPage extends StatelessWidget {
           Container(
             width: MediaQuery.of(context).size.width,
             color: isDarkMode
-                ? Color(0xff073961)
-                : Color(0xffD3ECFD), // Container color
+                ? const Color(0xff073961)
+                : const Color(0xffD3ECFD), // Container color
             child: TabBar(
               // isScrollable: true,
-              tabs: [
+              tabs: const [
                 Tab(text: "All"),
                 Tab(text: "Withdrawal"),
                 Tab(
@@ -36,25 +36,29 @@ class TransactionsPage extends StatelessWidget {
                 ),
               ],
               isScrollable: true,
-              unselectedLabelColor:
-                  isDarkMode ? Color(0xff98A2B3) : Color(0xff344054),
-              labelColor: isDarkMode ? Color(0xff77C5F8) : Color(0xff0C95EF),
+              unselectedLabelColor: isDarkMode
+                  ? const Color(0xff98A2B3)
+                  : const Color(0xff344054),
+              labelColor: isDarkMode
+                  ? const Color(0xff77C5F8)
+                  : const Color(0xff0C95EF),
 
-              indicatorColor:
-                  isDarkMode ? Color(0xff77C5F8) : Color(0xff0C95EF),
+              indicatorColor: isDarkMode
+                  ? const Color(0xff77C5F8)
+                  : const Color(0xff0C95EF),
               unselectedLabelStyle: CustomThemeData.generateColoredStyle(
                   fontSize: 14,
                   context: context,
                   fontWeight: FontWeight.w400,
-                  darkTextColor: Color(0xff98A2B3),
-                  lightTextColor: Color(0xff344054)),
+                  darkTextColor: const Color(0xff98A2B3),
+                  lightTextColor: const Color(0xff344054)),
 
               labelStyle: CustomThemeData.generateColoredStyle(
                   fontSize: 14,
                   context: context,
                   fontWeight: FontWeight.w600,
-                  darkTextColor: Color(0xff77C5F8),
-                  lightTextColor: Color(0xff0C95EF)),
+                  darkTextColor: const Color(0xff77C5F8),
+                  lightTextColor: const Color(0xff0C95EF)),
               indicatorWeight: 3,
 
               // Tab indicator color
