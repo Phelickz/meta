@@ -85,39 +85,46 @@ class SecurityViewModel extends CustomBaseViewModel {
     }
   }
 
-  AppBar? returnAppBar(BuildContext context) {
+  PreferredSizeWidget? returnAppBar(BuildContext context) {
     switch (_securityPageEnum) {
       case SecurityPageEnum.main:
-        return securityAppBar(
+        return securityAppBar2(
           context,
           'Security',
           '',
           this,
         );
       case SecurityPageEnum.passkey:
-        return securityAppBar(
+        return securityAppBar2(
           context,
           'Passkeys',
           '',
           this,
         );
 
+      case SecurityPageEnum.emailVerify:
+        return securityAppBar2(
+          context,
+          '',
+          '',
+          this,
+        );
       case SecurityPageEnum.autoLock:
-        return securityAppBar(
+        return securityAppBar2(
           context,
           'Auto-Lock',
           'Enable to lock app automatically',
           this,
         );
       case SecurityPageEnum.password:
-        return securityAppBar(
+        return securityAppBar2(
           context,
           'Change Password',
           '',
           this,
         );
       case SecurityPageEnum.devices:
-        return securityAppBar(
+        return securityAppBar2(
           context,
           'Devices',
           '',
@@ -125,7 +132,7 @@ class SecurityViewModel extends CustomBaseViewModel {
         );
       case SecurityPageEnum.addPasskey:
       case SecurityPageEnum.addPasskeyEnter:
-        return securityAppBar(
+        return securityAppBar2(
           context,
           'Add Passkey',
           '',

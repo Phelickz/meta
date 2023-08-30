@@ -4,14 +4,14 @@ import 'package:meta_trader/app/utils/theme.dart';
 
 class PolicyTemplate extends StatelessWidget {
   final String title;
-  final int index;
+  final int subIndex;
   final String titleDescription;
   final String subtitle;
   final String subtitleDescription;
   final int subTitleCount;
   const PolicyTemplate(
       {Key? key,
-      required this.index,
+      required this.subIndex,
       required this.title,
       required this.subtitle,
       required this.subtitleDescription,
@@ -21,7 +21,7 @@ class PolicyTemplate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -29,7 +29,7 @@ class PolicyTemplate extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "${index + 1}. $title",
+            "${subIndex + 1}. $title",
             style: CustomThemeData.generateColoredStyle(
                 fontSize: 16, context: context, fontWeight: FontWeight.bold),
           ),
@@ -45,7 +45,7 @@ class PolicyTemplate extends StatelessWidget {
             width: double.infinity,
             child: ListView.builder(
                 itemCount: subTitleCount,
-                itemBuilder: (context, index) {
+                itemBuilder: (context, subIndex) {
                   return RichText(
                       text: TextSpan(children: [
                     TextSpan(

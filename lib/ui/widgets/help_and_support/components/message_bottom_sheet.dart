@@ -28,13 +28,13 @@ class MessageBottomSheet extends StatelessWidget {
             ? SuggestionBar(
                 suggestionsList: model.suggestionList,
               )
-            : SizedBox(),
+            : const SizedBox(),
         Container(
           padding: EdgeInsets.symmetric(
               horizontal: 24.pWidth(context), vertical: 12.pHeight(context)),
           height: 90.pWidth(context),
           width: MediaQuery.of(context).size.width,
-          color: isDarkMode ? Color(0xff073961) : Color(0xff20A0F3),
+          color: isDarkMode ? const Color(0xff073961) : const Color(0xff20A0F3),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

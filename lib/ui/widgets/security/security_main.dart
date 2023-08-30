@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/ui/widgets/security/components/change_password_modal.dart';
+
 import '../../../app/responsiveness/res.dart';
 import '../../../app/utils/theme.dart';
 import '../../views/security/security_view_model.dart';
@@ -13,6 +14,7 @@ class SecurityMainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

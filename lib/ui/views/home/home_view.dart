@@ -91,8 +91,10 @@ class HomeView extends StackedView<HomeViewModel> {
               viewModel.push(const FundAccountRoute());
             }),
             const SizedBox(width: 10),
-            bottomIcons(context, 'assets/images/money-send.svg',
-                'Withdraw Funds', () {}),
+            bottomIcons(
+                context, 'assets/images/money-send.svg', 'Withdraw Funds', () {
+              viewModel.push(const WithdrawFundRoute());
+            }),
             const SizedBox(width: 10),
             bottomIcons(
                 context, 'assets/images/gift.svg', 'Loyalty Rewards', () {}),
@@ -123,18 +125,23 @@ class HomeView extends StackedView<HomeViewModel> {
                 width: McGyver.rsDoubleW(context, 100),
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  children: const [
+                  children: [
                     TradeFeatures(
+                      onTap: () {},
                       image: 'assets/images/trade.svg',
                       title: 'Social Trading',
                       subtitle: 'Copy and earn with experienced traders',
                     ),
                     TradeFeatures(
+                      onTap: () {
+                        viewModel.push(const ForexNewsRoute());
+                      },
                       image: 'assets/images/trade.svg',
                       title: 'Forex News',
                       subtitle: 'Stay up to date with forex news',
                     ),
                     TradeFeatures(
+                      onTap: () {},
                       image: 'assets/images/trade.svg',
                       title: 'Chart Analysis',
                       subtitle: 'Copy and earn with experienced traders',
@@ -156,27 +163,39 @@ class HomeView extends StackedView<HomeViewModel> {
               ),
               verticalSpaceXSmall(context),
               SizedBox(
-                height: McGyver.rsDoubleH(context, 13),
+                height: McGyver.rsDoubleH(context, 16),
                 width: McGyver.rsDoubleW(context, 100),
-                child: const Row(
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   // scrollDirection: Axis.horizontal,
                   children: [
                     TradingTools(
                       image: 'assets/images/trade.svg',
-                      text: 'Social Trading',
+                      text: 'Profit calculator',
+                      onTap: () {
+                        viewModel.push(const ProfitCalculatorRoute());
+                      },
                     ),
                     TradingTools(
                       image: 'assets/images/trade.svg',
                       text: 'Currency converter',
+                      onTap: () {
+                        viewModel.push(const CurrencyConverterRoute());
+                      },
                     ),
                     TradingTools(
                       image: 'assets/images/trade.svg',
                       text: 'Pips calculator',
+                      onTap: () {
+                        viewModel.push(const PipCalculatorRoute());
+                      },
                     ),
                     TradingTools(
                       image: 'assets/images/trade.svg',
                       text: 'Margin calculator',
+                      onTap: () {
+                        viewModel.push(const MarginCalculatorRoute());
+                      },
                     ),
                   ],
                 ),

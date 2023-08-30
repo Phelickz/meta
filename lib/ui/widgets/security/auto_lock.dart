@@ -12,7 +12,7 @@ class AutoLockPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        verticalSpaceXSmall(context),
+        verticalSpaceSmall(context),
         AutoLockTile(
           onChanged: model.onPatternLockChanged,
           assetName: "assets/images/routing_2.svg",
@@ -20,6 +20,7 @@ class AutoLockPage extends StatelessWidget {
           subtitle: "using pattern to unlock app",
           value: model.isPatternLockEnabled,
         ),
+        verticalSpaceXSmall(context),
         AutoLockTile(
           onChanged: model.onFaceLockChanged,
           assetName: "assets/images/user_octagon.svg",

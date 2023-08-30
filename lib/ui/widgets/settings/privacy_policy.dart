@@ -1,5 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:meta_trader/ui/widgets/settings/components/policy_template.dart';
+import 'package:meta_trader/app/utils/dimensions.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/utils/theme.dart';
@@ -12,7 +13,6 @@ class PrivacyPolicyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var isDarkMode = CustomThemeData.isDarkMode(context);
     final privacyPolicyList = model.privacyPolicy["data"];
 
     return Padding(
@@ -23,18 +23,68 @@ class PrivacyPolicyPage extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(model.privacyPolicy["introduction"]),
-          Expanded(
+          Flexible(
+            fit: FlexFit.loose,
             child: ListView.builder(
+              shrinkWrap: true,
+              itemCount: privacyPolicyList.length,
               itemBuilder: (context, index) {
-                return PolicyTemplate(
-                    index: index,
-                    title: privacyPolicyList[index]["heading"],
-                    subtitle: privacyPolicyList[index]["data"][index]["data"]
-                        ["subheading"],
-                    subtitleDescription: privacyPolicyList[index]["data"][index]
-                        ["description"],
-                    subTitleCount: privacyPolicyList["data"].length,
-                    titleDescription: privacyPolicyList[index]["description"]);
+                final subList = privacyPolicyList[index]["data"];
+                return Container(
+                  width: double.infinity,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "${index + 1}. ${privacyPolicyList[index]["heading"]}",
+                        style: CustomThemeData.generateColoredStyle(
+                            fontSize: 16,
+                            context: context,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        privacyPolicyList[index]["description"],
+                        style: CustomThemeData.generateColoredStyle(
+                            fontSize: 12, context: context),
+                      ),
+                      SizedBox(
+                        height: 5.pHeight(context),
+                      ),
+                      Flexible(
+                        fit: FlexFit.loose,
+                        child: SizedBox(
+                          width: double.infinity,
+                          child: ListView.builder(
+                              shrinkWrap: true,
+                              itemCount: subList.length,
+                              itemBuilder: (context, subIndex) {
+                                return RichText(
+                                    text: TextSpan(children: [
+                                  TextSpan(
+                                    text:
+                                        " . ${subList[subIndex]["subheading"]}:",
+                                    style: CustomThemeData.generateColoredStyle(
+                                        fontSize: 12,
+                                        context: context,
+                                        fontWeight: FontWeight.w700),
+                                  ),
+                                  TextSpan(
+                                    text:
+                                        " ${subList[subIndex]["description"]}",
+                                    style: CustomThemeData.generateColoredStyle(
+                                        fontSize: 12,
+                                        context: context,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ]));
+                              }),
+                        ),
+                      )
+                    ],
+                  ),
+                );
               },
             ),
           ),

@@ -46,7 +46,7 @@ class ReferralTile extends StatelessWidget {
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.5),
                 color: isDarkMode ? Colors.white54 : const Color(0xff667085),
-                fontWeight: FontWeight.normal,
+                fontWeight: FontWeight.w500,
               ),
             ))
       ],

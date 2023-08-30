@@ -112,8 +112,8 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
     switch (payment) {
       case PaymentMethodEnum.onlineBank:
         return Container(
-          width: McGyver.rsDoubleH(context, 5),
-          height: McGyver.rsDoubleH(context, 5),
+          width: McGyver.rsDoubleH(context, 4),
+          height: McGyver.rsDoubleH(context, 4),
           padding: const EdgeInsets.all(
             8,
           ),
@@ -139,38 +139,38 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
       case PaymentMethodEnum.neteller:
         return Image.asset(
           "assets/images/neteller.png",
-          width: McGyver.rsDoubleH(context, 5),
-          height: McGyver.rsDoubleH(context, 5),
+          width: McGyver.rsDoubleH(context, 4),
+          height: McGyver.rsDoubleH(context, 4),
         );
       case PaymentMethodEnum.bitcoin:
         return Image.asset(
           "assets/images/btc.png",
-          width: McGyver.rsDoubleH(context, 5),
-          height: McGyver.rsDoubleH(context, 5),
+          width: McGyver.rsDoubleH(context, 4),
+          height: McGyver.rsDoubleH(context, 4),
         );
       case PaymentMethodEnum.perfectMoney:
         return Image.asset(
           "assets/images/perfect_money.png",
-          width: McGyver.rsDoubleH(context, 5),
-          height: McGyver.rsDoubleH(context, 5),
+          width: McGyver.rsDoubleH(context, 4),
+          height: McGyver.rsDoubleH(context, 4),
         );
       case PaymentMethodEnum.skrill:
         return Image.asset(
           "assets/images/skrill.png",
-          width: McGyver.rsDoubleH(context, 5),
-          height: McGyver.rsDoubleH(context, 5),
+          width: McGyver.rsDoubleH(context, 4),
+          height: McGyver.rsDoubleH(context, 4),
         );
       case PaymentMethodEnum.sticPay:
         return Image.asset(
           "assets/images/stic_pay.png",
-          width: McGyver.rsDoubleH(context, 5),
-          height: McGyver.rsDoubleH(context, 5),
+          width: McGyver.rsDoubleH(context, 4),
+          height: McGyver.rsDoubleH(context, 4),
         );
       case PaymentMethodEnum.tether:
         return Image.asset(
           "assets/images/tether.png",
-          width: McGyver.rsDoubleH(context, 5),
-          height: McGyver.rsDoubleH(context, 5),
+          width: McGyver.rsDoubleH(context, 4),
+          height: McGyver.rsDoubleH(context, 4),
         );
 
       default:
@@ -230,10 +230,10 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
     }
   }
 
-  AppBar? returnAppBar(BuildContext context) {
+  PreferredSizeWidget? returnAppBar(BuildContext context) {
     switch (_paymentMethodPageEnum) {
       case PaymentMethodPageEnum.main:
-        return paymentMethodAppBar(
+        return paymentMethodAppBar2(
           context,
           'Payment Methods',
           '',
@@ -241,7 +241,7 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
           'assets/images/add_square.svg',
         );
       case PaymentMethodPageEnum.binancePay:
-        return paymentMethodAppBar(
+        return paymentMethodAppBar2(
           context,
           'BinancePay',
           'Add BinancePay details',
@@ -249,56 +249,56 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
           'assets/images/trash.svg',
         );
       case PaymentMethodPageEnum.neteller:
-        return paymentMethodAppBar(
+        return paymentMethodAppBar2(
           context,
           'Neteller',
           'Enter Neteller account details',
           this,
         );
       case PaymentMethodPageEnum.bitcoin:
-        return paymentMethodAppBar(
+        return paymentMethodAppBar2(
           context,
           'Bitcoin',
           'Add Bitcoin details',
           this,
         );
       case PaymentMethodPageEnum.skrill:
-        return paymentMethodAppBar(
+        return paymentMethodAppBar2(
           context,
           'Skrill',
           'Enter Skrill account details',
           this,
         );
       case PaymentMethodPageEnum.perfectMoney:
-        return paymentMethodAppBar(
+        return paymentMethodAppBar2(
           context,
           'Perfect Money',
           'Enter payment details',
           this,
         );
       case PaymentMethodPageEnum.sticPay:
-        return paymentMethodAppBar(
+        return paymentMethodAppBar2(
           context,
           'SticPay',
           'Enter SticPay account details',
           this,
         );
       case PaymentMethodPageEnum.tether:
-        return paymentMethodAppBar(
+        return paymentMethodAppBar2(
           context,
           'TetherUSD',
           'Add TetherUSD details',
           this,
         );
       case PaymentMethodPageEnum.qrCode:
-        return paymentMethodAppBar(
+        return paymentMethodAppBar2(
           context,
           'BinancePay',
           'Scan QR code',
           this,
         );
       case PaymentMethodPageEnum.onlineBank:
-        return paymentMethodAppBar(
+        return paymentMethodAppBar2(
           context,
           'Online Bank',
           'Edit online bank',
@@ -306,7 +306,7 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
           'assets/images/trash.svg',
         );
       case PaymentMethodPageEnum.addPaymentMethod:
-        return paymentMethodAppBar(
+        return paymentMethodAppBar2(
           context,
           'Online Bank',
           'Edit online bank',

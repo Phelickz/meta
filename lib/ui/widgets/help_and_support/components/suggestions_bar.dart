@@ -16,7 +16,7 @@ class SuggestionBar extends StatelessWidget {
           vertical: 8.pHeight(context), horizontal: 24.pWidth(context)),
       height: 69.pHeight(context),
       width: MediaQuery.of(context).size.width,
-      color: isDarkMode ? const Color(0xff052844) : Color(0xffD3ECFD),
+      color: isDarkMode ? const Color(0xff052844) : const Color(0xffD3ECFD),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -66,7 +66,7 @@ class SuggestionContainer extends StatelessWidget {
       padding: EdgeInsets.symmetric(
           horizontal: 8.pWidth(context), vertical: 4.pHeight(context)),
       decoration: BoxDecoration(
-        color: isDarkMode ? Color(0xff0C2031) : Colors.white,
+        color: isDarkMode ? const Color(0xff0C2031) : Colors.white,
         borderRadius: BorderRadius.circular(8),
       ),
       child: Text(

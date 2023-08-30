@@ -120,14 +120,13 @@ class CustomThemeData {
   static TextStyle generateColoredStyle(
       {required double fontSize,
       FontWeight fontWeight = FontWeight.normal,
-      Color color = Colors.black,
+      Color darkTextColor = const Color(0xffD0D5DD),
+      Color lightTextColor = const Color(0xff667085),
       double? lineHeight,
       required BuildContext context}) {
     return GoogleFonts.dmSans(
         // fontFamily: 'Gilroy',
-        color: isDarkMode(context)
-            ? const Color(0xffD0D5DD)
-            : const Color(0xff667085),
+        color: isDarkMode(context) ? darkTextColor : lightTextColor,
         fontSize: fontSize,
         fontWeight: fontWeight,
         height: lineHeight,

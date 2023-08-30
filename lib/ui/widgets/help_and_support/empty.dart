@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../app/utils/theme.dart';
 import '../../views/help_and_support/help_and_support_view_model.dart';
 
 class CustomerSupportEmpty extends StatelessWidget {
@@ -10,8 +9,6 @@ class CustomerSupportEmpty extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var isDarkMode = CustomThemeData.isDarkMode(context);
-
-    return Center();
+    return const Center();
   }
 }

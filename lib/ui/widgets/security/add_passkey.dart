@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+
 import '../../../app/responsiveness/res.dart';
 import '../../../app/utils/theme.dart';
 import '../../views/security/security_view_model.dart';

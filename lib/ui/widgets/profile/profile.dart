@@ -42,8 +42,13 @@ class ProfilePage extends StatelessWidget {
                     const ProfileIconButton(
                         icon: AssetManager.manageAccountIcon,
                         title: "Manage Account"),
-                    const ProfileIconButton(
-                        icon: AssetManager.referralsIcon, title: "Referrals"),
+                    ProfileIconButton(
+                      icon: AssetManager.referralsIcon,
+                      title: "Referrals",
+                      onTap: () {
+                        model.push(const ReferralRoute());
+                      },
+                    ),
                     ProfileIconButton(
                       icon: AssetManager.tradeHistoryIcon,
                       title: "Trade History",
@@ -62,15 +67,20 @@ class ProfilePage extends StatelessWidget {
                     const ProfileIconButton(
                         icon: AssetManager.loyaltyRewards,
                         title: "Loyalty Rewards"),
-                    const ProfileIconButton(
-                        icon: AssetManager.notificationsIcon,
-                        title: "Notifications"),
                     ProfileIconButton(
-                        icon: AssetManager.security,
-                        title: "Security",
-                        onTap: () {
-                          model.push(const SecurityRoute());
-                        }),
+                      icon: AssetManager.notificationsIcon,
+                      title: "Notifications",
+                      onTap: () {
+                        model.push(const NotificationRoute());
+                      },
+                    ),
+                    ProfileIconButton(
+                      icon: AssetManager.security,
+                      title: "Security",
+                      onTap: () {
+                        model.push(const SecurityRoute());
+                      },
+                    ),
                   ],
                 ),
                 SizedBox(height: 32.pHeight(context)),
@@ -89,11 +99,14 @@ class ProfilePage extends StatelessWidget {
                     model.push(const PaymentMethodRoute());
                   },
                 ),
-                const ProfileTiles(
+                ProfileTiles(
                   title: "Help and Support",
                   subTitle: "file a complaint with our team",
                   leadingIcon: AssetManager.withdrawal,
                   trailingIcon: AssetManager.forwardArrow,
+                  onTap: () {
+                    model.push(const HelpAndSupportRoute());
+                  },
                 ),
                 const ProfileTiles(
                   title: "Rate the app",

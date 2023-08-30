@@ -9,7 +9,7 @@ import '../../../../app/utils/theme.dart';
 class ProfileIconButton extends StatelessWidget {
   final String icon;
   final String title;
-  final VoidCallback? onTap;
+  final void Function()? onTap;
   const ProfileIconButton(
       {Key? key, required this.icon, required this.title, this.onTap})
       : super(key: key);
@@ -24,16 +24,14 @@ class ProfileIconButton extends StatelessWidget {
         width: 100.pWidth(context),
         child: Column(
           children: [
-            InkWell(
-              child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
-                width: 32.pWidth(context),
-                height: 32.pHeight(context),
-                child: SvgPicture.asset(icon),
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Theme.of(context).primaryColor)),
-              ),
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+              width: 32.pWidth(context),
+              height: 32.pHeight(context),
+              child: SvgPicture.asset(icon),
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Theme.of(context).primaryColor)),
             ),
             SizedBox(
               height: 12.pHeight(context),

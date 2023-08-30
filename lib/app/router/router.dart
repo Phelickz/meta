@@ -16,13 +16,17 @@ class MetaTraderRouter extends $MetaTraderRouter {
         AdaptiveRoute(page: DashboardRoute.page),
         AdaptiveRoute(page: BottomNavBarRoute.page),
         AdaptiveRoute(page: SecurityRoute.page),
-        AdaptiveRoute(page: VerificationRoute.page),
-        AdaptiveRoute(page: DashboardRoute.page),
-        AdaptiveRoute(page: BottomNavBarRoute.page),
-        AdaptiveRoute(page: SecurityRoute.page),
         AdaptiveRoute(page: FundAccountRoute.page),
-        AdaptiveRoute(page: PaymentMethodRoute.page),
         AdaptiveRoute(page: TradeHistoryRoute.page),
-        AdaptiveRoute(page: TradeRoute.page)
+        AdaptiveRoute(page: TradeRoute.page),
+        AdaptiveRoute(page: HelpAndSupportRoute.page),
+        AdaptiveRoute(page: NotificationRoute.page),
+        AdaptiveRoute(page: WithdrawFundRoute.page),
+        AdaptiveRoute(page: TradeHistoryRoute.page),
+        AdaptiveRoute(page: ForexNewsRoute.page),
+        AdaptiveRoute(page: PipCalculatorRoute.page),
+        AdaptiveRoute(page: MarginCalculatorRoute.page),
+        AdaptiveRoute(page: ProfitCalculatorRoute.page),
+        AdaptiveRoute(page: CurrencyConverterRoute.page)
       ];
 }
