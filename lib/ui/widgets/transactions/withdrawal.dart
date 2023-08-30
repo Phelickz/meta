@@ -23,7 +23,11 @@ class WithdrawalTransactionsPage extends StatelessWidget {
               amount: withdrawals["amount"],
               date: withdrawals["date"],
               time: withdrawals["time"],
-              onPressed: () {},
+              onPressed: () {
+                model.setListIndex = index;
+                model.setTransactionsViewEnum =
+                    TransactionsPageEnum.transactionDetails;
+              },
               status: withdrawals["status"],
               model: model,
             );

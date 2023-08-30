@@ -1,5 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
@@ -18,14 +19,12 @@ class WithdrawalDetailsCard extends StatelessWidget {
   final String sender;
   final String receiver;
   final String transactionId;
-  final VoidCallback onPressed;
   const WithdrawalDetailsCard({
     Key? key,
     required this.title,
     required this.amount,
     required this.date,
     required this.time,
-    required this.onPressed,
     required this.status,
     required this.receiver,
     required this.sender,
@@ -38,6 +37,8 @@ class WithdrawalDetailsCard extends StatelessWidget {
     var isDarkMode = CustomThemeData.isDarkMode(context);
 
     return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
             width: 36,
@@ -50,131 +51,155 @@ class WithdrawalDetailsCard extends StatelessWidget {
             child: SvgPicture.asset(AssetManager.transaction,
                 color: Color(0xff7A271A))),
         SizedBox(
+          width: 16.pWidth(context),
+        ),
+        SizedBox(
           width: 238.pWidth(context),
-          child: Column(children: [
-            Text(
-              title,
-              style: CustomThemeData.generateColoredStyle(
-                  fontSize: 16, context: context),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Date",
+                  title,
                   style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
+                      fontSize: 16,
                       context: context,
-                      darkTextColor: Color(0xff98A2B3),
-                      lightTextColor: Color(0xff667085)),
+                      fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.left,
                 ),
-                Text(
-                  "$date $time",
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xffD0D5DD),
-                      lightTextColor: Color(0xff98A2B3)),
-                  textAlign: TextAlign.end,
+                SizedBox(
+                  height: 4.pHeight(context),
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Sender",
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xff98A2B3),
-                      lightTextColor: Color(0xff667085)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Date",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xff98A2B3),
+                          lightTextColor: Color(0xff667085)),
+                    ),
+                    Text(
+                      "$date $time",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xffD0D5DD),
+                          lightTextColor: Color(0xff98A2B3)),
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
                 ),
-                Text(
-                  sender,
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xffD0D5DD),
-                      lightTextColor: Color(0xff98A2B3)),
-                  textAlign: TextAlign.end,
+                SizedBox(
+                  height: 2.pHeight(context),
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Receiver",
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xff98A2B3),
-                      lightTextColor: Color(0xff667085)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Sender",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xff98A2B3),
+                          lightTextColor: Color(0xff667085)),
+                    ),
+                    Text(
+                      sender,
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xffD0D5DD),
+                          lightTextColor: Color(0xff98A2B3)),
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
                 ),
-                Text(
-                  receiver,
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xffD0D5DD),
-                      lightTextColor: Color(0xff98A2B3)),
-                  textAlign: TextAlign.end,
+                SizedBox(
+                  height: 2.pHeight(context),
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Status",
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xff98A2B3),
-                      lightTextColor: Color(0xff667085)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Receiver",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xff98A2B3),
+                          lightTextColor: Color(0xff667085)),
+                    ),
+                    Text(
+                      receiver,
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xffD0D5DD),
+                          lightTextColor: Color(0xff98A2B3)),
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
                 ),
-                Text(
-                  status,
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 8,
-                      context: context,
-                      lightTextColor: (status == "Successful")
-                          ? Color(0xff20A0F3)
-                          : (status == "Pending")
-                              ? Color(0xffF79009)
-                              : Color(0xffF04438),
-                      darkTextColor: (status == "Successful")
-                          ? Color(0xff77C5F8)
-                          : (status == "Pending")
-                              ? Color(0xffFEC84B)
-                              : Color(0xffFDA29B)),
+                SizedBox(
+                  height: 2.pHeight(context),
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Transaction Id",
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xff98A2B3),
-                      lightTextColor: Color(0xff667085)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Status",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xff98A2B3),
+                          lightTextColor: Color(0xff667085)),
+                    ),
+                    Text(
+                      status,
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 8,
+                          context: context,
+                          lightTextColor: (status == "Successful")
+                              ? Color(0xff20A0F3)
+                              : (status == "Pending")
+                                  ? Color(0xffF79009)
+                                  : Color(0xffF04438),
+                          darkTextColor: (status == "Successful")
+                              ? Color(0xff77C5F8)
+                              : (status == "Pending")
+                                  ? Color(0xffFEC84B)
+                                  : Color(0xffFDA29B)),
+                    ),
+                  ],
                 ),
-                Text(
-                  transactionId,
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xffD0D5DD),
-                      lightTextColor: Color(0xff98A2B3)),
-                  textAlign: TextAlign.end,
+                SizedBox(
+                  height: 2.pHeight(context),
                 ),
-              ],
-            ),
-          ]),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Transaction Id",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xff98A2B3),
+                          lightTextColor: Color(0xff667085)),
+                    ),
+                    Text(
+                      transactionId,
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xffD0D5DD),
+                          lightTextColor: Color(0xff98A2B3)),
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
+                ),
+              ]),
         ),
       ],
     );
@@ -191,14 +216,12 @@ class DepositDetailsCard extends StatelessWidget {
   final String sender;
   final String receiver;
   final String transactionId;
-  final VoidCallback onPressed;
   const DepositDetailsCard({
     Key? key,
     required this.title,
     required this.amount,
     required this.date,
     required this.time,
-    required this.onPressed,
     required this.status,
     required this.receiver,
     required this.sender,
@@ -211,6 +234,8 @@ class DepositDetailsCard extends StatelessWidget {
     var isDarkMode = CustomThemeData.isDarkMode(context);
 
     return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
             width: 36,
@@ -223,131 +248,140 @@ class DepositDetailsCard extends StatelessWidget {
             child: SvgPicture.asset(AssetManager.transaction,
                 color: isDarkMode ? Color(0xff20A0F3) : Color(0xff20A0F3))),
         SizedBox(
+          width: 16.pWidth(context),
+        ),
+        SizedBox(
           width: 238.pWidth(context),
-          child: Column(children: [
-            Text(
-              title,
-              style: CustomThemeData.generateColoredStyle(
-                  fontSize: 16, context: context),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Date",
+                  title,
                   style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
+                      fontSize: 16,
                       context: context,
-                      darkTextColor: Color(0xff98A2B3),
-                      lightTextColor: Color(0xff667085)),
+                      fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.left,
                 ),
-                Text(
-                  "$date $time",
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xffD0D5DD),
-                      lightTextColor: Color(0xff98A2B3)),
-                  textAlign: TextAlign.end,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Date",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xff98A2B3),
+                          lightTextColor: Color(0xff667085)),
+                    ),
+                    Text(
+                      "$date $time",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xffD0D5DD),
+                          lightTextColor: Color(0xff98A2B3)),
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Sender",
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xff98A2B3),
-                      lightTextColor: Color(0xff667085)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Sender",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xff98A2B3),
+                          lightTextColor: Color(0xff667085)),
+                    ),
+                    Text(
+                      sender,
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xffD0D5DD),
+                          lightTextColor: Color(0xff98A2B3)),
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
                 ),
-                Text(
-                  sender,
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xffD0D5DD),
-                      lightTextColor: Color(0xff98A2B3)),
-                  textAlign: TextAlign.end,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Receiver",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xff98A2B3),
+                          lightTextColor: Color(0xff667085)),
+                    ),
+                    Text(
+                      receiver,
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xffD0D5DD),
+                          lightTextColor: Color(0xff98A2B3)),
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Receiver",
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xff98A2B3),
-                      lightTextColor: Color(0xff667085)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Status",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xff98A2B3),
+                          lightTextColor: Color(0xff667085)),
+                    ),
+                    Text(
+                      status,
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 8,
+                          context: context,
+                          lightTextColor: (status == "Successful")
+                              ? Color(0xff20A0F3)
+                              : (status == "Pending")
+                                  ? Color(0xffF79009)
+                                  : Color(0xffF04438),
+                          darkTextColor: (status == "Successful")
+                              ? Color(0xff77C5F8)
+                              : (status == "Pending")
+                                  ? Color(0xffFEC84B)
+                                  : Color(0xffFDA29B)),
+                    ),
+                  ],
                 ),
-                Text(
-                  receiver,
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xffD0D5DD),
-                      lightTextColor: Color(0xff98A2B3)),
-                  textAlign: TextAlign.end,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Transaction Id",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xff98A2B3),
+                          lightTextColor: Color(0xff667085)),
+                    ),
+                    Text(
+                      transactionId,
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xffD0D5DD),
+                          lightTextColor: Color(0xff98A2B3)),
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Status",
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xff98A2B3),
-                      lightTextColor: Color(0xff667085)),
-                ),
-                Text(
-                  status,
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 8,
-                      context: context,
-                      lightTextColor: (status == "Successful")
-                          ? Color(0xff20A0F3)
-                          : (status == "Pending")
-                              ? Color(0xffF79009)
-                              : Color(0xffF04438),
-                      darkTextColor: (status == "Successful")
-                          ? Color(0xff77C5F8)
-                          : (status == "Pending")
-                              ? Color(0xffFEC84B)
-                              : Color(0xffFDA29B)),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Transaction Id",
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xff98A2B3),
-                      lightTextColor: Color(0xff667085)),
-                ),
-                Text(
-                  transactionId,
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xffD0D5DD),
-                      lightTextColor: Color(0xff98A2B3)),
-                  textAlign: TextAlign.end,
-                ),
-              ],
-            ),
-          ]),
+              ]),
         ),
       ],
     );
@@ -363,14 +397,12 @@ class InternalTransferDetailsCard extends StatelessWidget {
   final String time;
   final String sender;
   final String transactionId;
-  final VoidCallback onPressed;
   const InternalTransferDetailsCard({
     Key? key,
     required this.title,
     required this.amount,
     required this.date,
     required this.time,
-    required this.onPressed,
     required this.status,
     required this.sender,
     required this.transactionId,
@@ -394,109 +426,121 @@ class InternalTransferDetailsCard extends StatelessWidget {
             child: SvgPicture.asset(AssetManager.transaction,
                 color: isDarkMode ? Color(0xff20A0F3) : Color(0xff20A0F3))),
         SizedBox(
+          width: 16.pWidth(context),
+        ),
+        SizedBox(
           width: 238.pWidth(context),
-          child: Column(children: [
-            Text(
-              title,
-              style: CustomThemeData.generateColoredStyle(
-                  fontSize: 16, context: context),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Date",
+                  title,
                   style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
+                      fontSize: 16,
                       context: context,
-                      darkTextColor: Color(0xff98A2B3),
-                      lightTextColor: Color(0xff667085)),
+                      fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.left,
                 ),
-                Text(
-                  "$date $time",
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xffD0D5DD),
-                      lightTextColor: Color(0xff98A2B3)),
-                  textAlign: TextAlign.end,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Date",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xff98A2B3),
+                          lightTextColor: Color(0xff667085)),
+                    ),
+                    Text(
+                      "$date $time",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xffD0D5DD),
+                          lightTextColor: Color(0xff98A2B3)),
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Sender",
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xff98A2B3),
-                      lightTextColor: Color(0xff667085)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Sender",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xff98A2B3),
+                          lightTextColor: Color(0xff667085)),
+                    ),
+                    Text(
+                      sender,
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xffD0D5DD),
+                          lightTextColor: Color(0xff98A2B3)),
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
                 ),
-                Text(
-                  sender,
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xffD0D5DD),
-                      lightTextColor: Color(0xff98A2B3)),
-                  textAlign: TextAlign.end,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Status",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xff98A2B3),
+                          lightTextColor: Color(0xff667085)),
+                    ),
+                    Text(
+                      status,
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 8,
+                          context: context,
+                          lightTextColor: (status == "Successful")
+                              ? Color(0xff20A0F3)
+                              : (status == "Pending")
+                                  ? Color(0xffF79009)
+                                  : Color(0xffF04438),
+                          darkTextColor: (status == "Successful")
+                              ? Color(0xff77C5F8)
+                              : (status == "Pending")
+                                  ? Color(0xffFEC84B)
+                                  : Color(0xffFDA29B)),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Status",
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xff98A2B3),
-                      lightTextColor: Color(0xff667085)),
+                SizedBox(
+                  height: 2.pWidth(context),
                 ),
-                Text(
-                  status,
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 8,
-                      context: context,
-                      lightTextColor: (status == "Successful")
-                          ? Color(0xff20A0F3)
-                          : (status == "Pending")
-                              ? Color(0xffF79009)
-                              : Color(0xffF04438),
-                      darkTextColor: (status == "Successful")
-                          ? Color(0xff77C5F8)
-                          : (status == "Pending")
-                              ? Color(0xffFEC84B)
-                              : Color(0xffFDA29B)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Transaction Id",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xff98A2B3),
+                          lightTextColor: Color(0xff667085)),
+                    ),
+                    Text(
+                      transactionId,
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          context: context,
+                          darkTextColor: Color(0xffD0D5DD),
+                          lightTextColor: Color(0xff98A2B3)),
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Transaction Id",
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xff98A2B3),
-                      lightTextColor: Color(0xff667085)),
-                ),
-                Text(
-                  transactionId,
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      context: context,
-                      darkTextColor: Color(0xffD0D5DD),
-                      lightTextColor: Color(0xff98A2B3)),
-                  textAlign: TextAlign.end,
-                ),
-              ],
-            ),
-          ]),
+              ]),
         ),
       ],
     );
