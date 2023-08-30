@@ -4,7 +4,6 @@ import 'package:meta_trader/app/utils/dimensions.dart';
 import '../../../../app/responsiveness/res.dart';
 import '../../../../app/utils/theme.dart';
 
-
 class TypeTag extends StatelessWidget {
   final String tag;
   const TypeTag({super.key, required this.tag});
@@ -20,12 +19,12 @@ class TypeTag extends StatelessWidget {
         color: tag == "Real" ? Colors.red : Colors.green,
       ),
       child: Center(
-        child: Text(tag,
+        child: Text(
+          tag,
           style: CustomThemeData.generateStyle(
-            fontSize: McGyver.textSize(context, 1.2),
-            color: isDarkMode ? Colors.white : Colors.black,
-            fontWeight: FontWeight.w300
-            ),
+              fontSize: McGyver.textSize(context, 1.2),
+              color: isDarkMode ? Colors.white : Colors.white,
+              fontWeight: FontWeight.w300),
         ),
       ),
     );

@@ -7,13 +7,15 @@ import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/ui/views/manage_accounts/manage_accounts_view_model.dart';
 import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/broker_logo.dart';
 import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/manage_account_bottomsheet.dart';
 import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/status_tag.dart';
 import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/type_tag.dart';
 import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
 
-AppBar maanageAccountAppBar(BuildContext context) {
+AppBar maanageAccountAppBar(
+    BuildContext context, ManageAccountViewModel model) {
   var isDarkMode = CustomThemeData.isDarkMode(context);
   return AppBar(
     elevation: 0,
@@ -22,17 +24,19 @@ AppBar maanageAccountAppBar(BuildContext context) {
         : ColorManager.lightHeaderColor,
     automaticallyImplyLeading: false,
     leading: IconButton(
-        onPressed: () {},
+        onPressed: () {
+          model.goBack();
+        },
         icon: Icon(
           Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
-          color: isDarkMode ? Colors.white : Colors.black,
+          color: isDarkMode ? Colors.white : Colors.white,
         )),
     centerTitle: false,
     title: Text(
       "Manage Account",
       style: CustomThemeData.generateStyle(
           fontSize: McGyver.textSize(context, 2),
-          color: isDarkMode ? Colors.white : Colors.black,
+          color: isDarkMode ? Colors.white : Colors.white,
           fontWeight: FontWeight.bold),
     ),
     actions: [
@@ -67,6 +71,7 @@ AppBar maanageAccountAppBar(BuildContext context) {
           },
           child: SvgPicture.asset(
             AssetManager.filter,
+            color: isDarkMode ? Colors.white : Colors.white,
           ),
         ),
       ),
@@ -101,7 +106,7 @@ class ManageAppbarExtension extends StatelessWidget {
                 "Balance",
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.2),
-                    color: isDarkMode ? Colors.white : Colors.black,
+                    color: isDarkMode ? Colors.white : Colors.white,
                     fontWeight: FontWeight.w300),
               ),
               SizedBox(
@@ -111,7 +116,7 @@ class ManageAppbarExtension extends StatelessWidget {
                 "509 082.18",
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 2.2),
-                    color: isDarkMode ? Colors.white : Colors.black,
+                    color: isDarkMode ? Colors.white : Colors.white,
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(
@@ -121,7 +126,7 @@ class ManageAppbarExtension extends StatelessWidget {
                 "susan***@gmail.com",
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.2),
-                    color: isDarkMode ? Colors.white : Colors.black,
+                    color: isDarkMode ? Colors.white : Colors.white,
                     fontWeight: FontWeight.w300),
               ),
               SizedBox(
@@ -146,7 +151,7 @@ class ManageAppbarExtension extends StatelessWidget {
                 "46291097- Deriv-Real",
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1),
-                    color: isDarkMode ? Colors.white : Colors.black,
+                    color: isDarkMode ? Colors.white : Colors.white,
                     fontWeight: FontWeight.w400),
               ),
               SizedBox(
@@ -156,7 +161,7 @@ class ManageAppbarExtension extends StatelessWidget {
                 "Access point EU 3 1:100, Hedge",
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1),
-                    color: isDarkMode ? Colors.white : Colors.black,
+                    color: isDarkMode ? Colors.white : Colors.white,
                     fontWeight: FontWeight.w400),
               ),
             ],

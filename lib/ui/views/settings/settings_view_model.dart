@@ -84,7 +84,7 @@ class SettingsViewModel extends CustomBaseViewModel {
   String _appVersion = "1.12.2";
   String get appVersion => _appVersion;
 
-  SettingsPageEnum _settingsPageEnum = SettingsPageEnum.privacyPolicy;
+  SettingsPageEnum _settingsPageEnum = SettingsPageEnum.settings;
   SettingsPageEnum get settingsPageEnum => _settingsPageEnum;
 
   Map privacyPolicy = {

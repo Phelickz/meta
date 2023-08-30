@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -8,6 +9,7 @@ import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/manage_ap
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
 
+@RoutePage()
 class ManageAccountView extends StackedView<ManageAccountViewModel> {
   const ManageAccountView({super.key});
 
@@ -21,7 +23,7 @@ class ManageAccountView extends StackedView<ManageAccountViewModel> {
     return Skeleton(
       isBusy: viewModel.isBusy,
       bodyPadding: EdgeInsets.zero,
-      appBar: maanageAccountAppBar(context),
+      appBar: maanageAccountAppBar(context, viewModel),
       body: SafeArea(
         child: Stack(
           children: [

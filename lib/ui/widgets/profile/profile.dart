@@ -39,9 +39,13 @@ class ProfilePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const ProfileIconButton(
-                        icon: AssetManager.manageAccountIcon,
-                        title: "Manage Account"),
+                    ProfileIconButton(
+                      icon: AssetManager.manageAccountIcon,
+                      title: "Manage Account",
+                      onTap: () {
+                        model.push(const ManageAccountRoute());
+                      },
+                    ),
                     ProfileIconButton(
                       icon: AssetManager.referralsIcon,
                       title: "Referrals",

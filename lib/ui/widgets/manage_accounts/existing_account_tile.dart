@@ -84,6 +84,7 @@ class _ExistingAccountTileState extends State<ExistingAccountTile> {
                 // ignore: deprecated_member_use
                 child: SvgPicture.asset(
                   AssetManager.infoCircle,
+                  // ignore: deprecated_member_use
                   color: Colors.black,
                 )),
           ],
