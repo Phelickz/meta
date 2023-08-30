@@ -66,7 +66,12 @@ class WithdrawalTile extends StatelessWidget {
                     ? Color(0xff20A0F3)
                     : (status == "Pending")
                         ? Color(0xffF79009)
-                        : Color(0xffF04438)),
+                        : Color(0xffF04438),
+                darkTextColor: (status == "Successful")
+                    ? Color(0xff77C5F8)
+                    : (status == "Pending")
+                        ? Color(0xffFEC84B)
+                        : Color(0xffFDA29B)),
           ),
         ],
       ),
@@ -146,7 +151,12 @@ class DepositTile extends StatelessWidget {
                     ? Color(0xff20A0F3)
                     : (status == "Pending")
                         ? Color(0xffF79009)
-                        : Color(0xffF04438)),
+                        : Color(0xffF04438),
+                darkTextColor: (status == "Successful")
+                    ? Color(0xff77C5F8)
+                    : (status == "Pending")
+                        ? Color(0xffFEC84B)
+                        : Color(0xffFDA29B)),
           ),
         ],
       ),
@@ -226,7 +236,12 @@ class InternalTransferTile extends StatelessWidget {
                     ? Color(0xff20A0F3)
                     : (status == "Pending")
                         ? Color(0xffF79009)
-                        : Color(0xffF04438)),
+                        : Color(0xffF04438),
+                darkTextColor: (status == "Successful")
+                    ? Color(0xff77C5F8)
+                    : (status == "Pending")
+                        ? Color(0xffFEC84B)
+                        : Color(0xffFDA29B)),
           ),
         ],
       ),

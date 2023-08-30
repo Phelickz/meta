@@ -5,19 +5,24 @@ import 'package:meta_trader/app/core/custom_base_view_model.dart';
 import 'package:meta_trader/ui/widgets/transactions/components/app_bar.dart';
 import 'package:meta_trader/ui/widgets/transactions/transactions.dart';
 
-enum TransactionsPageEnum {
+enum TransactionsTypeEnum {
   all,
   withdrawals,
   deposits,
   internalTransfer,
 }
 
+enum TransactionsPageEnum { transactions, filter, transactionDetails }
+
 enum TransactionStatusEnum { successful, pending, failed }
 
 class TransactionsViewModel extends CustomBaseViewModel {
-  TransactionsPageEnum _transactionsPageEnum = TransactionsPageEnum.all;
-  TransactionsPageEnum get transactionsPageEnum => _transactionsPageEnum;
+  TransactionsTypeEnum _transactionsTypeEnum = TransactionsTypeEnum.all;
+  TransactionsTypeEnum get transactionsTypeEnum => _transactionsTypeEnum;
 
+  TransactionsPageEnum _transactionsPageEnum =
+      TransactionsPageEnum.transactions;
+  TransactionsPageEnum get transactionsPageEnum => _transactionsPageEnum;
   bool _isFiltered = false;
   bool get isFiltered => _isFiltered;
 
@@ -28,6 +33,11 @@ class TransactionsViewModel extends CustomBaseViewModel {
 
   set setTransactionsViewEnum(TransactionsPageEnum e) {
     _transactionsPageEnum = e;
+    rebuildUi();
+  }
+
+  set setTransactionsTypeEnum(TransactionsTypeEnum e) {
+    _transactionsTypeEnum = e;
     rebuildUi();
   }
 
@@ -183,7 +193,7 @@ class TransactionsViewModel extends CustomBaseViewModel {
 
   Widget returnPage() {
     switch (_transactionsPageEnum) {
-      case TransactionsPageEnum.all:
+      case TransactionsPageEnum.transactions:
         return TransactionsPage(model: this);
 
       default:
@@ -192,8 +202,8 @@ class TransactionsViewModel extends CustomBaseViewModel {
   }
 
   AppBar? returnAppBar(BuildContext context) {
-    switch (_transactionsPageEnum) {
-      case TransactionsPageEnum.all:
+    switch (_transactionsTypeEnum) {
+      case TransactionsTypeEnum.all:
         return transactionsAppBar(context, 'Transactions', this);
       default:
         return null;
