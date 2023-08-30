@@ -239,6 +239,7 @@ class ExistingAppBarExtension extends StatelessWidget {
                         height: 26,
                         width: 26,
                         AssetManager.closeSquare,
+                        // ignore: deprecated_member_use
                         color: isDarkMode ? Colors.white : Colors.black,
                       ),
                     ),
