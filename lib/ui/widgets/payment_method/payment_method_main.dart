@@ -18,58 +18,50 @@ class PaymentMethodMainPage extends StatelessWidget {
         ? EmptyPaymentMethod(
             viewModel: viewModel,
           )
-        : Expanded(
-            child: SingleChildScrollView(
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: McGyver.rsDoubleW(context, 6),
+        : SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                verticalSpaceXSmall(context),
+                Text(
+                  "Manage your cash payment methods",
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 1.5),
+                    fontWeight: FontWeight.w500,
+                    color: isDarkMode
+                        ? const Color(0xFF98A2B3)
+                        : const Color(0xFF475467),
+                  ),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    verticalSpaceXSmall(context),
-                    Text(
-                      "Manage your cash payment methods",
-                      style: CustomThemeData.generateStyle(
-                        fontSize: McGyver.textSize(context, 1.5),
-                        fontWeight: FontWeight.w500,
-                        color: isDarkMode
-                            ? const Color(0xFF98A2B3)
-                            : const Color(0xFF475467),
-                      ),
-                    ),
-                    verticalSpaceXSmall(context),
-                    PaymentMethodTile(
-                      vm: viewModel,
-                      paymentMethodEnum: PaymentMethodEnum.onlineBank,
-                    ),
-                    PaymentMethodTile(
-                      vm: viewModel,
-                      paymentMethodEnum: PaymentMethodEnum.binancePay,
-                    ),
-                    PaymentMethodTile(
-                      vm: viewModel,
-                      paymentMethodEnum: PaymentMethodEnum.neteller,
-                    ),
-                    PaymentMethodTile(
-                      vm: viewModel,
-                      paymentMethodEnum: PaymentMethodEnum.perfectMoney,
-                    ),
-                    PaymentMethodTile(
-                      vm: viewModel,
-                      paymentMethodEnum: PaymentMethodEnum.skrill,
-                    ),
-                    PaymentMethodTile(
-                      vm: viewModel,
-                      paymentMethodEnum: PaymentMethodEnum.sticPay,
-                    ),
-                    PaymentMethodTile(
-                      vm: viewModel,
-                      paymentMethodEnum: PaymentMethodEnum.tether,
-                    ),
-                  ],
+                PaymentMethodTile(
+                  vm: viewModel,
+                  paymentMethodEnum: PaymentMethodEnum.onlineBank,
                 ),
-              ),
+                PaymentMethodTile(
+                  vm: viewModel,
+                  paymentMethodEnum: PaymentMethodEnum.binancePay,
+                ),
+                PaymentMethodTile(
+                  vm: viewModel,
+                  paymentMethodEnum: PaymentMethodEnum.neteller,
+                ),
+                PaymentMethodTile(
+                  vm: viewModel,
+                  paymentMethodEnum: PaymentMethodEnum.perfectMoney,
+                ),
+                PaymentMethodTile(
+                  vm: viewModel,
+                  paymentMethodEnum: PaymentMethodEnum.skrill,
+                ),
+                PaymentMethodTile(
+                  vm: viewModel,
+                  paymentMethodEnum: PaymentMethodEnum.sticPay,
+                ),
+                PaymentMethodTile(
+                  vm: viewModel,
+                  paymentMethodEnum: PaymentMethodEnum.tether,
+                ),
+              ],
             ),
           );
   }

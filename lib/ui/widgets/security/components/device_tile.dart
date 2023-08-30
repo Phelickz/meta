@@ -35,8 +35,6 @@ class DeviceTile extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(
         bottom: McGyver.rsDoubleH(context, 1.5),
-        left: McGyver.rsDoubleW(context, 6),
-        right: McGyver.rsDoubleW(context, 6),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,

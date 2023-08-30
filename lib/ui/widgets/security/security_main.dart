@@ -14,15 +14,14 @@ class SecurityMainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
-    return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: McGyver.rsDoubleW(context, 6),
-      ),
-      child: SingleChildScrollView(
-        child: Column(
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        verticalSpaceXSmall(context),
+        Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            verticalSpaceXSmall(context),
             Text(
               "Two-Factor Authentication",
               style: CustomThemeData.generateStyle(
@@ -43,80 +42,78 @@ class SecurityMainPage extends StatelessWidget {
                     : const Color(0xFF667085),
               ),
             ),
-            verticalSpaceSmall(context),
-            SecurityOptionTile(
-              assetName: "assets/images/shield_security.svg",
-              vm: model,
-              hasLeadingIcon: true,
-              hasStatus: true,
-              label: "Passkey",
-              status: SecurityOptionStatus.confirmed,
-              onTap: () => model.securityPageEnum = SecurityPageEnum.passkey,
-            ),
-            SecurityOptionTile(
-              assetName: "assets/images/message_text.svg",
-              vm: model,
-              hasLeadingIcon: true,
-              label: "Email",
-              status: SecurityOptionStatus.unconfirmed,
-              hasStatus: true,
-              onTap: () =>
-                  model.securityPageEnum = SecurityPageEnum.emailVerify,
-            ),
-            SecurityOptionTile(
-              assetName: "assets/images/mobile.svg",
-              vm: model,
-              hasLeadingIcon: true,
-              label: "Phone Number",
-              status: SecurityOptionStatus.unconfirmed,
-              hasStatus: true,
-              onTap: () =>
-                  model.securityPageEnum = SecurityPageEnum.phoneVerify,
-            ),
-            SecurityOptionTile(
-              assetName: "assets/images/password_check.svg",
-              vm: model,
-              label: "Password",
-              hasStatus: true,
-              hasLeadingIcon: true,
-              status: SecurityOptionStatus.confirmed,
-              onTap: () => model.securityPageEnum = SecurityPageEnum.password,
-            ),
-            verticalSpaceMedium(context),
-            Text(
-              "Others",
-              style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 2.2),
-                fontWeight: FontWeight.bold,
-                color: isDarkMode
-                    ? const Color(0xFFD0D5DD)
-                    : const Color(0xFF344054),
-              ),
-            ),
-            verticalSpaceXXSmall(context),
-            SecurityOptionTile(
-              assetName: "assets/images/password_check.svg",
-              vm: model,
-              label: "Auto-Lock",
-              onTap: () => model.securityPageEnum = SecurityPageEnum.autoLock,
-            ),
-            SecurityOptionTile(
-              assetName: "assets/images/password_check.svg",
-              vm: model,
-              label: "Devices",
-              onTap: () => model.securityPageEnum = SecurityPageEnum.devices,
-            ),
-            verticalSpaceSmall(context),
-            SecurityOptionTile(
-              assetName: "assets/images/password_check.svg",
-              vm: model,
-              label: "Disable Account",
-              hasRedLabel: true,
-              onTap: () {},
-            ),
           ],
         ),
-      ),
+        verticalSpaceSmall(context),
+        SecurityOptionTile(
+          assetName: "assets/images/shield_security.svg",
+          vm: model,
+          hasLeadingIcon: true,
+          hasStatus: true,
+          label: "Passkey",
+          status: SecurityOptionStatus.confirmed,
+          onTap: () => model.securityPageEnum = SecurityPageEnum.passkey,
+        ),
+        SecurityOptionTile(
+          assetName: "assets/images/message_text.svg",
+          vm: model,
+          hasLeadingIcon: true,
+          label: "Email",
+          status: SecurityOptionStatus.unconfirmed,
+          hasStatus: true,
+          onTap: () => model.securityPageEnum = SecurityPageEnum.emailVerify,
+        ),
+        SecurityOptionTile(
+          assetName: "assets/images/mobile.svg",
+          vm: model,
+          hasLeadingIcon: true,
+          label: "Phone Number",
+          status: SecurityOptionStatus.unconfirmed,
+          hasStatus: true,
+          onTap: () => model.securityPageEnum = SecurityPageEnum.phoneVerify,
+        ),
+        SecurityOptionTile(
+          assetName: "assets/images/password_check.svg",
+          vm: model,
+          label: "Password",
+          hasStatus: true,
+          hasLeadingIcon: true,
+          status: SecurityOptionStatus.confirmed,
+          // onTap: () => model.securityPageEnum = SecurityPageEnum.password,
+          onTap: () => showChangePasswordModal(context),
+        ),
+        verticalSpaceMedium(context),
+        Text(
+          "Others",
+          style: CustomThemeData.generateStyle(
+            fontSize: McGyver.textSize(context, 2.2),
+            fontWeight: FontWeight.bold,
+            color:
+                isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF344054),
+          ),
+        ),
+        verticalSpaceXXSmall(context),
+        SecurityOptionTile(
+          assetName: "assets/images/password_check.svg",
+          vm: model,
+          label: "Auto-Lock",
+          onTap: () => model.securityPageEnum = SecurityPageEnum.autoLock,
+        ),
+        SecurityOptionTile(
+          assetName: "assets/images/password_check.svg",
+          vm: model,
+          label: "Devices",
+          onTap: () => model.securityPageEnum = SecurityPageEnum.devices,
+        ),
+        verticalSpaceSmall(context),
+        SecurityOptionTile(
+          assetName: "assets/images/password_check.svg",
+          vm: model,
+          label: "Disable Account",
+          hasRedLabel: true,
+          onTap: () {},
+        ),
+      ],
     );
   }
 

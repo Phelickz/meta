@@ -22,25 +22,17 @@ class PasskeyPage extends StatelessWidget {
             children: [
               verticalSpaceXSmall(context),
               Expanded(
-                child: ListView.separated(
+                child: ListView.builder(
                   itemBuilder: (_, index) => const PasskeyTile(),
                   itemCount: 2,
-                  separatorBuilder: (BuildContext context, int index) {
-                    return verticalSpaceXSmall(context);
-                  },
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: McGyver.rsDoubleW(context, 6),
-                ),
-                child: CustomButtons.generalButton(
-                  context: context,
-                  onTap: () {
-                    showAddPasskeyModal(context);
-                  },
-                  text: 'Add A Passkey',
-                ),
+              CustomButtons.generalButton(
+                context: context,
+                onTap: () {
+                  showAddPasskeyModal(context);
+                },
+                text: 'Add A Passkey',
               ),
               verticalSpaceMedium(context),
             ],

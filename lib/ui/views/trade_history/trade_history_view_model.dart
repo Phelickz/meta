@@ -20,7 +20,7 @@ class TradeHistoryViewModel extends CustomBaseViewModel {
     return TradeHistoryPage(viewModel: this);
   }
 
-  Widget returnAppBar(BuildContext context) {
+  AppBar? returnAppBar(BuildContext context) {
     return tradeHistoryAppBar(
       context,
       "Trade History",

@@ -35,7 +35,7 @@ class PhoneVerifiedSuccessPage extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 10),
+            horizontal: McGyver.rsDoubleW(context, 4),
           ),
           child: Text(
             "Phone Verified Successfully",
@@ -52,7 +52,7 @@ class PhoneVerifiedSuccessPage extends StatelessWidget {
         verticalSpaceSmall(context),
         Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 10),
+            horizontal: McGyver.rsDoubleW(context, 4),
           ),
           child: RichText(
             textAlign: TextAlign.center,
@@ -83,17 +83,12 @@ class PhoneVerifiedSuccessPage extends StatelessWidget {
           ),
         ),
         verticalSpaceLarge(context),
-        Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 6),
-          ),
-          child: CustomButtons.generalButton(
-            context: context,
-            onTap: () {
-              model.securityPageEnum = SecurityPageEnum.main;
-            },
-            text: 'Continue',
-          ),
+        CustomButtons.generalButton(
+          context: context,
+          onTap: () {
+            model.securityPageEnum = SecurityPageEnum.main;
+          },
+          text: 'Continue',
         ),
       ],
     );

@@ -26,15 +26,12 @@ class DevicesPage extends StatelessWidget {
       children: [
         verticalSpaceXSmall(context),
         Expanded(
-          child: ListView.separated(
+          child: ListView.builder(
             itemBuilder: (_, index) => DeviceTile(
               device: devices[index],
               viewModel: model,
             ),
             itemCount: 2,
-            separatorBuilder: (BuildContext context, int index) {
-              return verticalSpaceXXSmall(context);
-            },
           ),
         ),
       ],
