@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/home/home_view.dart';
+import 'package:meta_trader/ui/views/trade/trade_view.dart';
 
 import '../profile/profile_view.dart';
 
@@ -23,7 +24,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
     const HomeView(),
     const TabScreen(title: 'Tab 2'),
     const TabScreen(title: 'Tab 3'),
-    const TabScreen(title: 'Tab 4'),
+    const TradeView(),
     // const TabScreen(title: 'Tab 5'),
     const ProfileView(),
   ];
