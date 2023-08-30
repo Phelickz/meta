@@ -24,7 +24,7 @@ class EmailVerificationPage extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 10),
+            horizontal: McGyver.rsDoubleW(context, 4),
           ),
           child: Text(
             "Passkey Added Successfully",
@@ -40,7 +40,7 @@ class EmailVerificationPage extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 10),
+            horizontal: McGyver.rsDoubleW(context, 4),
           ),
           child: RichText(
             textAlign: TextAlign.center,
@@ -71,29 +71,19 @@ class EmailVerificationPage extends StatelessWidget {
           ),
         ),
         verticalSpaceLarge(context),
-        Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 6),
-          ),
-          child: CustomButtons.generalButton(
-            context: context,
-            onTap: () {
-              model.securityPageEnum = SecurityPageEnum.emailVerifySuccess;
-            },
-            text: 'Check mail',
-          ),
+        CustomButtons.generalButton(
+          context: context,
+          onTap: () {
+            model.securityPageEnum = SecurityPageEnum.emailVerifySuccess;
+          },
+          text: 'Check mail',
         ),
         verticalSpaceXSmall(context),
-        Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 6),
-          ),
-          child: CustomButtons.buttonWithoutBackground(
-            context: context,
-            onTap: () {},
-            text: 'Resend code',
-            textColor: Theme.of(context).primaryColor,
-          ),
+        CustomButtons.outlineButton(
+          context: context,
+          onTap: () {},
+          text: 'Resend code',
+          textColor: Theme.of(context).primaryColor,
         ),
       ],
     );

@@ -22,16 +22,8 @@ class PaymentMethodView extends StackedView<PaymentMethodViewModel> {
       isBusy: viewModel.isBusy,
       backgroundColor:
           isDarkMode ? const Color(0xFF0C2031) : const Color(0xFFFAFDFF),
-      bodyPadding: EdgeInsets.zero,
-      appBar: viewModel.returnAppBar(context), // isn't the appbar better here?
-      body: SafeArea(
-        child: Column(
-          children: [
-            //  viewModel.returnAppBar(context), // is there a reason you are not using the skeleton's app bar ?
-            viewModel.returnPage(),
-          ],
-        ),
-      ),
+      appBar: viewModel.returnAppBar(context),
+      body: viewModel.returnPage(),
     );
   }
 

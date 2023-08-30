@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../app/responsiveness/res.dart';
-import '../../../app/responsiveness/size.dart';
-import '../../../app/utils/theme.dart';
+import '../../../../app/responsiveness/res.dart';
+import '../../../../app/responsiveness/size.dart';
+import '../../../../app/utils/theme.dart';
+import 'delete_popup.dart';
 
 class PasskeyTile extends StatelessWidget {
   const PasskeyTile({super.key});
@@ -14,8 +15,6 @@ class PasskeyTile extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(
         bottom: McGyver.rsDoubleH(context, 1.2),
-        left: McGyver.rsDoubleW(context, 6),
-        right: McGyver.rsDoubleW(context, 6),
       ),
       child: Row(
         children: [
@@ -81,20 +80,48 @@ class PasskeyTile extends StatelessWidget {
                 ),
               ),
               horizontalSpaceXSmall(context),
-              SvgPicture.asset(
-                height: McGyver.rsDoubleH(context, 2.6),
-                width: McGyver.rsDoubleH(context, 2.6),
-                'assets/images/trash.svg',
-                colorFilter: ColorFilter.mode(
-                  isDarkMode
-                      ? const Color(0xff98A2B3)
-                      : const Color(0xFF667085),
-                  BlendMode.srcIn,
+              InkWell(
+                onTap: () {
+                  showDeletePasskeyPopup(context);
+                },
+                child: SvgPicture.asset(
+                  height: McGyver.rsDoubleH(context, 2.6),
+                  width: McGyver.rsDoubleH(context, 2.6),
+                  'assets/images/trash.svg',
+                  colorFilter: ColorFilter.mode(
+                    isDarkMode
+                        ? const Color(0xff98A2B3)
+                        : const Color(0xFF667085),
+                    BlendMode.srcIn,
+                  ),
                 ),
               )
             ],
           )
         ],
+      ),
+    );
+  }
+
+  void showDeletePasskeyPopup(BuildContext context) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
+    showDialog(
+      context: context,
+      builder: (_) => Dialog(
+        backgroundColor:
+            isDarkMode ? const Color(0xFF0C2031) : const Color(0xFFFAFDFF),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+          Radius.circular(
+            McGyver.rsDoubleH(context, 2),
+          ),
+        )),
+        alignment: Alignment.center,
+        insetPadding: const EdgeInsets.all(10),
+        child: DeletePopup(
+          title: "Passkey",
+          onDelete: () {},
+        ),
       ),
     );
   }

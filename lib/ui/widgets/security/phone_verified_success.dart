@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
+import '../../views/security/security_view_model.dart';
 import '../buttons/buttons.dart';
 
 class PhoneVerifiedSuccessPage extends StatelessWidget {
-  const PhoneVerifiedSuccessPage({super.key});
+  final SecurityViewModel model;
+  const PhoneVerifiedSuccessPage({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,7 @@ class PhoneVerifiedSuccessPage extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 10),
+            horizontal: McGyver.rsDoubleW(context, 4),
           ),
           child: Text(
             "Phone Verified Successfully",
@@ -50,7 +52,7 @@ class PhoneVerifiedSuccessPage extends StatelessWidget {
         verticalSpaceSmall(context),
         Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 10),
+            horizontal: McGyver.rsDoubleW(context, 4),
           ),
           child: RichText(
             textAlign: TextAlign.center,
@@ -80,16 +82,13 @@ class PhoneVerifiedSuccessPage extends StatelessWidget {
                 ]),
           ),
         ),
-        verticalSpaceMedium(context),
-        Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 6),
-          ),
-          child: CustomButtons.generalButton(
-            context: context,
-            onTap: () {},
-            text: 'Continue',
-          ),
+        verticalSpaceLarge(context),
+        CustomButtons.generalButton(
+          context: context,
+          onTap: () {
+            model.securityPageEnum = SecurityPageEnum.main;
+          },
+          text: 'Continue',
         ),
       ],
     );

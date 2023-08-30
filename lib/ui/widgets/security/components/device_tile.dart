@@ -2,10 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../app/responsiveness/res.dart';
-import '../../../app/responsiveness/size.dart';
-import '../../../app/utils/theme.dart';
-import '../../views/security/security_view_model.dart';
+import '../../../../app/responsiveness/res.dart';
+import '../../../../app/responsiveness/size.dart';
+import '../../../../app/utils/theme.dart';
+import '../../../views/security/security_view_model.dart';
 
 class DeviceModel {
   final String name;
@@ -35,8 +35,6 @@ class DeviceTile extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(
         bottom: McGyver.rsDoubleH(context, 1.5),
-        left: McGyver.rsDoubleW(context, 6),
-        right: McGyver.rsDoubleW(context, 6),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,

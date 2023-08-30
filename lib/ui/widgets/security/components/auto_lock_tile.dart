@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../app/responsiveness/res.dart';
-import '../../../app/responsiveness/size.dart';
-import '../../../app/utils/theme.dart';
+import '../../../../app/responsiveness/res.dart';
+import '../../../../app/responsiveness/size.dart';
+import '../../../../app/utils/theme.dart';
 
 class AutoLockTile extends StatelessWidget {
   final bool value;
@@ -26,8 +26,6 @@ class AutoLockTile extends StatelessWidget {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Container(
       margin: EdgeInsets.only(
-        left: McGyver.rsDoubleW(context, 6),
-        right: McGyver.rsDoubleW(context, 6),
         bottom: McGyver.rsDoubleH(context, 2),
       ),
       child: Row(

@@ -1,10 +1,10 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
-import '../../../app/utils/theme.dart';
-import 'security_view_model.dart';
 import 'package:stacked/stacked.dart';
 
+import '../../../app/utils/theme.dart';
 import '../../widgets/skeleton.dart';
+import 'security_view_model.dart';
 
 @RoutePage()
 class SecurityView extends StackedView<SecurityViewModel> {
@@ -22,7 +22,6 @@ class SecurityView extends StackedView<SecurityViewModel> {
       isBusy: viewModel.isBusy,
       backgroundColor:
           isDarkMode ? const Color(0xFF0C2031) : const Color(0xFFFAFDFF),
-      bodyPadding: EdgeInsets.zero,
       appBar: viewModel.returnAppBar(context),
       body: viewModel.returnPage(),
     );
