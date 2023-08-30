@@ -26,6 +26,7 @@ class MetaTraderApp extends StatelessWidget {
           themeMode: themeMode,
           // theme: ThemeData(brightness: Brightness.light, fontFamily: 'Gilroy'),
           darkTheme: darkTheme,
+          
         );
 
         //   return MaterialApp(
