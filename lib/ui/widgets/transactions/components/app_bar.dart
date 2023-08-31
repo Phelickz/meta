@@ -34,17 +34,18 @@ AppBar transactionsAppBar(
       ),
     ),
     actions: [
-      Padding(
-        padding: EdgeInsets.only(right: 24.pWidth(context)),
-        child: InkWell(
-          onTap: () {},
-          child: SvgPicture.asset(
-            AssetManager.filter,
-            // ignore: deprecated_member_use
-            color: const Color(0xff98A2B3),
-          ),
-        ),
-      )
+      model.transactionsPageEnum == TransactionsPageEnum.transactions
+          ? Padding(
+              padding: EdgeInsets.only(right: 24.pWidth(context)),
+              child: InkWell(
+                onTap: () {},
+                child: SvgPicture.asset(
+                  AssetManager.filter,
+                  color: Color(0xff98A2B3),
+                ),
+              ),
+            )
+          : SizedBox()
     ],
   );
 }
