@@ -29,7 +29,7 @@ class TermsOfUsePage extends StatelessWidget {
               itemCount: privacyPolicyList.length,
               itemBuilder: (context, index) {
                 final subList = privacyPolicyList[index]["data"];
-                return Container(
+                return SizedBox(
                   width: double.infinity,
                   child: Column(
                     mainAxisSize: MainAxisSize.min,

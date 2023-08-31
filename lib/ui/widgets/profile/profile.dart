@@ -39,9 +39,13 @@ class ProfilePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const ProfileIconButton(
-                        icon: AssetManager.manageAccountIcon,
-                        title: "Manage Account"),
+                    ProfileIconButton(
+                      icon: AssetManager.manageAccountIcon,
+                      title: "Manage Account",
+                      onTap: () {
+                        model.push(const ManageAccountRoute());
+                      },
+                    ),
                     ProfileIconButton(
                       icon: AssetManager.referralsIcon,
                       title: "Referrals",
@@ -64,9 +68,13 @@ class ProfilePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const ProfileIconButton(
-                        icon: AssetManager.loyaltyRewards,
-                        title: "Loyalty Rewards"),
+                    ProfileIconButton(
+                      icon: AssetManager.loyaltyRewards,
+                      title: "Loyalty Rewards",
+                      onTap: () {
+                        model.push(const LoyaltyRewardsRoute());
+                      },
+                    ),
                     ProfileIconButton(
                       icon: AssetManager.notificationsIcon,
                       title: "Notifications",

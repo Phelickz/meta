@@ -15,51 +15,54 @@ class ManageAccountBottomSheet1 extends StatelessWidget {
       height: 283.pHeight(context),
       width: double.infinity,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.only(topLeft: Radius.circular(12), topRight: Radius.circular(12)),
-        color: Theme.of(context).scaffoldBackgroundColor
-      ),
-      padding: EdgeInsets.symmetric(horizontal: 24.pWidth(context), vertical: 22.pHeight(context)),
+          borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(12), topRight: Radius.circular(12)),
+          color: Theme.of(context).scaffoldBackgroundColor),
+      padding: EdgeInsets.symmetric(
+          horizontal: 24.pWidth(context), vertical: 22.pHeight(context)),
       child: Column(
         children: [
           Text(
             accountDetail,
             style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 1.3),
-              color: isDarkMode ? Colors.white : Colors.black,
-              fontWeight: FontWeight.w400
-            ),
+                fontSize: McGyver.textSize(context, 1.3),
+                color: isDarkMode ? Colors.white : Colors.black,
+                fontWeight: FontWeight.w400),
           ),
-          SizedBox(height: 30.pHeight(context),),
-          Text("Change Password",
+          SizedBox(
+            height: 30.pHeight(context),
+          ),
+          Text(
+            "Change Password",
             style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 2),
-              color: isDarkMode ? Colors.white : Colors.black,
-              fontWeight: FontWeight.w600
-              ),
+                fontSize: McGyver.textSize(context, 2),
+                color: isDarkMode ? Colors.white : Colors.black,
+                fontWeight: FontWeight.w600),
           ),
-          SizedBox(height: 16.pHeight(context),),
-          Text("Delete Account",
-          style: CustomThemeData.generateStyle(
-            fontSize: McGyver.textSize(context, 2),
-            color: Colors.red,
-            fontWeight: FontWeight.w600
-            ),
+          SizedBox(
+            height: 16.pHeight(context),
           ),
-          SizedBox(height: 16.pHeight(context),),
+          Text(
+            "Delete Account",
+            style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 2),
+                color: Colors.red,
+                fontWeight: FontWeight.w600),
+          ),
+          SizedBox(
+            height: 16.pHeight(context),
+          ),
           CustomButtons.generalButton(
-            context: context, 
-            onTap: (){}, 
+            context: context,
+            onTap: () {},
             text: "Cancel",
             textSize: 2,
-            
-            )
+          )
         ],
-      )
-      ,
+      ),
     );
   }
 }
-
 
 class ManageAccountBottomSheet2 extends StatelessWidget {
   final String accountDetail;
@@ -72,74 +75,75 @@ class ManageAccountBottomSheet2 extends StatelessWidget {
       height: 300.pHeight(context),
       width: double.infinity,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.only(topLeft: Radius.circular(12), topRight: Radius.circular(12)),
-        color: Theme.of(context).scaffoldBackgroundColor
-      ),
-      padding: EdgeInsets.symmetric(horizontal: 24.pWidth(context), vertical: 22.pHeight(context)),
+          borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(12), topRight: Radius.circular(12)),
+          color: Theme.of(context).scaffoldBackgroundColor),
+      padding: EdgeInsets.symmetric(
+          horizontal: 24.pWidth(context), vertical: 22.pHeight(context)),
       child: Column(
         children: [
           Text(
             accountDetail,
             style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 1.3),
-              color: isDarkMode ? Colors.white : Colors.black,
-              fontWeight: FontWeight.w400
-            ),
+                fontSize: McGyver.textSize(context, 1.3),
+                color: isDarkMode ? Colors.white : Colors.black,
+                fontWeight: FontWeight.w400),
           ),
-          SizedBox(height: 30.pHeight(context),),
-          Text("Login",
+          SizedBox(
+            height: 30.pHeight(context),
+          ),
+          Text(
+            "Login",
             style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 2),
-              color: isDarkMode ? Colors.white : Colors.black,
-              fontWeight: FontWeight.w600
-              ),
+                fontSize: McGyver.textSize(context, 2),
+                color: isDarkMode ? Colors.white : Colors.black,
+                fontWeight: FontWeight.w600),
           ),
-          SizedBox(height: 12.pHeight(context),),
+          SizedBox(
+            height: 12.pHeight(context),
+          ),
           InkWell(
-            onTap: (){
+            onTap: () {
               showDialog(
-                context: context, 
-                builder: (context){
-                  return const DetailDialog();
-                }
-              );
+                  context: context,
+                  builder: (context) {
+                    return const DetailDialog();
+                  });
             },
-            child: Text("Properties",
-            style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 2),
-              color: isDarkMode ? Colors.white : Colors.black,
-              fontWeight: FontWeight.w600
-              ),
+            child: Text(
+              "Properties",
+              style: CustomThemeData.generateStyle(
+                  fontSize: McGyver.textSize(context, 2),
+                  color: isDarkMode ? Colors.white : Colors.black,
+                  fontWeight: FontWeight.w600),
             ),
           ),
-          SizedBox(height: 12.pHeight(context),),
+          SizedBox(
+            height: 12.pHeight(context),
+          ),
           InkWell(
-            onTap: (){
+            onTap: () {
               showDialog(
-                context: context, 
-                builder: (context){
-                  return const DeleteAccountDialog();
-                }
-              );
+                  context: context,
+                  builder: (context) {
+                    return const DeleteAccountDialog();
+                  });
             },
-            child: Text("Delete Account",
-            style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 2),
-              color: Colors.red,
-              fontWeight: FontWeight.w600
-              ),
+            child: Text(
+              "Delete Account",
+              style: CustomThemeData.generateStyle(
+                  fontSize: McGyver.textSize(context, 2),
+                  color: Colors.red,
+                  fontWeight: FontWeight.w600),
             ),
           ),
-          SizedBox(height: 20.pHeight(context),),
+          SizedBox(
+            height: 20.pHeight(context),
+          ),
           CustomButtons.generalButton(
-            context: context, 
-            onTap: (){}, 
-            text: "Cancel",
-            textSize: 2
-            )
+              context: context, onTap: () {}, text: "Cancel", textSize: 2)
         ],
-      )
-      ,
+      ),
     );
   }
 }
@@ -160,7 +164,7 @@ class DeleteAccountDialog extends StatelessWidget {
         height: 170.pHeight(context),
         width: 300.pWidth(context),
         padding: EdgeInsets.symmetric(
-          vertical: 24.pHeight(context), horizontal: 12.pWidth(context)),
+            vertical: 24.pHeight(context), horizontal: 12.pWidth(context)),
         decoration: BoxDecoration(
           color: Theme.of(context).scaffoldBackgroundColor,
           borderRadius: BorderRadius.circular(10),
@@ -184,28 +188,27 @@ class DeleteAccountDialog extends StatelessWidget {
                   height: 48.pHeight(context),
                   width: 154.pWidth(context),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                      color: Colors.red
-                    )
-                  ),
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(color: Colors.red)),
                   child: Center(
-                    child: Text("Delete",
-                    style: CustomThemeData.generateStyle(
-                    fontSize: McGyver.textSize(context, 2),
-                    color: Colors.red,
-                    fontWeight: FontWeight.w500
-                    ),
+                    child: Text(
+                      "Delete",
+                      style: CustomThemeData.generateStyle(
+                          fontSize: McGyver.textSize(context, 2),
+                          color: Colors.red,
+                          fontWeight: FontWeight.w500),
                     ),
                   ),
                 ),
-                SizedBox(width: 30.pWidth(context),),
-                Text("Cancel",
+                SizedBox(
+                  width: 30.pWidth(context),
+                ),
+                Text(
+                  "Cancel",
                   style: CustomThemeData.generateStyle(
-                    fontSize: McGyver.textSize(context, 2),
-                    color: isDarkMode ? Colors.white : Colors.black,
-                    fontWeight: FontWeight.w500
-                    ),
+                      fontSize: McGyver.textSize(context, 2),
+                      color: isDarkMode ? Colors.white : Colors.black,
+                      fontWeight: FontWeight.w500),
                 ),
               ],
             )
@@ -215,7 +218,6 @@ class DeleteAccountDialog extends StatelessWidget {
     );
   }
 }
-
 
 class DetailDialog extends StatelessWidget {
   const DetailDialog({super.key});
@@ -233,7 +235,7 @@ class DetailDialog extends StatelessWidget {
         height: 217.pHeight(context),
         width: 360.pWidth(context),
         padding: EdgeInsets.symmetric(
-          vertical: 24.pHeight(context), horizontal: 12.pWidth(context)),
+            vertical: 24.pHeight(context), horizontal: 12.pWidth(context)),
         decoration: BoxDecoration(
           color: Theme.of(context).scaffoldBackgroundColor,
           borderRadius: BorderRadius.circular(10),
@@ -244,56 +246,45 @@ class DetailDialog extends StatelessWidget {
             Text(
               "Properties",
               style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.5),
-                color: isDarkMode ? Colors.white : const Color(0xFF98A2B3),
-                fontWeight: FontWeight.w500
-                ),
+                  fontSize: McGyver.textSize(context, 1.5),
+                  color: isDarkMode ? Colors.white : const Color(0xFF98A2B3),
+                  fontWeight: FontWeight.w500),
             ),
             SizedBox(height: 12.pHeight(context)),
             Text(
               '23299752',
               style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.5),
-                color: isDarkMode ? Colors.white : Colors.black,
-                fontWeight: FontWeight.w500
-                ),
+                  fontSize: McGyver.textSize(context, 1.5),
+                  color: isDarkMode ? Colors.white : Colors.black,
+                  fontWeight: FontWeight.w500),
             ),
             Text(
               'FXPro limited ',
               style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.5),
-                color: isDarkMode ? Colors.white : Colors.black,
-                fontWeight: FontWeight.w500
-                ),
+                  fontSize: McGyver.textSize(context, 1.5),
+                  color: isDarkMode ? Colors.white : Colors.black,
+                  fontWeight: FontWeight.w500),
             ),
             Text(
               'USD 12 000 000.00',
               style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.5),
-                color: isDarkMode ? Colors.white : Colors.black,
-                fontWeight: FontWeight.w500
-                ),
+                  fontSize: McGyver.textSize(context, 1.5),
+                  color: isDarkMode ? Colors.white : Colors.black,
+                  fontWeight: FontWeight.w500),
             ),
             Text(
               'demo-account',
               style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.5),
-                color: isDarkMode ? Colors.white : Colors.black,
-                fontWeight: FontWeight.w500
-                ),
+                  fontSize: McGyver.textSize(context, 1.5),
+                  color: isDarkMode ? Colors.white : Colors.black,
+                  fontWeight: FontWeight.w500),
             ),
-            
             SizedBox(height: 23.pHeight(context)),
             CustomButtons.clearButton(
-                context: context, 
-                onTap: () {}, 
-                text: "Ok",
-                textSize: 2
-                )
+                context: context, onTap: () {}, text: "Ok", textSize: 2)
           ],
         ),
       ),
     );
   }
 }
-

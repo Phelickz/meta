@@ -45,11 +45,13 @@ class WithdrawalDetailsCard extends StatelessWidget {
             height: 36,
             padding: EdgeInsets.symmetric(horizontal: 8.pWidth(context)),
             decoration: BoxDecoration(
-              color: isDarkMode ? Color(0xffFECDCA) : Color(0xffFEE4E2),
+              color: isDarkMode
+                  ? const Color(0xffFECDCA)
+                  : const Color(0xffFEE4E2),
               shape: BoxShape.circle,
             ),
             child: SvgPicture.asset(AssetManager.transaction,
-                color: Color(0xff7A271A))),
+                color: const Color(0xff7A271A))),
         SizedBox(
           width: 16.pWidth(context),
         ),
@@ -242,11 +244,15 @@ class DepositDetailsCard extends StatelessWidget {
             height: 36,
             padding: EdgeInsets.symmetric(horizontal: 8.pWidth(context)),
             decoration: BoxDecoration(
-              color: isDarkMode ? Color(0xff073961) : Color(0xffD3ECFD),
+              color: isDarkMode
+                  ? const Color(0xff073961)
+                  : const Color(0xffD3ECFD),
               shape: BoxShape.circle,
             ),
             child: SvgPicture.asset(AssetManager.transaction,
-                color: isDarkMode ? Color(0xff20A0F3) : Color(0xff20A0F3))),
+                color: isDarkMode
+                    ? const Color(0xff20A0F3)
+                    : const Color(0xff20A0F3))),
         SizedBox(
           width: 16.pWidth(context),
         ),
@@ -420,11 +426,15 @@ class InternalTransferDetailsCard extends StatelessWidget {
             height: 36,
             padding: EdgeInsets.symmetric(horizontal: 8.pWidth(context)),
             decoration: BoxDecoration(
-              color: isDarkMode ? Color(0xff073961) : Color(0xffD3ECFD),
+              color: isDarkMode
+                  ? const Color(0xff073961)
+                  : const Color(0xffD3ECFD),
               shape: BoxShape.circle,
             ),
             child: SvgPicture.asset(AssetManager.transaction,
-                color: isDarkMode ? Color(0xff20A0F3) : Color(0xff20A0F3))),
+                color: isDarkMode
+                    ? const Color(0xff20A0F3)
+                    : const Color(0xff20A0F3))),
         SizedBox(
           width: 16.pWidth(context),
         ),

@@ -15,13 +15,9 @@ class StatusTag extends StatelessWidget {
       height: 18.pHeight(context),
       width: 50.pWidth(context),
       padding: EdgeInsets.symmetric(
-        horizontal: 6.pWidth(context),
-        vertical: 2.pHeight(context)
-      ),
+          horizontal: 6.pWidth(context), vertical: 2.pHeight(context)),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: Colors.white
-      ),
+          borderRadius: BorderRadius.circular(12), color: Colors.white),
       child: Center(
         child: Row(
           children: [
@@ -30,18 +26,16 @@ class StatusTag extends StatelessWidget {
               width: 4.pWidth(context),
               // color: color,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(4)),
-                color: color
-              ),
+                  borderRadius: const BorderRadius.all(Radius.circular(4)),
+                  color: color),
             ),
             const Spacer(),
             Text(
               status,
               style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.2),
-                color: isDarkMode ? Colors.white : Colors.black,
-                fontWeight: FontWeight.w300
-              ),
+                  fontSize: McGyver.textSize(context, 1.2),
+                  color: isDarkMode ? Colors.white : Colors.black,
+                  fontWeight: FontWeight.w300),
             )
           ],
         ),

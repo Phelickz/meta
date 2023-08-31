@@ -27,6 +27,8 @@ class MetaTraderRouter extends $MetaTraderRouter {
         AdaptiveRoute(page: PipCalculatorRoute.page),
         AdaptiveRoute(page: MarginCalculatorRoute.page),
         AdaptiveRoute(page: ProfitCalculatorRoute.page),
-        AdaptiveRoute(page: CurrencyConverterRoute.page)
+        AdaptiveRoute(page: CurrencyConverterRoute.page),
+        AdaptiveRoute(page: ManageAccountRoute.page),
+        AdaptiveRoute(page: LoyaltyRewardsRoute.page)
       ];
 }
