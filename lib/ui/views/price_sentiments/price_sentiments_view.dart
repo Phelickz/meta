@@ -1,11 +1,7 @@
-import 'dart:io';
-
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/price_sentiments/price_sentiments_view_model.dart';
-import 'package:meta_trader/ui/widgets/appbar.dart';
 import 'package:meta_trader/ui/widgets/home/price_sentiments.dart';
 import 'package:meta_trader/ui/widgets/price_sentiments/details.dart';
 import 'package:meta_trader/ui/widgets/price_sentiments/search.dart';
