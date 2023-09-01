@@ -100,7 +100,7 @@ class _CustomOverviewTabState extends State<CustomOverviewTab> {
               children: [
                 Icon(
                   CupertinoIcons.arrow_up,
-                  size: 14,
+                  size: 12,
                   color: _selectedTab == index
                       ? isDarkMode
                           ? const Color(0xFFD0D5DD)
