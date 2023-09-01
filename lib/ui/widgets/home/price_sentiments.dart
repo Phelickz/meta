@@ -3,8 +3,11 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 
 class PriceSentiments extends StatelessWidget {
-  const PriceSentiments({super.key, required this.pair});
+  const PriceSentiments(
+      {super.key, required this.pair, this.iconButton, this.big});
   final String pair;
+  final Widget? iconButton;
+  final bool? big;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +46,7 @@ class PriceSentiments extends StatelessWidget {
                 color: Theme.of(context).primaryColor,
               ),
               Container(
-                width: McGyver.rsDoubleW(context, 11),
+                width: McGyver.rsDoubleW(context, big == true ? 15 : 11),
                 height: 10,
                 color: Colors.red,
               ),
@@ -63,26 +66,27 @@ class PriceSentiments extends StatelessWidget {
         const Spacer(
           flex: 1,
         ),
-        IconButton(
-          padding: EdgeInsets.zero,
-          onPressed: () {},
-          icon: Container(
-            width: 21,
-            height: 21,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(
+        iconButton ??
+            IconButton(
+              padding: EdgeInsets.zero,
+              onPressed: () {},
+              icon: Container(
+                width: 21,
+                height: 21,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                      color: isDarkMode ? Colors.white70 : Colors.black45,
+                      width: 2),
+                ),
+                child: Center(
+                    child: Icon(
+                  Icons.arrow_forward_ios_rounded,
+                  size: 10,
                   color: isDarkMode ? Colors.white70 : Colors.black45,
-                  width: 2),
-            ),
-            child: Center(
-                child: Icon(
-              Icons.arrow_forward_ios_rounded,
-              size: 10,
-              color: isDarkMode ? Colors.white70 : Colors.black45,
-            )),
-          ),
-        )
+                )),
+              ),
+            )
       ],
     );
   }

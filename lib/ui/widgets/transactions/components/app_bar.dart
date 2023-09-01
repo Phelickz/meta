@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -14,7 +16,9 @@ AppBar transactionsAppBar(
   var isDarkMode = CustomThemeData.isDarkMode(context);
   return AppBar(
     elevation: 0,
-    backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+    backgroundColor: isDarkMode
+        ? const Color(0xff052844)
+        : Theme.of(context).scaffoldBackgroundColor,
     automaticallyImplyLeading: false,
     leading: IconButton(
         icon: Icon(
@@ -22,7 +26,13 @@ AppBar transactionsAppBar(
           color: isDarkMode ? Colors.white : Colors.black,
         ),
         onPressed: () {
-          model.goBack();
+          if (model.transactionsPageEnum == TransactionsPageEnum.transactions) {
+            model.goBack();
+          }
+          if (model.transactionsPageEnum ==
+              TransactionsPageEnum.transactionDetails) {
+            model.setTransactionsViewEnum = TransactionsPageEnum.transactions;
+          }
         }),
     centerTitle: false,
     title: Text(
@@ -41,11 +51,11 @@ AppBar transactionsAppBar(
                 onTap: () {},
                 child: SvgPicture.asset(
                   AssetManager.filter,
-                  color: Color(0xff98A2B3),
+                  color: const Color(0xff98A2B3),
                 ),
               ),
             )
-          : SizedBox()
+          : const SizedBox()
     ],
   );
 }

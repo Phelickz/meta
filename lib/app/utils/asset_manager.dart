@@ -56,7 +56,10 @@ class AssetManager {
   static const internalTransfer = "$ICONPATH/internaltransfer.svg";
 
   static const add = "$ICONPATH/add-square.svg";
-  // static const filter = "$ICONPATH/setting-4.svg";
+  static const options = "$ICONPATH/options.svg";
+  static const search = "$ICONPATH/search.svg";
+  static const folder = "$ICONPATH/folder.svg";
+
   static const closeSquare = "$ICONPATH/close-square.svg";
   static const infoCircle = "$ICONPATH/info-circle.svg";
 }

@@ -23,7 +23,12 @@ class DepositsTransactionsPage extends StatelessWidget {
               amount: deposits["amount"],
               date: deposits["date"],
               time: deposits["time"],
-              onPressed: () {},
+              onPressed: () {
+                model.setListIndex = index;
+                model.setTransactionsTypeEnum = TransactionsTypeEnum.deposits;
+                model.setTransactionsViewEnum =
+                    TransactionsPageEnum.transactionDetails;
+              },
               status: deposits["status"],
               model: model,
             );

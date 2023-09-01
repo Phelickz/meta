@@ -8,7 +8,6 @@ import 'package:meta_trader/ui/widgets/transactions/transaction_details.dart';
 import 'package:meta_trader/ui/widgets/transactions/transactions.dart';
 
 enum TransactionsTypeEnum {
-  all,
   withdrawals,
   deposits,
   internalTransfer,
@@ -19,11 +18,11 @@ enum TransactionsPageEnum { transactions, filter, transactionDetails }
 enum TransactionStatusEnum { successful, pending, failed }
 
 class TransactionsViewModel extends CustomBaseViewModel {
-  TransactionsTypeEnum _transactionsTypeEnum = TransactionsTypeEnum.all;
+  TransactionsTypeEnum _transactionsTypeEnum = TransactionsTypeEnum.withdrawals;
   TransactionsTypeEnum get transactionsTypeEnum => _transactionsTypeEnum;
 
   TransactionsPageEnum _transactionsPageEnum =
-      TransactionsPageEnum.transactionDetails;
+      TransactionsPageEnum.transactions;
   TransactionsPageEnum get transactionsPageEnum => _transactionsPageEnum;
   bool _isFiltered = false;
   bool get isFiltered => _isFiltered;
@@ -35,18 +34,6 @@ class TransactionsViewModel extends CustomBaseViewModel {
     _listIndex = index;
     rebuildUi();
   }
-
-  Map transactionDetails = {
-    "title": "Transfer to Bank",
-    "amount": "55,000",
-    "sender": "Binance Pay",
-    "receiver": "FcPro",
-    "date": "2.1.2023",
-    "time": "16:23:41",
-    "status": "Successful",
-    "type": "Withdrawal",
-    "transactionId": "232443564642"
-  };
 
   set filteredState(bool value) {
     _isFiltered = !_isFiltered;
@@ -272,15 +259,30 @@ class TransactionsViewModel extends CustomBaseViewModel {
             status: withdrawals[listIndex]["status"],
             receiver: withdrawals[listIndex]["receiver"],
             sender: withdrawals[listIndex]["sender"],
-            transactionId: withdrawals[listIndex]["transaction_id"],
+            transactionId: withdrawals[listIndex]["transactionId"],
             model: this);
 
       case TransactionsTypeEnum.deposits:
-        return TransactionDetailsPage(model: this);
-
+        return DepositDetailsCard(
+            title: deposits[listIndex]["title"],
+            amount: deposits[listIndex]["amount"],
+            date: deposits[listIndex]["date"],
+            time: deposits[listIndex]["time"],
+            status: deposits[listIndex]["status"],
+            receiver: deposits[listIndex]["receiver"],
+            sender: deposits[listIndex]["sender"],
+            transactionId: deposits[listIndex]["transactionId"],
+            model: this);
       case TransactionsTypeEnum.internalTransfer:
-        return TransactionDetailsPage(model: this);
-
+        return InternalTransferDetailsCard(
+            title: internalTransfers[listIndex]["title"],
+            amount: internalTransfers[listIndex]["amount"],
+            date: internalTransfers[listIndex]["date"],
+            time: internalTransfers[listIndex]["time"],
+            status: internalTransfers[listIndex]["status"],
+            sender: internalTransfers[listIndex]["sender"],
+            transactionId: internalTransfers[listIndex]["transactionId"],
+            model: this);
       default:
         return Container();
     }
