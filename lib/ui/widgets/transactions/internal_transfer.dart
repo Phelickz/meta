@@ -23,7 +23,13 @@ class InternalTransferTransactionsPage extends StatelessWidget {
               amount: internalTransfers["amount"],
               date: internalTransfers["date"],
               time: internalTransfers["time"],
-              onPressed: () {},
+              onPressed: () {
+                model.setListIndex = index;
+                model.setTransactionsTypeEnum =
+                    TransactionsTypeEnum.internalTransfer;
+                model.setTransactionsViewEnum =
+                    TransactionsPageEnum.transactionDetails;
+              },
               status: internalTransfers["status"],
               model: model,
             );

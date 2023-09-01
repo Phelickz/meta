@@ -11,7 +11,9 @@ AppBar referralAppBar(
   var isDarkMode = CustomThemeData.isDarkMode(context);
   return AppBar(
     elevation: 0,
-    backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+    backgroundColor: isDarkMode
+        ? const Color(0xff052844)
+        : Theme.of(context).scaffoldBackgroundColor,
     automaticallyImplyLeading: false,
     leading: IconButton(
         icon: Icon(

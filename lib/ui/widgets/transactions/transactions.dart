@@ -5,7 +5,6 @@ import 'package:meta_trader/ui/widgets/transactions/internal_transfer.dart';
 import 'package:meta_trader/ui/widgets/transactions/withdrawal.dart';
 
 import '../../../app/utils/theme.dart';
-import 'all.dart';
 
 class TransactionsPage extends StatelessWidget {
   final TransactionsViewModel model;
@@ -15,7 +14,7 @@ class TransactionsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return DefaultTabController(
-      length: 4,
+      length: 3,
       child: Column(
         children: [
           Container(
@@ -26,7 +25,6 @@ class TransactionsPage extends StatelessWidget {
             child: TabBar(
               // isScrollable: true,
               tabs: const [
-                Tab(text: "All"),
                 Tab(text: "Withdrawal"),
                 Tab(
                   text: "Deposits",
@@ -67,7 +65,6 @@ class TransactionsPage extends StatelessWidget {
           Expanded(
             child: TabBarView(
               children: [
-                AllTransactionsPage(model: model), // First tab content
                 WithdrawalTransactionsPage(model: model), // Second tab content
                 DepositsTransactionsPage(model: model), // Third tab content
                 InternalTransferTransactionsPage(

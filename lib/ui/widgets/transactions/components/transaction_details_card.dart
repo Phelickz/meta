@@ -420,6 +420,8 @@ class InternalTransferDetailsCard extends StatelessWidget {
     var isDarkMode = CustomThemeData.isDarkMode(context);
 
     return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
             width: 36,
@@ -427,14 +429,12 @@ class InternalTransferDetailsCard extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 8.pWidth(context)),
             decoration: BoxDecoration(
               color: isDarkMode
-                  ? const Color(0xff073961)
-                  : const Color(0xffD3ECFD),
+                  ? const Color(0xffBDB4FE)
+                  : const Color(0xffD9D6FE),
               shape: BoxShape.circle,
             ),
-            child: SvgPicture.asset(AssetManager.transaction,
-                color: isDarkMode
-                    ? const Color(0xff20A0F3)
-                    : const Color(0xff20A0F3))),
+            child: SvgPicture.asset(AssetManager.internalTransfer,
+                color: const Color(0xff3E1C96))),
         SizedBox(
           width: 16.pWidth(context),
         ),
