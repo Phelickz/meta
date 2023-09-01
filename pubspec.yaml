@@ -9,6 +9,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+  cupertino_icons: ^1.0.6
+
   # state management
   stacked: ^3.4.1
 
