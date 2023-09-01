@@ -16,6 +16,7 @@ class AdvancedViewTile extends StatelessWidget {
       sellingPriceSecondary,
       low,
       high;
+  final bool isFav;
   const AdvancedViewTile(
       {Key? key,
       required this.time,
@@ -30,6 +31,7 @@ class AdvancedViewTile extends StatelessWidget {
       required this.sellingPriceSecondary,
       required this.askingPips,
       required this.sellingPips,
+      required this.isFav,
       required this.spread})
       : super(key: key);
 
@@ -43,6 +45,7 @@ class AdvancedViewTile extends StatelessWidget {
         children: [
           Container(
               child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               RichText(
                   text: TextSpan(children: [
@@ -121,6 +124,7 @@ class AdvancedViewTile extends StatelessWidget {
               ])),
               Text(
                 "L: $low",
+                textAlign: TextAlign.end,
                 style: CustomThemeData.generateColoredStyle(
                     fontSize: 10, context: context),
               )
@@ -166,6 +170,7 @@ class AdvancedViewTile extends StatelessWidget {
               ])),
               Text(
                 "H: $high",
+                textAlign: TextAlign.end,
                 style: CustomThemeData.generateColoredStyle(
                     fontSize: 10, context: context),
               )
@@ -174,7 +179,13 @@ class AdvancedViewTile extends StatelessWidget {
           SizedBox(
             width: 14.pWidth(context),
           ),
-          Icon(Icons.star)
+          InkWell(
+            onTap: () {},
+            child: Icon(
+              Icons.star,
+              color: isFav ? Colors.yellow : Colors.grey,
+            ),
+          )
         ],
       ),
     );

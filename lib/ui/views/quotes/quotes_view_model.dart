@@ -6,7 +6,6 @@ import 'package:meta_trader/ui/widgets/quotes/simple_view.dart';
 
 import '../../../app/core/custom_base_view_model.dart';
 import '../../widgets/quotes/components/app_bar.dart';
-import '../../widgets/quotes/quotes.dart';
 
 enum QuotesPageEnum { markets, favorites, search, edit, subGroups, details }
 
@@ -25,7 +24,7 @@ class QuotesViewModel extends CustomBaseViewModel {
   MarketViewEnum _marketViewEnum = MarketViewEnum.simpleView;
   MarketViewEnum get marketViewEnum => _marketViewEnum;
 
-  QuotesPageEnum _quotesPageEnum = QuotesPageEnum.edit;
+  QuotesPageEnum _quotesPageEnum = QuotesPageEnum.markets;
   QuotesPageEnum get quotesPageEnum => _quotesPageEnum;
   List<String> availablePairs = [
     "USDCAD",
@@ -38,11 +37,117 @@ class QuotesViewModel extends CustomBaseViewModel {
   ];
   List<String> selectedOptions = [];
 
+  List quoteList = [
+    {
+      "percentageChange": "-20%",
+      "currencyPair": "USDCAD",
+      "spread": "280",
+      "time": "12:13:14",
+      "pairId": "2980",
+      "askingPricePrimary": "63.2",
+      "askingPriceSecondary": "23",
+      "sellingPricePrimary": "63.2",
+      "askingPips": "9",
+      "sellingPips": "3",
+      "sellingPriceSecondary": "23",
+      "low": "63.2018",
+      "high": "11.8018"
+    },
+    {
+      "percentageChange": "-20%",
+      "currencyPair": "USDCAD",
+      "spread": "280",
+      "time": "12:13:14",
+      "pairId": "2980",
+      "askingPricePrimary": "63.2",
+      "askingPriceSecondary": "23",
+      "sellingPricePrimary": "63.2",
+      "askingPips": "9",
+      "sellingPips": "3",
+      "sellingPriceSecondary": "23",
+      "low": "63.2018",
+      "high": "11.8018"
+    },
+    {
+      "percentageChange": "-20%",
+      "currencyPair": "USDCAD",
+      "spread": "280",
+      "time": "12:13:14",
+      "pairId": "2980",
+      "askingPricePrimary": "63.2",
+      "askingPriceSecondary": "23",
+      "sellingPricePrimary": "63.2",
+      "askingPips": "9",
+      "sellingPips": "3",
+      "sellingPriceSecondary": "23",
+      "low": "63.2018",
+      "high": "11.8018"
+    },
+    {
+      "percentageChange": "-20%",
+      "currencyPair": "USDCAD",
+      "spread": "280",
+      "time": "12:13:14",
+      "pairId": "2980",
+      "askingPricePrimary": "63.2",
+      "askingPriceSecondary": "23",
+      "sellingPricePrimary": "63.2",
+      "askingPips": "9",
+      "sellingPips": "3",
+      "sellingPriceSecondary": "23",
+      "low": "63.2018",
+      "high": "11.8018"
+    },
+    {
+      "percentageChange": "-20%",
+      "currencyPair": "USDCAD",
+      "spread": "280",
+      "time": "12:13:14",
+      "pairId": "2980",
+      "askingPricePrimary": "63.2",
+      "askingPriceSecondary": "23",
+      "sellingPricePrimary": "63.2",
+      "askingPips": "9",
+      "sellingPips": "3",
+      "sellingPriceSecondary": "23",
+      "low": "63.2018",
+      "high": "11.8018"
+    },
+    {
+      "percentageChange": "-20%",
+      "currencyPair": "USDCAD",
+      "spread": "280",
+      "time": "12:13:14",
+      "pairId": "2980",
+      "askingPricePrimary": "63.2",
+      "askingPriceSecondary": "23",
+      "sellingPricePrimary": "63.2",
+      "askingPips": "9",
+      "sellingPips": "3",
+      "sellingPriceSecondary": "23",
+      "low": "63.2018",
+      "high": "11.8018"
+    },
+  ];
+  bool _isFav = false;
+  bool get isFav => _isFav;
+  List favQuotes = [];
+
   void togglePair(String option) {
     if (selectedOptions.contains(option)) {
       selectedOptions.remove(option);
     } else {
       selectedOptions.add(option);
+    }
+    rebuildUi();
+  }
+
+  void toggleFavQuote(Map quote) {
+    _isFav = !_isFav;
+    if (favQuotes.contains(quote)) {
+      favQuotes.remove(quote);
+    } else {
+      favQuotes.add(quote);
     }
     rebuildUi();
   }
@@ -60,7 +165,7 @@ class QuotesViewModel extends CustomBaseViewModel {
   Widget returnPage() {
     switch (_quotesPageEnum) {
       case QuotesPageEnum.markets:
-        return QuotesPage(model: this);
+        return AdvancedMarketView(model: this);
       case QuotesPageEnum.edit:
         return EditPage(model: this);
       default:
