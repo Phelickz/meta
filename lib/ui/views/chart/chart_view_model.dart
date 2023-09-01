@@ -23,7 +23,7 @@ class ChartViewModel extends CustomBaseViewModel {
     );
   }
 
-  final tabSelectedNotifier = ValueNotifier(2);
+  final tabSelectedNotifier = ValueNotifier(0);
   final overviewTabSelectedNotifier = ValueNotifier(0);
 
   final specificationStatus = ValueNotifier(true);

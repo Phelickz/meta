@@ -48,7 +48,7 @@ class ChartPage extends StatelessWidget {
           ],
         ),
         Positioned(
-          top: McGyver.rsDoubleH(context, 73.2),
+          bottom: 5,
           left: 0,
           right: 0,
           child: Container(
@@ -137,7 +137,7 @@ class ChartPage extends StatelessWidget {
                 Positioned(
                   left: 0,
                   right: 0,
-                  top: 28,
+                  top: McGyver.rsDoubleH(context, 3.2),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
