@@ -100,7 +100,7 @@ class ChartPage extends StatelessWidget {
                             width: McGyver.rsDoubleW(context, 42),
                             context: context,
                             onTap: () {},
-                            text: "Sell at 1.234564",
+                            text: "Buy at 1.234564",
                             color: isDarkMode
                                 ? const Color(0xFF0B7FCB)
                                 : const Color(0xFF0C95EF),
