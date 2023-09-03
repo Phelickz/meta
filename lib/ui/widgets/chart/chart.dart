@@ -52,7 +52,8 @@ class ChartPage extends StatelessWidget {
           left: 0,
           right: 0,
           child: Container(
-            color: Theme.of(context).scaffoldBackgroundColor,
+            color:
+                isDarkMode ? const Color(0xFF0C2031) : const Color(0xFFFAFDFF),
             child: Stack(
               children: [
                 Container(

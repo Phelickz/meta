@@ -5,6 +5,7 @@ import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/chart/chart_view_model.dart';
 import 'package:meta_trader/ui/widgets/chart/components/trading_signal_tile.dart';
+import 'package:meta_trader/ui/widgets/chart/components/overview_chart.dart';
 
 import 'custom_overview_tab.dart';
 
@@ -51,30 +52,20 @@ class OverviewComponent extends StatelessWidget {
                       child: IndexedStack(
                         index: index,
                         children: [
-                          Container(
-                            child: const Center(
-                              child: Text("Hour Chart"),
-                            ),
+                          OverviewChart(
+                            data: viewModel.hourOverviewData,
                           ),
-                          Container(
-                            child: const Center(
-                              child: Text("Today Chart"),
-                            ),
+                          OverviewChart(
+                            data: viewModel.todayOverviewData,
                           ),
-                          Container(
-                            child: const Center(
-                              child: Text("Week Chart"),
-                            ),
+                          OverviewChart(
+                            data: viewModel.weekOverviewData,
                           ),
-                          Container(
-                            child: const Center(
-                              child: Text("Month Chart"),
-                            ),
+                          OverviewChart(
+                            data: viewModel.monthOverviewData,
                           ),
-                          Container(
-                            child: const Center(
-                              child: Text("Year Chart"),
-                            ),
+                          OverviewChart(
+                            data: viewModel.yearOverviewData,
                           ),
                         ],
                       ),
