@@ -15,8 +15,11 @@ class AdvancedViewTile extends StatelessWidget {
       sellingPips,
       sellingPriceSecondary,
       low,
+      trend,
       high;
   final bool isFav;
+  final VoidCallback? onPressed;
+
   const AdvancedViewTile(
       {Key? key,
       required this.time,
@@ -32,7 +35,9 @@ class AdvancedViewTile extends StatelessWidget {
       required this.askingPips,
       required this.sellingPips,
       required this.isFav,
-      required this.spread})
+      required this.spread,
+      required this.trend,
+      this.onPressed})
       : super(key: key);
 
   @override
@@ -54,7 +59,9 @@ class AdvancedViewTile extends StatelessWidget {
                     style: CustomThemeData.generateColoredStyle(
                         fontSize: 8, context: context)),
                 TextSpan(
-                    text: percentageChange,
+                    text: trend == "positive"
+                        ? "$percentageChange %"
+                        : "-$percentageChange %",
                     style: CustomThemeData.generateColoredStyle(
                         fontSize: 8,
                         darkTextColor: Color(0xffF97066),
@@ -180,7 +187,7 @@ class AdvancedViewTile extends StatelessWidget {
             width: 14.pWidth(context),
           ),
           InkWell(
-            onTap: () {},
+            onTap: onPressed,
             child: Icon(
               Icons.star,
               color: isFav ? Colors.yellow : Colors.grey,

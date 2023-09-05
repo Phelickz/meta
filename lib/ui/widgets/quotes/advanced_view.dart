@@ -30,6 +30,7 @@ class AdvancedMarketView extends StatelessWidget {
               sellingPriceSecondary: quote["sellingPriceSecondary"],
               askingPips: quote["askingPips"],
               sellingPips: quote["sellingPips"],
+              trend: quote["trend"],
               spread: quote["spread"],
               isFav: model.isFav,
             );

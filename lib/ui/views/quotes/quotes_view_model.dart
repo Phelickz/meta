@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/ui/widgets/quotes/advanced_view.dart';
+import 'package:meta_trader/ui/widgets/quotes/components/quotes_bottom_sheet.dart';
 import 'package:meta_trader/ui/widgets/quotes/edit.dart';
 import 'package:meta_trader/ui/widgets/quotes/modern_view.dart';
+import 'package:meta_trader/ui/widgets/quotes/search.dart';
+import 'package:meta_trader/ui/widgets/quotes/search_quote_details.dart';
+import 'package:meta_trader/ui/widgets/quotes/search_subgroup.dart';
 import 'package:meta_trader/ui/widgets/quotes/simple_view.dart';
 
 import '../../../app/core/custom_base_view_model.dart';
@@ -39,8 +44,8 @@ class QuotesViewModel extends CustomBaseViewModel {
 
   List quoteList = [
     {
-      "percentageChange": "-20%",
-      "currencyPair": "USDCAD",
+      "percentageChange": "10",
+      "currencyPair": "GBPUSG",
       "spread": "280",
       "time": "12:13:14",
       "pairId": "2980",
@@ -51,11 +56,14 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPips": "3",
       "sellingPriceSecondary": "23",
       "low": "63.2018",
-      "high": "11.8018"
+      "high": "11.8018",
+      "trend": "positive",
+      "currencyPairFull": "Great Britain Pound vs US Dollar",
+      "currencyIcon": AssetManager.gbpUSD
     },
     {
-      "percentageChange": "-20%",
-      "currencyPair": "USDCAD",
+      "percentageChange": "50",
+      "currencyPair": "BTC",
       "spread": "280",
       "time": "12:13:14",
       "pairId": "2980",
@@ -66,10 +74,13 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPips": "3",
       "sellingPriceSecondary": "23",
       "low": "63.2018",
-      "high": "11.8018"
+      "high": "11.8018",
+      "trend": "positive",
+      "currencyPairFull": "Bitcoin",
+      "currencyIcon": AssetManager.btc
     },
     {
-      "percentageChange": "-20%",
+      "percentageChange": "20",
       "currencyPair": "USDCAD",
       "spread": "280",
       "time": "12:13:14",
@@ -81,10 +92,13 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPips": "3",
       "sellingPriceSecondary": "23",
       "low": "63.2018",
-      "high": "11.8018"
+      "high": "11.8018",
+      "trend": "negative",
+      "currencyPairFull": "US Dollar vs Canagian Dollor",
+      "currencyIcon": AssetManager.gbpUSD
     },
     {
-      "percentageChange": "-20%",
+      "percentageChange": "20",
       "currencyPair": "USDCAD",
       "spread": "280",
       "time": "12:13:14",
@@ -96,10 +110,13 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPips": "3",
       "sellingPriceSecondary": "23",
       "low": "63.2018",
-      "high": "11.8018"
+      "high": "11.8018",
+      "trend": "negative",
+      "currencyPairFull": "Great Britain Pound vs US Dollar",
+      "currencyIcon": AssetManager.btc
     },
     {
-      "percentageChange": "-20%",
+      "percentageChange": "20",
       "currencyPair": "USDCAD",
       "spread": "280",
       "time": "12:13:14",
@@ -111,10 +128,13 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPips": "3",
       "sellingPriceSecondary": "23",
       "low": "63.2018",
-      "high": "11.8018"
+      "high": "11.8018",
+      "trend": "negative",
+      "currencyPairFull": "Great Britain Pound vs US Dollar",
+      "currencyIcon": AssetManager.btc
     },
     {
-      "percentageChange": "-20%",
+      "percentageChange": "20",
       "currencyPair": "USDCAD",
       "spread": "280",
       "time": "12:13:14",
@@ -126,12 +146,82 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPips": "3",
       "sellingPriceSecondary": "23",
       "low": "63.2018",
-      "high": "11.8018"
+      "high": "11.8018",
+      "trend": "negative",
+      "currencyPairFull": "Great Britain Pound vs US Dollar",
+      "currencyIcon": AssetManager.btc
     },
   ];
   bool _isFav = false;
   bool get isFav => _isFav;
   List favQuotes = [];
+
+  List sampleQuoteDetails = [
+    {
+      "title": "ISIN",
+      "value": "21212122121",
+    },
+    {
+      "title": "Sector",
+      "value": "21212122121",
+    },
+    {
+      "title": "Industry",
+      "value": "21212122121",
+    },
+    {
+      "title": "Country",
+      "value": "21212122121",
+    },
+    {
+      "title": "Digits",
+      "value": "21212122121",
+    },
+    {
+      "title": "Contract Size",
+      "value": "21212122121",
+    },
+    {
+      "title": "Spread",
+      "value": "21212122121",
+    },
+    {
+      "title": "Stop Level",
+      "value": "21212122121",
+    },
+    {
+      "title": "Margin currency",
+      "value": "21212122121",
+    },
+    {
+      "title": "Profit currency",
+      "value": "21212122121",
+    },
+    {
+      "title": "Tick size",
+      "value": "21212122121",
+    },
+    {
+      "title": "Tick value",
+      "value": "21212122121",
+    },
+  ];
+
+  List symbolGroups = [
+    {"title": "Forex", "subtitle": "inst\\forex"},
+    {"title": "Metals", "subtitle": "inst\\forx"},
+    {"title": "Comms", "subtitle": "inst\\comms"},
+    {"title": "Exotic", "subtitle": "inst\\exotic"},
+    {"title": "Minors", "subtitle": "inst\\minors"},
+  ];
+
+  List symbolSubgroup = [
+    {"title": "WTIs", "subtitle": "inst\\forex"},
+    {"title": "BRENT", "subtitle": "inst\\forx"},
+    {"title": "NGS", "subtitle": "inst\\comms"},
+    {"title": "CORNS", "subtitle": "inst\\exotic"},
+    {"title": "WHEAT", "subtitle": "inst\\minors"},
+  ];
 
   void togglePair(String option) {
     if (selectedOptions.contains(option)) {
@@ -162,12 +252,29 @@ class QuotesViewModel extends CustomBaseViewModel {
     rebuildUi();
   }
 
+  void openOptionsBottomSheet(
+    BuildContext context,
+  ) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return QuotesBottomSheet(model: this);
+      },
+    );
+  }
+
   Widget returnPage() {
     switch (_quotesPageEnum) {
       case QuotesPageEnum.markets:
-        return AdvancedMarketView(model: this);
+        return returnMarketView();
       case QuotesPageEnum.edit:
         return EditPage(model: this);
+      case QuotesPageEnum.search:
+        return SearchPage(model: this);
+      case QuotesPageEnum.details:
+        return SearchQuoteDetailsPage(model: this);
+      case QuotesPageEnum.subGroups:
+        return SearchSubgroupPage(model: this);
       default:
         return Container();
     }
