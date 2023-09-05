@@ -42,7 +42,7 @@ class _CustomChartTabState extends State<CustomChartTab> {
           vertical: McGyver.rsDoubleH(context, 0.7)),
       width: MediaQuery.sizeOf(context).width * 0.45,
       decoration: BoxDecoration(
-        color: isDarkMode ? const Color(0xff073961) : const Color(0xffD3ECFD),
+        color: isDarkMode ? const Color(0xff052844) : const Color(0xffD3ECFD),
         borderRadius: BorderRadius.all(
           Radius.circular(
             McGyver.rsDoubleW(context, 3),
