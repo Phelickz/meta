@@ -37,7 +37,7 @@ class ChartPage extends StatelessWidget {
                   child: IndexedStack(
                     index: index,
                     children: [
-                      const ChartComponent(),
+                      ChartComponent(viewModel: viewModel),
                       OverviewComponent(viewModel: viewModel),
                       SpecificationComponent(viewModel: viewModel),
                     ],
