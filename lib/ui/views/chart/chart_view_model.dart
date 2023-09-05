@@ -40,6 +40,7 @@ class ChartViewModel extends CustomBaseViewModel {
 
   final tabSelectedNotifier = ValueNotifier(0);
   final overviewTabSelectedNotifier = ValueNotifier(0);
+  final chartTabSelectedNotifier = ValueNotifier(0);
 
   final specificationStatus = ValueNotifier(true);
 
@@ -63,4 +64,35 @@ class ChartViewModel extends CustomBaseViewModel {
 
     return data.reversed.toList();
   }
+
+  bool isCandle = false;
+  void toggleCandleView() {
+    isCandle = !isCandle;
+    notifyListeners();
+  }
+
+  List<CandleData> getCandleData() {
+    return [
+      CandleData('3 Sept 20:14', 50000, 70000, 60000, 55000),
+      CandleData('3 Sept 20:24', 60000, 80000, 70000, 65000),
+      CandleData('3 Sept 21:37', 60000, 80000, 70000, 65000),
+      CandleData('3 Sept 21:50', 70000, 90000, 85000, 70000),
+      CandleData('3 Sept 21:58', 70000, 80000, 65000, 40000),
+      CandleData('3 Sept 00:34', 70000, 90000, 75000, 60000),
+      CandleData('3 Sept 00:38', 80000, 90000, 80000, 60000),
+      CandleData('3 Sept 00:39', 40000, 60000, 50000, 45000),
+      CandleData('3 Sept 01:00', 40000, 60000, 50000, 45000),
+      // Add more data points as needed
+    ];
+  }
+}
+
+class CandleData {
+  final String date;
+  final double low;
+  final double high;
+  final double open;
+  final double close;
+
+  CandleData(this.date, this.low, this.high, this.open, this.close);
 }
