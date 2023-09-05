@@ -7,6 +7,14 @@ enum SocialTradingDasboardEnum { masterTraders, myTrades }
 
 enum MasterTraderOverviewEnum { overview, tradingHistory }
 
+enum SocialTradingOptionMenuEnum {
+  main,
+  wallet,
+  notification,
+  support,
+  about,
+}
+
 class SocialTradingViewModel extends CustomBaseViewModel {
   SocialTradingDasboardEnum _socialTradingDasboardEnum =
       SocialTradingDasboardEnum.masterTraders;
