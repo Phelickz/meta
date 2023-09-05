@@ -19,23 +19,23 @@ class MetaTraderApp extends StatelessWidget {
       darkTheme: CustomThemeData.darkTheme,
       lightTheme: CustomThemeData.lightTheme,
       builder: (context, regularTheme, darkTheme, themeMode) {
-        // return MaterialApp.router(
-        //   title: "Meta Trader",
-        //   debugShowCheckedModeBanner: false,
-        //   routeInformationParser: _routerService.router.defaultRouteParser(),
-        //   routerDelegate: _routerService.router.delegate(),
-        //   theme: regularTheme,
-        //   themeMode: themeMode,
-        //   // theme: ThemeData(brightness: Brightness.light, fontFamily: 'Gilroy'),
-        //   darkTheme: darkTheme,
-        // );
-        return MaterialApp(
+        return MaterialApp.router(
+          title: "Meta Trader",
           debugShowCheckedModeBanner: false,
+          routeInformationParser: _routerService.router.defaultRouteParser(),
+          routerDelegate: _routerService.router.delegate(),
           theme: regularTheme,
           themeMode: themeMode,
+          // theme: ThemeData(brightness: Brightness.light, fontFamily: 'Gilroy'),
           darkTheme: darkTheme,
-          home: const QuotesView(),
         );
+        // return MaterialApp(
+        //   debugShowCheckedModeBanner: false,
+        //   theme: regularTheme,
+        //   themeMode: themeMode,
+        //   darkTheme: darkTheme,
+        //   home: const QuotesView(),
+        // );
       },
     );
   }

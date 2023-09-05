@@ -19,7 +19,8 @@ class IdentityVerificationLandingPage extends StatelessWidget {
           horizontal: McGyver.rsDoubleW(context, 5),
         ),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             verticalSpaceMedium(context),
             SvgPicture.asset(
@@ -27,14 +28,17 @@ class IdentityVerificationLandingPage extends StatelessWidget {
               height: McGyver.rsDoubleH(context, 50),
               width: McGyver.rsDoubleH(context, 50),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30.0),
-              child: Text(
-                'Verify Your Identity',
-                style: CustomThemeData.generateStyle(
-                  fontSize: McGyver.textSize(context, 2.4),
-                  fontWeight: FontWeight.bold,
-                  color: isDarkMode ? Colors.white : Colors.black87,
+            Align(
+              alignment: Alignment.bottomLeft,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                child: Text(
+                  'Verify Your Identity',
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 2.4),
+                    fontWeight: FontWeight.bold,
+                    color: isDarkMode ? Colors.white : Colors.black87,
+                  ),
                 ),
               ),
             ),
@@ -42,10 +46,93 @@ class IdentityVerificationLandingPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30.0),
               child: Text(
-                'To successfully verify your identity, we accept either a snapshot of your: \n     * Drivers license\n     * International Passport\n     *National ID card\nIt takes 8-24 hrs for your ID to be verified.',
+                'To successfully verify your identity, we accept either a snapshot of your:',
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
                   color: isDarkMode ? Colors.white70 : Colors.black54,
+                ),
+              ),
+            ),
+            Row(
+              // mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                horizontalSpaceMedium(context),
+                // horizontalSpaceSmall(context),
+                Container(
+                  height: 5,
+                  width: 5,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: isDarkMode ? Colors.white60 : Colors.black54,
+                  ),
+                ),
+                horizontalSpaceXXSmall(context),
+                Text(
+                  'Driver\'s license',
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 1.6),
+                    color: isDarkMode ? Colors.white60 : Colors.black54,
+                  ),
+                )
+              ],
+            ),
+            Row(
+              // mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                horizontalSpaceMedium(context),
+                // horizontalSpaceSmall(context),
+                Container(
+                  height: 5,
+                  width: 5,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: isDarkMode ? Colors.white60 : Colors.black54,
+                  ),
+                ),
+                horizontalSpaceXXSmall(context),
+                Text(
+                  'International Passport',
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 1.6),
+                    color: isDarkMode ? Colors.white60 : Colors.black54,
+                  ),
+                )
+              ],
+            ),
+            Row(
+              // mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                horizontalSpaceMedium(context),
+                // horizontalSpaceSmall(context),
+                Container(
+                  height: 5,
+                  width: 5,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: isDarkMode ? Colors.white60 : Colors.black54,
+                  ),
+                ),
+                horizontalSpaceXXSmall(context),
+                Text(
+                  'National ID card',
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 1.6),
+                    color: isDarkMode ? Colors.white60 : Colors.black54,
+                  ),
+                )
+              ],
+            ),
+            Align(
+              alignment: Alignment.bottomLeft,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                child: Text(
+                  'It takes 8-24 hrs for your ID to be verified.',
+                  textAlign: TextAlign.left,
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 1.6),
+                    color: isDarkMode ? Colors.white70 : Colors.black54,
+                  ),
                 ),
               ),
             ),

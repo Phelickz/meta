@@ -26,7 +26,7 @@ class QuotesViewModel extends CustomBaseViewModel {
   }
 
   Future<void> init() async {}
-  MarketViewEnum _marketViewEnum = MarketViewEnum.simpleView;
+  MarketViewEnum _marketViewEnum = MarketViewEnum.advancedView;
   MarketViewEnum get marketViewEnum => _marketViewEnum;
 
   QuotesPageEnum _quotesPageEnum = QuotesPageEnum.markets;

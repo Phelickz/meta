@@ -24,6 +24,7 @@ class VerifyLandingPage extends StatelessWidget {
             verticalSpaceMedium(context),
             Text(
               "Let's Start Your Verification Process",
+              // textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2.5),
                 fontWeight: FontWeight.bold,
@@ -40,8 +41,77 @@ class VerifyLandingPage extends StatelessWidget {
             vListTile(
                 context,
                 'Identity Verification',
-                'To help protect you from fraud and to comply with federal regulations, we need some information. It can be either a snapshot of your: \n      * Drivers license \n      * International Passport \n      * National ID card',
+                'To help protect you from fraud and to comply with federal regulations, we need some information. It can be either a snapshot of your:',
                 2),
+            Row(
+              // mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                horizontalSpaceMedium(context),
+                horizontalSpaceSmall(context),
+                Container(
+                  height: 5,
+                  width: 5,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: isDarkMode ? Colors.white60 : Colors.black54,
+                  ),
+                ),
+                horizontalSpaceXXSmall(context),
+                Text(
+                  'Driver\'s license',
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 1.6),
+                    color: isDarkMode ? Colors.white60 : Colors.black54,
+                  ),
+                )
+              ],
+            ),
+            Row(
+              // mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                horizontalSpaceMedium(context),
+                horizontalSpaceSmall(context),
+                Container(
+                  height: 5,
+                  width: 5,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: isDarkMode ? Colors.white60 : Colors.black54,
+                  ),
+                ),
+                horizontalSpaceXXSmall(context),
+                Text(
+                  'International Passport',
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 1.6),
+                    color: isDarkMode ? Colors.white60 : Colors.black54,
+                  ),
+                )
+              ],
+            ),
+            Row(
+              // mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                horizontalSpaceMedium(context),
+                horizontalSpaceSmall(context),
+                Container(
+                  height: 5,
+                  width: 5,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: isDarkMode ? Colors.white60 : Colors.black54,
+                  ),
+                ),
+                horizontalSpaceXXSmall(context),
+                Text(
+                  'National ID card',
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 1.6),
+                    color: isDarkMode ? Colors.white60 : Colors.black54,
+                  ),
+                )
+              ],
+            ),
             verticalSpaceMedium(context),
             verticalSpaceSmall(context),
             CustomButtons.generalButton(

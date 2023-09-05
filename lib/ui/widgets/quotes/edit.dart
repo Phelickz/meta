@@ -48,22 +48,31 @@ class EditPage extends StatelessWidget {
               child: ListView.builder(
                   itemCount: model.availablePairs.length,
                   itemBuilder: (context, index) {
-                    return CheckboxListTile(
-                      contentPadding: EdgeInsets.zero,
-                      controlAffinity: ListTileControlAffinity
-                          .leading, // Checkbox on the left
-                      title: Text(
-                        model.availablePairs[index],
-                        style: CustomThemeData.generateColoredStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            context: context),
+                    return Theme(
+                      data: ThemeData(
+                        unselectedWidgetColor:
+                            isDarkMode ? Colors.white54 : Colors.black,
                       ),
-                      value: model.selectedOptions
-                          .contains(model.availablePairs[index]),
-                      onChanged: (value) =>
-                          model.togglePair(model.availablePairs[index]),
-                      secondary: Icon(Icons.menu), // Trailing icon
+                      child: CheckboxListTile(
+                        contentPadding: EdgeInsets.zero,
+                        controlAffinity: ListTileControlAffinity
+                            .leading, // Checkbox on the left
+                        title: Text(
+                          model.availablePairs[index],
+                          style: CustomThemeData.generateColoredStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              context: context),
+                        ),
+                        value: model.selectedOptions
+                            .contains(model.availablePairs[index]),
+                        onChanged: (value) =>
+                            model.togglePair(model.availablePairs[index]),
+                        secondary: Icon(
+                          Icons.menu,
+                          color: isDarkMode ? Colors.white54 : Colors.black,
+                        ), // Trailing icon
+                      ),
                     );
                   }),
             ),

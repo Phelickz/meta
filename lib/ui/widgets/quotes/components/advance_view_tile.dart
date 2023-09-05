@@ -1,4 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/responsiveness/res.dart';
+import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 
@@ -48,88 +52,113 @@ class AdvancedViewTile extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 12.pHeight(context)),
       child: Row(
         children: [
-          Container(
-              child: Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               RichText(
-                  text: TextSpan(children: [
-                TextSpan(
-                    text: "-$pairId ",
-                    style: CustomThemeData.generateColoredStyle(
-                        fontSize: 8, context: context)),
-                TextSpan(
-                    text: trend == "positive"
-                        ? "$percentageChange %"
-                        : "-$percentageChange %",
-                    style: CustomThemeData.generateColoredStyle(
-                        fontSize: 8,
-                        darkTextColor: Color(0xffF97066),
-                        lightTextColor: Color(0xffF04438),
-                        context: context))
-              ])),
-              Text(currencyPair,
-                  style: CustomThemeData.generateColoredStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      context: context)),
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: "-$pairId ",
+                      style: CustomThemeData.generateColoredStyle(
+                        fontSize: 10,
+                        context: context,
+                      ),
+                    ),
+                    TextSpan(
+                      text: trend == "positive"
+                          ? "$percentageChange %"
+                          : "-$percentageChange %",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10,
+                          darkTextColor: const Color(0xffF97066),
+                          lightTextColor: const Color(0xffF04438),
+                          context: context),
+                    )
+                  ],
+                ),
+              ),
+              verticalSpaceXXSmall(context),
+              Text(
+                currencyPair,
+                style: CustomThemeData.generateColoredStyle(
+                    fontSize: McGyver.textSize(context, 2.2),
+                    fontWeight: FontWeight.bold,
+                    context: context),
+              ),
+              verticalSpaceXXSmall(context),
               RichText(
-                  text: TextSpan(children: [
-                TextSpan(
-                    text: "$time | ",
-                    style: CustomThemeData.generateColoredStyle(
-                        fontSize: 8, context: context)),
-                TextSpan(
-                    text: "Spread: ",
-                    style: CustomThemeData.generateColoredStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 8,
-                        context: context)),
-                TextSpan(text: spread)
-              ])),
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: "$time | ",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: 10, context: context),
+                    ),
+                    TextSpan(
+                      text: "Spread: ",
+                      style: CustomThemeData.generateColoredStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 10,
+                          context: context),
+                    ),
+                    TextSpan(
+                      text: spread.isEmpty ? '280' : spread,
+                      style: CustomThemeData.generateColoredStyle(
+                          fontWeight: FontWeight.normal,
+                          fontSize: 10,
+                          context: context),
+                    )
+                  ],
+                ),
+              ),
             ],
-          )),
-          SizedBox(
-            width: 65.pWidth(context),
           ),
-          Container(
-              child: Column(
+          const Spacer(),
+          Column(
             children: [
               RichText(
-                  text: TextSpan(children: [
-                TextSpan(
-                    text: askingPricePrimary,
-                    style: CustomThemeData.generateColoredStyle(
-                        fontSize: 16,
-                        darkTextColor: Color(0xff77C5F8),
-                        lightTextColor: Color(0xff20A0F3),
-                        context: context)),
-                TextSpan(
-                    text: askingPriceSecondary,
-                    style: CustomThemeData.generateColoredStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        darkTextColor: Color(0xff77C5F8),
-                        lightTextColor: Color(0xff20A0F3),
-                        context: context),
-                    children: [
-                      WidgetSpan(
-                          child: Text(
-                        askingPips,
-                        style: TextStyle(
-                          fontSize: 10,
-                          color: isDarkMode
-                              ? Color(0xff77C5F8)
-                              : Color(
-                                  0xff20A0F3), // Adjust the font size for superscript
-                          textBaseline: TextBaseline
-                              .alphabetic, // Use alphabetic baseline for superscript
-                          fontWeight: FontWeight
-                              .normal, // You can adjust this as needed
-                        ),
-                      )),
-                    ])
-              ])),
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: askingPricePrimary,
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: McGyver.textSize(context, 2),
+                          darkTextColor: const Color(0xff77C5F8),
+                          lightTextColor: const Color(0xff20A0F3),
+                          context: context),
+                    ),
+                    TextSpan(
+                      text: askingPriceSecondary +
+                          '\u2079', //  https://stackoverflow.com/a/54255383
+                      style: CustomThemeData.generateColoredStyle(
+                          fontSize: McGyver.textSize(context, 2.7),
+                          fontWeight: FontWeight.bold,
+                          darkTextColor: const Color(0xff77C5F8),
+                          lightTextColor: const Color(0xff20A0F3),
+                          context: context),
+                      children: const [
+                        // TextSpan(
+                        //   text: '8',
+                        //   style: TextStyle(
+                        //     fontSize: 10,
+                        //     fontFeatures: [FontFeature.subscripts()],
+                        //     color: isDarkMode
+                        //         ? const Color(0xff77C5F8)
+                        //         : const Color(
+                        //             0xff20A0F3,
+                        //           ), // Adjust the font size for superscript
+                        //     textBaseline: TextBaseline
+                        //         .alphabetic, // Use alphabetic baseline for superscript
+                        //     fontWeight: FontWeight
+                        //         .normal, // You can adjust this as needed
+                        //   ),
+                        // )
+                      ],
+                    )
+                  ],
+                ),
+              ),
               Text(
                 "L: $low",
                 textAlign: TextAlign.end,
@@ -137,46 +166,50 @@ class AdvancedViewTile extends StatelessWidget {
                     fontSize: 10, context: context),
               )
             ],
-          )),
+          ),
           SizedBox(width: 5.pWidth(context)),
-          Container(
-              child: Column(
+          Column(
             children: [
               RichText(
-                  text: TextSpan(children: [
-                TextSpan(
-                    text: sellingPricePrimary,
-                    style: CustomThemeData.generateColoredStyle(
-                        fontSize: 16,
-                        darkTextColor: Color(0xffF97066),
-                        lightTextColor: Color(0xffF04438),
-                        context: context)),
-                TextSpan(
-                    text: sellingPriceSecondary,
-                    style: CustomThemeData.generateColoredStyle(
-                        fontSize: 20,
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                        text: sellingPricePrimary,
+                        style: CustomThemeData.generateColoredStyle(
+                            fontSize: McGyver.textSize(context, 2),
+                            darkTextColor: const Color(0xffF97066),
+                            lightTextColor: const Color(0xffF04438),
+                            context: context)),
+                    TextSpan(
+                      text: sellingPriceSecondary + '\u00B3',
+                      style: CustomThemeData.generateColoredStyle(
+                        fontSize: McGyver.textSize(context, 2.7),
                         fontWeight: FontWeight.bold,
-                        darkTextColor: Color(0xffF97066),
-                        lightTextColor: Color(0xffF04438),
-                        context: context),
-                    children: [
-                      WidgetSpan(
-                          child: Text(
-                        sellingPips,
-                        style: TextStyle(
-                          fontSize: 10,
-                          color: isDarkMode
-                              ? Color(0xffF97066)
-                              : Color(
-                                  0xffF04438), // Adjust the font size for superscript
-                          textBaseline: TextBaseline
-                              .alphabetic, // Use alphabetic baseline for superscript
-                          fontWeight: FontWeight
-                              .normal, // You can adjust this as needed
-                        ),
-                      )),
-                    ])
-              ])),
+                        darkTextColor: const Color(0xffF97066),
+                        lightTextColor: const Color(0xffF04438),
+                        context: context,
+                      ),
+                      children: const [
+                        // WidgetSpan(
+                        //     child: Text(
+                        //   sellingPips,
+                        //   style: TextStyle(
+                        //     fontSize: 10,
+                        //     color: isDarkMode
+                        //         ? const Color(0xffF97066)
+                        //         : const Color(
+                        //             0xffF04438), // Adjust the font size for superscript
+                        //     textBaseline: TextBaseline
+                        //         .alphabetic, // Use alphabetic baseline for superscript
+                        //     fontWeight: FontWeight
+                        //         .normal, // You can adjust this as needed
+                        //   ),
+                        // )),
+                      ],
+                    )
+                  ],
+                ),
+              ),
               Text(
                 "H: $high",
                 textAlign: TextAlign.end,
@@ -184,7 +217,7 @@ class AdvancedViewTile extends StatelessWidget {
                     fontSize: 10, context: context),
               )
             ],
-          )),
+          ),
           SizedBox(
             width: 14.pWidth(context),
           ),

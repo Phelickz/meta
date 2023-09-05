@@ -13,6 +13,7 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
   var isDarkMode = CustomThemeData.isDarkMode(context);
   return AppBar(
     elevation: 0,
+    toolbarHeight: 70,
     backgroundColor: isDarkMode
         ? const Color(0xff052844)
         : Theme.of(context).scaffoldBackgroundColor,
@@ -20,7 +21,7 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
     leading: QuotesPopUpMenu(
       model: model,
     ),
-    centerTitle: false,
+    centerTitle: true,
     title: model.quotesPageEnum == QuotesPageEnum.search ||
             model.quotesPageEnum == QuotesPageEnum.details
         ? Column(
@@ -44,77 +45,89 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
             ],
           )
         : Container(
-            width: 160.pWidth(context),
-            padding: EdgeInsets.symmetric(
-                horizontal: 8.pWidth(context), vertical: 8.pHeight(context)),
+            width: 160,
+            height: 46,
             decoration: BoxDecoration(
-                color: Color(0xff1D2939),
-                borderRadius: BorderRadius.circular(16)),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                InkWell(
-                  onTap: () {
-                    model.setQuotesPageEnum = QuotesPageEnum.markets;
-                  },
-                  child: Container(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 8.pWidth(context),
-                        vertical: 2.pHeight(context)),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color:
-                            (model.quotesPageEnum == QuotesPageEnum.markets ||
-                                    model.quotesPageEnum == QuotesPageEnum.edit)
-                                ? Color(0xff47B0F5)
-                                : null),
+              color: const Color(0xff1D2939),
+              borderRadius: BorderRadius.circular(60),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(6.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(
+                    style: model.quotesPageEnum == QuotesPageEnum.markets
+                        ? ElevatedButton.styleFrom(
+                            backgroundColor: Theme.of(context).primaryColor,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                          )
+                        : null,
+                    onPressed: () {
+                      model.setQuotesPageEnum = QuotesPageEnum.markets;
+                    },
                     child: Text(
-                      "Markets",
-                      style: CustomThemeData.generateColoredStyle(
-                          darkTextColor:
-                              (model.quotesPageEnum == QuotesPageEnum.markets)
-                                  ? Color(0xff101828)
-                                  : Color(0xffE4E7EC),
-                          lightTextColor:
-                              (model.quotesPageEnum == QuotesPageEnum.markets)
-                                  ? Color(0xffFCFCFD)
-                                  : Color(0xffE4E7EC),
-                          fontSize: 12,
-                          context: context),
+                      'Markets',
+                      style: CustomThemeData.generateStyle(
+                        fontSize: 13,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
-                ),
-                InkWell(
-                  onTap: () {
-                    model.setQuotesPageEnum = QuotesPageEnum.favorites;
-                  },
-                  child: Container(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 8.pWidth(context),
-                        vertical: 2.pHeight(context)),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color:
-                            (model.quotesPageEnum == QuotesPageEnum.favorites)
-                                ? Color(0xff47B0F5)
-                                : null),
+                  TextButton(
+                    style: model.quotesPageEnum == QuotesPageEnum.favorites
+                        ? ElevatedButton.styleFrom(
+                            backgroundColor: Theme.of(context).primaryColor,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                          )
+                        : null,
+                    onPressed: () {
+                      model.setQuotesPageEnum = QuotesPageEnum.favorites;
+                    },
                     child: Text(
-                      "Favorites",
-                      style: CustomThemeData.generateColoredStyle(
-                          darkTextColor:
-                              (model.quotesPageEnum == QuotesPageEnum.favorites)
-                                  ? Color(0xff101828)
-                                  : Color(0xffE4E7EC),
-                          lightTextColor:
-                              (model.quotesPageEnum == QuotesPageEnum.favorites)
-                                  ? Color(0xffFCFCFD)
-                                  : Color(0xffE4E7EC),
-                          fontSize: 12,
-                          context: context),
+                      'Favorites',
+                      style: CustomThemeData.generateStyle(
+                        fontSize: 13,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
-                )
-              ],
+                  // InkWell(
+                  //   onTap: () {
+                  //     model.setQuotesPageEnum = QuotesPageEnum.favorites;
+                  //   },
+                  //   child: Container(
+                  //     padding: EdgeInsets.symmetric(
+                  //         horizontal: 8.pWidth(context),
+                  //         vertical: 2.pHeight(context)),
+                  //     decoration: BoxDecoration(
+                  //         borderRadius: BorderRadius.circular(12),
+                  //         color:
+                  //             (model.quotesPageEnum == QuotesPageEnum.favorites)
+                  //                 ? Color(0xff47B0F5)
+                  //                 : null),
+                  //     child: Text(
+                  //       "Favorites",
+                  //       style: CustomThemeData.generateColoredStyle(
+                  //           darkTextColor:
+                  //               (model.quotesPageEnum == QuotesPageEnum.favorites)
+                  //                   ? Color(0xff101828)
+                  //                   : Color(0xffE4E7EC),
+                  //           lightTextColor:
+                  //               (model.quotesPageEnum == QuotesPageEnum.favorites)
+                  //                   ? Color(0xffFCFCFD)
+                  //                   : Color(0xffE4E7EC),
+                  //           fontSize: 12,
+                  //           context: context),
+                  //     ),
+                  //   ),
+                  // )
+                ],
+              ),
             ),
           ),
     actions: [
