@@ -62,4 +62,11 @@ class AssetManager {
 
   static const closeSquare = "$ICONPATH/close-square.svg";
   static const infoCircle = "$ICONPATH/info-circle.svg";
+  static const upTrendChart = "$ICONPATH/upchart.svg";
+  static const downTrendChart = "$ICONPATH/downchart.svg";
+  static const btc = "$ICONPATH/btc.png";
+  static const gbpUSD = "$ICONPATH/gbpusd.png";
+  static const simpleQuoteIcon = "$ICONPATH/simplequote.svg";
+  static const advancedQuoteIcon = "$ICONPATH/advancedquote.svg";
+  static const modernQuoteIcon = "$ICONPATH/modernquote.svg";
 }

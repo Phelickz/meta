@@ -78,6 +78,12 @@ class SettingsViewModel extends CustomBaseViewModel {
   String _selectedTimezone = "Last 24 Hrs";
   String get selectedTimeZone => _selectedTimezone;
 
+  String _chartColor = "Default";
+  String get chartColor => _chartColor;
+
+  String _colorPreference = "Blue-Buy/Red-Sell";
+  String get colorPreference => _colorPreference;
+
   String _selectedLanguage = "English";
   String get selectedLanguage => _selectedLanguage;
 
@@ -161,6 +167,16 @@ class SettingsViewModel extends CustomBaseViewModel {
 
   void changeTimezone(String timezone) {
     _selectedTimezone = timezone;
+    rebuildUi();
+  }
+
+  void changeChartColor(String chartColor) {
+    _chartColor = chartColor;
+    rebuildUi();
+  }
+
+  void changeColorPreference(String colorPreference) {
+    _colorPreference = colorPreference;
     rebuildUi();
   }
 
