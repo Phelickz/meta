@@ -127,7 +127,9 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
                   model.quotesPageEnum == QuotesPageEnum.edit
                       ? SizedBox()
                       : InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            model.setQuotesPageEnum = QuotesPageEnum.search;
+                          },
                           child: SvgPicture.asset(
                             AssetManager.search,
                             color: Color(0xff98A2B3),
@@ -137,7 +139,9 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
                     width: 24.pWidth(context),
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      model.setQuotesPageEnum = QuotesPageEnum.edit;
+                    },
                     child: SvgPicture.asset(
                       AssetManager.edit,
                       color: Color(0xff98A2B3),

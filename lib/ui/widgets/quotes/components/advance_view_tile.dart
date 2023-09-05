@@ -113,8 +113,9 @@ class AdvancedViewTile extends StatelessWidget {
                         lightTextColor: Color(0xff20A0F3),
                         context: context),
                     children: [
-                      TextSpan(
-                        text: askingPips,
+                      WidgetSpan(
+                          child: Text(
+                        askingPips,
                         style: TextStyle(
                           fontSize: 10,
                           color: isDarkMode
@@ -126,7 +127,7 @@ class AdvancedViewTile extends StatelessWidget {
                           fontWeight: FontWeight
                               .normal, // You can adjust this as needed
                         ),
-                      ),
+                      )),
                     ])
               ])),
               Text(
@@ -159,8 +160,9 @@ class AdvancedViewTile extends StatelessWidget {
                         lightTextColor: Color(0xffF04438),
                         context: context),
                     children: [
-                      TextSpan(
-                        text: sellingPips,
+                      WidgetSpan(
+                          child: Text(
+                        sellingPips,
                         style: TextStyle(
                           fontSize: 10,
                           color: isDarkMode
@@ -172,7 +174,7 @@ class AdvancedViewTile extends StatelessWidget {
                           fontWeight: FontWeight
                               .normal, // You can adjust this as needed
                         ),
-                      ),
+                      )),
                     ])
               ])),
               Text(
