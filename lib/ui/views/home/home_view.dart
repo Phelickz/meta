@@ -129,7 +129,9 @@ class HomeView extends StackedView<HomeViewModel> {
                   scrollDirection: Axis.horizontal,
                   children: [
                     TradeFeatures(
-                      onTap: () {},
+                      onTap: () {
+                        viewModel.push(const SocialTradingWelcome());
+                      },
                       image: 'assets/images/trade.svg',
                       title: 'Social Trading',
                       subtitle: 'Copy and earn with experienced traders',
@@ -291,7 +293,7 @@ class HomeView extends StackedView<HomeViewModel> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Higher Success Rates',
+                    'Social Trading',
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 2),
                       fontWeight: FontWeight.bold,

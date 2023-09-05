@@ -1,8 +1,7 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/ui/widgets/quotes/components/pop_up_menu.dart';
 
 import '../../../../app/responsiveness/res.dart';
 import '../../../../app/utils/asset_manager.dart';
@@ -18,12 +17,9 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
         ? const Color(0xff052844)
         : Theme.of(context).scaffoldBackgroundColor,
     automaticallyImplyLeading: false,
-    leading: IconButton(
-        icon: Icon(
-          Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
-          color: isDarkMode ? Colors.white : Colors.black,
-        ),
-        onPressed: () {}),
+    leading: QuotesPopUpMenu(
+      model: model,
+    ),
     centerTitle: false,
     title: model.quotesPageEnum == QuotesPageEnum.search ||
             model.quotesPageEnum == QuotesPageEnum.details
@@ -131,7 +127,9 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
                   model.quotesPageEnum == QuotesPageEnum.edit
                       ? SizedBox()
                       : InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            model.setQuotesPageEnum = QuotesPageEnum.search;
+                          },
                           child: SvgPicture.asset(
                             AssetManager.search,
                             color: Color(0xff98A2B3),
@@ -141,7 +139,9 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
                     width: 24.pWidth(context),
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      model.setQuotesPageEnum = QuotesPageEnum.edit;
+                    },
                     child: SvgPicture.asset(
                       AssetManager.edit,
                       color: Color(0xff98A2B3),

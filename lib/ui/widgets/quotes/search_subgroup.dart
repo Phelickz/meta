@@ -6,9 +6,9 @@ import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
 import '../textfields/textfield.dart';
 
-class EditPage extends StatelessWidget {
+class SearchSubgroupPage extends StatelessWidget {
   final QuotesViewModel model;
-  const EditPage({Key? key, required this.model}) : super(key: key);
+  const SearchSubgroupPage({Key? key, required this.model}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -46,24 +46,30 @@ class EditPage extends StatelessWidget {
             child: SizedBox(
               width: double.infinity,
               child: ListView.builder(
-                  itemCount: model.availablePairs.length,
+                  itemCount: model.symbolSubgroup.length,
                   itemBuilder: (context, index) {
+                    final list = model.symbolSubgroup[index];
                     return CheckboxListTile(
                       contentPadding: EdgeInsets.zero,
                       controlAffinity: ListTileControlAffinity
                           .leading, // Checkbox on the left
                       title: Text(
-                        model.availablePairs[index],
+                        list["title"],
                         style: CustomThemeData.generateColoredStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                             context: context),
                       ),
-                      value: model.selectedOptions
-                          .contains(model.availablePairs[index]),
-                      onChanged: (value) =>
-                          model.togglePair(model.availablePairs[index]),
-                      secondary: Icon(Icons.menu), // Trailing icon
+                      subtitle: Text(
+                        list["subtitle"],
+                        style: CustomThemeData.generateColoredStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.bold,
+                            context: context),
+                      ),
+                      value: model.selectedOptions.contains(list["title"]),
+                      onChanged: (value) => model.togglePair(list["title"]),
+                      secondary: Icon(Icons.arrow_forward_ios), // Trailing icon
                     );
                   }),
             ),
