@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 
@@ -25,42 +26,50 @@ class SimpleViewTile extends StatelessWidget {
           child: Text(
             currencyPair,
             style: CustomThemeData.generateColoredStyle(
-                fontSize: 16, fontWeight: FontWeight.bold, context: context),
+                fontSize: McGyver.textSize(context, 2.2),
+                fontWeight: FontWeight.bold,
+                context: context),
           ),
         ),
         SizedBox(
-          width: 29.pWidth(context),
+          width: 19.pWidth(context),
         ),
         SizedBox(
-          child: Text(high,
-              style: CustomThemeData.generateColoredStyle(
-                  fontSize: 10,
-                  darkTextColor: Color(0xff77C5F8),
-                  lightTextColor: Color(0xff20A0F3),
-                  context: context)),
+          child: Text(
+            high,
+            style: CustomThemeData.generateColoredStyle(
+              fontSize: McGyver.textSize(context, 1.5),
+              darkTextColor: const Color(0xff77C5F8),
+              lightTextColor: const Color(0xff20A0F3),
+              context: context,
+            ),
+          ),
         ),
         SizedBox(
           width: 24.pWidth(context),
         ),
         SizedBox(
-          child: Text(low,
-              style: CustomThemeData.generateColoredStyle(
-                  fontSize: 10,
-                  darkTextColor: Color(0xffF97066),
-                  lightTextColor: Color(0xffF04438),
-                  context: context)),
+          child: Text(
+            low,
+            style: CustomThemeData.generateColoredStyle(
+              fontSize: McGyver.textSize(context, 1.5),
+              darkTextColor: const Color(0xffF97066),
+              lightTextColor: const Color(0xffF04438),
+              context: context,
+            ),
+          ),
         ),
         SizedBox(
-          width: 32.pWidth(context),
+          width: 42.pWidth(context),
         ),
         SizedBox(
           child: Text(
             spread,
             style: CustomThemeData.generateColoredStyle(
-                fontSize: 10, context: context),
+                fontSize: McGyver.textSize(context, 1.5), context: context),
           ),
         ),
-        Spacer(),
+        const Spacer(),
         InkWell(
           onTap: onPressed,
           child: Icon(

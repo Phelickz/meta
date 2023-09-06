@@ -12,6 +12,9 @@ class HomeViewModel extends CustomBaseViewModel {
   ScrollController _scrollController = ScrollController();
   ScrollController get scrollController => _scrollController;
 
+  ScrollController _scrollController2 = ScrollController();
+  ScrollController get scrollController2 => _scrollController2;
+
   void incrementCounter() {
     _counter++;
     rebuildUi();

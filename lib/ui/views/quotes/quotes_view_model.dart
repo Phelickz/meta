@@ -26,7 +26,7 @@ class QuotesViewModel extends CustomBaseViewModel {
   }
 
   Future<void> init() async {}
-  MarketViewEnum _marketViewEnum = MarketViewEnum.simpleView;
+  MarketViewEnum _marketViewEnum = MarketViewEnum.advancedView;
   MarketViewEnum get marketViewEnum => _marketViewEnum;
 
   QuotesPageEnum _quotesPageEnum = QuotesPageEnum.markets;
@@ -155,63 +155,59 @@ class QuotesViewModel extends CustomBaseViewModel {
 
   List marketDetailList = [
     {
-      "digits":'2',
-      "contractSize":"332",
-      "spread":"35",
-      "stopsLevel":"0",
-      "contractSize1":"1211122212",
-      "spread1":"1211122212",
-      "stopsLevel1":"1211122212",
-      "marginCurrency":"1211122212",
-      "profitCurrency":"1211122212",
-      "calculations":"1211122212",
-      "tickSize":"1211122212",
-      "tickValue":"1211122212"
+      "digits": '2',
+      "contractSize": "332",
+      "spread": "35",
+      "stopsLevel": "0",
+      "contractSize1": "1211122212",
+      "spread1": "1211122212",
+      "stopsLevel1": "1211122212",
+      "marginCurrency": "1211122212",
+      "profitCurrency": "1211122212",
+      "calculations": "1211122212",
+      "tickSize": "1211122212",
+      "tickValue": "1211122212"
     }
   ];
 
   List marketStats = [
     {
-      "initialMargin":"2",
-      "bid":"3.1",
-      "bidHigh":"4.55",
-      "ask":"1.4",
-      "askHigh":"1.33",
-      "askLow":"0.3",
-      "priceChange":"0.3",
-      "openPrice":"2.1",
-      "closePrice":"2.3"
+      "initialMargin": "2",
+      "bid": "3.1",
+      "bidHigh": "4.55",
+      "ask": "1.4",
+      "askHigh": "1.33",
+      "askLow": "0.3",
+      "priceChange": "0.3",
+      "openPrice": "2.1",
+      "closePrice": "2.3"
     }
   ];
   bool _isFav = false;
   bool get isFav => _isFav;
   List favQuotes = [];
-  
+
   int lotSize = 0;
   int stopLosss = 0;
   int takeProfit = 0;
   bool isDurationEnabled = false;
-  
-  void tapToIncrease(String option){
-    if(option=='lotSize'){
+
+  void tapToIncrease(String option) {
+    if (option == 'lotSize') {
       lotSize++;
-    }
-    else if(option == "stopLoss"){
+    } else if (option == "stopLoss") {
       stopLosss++;
-    }
-    else{
+    } else {
       takeProfit++;
     }
   }
 
-  void tapToDecrese(String option){
-    if(option=='lotSize' && lotSize>0){
+  void tapToDecrese(String option) {
+    if (option == 'lotSize' && lotSize > 0) {
       lotSize--;
-    }
-    else if(option == "stopLoss" && stopLosss>0){
+    } else if (option == "stopLoss" && stopLosss > 0) {
       stopLosss--;
-    }
-    else if(option == "takeProfit" && takeProfit>0){
+    } else if (option == "takeProfit" && takeProfit > 0) {
       takeProfit--;
     }
   }
@@ -326,6 +322,8 @@ class QuotesViewModel extends CustomBaseViewModel {
   Widget returnPage() {
     switch (_quotesPageEnum) {
       case QuotesPageEnum.markets:
+        return returnMarketView();
+      case QuotesPageEnum.favorites:
         return returnMarketView();
       case QuotesPageEnum.edit:
         return EditPage(model: this);
