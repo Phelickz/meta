@@ -10,9 +10,16 @@ import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
 import '../../../../app/responsiveness/res.dart';
 import '../../../../app/utils/theme.dart';
 
-class GenericTradeBody extends StatelessWidget {
+class GenericTradeBody extends StatefulWidget {
   const GenericTradeBody({super.key});
 
+  @override
+  State<GenericTradeBody> createState() => _GenericTradeBodyState();
+}
+
+class _GenericTradeBodyState extends State<GenericTradeBody> {
+  bool isToggle = false;
+  
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
@@ -96,7 +103,7 @@ class GenericTradeBody extends StatelessWidget {
         SizedBox(height: 16.pHeight(context),),
 
 // just for testing how the toogle looks like
-        'k' == 'o' 
+        !isToggle
         ? Container(
           height: 56.pHeight(context),
           width: double.infinity,
@@ -117,7 +124,9 @@ class GenericTradeBody extends StatelessWidget {
                   color: isDarkMode ? Colors.white : const Color(0xFF98A2B3),
                   fontWeight: FontWeight.w400)
               ),
-              CupertinoSwitch(value: false, onChanged: (_){},)
+              CupertinoSwitch(value: isToggle, onChanged: (_){setState(() {
+                isToggle=!isToggle;
+              });},)
             ],
           ),
         )
@@ -187,7 +196,9 @@ class GenericTradeBody extends StatelessWidget {
                       color: isDarkMode ? Colors.white : Colors.black,
                       fontWeight: FontWeight.w400)
                   ),
-                  CupertinoSwitch(value: true, activeColor: const Color(0xFF0C95EF) ,onChanged: (_){},)
+                  CupertinoSwitch(value: isToggle, activeColor: const Color(0xFF0C95EF) ,onChanged: (_){setState(() {
+                    isToggle=!isToggle;
+                  });},)
                 ],
               ),
             ),
