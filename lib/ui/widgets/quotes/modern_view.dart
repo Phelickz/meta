@@ -113,14 +113,19 @@ class TabViewMarkets extends StatelessWidget {
         itemCount: model.quoteList.length,
         itemBuilder: (context, index) {
           final quotes = model.quoteList[index];
-          return ModernViewTile(
-            spread: quotes["spread"],
-            currencyPair: quotes["currencyPair"],
-            percentageChange: quotes["percentageChange"],
-            bidPrice: quotes["low"],
-            currencyIcon: quotes["currencyIcon"],
-            trend: quotes["trend"],
-            currencyPairFull: quotes["currencyPairFull"],
+          return InkWell(
+            onLongPress: () {
+              model.openOptionsBottomSheet(context);
+            },
+            child: ModernViewTile(
+              spread: quotes["spread"],
+              currencyPair: quotes["currencyPair"],
+              percentageChange: quotes["percentageChange"],
+              bidPrice: quotes["low"],
+              currencyIcon: quotes["currencyIcon"],
+              trend: quotes["trend"],
+              currencyPairFull: quotes["currencyPairFull"],
+            ),
           );
         },
       ),

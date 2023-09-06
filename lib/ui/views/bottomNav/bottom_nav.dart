@@ -24,7 +24,6 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
 
   final List<Widget> _tabs = [
     const HomeView(),
-    // const TabScreen(title: 'Tab 2'),
     const QuotesView(),
     const ChartView(),
     const TradeView(),

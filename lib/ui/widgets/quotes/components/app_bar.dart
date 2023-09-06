@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -18,13 +20,39 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
         ? const Color(0xff052844)
         : Theme.of(context).scaffoldBackgroundColor,
     automaticallyImplyLeading: false,
-    leading: QuotesPopUpMenu(
-      model: model,
-    ),
-    centerTitle: true,
+    leading: model.quotesPageEnum == QuotesPageEnum.markets ||
+            model.quotesPageEnum == QuotesPageEnum.favorites
+        ? QuotesPopUpMenu(
+            model: model,
+          )
+        : IconButton(
+            icon: Icon(
+              Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
+              color: isDarkMode ? Colors.white : Colors.black,
+            ),
+            onPressed: () {
+              if (model.quotesPageEnum == QuotesPageEnum.details) {
+                model.setQuotesPageEnum = QuotesPageEnum.search;
+              }
+
+              if (model.quotesPageEnum == QuotesPageEnum.edit) {
+                model.setQuotesPageEnum = QuotesPageEnum.markets;
+              }
+              if (model.quotesPageEnum == QuotesPageEnum.subGroups) {
+                model.setQuotesPageEnum = QuotesPageEnum.search;
+              } else {
+                model.goBack();
+              }
+            }),
+    centerTitle: model.quotesPageEnum == QuotesPageEnum.markets ||
+            model.quotesPageEnum == QuotesPageEnum.favorites
+        ? true
+        : false,
     title: model.quotesPageEnum == QuotesPageEnum.search ||
-            model.quotesPageEnum == QuotesPageEnum.details
+            model.quotesPageEnum == QuotesPageEnum.details ||
+            model.quotesPageEnum == QuotesPageEnum.subGroups
         ? Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 title,
@@ -57,7 +85,8 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextButton(
-                    style: model.quotesPageEnum == QuotesPageEnum.markets
+                    style: model.quotesPageEnum == QuotesPageEnum.markets ||
+                            model.quotesPageEnum == QuotesPageEnum.edit
                         ? ElevatedButton.styleFrom(
                             backgroundColor: Theme.of(context).primaryColor,
                             shape: RoundedRectangleBorder(

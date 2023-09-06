@@ -50,11 +50,16 @@ class SearchPage extends StatelessWidget {
                   itemCount: model.symbolGroups.length,
                   itemBuilder: (context, index) {
                     final list = model.symbolGroups[index];
-                    return SearchQuotesTile(
-                      title: list["title"],
-                      // onChanged: (value) =>
-                      //     model.togglePair(model.availablePairs[index]),
-                      subtitle: list["subtitle"], // Trailing icon
+                    return InkWell(
+                      onTap: () {
+                        model.setQuotesPageEnum = QuotesPageEnum.subGroups;
+                      },
+                      child: SearchQuotesTile(
+                        title: list["title"],
+                        // onChanged: (value) =>
+                        //     model.togglePair(model.availablePairs[index]),
+                        subtitle: list["subtitle"], // Trailing icon
+                      ),
                     );
                   }),
             ),

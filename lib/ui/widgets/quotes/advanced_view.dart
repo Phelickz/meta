@@ -17,22 +17,27 @@ class AdvancedMarketView extends StatelessWidget {
           itemCount: model.quoteList.length,
           itemBuilder: (context, index) {
             final quote = model.quoteList[index];
-            return AdvancedViewTile(
-              time: quote["time"],
-              askingPricePrimary: quote["askingPricePrimary"],
-              askingPriceSecondary: quote["askingPriceSecondary"],
-              currencyPair: quote["currencyPair"],
-              high: quote["high"],
-              low: quote["low"],
-              pairId: quote["pairId"],
-              percentageChange: quote["percentageChange"],
-              sellingPricePrimary: quote["sellingPricePrimary"],
-              sellingPriceSecondary: quote["sellingPriceSecondary"],
-              askingPips: quote["askingPips"],
-              sellingPips: quote["sellingPips"],
-              trend: quote["trend"],
-              spread: quote["spread"],
-              isFav: model.isFav,
+            return InkWell(
+              onLongPress: () {
+                model.openOptionsBottomSheet(context);
+              },
+              child: AdvancedViewTile(
+                time: quote["time"],
+                askingPricePrimary: quote["askingPricePrimary"],
+                askingPriceSecondary: quote["askingPriceSecondary"],
+                currencyPair: quote["currencyPair"],
+                high: quote["high"],
+                low: quote["low"],
+                pairId: quote["pairId"],
+                percentageChange: quote["percentageChange"],
+                sellingPricePrimary: quote["sellingPricePrimary"],
+                sellingPriceSecondary: quote["sellingPriceSecondary"],
+                askingPips: quote["askingPips"],
+                sellingPips: quote["sellingPips"],
+                trend: quote["trend"],
+                spread: quote["spread"],
+                isFav: model.isFav,
+              ),
             );
           }),
     );

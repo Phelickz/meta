@@ -79,12 +79,17 @@ class SimpleMarketView extends StatelessWidget {
               },
               itemBuilder: (context, index) {
                 final quote = model.quoteList[index];
-                return SimpleViewTile(
-                  currencyPair: quote["currencyPair"],
-                  high: quote["high"],
-                  low: quote["low"],
-                  spread: quote["spread"],
-                  isFav: model.isFav,
+                return InkWell(
+                  onLongPress: () {
+                    model.openOptionsBottomSheet(context);
+                  },
+                  child: SimpleViewTile(
+                    currencyPair: quote["currencyPair"],
+                    high: quote["high"],
+                    low: quote["low"],
+                    spread: quote["spread"],
+                    isFav: model.isFav,
+                  ),
                 );
               },
             ),
