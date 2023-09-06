@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/locator/locator.dart';
 import 'package:meta_trader/app/services/router_service.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/ui/views/quotes/trade_close_screen.dart';
+import 'package:meta_trader/ui/views/quotes/trade_depth_screen.dart';
+import 'package:meta_trader/ui/views/quotes/trade_details_screen.dart';
+import 'package:meta_trader/ui/views/quotes/trade_excuetion_screen1.dart';
+import 'package:meta_trader/ui/views/quotes/trade_statistics_screen.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
 import '../ui/views/quotes/quotes_view.dart';
@@ -34,7 +39,7 @@ class MetaTraderApp extends StatelessWidget {
           theme: regularTheme,
           themeMode: themeMode,
           darkTheme: darkTheme,
-          home: const QuotesView(),
+          home: const TradeExecuetionScreen(),
         );
       },
     );
