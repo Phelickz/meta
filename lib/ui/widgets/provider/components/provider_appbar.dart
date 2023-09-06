@@ -47,5 +47,78 @@ class ProviderAppbar{
       ],
     );
   }
+  static AppBar appBarTwo(
+    ProviderViewModel model,
+    BuildContext context,
+  ){
+    return AppBar(
+      elevation: 0,
+      backgroundColor:  Theme.of(context).scaffoldBackgroundColor,
+      leading: IconButton(
+        icon: Icon(
+          Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
+          color: model.isDarkMode() ? const Color(0xffD2D2D2) : Colors.black,
+        ),
+        onPressed: () {
+          // model.goBack();
+        }),
+      centerTitle: true,
+      title: Container(
+            width: 180,
+            height: 46,
+            decoration: BoxDecoration(
+              color: const Color(0xff1D2939),
+              borderRadius: BorderRadius.circular(60),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(6.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(
+                    style: model.overviewTabSelectedNotifier.value==0
+                        ? ElevatedButton.styleFrom(
+                            backgroundColor: Theme.of(context).primaryColor,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                          )
+                        : null,
+                    onPressed: () => model.setTabNotifiier(0),
+                    child: Text(
+                      'Overview',
+                      style: CustomThemeData.generateStyle(
+                        fontSize: 13,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  TextButton(
+                    style: model.overviewTabSelectedNotifier.value==1
+                        ? ElevatedButton.styleFrom(
+                            backgroundColor: Theme.of(context).primaryColor,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                          )
+                        : null,
+                    onPressed: ()=>model.setTabNotifiier(1),
+                    child: Text(
+                      'Trade History',
+                      style: CustomThemeData.generateStyle(
+                        fontSize: 13,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
 
+      actions: [
+        IconButton(onPressed: (){}, icon: Icon(Icons.menu, color: model.isDarkMode()?Colors.white:Colors.black,))
+      ],
+    );
+  }
 }
