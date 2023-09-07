@@ -161,7 +161,7 @@ class DeleteAccountDialog extends StatelessWidget {
       elevation: 0,
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       child: Container(
-        height: 170.pHeight(context),
+        height: 180.pHeight(context),
         width: 300.pWidth(context),
         padding: EdgeInsets.symmetric(
             vertical: 24.pHeight(context), horizontal: 12.pWidth(context)),
@@ -232,7 +232,7 @@ class DetailDialog extends StatelessWidget {
       elevation: 0,
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       child: Container(
-        height: 217.pHeight(context),
+        height: 227.pHeight(context),
         width: 360.pWidth(context),
         padding: EdgeInsets.symmetric(
             vertical: 24.pHeight(context), horizontal: 12.pWidth(context)),

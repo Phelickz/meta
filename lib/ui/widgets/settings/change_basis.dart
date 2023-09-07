@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/ui/widgets/auth/radio_button.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
@@ -24,17 +25,18 @@ class ChangeBasisPage extends StatelessWidget {
           height: 80,
           child: Center(
             child: Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: McGyver.textSize(context, 2),
+              padding: EdgeInsets.symmetric(
+                horizontal: McGyver.textSize(context, 2),
+              ),
+              child: Text(
+                "When you switch to a new UTC time zone, the change (%) for markets and trades will be calculated based on the new time zone ",
+                style: CustomThemeData.generateStyle(
+                  fontSize: McGyver.textSize(context, 1.6),
+                  color: isDarkMode ? Colors.white : const Color(0xff667085),
+                  fontWeight: FontWeight.w400,
                 ),
-                child: Text(
-                    "When you switch to a new UTC time zone, the change (%) for markets and trades will be calculated based on the new time zone ",
-                    style: CustomThemeData.generateStyle(
-                      fontSize: McGyver.textSize(context, 1.6),
-                      color:
-                          isDarkMode ? Colors.white : const Color(0xff667085),
-                      fontWeight: FontWeight.w400,
-                    ))),
+              ),
+            ),
           ),
         ),
         verticalSpaceSmall(context),
@@ -54,27 +56,40 @@ class ChangeBasisPage extends StatelessWidget {
                     return ListTile(
                       title: Row(
                         children: [
-                          Text(model.timezones[index],
-                              style: CustomThemeData.generateStyle(
-                                fontSize: McGyver.textSize(context, 1.6),
-                                color: isDarkMode
-                                    ? Colors.white
-                                    : const Color(0xff667085),
-                                fontWeight: FontWeight.w700,
-                              )),
-                          const Spacer(), // Space to push radio button to the right
-                          Theme(
-                            data: ThemeData(
-                                unselectedWidgetColor:
-                                    isDarkMode ? Colors.white : Colors.black),
-                            child: Radio<String>(
+                          Text(
+                            model.timezones[index],
+                            style: CustomThemeData.generateStyle(
+                              fontSize: McGyver.textSize(context, 1.6),
+                              color: isDarkMode
+                                  ? Colors.white
+                                  : const Color(0xff667085),
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          const Spacer(),
+                          // Space to push radio button to the right
+                          Transform.scale(
+                            scale: 2.0,
+                            child: CustomRadioWidget(
                               value: model.timezones[index],
                               groupValue: model.selectedLanguage,
                               onChanged: (value) {
-                                model.changeLanguage(value!);
+                                model.changeLanguage(value.toString());
                               },
                             ),
                           ),
+                          // Theme(
+                          //   data: ThemeData(
+                          //       unselectedWidgetColor:
+                          //           isDarkMode ? Colors.white : Colors.black),
+                          //   child: Radio<String>(
+                          //     value: model.timezones[index],
+                          //     groupValue: model.selectedLanguage,
+                          //     onChanged: (value) {
+                          //       model.changeLanguage(value!);
+                          //     },
+                          //   ),
+                          // ),
                         ],
                       ),
                       onTap: () {

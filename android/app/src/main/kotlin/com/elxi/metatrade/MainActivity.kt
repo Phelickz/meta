@@ -1,4 +1,4 @@
-package com.example.meta_trader
+package com.elxi.metatrade
 
 import io.flutter.embedding.android.FlutterActivity
 

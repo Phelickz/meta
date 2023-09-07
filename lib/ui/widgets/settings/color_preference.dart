@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:meta_trader/app/utils/asset_manager.dart';
+import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/ui/widgets/auth/radio_button.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
@@ -18,10 +22,13 @@ class ColorPreferencesPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          verticalSpaceXSmall(context),
           Text(
             "Change Preference",
             style: CustomThemeData.generateColoredStyle(
-                fontSize: 16, fontWeight: FontWeight.bold, context: context),
+                fontSize: McGyver.textSize(context, 2),
+                fontWeight: FontWeight.bold,
+                context: context),
           ),
           verticalSpaceSmall(context),
           CustomPreferenceRatioButton(
@@ -73,70 +80,186 @@ class CustomPreferenceRatioButton extends StatelessWidget {
       onTap: () {
         onChanged(value);
       },
-      child: Container(
-        height: 100.pHeight(context),
-        width: double.infinity,
-        padding: EdgeInsets.symmetric(horizontal: 16.pWidth(context)),
-        decoration: BoxDecoration(
-          color: isDarkMode
-              ? const Color(0xff052844)
-              : Theme.of(context).scaffoldBackgroundColor,
+      child: Card(
+        elevation: 0,
+        shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.3),
-              spreadRadius: 3,
-              blurRadius: 4,
-              offset: Offset(0, 3), // Adjust the offset as needed
-            ),
-          ],
+          side: BorderSide(
+            color: isDarkMode ? Colors.white12 : Colors.black12,
+          ),
         ),
-        child: Row(
-          children: <Widget>[
-            SizedBox(width: 8.0),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(label),
-                Row(
-                  children: [
-                    Container(
-                      child: Text("Sell at 1.23456"),
-                      color: colorA,
+        child: Container(
+          // height: 120.pHeight(context),
+          // width: double.infinity,
+          padding: EdgeInsets.symmetric(
+              horizontal: 16.pWidth(context), vertical: 23.pHeight(context)),
+          decoration: BoxDecoration(
+            color: isDarkMode
+                ? const Color(0xff052844)
+                : Theme.of(context).scaffoldBackgroundColor,
+            borderRadius: BorderRadius.circular(8),
+            // boxShadow: [
+            //   BoxShadow(
+            //     color: Colors.grey.withOpacity(0.3),
+            //     spreadRadius: 3,
+            //     blurRadius: 4,
+            //     offset: const Offset(0, 3), // Adjust the offset as needed
+            //   ),
+            // ],
+          ),
+          child: Row(
+            children: <Widget>[
+              const SizedBox(width: 8.0),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    label,
+                    style: CustomThemeData.generateStyle(
+                      fontSize: McGyver.textSize(context, 1.9),
+                      fontWeight: FontWeight.bold,
+                      color: isDarkMode
+                          ? ColorManager.darkText
+                          : ColorManager.lightText,
                     ),
-                    Container(
-                      child: Text("Buy at 1.23456"),
-                      color: colorB,
-                    ),
-                  ],
-                )
-              ],
-            ),
-            Spacer(),
-            Container(
-              width: 24.0,
-              height: 24.0,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                  width: 2.0,
-                  color: Colors.blue,
+                  ),
+                  verticalSpaceXSmall(context),
+                  Row(
+                    children: [
+                      Column(
+                        // crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              color: colorA,
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 14.0,
+                                vertical: 10,
+                              ),
+                              child: Text(
+                                "Sell at 1.23456",
+                                style: CustomThemeData.generateStyle(
+                                    fontSize: McGyver.textSize(context, 1),
+                                    fontWeight: FontWeight.bold,
+                                    color: isDarkMode
+                                        ? Colors.white60
+                                        : Colors.white60),
+                              ),
+                            ),
+                          ),
+                          verticalSpaceXXSmall(context),
+                          Row(
+                            children: [
+                              Container(
+                                width: 42,
+                                height: 2,
+                                decoration: BoxDecoration(
+                                  color: colorA,
+                                ),
+                              ),
+                              Container(
+                                width: 42,
+                                height: 2,
+                                decoration: const BoxDecoration(
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ],
+                          ),
+                          verticalSpaceXXSmall(context),
+                          Align(
+                            alignment: Alignment.bottomCenter,
+                            child: Text(
+                              "23%",
+                              textAlign: TextAlign.center,
+                              style: CustomThemeData.generateStyle(
+                                fontSize: McGyver.textSize(context, 1),
+                                color: colorA,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      horizontalSpaceXSmall(context),
+                      Column(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              color: colorB,
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 14.0,
+                                vertical: 10,
+                              ),
+                              child: Text(
+                                "Buy at 1.23456",
+                                style: CustomThemeData.generateStyle(
+                                    fontSize: McGyver.textSize(context, 1),
+                                    fontWeight: FontWeight.bold,
+                                    color: isDarkMode
+                                        ? Colors.white60
+                                        : Colors.white60),
+                              ),
+                            ),
+                          ),
+                          verticalSpaceXXSmall(context),
+                          Row(
+                            children: [
+                              Container(
+                                width: 42,
+                                height: 2,
+                                decoration: BoxDecoration(
+                                  color: colorB,
+                                ),
+                              ),
+                              Container(
+                                width: 42,
+                                height: 2,
+                                decoration: const BoxDecoration(
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ],
+                          ),
+                          verticalSpaceXXSmall(context),
+                          Align(
+                            alignment: Alignment.bottomCenter,
+                            child: Text(
+                              "23%",
+                              textAlign: TextAlign.center,
+                              style: CustomThemeData.generateStyle(
+                                fontSize: McGyver.textSize(context, 1),
+                                color: colorA,
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+              const Spacer(),
+              // SvgPicture.asset(AssetManager.downTrendChart),
+              // SvgPicture.asset(AssetManager.downTrendChart),
+              SvgPicture.asset(AssetManager.downTrendChart),
+              const Spacer(),
+              Transform.scale(
+                scale: 2.0,
+                child: CustomRadioWidget(
+                  value: value,
+                  groupValue: groupValue,
+                  onChanged: onChanged,
                 ),
               ),
-              child: Center(
-                child: value == groupValue
-                    ? Container(
-                        width: 12.0,
-                        height: 12.0,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.blue,
-                        ),
-                      )
-                    : null,
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

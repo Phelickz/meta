@@ -123,9 +123,11 @@ class QuotesBottomSheetTile extends StatelessWidget {
           style: CustomThemeData.generateColoredStyle(
               fontSize: 16,
               context: context,
-              darkTextColor: isRed ? Color(0xffF97066) : Color(0xffD0D5DD),
+              darkTextColor:
+                  isRed ? const Color(0xffF97066) : const Color(0xffD0D5DD),
               fontWeight: FontWeight.bold,
-              lightTextColor: isRed ? Color(0xffF97066) : Color(0xff667085))),
+              lightTextColor:
+                  isRed ? const Color(0xffF97066) : const Color(0xff667085))),
     );
   }
 }

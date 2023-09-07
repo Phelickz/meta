@@ -16,6 +16,7 @@ class PhoneVerifiedSuccessPage extends StatelessWidget {
     return Column(
       children: [
         verticalSpaceSmall(context),
+        verticalSpaceSmall(context),
         SizedBox(
           height: McGyver.rsDoubleH(context, 50),
           width: McGyver.rsDoubleW(context, 100),

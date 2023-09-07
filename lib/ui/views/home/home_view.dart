@@ -82,7 +82,7 @@ class HomeView extends StackedView<HomeViewModel> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [sliverBody(context)],
         ),
-        bottomWidgetHeight: McGyver.rsDoubleH(context, 12),
+        bottomWidgetHeight: McGyver.rsDoubleH(context, 14),
         bottomWidget: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -123,7 +123,7 @@ class HomeView extends StackedView<HomeViewModel> {
               ),
               verticalSpaceXSmall(context),
               SizedBox(
-                height: McGyver.rsDoubleH(context, 18),
+                height: McGyver.rsDoubleH(context, 20),
                 width: McGyver.rsDoubleW(context, 100),
                 child: ListView(
                   scrollDirection: Axis.horizontal,
@@ -267,7 +267,7 @@ class HomeView extends StackedView<HomeViewModel> {
                     );
                   },
                   separatorBuilder: (BuildContext context, int index) {
-                    return const SizedBox();
+                    return verticalSpaceSmall(context);
                   },
                 ),
               ),

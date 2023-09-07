@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -161,20 +163,20 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
           ),
     actions: [
       model.quotesPageEnum == QuotesPageEnum.search
-          ? SizedBox()
+          ? const SizedBox()
           : Padding(
               padding: EdgeInsets.only(right: 24.pWidth(context)),
               child: Row(
                 children: [
                   model.quotesPageEnum == QuotesPageEnum.edit
-                      ? SizedBox()
+                      ? const SizedBox()
                       : InkWell(
                           onTap: () {
                             model.setQuotesPageEnum = QuotesPageEnum.search;
                           },
                           child: SvgPicture.asset(
                             AssetManager.search,
-                            color: Color(0xff98A2B3),
+                            color: const Color(0xff98A2B3),
                           ),
                         ),
                   SizedBox(
@@ -186,7 +188,7 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
                     },
                     child: SvgPicture.asset(
                       AssetManager.edit,
-                      color: Color(0xff98A2B3),
+                      color: const Color(0xff98A2B3),
                     ),
                   ),
                 ],

@@ -37,18 +37,34 @@ class ForexNewsView extends StackedView<ForexNewsViewModel> {
           : viewModel.forexNewsViewEnum == ForexNewsViewEnum.details
               ? DetailNews(model: viewModel)
               : ContainedTabBarView(
-                  tabs: const [
+                  tabs: [
                     Text(
                       'All',
+                      style: CustomThemeData.generateStyle(
+                        fontSize: 12,
+                        color: isDarkMode ? Colors.white54 : Colors.black,
+                      ),
                     ),
                     Text(
                       'Currency pairs',
+                      style: CustomThemeData.generateStyle(
+                        fontSize: 12,
+                        color: isDarkMode ? Colors.white54 : Colors.black,
+                      ),
                     ),
                     Text(
                       'Metals',
+                      style: CustomThemeData.generateStyle(
+                        fontSize: 12,
+                        color: isDarkMode ? Colors.white54 : Colors.black,
+                      ),
                     ),
                     Text(
                       'Cryptocurrency',
+                      style: CustomThemeData.generateStyle(
+                        fontSize: 12,
+                        color: isDarkMode ? Colors.white54 : Colors.black,
+                      ),
                     ),
                   ],
                   tabBarProperties: TabBarProperties(

@@ -64,6 +64,18 @@ class SearchSubgroupPage extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               context: context),
                         ),
+                        // subtitle: Text(
+                        //   list["subtitle"],
+                        //   style: CustomThemeData.generateColoredStyle(
+                        //       fontSize: 10,
+                        //       fontWeight: FontWeight.bold,
+                        //       context: context),
+                        // ),
+                        // value: model.selectedOptions.contains(list["title"]),
+                        // onChanged: (value) => model.togglePair(list["title"]),
+                        // secondary:
+                        //     Icon(Icons.arrow_forward_ios), // Trailing icon
+
                         subtitle: Text(
                           list["subtitle"],
                           style: CustomThemeData.generateColoredStyle(
@@ -73,9 +85,8 @@ class SearchSubgroupPage extends StatelessWidget {
                         ),
                         value: model.selectedOptions.contains(list["title"]),
                         onChanged: (value) => model.togglePair(list["title"]),
-                        secondary:
-                            Icon(Icons.arrow_forward_ios), // Trailing icon
-                      ),
+                        secondary: const Icon(Icons.arrow_forward_ios),
+                      ), // Trailing icon
                     );
                   }),
             ),

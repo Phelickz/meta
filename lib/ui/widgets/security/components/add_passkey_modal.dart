@@ -17,79 +17,81 @@ class AddPasskeyModal extends StatelessWidget {
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Container(
-      height: McGyver.rsDoubleH(context, 70),
+      height: McGyver.rsDoubleH(context, 73),
       padding: EdgeInsets.symmetric(
         horizontal: McGyver.rsDoubleH(context, 2),
         vertical: McGyver.rsDoubleH(context, 4),
       ),
-      child: Column(
-        children: [
-          Container(
-            height: McGyver.rsDoubleH(context, 14),
-            width: McGyver.rsDoubleH(context, 14),
-            padding: EdgeInsets.all(
-              McGyver.rsDoubleH(context, 2),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              height: McGyver.rsDoubleH(context, 14),
+              width: McGyver.rsDoubleH(context, 14),
+              padding: EdgeInsets.all(
+                McGyver.rsDoubleH(context, 2),
+              ),
+              decoration: BoxDecoration(
+                  color: isDarkMode
+                      ? const Color(0xFF052844)
+                      : const Color(0xFFD3ECFD),
+                  borderRadius: BorderRadius.circular(
+                    McGyver.rsDoubleH(context, 3),
+                  )),
+              child: SizedBox(
+                  height: McGyver.rsDoubleH(context, 9.5),
+                  width: McGyver.rsDoubleH(context, 9.5),
+                  child: SvgPicture.asset("assets/images/shield_tick.svg")),
             ),
-            decoration: BoxDecoration(
+            verticalSpaceSmall(context),
+            Text(
+              "Add Passkey",
+              textAlign: TextAlign.center,
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 2.8),
+                fontWeight: FontWeight.bold,
                 color: isDarkMode
-                    ? const Color(0xFF052844)
-                    : const Color(0xFFD3ECFD),
-                borderRadius: BorderRadius.circular(
-                  McGyver.rsDoubleH(context, 3),
-                )),
-            child: SizedBox(
-                height: McGyver.rsDoubleH(context, 9.5),
-                width: McGyver.rsDoubleH(context, 9.5),
-                child: SvgPicture.asset("assets/images/shield_tick.svg")),
-          ),
-          verticalSpaceSmall(context),
-          Text(
-            "Add Passkey",
-            textAlign: TextAlign.center,
-            style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 2.8),
-              fontWeight: FontWeight.bold,
-              color: isDarkMode
-                  ? const Color(0xFFD0D5DD)
-                  : const Color(0xFF475467),
+                    ? const Color(0xFFD0D5DD)
+                    : const Color(0xFF475467),
+              ),
             ),
-          ),
-          verticalSpaceSmall(context),
-          verticalSpaceSmall(context),
-          _addPasskeyModalTile(
-            context: context,
-            isDarkMode: isDarkMode,
-            assetName: "assets/images/security_safe.svg",
-            title: "No need to remember a password",
-            subtitle:
-                "With passkeys, you can use things like your fingerprint or face to login",
-          ),
-          _addPasskeyModalTile(
-            context: context,
-            isDarkMode: isDarkMode,
-            assetName: "assets/images/devices.svg",
-            title: "Works on all your devices",
-            subtitle:
-                "Passkeys wil automatically be available across your synced devices",
-          ),
-          _addPasskeyModalTile(
-            context: context,
-            isDarkMode: isDarkMode,
-            assetName: "assets/images/safe_home.svg",
-            title: "keep your account safe",
-            subtitle: "passkeys offer state-of-the-art phishing resistance",
-          ),
-          verticalSpaceSmall(context),
-          verticalSpaceSmall(context),
-          CustomButtons.generalButton(
-            text: "Continue",
-            context: context,
-            onTap: () {
-              Navigator.pop(context);
-              vm.securityPageEnum = SecurityPageEnum.addPasskey;
-            },
-          )
-        ],
+            verticalSpaceSmall(context),
+            verticalSpaceSmall(context),
+            _addPasskeyModalTile(
+              context: context,
+              isDarkMode: isDarkMode,
+              assetName: "assets/images/security_safe.svg",
+              title: "No need to remember a password",
+              subtitle:
+                  "With passkeys, you can use things like your fingerprint or face to login",
+            ),
+            _addPasskeyModalTile(
+              context: context,
+              isDarkMode: isDarkMode,
+              assetName: "assets/images/devices.svg",
+              title: "Works on all your devices",
+              subtitle:
+                  "Passkeys wil automatically be available across your synced devices",
+            ),
+            _addPasskeyModalTile(
+              context: context,
+              isDarkMode: isDarkMode,
+              assetName: "assets/images/safe_home.svg",
+              title: "keep your account safe",
+              subtitle: "passkeys offer state-of-the-art phishing resistance",
+            ),
+            verticalSpaceSmall(context),
+            verticalSpaceSmall(context),
+            CustomButtons.generalButton(
+              text: "Continue",
+              context: context,
+              onTap: () {
+                Navigator.pop(context);
+                vm.securityPageEnum = SecurityPageEnum.addPasskey;
+              },
+            )
+          ],
+        ),
       ),
     );
   }

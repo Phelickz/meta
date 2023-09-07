@@ -12,13 +12,15 @@ class MetaTraderApp extends StatelessWidget {
     final RouterService _routerService = locator<RouterService>();
 
     return ThemeBuilder(
-      defaultThemeMode: ThemeMode.light,
+      defaultThemeMode: ThemeMode.system,
       // statusBarColorBuilder: (theme) => theme.accentColor
       darkTheme: CustomThemeData.darkTheme,
       lightTheme: CustomThemeData.lightTheme,
       builder: (context, regularTheme, darkTheme, themeMode) {
         return MaterialApp.router(
           title: "Meta Trader",
+          // locale: DevicePreview.locale(context),
+          // builder: DevicePreview.appBuilder,
           debugShowCheckedModeBanner: false,
           routeInformationParser: _routerService.router.defaultRouteParser(),
           routerDelegate: _routerService.router.delegate(),
