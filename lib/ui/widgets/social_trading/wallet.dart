@@ -252,7 +252,7 @@ class WalletPage extends StatelessWidget {
               shape: BoxShape.circle,
               color: isDarkMode
                   ? const Color(0xFF052844)
-                  : const Color(0x000000ff),
+                  : const Color(0xFF47B0F5),
             ),
             child: Padding(
               padding: EdgeInsets.all(
@@ -282,8 +282,10 @@ class WalletPage extends StatelessWidget {
                   context,
                   1.4,
                 ),
-                fontWeight: FontWeight.normal,
-                color: isDarkMode ? const Color(0xffD0D5DD) : Colors.white,
+                fontWeight: FontWeight.w500,
+                color: isDarkMode
+                    ? const Color(0xffD0D5DD)
+                    : const Color(0xFF475467),
               ),
             ),
           ),

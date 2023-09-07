@@ -39,26 +39,28 @@ AppBar socialTradingDashboardAppBar(
       )
     ],
     title: Container(
-      width: 210,
+      width: McGyver.rsDoubleW(context, 53),
       height: 46,
       decoration: BoxDecoration(
-        color: Colors.black,
-        borderRadius: BorderRadius.circular(60),
+        color: isDarkMode ? const Color(0xFF0C2031) : const Color(0xff073961),
+        borderRadius: BorderRadius.circular(25),
       ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GestureDetector(
+            InkWell(
               onTap: () => viewModel.setSocialTradingPageEnum =
                   SocialTradingPageEnum.masterTraders,
               child: Container(
-                padding: const EdgeInsets.all(6),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
                 decoration: viewModel.socialTradingPageEnum ==
                         SocialTradingPageEnum.masterTraders
                     ? BoxDecoration(
-                        color: Theme.of(context).primaryColor,
+                        color: isDarkMode
+                            ? const Color(0xFF47B0F5)
+                            : const Color(0xff20A0F3),
                         borderRadius: BorderRadius.circular(16),
                       )
                     : null,
@@ -66,20 +68,27 @@ AppBar socialTradingDashboardAppBar(
                   'Master Traders',
                   style: CustomThemeData.generateStyle(
                     fontSize: 13,
-                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
+                    color: viewModel.socialTradingPageEnum ==
+                            SocialTradingPageEnum.masterTraders
+                        ? const Color(0xFF101828)
+                        : Colors.white,
                   ),
                 ),
               ),
             ),
-            GestureDetector(
+            const SizedBox(width: 5),
+            InkWell(
               onTap: () => viewModel.setSocialTradingPageEnum =
                   SocialTradingPageEnum.myTrades,
               child: Container(
-                padding: const EdgeInsets.all(6),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
                 decoration: viewModel.socialTradingPageEnum ==
                         SocialTradingPageEnum.myTrades
                     ? BoxDecoration(
-                        color: Theme.of(context).primaryColor,
+                        color: isDarkMode
+                            ? const Color(0xFF47B0F5)
+                            : const Color(0xff20A0F3),
                         borderRadius: BorderRadius.circular(16),
                       )
                     : null,
@@ -87,7 +96,13 @@ AppBar socialTradingDashboardAppBar(
                   'My Trades',
                   style: CustomThemeData.generateStyle(
                     fontSize: 13,
-                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
+                    color: viewModel.socialTradingPageEnum ==
+                            SocialTradingPageEnum.myTrades
+                        ? isDarkMode
+                            ? const Color(0xFF101828)
+                            : Colors.white
+                        : Colors.white,
                   ),
                 ),
               ),
@@ -105,16 +120,25 @@ AppBar socialTradingMenuAppBar(BuildContext context, String title,
   var isDarkMode = CustomThemeData.isDarkMode(context);
   return AppBar(
     elevation: 0,
-    backgroundColor: isDarkMode
-        ? viewModel.socialTradingPageEnum == SocialTradingPageEnum.wallet
-            ? const Color(0xff052844)
-            : Theme.of(context).scaffoldBackgroundColor
-        : const Color(0xFFD3ECFD),
+    backgroundColor:
+        viewModel.socialTradingPageEnum == SocialTradingPageEnum.wallet
+            ? isDarkMode
+                ? const Color(0xff052844)
+                : const Color(0xFF20A0F3)
+            : isDarkMode
+                ? const Color(0xff052844)
+                : Theme.of(context).scaffoldBackgroundColor,
     automaticallyImplyLeading: false,
     leading: IconButton(
         icon: Icon(
           Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
-          color: isDarkMode ? const Color(0xffD2D2D2) : Colors.black,
+          color: viewModel.socialTradingPageEnum == SocialTradingPageEnum.wallet
+              ? isDarkMode
+                  ? const Color(0xFFD0D5DD)
+                  : const Color(0xFFF5FBFE)
+              : isDarkMode
+                  ? const Color(0xFFD0D5DD)
+                  : const Color(0xFF344054),
         ),
         onPressed: () {
           if (viewModel.socialTradingPageEnum ==
@@ -146,7 +170,13 @@ AppBar socialTradingMenuAppBar(BuildContext context, String title,
       title,
       style: CustomThemeData.generateStyle(
         fontSize: McGyver.textSize(context, 2),
-        color: isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF344054),
+        color: viewModel.socialTradingPageEnum == SocialTradingPageEnum.wallet
+            ? isDarkMode
+                ? const Color(0xFFD0D5DD)
+                : const Color(0xFFF5FBFE)
+            : isDarkMode
+                ? const Color(0xFFD0D5DD)
+                : const Color(0xFF344054),
         fontWeight: FontWeight.bold,
       ),
     ),

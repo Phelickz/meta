@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
 import 'package:meta_trader/ui/widgets/social_trading/app_bar.dart';
+import 'package:meta_trader/ui/widgets/social_trading/copied_trader_position.dart';
 import 'package:meta_trader/ui/widgets/social_trading/master_traders.dart';
 import 'package:meta_trader/ui/widgets/social_trading/menu_main.dart';
 import 'package:meta_trader/ui/widgets/social_trading/my_trades.dart';
@@ -11,6 +12,7 @@ import 'package:meta_trader/ui/widgets/social_trading/transaction_details.dart';
 enum SocialTradingPageEnum {
   masterTraders,
   myTrades,
+  copiedTraderPosition,
   menuMain,
   wallet,
   transactionHistory,
@@ -64,6 +66,10 @@ class SocialTradingViewModel extends CustomBaseViewModel {
         return MyTrades(
           model: this,
         );
+      case SocialTradingPageEnum.copiedTraderPosition:
+        return CopiedTraderPositionPage(
+          viewModel: this,
+        );
       case SocialTradingPageEnum.menuMain:
         return MenuMainPage(
           viewModel: this,
@@ -94,6 +100,8 @@ class SocialTradingViewModel extends CustomBaseViewModel {
           context,
           this,
         );
+      case SocialTradingPageEnum.copiedTraderPosition:
+        return socialTradingMenuAppBar(context, 'Satoshi Nakamoto', '', this);
       case SocialTradingPageEnum.menuMain:
         return socialTradingMenuAppBar(context, 'Option', '', this);
       case SocialTradingPageEnum.wallet:
