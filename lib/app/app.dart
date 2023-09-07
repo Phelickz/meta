@@ -6,8 +6,6 @@ import 'package:meta_trader/ui/views/chart/chart_view.dart';
 import 'package:meta_trader/ui/views/provider/provider_view.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
-import '../ui/views/quotes/quotes_view.dart';
-
 class MetaTraderApp extends StatelessWidget {
   const MetaTraderApp({super.key});
 
@@ -21,23 +19,24 @@ class MetaTraderApp extends StatelessWidget {
       darkTheme: CustomThemeData.darkTheme,
       lightTheme: CustomThemeData.lightTheme,
       builder: (context, regularTheme, darkTheme, themeMode) {
-        // return MaterialApp.router(
-        //   title: "Meta Trader",
-        //   debugShowCheckedModeBanner: false,
-        //   routeInformationParser: _routerService.router.defaultRouteParser(),
-        //   routerDelegate: _routerService.router.delegate(),
-        //   theme: regularTheme,
-        //   themeMode: themeMode,
-        //   // theme: ThemeData(brightness: Brightness.light, fontFamily: 'Gilroy'),
-        //   darkTheme: darkTheme,
-        // );
-        return MaterialApp(
+        return MaterialApp.router(
+          title: "Meta Trader",
           debugShowCheckedModeBanner: false,
+          routeInformationParser: _routerService.router.defaultRouteParser(),
+          routerDelegate: _routerService.router.delegate(),
           theme: regularTheme,
           themeMode: themeMode,
+          // theme: ThemeData(brightness: Brightness.light, fontFamily: 'Gilroy'),
           darkTheme: darkTheme,
           home: const ProviderView(),
         );
+        // return MaterialApp(
+        //   debugShowCheckedModeBanner: false,
+        //   theme: regularTheme,
+        //   themeMode: themeMode,
+        //   darkTheme: darkTheme,
+        //   home: const SocialTradingDasboard(),
+        // );
       },
     );
   }
