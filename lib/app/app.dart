@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/locator/locator.dart';
 import 'package:meta_trader/app/services/router_service.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/ui/views/chart/chart_view.dart';
+import 'package:meta_trader/ui/views/provider/provider_view.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
 class MetaTraderApp extends StatelessWidget {
@@ -26,6 +28,7 @@ class MetaTraderApp extends StatelessWidget {
           themeMode: themeMode,
           // theme: ThemeData(brightness: Brightness.light, fontFamily: 'Gilroy'),
           darkTheme: darkTheme,
+          home: const ProviderView(),
         );
         // return MaterialApp(
         //   debugShowCheckedModeBanner: false,
