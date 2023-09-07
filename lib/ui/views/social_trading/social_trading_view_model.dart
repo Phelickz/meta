@@ -9,6 +9,16 @@ import 'package:meta_trader/ui/widgets/social_trading/transaction_history.dart';
 import 'package:meta_trader/ui/widgets/social_trading/wallet.dart';
 import 'package:meta_trader/ui/widgets/social_trading/transaction_details.dart';
 
+enum TradeType {
+  buy,
+  sell,
+}
+
+enum PositionType {
+  open,
+  closed,
+}
+
 enum SocialTradingPageEnum {
   masterTraders,
   myTrades,
@@ -34,6 +44,11 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     _transaction = t;
     rebuildUi();
   }
+
+  final openSummaryTabSelectedNotifier = ValueNotifier(0);
+  final closedSummaryTabSelectedNotifier = ValueNotifier(0);
+  final performanceSummaryTabSelectedNotifier = ValueNotifier(0);
+  final overviewSummaryTabSelectedNotifier = ValueNotifier(0);
 
   SocialTradingPageEnum _socialTradingPageEnum =
       SocialTradingPageEnum.masterTraders;
@@ -101,7 +116,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
           this,
         );
       case SocialTradingPageEnum.copiedTraderPosition:
-        return socialTradingMenuAppBar(context, 'Satoshi Nakamoto', '', this);
+        return socialTradingAvatarAppBar(context, this);
       case SocialTradingPageEnum.menuMain:
         return socialTradingMenuAppBar(context, 'Option', '', this);
       case SocialTradingPageEnum.wallet:

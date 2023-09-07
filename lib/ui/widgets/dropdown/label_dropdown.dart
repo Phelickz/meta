@@ -68,6 +68,8 @@ class LabelDropdown extends StatelessWidget {
             borderRadius: BorderRadius.circular(9),
           ),
           child: DropdownButton<String>(
+            dropdownColor: isDarkMode ? const Color(0xFF052844) : Colors.white,
+            focusColor: isDarkMode ? const Color(0xFF073961) : Colors.white,
             isExpanded: true,
             value: value,
             underline: const SizedBox.shrink(),
@@ -80,7 +82,8 @@ class LabelDropdown extends StatelessWidget {
             icon: dropDownIcon,
             onChanged: onChanged,
             items: options
-                .map((e) => DropdownMenuItem(value: e, child: Text(e)))
+                .map((e) => DropdownMenuItem(
+                    value: e, child: Text(e, style: textStyle)))
                 .toList(),
           ),
         )

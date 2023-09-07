@@ -110,7 +110,7 @@ class MasterTraderOverview extends StatelessWidget {
           indicator: UnderlineTabIndicator(
             borderRadius: BorderRadius.circular(15),
             borderSide: BorderSide(
-              width: 5.0,
+              width: 4.0,
               color: isDarkMode
                   ? const Color(0xff0C95EF)
                   : Theme.of(context).primaryColor,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
+import 'package:meta_trader/ui/widgets/social_trading/components/closed_position.dart';
+import 'package:meta_trader/ui/widgets/social_trading/components/open_position.dart';
 
 class CopiedTraderPositionPage extends StatelessWidget {
   final SocialTradingViewModel viewModel;
@@ -10,7 +12,7 @@ class CopiedTraderPositionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return DefaultTabController(
-      length: 4,
+      length: 2,
       child: Column(
         children: [
           Container(
@@ -57,9 +59,8 @@ class CopiedTraderPositionPage extends StatelessWidget {
           Expanded(
             child: TabBarView(
               children: [
-                Container(),
-                Container(),
-                Container(),
+                OpenPositionsComponent(viewModel: viewModel),
+                ClosedPositionsComponent(viewModel: viewModel),
               ],
             ),
           ),

@@ -35,7 +35,12 @@ class MyTrades extends StatelessWidget {
             child: ListView.builder(
               itemCount: 3,
               itemBuilder: (_, index) {
-                return const CopiedTraderTile();
+                return CopiedTraderTile(
+                  onTap: () {
+                    model.setSocialTradingPageEnum =
+                        SocialTradingPageEnum.copiedTraderPosition;
+                  },
+                );
               },
             ),
           )
