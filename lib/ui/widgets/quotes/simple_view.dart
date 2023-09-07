@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/widgets/quotes/components/simple_view_tile.dart';
@@ -18,6 +19,7 @@ class SimpleMarketView extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
+          verticalSpaceSmall(context),
           Row(
             children: [
               SizedBox(
@@ -25,28 +27,30 @@ class SimpleMarketView extends StatelessWidget {
                 child: Text(
                   "Symbol",
                   style: CustomThemeData.generateColoredStyle(
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold,
-                      context: context),
+                    fontSize: McGyver.textSize(context, 1.5),
+                    fontWeight: FontWeight.bold,
+                    context: context,
+                  ),
                 ),
               ),
               SizedBox(
-                width: 24.pWidth(context),
+                width: 14.pWidth(context),
               ),
               Text(
                 "Bid",
                 style: CustomThemeData.generateColoredStyle(
-                    fontSize: 10,
-                    fontWeight: FontWeight.bold,
-                    context: context),
+                  fontSize: McGyver.textSize(context, 1.5),
+                  fontWeight: FontWeight.bold,
+                  context: context,
+                ),
               ),
               SizedBox(
-                width: 24.pWidth(context),
+                width: 44.pWidth(context),
               ),
               Text(
                 "Ask",
                 style: CustomThemeData.generateColoredStyle(
-                    fontSize: 10,
+                    fontSize: McGyver.textSize(context, 1.5),
                     fontWeight: FontWeight.bold,
                     context: context),
               ),
@@ -56,31 +60,39 @@ class SimpleMarketView extends StatelessWidget {
               Text(
                 "Spread",
                 style: CustomThemeData.generateColoredStyle(
-                    fontSize: 10,
-                    fontWeight: FontWeight.bold,
-                    context: context),
+                  fontSize: McGyver.textSize(context, 1.5),
+                  fontWeight: FontWeight.bold,
+                  context: context,
+                ),
               ),
             ],
           ),
           SizedBox(
             height: 10.pHeight(context),
           ),
+          verticalSpaceSmall(context),
           Expanded(
             child: ListView.separated(
-                itemCount: model.quoteList.length,
-                separatorBuilder: (context, index) {
-                  return SizedBox(height: 24.pHeight(context));
-                },
-                itemBuilder: (context, index) {
-                  final quote = model.quoteList[index];
-                  return SimpleViewTile(
+              itemCount: model.quoteList.length,
+              separatorBuilder: (context, index) {
+                return SizedBox(height: 24.pHeight(context));
+              },
+              itemBuilder: (context, index) {
+                final quote = model.quoteList[index];
+                return InkWell(
+                  onLongPress: () {
+                    model.openOptionsBottomSheet(context);
+                  },
+                  child: SimpleViewTile(
                     currencyPair: quote["currencyPair"],
                     high: quote["high"],
                     low: quote["low"],
                     spread: quote["spread"],
                     isFav: model.isFav,
-                  );
-                }),
+                  ),
+                );
+              },
+            ),
           ),
         ],
       ),

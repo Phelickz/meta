@@ -69,4 +69,5 @@ class AssetManager {
   static const simpleQuoteIcon = "$ICONPATH/simplequote.svg";
   static const advancedQuoteIcon = "$ICONPATH/advancedquote.svg";
   static const modernQuoteIcon = "$ICONPATH/modernquote.svg";
+  static const settings4 = "$ICONPATH/setting-4.svg";
 }

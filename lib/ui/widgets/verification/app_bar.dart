@@ -19,9 +19,9 @@ AppBar verifyAppBar(BuildContext context, String title, String subtitle,
         color: isDarkMode ? Colors.white : Colors.black,
       ),
       onPressed: () {
-        // if (model.authPageEnum == AuthPageEnum.broker) {
-        //   model.goBack();
-        // }
+        if (model.verificationPageEnum == VerificationPageEnum.verifyLanding) {
+          model.setVerificationViewEnum = VerificationPageEnum.verifyOne;
+        }
 
         // if (model.authPageEnum == AuthPageEnum.chooseAccount) {
         //   model.setAuthPageEnum = AuthPageEnum.broker;

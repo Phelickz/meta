@@ -16,16 +16,18 @@ AppBar chartAppBar(
   return AppBar(
     elevation: 0,
     backgroundColor: isDarkMode
-        ? Theme.of(context).scaffoldBackgroundColor
-        : const Color(0xFFD3ECFD),
+        ? const Color(0xff052844)
+        : Theme.of(context).scaffoldBackgroundColor,
     automaticallyImplyLeading: false,
     leading: IconButton(
         icon: Icon(
           Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
-          color: isDarkMode ? const Color(0xffD2D2D2) : Colors.black,
+          color: isDarkMode
+              ? const Color(0xffD2D2D2).withOpacity(0)
+              : Colors.black.withOpacity(0),
         ),
         onPressed: () {
-          model.goBack();
+          // model.goBack();
         }),
     centerTitle: true,
     title: Row(

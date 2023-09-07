@@ -22,19 +22,23 @@ AppBar tradeAppBar(
             ? const Color(0xFFD3ECFD)
             : Theme.of(context).scaffoldBackgroundColor,
     automaticallyImplyLeading: false,
-    leading: IconButton(
-        icon: Icon(
-          Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
-          color: isDarkMode ? const Color(0xffD2D2D2) : const Color(0xFF667085),
-        ),
-        onPressed: () {
-          if (model.tradePageEnum == TradePageEnum.trade) {
-            model.goBack();
-          }
-          if (model.tradePageEnum == TradePageEnum.modifyTrade) {
-            model.tradePageEnum = TradePageEnum.trade;
-          }
-        }),
+    leading: model.tradePageEnum == TradePageEnum.modifyTrade
+        ? IconButton(
+            icon: Icon(
+              Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
+              color: isDarkMode
+                  ? const Color(0xffD2D2D2)
+                  : const Color(0xFF667085),
+            ),
+            onPressed: () {
+              if (model.tradePageEnum == TradePageEnum.trade) {
+                model.goBack();
+              }
+              if (model.tradePageEnum == TradePageEnum.modifyTrade) {
+                model.tradePageEnum = TradePageEnum.trade;
+              }
+            })
+        : null,
     centerTitle: true,
     title: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
