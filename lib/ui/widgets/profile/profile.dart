@@ -92,11 +92,14 @@ class ProfilePage extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 32.pHeight(context)),
-                const ProfileTiles(
+                ProfileTiles(
                   title: "Withdrawal/Deposit History",
                   subTitle: "view your withdrawal and deposit history",
                   leadingIcon: AssetManager.withdrawal,
                   trailingIcon: AssetManager.forwardArrow,
+                  onTap: () {
+                    model.push(const TransactionsRoute());
+                  },
                 ),
                 ProfileTiles(
                   title: "Payment Methods",

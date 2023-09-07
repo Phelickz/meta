@@ -21,7 +21,7 @@ class QuotesBottomSheet extends StatelessWidget {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return SingleChildScrollView(
       child: Container(
-        height: McGyver.rsDoubleH(context, 40),
+        height: McGyver.rsDoubleH(context, 55),
         padding: EdgeInsets.symmetric(
           horizontal: McGyver.rsDoubleH(context, 2),
           vertical: McGyver.rsDoubleH(context, 4),
@@ -46,40 +46,70 @@ class QuotesBottomSheet extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             QuotesBottomSheetTile(
-                label: "Trade",
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (_) {
-                    return TradeExecuetionScreen();
-                  }));
-                }),
+              label: "Trade",
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) {
+                      return const TradeExecutionScreen();
+                    },
+                  ),
+                );
+              },
+            ),
             QuotesBottomSheetTile(
-                label: "Chart",
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (_) {
-                    return TradeCloseScreen();
-                  }));
-                }),
+              label: "Chart",
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) {
+                      return const TradeCloseScreen();
+                    },
+                  ),
+                );
+              },
+            ),
             QuotesBottomSheetTile(
-                label: "Details",
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (_) {
-                    return TradeDetailsScreen();
-                  }));
-                }),
+              label: "Details",
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) {
+                      return const TradeDetailsScreen();
+                    },
+                  ),
+                );
+              },
+            ),
             QuotesBottomSheetTile(
-                label: "Statistics",
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (_) {
-                    return TradeStatisticsScreen();
-                  }));
-                }),
+              label: "Statistics",
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) {
+                      return const TradeStatisticsScreen();
+                    },
+                  ),
+                );
+              },
+            ),
             QuotesBottomSheetTile(
-                label: "Depth of market",
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (_) {
-                    return TradeDepthScreen();
-                  }));
-                }),
+              label: "Depth of market",
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) {
+                      return const TradeDepthScreen();
+                    },
+                  ),
+                );
+              },
+            ),
             QuotesBottomSheetTile(
                 label: "Delete", isRed: true, onPressed: () {}),
             verticalSpaceSmall(context),

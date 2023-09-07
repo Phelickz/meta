@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/transactions/transactions_view_model.dart';
@@ -36,7 +37,8 @@ class TransactionDetailsPage extends StatelessWidget {
           ),
           Expanded(child: model.returnTransactionDetails()),
           CustomButtons.generalButton(
-              context: context, onTap: () {}, text: "Share Receipts")
+              context: context, onTap: () {}, text: "Share Receipts"),
+          verticalSpaceMedium(context),
         ],
       ),
     );

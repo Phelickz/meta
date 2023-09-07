@@ -35,19 +35,19 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
             onPressed: () {
               if (model.quotesPageEnum == QuotesPageEnum.details) {
                 model.setQuotesPageEnum = QuotesPageEnum.search;
-              }
-
-              if (model.quotesPageEnum == QuotesPageEnum.edit) {
+              } else if (model.quotesPageEnum == QuotesPageEnum.edit) {
                 model.setQuotesPageEnum = QuotesPageEnum.markets;
-              }
-              if (model.quotesPageEnum == QuotesPageEnum.subGroups) {
+              } else if (model.quotesPageEnum == QuotesPageEnum.subGroups) {
                 model.setQuotesPageEnum = QuotesPageEnum.search;
+              } else if (model.quotesPageEnum == QuotesPageEnum.search) {
+                model.setQuotesPageEnum = QuotesPageEnum.markets;
               } else {
                 model.goBack();
               }
             }),
     centerTitle: model.quotesPageEnum == QuotesPageEnum.markets ||
-            model.quotesPageEnum == QuotesPageEnum.favorites
+            model.quotesPageEnum == QuotesPageEnum.favorites ||
+            model.quotesPageEnum == QuotesPageEnum.edit
         ? true
         : false,
     title: model.quotesPageEnum == QuotesPageEnum.search ||
@@ -162,7 +162,8 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
             ),
           ),
     actions: [
-      model.quotesPageEnum == QuotesPageEnum.search
+      model.quotesPageEnum == QuotesPageEnum.search ||
+              model.quotesPageEnum == QuotesPageEnum.details
           ? const SizedBox()
           : Padding(
               padding: EdgeInsets.only(right: 24.pWidth(context)),

@@ -114,7 +114,7 @@ class TabViewMarkets extends StatelessWidget {
         itemBuilder: (context, index) {
           final quotes = model.quoteList[index];
           return InkWell(
-            onLongPress: () {
+            onTap: () {
               model.openOptionsBottomSheet(context);
             },
             child: ModernViewTile(

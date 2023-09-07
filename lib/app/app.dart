@@ -18,7 +18,7 @@ class MetaTraderApp extends StatelessWidget {
       lightTheme: CustomThemeData.lightTheme,
       builder: (context, regularTheme, darkTheme, themeMode) {
         return MaterialApp.router(
-          title: "Meta Trader",
+          title: "AioTrader",
           // locale: DevicePreview.locale(context),
           // builder: DevicePreview.appBuilder,
           debugShowCheckedModeBanner: false,

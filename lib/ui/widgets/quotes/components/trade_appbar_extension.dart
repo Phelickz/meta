@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
@@ -13,17 +14,20 @@ class TradeAppbarExtension extends StatelessWidget {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Column(
       children: [
-        SizedBox(
-          height: 12.pHeight(context),
-        ),
         Container(
-          height: 68.pHeight(context),
+          height: 80.pHeight(context),
           width: double.infinity,
           color: isDarkMode
               ? ColorManager.darkHeaderColor
               : Theme.of(context).scaffoldBackgroundColor,
-          child: const CustomTextFields(
-            hintText: "Market Execution",
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: McGyver.rsDoubleW(context, 5),
+              vertical: 12,
+            ),
+            child: const CustomTextFields(
+              hintText: "Market Execution",
+            ),
           ),
         ),
       ],

@@ -55,7 +55,9 @@ class HomeView extends StackedView<HomeViewModel> {
             color: isDarkMode ? Colors.white54 : Colors.white,
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              viewModel.push(const NotificationRoute());
+            },
             icon: const Icon(
               Icons.notifications_outlined,
               size: 30,
@@ -101,8 +103,10 @@ class HomeView extends StackedView<HomeViewModel> {
               viewModel.push(const LoyaltyRewardsRoute());
             }),
             const SizedBox(width: 10),
-            bottomIcons(context, 'assets/images/note-2.svg',
-                'Transaction History', () {}),
+            bottomIcons(
+                context, 'assets/images/note-2.svg', 'Transaction History', () {
+              viewModel.push(const TransactionsRoute());
+            }),
           ],
         ),
         child: Padding(
@@ -145,7 +149,9 @@ class HomeView extends StackedView<HomeViewModel> {
                       subtitle: 'Stay up to date with forex news',
                     ),
                     TradeFeatures(
-                      onTap: () {},
+                      onTap: () {
+                        viewModel.push(ChartRoute(showBackButton: true));
+                      },
                       image: 'assets/images/trade.svg',
                       title: 'Chart Analysis',
                       subtitle: 'Copy and earn with experienced traders',
@@ -217,7 +223,11 @@ class HomeView extends StackedView<HomeViewModel> {
                           : const Color(0xff475467),
                     ),
                   ),
-                  TextButton(onPressed: () {}, child: const Text('View more'))
+                  TextButton(
+                      onPressed: () {
+                        viewModel.push(const ForexNewsRoute());
+                      },
+                      child: const Text('View more'))
                 ],
               ),
               verticalSpaceXSmall(context),
@@ -302,7 +312,11 @@ class HomeView extends StackedView<HomeViewModel> {
                           : const Color(0xff475467),
                     ),
                   ),
-                  TextButton(onPressed: () {}, child: const Text('View more'))
+                  TextButton(
+                      onPressed: () {
+                        viewModel.push(const SocialTradingDasboard());
+                      },
+                      child: const Text('View more'))
                 ],
               ),
               SizedBox(
