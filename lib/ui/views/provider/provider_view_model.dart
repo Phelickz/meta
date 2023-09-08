@@ -21,6 +21,8 @@ class ProviderViewModel extends CustomBaseViewModel{
   final followersTabSelectorNotifier  = ValueNotifier(0);
   final overviewTabSelectedNotifier = ValueNotifier(0);
 
+  bool showExpandedPositionView = false;
+
   List<CandleData> getCandleData() {
     return [
       CandleData('3 Sept 20:14', 50000, 70000, 60000, 55000),
@@ -35,6 +37,79 @@ class ProviderViewModel extends CustomBaseViewModel{
       // Add more data points as needed
     ];
   }
+
+  Map<String, dynamic> tradeHistoryDetail = {
+    "profit": "509 082.18",
+    "deposit": "592 380.17",
+    "balance": "100 000.00",
+    "equity": "113 436.65",
+    "totalTrades": "300"
+  };
+  
+  List<Map<String, dynamic>> tradeDetailList = [
+    {
+    "trade": "AUDJPY",
+    "from" : "4.51234",
+    "to" : "4.51234",
+    "amount": "284.57",
+    "sell": true,
+    "quantity":"3",
+    "available": "open",
+    "date": "2023.7.13 20:40:08",
+    "orderID":"23162111",
+    "commission":"\$400.00"
+    },
+    {
+    "trade": "AUDJPY",
+    "from" : "4.51234",
+    "to" : "4.51234",
+    "amount": "284.57",
+    "sell": false,
+    "quantity":"10",
+    "available": "open",
+    "date": "2023.7.13 20:40:08",
+    "orderID":"23162111",
+    "commission":"\$400.00"
+    },
+    {
+    "trade": "AUDJPY",
+    "from" : "4.51234",
+    "to" : "4.51234",
+    "amount": "284.57",
+    "sell": true,
+    "quantity":"5",
+    "available": "open",
+    "date": "2023.7.13 20:40:08",
+    "orderID":"23162111",
+    "commission":"\$400.00"
+    },
+    {
+    "trade": "AUDJPY",
+    "from" : "4.51234",
+    "to" : "4.51234",
+    "amount": "284.57",
+    "sell": true,
+    "quantity":"7",
+    "available": "open",
+    "date": "2023.7.13 20:40:08",
+    "orderID":"23162111",
+    "commission":"\$400.00"
+    },
+    {
+    "trade": "AUDJPY",
+    "from" : "4.51234",
+    "to" : "4.51234",
+    "amount": "284.57",
+    "sell": false,
+    "quantity":"3",
+    "available": "open",
+    "date": "2023.7.13 20:40:08",
+    "orderID":"23162111",
+    "commission":"\$400.00"
+    },
+    
+  ];
+  
 
 
   
@@ -66,7 +141,7 @@ class ProviderViewModel extends CustomBaseViewModel{
       case ProviderPageEnum.login:
         return ProviderLoginPage(viewModel: this);
       case ProviderPageEnum.dashboard:
-        return SingleChildScrollView(child: ProviderDashboardPage(viewModel: this));
+        return ProviderDashboardPage(viewModel: this);
     }
   }
 
