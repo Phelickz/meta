@@ -128,9 +128,7 @@ class MasterTraderOverview extends StatelessWidget {
         ),
         views: [
           TraderOverview(model: model),
-          TradingHistory(
-            model: model,
-          )
+          TradingHistory(model: model),
         ],
         onChange: (index) {
           if (index == 0) {

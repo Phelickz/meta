@@ -5,6 +5,7 @@ import 'package:meta_trader/ui/widgets/social_trading/copied_trader_position.dar
 import 'package:meta_trader/ui/widgets/social_trading/master_traders.dart';
 import 'package:meta_trader/ui/widgets/social_trading/menu_main.dart';
 import 'package:meta_trader/ui/widgets/social_trading/my_trades.dart';
+import 'package:meta_trader/ui/widgets/social_trading/subscription_setup.dart';
 import 'package:meta_trader/ui/widgets/social_trading/transaction_history.dart';
 import 'package:meta_trader/ui/widgets/social_trading/wallet.dart';
 import 'package:meta_trader/ui/widgets/social_trading/transaction_details.dart';
@@ -30,6 +31,8 @@ enum SocialTradingPageEnum {
   notification,
   support,
   about,
+  subscriptionSetup,
+  subscriptionGuide,
 }
 
 enum MasterTraderOverviewEnum { overview, tradingHistory }
@@ -50,8 +53,9 @@ class SocialTradingViewModel extends CustomBaseViewModel {
   final performanceSummaryTabSelectedNotifier = ValueNotifier(0);
   final overviewSummaryTabSelectedNotifier = ValueNotifier(0);
 
+  // TODO: change back to masterTraders
   SocialTradingPageEnum _socialTradingPageEnum =
-      SocialTradingPageEnum.masterTraders;
+      SocialTradingPageEnum.subscriptionGuide;
 
   SocialTradingPageEnum get socialTradingPageEnum => _socialTradingPageEnum;
 
@@ -102,6 +106,10 @@ class SocialTradingViewModel extends CustomBaseViewModel {
           transaction: _transaction,
           viewModel: this,
         );
+      case SocialTradingPageEnum.subscriptionSetup:
+        return SubscriptionSetupPage(
+          viewModel: this,
+        );
       default:
         return Container();
     }
@@ -118,17 +126,23 @@ class SocialTradingViewModel extends CustomBaseViewModel {
       case SocialTradingPageEnum.copiedTraderPosition:
         return socialTradingAvatarAppBar(context, this);
       case SocialTradingPageEnum.menuMain:
-        return socialTradingMenuAppBar(context, 'Option', '', this);
+        return socialTradingCustomAppBar(context, 'Option', '', this);
       case SocialTradingPageEnum.wallet:
-        return socialTradingMenuAppBar(context, 'Wallet', '', this);
+        return socialTradingCustomAppBar(context, 'Wallet', '', this);
       case SocialTradingPageEnum.transactionHistory:
-        return socialTradingMenuAppBar(context, 'Transaction History', '', this,
-            "assets/icons/filter.svg");
+        return socialTradingCustomAppBar(
+            context, 'Transaction History', '', this);
       case SocialTradingPageEnum.transactionDetails:
-        return socialTradingMenuAppBar(
+        return socialTradingCustomAppBar(
             context, 'Transaction Details', '', this);
       case SocialTradingPageEnum.notification:
-        return socialTradingMenuAppBar(context, 'Notifications', '', this);
+        return socialTradingCustomAppBar(context, 'Notifications', '', this);
+      case SocialTradingPageEnum.subscriptionSetup:
+        return socialTradingCustomAppBar(
+            context, 'Subscription Setup', '', this);
+      case SocialTradingPageEnum.subscriptionGuide:
+        return socialTradingCustomAppBar(context, 'Subscription Guide',
+            'Learn about subscription setup', this);
       default:
         return null;
     }
@@ -440,6 +454,28 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     ActivityChartData('27 Jun', 1300),
     ActivityChartData('29 Jun', 1500),
   ];
+
+  List<Map<String, String>> copyProportions = [
+    {
+      "title": "Equal 1x",
+      "amount": "26",
+      "volume": "1",
+    },
+    {
+      "title": "Double 2x",
+      "amount": "52",
+      "volume": "1",
+    },
+    {
+      "title": "Triple 3x",
+      "amount": "76",
+      "volume": "3",
+    },
+  ];
+
+  final selectedCopyProportionNotifier = ValueNotifier(0);
+  final isCustomCopyProportionNotifier = ValueNotifier(false);
+  final willSupportFundNotifier = ValueNotifier(false);
 }
 
 class TransactionModel {

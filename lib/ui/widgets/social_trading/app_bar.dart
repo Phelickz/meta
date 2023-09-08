@@ -230,9 +230,8 @@ AppBar socialTradingDashboardAppBar(
   );
 }
 
-AppBar socialTradingMenuAppBar(BuildContext context, String title,
-    String subtitle, SocialTradingViewModel viewModel,
-    [String assetName = '']) {
+AppBar socialTradingCustomAppBar(BuildContext context, String title,
+    String subtitle, SocialTradingViewModel viewModel) {
   var isDarkMode = CustomThemeData.isDarkMode(context);
   return AppBar(
     elevation: 0,
@@ -280,24 +279,60 @@ AppBar socialTradingMenuAppBar(BuildContext context, String title,
             viewModel.setSocialTradingPageEnum =
                 SocialTradingPageEnum.transactionHistory;
           }
+          if (viewModel.socialTradingPageEnum ==
+              SocialTradingPageEnum.subscriptionGuide) {
+            viewModel.setSocialTradingPageEnum =
+                SocialTradingPageEnum.subscriptionSetup;
+          }
         }),
     centerTitle: false,
-    title: Text(
-      title,
-      style: CustomThemeData.generateStyle(
-        fontSize: McGyver.textSize(context, 2),
-        color: viewModel.socialTradingPageEnum == SocialTradingPageEnum.wallet
-            ? isDarkMode
-                ? const Color(0xFFD0D5DD)
-                : const Color(0xFFF5FBFE)
-            : isDarkMode
-                ? const Color(0xFFD0D5DD)
-                : const Color(0xFF344054),
-        fontWeight: FontWeight.bold,
-      ),
+    title: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          title,
+          style: CustomThemeData.generateStyle(
+            fontSize: McGyver.textSize(context, 2),
+            fontWeight: FontWeight.bold,
+            color:
+                isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF344054),
+          ),
+        ),
+        if (subtitle != '')
+          Text(
+            subtitle,
+            style: CustomThemeData.generateStyle(
+              fontSize: McGyver.textSize(context, 1.6),
+              fontWeight: FontWeight.w500,
+              color: isDarkMode
+                  ? const Color(0xFF667085)
+                  : const Color(0xFF667085),
+            ),
+          ),
+      ],
     ),
     actions: [
-      if (assetName != '')
+      if (viewModel.socialTradingPageEnum ==
+          SocialTradingPageEnum.subscriptionSetup)
+        IconButton(
+          onPressed: () {
+            viewModel.setSocialTradingPageEnum =
+                SocialTradingPageEnum.subscriptionGuide;
+          },
+          icon: SizedBox(
+            height: McGyver.rsDoubleH(context, 2.8),
+            width: McGyver.rsDoubleH(context, 2.8),
+            child: SvgPicture.asset(
+              "assets/icons/info-circle.svg",
+              colorFilter: ColorFilter.mode(
+                isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF667085),
+                BlendMode.srcIn,
+              ),
+            ),
+          ),
+        ),
+      if (viewModel.socialTradingPageEnum ==
+          SocialTradingPageEnum.transactionHistory)
         IconButton(
           onPressed: () {
             showFilterModal(context);
@@ -306,7 +341,7 @@ AppBar socialTradingMenuAppBar(BuildContext context, String title,
             height: McGyver.rsDoubleH(context, 2.8),
             width: McGyver.rsDoubleH(context, 2.8),
             child: SvgPicture.asset(
-              assetName,
+              "assets/icons/filter.svg",
               colorFilter: ColorFilter.mode(
                 isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF667085),
                 BlendMode.srcIn,

@@ -385,8 +385,14 @@ class TraderOverview extends StatelessWidget {
         horizontal: McGyver.rsDoubleW(context, 5),
       ),
       decoration: BoxDecoration(
-        color: isDarkMode ? const Color(0xFF052844) : const Color(0xFFFAFDFF),
-        borderRadius: BorderRadius.circular(McGyver.rsDoubleW(context, 4)),
+        color: isDarkMode
+            ? const Color(0xFF052844)
+            : const Color(
+                0xFFFAFDFF,
+              ),
+        borderRadius: BorderRadius.circular(
+          McGyver.rsDoubleW(context, 4),
+        ),
       ),
       child: Column(
         children: [
@@ -400,7 +406,7 @@ class TraderOverview extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: isDarkMode
                       ? const Color(0xFFFFFFFF)
-                      : const Color(0xFF667085),
+                      : const Color(0xFF475467),
                 ),
               ),
               CustomOverviewSummaryTab(
@@ -480,7 +486,7 @@ class TraderOverview extends StatelessWidget {
                       "%",
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.3),
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.normal,
                         color: isDarkMode
                             ? const Color(0xFF94D1F9)
                             : const Color(0xFF47B0F5),
@@ -641,7 +647,7 @@ class TraderOverview extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: isDarkMode
                       ? const Color(0xFFFFFFFF)
-                      : const Color(0xFF667085),
+                      : const Color(0xFF475467),
                 ),
               ),
               CustomOverviewSummaryTab(
@@ -706,7 +712,7 @@ class TraderOverview extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: isDarkMode
                       ? const Color(0xFFFFFFFF)
-                      : const Color(0xFF667085),
+                      : const Color(0xFF475467),
                 ),
               ),
             ],
@@ -764,8 +770,14 @@ class TraderOverview extends StatelessWidget {
         horizontal: McGyver.rsDoubleW(context, 5),
       ),
       decoration: BoxDecoration(
-        color: isDarkMode ? const Color(0xFF052844) : const Color(0xFFFAFDFF),
-        borderRadius: BorderRadius.circular(McGyver.rsDoubleW(context, 4)),
+        color: isDarkMode
+            ? const Color(0xFF052844)
+            : const Color(
+                0xFFFAFDFF,
+              ),
+        borderRadius: BorderRadius.circular(
+          McGyver.rsDoubleW(context, 4),
+        ),
       ),
       child: Column(
         children: [
@@ -779,7 +791,7 @@ class TraderOverview extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: isDarkMode
                       ? const Color(0xFFFFFFFF)
-                      : const Color(0xFF667085),
+                      : const Color(0xFF475467),
                 ),
               ),
             ],
@@ -835,7 +847,7 @@ class TraderOverview extends StatelessWidget {
                 "assets/icons/info-circle.svg",
                 colorFilter: ColorFilter.mode(
                   isDarkMode
-                      ? const Color(0xFFD0D5DD)
+                      ? const Color(0xFF98A2B3)
                       : const Color(0xFF667085),
                   BlendMode.srcIn,
                 ),
@@ -890,7 +902,7 @@ class TraderOverview extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: isDarkMode
                         ? const Color(0xFFFFFFFF)
-                        : const Color(0xFF667085),
+                        : const Color(0xFF475467),
                   ),
                 ),
                 CustomOverviewSummaryTab(

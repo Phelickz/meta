@@ -10,6 +10,7 @@ class LabelTextField extends StatelessWidget {
   final TextInputType? keyboardType;
   final TextEditingController? controller;
   final bool isEnabled;
+  final bool hasSmallMargin;
   const LabelTextField({
     super.key,
     required this.label,
@@ -17,6 +18,7 @@ class LabelTextField extends StatelessWidget {
     this.keyboardType,
     this.controller,
     this.isEnabled = true,
+    this.hasSmallMargin = false,
   });
 
   @override
@@ -76,7 +78,9 @@ class LabelTextField extends StatelessWidget {
             ),
           ),
         ),
-        verticalSpaceSmall(context),
+        hasSmallMargin
+            ? verticalSpaceXXSmall(context)
+            : verticalSpaceSmall(context),
       ],
     );
   }
