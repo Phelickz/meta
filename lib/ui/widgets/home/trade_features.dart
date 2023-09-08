@@ -37,7 +37,7 @@ class TradeFeatures extends StatelessWidget {
           padding: const EdgeInsets.all(12.0),
           child: SizedBox(
             width: McGyver.rsDoubleW(context, 30),
-            height: McGyver.rsDoubleH(context, 18),
+            // height: McGyver.rsDoubleH(context, 18),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,

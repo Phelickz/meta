@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/trade/trade_view_model.dart';
-import 'package:meta_trader/ui/widgets/sliverappbar/fade_scroll_app_bar.dart';
 import 'package:meta_trader/ui/widgets/trade/components/trade_header_details.dart';
 import 'package:meta_trader/ui/widgets/trade/components/trade_tile.dart';
 import '../../../app/responsiveness/size.dart';

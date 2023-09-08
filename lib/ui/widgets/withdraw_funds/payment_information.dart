@@ -28,7 +28,7 @@ Widget paymentInformationCard(
       ),
     ),
     child: SizedBox(
-      height: McGyver.rsDoubleH(context, 18),
+      height: McGyver.rsDoubleH(context, 20),
       child: Padding(
         padding: const EdgeInsets.all(14.0),
         child: Row(

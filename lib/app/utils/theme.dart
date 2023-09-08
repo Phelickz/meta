@@ -135,7 +135,19 @@ class CustomThemeData {
   }
 
   static bool isDarkMode(BuildContext context) {
-    return getThemeManager(context).getSelectedTheme().themeMode ==
-        ThemeMode.dark;
+    if (getThemeManager(context).getSelectedTheme().themeMode ==
+        ThemeMode.system) {
+      return context.isDarkMode;
+    } else {
+      return getThemeManager(context).isDarkMode;
+    }
+  }
+}
+
+extension DarkMode on BuildContext {
+  /// is dark mode currently enabled?
+  bool get isDarkMode {
+    final brightness = MediaQuery.of(this).platformBrightness;
+    return brightness == Brightness.dark;
   }
 }

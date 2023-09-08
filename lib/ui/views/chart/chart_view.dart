@@ -8,7 +8,8 @@ import 'chart_view_model.dart';
 
 @RoutePage()
 class ChartView extends StackedView<ChartViewModel> {
-  const ChartView({super.key});
+  const ChartView({super.key, this.showBackButton = false});
+  final bool? showBackButton;
 
   @override
   // A builder function that gives us a ViewModel
@@ -23,7 +24,7 @@ class ChartView extends StackedView<ChartViewModel> {
       backgroundColor:
           isDarkMode ? const Color(0xFF0C2031) : const Color(0xFFFAFDFF),
       bodyPadding: EdgeInsets.zero,
-      appBar: viewModel.returnAppBar(context),
+      appBar: viewModel.returnAppBar(context, showBackButton ?? false),
       body: viewModel.returnPage(),
     );
   }

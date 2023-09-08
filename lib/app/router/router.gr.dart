@@ -79,9 +79,14 @@ abstract class $MetaTraderRouter extends _i33.RootStackRouter {
       );
     },
     ChartRoute.name: (routeData) {
+      final args = routeData.argsAs<ChartRouteArgs>(
+          orElse: () => const ChartRouteArgs());
       return _i33.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.ChartView(),
+        child: _i3.ChartView(
+          key: args.key,
+          showBackButton: args.showBackButton,
+        ),
       );
     },
     CurrencyConverterRoute.name: (routeData) {
@@ -295,16 +300,40 @@ class BottomNavBarRoute extends _i33.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.ChartView]
-class ChartRoute extends _i33.PageRouteInfo<void> {
-  const ChartRoute({List<_i33.PageRouteInfo>? children})
-      : super(
+class ChartRoute extends _i33.PageRouteInfo<ChartRouteArgs> {
+  ChartRoute({
+    _i34.Key? key,
+    bool? showBackButton = false,
+    List<_i33.PageRouteInfo>? children,
+  }) : super(
           ChartRoute.name,
+          args: ChartRouteArgs(
+            key: key,
+            showBackButton: showBackButton,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'ChartRoute';
 
-  static const _i33.PageInfo<void> page = _i33.PageInfo<void>(name);
+  static const _i33.PageInfo<ChartRouteArgs> page =
+      _i33.PageInfo<ChartRouteArgs>(name);
+}
+
+class ChartRouteArgs {
+  const ChartRouteArgs({
+    this.key,
+    this.showBackButton = false,
+  });
+
+  final _i34.Key? key;
+
+  final bool? showBackButton;
+
+  @override
+  String toString() {
+    return 'ChartRouteArgs{key: $key, showBackButton: $showBackButton}';
+  }
 }
 
 /// generated route for

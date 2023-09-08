@@ -68,11 +68,19 @@ class SettingsPage extends StatelessWidget {
               height: 28.pHeight(context),
             ),
             NotificationSettingsTile(
-                title: "Dark Mode",
-                value: model.isDarkMode(),
-                onChanged: (value) {
-                  model.toggleThemeMode(value);
-                }),
+              title: "Use Device Theme",
+              value: model.isSystemMode(context),
+              onChanged: (value) {
+                model.toggleThemeModeSystem(context);
+              },
+            ),
+            NotificationSettingsTile(
+              title: "Dark Mode",
+              value: CustomThemeData.isDarkMode(context),
+              onChanged: (value) {
+                model.toggleThemeMode(context);
+              },
+            ),
             verticalSpaceXSmall(context),
             BasicSettingsTile(
               title: "Chart Color",

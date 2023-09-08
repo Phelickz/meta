@@ -31,7 +31,8 @@ class HelpAndSupportViewModel extends CustomBaseViewModel {
   bool _isDarkMode = false;
   final _themeService = locator<ThemeServices>();
 
-  HelpAndSupportPageEnum _helpAndSupportPageEnum = HelpAndSupportPageEnum.faq;
+  HelpAndSupportPageEnum _helpAndSupportPageEnum =
+      HelpAndSupportPageEnum.helpAndSupport;
 
   HelpAndSupportPageEnum get helpAndSupportPageEnum => _helpAndSupportPageEnum;
 

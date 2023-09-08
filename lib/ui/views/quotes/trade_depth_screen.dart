@@ -8,22 +8,25 @@ import 'package:meta_trader/ui/widgets/quotes/components/trade_depth.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
 
-class TradeDepthScreen extends StackedView<QuotesViewModel>{
+class TradeDepthScreen extends StackedView<QuotesViewModel> {
   const TradeDepthScreen({super.key});
 
   @override
-  Widget builder(BuildContext context, QuotesViewModel viewModel, Widget? child) {
-    // TODO: implement builder
+  Widget builder(
+      BuildContext context, QuotesViewModel viewModel, Widget? child) {
     return Skeleton(
-      isBusy: viewModel.isBusy, 
-      appBar: tradeAppBars1(context, true, "EURUSD", "Depth of Market",popMenu()), 
-      bodyPadding: EdgeInsets.symmetric(vertical: 16.pHeight(context), horizontal: 24.pWidth(context)),
-      body: const TradeDepthGrid()
+      isBusy: viewModel.isBusy,
+      appBar:
+          tradeAppBars1(context, true, "EURUSD", "Depth of Market", popMenu()),
+      bodyPadding: EdgeInsets.symmetric(
+        // vertical: 16.pHeight(context),
+        horizontal: 5.pWidth(context),
+      ),
+      body: const TradeDepthGrid(),
     );
   }
 
-
-  Widget popMenu(){
+  Widget popMenu() {
     return PopupMenuButton(
       // padding: EdgeInsets.all(),
       child: Padding(
@@ -32,21 +35,21 @@ class TradeDepthScreen extends StackedView<QuotesViewModel>{
       ),
       itemBuilder: (context) => [
         PopupMenuItem(
-          child: Text('Lots'),
-          onTap: (){},
+          child: const Text('Lots'),
+          onTap: () {},
           enabled: true,
         ),
         PopupMenuItem(
-          child: Text('Amount'),
-          onTap: (){},
+          child: const Text('Amount'),
+          onTap: () {},
           enabled: false,
-          )
-      ]
+        )
+      ],
     );
   }
+
   @override
   QuotesViewModel viewModelBuilder(BuildContext context) {
     return QuotesViewModel();
   }
-  
 }

@@ -17,4 +17,11 @@ Future main() async {
 
   /// Runs the app :)
   runApp(const MetaTraderApp());
+
+  // runApp(
+  //   DevicePreview(
+  //     enabled: !kReleaseMode,
+  //     builder: (context) => const MetaTraderApp(), // Wrap your app
+  //   ),
+  // );
 }

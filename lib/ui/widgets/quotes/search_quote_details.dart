@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 
 import '../../../app/responsiveness/res.dart';
@@ -20,11 +21,20 @@ class SearchQuoteDetailsPage extends StatelessWidget {
             style: CustomThemeData.generateColoredStyle(
                 fontSize: 12, fontWeight: FontWeight.bold, context: context),
           ),
-          Expanded(child: ListView.builder(itemBuilder: (context, index) {
-            final details = model.sampleQuoteDetails[index];
-            return QuoteDetailsTile(
-                title: details["title"], value: details["details"]);
-          }))
+          Expanded(
+            child: ListView.separated(
+              itemCount: model.sampleQuoteDetails.length,
+              itemBuilder: (context, index) {
+                final details = model.sampleQuoteDetails[index];
+                return QuoteDetailsTile(
+                    title: details?["title"] ?? '',
+                    value: details?["value"] ?? '');
+              },
+              separatorBuilder: (BuildContext context, int index) {
+                return verticalSpaceSmall(context);
+              },
+            ),
+          )
         ],
       ),
     );

@@ -31,7 +31,7 @@ AppBar helpAndSupportAppBar(
           if (helpAndSupportPageEnum == HelpAndSupportPageEnum.helpAndSupport) {
             model.goBack();
           } else {
-            model.helpAndSupportPageEnum ==
+            model.setHelpAndSupportPageEnum =
                 HelpAndSupportPageEnum.helpAndSupport;
           }
         }),

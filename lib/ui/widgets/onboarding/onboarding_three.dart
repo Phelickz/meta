@@ -16,63 +16,65 @@ class OnboardingThree extends StatelessWidget {
       padding: EdgeInsets.symmetric(
         horizontal: McGyver.textSize(context, 3),
       ),
-      child: Column(
-        children: [
-          verticalSpaceSmall(context),
-          SvgPicture.asset(
-            'assets/images/onboarding3.svg',
-            height: McGyver.rsDoubleH(context, 50),
-            width: McGyver.rsDoubleH(context, 70),
-          ),
-          RichText(
-            textAlign: TextAlign.center,
-            text: TextSpan(
-              text: 'Deposit ',
-              style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 3.2),
-                fontWeight: FontWeight.w700,
-                color: Theme.of(context).primaryColor,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            verticalSpaceSmall(context),
+            SvgPicture.asset(
+              'assets/images/onboarding3.svg',
+              height: McGyver.rsDoubleH(context, 50),
+              width: McGyver.rsDoubleH(context, 70),
+            ),
+            RichText(
+              textAlign: TextAlign.center,
+              text: TextSpan(
+                text: 'Deposit ',
+                style: CustomThemeData.generateStyle(
+                  fontSize: McGyver.textSize(context, 3.2),
+                  fontWeight: FontWeight.w700,
+                  color: Theme.of(context).primaryColor,
+                ),
+                children: [
+                  TextSpan(
+                    text: 'and ',
+                    style: CustomThemeData.generateStyle(
+                      fontSize: McGyver.textSize(context, 3.2),
+                      fontWeight: FontWeight.w700,
+                      color: isDarkMode ? Colors.white : Colors.black,
+                    ),
+                  ),
+                  TextSpan(
+                    text: 'withdraw funds ',
+                    style: CustomThemeData.generateStyle(
+                      fontSize: McGyver.textSize(context, 3.2),
+                      fontWeight: FontWeight.w700,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                  ),
+                  TextSpan(
+                    text: 'seamlessly on the Meta Trader 5 app.',
+                    style: CustomThemeData.generateStyle(
+                      fontSize: McGyver.textSize(context, 3.2),
+                      fontWeight: FontWeight.w700,
+                      color: isDarkMode ? Colors.white : Colors.black,
+                    ),
+                  )
+                ],
               ),
-              children: [
-                TextSpan(
-                  text: 'and ',
-                  style: CustomThemeData.generateStyle(
-                    fontSize: McGyver.textSize(context, 3.2),
-                    fontWeight: FontWeight.w700,
-                    color: isDarkMode ? Colors.white : Colors.black,
-                  ),
-                ),
-                TextSpan(
-                  text: 'withdraw funds ',
-                  style: CustomThemeData.generateStyle(
-                    fontSize: McGyver.textSize(context, 3.2),
-                    fontWeight: FontWeight.w700,
-                    color: Theme.of(context).primaryColor,
-                  ),
-                ),
-                TextSpan(
-                  text: 'seamlessly on the Meta Trader 5 app.',
-                  style: CustomThemeData.generateStyle(
-                    fontSize: McGyver.textSize(context, 3.2),
-                    fontWeight: FontWeight.w700,
-                    color: isDarkMode ? Colors.white : Colors.black,
-                  ),
-                )
-              ],
             ),
-          ),
-          verticalSpaceSmall(context),
-          Text(
-            'With the new Meta Trader 5 app, you can easily deposit and withdraw funds from your real account with ease.',
-            textAlign: TextAlign.center,
-            style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 1.8),
-              color: isDarkMode
-                  ? const Color(0xff98A2B3)
-                  : const Color(0xff667085),
-            ),
-          )
-        ],
+            verticalSpaceSmall(context),
+            Text(
+              'With the new Meta Trader 5 app, you can easily deposit and withdraw funds from your real account with ease.',
+              textAlign: TextAlign.center,
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 1.8),
+                color: isDarkMode
+                    ? const Color(0xff98A2B3)
+                    : const Color(0xff667085),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

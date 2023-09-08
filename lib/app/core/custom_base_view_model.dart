@@ -2,6 +2,7 @@ import 'package:meta_trader/app/locator/locator.dart';
 import 'package:meta_trader/app/services/router_service.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
+import 'package:stacked_themes/stacked_themes.dart';
 
 import '../services/theme_service.dart';
 
@@ -23,5 +24,10 @@ abstract class CustomBaseViewModel extends BaseViewModel {
 
   bool isDarkMode() {
     return _themeService.themeService.isDarkMode;
+  }
+
+  bool isSystemMode(BuildContext context) {
+    return getThemeManager(context).getSelectedTheme().themeMode ==
+        ThemeMode.system;
   }
 }

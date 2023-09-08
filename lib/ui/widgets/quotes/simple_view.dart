@@ -80,7 +80,7 @@ class SimpleMarketView extends StatelessWidget {
               itemBuilder: (context, index) {
                 final quote = model.quoteList[index];
                 return InkWell(
-                  onLongPress: () {
+                  onTap: () {
                     model.openOptionsBottomSheet(context);
                   },
                   child: SimpleViewTile(
