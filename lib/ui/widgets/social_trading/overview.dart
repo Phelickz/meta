@@ -16,43 +16,44 @@ class TraderOverview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            verticalSpaceSmall(context),
-            _summaryTop(context, model),
-            verticalSpaceSmall(context),
-            verticalSpaceXXSmall(context),
-            _summaryBottomComponent(context, model),
-            verticalSpaceSmall(context),
-            verticalSpaceXXSmall(context),
-            _summaryPerformance(context, model),
-            verticalSpaceSmall(context),
-            verticalSpaceXXSmall(context),
-            _summaryAccountDetails(context, model),
-            verticalSpaceSmall(context),
-            verticalSpaceXXSmall(context),
-            _summaryRiskManagement(context, model),
-            verticalSpaceSmall(context),
-            verticalSpaceXXSmall(context),
-            _summaryActivity(context, model),
-            verticalSpaceSmall(context),
-            verticalSpaceSmall(context),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: McGyver.rsDoubleW(context, 6),
-              ),
-              child: CustomButtons.generalButton(
-                context: context,
-                onTap: () {},
-                text: 'Setup Copying',
-              ),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          verticalSpaceSmall(context),
+          _summaryTop(context, model),
+          verticalSpaceSmall(context),
+          verticalSpaceXXSmall(context),
+          _summaryBottomComponent(context, model),
+          verticalSpaceSmall(context),
+          verticalSpaceXXSmall(context),
+          _summaryPerformance(context, model),
+          verticalSpaceSmall(context),
+          verticalSpaceXXSmall(context),
+          _summaryAccountDetails(context, model),
+          verticalSpaceSmall(context),
+          verticalSpaceXXSmall(context),
+          _summaryRiskManagement(context, model),
+          verticalSpaceSmall(context),
+          verticalSpaceXXSmall(context),
+          _summaryActivity(context, model),
+          verticalSpaceSmall(context),
+          verticalSpaceSmall(context),
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: McGyver.rsDoubleW(context, 6),
             ),
-            verticalSpaceSmall(context),
-            verticalSpaceXSmall(context)
-          ],
-        ),
+            child: CustomButtons.generalButton(
+              context: context,
+              onTap: () {
+                // model.setSocialTradingPageEnum =
+                //     SocialTradingPageEnum.subscriptionSetup;
+              },
+              text: 'Setup Copying',
+            ),
+          ),
+          verticalSpaceSmall(context),
+          verticalSpaceXSmall(context)
+        ],
       ),
     );
   }

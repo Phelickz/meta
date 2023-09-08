@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:auto_route/auto_route.dart';
-import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -89,57 +88,113 @@ class MasterTraderOverview extends StatelessWidget {
         ),
       ),
       bodyPadding: EdgeInsets.zero,
-      body: ContainedTabBarView(
-        tabs: const [
-          Text(
-            'Overview',
-          ),
-          Text(
-            'Trading History',
-          ),
-        ],
-        tabBarProperties: TabBarProperties(
-          background: Container(
-            color:
-                isDarkMode ? const Color(0xff073961) : const Color(0xffD3ECFD),
-          ),
-          height: 41.0,
-          indicatorColor: Theme.of(context).primaryColor,
-          // indicator: BoxDecoration(),
-          indicatorWeight: 6.0,
-          indicator: UnderlineTabIndicator(
-            borderRadius: BorderRadius.circular(15),
-            borderSide: BorderSide(
-              width: 4.0,
+      // body: ContainedTabBarView(
+      //   tabs: const [
+      //     Text(
+      //       'Overview',
+      //     ),
+      //     Text(
+      //       'Trading History',
+      //     ),
+      //   ],
+      //   tabBarProperties: TabBarProperties(
+      //     background: Container(
+      //       color:
+      //           isDarkMode ? const Color(0xff073961) : const Color(0xffD3ECFD),
+      //     ),
+      //     height: 41.0,
+      //     indicatorColor: Theme.of(context).primaryColor,
+      //     // indicator: BoxDecoration(),
+      //     indicatorWeight: 6.0,
+      //     indicator: UnderlineTabIndicator(
+      //       borderRadius: BorderRadius.circular(15),
+      //       borderSide: BorderSide(
+      //         width: 4.0,
+      //         color: isDarkMode
+      //             ? const Color(0xff0C95EF)
+      //             : Theme.of(context).primaryColor,
+      //       ),
+      //       insets: const EdgeInsets.symmetric(horizontal: 40.0),
+      //     ),
+      //     labelStyle: CustomThemeData.generateStyle(
+      //       fontSize: 13,
+      //       color: isDarkMode ? Colors.black38 : Colors.black,
+      //     ),
+      //     labelColor: isDarkMode
+      //         ? const Color(0xff0C95EF)
+      //         : Theme.of(context).primaryColor,
+      //     unselectedLabelColor: isDarkMode ? Colors.white70 : Colors.black,
+      //   ),
+      //   views: [
+      //     TraderOverview(model: model),
+      //     TradingHistory(model: model),
+      //   ],
+      //   onChange: (index) {
+      //     if (index == 0) {
+      //       model.setMasterTraderOverviewEnum =
+      //           MasterTraderOverviewEnum.overview;
+      //     }
+      //     if (index == 1) {
+      //       model.setMasterTraderOverviewEnum =
+      //           MasterTraderOverviewEnum.tradingHistory;
+      //     }
+      //   },
+      // ),
+      body: DefaultTabController(
+        length: 2,
+        child: Column(
+          children: [
+            Container(
+              width: MediaQuery.of(context).size.width,
+              alignment: Alignment.center,
               color: isDarkMode
-                  ? const Color(0xff0C95EF)
-                  : Theme.of(context).primaryColor,
+                  ? const Color(0xff073961)
+                  : const Color(0xffD3ECFD), // Container color
+              child: TabBar(
+                // isScrollable: true,
+                tabs: const [
+                  Tab(text: "Overview"),
+                  Tab(text: "Trading History"),
+                ],
+                isScrollable: true,
+                unselectedLabelColor: isDarkMode
+                    ? const Color(0xff98A2B3)
+                    : const Color(0xff344054),
+                labelColor: isDarkMode
+                    ? const Color(0xff77C5F8)
+                    : const Color(0xff0C95EF),
+
+                indicatorColor: isDarkMode
+                    ? const Color(0xff77C5F8)
+                    : const Color(0xff0C95EF),
+                unselectedLabelStyle: CustomThemeData.generateColoredStyle(
+                    fontSize: 14,
+                    context: context,
+                    fontWeight: FontWeight.w400,
+                    darkTextColor: const Color(0xff98A2B3),
+                    lightTextColor: const Color(0xff344054)),
+
+                labelStyle: CustomThemeData.generateColoredStyle(
+                    fontSize: 14,
+                    context: context,
+                    fontWeight: FontWeight.w600,
+                    darkTextColor: const Color(0xff77C5F8),
+                    lightTextColor: const Color(0xff0C95EF)),
+                indicatorWeight: 3,
+
+                // Tab indicator color
+              ),
             ),
-            insets: const EdgeInsets.symmetric(horizontal: 40.0),
-          ),
-          labelStyle: CustomThemeData.generateStyle(
-            fontSize: 13,
-            color: isDarkMode ? Colors.black38 : Colors.black,
-          ),
-          labelColor: isDarkMode
-              ? const Color(0xff0C95EF)
-              : Theme.of(context).primaryColor,
-          unselectedLabelColor: isDarkMode ? Colors.white70 : Colors.black,
+            Expanded(
+              child: TabBarView(
+                children: [
+                  TraderOverview(model: model),
+                  TradingHistory(model: model),
+                ],
+              ),
+            ),
+          ],
         ),
-        views: [
-          TraderOverview(model: model),
-          TradingHistory(model: model),
-        ],
-        onChange: (index) {
-          if (index == 0) {
-            model.setMasterTraderOverviewEnum =
-                MasterTraderOverviewEnum.overview;
-          }
-          if (index == 1) {
-            model.setMasterTraderOverviewEnum =
-                MasterTraderOverviewEnum.tradingHistory;
-          }
-        },
       ),
     );
   }

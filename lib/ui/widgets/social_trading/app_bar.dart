@@ -284,6 +284,10 @@ AppBar socialTradingCustomAppBar(BuildContext context, String title,
             viewModel.setSocialTradingPageEnum =
                 SocialTradingPageEnum.subscriptionSetup;
           }
+          if (viewModel.socialTradingPageEnum ==
+              SocialTradingPageEnum.subscriptionSetup) {
+            viewModel.setSocialTradingPageEnum = SocialTradingPageEnum.myTrades;
+          }
         }),
     centerTitle: false,
     title: Column(
@@ -342,6 +346,23 @@ AppBar socialTradingCustomAppBar(BuildContext context, String title,
             width: McGyver.rsDoubleH(context, 2.8),
             child: SvgPicture.asset(
               "assets/icons/filter.svg",
+              colorFilter: ColorFilter.mode(
+                isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF667085),
+                BlendMode.srcIn,
+              ),
+            ),
+          ),
+        ),
+      if (viewModel.socialTradingPageEnum == SocialTradingPageEnum.notification)
+        IconButton(
+          onPressed: () {
+            showFilterModal(context);
+          },
+          icon: SizedBox(
+            height: McGyver.rsDoubleH(context, 2.8),
+            width: McGyver.rsDoubleH(context, 2.8),
+            child: SvgPicture.asset(
+              "assets/icons/edit.svg",
               colorFilter: ColorFilter.mode(
                 isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF667085),
                 BlendMode.srcIn,

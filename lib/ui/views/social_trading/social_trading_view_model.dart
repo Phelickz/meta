@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
 import 'package:meta_trader/ui/widgets/social_trading/app_bar.dart';
 import 'package:meta_trader/ui/widgets/social_trading/copied_trader_position.dart';
+import 'package:meta_trader/ui/widgets/social_trading/copied_trader_success.dart';
 import 'package:meta_trader/ui/widgets/social_trading/master_traders.dart';
 import 'package:meta_trader/ui/widgets/social_trading/menu_main.dart';
 import 'package:meta_trader/ui/widgets/social_trading/my_trades.dart';
+import 'package:meta_trader/ui/widgets/social_trading/notifications.dart';
+import 'package:meta_trader/ui/widgets/social_trading/subscription_guide.dart';
 import 'package:meta_trader/ui/widgets/social_trading/subscription_setup.dart';
 import 'package:meta_trader/ui/widgets/social_trading/transaction_history.dart';
 import 'package:meta_trader/ui/widgets/social_trading/wallet.dart';
@@ -33,6 +36,8 @@ enum SocialTradingPageEnum {
   about,
   subscriptionSetup,
   subscriptionGuide,
+  copiedSuccessful,
+  copiedTerminated,
 }
 
 enum MasterTraderOverviewEnum { overview, tradingHistory }
@@ -53,9 +58,8 @@ class SocialTradingViewModel extends CustomBaseViewModel {
   final performanceSummaryTabSelectedNotifier = ValueNotifier(0);
   final overviewSummaryTabSelectedNotifier = ValueNotifier(0);
 
-  // TODO: change back to masterTraders
   SocialTradingPageEnum _socialTradingPageEnum =
-      SocialTradingPageEnum.subscriptionGuide;
+      SocialTradingPageEnum.masterTraders;
 
   SocialTradingPageEnum get socialTradingPageEnum => _socialTradingPageEnum;
 
@@ -108,6 +112,18 @@ class SocialTradingViewModel extends CustomBaseViewModel {
         );
       case SocialTradingPageEnum.subscriptionSetup:
         return SubscriptionSetupPage(
+          viewModel: this,
+        );
+      case SocialTradingPageEnum.subscriptionGuide:
+        return SubscriptionGuidePage(
+          viewModel: this,
+        );
+      case SocialTradingPageEnum.copiedSuccessful:
+        return CopiedTraderSuccessPage(
+          viewModel: this,
+        );
+      case SocialTradingPageEnum.notification:
+        return NotificationPage(
           viewModel: this,
         );
       default:
@@ -444,6 +460,39 @@ class SocialTradingViewModel extends CustomBaseViewModel {
       time: "16:23:41",
     ),
   ];
+
+  List notifications = [
+    {
+      "title": "Subscription Successful",
+      "description": "You are now copying satoshi nakamoto.",
+      "date": "2.1.2023 ",
+      "time": "16:23:41",
+      "isRead": false
+    },
+    {
+      "title": "Subscription terminated",
+      "description":
+          "You have successfully terminated your copu trading with satoshi nakamoto.",
+      "date": "2.1.2023 ",
+      "time": "16:23:41",
+      "isRead": false
+    },
+    {
+      "title": "Subscription terminated",
+      "description":
+          "You have successfully terminated your copu trading with satoshi nakamoto.",
+      "date": "2.1.2023 ",
+      "time": "16:23:41",
+      "isRead": false
+    },
+  ];
+
+  void markAsRead(int index) {
+    if (index >= 0 && index < notifications.length) {
+      notifications[index]["isRead"] = true;
+      rebuildUi();
+    }
+  }
 
   List<ActivityChartData> activityChartData = [
     ActivityChartData('22 Jun', 1300),

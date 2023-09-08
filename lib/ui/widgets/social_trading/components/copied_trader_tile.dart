@@ -3,10 +3,13 @@ import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
+import 'package:meta_trader/ui/widgets/social_trading/components/cancel_sub_modal.dart';
 
 class CopiedTraderTile extends StatelessWidget {
+  final SocialTradingViewModel viewModel;
   final Function()? onTap;
-  const CopiedTraderTile({super.key, this.onTap});
+  const CopiedTraderTile({super.key, this.onTap, required this.viewModel});
 
   @override
   Widget build(BuildContext context) {
@@ -76,6 +79,7 @@ class CopiedTraderTile extends StatelessWidget {
               height: McGyver.rsDoubleH(context, 0.5),
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -148,11 +152,69 @@ class CopiedTraderTile extends StatelessWidget {
                     ),
                   ],
                 ),
+                GestureDetector(
+                  onTap: () {
+                    showFilterModal(context, viewModel);
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: isDarkMode
+                          ? Theme.of(context).primaryColor.withOpacity(0.8)
+                          : Theme.of(context).primaryColor,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 9.0, vertical: 6),
+                      child: Row(
+                        children: [
+                          Text(
+                            'Stop Copying',
+                            style: CustomThemeData.generateStyle(
+                              fontSize: 11,
+                              color: isDarkMode ? Colors.white : Colors.white,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 2,
+                          ),
+                          SvgPicture.asset(
+                            'assets/icons/clipboard_close.svg',
+                            width: 15,
+                            height: 15,
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                )
               ],
             )
           ],
         ),
       ),
     );
+  }
+
+  void showFilterModal(BuildContext context, SocialTradingViewModel vm) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
+    showModalBottomSheet(
+        backgroundColor:
+            isDarkMode ? const Color(0xFF0C2031) : const Color(0xFFFAFDFF),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(McGyver.rsDoubleH(context, 2)),
+            topRight: Radius.circular(McGyver.rsDoubleH(context, 2)),
+          ),
+        ),
+        context: context,
+        isDismissible: true,
+        enableDrag: true,
+        isScrollControlled: true,
+        builder: (context) {
+          return CancelSubModal(
+            viewModel: vm,
+          );
+        });
   }
 }
