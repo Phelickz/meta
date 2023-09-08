@@ -17,7 +17,6 @@ class CustomTextFields extends StatefulWidget {
   final InputDecoration? inputDecoration;
   final BoxConstraints? suffixIconConstraints;
   final TextAlign textAlign;
-  final int? maxLines;
   // final bool ignore;
   const CustomTextFields({
     Key? key,
@@ -29,7 +28,6 @@ class CustomTextFields extends StatefulWidget {
     this.controller,
     this.onChanged,
     this.validator,
-    this.maxLines,
     this.keyboardType = TextInputType.text,
     this.inputDecoration,
     this.hintText,
@@ -82,14 +80,12 @@ class _SignupTextFieldsState extends State<CustomTextFields> {
         fontSize: 15,
         color: const Color(0xff98A2B3),
       ),
-      maxLines: widget.maxLines,
       // style: Theme.of(context).textTheme.titleSmall!.copyWith(
       //       color: Colors.black87,
       //     ),
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.only(left: 10, top: 20, bottom: 20),
         filled: widget.filledWithColor ?? false,
-
         fillColor: widget.filledWithColor == true
             ? isDarkMode
                 ? const Color(0xff052844)

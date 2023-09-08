@@ -72,8 +72,6 @@ class AssetManager {
   static const settings4 = "$ICONPATH/setting-4.svg";
   static const blankProfile = "$ICONPATH/blankProfile.svg";
 
-  static const editUserIcon = "$ICONPATH/useredit.svg";
-
   static const providerIllustartion = "$IMAGEPATH/provider_Illustration.svg";
   static const providerIllustartion2 = "$IMAGEPATH/provider_Illustration2.svg";
 }

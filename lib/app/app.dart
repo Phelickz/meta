@@ -30,13 +30,12 @@ class MetaTraderApp extends StatelessWidget {
           darkTheme: darkTheme,
           // home: const ProviderView(),
         );
-        //
         // return MaterialApp(
         //   debugShowCheckedModeBanner: false,
         //   theme: regularTheme,
         //   themeMode: themeMode,
         //   darkTheme: darkTheme,
-        //   home: const ProviderView(),
+        //   home: const SocialTradingDasboard(),
         // );
       },
     );
