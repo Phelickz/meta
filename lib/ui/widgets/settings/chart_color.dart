@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/ui/widgets/auth/radio_button.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
+import '../../../app/utils/asset_manager.dart';
 import '../../../app/utils/theme.dart';
 import '../../views/settings/settings_view_model.dart';
 
@@ -15,45 +19,48 @@ class ChartColorPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: McGyver.rsDoubleW(context, 6)),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            "Presets",
-            style: CustomThemeData.generateColoredStyle(
-                fontSize: 16, fontWeight: FontWeight.bold, context: context),
-          ),
-          verticalSpaceSmall(context),
-          CustomRadioButton(
-              value: "Default",
-              groupValue: model.chartColor,
-              onChanged: (chartColor) {
-                model.changeChartColor(chartColor);
-              },
-              label: "Default",
-              colorA: Colors.green,
-              colorB: Colors.red),
-          verticalSpaceSmall(context),
-          CustomRadioButton(
-              value: "Warm",
-              groupValue: model.chartColor,
-              onChanged: (chartColor) {
-                model.changeChartColor(chartColor);
-              },
-              label: "Warm",
-              colorA: Colors.blue,
-              colorB: Colors.red),
-          verticalSpaceSmall(context),
-          CustomRadioButton(
-              value: "Marble",
-              groupValue: model.chartColor,
-              onChanged: (chartColor) {
-                model.changeChartColor(chartColor);
-              },
-              label: "Marble",
-              colorA: Colors.white,
-              colorB: Colors.grey)
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            verticalSpaceSmall(context),
+            Text(
+              "Presets",
+              style: CustomThemeData.generateColoredStyle(
+                  fontSize: 16, fontWeight: FontWeight.bold, context: context),
+            ),
+            verticalSpaceSmall(context),
+            CustomRadioButton(
+                value: "Default",
+                groupValue: model.chartColor,
+                onChanged: (chartColor) {
+                  model.changeChartColor(chartColor);
+                },
+                label: "Default",
+                colorA: Colors.green,
+                colorB: Colors.red),
+            verticalSpaceSmall(context),
+            CustomRadioButton(
+                value: "Warm",
+                groupValue: model.chartColor,
+                onChanged: (chartColor) {
+                  model.changeChartColor(chartColor);
+                },
+                label: "Warm",
+                colorA: Colors.blue,
+                colorB: Colors.red),
+            verticalSpaceSmall(context),
+            CustomRadioButton(
+                value: "Marble",
+                groupValue: model.chartColor,
+                onChanged: (chartColor) {
+                  model.changeChartColor(chartColor);
+                },
+                label: "Marble",
+                colorA: Colors.white,
+                colorB: Colors.grey)
+          ],
+        ),
       ),
     );
   }
@@ -82,72 +89,83 @@ class CustomRadioButton extends StatelessWidget {
       onTap: () {
         onChanged(value);
       },
-      child: Container(
-        height: 100.pHeight(context),
-        width: double.infinity,
-        padding: EdgeInsets.symmetric(horizontal: 16.pWidth(context)),
-        decoration: BoxDecoration(
-          color: isDarkMode
-              ? const Color(0xff052844)
-              : Theme.of(context).scaffoldBackgroundColor,
+      child: Card(
+        elevation: 0,
+        shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.3),
-              spreadRadius: 3,
-              blurRadius: 4,
-              offset: Offset(0, 3), // Adjust the offset as needed
-            ),
-          ],
+          side: BorderSide(
+            color: isDarkMode ? Colors.white12 : Colors.black12,
+          ),
         ),
-        child: Row(
-          children: <Widget>[
-            SizedBox(width: 8.0),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(label),
-                Row(
-                  children: [
-                    Container(
-                      width: 14.pWidth(context),
-                      height: 14.pHeight(context),
-                      color: colorA,
+        child: Container(
+          padding: EdgeInsets.symmetric(
+              horizontal: 16.pWidth(context), vertical: 23.pHeight(context)),
+          decoration: BoxDecoration(
+            color: isDarkMode
+                ? const Color(0xff052844)
+                : Theme.of(context).scaffoldBackgroundColor,
+            borderRadius: BorderRadius.circular(8),
+            // boxShadow: [
+            //   BoxShadow(
+            //     color: Colors.grey.withOpacity(0.3),
+            //     spreadRadius: 3,
+            //     blurRadius: 4,
+            //     offset: const Offset(0, 3), // Adjust the offset as needed
+            //   ),
+            // ],
+          ),
+          child: Row(
+            children: <Widget>[
+              const SizedBox(width: 8.0),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    label,
+                    style: CustomThemeData.generateStyle(
+                      fontSize: McGyver.textSize(context, 1.8),
+                      fontWeight: FontWeight.bold,
+                      color: isDarkMode
+                          ? ColorManager.darkText
+                          : ColorManager.lightText,
                     ),
-                    Container(
-                      width: 14.pWidth(context),
-                      height: 14.pHeight(context),
-                      color: colorB,
-                    )
-                  ],
-                )
-              ],
-            ),
-            Spacer(),
-            Container(
-              width: 24.0,
-              height: 24.0,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                  width: 2.0,
-                  color: Colors.blue,
+                  ),
+                  verticalSpaceXXSmall(context),
+                  Row(
+                    children: [
+                      Container(
+                        width: 14.pWidth(context),
+                        height: 14.pHeight(context),
+                        color: colorA,
+                      ),
+                      horizontalSpaceXXSmall(context),
+                      Container(
+                        width: 14.pWidth(context),
+                        height: 14.pHeight(context),
+                        color: colorB,
+                      )
+                    ],
+                  )
+                ],
+              ),
+              const Spacer(),
+              SvgPicture.asset(AssetManager.downTrendChart),
+              SvgPicture.asset(AssetManager.downTrendChart),
+              SvgPicture.asset(AssetManager.downTrendChart),
+              SvgPicture.asset(AssetManager.downTrendChart),
+              SvgPicture.asset(AssetManager.downTrendChart),
+              const Spacer(),
+              Transform.scale(
+                scale: 2.0,
+                child: CustomRadioWidget(
+                  value: value,
+                  groupValue: groupValue,
+                  onChanged: onChanged,
                 ),
               ),
-              child: Center(
-                child: value == groupValue
-                    ? Container(
-                        width: 12.0,
-                        height: 12.0,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.blue,
-                        ),
-                      )
-                    : null,
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

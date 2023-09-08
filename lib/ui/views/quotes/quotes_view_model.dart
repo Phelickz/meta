@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
+import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/widgets/quotes/advanced_view.dart';
 import 'package:meta_trader/ui/widgets/quotes/components/quotes_bottom_sheet.dart';
 import 'package:meta_trader/ui/widgets/quotes/edit.dart';
@@ -311,7 +313,16 @@ class QuotesViewModel extends CustomBaseViewModel {
   void openOptionsBottomSheet(
     BuildContext context,
   ) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
     showModalBottomSheet(
+      backgroundColor:
+          isDarkMode ? const Color(0xFF0C2031) : const Color(0xFFFAFDFF),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(McGyver.rsDoubleH(context, 2)),
+          topRight: Radius.circular(McGyver.rsDoubleH(context, 2)),
+        ),
+      ),
       context: context,
       builder: (BuildContext context) {
         return QuotesBottomSheet(model: this);
@@ -364,7 +375,7 @@ class QuotesViewModel extends CustomBaseViewModel {
         return quotesAppBar(
             context, "Quotes", "Add symbol to market list", this);
       case QuotesPageEnum.details:
-        return quotesAppBar(context, "Quotes", "Details", this);
+        return quotesAppBar(context, "CORN", "Details", this);
       default:
         return quotesAppBar(context, "", "", this);
     }

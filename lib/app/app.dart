@@ -12,13 +12,15 @@ class MetaTraderApp extends StatelessWidget {
     final RouterService _routerService = locator<RouterService>();
 
     return ThemeBuilder(
-      defaultThemeMode: ThemeMode.light,
+      defaultThemeMode: ThemeMode.system,
       // statusBarColorBuilder: (theme) => theme.accentColor
       darkTheme: CustomThemeData.darkTheme,
       lightTheme: CustomThemeData.lightTheme,
       builder: (context, regularTheme, darkTheme, themeMode) {
         return MaterialApp.router(
-          title: "Meta Trader",
+          title: "AioTrader",
+          // locale: DevicePreview.locale(context),
+          // builder: DevicePreview.appBuilder,
           debugShowCheckedModeBanner: false,
           routeInformationParser: _routerService.router.defaultRouteParser(),
           routerDelegate: _routerService.router.delegate(),
@@ -26,13 +28,15 @@ class MetaTraderApp extends StatelessWidget {
           themeMode: themeMode,
           // theme: ThemeData(brightness: Brightness.light, fontFamily: 'Gilroy'),
           darkTheme: darkTheme,
+          // home: const ProviderView(),
         );
+        //
         // return MaterialApp(
         //   debugShowCheckedModeBanner: false,
         //   theme: regularTheme,
         //   themeMode: themeMode,
         //   darkTheme: darkTheme,
-        //   home: const SocialTradingDasboard(),
+        //   home: const ProviderView(),
         // );
       },
     );

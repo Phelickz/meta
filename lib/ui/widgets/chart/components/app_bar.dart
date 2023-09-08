@@ -7,11 +7,8 @@ import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/chart/chart_view_model.dart';
 
 AppBar chartAppBar(
-  BuildContext context,
-  String title,
-  String subtitle,
-  ChartViewModel model,
-) {
+    BuildContext context, String title, String subtitle, ChartViewModel model,
+    {bool showBackButton = false}) {
   var isDarkMode = CustomThemeData.isDarkMode(context);
   return AppBar(
     elevation: 0,
@@ -19,16 +16,15 @@ AppBar chartAppBar(
         ? const Color(0xff052844)
         : Theme.of(context).scaffoldBackgroundColor,
     automaticallyImplyLeading: false,
-    leading: IconButton(
-        icon: Icon(
-          Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
-          color: isDarkMode
-              ? const Color(0xffD2D2D2).withOpacity(0)
-              : Colors.black.withOpacity(0),
-        ),
-        onPressed: () {
-          // model.goBack();
-        }),
+    leading: showBackButton == true
+        ? IconButton(
+            icon: Icon(
+                Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
+                color: isDarkMode ? const Color(0xffD2D2D2) : Colors.black),
+            onPressed: () {
+              model.goBack();
+            })
+        : null,
     centerTitle: true,
     title: Row(
       mainAxisAlignment: MainAxisAlignment.center,

@@ -11,12 +11,18 @@ class LabelTextField extends StatelessWidget {
   final TextEditingController? controller;
   final bool isEnabled;
   final bool hasSmallMargin;
+  final Widget? prefixIcon;
+  final Widget? suffixIcon;
+  final int? maxLines;
   const LabelTextField({
     super.key,
     required this.label,
     required this.hintText,
+    this.maxLines,
     this.keyboardType,
     this.controller,
+    this.prefixIcon,
+    this.suffixIcon,
     this.isEnabled = true,
     this.hasSmallMargin = false,
   });
@@ -64,6 +70,7 @@ class LabelTextField extends StatelessWidget {
           ),
           child: TextField(
             enabled: isEnabled,
+            maxLines: maxLines,
             controller: controller ?? TextEditingController(),
             style: textStyle,
             keyboardType: keyboardType ?? TextInputType.name,
@@ -74,6 +81,8 @@ class LabelTextField extends StatelessWidget {
                 fontWeight: FontWeight.normal,
                 color: const Color(0xFF98A2B3),
               ),
+              suffixIcon: suffixIcon,
+              prefixIcon: prefixIcon,
               border: InputBorder.none,
             ),
           ),

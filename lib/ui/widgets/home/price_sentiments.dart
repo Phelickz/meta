@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
+import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 
 class PriceSentiments extends StatelessWidget {
@@ -46,7 +47,7 @@ class PriceSentiments extends StatelessWidget {
                 color: Theme.of(context).primaryColor,
               ),
               Container(
-                width: McGyver.rsDoubleW(context, big == true ? 15 : 11),
+                width: McGyver.rsDoubleW(context, big == true ? 13 : 11),
                 height: 10,
                 color: Colors.red,
               ),
@@ -63,14 +64,14 @@ class PriceSentiments extends StatelessWidget {
             ],
           ),
         ),
-        const Spacer(
-          flex: 1,
-        ),
+        // const Spacer(
+        //   flex: 1,
+        // ),
+        horizontalSpaceXSmall(context),
         iconButton ??
-            IconButton(
-              padding: EdgeInsets.zero,
-              onPressed: () {},
-              icon: Container(
+            GestureDetector(
+              onTap: () {},
+              child: Container(
                 width: 21,
                 height: 21,
                 decoration: BoxDecoration(

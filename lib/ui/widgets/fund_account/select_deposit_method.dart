@@ -93,7 +93,7 @@ class SelectDepositMethod extends StatelessWidget {
         ),
       ),
       child: SizedBox(
-        height: McGyver.rsDoubleH(context, 16),
+        height: McGyver.rsDoubleH(context, 18),
         child: Padding(
           padding: const EdgeInsets.all(14.0),
           child: Row(
@@ -232,7 +232,7 @@ class SelectDepositMethod extends StatelessWidget {
                   Align(
                     alignment: Alignment.center,
                     child: Transform.scale(
-                      scale: 2.5,
+                      scale: McGyver.rsDoubleH(context, 0.3),
                       child: CustomRadioWidget(
                         value: value,
                         groupValue: groupValue,

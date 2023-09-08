@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
 import 'package:meta_trader/app/utils/strings_manager.dart';
+import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/widgets/settings/change_basis.dart';
 import 'package:meta_trader/ui/widgets/settings/chart_color.dart';
 import 'package:meta_trader/ui/widgets/settings/color_preference.dart';
@@ -14,8 +15,6 @@ import 'package:meta_trader/ui/widgets/settings/terms_of_use.dart';
 import 'package:meta_trader/ui/widgets/settings/update_releases.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
-import '../../../app/locator/locator.dart';
-import '../../../app/services/theme_service.dart';
 import '../../widgets/settings/about_us.dart';
 import '../../widgets/settings/components/app_bar.dart';
 
@@ -34,7 +33,6 @@ enum SettingsPageEnum {
 
 class SettingsViewModel extends CustomBaseViewModel {
   bool _isDarkMode = false;
-  final _themeService = locator<ThemeServices>();
 
   List switchValues = [
     {"title": SettingsStringsManager.tradeNotification, "value": false},
@@ -153,10 +151,23 @@ class SettingsViewModel extends CustomBaseViewModel {
     rebuildUi();
   }
 
-  void toggleThemeMode(bool value) {
+  void toggleThemeMode(BuildContext context) {
     _isDarkMode = !_isDarkMode;
-    _themeService.themeService.setThemeMode(
-        _isDarkMode ? ThemeManagerMode.dark : ThemeManagerMode.light);
+    if (CustomThemeData.isDarkMode(context)) {
+      getThemeManager(context).setThemeMode(ThemeMode.light);
+    } else {
+      getThemeManager(context).setThemeMode(ThemeMode.dark);
+    }
+    rebuildUi();
+  }
+
+  void toggleThemeModeSystem(BuildContext context) {
+    if (isSystemMode(context) == true) {
+      getThemeManager(context).setThemeMode(ThemeMode.light);
+    } else {
+      getThemeManager(context).setThemeMode(ThemeMode.system);
+    }
+
     rebuildUi();
   }
 
