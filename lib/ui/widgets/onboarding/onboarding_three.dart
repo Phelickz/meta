@@ -52,7 +52,7 @@ class OnboardingThree extends StatelessWidget {
                     ),
                   ),
                   TextSpan(
-                    text: 'seamlessly on the Meta Trader 5 app.',
+                    text: 'seamlessly on our cutting edge platform',
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 3.2),
                       fontWeight: FontWeight.w700,
@@ -64,7 +64,7 @@ class OnboardingThree extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             Text(
-              'With the new Meta Trader 5 app, you can easily deposit and withdraw funds from your real account with ease.',
+              "Enjoy seamless fund management with our platform's wide range of options, allowing you to effortlessly deposit and withdraw funds.",
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),

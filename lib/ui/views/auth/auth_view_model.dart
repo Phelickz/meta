@@ -32,7 +32,7 @@ class AuthViewModel extends CustomBaseViewModel {
   TextEditingController _brokerSearchController = TextEditingController();
   TextEditingController get brokerSearchController => _brokerSearchController;
 
-  AuthPageEnum _authPageEnum = AuthPageEnum.broker;
+  AuthPageEnum _authPageEnum = AuthPageEnum.chooseAccount;
   AuthPageEnum get authPageEnum => _authPageEnum;
 
   String? _radioItem;
@@ -90,8 +90,7 @@ class AuthViewModel extends CustomBaseViewModel {
       case AuthPageEnum.broker:
         return authAppBar(context, 'Brokers', 'Find a broker', this);
       case AuthPageEnum.chooseAccount:
-        return authAppBar(
-            context, _selectedBrokerName ?? "", 'Choose an account', this);
+        return authAppBar(context, _selectedBrokerName ?? "", '', this);
       case AuthPageEnum.login:
         return authAppBar(
             context, 'Login to Existing Account', 'Enter login details', this);

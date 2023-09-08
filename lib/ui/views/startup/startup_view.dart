@@ -1,5 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/app/utils/color_manager.dart';
+import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/startup/startup_view_model.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
@@ -18,6 +21,7 @@ class StartupView extends StackedView<StartupViewModel> {
     StartupViewModel viewModel,
     Widget? child,
   ) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
     return Skeleton(
         isBusy: viewModel.isBusy,
         bodyPadding: EdgeInsets.symmetric(
@@ -26,14 +30,33 @@ class StartupView extends StackedView<StartupViewModel> {
         body: Stack(
           children: [
             const BackgroundContainer(),
-            Align(
-              alignment: Alignment.center,
-              child: Image.asset('assets/images/logo.png'),
-              // child: SvgPicture.asset(
-              //   'assets/images/logo.svg',
-              //   height: 50,
-              //   color: Colors.red,
-              // ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Align(
+                  alignment: Alignment.center,
+                  child: Image.asset(
+                    'assets/images/launcher.png',
+                    height: 100,
+                  ),
+                  // child: SvgPicture.asset(
+                  //   'assets/images/logo.svg',
+                  //   height: 50,
+                  //   color: Colors.red,
+                  // ),
+                ),
+                verticalSpaceXXSmall(context),
+                Text(
+                  'AioTrader',
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 2),
+                    fontWeight: FontWeight.bold,
+                    color: isDarkMode
+                        ? ColorManager.darkText
+                        : ColorManager.lightText,
+                  ),
+                )
+              ],
             )
           ],
         ));

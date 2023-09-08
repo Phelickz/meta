@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/verification/verification_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
@@ -56,7 +57,9 @@ class VerifyOnePage extends StatelessWidget {
                 text: 'Get Started'),
             verticalSpaceXSmall(context),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                model.push(const BottomNavBarRoute());
+              },
               child: const Text('Skip'),
             )
           ],
