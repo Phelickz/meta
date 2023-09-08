@@ -6,6 +6,7 @@ class CustomOverviewSummaryTab extends StatefulWidget {
   final String firstTabName;
   final String secondTabName;
   final String thirdTabName;
+  final String fourthTabName;
 
   final int tabIndex;
   final Function(int) onSelectTab;
@@ -14,6 +15,7 @@ class CustomOverviewSummaryTab extends StatefulWidget {
     required this.firstTabName,
     required this.secondTabName,
     required this.thirdTabName,
+    required this.fourthTabName,
     required this.onSelectTab,
     required this.tabIndex,
   }) : super(key: key);
@@ -34,13 +36,14 @@ class _CustomOverviewSummaryTabState extends State<CustomOverviewSummaryTab> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: McGyver.rsDoubleW(context, 32),
+      width: McGyver.rsDoubleW(context, 42),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           _tabItem(widget.firstTabName, 0, widget.onSelectTab),
           _tabItem(widget.secondTabName, 1, widget.onSelectTab),
           _tabItem(widget.thirdTabName, 2, widget.onSelectTab),
+          _tabItem(widget.thirdTabName, 3, widget.onSelectTab),
         ],
       ),
     );

@@ -430,6 +430,16 @@ class SocialTradingViewModel extends CustomBaseViewModel {
       time: "16:23:41",
     ),
   ];
+
+  List<ActivityChartData> activityChartData = [
+    ActivityChartData('22 Jun', 1300),
+    ActivityChartData('23 Jun', 1400),
+    ActivityChartData('24 Jun', 1500),
+    ActivityChartData('25 Jun', 1600),
+    ActivityChartData('26 Jun', 1460),
+    ActivityChartData('27 Jun', 1300),
+    ActivityChartData('29 Jun', 1500),
+  ];
 }
 
 class TransactionModel {
@@ -450,4 +460,11 @@ class TransactionModel {
     required this.date,
     required this.time,
   });
+}
+
+class ActivityChartData {
+  final String day;
+  final double price;
+
+  ActivityChartData(this.day, this.price);
 }

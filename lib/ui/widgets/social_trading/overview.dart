@@ -5,6 +5,8 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
+import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 import 'components/custom_overview_summary_tab.dart';
 
@@ -15,20 +17,42 @@ class TraderOverview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: ListView(
-        children: [
-          verticalSpaceSmall(context),
-          _summaryTop(context, model),
-          verticalSpaceSmall(context),
-          verticalSpaceXSmall(context),
-          _summaryBottomComponent(context, model),
-          verticalSpaceSmall(context),
-          verticalSpaceXSmall(context),
-          _summaryPerformance(context, model),
-          verticalSpaceSmall(context),
-          verticalSpaceXSmall(context),
-          _summaryAccountDetails(context, model),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            verticalSpaceSmall(context),
+            _summaryTop(context, model),
+            verticalSpaceSmall(context),
+            verticalSpaceXXSmall(context),
+            _summaryBottomComponent(context, model),
+            verticalSpaceSmall(context),
+            verticalSpaceXXSmall(context),
+            _summaryPerformance(context, model),
+            verticalSpaceSmall(context),
+            verticalSpaceXXSmall(context),
+            _summaryAccountDetails(context, model),
+            verticalSpaceSmall(context),
+            verticalSpaceXXSmall(context),
+            _summaryRiskManagement(context, model),
+            verticalSpaceSmall(context),
+            verticalSpaceXXSmall(context),
+            _summaryActivity(context, model),
+            verticalSpaceSmall(context),
+            verticalSpaceSmall(context),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: McGyver.rsDoubleW(context, 6),
+              ),
+              child: CustomButtons.generalButton(
+                context: context,
+                onTap: () {},
+                text: 'Setup Copying',
+              ),
+            ),
+            verticalSpaceSmall(context),
+            verticalSpaceXSmall(context)
+          ],
+        ),
       ),
     );
   }
@@ -42,7 +66,7 @@ class TraderOverview extends StatelessWidget {
         vertical: McGyver.rsDoubleH(context, 2),
       ),
       margin: EdgeInsets.symmetric(
-        horizontal: McGyver.rsDoubleW(context, 6),
+        horizontal: McGyver.rsDoubleW(context, 5),
       ),
       decoration: BoxDecoration(
         color: isDarkMode ? const Color(0xFF052844) : const Color(0xFFFAFDFF),
@@ -331,8 +355,8 @@ class TraderOverview extends StatelessWidget {
               ),
               horizontalSpaceXXSmall(context),
               SizedBox(
-                height: McGyver.rsDoubleH(context, 1.8),
-                width: McGyver.rsDoubleH(context, 1.8),
+                height: McGyver.rsDoubleH(context, 1.7),
+                width: McGyver.rsDoubleH(context, 1.7),
                 child: SvgPicture.asset(
                   "assets/icons/info-circle.svg",
                   colorFilter: ColorFilter.mode(
@@ -358,7 +382,7 @@ class TraderOverview extends StatelessWidget {
         vertical: McGyver.rsDoubleH(context, 2),
       ),
       margin: EdgeInsets.symmetric(
-        horizontal: McGyver.rsDoubleW(context, 6),
+        horizontal: McGyver.rsDoubleW(context, 5),
       ),
       decoration: BoxDecoration(
         color: isDarkMode ? const Color(0xFF052844) : const Color(0xFFFAFDFF),
@@ -382,7 +406,8 @@ class TraderOverview extends StatelessWidget {
               CustomOverviewSummaryTab(
                 firstTabName: "2W",
                 secondTabName: "1M",
-                thirdTabName: "6M",
+                thirdTabName: "3M",
+                fourthTabName: "6M",
                 tabIndex: viewModel.overviewSummaryTabSelectedNotifier.value,
                 onSelectTab: (val) {
                   viewModel.overviewSummaryTabSelectedNotifier.value = val;
@@ -399,6 +424,7 @@ class TraderOverview extends StatelessWidget {
                 child: IndexedStack(
                   index: index,
                   children: [
+                    _summaryTopComponent(context, viewModel),
                     _summaryTopComponent(context, viewModel),
                     _summaryTopComponent(context, viewModel),
                     _summaryTopComponent(context, viewModel)
@@ -597,7 +623,7 @@ class TraderOverview extends StatelessWidget {
         vertical: McGyver.rsDoubleH(context, 2),
       ),
       margin: EdgeInsets.symmetric(
-        horizontal: McGyver.rsDoubleW(context, 6),
+        horizontal: McGyver.rsDoubleW(context, 5),
       ),
       decoration: BoxDecoration(
         color: isDarkMode ? const Color(0xFF052844) : const Color(0xFFFAFDFF),
@@ -621,7 +647,8 @@ class TraderOverview extends StatelessWidget {
               CustomOverviewSummaryTab(
                 firstTabName: "2W",
                 secondTabName: "1M",
-                thirdTabName: "6M",
+                thirdTabName: "3M",
+                fourthTabName: "6M",
                 tabIndex: viewModel.performanceSummaryTabSelectedNotifier.value,
                 onSelectTab: (val) {
                   viewModel.performanceSummaryTabSelectedNotifier.value = val;
@@ -638,6 +665,7 @@ class TraderOverview extends StatelessWidget {
                 child: IndexedStack(
                   index: index,
                   children: [
+                    _summaryPerformanceComponent(context, viewModel),
                     _summaryPerformanceComponent(context, viewModel),
                     _summaryPerformanceComponent(context, viewModel),
                     _summaryPerformanceComponent(context, viewModel)
@@ -660,7 +688,7 @@ class TraderOverview extends StatelessWidget {
         vertical: McGyver.rsDoubleH(context, 2),
       ),
       margin: EdgeInsets.symmetric(
-        horizontal: McGyver.rsDoubleW(context, 6),
+        horizontal: McGyver.rsDoubleW(context, 5),
       ),
       decoration: BoxDecoration(
         color: isDarkMode ? const Color(0xFF052844) : const Color(0xFFFAFDFF),
@@ -684,8 +712,295 @@ class TraderOverview extends StatelessWidget {
             ],
           ),
           verticalSpaceXSmall(context),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              _twotextInfo(
+                context,
+                "Floating profit",
+                "\$ 32.8",
+                CrossAxisAlignment.start,
+              ),
+              _twotextInfo(
+                context,
+                "Master Trader Bonus",
+                "% 73",
+                CrossAxisAlignment.end,
+              )
+            ],
+          ),
+          verticalSpaceXSmall(context),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              _twotextInfo(
+                context,
+                "Balance",
+                "\$ 32.8",
+                CrossAxisAlignment.start,
+              ),
+              _twotextInfo(
+                context,
+                "Leverage",
+                "1:500",
+                CrossAxisAlignment.end,
+              )
+            ],
+          ),
         ],
       ),
+    );
+  }
+
+  Widget _summaryRiskManagement(
+      BuildContext context, SocialTradingViewModel viewModel) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: McGyver.rsDoubleW(context, 3.5),
+        vertical: McGyver.rsDoubleH(context, 2),
+      ),
+      margin: EdgeInsets.symmetric(
+        horizontal: McGyver.rsDoubleW(context, 5),
+      ),
+      decoration: BoxDecoration(
+        color: isDarkMode ? const Color(0xFF052844) : const Color(0xFFFAFDFF),
+        borderRadius: BorderRadius.circular(McGyver.rsDoubleW(context, 4)),
+      ),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Risk Management",
+                style: CustomThemeData.generateStyle(
+                  fontSize: McGyver.textSize(context, 2),
+                  fontWeight: FontWeight.bold,
+                  color: isDarkMode
+                      ? const Color(0xFFFFFFFF)
+                      : const Color(0xFF667085),
+                ),
+              ),
+            ],
+          ),
+          verticalSpaceXSmall(context),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              _twotextInfo(
+                context,
+                "Max Unrealized Loss",
+                "\$ 32.8",
+                CrossAxisAlignment.start,
+              ),
+              _twotextInfo(
+                context,
+                "Max drawdown Duration",
+                "% 73",
+                CrossAxisAlignment.end,
+              )
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _twotextInfo(BuildContext context, String text1, String text2,
+      CrossAxisAlignment alignment) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
+    return Column(
+      crossAxisAlignment: alignment,
+      children: [
+        Row(
+          children: [
+            Text(
+              text1,
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 1.4),
+                fontWeight: FontWeight.w500,
+                color: isDarkMode
+                    ? const Color(0xFF98A2B3)
+                    : const Color(0xFF667085),
+              ),
+            ),
+            const SizedBox(
+              width: 2,
+            ),
+            SizedBox(
+              height: McGyver.rsDoubleH(context, 1.7),
+              width: McGyver.rsDoubleH(context, 1.7),
+              child: SvgPicture.asset(
+                "assets/icons/info-circle.svg",
+                colorFilter: ColorFilter.mode(
+                  isDarkMode
+                      ? const Color(0xFFD0D5DD)
+                      : const Color(0xFF667085),
+                  BlendMode.srcIn,
+                ),
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: McGyver.rsDoubleH(context, 0.5),
+        ),
+        Text(
+          text2,
+          textAlign: TextAlign.end,
+          style: CustomThemeData.generateStyle(
+            fontSize: McGyver.textSize(context, 1.6),
+            fontWeight: FontWeight.bold,
+            color:
+                isDarkMode ? const Color(0xFF94D1F9) : const Color(0xFF47B0F5),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _summaryActivity(
+      BuildContext context, SocialTradingViewModel viewModel) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
+    return Container(
+      padding: EdgeInsets.symmetric(
+        vertical: McGyver.rsDoubleH(context, 2),
+      ),
+      margin: EdgeInsets.symmetric(
+        horizontal: McGyver.rsDoubleW(context, 5),
+      ),
+      decoration: BoxDecoration(
+        color: isDarkMode ? const Color(0xFF052844) : const Color(0xFFFAFDFF),
+        borderRadius: BorderRadius.circular(McGyver.rsDoubleW(context, 4)),
+      ),
+      child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: McGyver.rsDoubleW(context, 3.5),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Activity",
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 2),
+                    fontWeight: FontWeight.bold,
+                    color: isDarkMode
+                        ? const Color(0xFFFFFFFF)
+                        : const Color(0xFF667085),
+                  ),
+                ),
+                CustomOverviewSummaryTab(
+                  firstTabName: "2W",
+                  secondTabName: "1M",
+                  thirdTabName: "3M",
+                  fourthTabName: "6M",
+                  tabIndex: viewModel.overviewSummaryTabSelectedNotifier.value,
+                  onSelectTab: (val) {
+                    viewModel.overviewSummaryTabSelectedNotifier.value = val;
+                  },
+                ),
+              ],
+            ),
+          ),
+          verticalSpaceXSmall(context),
+          ValueListenableBuilder<int>(
+            valueListenable: viewModel.overviewSummaryTabSelectedNotifier,
+            builder: (context, index, child) {
+              return SizedBox(
+                height: McGyver.rsDoubleH(context, 30),
+                child: IndexedStack(
+                  index: index,
+                  children: [
+                    _summaryActivityComponent(context, viewModel),
+                    _summaryActivityComponent(context, viewModel),
+                    _summaryActivityComponent(context, viewModel),
+                    _summaryActivityComponent(context, viewModel),
+                  ],
+                ),
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _summaryActivityComponent(
+      BuildContext context, SocialTradingViewModel viewModel) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
+    return SfCartesianChart(
+      primaryXAxis: CategoryAxis(
+        title: AxisTitle(
+          text: 'Days',
+          textStyle: CustomThemeData.generateStyle(
+            fontSize: McGyver.textSize(context, 1.5),
+            fontWeight: FontWeight.bold,
+            color:
+                isDarkMode ? const Color(0xFFFFFFFF) : const Color(0xFF667085),
+          ),
+        ),
+        majorGridLines: const MajorGridLines(
+          width: 0.5, // Adjust the line width as needed
+          color: Colors.grey, // Adjust the line color as needed
+          dashArray: <double>[3, 2], // Set dash pattern for dotted lines
+        ),
+        minorGridLines: const MinorGridLines(
+          width: 0.5,
+          color: Colors.grey,
+          dashArray: <double>[3, 2],
+        ),
+        axisLine: AxisLine(
+          width: 2,
+          color: isDarkMode ? const Color(0xFF475467) : const Color(0xFF667085),
+        ),
+        labelStyle: CustomThemeData.generateStyle(
+          fontSize: McGyver.textSize(context, 0.9),
+          fontWeight: FontWeight.normal,
+          color: isDarkMode ? const Color(0xFFFFFFFF) : const Color(0xFF667085),
+        ),
+      ),
+      primaryYAxis: NumericAxis(
+        labelStyle: CustomThemeData.generateStyle(
+          fontSize: McGyver.textSize(context, 0.9),
+          fontWeight: FontWeight.normal,
+          color: isDarkMode ? const Color(0xFFFFFFFF) : const Color(0xFF667085),
+        ),
+        title: AxisTitle(
+          text: 'price Movement',
+          textStyle: CustomThemeData.generateStyle(
+            fontSize: McGyver.textSize(context, 1.5),
+            fontWeight: FontWeight.bold,
+            color:
+                isDarkMode ? const Color(0xFFFFFFFF) : const Color(0xFF667085),
+          ),
+        ),
+        majorGridLines: const MajorGridLines(
+          width: 0.5,
+          color: Colors.grey,
+          dashArray: <double>[3, 2],
+        ),
+        minorGridLines: const MinorGridLines(
+          width: 0.5,
+          color: Colors.grey,
+          dashArray: <double>[3, 2],
+        ),
+        axisLine: AxisLine(
+          width: 2,
+          color: isDarkMode ? const Color(0xFF475467) : const Color(0xFF667085),
+        ),
+      ),
+      series: <LineSeries<ActivityChartData, String>>[
+        LineSeries<ActivityChartData, String>(
+          dataSource: viewModel.activityChartData,
+          xValueMapper: (ActivityChartData sales, _) => sales.day,
+          yValueMapper: (ActivityChartData sales, _) => sales.price,
+          name: 'Price',
+        ),
+      ],
     );
   }
 }
