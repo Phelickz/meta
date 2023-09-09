@@ -250,18 +250,24 @@ class HigherSuccessRates extends StatelessWidget {
                         borderRadius: BorderRadius.circular(15),
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(6.0),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 9.0, vertical: 6),
                         child: Row(
                           children: [
                             Text(
                               'Copy',
                               style: CustomThemeData.generateStyle(
-                                fontSize: 13,
+                                fontSize: 11,
                                 color: isDarkMode ? Colors.white : Colors.white,
                               ),
                             ),
+                            const SizedBox(
+                              width: 2,
+                            ),
                             SvgPicture.asset(
                               'assets/images/copy-success.svg',
+                              width: 15,
+                              height: 15,
                             )
                           ],
                         ),

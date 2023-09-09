@@ -4,9 +4,8 @@ import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
-import 'package:meta_trader/ui/widgets/social_trading/trading_history_tile.dart';
 
-import '../../views/trade/trade_view_model.dart';
+import 'components/trade_position_tile.dart';
 
 class TradingHistory extends StatelessWidget {
   const TradingHistory({super.key, required this.model});
@@ -15,14 +14,13 @@ class TradingHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
-    return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: McGyver.rsDoubleW(context, 5),
-      ),
-      child: Column(
-        children: [
-          verticalSpaceSmall(context),
-          Row(
+    return Column(
+      children: [
+        verticalSpaceXSmall(context),
+        Padding(
+          padding:
+              EdgeInsets.symmetric(horizontal: McGyver.rsDoubleW(context, 6)),
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
@@ -46,30 +44,32 @@ class TradingHistory extends StatelessWidget {
               )
             ],
           ),
-          verticalSpaceSmall(context),
-          Expanded(
-            child: ListView.separated(
-              itemCount: 13,
-              itemBuilder: (context, index) {
-                return TradingHistoryTile(
-                  tradeType: index > 5 ? TradeType.sell : TradeType.buy,
-                  viewModel: model,
-                );
-              },
-              separatorBuilder: (BuildContext context, int index) {
-                return verticalSpaceXXSmall(context);
-              },
-            ),
+        ),
+        verticalSpaceXSmall(context),
+        Expanded(
+          child: ListView.separated(
+            itemCount: 13,
+            itemBuilder: (context, index) {
+              return TradePositionTile(
+                viewModel: model,
+                positionType:
+                    index % 2 == 0 ? PositionType.open : PositionType.closed,
+                tradeType: index % 3 != 0 ? TradeType.sell : TradeType.buy,
+              );
+            },
+            separatorBuilder: (BuildContext context, int index) {
+              return verticalSpaceXXSmall(context);
+            },
           ),
-          verticalSpaceXSmall(context),
-          CustomButtons.generalButton(
-            context: context,
-            onTap: () {},
-            text: 'Setup Copying',
-          ),
-          verticalSpaceMedium(context)
-        ],
-      ),
+        ),
+        verticalSpaceXSmall(context),
+        CustomButtons.generalButton(
+          context: context,
+          onTap: () {},
+          text: 'Setup Copying',
+        ),
+        verticalSpaceMedium(context)
+      ],
     );
   }
 }

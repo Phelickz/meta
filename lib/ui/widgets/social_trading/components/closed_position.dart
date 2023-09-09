@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
-import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/custom_summary_tab.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/trade_position_tile.dart';
 import 'filter_positon_modal.dart';
 import 'summary.dart';
 
-class OpenPositionsComponent extends StatelessWidget {
+class ClosedPositionsComponent extends StatelessWidget {
   final SocialTradingViewModel viewModel;
-  const OpenPositionsComponent({
+  const ClosedPositionsComponent({
     super.key,
     required this.viewModel,
   });
@@ -56,27 +56,42 @@ class OpenPositionsComponent extends StatelessWidget {
                     thirdTabName: "1M",
                     fourthTabName: "3M",
                     fifthTabName: "6M",
-                    tabIndex: viewModel.openSummaryTabSelectedNotifier.value,
+                    tabIndex: viewModel.closedSummaryTabSelectedNotifier.value,
                     onSelectTab: (val) {
-                      viewModel.openSummaryTabSelectedNotifier.value = val;
+                      viewModel.closedSummaryTabSelectedNotifier.value = val;
                     },
                   ),
                 ],
               ),
               verticalSpaceSmall(context),
               ValueListenableBuilder<int>(
-                valueListenable: viewModel.openSummaryTabSelectedNotifier,
+                valueListenable: viewModel.closedSummaryTabSelectedNotifier,
                 builder: (context, index, child) {
                   return SizedBox(
-                    height: McGyver.rsDoubleH(context, 33),
+                    height: McGyver.rsDoubleH(context, 21),
                     child: IndexedStack(
                       index: index,
                       children: [
-                        SummaryComponent(viewModel: viewModel),
-                        SummaryComponent(viewModel: viewModel),
-                        SummaryComponent(viewModel: viewModel),
-                        SummaryComponent(viewModel: viewModel),
-                        SummaryComponent(viewModel: viewModel),
+                        SummaryComponent(
+                          viewModel: viewModel,
+                          positionType: PositionType.closed,
+                        ),
+                        SummaryComponent(
+                          viewModel: viewModel,
+                          positionType: PositionType.closed,
+                        ),
+                        SummaryComponent(
+                          viewModel: viewModel,
+                          positionType: PositionType.closed,
+                        ),
+                        SummaryComponent(
+                          viewModel: viewModel,
+                          positionType: PositionType.closed,
+                        ),
+                        SummaryComponent(
+                          viewModel: viewModel,
+                          positionType: PositionType.closed,
+                        ),
                       ],
                     ),
                   );
@@ -130,12 +145,12 @@ class OpenPositionsComponent extends StatelessWidget {
               TradePositionTile(
                 tradeType: TradeType.buy,
                 viewModel: viewModel,
-                positionType: PositionType.open,
+                positionType: PositionType.closed,
               ),
               TradePositionTile(
                 tradeType: TradeType.sell,
                 viewModel: viewModel,
-                positionType: PositionType.open,
+                positionType: PositionType.closed,
               ),
             ],
           ),

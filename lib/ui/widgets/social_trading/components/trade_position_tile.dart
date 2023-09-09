@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:meta_trader/app/responsiveness/res.dart';
-import 'package:meta_trader/app/responsiveness/size.dart';
-import 'package:meta_trader/app/utils/theme.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:meta_trader/app/utils/capitalize.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
+import '../../../../app/responsiveness/res.dart';
+import '../../../../app/responsiveness/size.dart';
+import '../../../../app/utils/theme.dart';
 
-class TradingHistoryTile extends StatelessWidget {
+class TradePositionTile extends StatelessWidget {
   final SocialTradingViewModel viewModel;
   final TradeType tradeType;
-  const TradingHistoryTile(
-      {super.key, required this.tradeType, required this.viewModel});
+  final PositionType positionType;
+  const TradePositionTile(
+      {super.key,
+      required this.tradeType,
+      required this.viewModel,
+      required this.positionType});
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +34,17 @@ class TradingHistoryTile extends StatelessWidget {
       margin: EdgeInsets.only(
         bottom: McGyver.rsDoubleH(context, 1.5),
       ),
+      padding: EdgeInsets.symmetric(
+        vertical: McGyver.rsDoubleH(context, 0.5),
+        horizontal: McGyver.rsDoubleW(context, 6),
+      ),
       child: InkWell(
         onLongPress: () {
           // showTradeModal(context);
         },
-        onTap: () {},
+        onTap: () {
+          // viewModel.tradePageEnum = TradePageEnum.modifyTrade;
+        },
         child: Row(
           children: [
             Expanded(
@@ -105,39 +117,53 @@ class TradingHistoryTile extends StatelessWidget {
               ),
             ),
             horizontalSpaceMedium(context),
-            Text(
-              "${typeSign}234.56",
-              style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.9),
-                fontWeight: FontWeight.w500,
-                color: txtColor,
-              ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(
+                  "${typeSign}234.56",
+                  textAlign: TextAlign.end,
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 1.9),
+                    fontWeight: FontWeight.w500,
+                    color: txtColor,
+                  ),
+                ),
+                const SizedBox(
+                  height: 3,
+                ),
+                Row(
+                  children: [
+                    SizedBox(
+                      height: McGyver.rsDoubleH(context, 1.8),
+                      width: McGyver.rsDoubleH(context, 1.8),
+                      child: SvgPicture.asset(
+                        "assets/images/calendar_2.svg",
+                        colorFilter: ColorFilter.mode(
+                          isDarkMode
+                              ? const Color(0xff98A2B3)
+                              : const Color(0xFF667085),
+                          BlendMode.srcIn,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 3),
+                    Text(
+                      positionType.name.capitalize(),
+                      textAlign: TextAlign.end,
+                      style: CustomThemeData.generateStyle(
+                        fontSize: McGyver.textSize(context, 1.4),
+                        fontWeight: FontWeight.normal,
+                        color: const Color(0xFF98A2B3),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ],
         ),
       ),
     );
   }
-
-  // void showTradeModal(BuildContext context) {
-  //   var isDarkMode = CustomThemeData.isDarkMode(context);
-  //   showModalBottomSheet(
-  //       backgroundColor:
-  //           isDarkMode ? const Color(0xFF0C2031) : const Color(0xFFFAFDFF),
-  //       shape: RoundedRectangleBorder(
-  //         borderRadius: BorderRadius.only(
-  //           topLeft: Radius.circular(McGyver.rsDoubleH(context, 2)),
-  //           topRight: Radius.circular(McGyver.rsDoubleH(context, 2)),
-  //         ),
-  //       ),
-  //       context: context,
-  //       isDismissible: true,
-  //       enableDrag: true,
-  //       isScrollControlled: true,
-  //       builder: (context) {
-  //         return TradeModal(
-  //           tradeType: tradeType,
-  //         );
-  //       });
-  // }
 }
