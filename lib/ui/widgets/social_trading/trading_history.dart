@@ -4,6 +4,7 @@ import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
+import 'package:meta_trader/ui/widgets/social_trading/components/filter_positon_modal.dart';
 
 import 'components/trade_position_tile.dart';
 
@@ -65,11 +66,33 @@ class TradingHistory extends StatelessWidget {
         verticalSpaceXSmall(context),
         CustomButtons.generalButton(
           context: context,
-          onTap: () {},
+          onTap: () {
+            showFilterModal(context);
+          },
           text: 'Setup Copying',
         ),
         verticalSpaceMedium(context)
       ],
     );
+  }
+
+  void showFilterModal(BuildContext context) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
+    showModalBottomSheet(
+        backgroundColor:
+            isDarkMode ? const Color(0xFF0C2031) : const Color(0xFFFAFDFF),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(McGyver.rsDoubleH(context, 2)),
+            topRight: Radius.circular(McGyver.rsDoubleH(context, 2)),
+          ),
+        ),
+        context: context,
+        isDismissible: true,
+        enableDrag: true,
+        isScrollControlled: true,
+        builder: (context) {
+          return const FilterPositionModal();
+        });
   }
 }

@@ -44,7 +44,7 @@ enum TransactionStatusEnum { successful, pending, failed }
 class ProviderViewModel extends CustomBaseViewModel {
   ProviderViewModel();
 
-  ProviderPageEnum _providerPageEnum = ProviderPageEnum.profileSettings;
+  ProviderPageEnum _providerPageEnum = ProviderPageEnum.welcome;
   ProviderPageEnum get providerPageEnum => _providerPageEnum;
   ProviderSettingsEnum _providerSettingsEnum =
       ProviderSettingsEnum.changeNickName;
@@ -152,7 +152,7 @@ class ProviderViewModel extends CustomBaseViewModel {
   Map<String, dynamic> followersData = {
     "name": "Henry Walston",
     "date": "2023.7.13",
-    "location":"USA"
+    "location": "USA"
   };
 
   // String _nickname = "Silver";
@@ -339,7 +339,8 @@ class ProviderViewModel extends CustomBaseViewModel {
       case ProviderPageEnum.wallet:
         return ProviderAppbar.walletAppBar(context, "Wallet", "", this);
       case ProviderPageEnum.followers:
-        return ProviderAppbar.simpleAppBar(this, context, "Followers", "View your followers", true, null);
+        return ProviderAppbar.simpleAppBar(
+            this, context, "Followers", "View your followers", true, null);
       default:
         return AppBar();
     }

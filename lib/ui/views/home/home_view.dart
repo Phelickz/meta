@@ -350,7 +350,12 @@ class HomeView extends StackedView<HomeViewModel> {
                           : const Color(0xff475467),
                     ),
                   ),
-                  TextButton(onPressed: () {}, child: const Text('View more'))
+                  TextButton(
+                    onPressed: () {
+                      viewModel.push(const ProviderRoute());
+                    },
+                    child: const Text('View more'),
+                  )
                 ],
               ),
               verticalSpaceXSmall(context),
