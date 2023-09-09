@@ -3,22 +3,27 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/ui/widgets/textfields/label_text_field.dart';
+import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
 
 import '../../../app/responsiveness/res.dart';
+import '../../../app/responsiveness/size.dart';
+import '../../../app/utils/theme.dart';
 import '../../views/provider/provider_view_model.dart';
 import '../buttons/buttons.dart';
 
-class ProviderLoginPage extends StatelessWidget {
+class ProviderSettingsPage extends StatelessWidget {
   final ProviderViewModel viewModel;
-  const ProviderLoginPage({super.key, required this.viewModel});
+  const ProviderSettingsPage({super.key, required this.viewModel});
 
   @override
   Widget build(BuildContext context) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
+
     return SingleChildScrollView(
       child: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: McGyver.rsDoubleW(context, 6),
-        ),
+            // horizontal: McGyver.rsDoubleW(context, 6),
+            ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -30,18 +35,25 @@ class ProviderLoginPage extends StatelessWidget {
               hintText: viewModel.accountName,
               isEnabled: false,
             ),
-            SizedBox(
-              height: 16.pHeight(context),
-            ),
             LabelTextField(
+              onTap: () {
+                viewModel.setProviderSettingsEnum =
+                    ProviderSettingsEnum.changeNickName;
+                viewModel.showCustomDialog(context);
+              },
+              isReadOnly: true,
               label: "Nickname",
               hintText: viewModel.nickname,
-              suffixIcon: SvgPicture.asset(AssetManager.edit),
-            ),
-            SizedBox(
-              height: 16.pHeight(context),
+              suffixIcon: Transform.scale(
+                  scale: 0.6, child: SvgPicture.asset(AssetManager.edit)),
             ),
             LabelTextField(
+              onTap: () {
+                viewModel.setProviderSettingsEnum =
+                    ProviderSettingsEnum.changePassword;
+                viewModel.showCustomDialog(context);
+              },
+              isReadOnly: true,
               label: "Password",
               hintText: viewModel.password,
               suffixIcon: IconButton(
@@ -49,22 +61,58 @@ class ProviderLoginPage extends StatelessWidget {
                 icon: Icon(Icons.visibility_off),
               ),
             ),
-            SizedBox(
-              height: 16.pHeight(context),
-            ),
             LabelTextField(
+              onTap: () {
+                viewModel.setProviderSettingsEnum =
+                    ProviderSettingsEnum.updatePhoneNumber;
+                viewModel.showCustomDialog(context);
+              },
+              isReadOnly: true,
               label: "Phone Number",
-              hintText: viewModel.password,
-              suffixIcon: SvgPicture.asset(AssetManager.edit),
+              hintText: viewModel.phoneNumber,
+              suffixIcon: Transform.scale(
+                  scale: 0.6, child: SvgPicture.asset(AssetManager.edit)),
             ),
-            SizedBox(
-              height: 16.pHeight(context),
+            Text(
+              "Strategy Description",
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 1.8),
+                fontWeight: FontWeight.w500,
+                color: isDarkMode
+                    ? const Color(0xFFD0D5DD)
+                    : const Color(
+                        0xFF667085,
+                      ),
+              ),
             ),
-            LabelTextField(
-              label: "Strategy Description",
-              hintText: viewModel.strategyDescription,
-              maxLines: 7,
-              suffixIcon: SvgPicture.asset(AssetManager.edit),
+            verticalSpaceXXSmall(context),
+            InkWell(
+              onTap: () {
+                viewModel.setProviderSettingsEnum =
+                    ProviderSettingsEnum.editStrategyDescription;
+                viewModel.showCustomDialog(context);
+              },
+              child: CustomTextFields(
+                onTap: () {
+                  viewModel.setProviderSettingsEnum =
+                      ProviderSettingsEnum.editStrategyDescription;
+                  viewModel.showCustomDialog(context);
+                },
+                isReadOnly: true,
+                hintText: viewModel.strategyDescription,
+                maxLines: 7,
+                suffixIcon: InkWell(
+                  onTap: () {
+                    viewModel.setProviderSettingsEnum =
+                        ProviderSettingsEnum.editStrategyDescription;
+                    viewModel.showCustomDialog(context);
+                  },
+                  child: Transform.scale(
+                      alignment: Alignment.topCenter,
+                      scale: 0.6,
+                      child: SvgPicture.asset(AssetManager.edit)),
+                ),
+              ),
             ),
             SizedBox(
               height: 16.pHeight(context),
@@ -82,7 +130,7 @@ class ProviderLoginPage extends StatelessWidget {
             ),
             LabelTextField(
               label: "Public Visibility",
-              hintText: viewModel.strategyDescription,
+              hintText: "Visibility: Public",
               suffixIcon: Switch.adaptive(
                   value: viewModel.visibility,
                   onChanged: (bool visibility) {
@@ -102,6 +150,9 @@ class ProviderLoginPage extends StatelessWidget {
               width: double.infinity,
               textSize: 1.8,
             ),
+            SizedBox(
+              height: 30.pHeight(context),
+            )
           ],
         ),
       ),

@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
+import 'package:meta_trader/ui/widgets/provider/components/change_nickname.dart';
+import 'package:meta_trader/ui/widgets/provider/components/change_password.dart';
+import 'package:meta_trader/ui/widgets/provider/components/edit_strategy_description.dart';
 import 'package:meta_trader/ui/widgets/provider/components/provider_appbar.dart';
+import 'package:meta_trader/ui/widgets/provider/components/update_phone_number.dart';
 import 'package:meta_trader/ui/widgets/provider/provider_confirmation.dart';
 import 'package:meta_trader/ui/widgets/provider/provider_dashboard.dart';
 import 'package:meta_trader/ui/widgets/provider/provider_login.dart';
+import 'package:meta_trader/ui/widgets/provider/provider_notification.dart';
+import 'package:meta_trader/ui/widgets/provider/provider_options_page.dart';
+import 'package:meta_trader/ui/widgets/provider/provider_settings.dart';
 import 'package:meta_trader/ui/widgets/provider/provider_signup.dart';
+import 'package:meta_trader/ui/widgets/provider/provider_wallet.dart';
 import 'package:meta_trader/ui/widgets/provider/welcome.dart';
 
 enum ProviderPageEnum {
@@ -14,14 +22,32 @@ enum ProviderPageEnum {
   login,
   dashboard,
   options,
-  profileSettings
+  profileSettings,
+  wallet,
+  notifications,
+  transactionHistory
 }
+
+enum ProviderSettingsEnum {
+  changeNickName,
+  changePassword,
+  editStrategyDescription,
+  updatePhoneNumber
+}
+
+enum TransactionsTypeEnum { withdrawal, deposit, internalTransfer }
+
+enum TransactionStatusEnum { successful, pending, failed }
 
 class ProviderViewModel extends CustomBaseViewModel {
   ProviderViewModel();
 
-  ProviderPageEnum _providerPageEnum = ProviderPageEnum.dashboard;
+  ProviderPageEnum _providerPageEnum = ProviderPageEnum.wallet;
   ProviderPageEnum get providerPageEnum => _providerPageEnum;
+  ProviderSettingsEnum _providerSettingsEnum =
+      ProviderSettingsEnum.changeNickName;
+  ProviderSettingsEnum get providerSettingsEnum => _providerSettingsEnum;
+
   bool checkbox = false;
 
   final summaryOneTabSelectorNotifier = ValueNotifier(0);
@@ -120,13 +146,13 @@ class ProviderViewModel extends CustomBaseViewModel {
     },
   ];
 
-  String _nickname = "Silver";
+  String _nickname = "Jonny";
   String get nickname => _nickname;
 
-  String _password = "Susan";
+  String _password = "XXXXXXXXXXX";
   String get password => _password;
 
-  String _phoneNumber = "Silver";
+  String _phoneNumber = "+23470179919";
   String get phoneNumber => _phoneNumber;
 
   int _desiredFee = 30;
@@ -179,6 +205,11 @@ class ProviderViewModel extends CustomBaseViewModel {
     rebuildUi();
   }
 
+  set setProviderSettingsEnum(ProviderSettingsEnum e) {
+    _providerSettingsEnum = e;
+    rebuildUi();
+  }
+
   void setTabNotifiier(int value) {
     overviewTabSelectedNotifier.value = value;
     rebuildUi();
@@ -188,6 +219,32 @@ class ProviderViewModel extends CustomBaseViewModel {
     checkbox = !checkbox;
     rebuildUi();
   }
+
+  List notifications = [
+    {
+      "title": "Subscription Successful",
+      "description": "You are now copying satoshi nakamoto. ",
+      "date": "2.1.2023",
+      "time": "16:23:41",
+      "isRead": false
+    },
+    {
+      "title": "subscription terminated",
+      "description":
+          "You have successfully terminated your copu trading with satoshi nakamoto. ",
+      "date": "2.1.2023 ",
+      "time": "16:23:41",
+      "isRead": false
+    },
+    {
+      "title": "subscription terminated",
+      "description":
+          "You have successfully terminated your copu trading with satoshi nakamoto. ",
+      "date": "2.1.2023",
+      "time": "16:23:41",
+      "isRead": false
+    },
+  ];
 
   Widget returnPage() {
     switch (_providerPageEnum) {
@@ -200,9 +257,37 @@ class ProviderViewModel extends CustomBaseViewModel {
         return ProviderConfirmationPage(viewModel: this);
       case ProviderPageEnum.login:
         return ProviderLoginPage(viewModel: this);
+
+      case ProviderPageEnum.options:
+        return ProviderOptionsPage(viewModel: this);
+
+      case ProviderPageEnum.profileSettings:
+        return ProviderSettingsPage(viewModel: this);
+      case ProviderPageEnum.notifications:
+        return ProviderNotificationPage(viewModel: this);
+      case ProviderPageEnum.wallet:
+        return WalletPage(viewModel: this);
       case ProviderPageEnum.dashboard:
         return SingleChildScrollView(
             child: ProviderDashboardPage(viewModel: this));
+      default:
+        return SizedBox();
+    }
+  }
+
+  Widget returnDialog() {
+    switch (_providerSettingsEnum) {
+      case ProviderSettingsEnum.changeNickName:
+        return ChangeNickName(
+          viewModel: this,
+        );
+      case ProviderSettingsEnum.changePassword:
+        return ChangePassword(viewModel: this);
+      case ProviderSettingsEnum.editStrategyDescription:
+        return EditStrategyDescription(viewModel: this);
+      case ProviderSettingsEnum.updatePhoneNumber:
+        return UpdatePhoneNumber(viewModel: this);
+
       default:
         return SizedBox();
     }
@@ -218,6 +303,7 @@ class ProviderViewModel extends CustomBaseViewModel {
             context,
             "Sign up as a Provider",
             "Enter your information",
+            true,
             IconButton(
                 onPressed: () {},
                 icon: Icon(
@@ -228,11 +314,79 @@ class ProviderViewModel extends CustomBaseViewModel {
         return null;
       case ProviderPageEnum.login:
         return ProviderAppbar.simpleAppBar(this, context, "Provider Login",
-            "Approved provider registration", null);
+            "Approved provider registration", true, null);
+      case ProviderPageEnum.options:
+        return ProviderAppbar.simpleAppBar(
+            this, context, "Options", "", false, null);
+      case ProviderPageEnum.notifications:
+        return ProviderAppbar.simpleAppBar(
+            this, context, "Notifications", "", false, null);
+      case ProviderPageEnum.profileSettings:
+        return ProviderAppbar.simpleAppBar(this, context, "Profile Settings",
+            "Change your profile information", true, null);
       case ProviderPageEnum.dashboard:
         return ProviderAppbar.appBarTwo(this, context);
+      case ProviderPageEnum.wallet:
+        return ProviderAppbar.walletAppBar(context, "Wallet", "", this);
       default:
         return AppBar();
+    }
+  }
+
+  Future<void> showCustomDialog(BuildContext context) async {
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return Dialog(child: returnDialog());
+      },
+    );
+  }
+
+  String assetNameForTransactionType(TransactionsTypeEnum type) {
+    switch (type) {
+      case TransactionsTypeEnum.withdrawal:
+        return 'assets/icons/money_send_outline.svg';
+      case TransactionsTypeEnum.deposit:
+        return 'assets/icons/money_receive_outline.svg';
+      case TransactionsTypeEnum.internalTransfer:
+        return 'assets/icons/recovery_convert.svg';
+      default:
+        return "";
+    }
+  }
+
+  Color iconColorForTransactionType(
+      TransactionsTypeEnum type, bool isDarkMode) {
+    switch (type) {
+      case TransactionsTypeEnum.withdrawal:
+        return const Color(0xff7A271A);
+      case TransactionsTypeEnum.deposit:
+        return isDarkMode ? const Color(0xff47B0F5) : const Color(0xff20A0F3);
+      case TransactionsTypeEnum.internalTransfer:
+        return const Color(0xff3E1C96);
+    }
+  }
+
+  Color bgColorForTransactionType(TransactionsTypeEnum type, bool isDarkMode) {
+    switch (type) {
+      case TransactionsTypeEnum.withdrawal:
+        return isDarkMode ? const Color(0xffFECDCA) : const Color(0xFFFEE4E2);
+      case TransactionsTypeEnum.deposit:
+        return isDarkMode ? const Color(0xff073961) : const Color(0xffD3ECFD);
+      case TransactionsTypeEnum.internalTransfer:
+        return isDarkMode ? const Color(0xffBDB4FE) : const Color(0xFFD9D6FE);
+    }
+  }
+
+  Color statusColorForTransactionType(
+      TransactionStatusEnum type, bool isDarkMode) {
+    switch (type) {
+      case TransactionStatusEnum.successful:
+        return isDarkMode ? const Color(0xff77C5F8) : const Color(0xFF20A0F3);
+      case TransactionStatusEnum.pending:
+        return isDarkMode ? const Color(0xFFFEC84B) : const Color(0xffF79009);
+      case TransactionStatusEnum.failed:
+        return isDarkMode ? const Color(0xffFDA29B) : const Color(0xFFF04438);
     }
   }
 }
@@ -245,4 +399,24 @@ class CandleData {
   final double close;
 
   CandleData(this.date, this.low, this.high, this.open, this.close);
+}
+
+class TransactionModel {
+  final String id;
+  final TransactionsTypeEnum type;
+  final String title;
+  final String amount;
+  final TransactionStatusEnum status;
+  final String date;
+  final String time;
+
+  TransactionModel({
+    required this.id,
+    required this.type,
+    required this.title,
+    required this.amount,
+    required this.status,
+    required this.date,
+    required this.time,
+  });
 }

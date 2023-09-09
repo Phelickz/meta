@@ -12,11 +12,13 @@ class ProviderOptionsTile extends StatelessWidget {
   final String leading;
   final bool isArrowTrailing;
   final Widget? secondaryTrailing;
+  final VoidCallback? onTap;
   const ProviderOptionsTile(
       {Key? key,
       required this.title,
       required this.leading,
       this.isArrowTrailing = true,
+      this.onTap,
       this.secondaryTrailing})
       : super(key: key);
 
@@ -24,28 +26,31 @@ class ProviderOptionsTile extends StatelessWidget {
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
 
-    return Row(mainAxisAlignment: MainAxisAlignment.start, children: [
-      SvgPicture.asset(leading),
-      SizedBox(
-        width: 16.pWidth(context),
-      ),
-      Text(
-        title,
-        style: CustomThemeData.generateStyle(
-          fontSize: McGyver.textSize(context, 1.7),
-          color: isDarkMode ? Colors.white : const Color(0xff667085),
-          fontWeight: FontWeight.bold,
+    return InkWell(
+      onTap: onTap,
+      child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+        SvgPicture.asset(leading),
+        SizedBox(
+          width: 16.pWidth(context),
         ),
-      ),
-      const Spacer(),
-      isArrowTrailing
-          ? Icon(
-              Platform.isAndroid
-                  ? Icons.arrow_forward
-                  : Icons.arrow_forward_ios,
-              color: isDarkMode ? Colors.white70 : Colors.black,
-            )
-          : secondaryTrailing!
-    ]);
+        Text(
+          title,
+          style: CustomThemeData.generateStyle(
+            fontSize: McGyver.textSize(context, 1.7),
+            color: isDarkMode ? Colors.white : const Color(0xff667085),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const Spacer(),
+        isArrowTrailing
+            ? Icon(
+                Platform.isAndroid
+                    ? Icons.arrow_forward
+                    : Icons.arrow_forward_ios,
+                color: isDarkMode ? Colors.white70 : Colors.black,
+              )
+            : secondaryTrailing!
+      ]),
+    );
   }
 }
