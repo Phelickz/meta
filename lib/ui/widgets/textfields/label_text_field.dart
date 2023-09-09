@@ -10,8 +10,10 @@ class LabelTextField extends StatelessWidget {
   final TextInputType? keyboardType;
   final TextEditingController? controller;
   final bool isEnabled;
+  final bool hasSmallMargin;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
+
   final VoidCallback? onTap;
   final bool isReadOnly;
 
@@ -88,7 +90,9 @@ class LabelTextField extends StatelessWidget {
             ),
           ),
         ),
-        verticalSpaceSmall(context),
+        hasSmallMargin
+            ? verticalSpaceXXSmall(context)
+            : verticalSpaceSmall(context),
       ],
     );
   }
