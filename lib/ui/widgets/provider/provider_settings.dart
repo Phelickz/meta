@@ -86,19 +86,33 @@ class ProviderSettingsPage extends StatelessWidget {
               ),
             ),
             verticalSpaceXXSmall(context),
-            CustomTextFields(
+            InkWell(
               onTap: () {
                 viewModel.setProviderSettingsEnum =
                     ProviderSettingsEnum.editStrategyDescription;
                 viewModel.showCustomDialog(context);
               },
-              isReadOnly: true,
-              hintText: viewModel.strategyDescription,
-              maxLines: 7,
-              suffixIcon: Transform.scale(
-                  alignment: Alignment.topCenter,
-                  scale: 0.6,
-                  child: SvgPicture.asset(AssetManager.edit)),
+              child: CustomTextFields(
+                onTap: () {
+                  viewModel.setProviderSettingsEnum =
+                      ProviderSettingsEnum.editStrategyDescription;
+                  viewModel.showCustomDialog(context);
+                },
+                isReadOnly: true,
+                hintText: viewModel.strategyDescription,
+                maxLines: 7,
+                suffixIcon: InkWell(
+                  onTap: () {
+                    viewModel.setProviderSettingsEnum =
+                        ProviderSettingsEnum.editStrategyDescription;
+                    viewModel.showCustomDialog(context);
+                  },
+                  child: Transform.scale(
+                      alignment: Alignment.topCenter,
+                      scale: 0.6,
+                      child: SvgPicture.asset(AssetManager.edit)),
+                ),
+              ),
             ),
             SizedBox(
               height: 16.pHeight(context),
@@ -116,7 +130,7 @@ class ProviderSettingsPage extends StatelessWidget {
             ),
             LabelTextField(
               label: "Public Visibility",
-              hintText: viewModel.strategyDescription,
+              hintText: "Visibility: Public",
               suffixIcon: Switch.adaptive(
                   value: viewModel.visibility,
                   onChanged: (bool visibility) {

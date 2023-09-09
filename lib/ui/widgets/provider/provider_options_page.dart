@@ -15,13 +15,25 @@ class ProviderOptionsPage extends StatelessWidget {
       children: [
         SizedBox(height: 30.pHeight(context)),
         ProviderOptionsTile(
-            title: "My Wallet", leading: AssetManager.paymentMethod),
+            onTap: () {
+              viewModel.setProviderPageEnum = ProviderPageEnum.wallet;
+            },
+            title: "My Wallet",
+            leading: AssetManager.paymentMethod),
         SizedBox(height: 12.pHeight(context)),
         ProviderOptionsTile(
-            title: "Profile Settings", leading: AssetManager.editUserIcon),
+            onTap: () {
+              viewModel.setProviderPageEnum = ProviderPageEnum.profileSettings;
+            },
+            title: "Profile Settings",
+            leading: AssetManager.editUserIcon),
         SizedBox(height: 12.pHeight(context)),
         ProviderOptionsTile(
-            title: "Notification", leading: AssetManager.notificationsIcon),
+            onTap: () {
+              viewModel.setProviderPageEnum = ProviderPageEnum.notifications;
+            },
+            title: "Notification",
+            leading: AssetManager.notificationsIcon),
         SizedBox(height: 12.pHeight(context)),
         ProviderOptionsTile(title: "Support", leading: AssetManager.help),
         SizedBox(height: 12.pHeight(context)),

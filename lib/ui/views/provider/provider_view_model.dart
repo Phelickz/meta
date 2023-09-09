@@ -8,6 +8,7 @@ import 'package:meta_trader/ui/widgets/provider/components/update_phone_number.d
 import 'package:meta_trader/ui/widgets/provider/provider_confirmation.dart';
 import 'package:meta_trader/ui/widgets/provider/provider_dashboard.dart';
 import 'package:meta_trader/ui/widgets/provider/provider_login.dart';
+import 'package:meta_trader/ui/widgets/provider/provider_notification.dart';
 import 'package:meta_trader/ui/widgets/provider/provider_options_page.dart';
 import 'package:meta_trader/ui/widgets/provider/provider_settings.dart';
 import 'package:meta_trader/ui/widgets/provider/provider_signup.dart';
@@ -41,7 +42,7 @@ enum TransactionStatusEnum { successful, pending, failed }
 class ProviderViewModel extends CustomBaseViewModel {
   ProviderViewModel();
 
-  ProviderPageEnum _providerPageEnum = ProviderPageEnum.profileSettings;
+  ProviderPageEnum _providerPageEnum = ProviderPageEnum.wallet;
   ProviderPageEnum get providerPageEnum => _providerPageEnum;
   ProviderSettingsEnum _providerSettingsEnum =
       ProviderSettingsEnum.changeNickName;
@@ -145,7 +146,7 @@ class ProviderViewModel extends CustomBaseViewModel {
     },
   ];
 
-  String _nickname = "Silver";
+  String _nickname = "Jonny";
   String get nickname => _nickname;
 
   String _password = "XXXXXXXXXXX";
@@ -262,6 +263,8 @@ class ProviderViewModel extends CustomBaseViewModel {
 
       case ProviderPageEnum.profileSettings:
         return ProviderSettingsPage(viewModel: this);
+      case ProviderPageEnum.notifications:
+        return ProviderNotificationPage(viewModel: this);
       case ProviderPageEnum.wallet:
         return WalletPage(viewModel: this);
       case ProviderPageEnum.dashboard:
@@ -334,7 +337,7 @@ class ProviderViewModel extends CustomBaseViewModel {
     return showDialog<void>(
       context: context,
       builder: (BuildContext context) {
-        return returnDialog();
+        return Dialog(child: returnDialog());
       },
     );
   }

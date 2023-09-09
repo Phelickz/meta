@@ -15,6 +15,7 @@ class UpdatePhoneNumber extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 360.pHeight(context),
       padding: EdgeInsets.symmetric(
         horizontal: McGyver.rsDoubleW(context, 6),
       ),
@@ -33,7 +34,8 @@ class UpdatePhoneNumber extends StatelessWidget {
           SizedBox(
             height: 20.pHeight(context),
           ),
-          LabelTextField(label: "Nickname", hintText: viewModel.phoneNumber),
+          LabelTextField(
+              label: "Phone Number", hintText: viewModel.phoneNumber),
           SizedBox(
             height: 80.pHeight(context),
           ),
