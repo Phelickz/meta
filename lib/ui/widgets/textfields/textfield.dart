@@ -18,25 +18,29 @@ class CustomTextFields extends StatefulWidget {
   final BoxConstraints? suffixIconConstraints;
   final TextAlign textAlign;
   final int? maxLines;
+  final VoidCallback? onTap;
+  final bool isReadOnly;
   // final bool ignore;
-  const CustomTextFields({
-    Key? key,
-    this.prefixIcon,
-    this.suffixIcon,
-    this.label,
-    this.helperText,
-    this.password = false,
-    this.controller,
-    this.onChanged,
-    this.validator,
-    this.maxLines,
-    this.keyboardType = TextInputType.text,
-    this.inputDecoration,
-    this.hintText,
-    this.filledWithColor = false,
-    this.suffixIconConstraints,
-    this.textAlign = TextAlign.start,
-  }) : super(key: key);
+  const CustomTextFields(
+      {Key? key,
+      this.prefixIcon,
+      this.suffixIcon,
+      this.label,
+      this.helperText,
+      this.password = false,
+      this.controller,
+      this.onChanged,
+      this.validator,
+      this.maxLines,
+      this.keyboardType = TextInputType.text,
+      this.inputDecoration,
+      this.hintText,
+      this.filledWithColor = false,
+      this.suffixIconConstraints,
+      this.textAlign = TextAlign.start,
+      this.onTap,
+      this.isReadOnly = true})
+      : super(key: key);
 
   @override
   _SignupTextFieldsState createState() => _SignupTextFieldsState();
@@ -74,7 +78,10 @@ class _SignupTextFieldsState extends State<CustomTextFields> {
       onChanged: widget.onChanged,
       controller: widget.controller,
       focusNode: _focusNode,
-      onTap: _requestFocus,
+      onTap: () {
+        _requestFocus();
+        widget.onTap;
+      },
 
       autovalidateMode: AutovalidateMode.onUserInteraction,
       obscureText: widget.password! ? _visible : false,
