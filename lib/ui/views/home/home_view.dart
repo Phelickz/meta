@@ -377,7 +377,7 @@ class HomeView extends StackedView<HomeViewModel> {
         const CircleAvatar(
           radius: 27,
           backgroundImage: AssetImage(
-            'assets/images/avi.png',
+            'assets/images/Frame_346.png',
           ),
           backgroundColor: Colors.white,
         ),

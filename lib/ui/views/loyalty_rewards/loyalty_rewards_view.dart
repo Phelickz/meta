@@ -6,6 +6,7 @@ import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/loyalty_rewards/loyalty_rewards_view_model.dart';
 import 'package:meta_trader/ui/widgets/appbar.dart';
 import 'package:meta_trader/ui/widgets/loyalty_rewards/about_loyalty_rewards.dart';
+import 'package:meta_trader/ui/widgets/loyalty_rewards/card.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
 import '../../../app/responsiveness/res.dart';
@@ -73,19 +74,20 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   verticalSpaceSmall(context),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: McGyver.rsDoubleW(context, 5),
-                    ),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Image.asset(
-                        "assets/images/silver.png",
-                        width: double.infinity,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
+                  const LoyaltyRewardCard(),
+                  // Padding(
+                  //   padding: EdgeInsets.symmetric(
+                  //     horizontal: McGyver.rsDoubleW(context, 5),
+                  //   ),
+                  //   child: Align(
+                  //     alignment: Alignment.center,
+                  //     child: Image.asset(
+                  //       "assets/images/silver.png",
+                  //       width: double.infinity,
+                  //       fit: BoxFit.cover,
+                  //     ),
+                  //   ),
+                  // ),
                   verticalSpaceSmall(context),
                   verticalSpaceSmall(context),
                   Padding(
