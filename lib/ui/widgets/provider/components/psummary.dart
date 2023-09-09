@@ -42,7 +42,26 @@ class Psummary extends StatelessWidget {
 
             ],
           ),
-          SizedBox(height: 48.pHeight(context),),
+          SizedBox(height: 8.pHeight(context),),
+          InkWell(
+            onTap: ()=> viewModel.setProviderPageEnum = ProviderPageEnum.followers,
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: 6.pHeight(context), horizontal: 10.pWidth(context)),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF0C95EF),
+                  borderRadius: BorderRadius.circular(12)
+                ),
+                child: Text(
+                  "View followers",
+                  style: CustomThemeData.generateColoredStyle(fontSize: 12, context: context, fontWeight: FontWeight.w400, lightTextColor: const Color(0xFFFCFCFD), darkTextColor: const Color(0xFFFCFCFD)),
+                ),
+              ),
+            ),
+          ),
+          // SizedBox(height: 48.pHeight(context),),
+          // const Spacer(),
           Expanded(
             child: ValueListenableBuilder<int>(
               valueListenable: viewModel.summaryOneTabSelectorNotifier, 

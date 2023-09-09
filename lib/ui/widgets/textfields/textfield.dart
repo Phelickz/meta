@@ -89,7 +89,7 @@ class _SignupTextFieldsState extends State<CustomTextFields> {
         fontSize: 15,
         color: const Color(0xff98A2B3),
       ),
-      maxLines: widget.maxLines,
+      maxLines: widget.maxLines ?? 1,
       // style: Theme.of(context).textTheme.titleSmall!.copyWith(
       //       color: Colors.black87,
       //     ),

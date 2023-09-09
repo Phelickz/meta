@@ -18,8 +18,8 @@ class PTradeHistory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
         children: [
-          SizedBox(height: 8.pHeight(context),),
-          const ProfileBar(name: "Adenuga Kolade", job: "Flutter Developer", nationality: "NGR"),
+          // SizedBox(height: 8.pHeight(context),),
+          // const ProfileBar(name: "Adenuga Kolade", job: "Flutter Developer", nationality: "NGR"),
           SizedBox(height: 16.pHeight(context),),
           ProfitBar(viewModel: viewModel),
           SizedBox(height: 20.pHeight(context),),
