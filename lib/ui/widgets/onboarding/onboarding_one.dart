@@ -28,7 +28,7 @@ class OnboardingOne extends StatelessWidget {
             RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                text: 'Stay ahead with real-time data on our new ',
+                text: 'Trade at the cutting edge with our ',
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 3.2),
                   fontWeight: FontWeight.w700,
@@ -36,7 +36,7 @@ class OnboardingOne extends StatelessWidget {
                 ),
                 children: [
                   TextSpan(
-                    text: 'Meta Trader 5 ',
+                    text: 'state-of-the-art ',
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 3.2),
                       fontWeight: FontWeight.w700,
@@ -44,7 +44,7 @@ class OnboardingOne extends StatelessWidget {
                     ),
                   ),
                   TextSpan(
-                    text: 'app.',
+                    text: 'platform and stay ahead',
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 3.2),
                       fontWeight: FontWeight.w700,
@@ -56,7 +56,7 @@ class OnboardingOne extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             Text(
-              'We made fundamental analysis easier. Get access to current news on every currency pair all on one platform',
+              "Explore total convenience for your trading journey with our 360-degree platform. Enjoy seamless trading and access extra features to elevate your financial experience.",
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),

@@ -36,7 +36,7 @@ class OnboardingTwo extends StatelessWidget {
                 ),
                 children: [
                   TextSpan(
-                    text: 'instant credits ',
+                    text: 'your growth ',
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 3.2),
                       fontWeight: FontWeight.w700,
@@ -44,7 +44,7 @@ class OnboardingTwo extends StatelessWidget {
                     ),
                   ),
                   TextSpan(
-                    text: 'when you trade with higher lot sizes',
+                    text: 'with our abundant resources and unwavering support',
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 3.2),
                       fontWeight: FontWeight.w700,
@@ -56,7 +56,7 @@ class OnboardingTwo extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             Text(
-              'Start earning points on every trade you place, depending on the lot size. The higher the lot size, the higher your points',
+              'Secure your future with our comprehensive resources and unwavering support for sustainable growth.',
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),

@@ -28,7 +28,7 @@ class OnboardingFour extends StatelessWidget {
             RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                text: 'Save and export ',
+                text: 'Unlock the power ',
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 3.2),
                   fontWeight: FontWeight.w700,
@@ -36,7 +36,7 @@ class OnboardingFour extends StatelessWidget {
                 ),
                 children: [
                   TextSpan(
-                    text: 'chart analysis on the Meta Trader 5 app.',
+                    text: 'of diverse tools tailored for your success',
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 3.2),
                       fontWeight: FontWeight.w700,
@@ -48,7 +48,7 @@ class OnboardingFour extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             Text(
-              'You can now manage your setups. Save, export, and download chart analysis from the Meta trader 5 community',
+              "Embark on a successful trading journey with our extensive range of tools, meticulously crafted to ensure your triumph.",
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),

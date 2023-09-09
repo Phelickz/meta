@@ -51,24 +51,24 @@ class LoginPage extends StatelessWidget {
               hintText: 'Password',
               password: true,
             ),
-            verticalSpaceSmall(context),
-            Text(
-              'Server',
-              style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.8),
-                color: isDarkMode ? Colors.white70 : const Color(0xff667085),
-              ),
-            ),
-            verticalSpaceXSmall(context),
-            CustomTextFields(
-              hintText: 'DCFXPrime-Real',
-              password: false,
-              suffixIcon: Icon(
-                Icons.arrow_forward_ios,
-                size: 20,
-                color: Theme.of(context).secondaryHeaderColor,
-              ),
-            ),
+            // verticalSpaceSmall(context),
+            // Text(
+            //   'Server',
+            //   style: CustomThemeData.generateStyle(
+            //     fontSize: McGyver.textSize(context, 1.8),
+            //     color: isDarkMode ? Colors.white70 : const Color(0xff667085),
+            //   ),
+            // ),
+            // verticalSpaceXSmall(context),
+            // CustomTextFields(
+            //   hintText: 'DCFXPrime-Real',
+            //   password: false,
+            //   suffixIcon: Icon(
+            //     Icons.arrow_forward_ios,
+            //     size: 20,
+            //     color: Theme.of(context).secondaryHeaderColor,
+            //   ),
+            // ),
             verticalSpaceSmall(context),
             Row(
               children: [
