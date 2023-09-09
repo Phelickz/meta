@@ -23,8 +23,8 @@ class ProviderDashboardPage extends StatelessWidget {
             SingleChildScrollView(
               child: Column(
                 children: [
-                  SizedBox(height: 8.pHeight(context),),
-                  const ProfileBar(name: "Adenuga Kolade", job: "Flutter Developer", nationality: "NGR"),
+                  // SizedBox(height: 8.pHeight(context),),
+                  // ProfileBar(name: "Adenuga Kolade", job: "Flutter Developer", nationality: "NGR"),
                   SizedBox(height: 16.pHeight(context),),
                   Psummary(viewModel: viewModel),
                   SizedBox(height: 24.pHeight(context),),

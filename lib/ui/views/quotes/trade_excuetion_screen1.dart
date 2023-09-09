@@ -23,24 +23,15 @@ class TradeExecutionScreen extends StackedView<QuotesViewModel> {
       bodyPadding: EdgeInsets.zero,
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const TradeAppbarExtension(),
-              SizedBox(
-                height: 13.pHeight(context),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: McGyver.rsDoubleW(context, 5),
-                ),
-                child: const GenericTradeBody(),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: McGyver.rsDoubleW(context, 5),
-                ),
-                child: Row(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // const TradeAppbarExtension(),
+                SizedBox(height: 13.pHeight(context),),
+                const GenericTradeBody(),
+                Row(
                   children: [
                     const Icon(
                       Icons.info_outline,
@@ -61,8 +52,8 @@ class TradeExecutionScreen extends StackedView<QuotesViewModel> {
                     )
                   ],
                 ),
-              )
-            ],
+              ])
+            ,
           ),
         ),
       ),
