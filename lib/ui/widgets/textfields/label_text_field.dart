@@ -12,18 +12,20 @@ class LabelTextField extends StatelessWidget {
   final bool isEnabled;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
-  final int? maxLines;
-  const LabelTextField({
-    super.key,
-    required this.label,
-    required this.hintText,
-    this.maxLines,
-    this.keyboardType,
-    this.controller,
-    this.prefixIcon,
-    this.suffixIcon,
-    this.isEnabled = true,
-  });
+  final VoidCallback? onTap;
+  final bool isReadOnly;
+
+  const LabelTextField(
+      {super.key,
+      required this.label,
+      required this.hintText,
+      this.keyboardType,
+      this.controller,
+      this.prefixIcon,
+      this.suffixIcon,
+      this.isEnabled = true,
+      this.isReadOnly = false,
+      this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +70,8 @@ class LabelTextField extends StatelessWidget {
           ),
           child: TextField(
             enabled: isEnabled,
-            maxLines: maxLines,
+            readOnly: isReadOnly,
+            onTap: onTap,
             controller: controller ?? TextEditingController(),
             style: textStyle,
             keyboardType: keyboardType ?? TextInputType.name,
