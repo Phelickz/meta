@@ -27,6 +27,7 @@ class LabelTextField extends StatelessWidget {
       this.suffixIcon,
       this.isEnabled = true,
       this.isReadOnly = false,
+      this.hasSmallMargin = true,
       this.onTap});
 
   @override
