@@ -62,8 +62,11 @@ class ProviderModalBottomsheet{
         return Container(
           height: 500.pWidth(context),
           width: double.infinity,
-          decoration: const BoxDecoration(
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(12), topRight: Radius.circular(12))
+          padding: EdgeInsets.symmetric(vertical: 20.pHeight(context), horizontal: 24.pWidth(context)),
+          decoration: BoxDecoration(
+            borderRadius: const BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+            
+            color: Theme.of(context).scaffoldBackgroundColor
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,

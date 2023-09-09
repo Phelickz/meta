@@ -16,6 +16,7 @@ class ProfileBar extends StatelessWidget {
       height: 60.pHeight(context),
       color: isDarkMode ? ColorManager.darkHeaderColor : Theme.of(context).scaffoldBackgroundColor,
       width: double.infinity,
+      padding:  const EdgeInsets.symmetric(horizontal: 8),
       child: Row(
         children: [
           SvgPicture.asset(AssetManager.blankProfile, height: 44.pHeight(context), width: 44.pWidth(context)),

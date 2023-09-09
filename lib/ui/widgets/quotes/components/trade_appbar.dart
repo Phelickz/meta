@@ -1,7 +1,12 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/locator/locator.dart';
 import 'package:meta_trader/app/services/router_service.dart';
+import 'package:meta_trader/app/utils/asset_manager.dart';
+import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/ui/widgets/quotes/components/trade_appbar_extension.dart';
+
 import '../../../../app/responsiveness/res.dart';
 import '../../../../app/utils/color_manager.dart';
 import '../../../../app/utils/theme.dart';
@@ -46,6 +51,13 @@ AppBar tradeAppBars(
                 color: isDarkMode ? Colors.white : const Color(0xFF475467),
                 fontWeight: FontWeight.w400))
       ],
+    ),
+    bottom: PreferredSize(
+      child: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 8),
+        child: TradeAppbarExtension(),
+      ),
+      preferredSize: Size.fromHeight(80.pHeight(context)),
     ),
   );
 }

@@ -1,9 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
+import 'package:meta_trader/ui/widgets/provider/components/profile_bar.dart';
+import 'package:meta_trader/ui/widgets/provider/components/wallet_balance_container.dart';
 
 import '../../../../app/responsiveness/res.dart';
 
@@ -12,7 +15,8 @@ class ProviderAppbar {
       String title, String subTitle, bool hasSubtitle, Widget? icon) {
     return AppBar(
       elevation: 0,
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      backgroundColor: model.isDarkMode()?ColorManager.darkHeaderColor : Theme.of(context).scaffoldBackgroundColor,
+
       automaticallyImplyLeading: false,
       leading: IconButton(
           icon: Icon(
@@ -55,7 +59,7 @@ class ProviderAppbar {
   ) {
     return AppBar(
       elevation: 0,
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      backgroundColor: model.isDarkMode()?ColorManager.darkHeaderColor : Theme.of(context).scaffoldBackgroundColor,
       leading: IconButton(
           icon: Icon(
             Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
@@ -117,6 +121,11 @@ class ProviderAppbar {
           ),
         ),
       ),
+      bottom: PreferredSize(
+        child: const ProfileBar(name: "Adenuga Kolade", job: "Flutter Developer", nationality: "NGR"),
+        preferredSize: Size.fromHeight(60.pHeight(context)),
+      ),
+
       actions: [
         IconButton(
             onPressed: () {},
@@ -152,6 +161,10 @@ class ProviderAppbar {
           color: isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFFF5FBFE),
           fontWeight: FontWeight.bold,
         ),
+      ),
+      bottom: PreferredSize(
+        child: WalletBalanceContainer(),
+        preferredSize: Size.fromHeight(60.pHeight(context)),
       ),
     );
   }

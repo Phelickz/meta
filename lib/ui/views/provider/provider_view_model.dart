@@ -7,6 +7,7 @@ import 'package:meta_trader/ui/widgets/provider/components/provider_appbar.dart'
 import 'package:meta_trader/ui/widgets/provider/components/update_phone_number.dart';
 import 'package:meta_trader/ui/widgets/provider/provider_confirmation.dart';
 import 'package:meta_trader/ui/widgets/provider/provider_dashboard.dart';
+import 'package:meta_trader/ui/widgets/provider/provider_followers.dart';
 import 'package:meta_trader/ui/widgets/provider/provider_login.dart';
 import 'package:meta_trader/ui/widgets/provider/provider_notification.dart';
 import 'package:meta_trader/ui/widgets/provider/provider_options_page.dart';
@@ -25,7 +26,8 @@ enum ProviderPageEnum {
   profileSettings,
   wallet,
   notifications,
-  transactionHistory
+  transactionHistory,
+  followers
 }
 
 enum ProviderSettingsEnum {
@@ -42,7 +44,7 @@ enum TransactionStatusEnum { successful, pending, failed }
 class ProviderViewModel extends CustomBaseViewModel {
   ProviderViewModel();
 
-  ProviderPageEnum _providerPageEnum = ProviderPageEnum.wallet;
+  ProviderPageEnum _providerPageEnum = ProviderPageEnum.profileSettings;
   ProviderPageEnum get providerPageEnum => _providerPageEnum;
   ProviderSettingsEnum _providerSettingsEnum =
       ProviderSettingsEnum.changeNickName;
@@ -147,6 +149,13 @@ class ProviderViewModel extends CustomBaseViewModel {
   ];
 
   String _nickname = "Jonny";
+  Map<String, dynamic> followersData = {
+    "name": "Henry Walston",
+    "date": "2023.7.13",
+    "location":"USA"
+  };
+
+  // String _nickname = "Silver";
   String get nickname => _nickname;
 
   String _password = "XXXXXXXXXXX";
@@ -268,8 +277,9 @@ class ProviderViewModel extends CustomBaseViewModel {
       case ProviderPageEnum.wallet:
         return WalletPage(viewModel: this);
       case ProviderPageEnum.dashboard:
-        return SingleChildScrollView(
-            child: ProviderDashboardPage(viewModel: this));
+        return ProviderDashboardPage(viewModel: this);
+      case ProviderPageEnum.followers:
+        return ProviderFollowerPage(viewModel: this);
       default:
         return SizedBox();
     }
@@ -328,6 +338,8 @@ class ProviderViewModel extends CustomBaseViewModel {
         return ProviderAppbar.appBarTwo(this, context);
       case ProviderPageEnum.wallet:
         return ProviderAppbar.walletAppBar(context, "Wallet", "", this);
+      case ProviderPageEnum.followers:
+        return ProviderAppbar.simpleAppBar(this, context, "Followers", "View your followers", true, null);
       default:
         return AppBar();
     }

@@ -7,8 +7,11 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
 import 'package:meta_trader/ui/widgets/home/price_sentiments.dart';
 import 'package:meta_trader/ui/widgets/home/trading_tools.dart';
+import 'package:meta_trader/ui/widgets/provider/components/psummary.dart';
+import 'package:meta_trader/ui/widgets/provider/components/psummary2.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:meta_trader/ui/widgets/sliverappbar/fade_scroll_app_bar.dart';
 import 'package:stacked/stacked.dart';
@@ -333,6 +336,28 @@ class HomeView extends StackedView<HomeViewModel> {
                   },
                 ),
               ),
+              verticalSpaceXSmall(context),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Provider Stats',
+                    style: CustomThemeData.generateStyle(
+                      fontSize: McGyver.textSize(context, 2),
+                      fontWeight: FontWeight.bold,
+                      color: isDarkMode
+                          ? const Color(0xff98A2B3)
+                          : const Color(0xff475467),
+                    ),
+                  ),
+                  TextButton(onPressed: () {}, child: const Text('View more'))
+                ],
+              ),
+              verticalSpaceXSmall(context),
+              Psummary(viewModel: ProviderViewModel()),
+              verticalSpaceXSmall(context),
+              verticalSpaceXSmall(context),
+              Psummary2(viewModel: ProviderViewModel()),
             ],
           ),
         ),
