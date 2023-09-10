@@ -15,8 +15,9 @@ class ProviderAppbar {
       String title, String subTitle, bool hasSubtitle, Widget? icon) {
     return AppBar(
       elevation: 0,
-      backgroundColor: model.isDarkMode()?ColorManager.darkHeaderColor : Theme.of(context).scaffoldBackgroundColor,
-
+      backgroundColor: model.isDarkMode()
+          ? ColorManager.darkHeaderColor
+          : Theme.of(context).scaffoldBackgroundColor,
       automaticallyImplyLeading: false,
       leading: IconButton(
           icon: Icon(
@@ -24,7 +25,16 @@ class ProviderAppbar {
             color: model.isDarkMode() ? const Color(0xffD2D2D2) : Colors.black,
           ),
           onPressed: () {
-            model.goBack();
+            if (model.providerPageEnum == ProviderPageEnum.notifications ||
+                model.providerPageEnum == ProviderPageEnum.profileSettings) {
+              model.setProviderPageEnum = ProviderPageEnum.options;
+            }
+            if (model.providerPageEnum == ProviderPageEnum.followers) {
+              model.setProviderPageEnum = ProviderPageEnum.dashboard;
+            } else {
+              model.goBack();
+            }
+            // model.goBack();
           }),
       centerTitle: false,
       title: Column(
@@ -59,14 +69,16 @@ class ProviderAppbar {
   ) {
     return AppBar(
       elevation: 0,
-      backgroundColor: model.isDarkMode()?ColorManager.darkHeaderColor : Theme.of(context).scaffoldBackgroundColor,
+      backgroundColor: model.isDarkMode()
+          ? ColorManager.darkHeaderColor
+          : Theme.of(context).scaffoldBackgroundColor,
       leading: IconButton(
           icon: Icon(
             Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
             color: model.isDarkMode() ? const Color(0xffD2D2D2) : Colors.black,
           ),
           onPressed: () {
-            // model.goBack();
+            model.goBack();
           }),
       centerTitle: true,
       title: Container(
@@ -122,13 +134,17 @@ class ProviderAppbar {
         ),
       ),
       bottom: PreferredSize(
-        child: const ProfileBar(name: "Adenuga Kolade", job: "Flutter Developer", nationality: "NGR"),
+        child: const ProfileBar(
+            name: "Adenuga Kolade",
+            job: "Flutter Developer",
+            nationality: "NGR"),
         preferredSize: Size.fromHeight(60.pHeight(context)),
       ),
-
       actions: [
         IconButton(
-            onPressed: () {},
+            onPressed: () {
+              model.setProviderPageEnum = ProviderPageEnum.options;
+            },
             icon: Icon(
               Icons.menu,
               color: model.isDarkMode() ? Colors.white : Colors.black,
@@ -152,7 +168,9 @@ class ProviderAppbar {
               color: isDarkMode
                   ? const Color(0xFFD0D5DD)
                   : const Color(0xFFF5FBFE)),
-          onPressed: () {}),
+          onPressed: () {
+            viewModel.setProviderPageEnum = ProviderPageEnum.options;
+          }),
       centerTitle: false,
       title: Text(
         title,

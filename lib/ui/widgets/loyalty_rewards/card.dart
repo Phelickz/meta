@@ -81,7 +81,7 @@ class LoyaltyRewardCard extends StatelessWidget {
                       SizedBox(
                         width: double.infinity,
                         child: LinearProgressIndicator(
-                            borderRadius: BorderRadius.circular(10),
+                            // borderRadius: BorderRadius.circular(10),
                             value: 23 / 100,
                             backgroundColor: isDarkMode
                                 ? const Color(0xFF073961)
