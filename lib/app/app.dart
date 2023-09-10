@@ -2,12 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/locator/locator.dart';
 import 'package:meta_trader/app/services/router_service.dart';
 import 'package:meta_trader/app/utils/theme.dart';
-import 'package:meta_trader/ui/views/dashboard/dashboard_view.dart';
-import 'package:meta_trader/ui/views/home/home_view.dart';
-import 'package:meta_trader/ui/views/manage_accounts/manage_account_view.dart';
-import 'package:meta_trader/ui/views/provider/provider_view.dart';
-import 'package:meta_trader/ui/views/quotes/quotes_view.dart';
-import 'package:meta_trader/ui/views/quotes/trade_excuetion_screen1.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
 class MetaTraderApp extends StatelessWidget {

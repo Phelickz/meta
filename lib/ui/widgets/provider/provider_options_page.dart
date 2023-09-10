@@ -35,9 +35,10 @@ class ProviderOptionsPage extends StatelessWidget {
             title: "Notification",
             leading: AssetManager.notificationsIcon),
         SizedBox(height: 12.pHeight(context)),
-        ProviderOptionsTile(title: "Support", leading: AssetManager.help),
+        const ProviderOptionsTile(title: "Support", leading: AssetManager.help),
         SizedBox(height: 12.pHeight(context)),
-        ProviderOptionsTile(title: "Logout", leading: AssetManager.logout),
+        const ProviderOptionsTile(
+            title: "Logout", leading: AssetManager.logout),
       ],
     );
   }

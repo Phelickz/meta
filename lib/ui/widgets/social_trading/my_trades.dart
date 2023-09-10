@@ -52,6 +52,7 @@ class MyTrades extends StatelessWidget {
     );
   }
 
+  // ignore: unused_element
   Widget _emptyWidget(BuildContext context, SocialTradingViewModel viewModel) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return SizedBox(

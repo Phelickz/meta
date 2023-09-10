@@ -21,7 +21,7 @@ class ProviderSettingsPage extends StatelessWidget {
 
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
             // horizontal: McGyver.rsDoubleW(context, 6),
             ),
         child: Column(
@@ -58,7 +58,7 @@ class ProviderSettingsPage extends StatelessWidget {
               hintText: viewModel.password,
               suffixIcon: IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.visibility_off),
+                icon: const Icon(Icons.visibility_off),
               ),
             ),
             LabelTextField(
@@ -122,7 +122,7 @@ class ProviderSettingsPage extends StatelessWidget {
               hintText: "${viewModel.desiredFee}%",
               suffixIcon: IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.arrow_forward_ios_outlined),
+                icon: const Icon(Icons.arrow_forward_ios_outlined),
               ),
             ),
             SizedBox(

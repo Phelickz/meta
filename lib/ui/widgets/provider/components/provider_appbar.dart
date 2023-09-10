@@ -56,7 +56,7 @@ class ProviderAppbar {
                       context: context,
                       fontWeight: FontWeight.w400),
                 )
-              : SizedBox(),
+              : const SizedBox(),
         ],
       ),
       actions: [icon ?? const SizedBox()],
@@ -181,7 +181,7 @@ class ProviderAppbar {
         ),
       ),
       bottom: PreferredSize(
-        child: WalletBalanceContainer(),
+        child: const WalletBalanceContainer(),
         preferredSize: Size.fromHeight(60.pHeight(context)),
       ),
     );

@@ -281,7 +281,7 @@ class ProviderViewModel extends CustomBaseViewModel {
       case ProviderPageEnum.followers:
         return ProviderFollowerPage(viewModel: this);
       default:
-        return SizedBox();
+        return const SizedBox();
     }
   }
 
@@ -299,7 +299,7 @@ class ProviderViewModel extends CustomBaseViewModel {
         return UpdatePhoneNumber(viewModel: this);
 
       default:
-        return SizedBox();
+        return const SizedBox();
     }
   }
 

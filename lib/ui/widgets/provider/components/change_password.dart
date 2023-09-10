@@ -33,11 +33,12 @@ class ChangePassword extends StatelessWidget {
           SizedBox(
             height: 20.pHeight(context),
           ),
-          LabelPasswordField(label: "Password", hintText: "Enter new Password"),
+          const LabelPasswordField(
+              label: "Password", hintText: "Enter new Password"),
           SizedBox(
             height: 12.pHeight(context),
           ),
-          LabelPasswordField(
+          const LabelPasswordField(
               label: "Confirm Password", hintText: "Re-enter Password"),
           SizedBox(
             height: 60.pHeight(context),

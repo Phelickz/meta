@@ -13,7 +13,7 @@ class LoyaltyRewardCard extends StatelessWidget {
       padding: EdgeInsets.symmetric(
         horizontal: McGyver.rsDoubleW(context, 5),
       ),
-      child: Container(
+      child: SizedBox(
         width: double.infinity,
         height: McGyver.rsDoubleH(context, 28),
         child: Stack(

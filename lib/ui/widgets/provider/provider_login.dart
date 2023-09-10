@@ -84,7 +84,7 @@ class ProviderLoginPage extends StatelessWidget {
             ))
           ],
         ),
-        Spacer(),
+        const Spacer(),
         CustomButtons.generalButton(
           context: context,
           onTap: () {

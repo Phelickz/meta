@@ -34,7 +34,8 @@ class ChangeNickName extends StatelessWidget {
           SizedBox(
             height: 20.pHeight(context),
           ),
-          LabelTextField(label: "Nickname", hintText: "Enter new nickname"),
+          const LabelTextField(
+              label: "Nickname", hintText: "Enter new nickname"),
           SizedBox(
             height: 80.pHeight(context),
           ),

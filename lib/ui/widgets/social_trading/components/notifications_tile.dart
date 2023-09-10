@@ -40,6 +40,7 @@ class NotificationTile extends StatelessWidget {
         ),
         child: SvgPicture.asset(
           AssetManager.emptyNotifications,
+          // ignore: deprecated_member_use
           color: isDarkMode ? const Color(0xFF94D1F9) : const Color(0xFF20A0F3),
         ),
       ),
