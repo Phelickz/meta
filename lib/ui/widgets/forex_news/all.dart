@@ -142,7 +142,11 @@ class ForexNewsAll extends StatelessWidget {
               physics: const NeverScrollableScrollPhysics(),
               itemCount: 3,
               itemBuilder: (context, index) {
-                return const MarketNews();
+                return GestureDetector(
+                    onTap: () {
+                      model.setForexNewsViewEnum = ForexNewsViewEnum.details;
+                    },
+                    child: const MarketNews());
               },
               separatorBuilder: (BuildContext context, int index) {
                 return verticalSpaceSmall(context);
@@ -173,7 +177,11 @@ class ForexNewsAll extends StatelessWidget {
               physics: const NeverScrollableScrollPhysics(),
               itemCount: 3,
               itemBuilder: (context, index) {
-                return const MarketNews();
+                return GestureDetector(
+                    onTap: () {
+                      model.setForexNewsViewEnum = ForexNewsViewEnum.details;
+                    },
+                    child: const MarketNews());
               },
               separatorBuilder: (BuildContext context, int index) {
                 return verticalSpaceSmall(context);

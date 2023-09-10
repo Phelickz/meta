@@ -63,7 +63,7 @@ class WelcomePage extends StatelessWidget {
             width: double.infinity,
             textSize: 1.8,
             textColor: viewModel.isDarkMode()
-                ? Colors.white
+                ? Colors.black
                 : const Color(0xFF8ACDF9)),
       ],
     );

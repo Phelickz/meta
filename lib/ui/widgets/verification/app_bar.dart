@@ -23,6 +23,11 @@ AppBar verifyAppBar(BuildContext context, String title, String subtitle,
           model.setVerificationViewEnum = VerificationPageEnum.verifyOne;
         }
 
+        if (model.verificationPageEnum == VerificationPageEnum.selectIdentity) {
+          model.setVerificationViewEnum =
+              VerificationPageEnum.identityVerificationLanding;
+        }
+
         // if (model.authPageEnum == AuthPageEnum.chooseAccount) {
         //   model.setAuthPageEnum = AuthPageEnum.broker;
         // }

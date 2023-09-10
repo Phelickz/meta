@@ -35,7 +35,9 @@ class TradingHistory extends StatelessWidget {
                 ),
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  showFilterModal(context);
+                },
                 icon: Icon(
                   Icons.filter_alt_outlined,
                   color: isDarkMode

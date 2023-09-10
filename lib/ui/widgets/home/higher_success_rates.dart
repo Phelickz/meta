@@ -5,7 +5,8 @@ import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 
 class HigherSuccessRates extends StatelessWidget {
-  const HigherSuccessRates({super.key});
+  const HigherSuccessRates({super.key, this.copyOnTap});
+  final void Function()? copyOnTap;
 
   @override
   Widget build(BuildContext context) {
@@ -241,7 +242,7 @@ class HigherSuccessRates extends StatelessWidget {
                     ],
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: copyOnTap,
                     child: Container(
                       decoration: BoxDecoration(
                         color: isDarkMode

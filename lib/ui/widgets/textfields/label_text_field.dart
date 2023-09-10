@@ -54,7 +54,7 @@ class LabelTextField extends StatelessWidget {
                   ),
           ),
         ),
-        verticalSpaceXXSmall(context),
+        verticalSpaceXSmall(context),
         Container(
           height: 60,
           width: double.infinity,

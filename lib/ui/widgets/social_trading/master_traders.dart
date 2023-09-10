@@ -45,11 +45,13 @@ class MasterTraders extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 itemCount: 3,
                 itemBuilder: (context, index) {
-                  return GestureDetector(
-                      onTap: () {
-                        model.push(MasterTraderOverview(model: model));
-                      },
-                      child: const HigherSuccessRates());
+                  return GestureDetector(onTap: () {
+                    model.push(MasterTraderOverview(model: model));
+                  }, child: HigherSuccessRates(
+                    copyOnTap: () {
+                      model.push(MasterTraderOverview(model: model));
+                    },
+                  ));
                 },
                 separatorBuilder: (BuildContext context, int index) {
                   return verticalSpaceXSmall(context);

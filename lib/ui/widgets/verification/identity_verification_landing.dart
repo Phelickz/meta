@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/verification/verification_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
@@ -29,7 +30,7 @@ class IdentityVerificationLandingPage extends StatelessWidget {
               width: McGyver.rsDoubleH(context, 50),
             ),
             Align(
-              alignment: Alignment.bottomLeft,
+              alignment: Alignment.center,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30.0),
                 child: Text(
@@ -47,6 +48,7 @@ class IdentityVerificationLandingPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 30.0),
               child: Text(
                 'To successfully verify your identity, we accept either a snapshot of your:',
+                textAlign: TextAlign.center,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
                   color: isDarkMode ? Colors.white70 : Colors.black54,
@@ -123,7 +125,7 @@ class IdentityVerificationLandingPage extends StatelessWidget {
               ],
             ),
             Align(
-              alignment: Alignment.bottomLeft,
+              alignment: Alignment.center,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30.0),
                 child: Text(
@@ -149,8 +151,7 @@ class IdentityVerificationLandingPage extends StatelessWidget {
             CustomButtons.clearButton(
               context: context,
               onTap: () {
-                model.setVerificationViewEnum =
-                    VerificationPageEnum.selectIdentity;
+                model.push(const BottomNavBarRoute());
               },
               text: 'Skip',
               textColor: Theme.of(context).primaryColor,

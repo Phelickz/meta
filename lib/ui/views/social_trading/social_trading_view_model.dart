@@ -48,8 +48,17 @@ enum TransactionStatusEnum { successful, pending, failed }
 
 class SocialTradingViewModel extends CustomBaseViewModel {
   late TransactionModel _transaction;
+
+  bool _showBalance = true;
+  bool get showBalance => _showBalance;
+
   set setTransaction(TransactionModel t) {
     _transaction = t;
+    rebuildUi();
+  }
+
+  void setShowBalance() {
+    _showBalance = !_showBalance;
     rebuildUi();
   }
 

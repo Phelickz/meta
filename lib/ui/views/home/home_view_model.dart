@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
 
 class HomeViewModel extends CustomBaseViewModel {
+  bool _showBalance = true;
+  bool get showBalance => _showBalance;
+
   Future<void> init() async {}
 
   int _counter = 0;
@@ -17,6 +20,11 @@ class HomeViewModel extends CustomBaseViewModel {
 
   void incrementCounter() {
     _counter++;
+    rebuildUi();
+  }
+
+  void setShowBalance() {
+    _showBalance = !_showBalance;
     rebuildUi();
   }
 }

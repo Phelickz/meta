@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/appbar.dart';
 
 enum PriceTypeEnum { sentiments, favorites }
@@ -26,6 +27,11 @@ class PriceSentimentViewModel extends CustomBaseViewModel {
   // ignore: prefer_final_fields
   TextEditingController _priceSearchController = TextEditingController();
   TextEditingController get priceSearchController => _priceSearchController;
+
+  final openSummaryTabSelectedNotifier = ValueNotifier(0);
+  final closedSummaryTabSelectedNotifier = ValueNotifier(0);
+  final performanceSummaryTabSelectedNotifier = ValueNotifier(0);
+  final overviewSummaryTabSelectedNotifier = ValueNotifier(0);
 
   set setTyping(bool val) {
     _isTyping = val;
@@ -169,4 +175,14 @@ class PriceSentimentViewModel extends CustomBaseViewModel {
         return null;
     }
   }
+
+  List<ActivityChartData> activityChartData = [
+    ActivityChartData('22 Jun', 1300),
+    ActivityChartData('23 Jun', 1400),
+    ActivityChartData('24 Jun', 1500),
+    ActivityChartData('25 Jun', 1600),
+    ActivityChartData('26 Jun', 1460),
+    ActivityChartData('27 Jun', 1300),
+    ActivityChartData('29 Jun', 1500),
+  ];
 }

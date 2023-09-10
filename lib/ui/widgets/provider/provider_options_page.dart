@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
@@ -20,25 +21,36 @@ class ProviderOptionsPage extends StatelessWidget {
             },
             title: "My Wallet",
             leading: AssetManager.paymentMethod),
-        SizedBox(height: 12.pHeight(context)),
+        SizedBox(height: 18.pHeight(context)),
         ProviderOptionsTile(
             onTap: () {
               viewModel.setProviderPageEnum = ProviderPageEnum.profileSettings;
             },
             title: "Profile Settings",
             leading: AssetManager.editUserIcon),
-        SizedBox(height: 12.pHeight(context)),
+        SizedBox(height: 18.pHeight(context)),
         ProviderOptionsTile(
             onTap: () {
               viewModel.setProviderPageEnum = ProviderPageEnum.notifications;
             },
             title: "Notification",
             leading: AssetManager.notificationsIcon),
-        SizedBox(height: 12.pHeight(context)),
-        const ProviderOptionsTile(title: "Support", leading: AssetManager.help),
-        SizedBox(height: 12.pHeight(context)),
-        const ProviderOptionsTile(
-            title: "Logout", leading: AssetManager.logout),
+        SizedBox(height: 18.pHeight(context)),
+        ProviderOptionsTile(
+          title: "Support",
+          leading: AssetManager.help,
+          onTap: () {
+            viewModel.push(const HelpAndSupportRoute());
+          },
+        ),
+        SizedBox(height: 18.pHeight(context)),
+        ProviderOptionsTile(
+          title: "Logout",
+          leading: AssetManager.logout,
+          onTap: () {
+            viewModel.push(const BottomNavBarRoute());
+          },
+        ),
       ],
     );
   }

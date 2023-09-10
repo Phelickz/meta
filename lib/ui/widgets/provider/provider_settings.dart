@@ -35,6 +35,7 @@ class ProviderSettingsPage extends StatelessWidget {
               hintText: viewModel.accountName,
               isEnabled: false,
             ),
+            verticalSpaceXSmall(context),
             LabelTextField(
               onTap: () {
                 viewModel.setProviderSettingsEnum =
@@ -47,6 +48,7 @@ class ProviderSettingsPage extends StatelessWidget {
               suffixIcon: Transform.scale(
                   scale: 0.6, child: SvgPicture.asset(AssetManager.edit)),
             ),
+            verticalSpaceXSmall(context),
             LabelTextField(
               onTap: () {
                 viewModel.setProviderSettingsEnum =
@@ -61,6 +63,7 @@ class ProviderSettingsPage extends StatelessWidget {
                 icon: const Icon(Icons.visibility_off),
               ),
             ),
+            verticalSpaceXSmall(context),
             LabelTextField(
               onTap: () {
                 viewModel.setProviderSettingsEnum =
@@ -73,6 +76,7 @@ class ProviderSettingsPage extends StatelessWidget {
               suffixIcon: Transform.scale(
                   scale: 0.6, child: SvgPicture.asset(AssetManager.edit)),
             ),
+            verticalSpaceXSmall(context),
             Text(
               "Strategy Description",
               style: CustomThemeData.generateStyle(
@@ -85,7 +89,7 @@ class ProviderSettingsPage extends StatelessWidget {
                       ),
               ),
             ),
-            verticalSpaceXXSmall(context),
+            verticalSpaceXSmall(context),
             InkWell(
               onTap: () {
                 viewModel.setProviderSettingsEnum =
@@ -114,9 +118,7 @@ class ProviderSettingsPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
-              height: 16.pHeight(context),
-            ),
+            verticalSpaceSmall(context),
             LabelTextField(
               label: "Desired Fees (Commission)",
               hintText: "${viewModel.desiredFee}%",

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
 
@@ -39,25 +40,33 @@ class WalletPage extends StatelessWidget {
                   context,
                   'assets/icons/money_receive_outline.svg',
                   'Deposit Funds',
-                  () {},
+                  () {
+                    viewModel.push(const FundAccountRoute());
+                  },
                 ),
                 bottomIcons(
                   context,
                   'assets/icons/money_send_outline.svg',
                   'Withdraw Funds',
-                  () {},
+                  () {
+                    viewModel.push(const WithdrawFundRoute());
+                  },
                 ),
                 bottomIcons(
                   context,
                   'assets/icons/recovery_convert.svg',
                   'Internal Transfer',
-                  () {},
+                  () {
+                    viewModel.push(const FundAccountRoute());
+                  },
                 ),
                 bottomIcons(
                   context,
                   'assets/images/message_question.svg',
                   'Report an Issue',
-                  () {},
+                  () {
+                    viewModel.push(const HelpAndSupportRoute());
+                  },
                 )
               ],
             ),
@@ -80,7 +89,9 @@ class WalletPage extends StatelessWidget {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    viewModel.push(const TransactionsRoute());
+                  },
                   child: Text(
                     "View All",
                     style: CustomThemeData.generateStyle(
@@ -204,4 +215,3 @@ class WalletPage extends StatelessWidget {
     );
   }
 }
-

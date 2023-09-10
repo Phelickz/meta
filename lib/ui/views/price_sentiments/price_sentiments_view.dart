@@ -28,7 +28,9 @@ class PriceSentimentsView extends StackedView<PriceSentimentViewModel> {
       ),
       appBar: viewModel.returnAppbar(context),
       body: viewModel.priceSentimentPageEnum == PriceSentimentPageEnum.details
-          ? const PriceSentimentDetails()
+          ? PriceSentimentDetails(
+              model: viewModel,
+            )
           : viewModel.priceSentimentPageEnum == PriceSentimentPageEnum.search
               ? SearchPriceSentiments(
                   model: viewModel,

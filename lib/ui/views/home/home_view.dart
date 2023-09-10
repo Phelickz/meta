@@ -8,6 +8,7 @@ import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
+import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/home/price_sentiments.dart';
 import 'package:meta_trader/ui/widgets/home/trading_tools.dart';
 import 'package:meta_trader/ui/widgets/provider/components/psummary.dart';
@@ -49,14 +50,14 @@ class HomeView extends StackedView<HomeViewModel> {
         //   ),
         // ),
         appBarActions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.headset_outlined,
-              size: 30,
-            ),
-            color: isDarkMode ? Colors.white54 : Colors.white,
-          ),
+          // IconButton(
+          //   onPressed: () {},
+          //   icon: const Icon(
+          //     Icons.headset_outlined,
+          //     size: 30,
+          //   ),
+          //   color: isDarkMode ? Colors.white54 : Colors.white,
+          // ),
           IconButton(
             onPressed: () {
               viewModel.push(const NotificationRoute());
@@ -85,7 +86,7 @@ class HomeView extends StackedView<HomeViewModel> {
         fadeWidget: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [sliverBody(context)],
+          children: [sliverBody(context, viewModel)],
         ),
         bottomWidgetHeight: McGyver.rsDoubleH(context, 14),
         bottomWidget: Row(
@@ -241,7 +242,11 @@ class HomeView extends StackedView<HomeViewModel> {
                   physics: const NeverScrollableScrollPhysics(),
                   itemCount: 3,
                   itemBuilder: (context, index) {
-                    return const MarketNews();
+                    return GestureDetector(
+                        onTap: () {
+                          viewModel.push(const ForexNewsRoute());
+                        },
+                        child: const MarketNews());
                   },
                   separatorBuilder: (BuildContext context, int index) {
                     return verticalSpaceSmall(context);
@@ -275,8 +280,13 @@ class HomeView extends StackedView<HomeViewModel> {
                   physics: const NeverScrollableScrollPhysics(),
                   itemCount: 3,
                   itemBuilder: (context, index) {
-                    return const PriceSentiments(
-                      pair: 'AUDUSD',
+                    return GestureDetector(
+                      onTap: () {
+                        viewModel.push(const PriceSentimentsRoute());
+                      },
+                      child: const PriceSentiments(
+                        pair: 'AUDUSD',
+                      ),
                     );
                   },
                   separatorBuilder: (BuildContext context, int index) {
@@ -295,10 +305,15 @@ class HomeView extends StackedView<HomeViewModel> {
                 ),
               ),
               verticalSpaceXSmall(context),
-              Image.asset(
-                'assets/images/reward.png',
-                width: double.infinity,
-                fit: BoxFit.cover,
+              GestureDetector(
+                onTap: () {
+                  viewModel.push(const LoyaltyRewardsRoute());
+                },
+                child: Image.asset(
+                  'assets/images/rewards.png',
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
               ),
               verticalSpaceSmall(context),
               verticalSpaceXSmall(context),
@@ -329,7 +344,12 @@ class HomeView extends StackedView<HomeViewModel> {
                   physics: const NeverScrollableScrollPhysics(),
                   itemCount: 3,
                   itemBuilder: (context, index) {
-                    return const HigherSuccessRates();
+                    return GestureDetector(
+                        onTap: () {
+                          viewModel.push(MasterTraderOverview(
+                              model: SocialTradingViewModel()));
+                        },
+                        child: const HigherSuccessRates());
                   },
                   separatorBuilder: (BuildContext context, int index) {
                     return verticalSpaceXSmall(context);
@@ -468,7 +488,7 @@ class HomeView extends StackedView<HomeViewModel> {
     );
   }
 
-  Widget sliverBody(BuildContext context) {
+  Widget sliverBody(BuildContext context, HomeViewModel model) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -517,7 +537,7 @@ class HomeView extends StackedView<HomeViewModel> {
             // mainAxisAlignment: MainAxisAlignment,
             children: [
               Text(
-                "\$283,500",
+                model.showBalance == true ? "\$283,500" : "********",
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 3.5),
                   fontWeight: FontWeight.bold,
@@ -525,7 +545,9 @@ class HomeView extends StackedView<HomeViewModel> {
                 ),
               ),
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    model.setShowBalance();
+                  },
                   icon: Icon(
                     Icons.remove_red_eye_outlined,
                     color: isDarkMode

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/transaction_tile.dart';
@@ -44,7 +45,9 @@ class WalletPage extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "\$283,500",
+                        viewModel.showBalance == true
+                            ? "\$283,500"
+                            : "*********",
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 3),
                           fontWeight: FontWeight.bold,
@@ -54,8 +57,11 @@ class WalletPage extends StatelessWidget {
                         ),
                       ),
                       horizontalSpaceXXSmall(context),
-                      Icon(
-                        Icons.remove_red_eye_outlined,
+                      IconButton(
+                        onPressed: () {
+                          viewModel.setShowBalance();
+                        },
+                        icon: const Icon(Icons.remove_red_eye_outlined),
                         color: isDarkMode
                             ? const Color(0xff98A2B3)
                             : const Color(0xFFD3ECFD),
@@ -121,25 +127,33 @@ class WalletPage extends StatelessWidget {
                     context,
                     'assets/icons/money_receive_outline.svg',
                     'Deposit Funds',
-                    () {},
+                    () {
+                      viewModel.push(const FundAccountRoute());
+                    },
                   ),
                   bottomIcons(
                     context,
                     'assets/icons/money_send_outline.svg',
                     'Withdraw Funds',
-                    () {},
+                    () {
+                      viewModel.push(const WithdrawFundRoute());
+                    },
                   ),
                   bottomIcons(
                     context,
                     'assets/icons/recovery_convert.svg',
                     'Internal Transfer',
-                    () {},
+                    () {
+                      viewModel.push(const FundAccountRoute());
+                    },
                   ),
                   bottomIcons(
                     context,
                     'assets/images/message_question.svg',
                     'Report an Issue',
-                    () {},
+                    () {
+                      viewModel.push(const HelpAndSupportRoute());
+                    },
                   )
                 ],
               ),

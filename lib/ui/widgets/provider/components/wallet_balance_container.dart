@@ -3,13 +3,17 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 
-class WalletBalanceContainer extends StatelessWidget {
+class WalletBalanceContainer extends StatefulWidget {
   const WalletBalanceContainer({
     super.key,
   });
 
+  @override
+  State<WalletBalanceContainer> createState() => _WalletBalanceContainerState();
+}
 
-
+class _WalletBalanceContainerState extends State<WalletBalanceContainer> {
+  bool showBalance = true;
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
@@ -40,22 +44,28 @@ class WalletBalanceContainer extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    "\$283,500",
+                    showBalance ? "\$283,500" : "*********",
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 3),
                       fontWeight: FontWeight.bold,
-                      color: isDarkMode
-                          ? const Color(0xffD0D5DD)
-                          : Colors.white,
+                      color:
+                          isDarkMode ? const Color(0xffD0D5DD) : Colors.white,
                     ),
                   ),
                   horizontalSpaceXXSmall(context),
-                  Icon(
-                    Icons.remove_red_eye_outlined,
-                    color: isDarkMode
-                        ? const Color(0xff98A2B3)
-                        : const Color(0xFFD3ECFD),
-                  )
+                  IconButton(
+                      onPressed: () {
+                        showBalance = !showBalance;
+                        setState(() {});
+                      },
+                      icon: Icon(
+                        !showBalance
+                            ? Icons.remove_red_eye_outlined
+                            : Icons.visibility_off_outlined,
+                        color: isDarkMode
+                            ? const Color(0xff98A2B3)
+                            : const Color(0xFFD3ECFD),
+                      ))
                 ],
               ),
               Column(
@@ -66,9 +76,8 @@ class WalletBalanceContainer extends StatelessWidget {
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.5),
                       fontWeight: FontWeight.bold,
-                      color: isDarkMode
-                          ? const Color(0xff94D1F9)
-                          : Colors.white,
+                      color:
+                          isDarkMode ? const Color(0xff94D1F9) : Colors.white,
                     ),
                   ),
                   SizedBox(
@@ -79,9 +88,8 @@ class WalletBalanceContainer extends StatelessWidget {
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.3),
                       fontWeight: FontWeight.w500,
-                      color: isDarkMode
-                          ? const Color(0xffD0D5DD)
-                          : Colors.white,
+                      color:
+                          isDarkMode ? const Color(0xffD0D5DD) : Colors.white,
                     ),
                   ),
                 ],

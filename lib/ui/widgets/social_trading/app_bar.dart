@@ -298,8 +298,7 @@ AppBar socialTradingCustomAppBar(BuildContext context, String title,
           style: CustomThemeData.generateStyle(
             fontSize: McGyver.textSize(context, 2),
             fontWeight: FontWeight.bold,
-            color:
-                isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF344054),
+            color: isDarkMode ? const Color(0xFFD0D5DD) : Colors.white,
           ),
         ),
         if (subtitle != '')

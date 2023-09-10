@@ -15,6 +15,7 @@ class ProviderAppbar {
       String title, String subTitle, bool hasSubtitle, Widget? icon) {
     return AppBar(
       elevation: 0,
+      toolbarHeight: 67,
       backgroundColor: model.isDarkMode()
           ? ColorManager.darkHeaderColor
           : Theme.of(context).scaffoldBackgroundColor,
@@ -28,8 +29,7 @@ class ProviderAppbar {
             if (model.providerPageEnum == ProviderPageEnum.notifications ||
                 model.providerPageEnum == ProviderPageEnum.profileSettings) {
               model.setProviderPageEnum = ProviderPageEnum.options;
-            }
-            if (model.providerPageEnum == ProviderPageEnum.followers) {
+            } else if (model.providerPageEnum == ProviderPageEnum.followers) {
               model.setProviderPageEnum = ProviderPageEnum.dashboard;
             } else {
               model.goBack();
@@ -45,9 +45,11 @@ class ProviderAppbar {
             style: CustomThemeData.generateColoredStyle(
                 fontSize: 18, context: context, fontWeight: FontWeight.w600),
           ),
-          SizedBox(
-            height: 4.pHeight(context),
-          ),
+          hasSubtitle
+              ? SizedBox(
+                  height: 4.pHeight(context),
+                )
+              : Container(),
           hasSubtitle
               ? Text(
                   subTitle,
@@ -134,11 +136,16 @@ class ProviderAppbar {
         ),
       ),
       bottom: PreferredSize(
-        child: const ProfileBar(
-            name: "Adenuga Kolade",
-            job: "Flutter Developer",
-            nationality: "NGR"),
-        preferredSize: Size.fromHeight(60.pHeight(context)),
+        child: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 18.0),
+          child: ProfileBar(
+              name: "Adenuga Kolade",
+              job: "Flutter Developer",
+              nationality: "NGR"),
+        ),
+        preferredSize: Size.fromHeight(
+          60.pHeight(context),
+        ),
       ),
       actions: [
         IconButton(
@@ -182,7 +189,7 @@ class ProviderAppbar {
       ),
       bottom: PreferredSize(
         child: const WalletBalanceContainer(),
-        preferredSize: Size.fromHeight(60.pHeight(context)),
+        preferredSize: Size.fromHeight(75.pHeight(context)),
       ),
     );
   }

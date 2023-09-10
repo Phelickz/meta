@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
@@ -17,7 +18,9 @@ class Psummary extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: viewModel.isDarkMode()?ColorManager.darkHeaderColor:const Color(0xFFECF7FE),
+        color: viewModel.isDarkMode()
+            ? ColorManager.darkHeaderColor
+            : const Color(0xFFECF7FE),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,34 +31,49 @@ class Psummary extends StatelessWidget {
             children: [
               Text(
                 "Summary",
-                style: CustomThemeData.generateColoredStyle(fontSize: 16, context: context, fontWeight: FontWeight.w600),
+                style: CustomThemeData.generateColoredStyle(
+                    fontSize: 16,
+                    context: context,
+                    fontWeight: FontWeight.w600),
               ),
               const Spacer(),
               CustomProviderTab(
-                firstTabName: "1W", 
-                secondTabName: "2W", 
-                thirdTabName: "1M", 
-                fourthTabName: "3M", 
-                fifthTabName: "6M", 
-                tabIndex: viewModel.summaryOneTabSelectorNotifier.value, 
-                onSelectTab: (val){viewModel.summaryOneTabSelectorNotifier.value=val;})
-
+                  firstTabName: "1W",
+                  secondTabName: "2W",
+                  thirdTabName: "1M",
+                  fourthTabName: "3M",
+                  fifthTabName: "6M",
+                  tabIndex: viewModel.summaryOneTabSelectorNotifier.value,
+                  onSelectTab: (val) {
+                    viewModel.summaryOneTabSelectorNotifier.value = val;
+                  })
             ],
           ),
-          SizedBox(height: 8.pHeight(context),),
+          SizedBox(
+            height: 8.pHeight(context),
+          ),
           InkWell(
-            onTap: ()=> viewModel.setProviderPageEnum = ProviderPageEnum.followers,
+            onTap: () {
+              // viewModel.setProviderPageEnum = ProviderPageEnum.followers;
+              viewModel.push(ProviderFollowerPage(viewModel: viewModel));
+            },
             child: Align(
               alignment: Alignment.centerRight,
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 6.pHeight(context), horizontal: 10.pWidth(context)),
+                padding: EdgeInsets.symmetric(
+                    vertical: 6.pHeight(context),
+                    horizontal: 10.pWidth(context)),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF0C95EF),
-                  borderRadius: BorderRadius.circular(12)
-                ),
+                    color: const Color(0xFF0C95EF),
+                    borderRadius: BorderRadius.circular(12)),
                 child: Text(
                   "View followers",
-                  style: CustomThemeData.generateColoredStyle(fontSize: 12, context: context, fontWeight: FontWeight.w400, lightTextColor: const Color(0xFFFCFCFD), darkTextColor: const Color(0xFFFCFCFD)),
+                  style: CustomThemeData.generateColoredStyle(
+                      fontSize: 12,
+                      context: context,
+                      fontWeight: FontWeight.w400,
+                      lightTextColor: const Color(0xFFFCFCFD),
+                      darkTextColor: const Color(0xFFFCFCFD)),
                 ),
               ),
             ),
@@ -64,136 +82,174 @@ class Psummary extends StatelessWidget {
           // const Spacer(),
           Expanded(
             child: ValueListenableBuilder<int>(
-              valueListenable: viewModel.summaryOneTabSelectorNotifier, 
-              builder: (context, index, _){
-                return IndexedStack(
-                  index: index,
-                  children: [
-                    summaryContainer("0", "0", "0", "0", "1", "0"),
-                    summaryContainer("10", "5", "1", "9", "222", "9"),
-                    summaryContainer("0", "0", "0", "0", "1", "0"),
-                    summaryContainer("0", "0", "0", "0", "1", "0"),
-                    summaryContainer("0", "0", "0", "0", "1", "0"),
-                    
-                  ],
-                );
-              }
-              ),
+                valueListenable: viewModel.summaryOneTabSelectorNotifier,
+                builder: (context, index, _) {
+                  return IndexedStack(
+                    index: index,
+                    children: [
+                      summaryContainer("0", "0", "0", "0", "1", "0"),
+                      summaryContainer("10", "5", "1", "9", "222", "9"),
+                      summaryContainer("0", "0", "0", "0", "1", "0"),
+                      summaryContainer("0", "0", "0", "0", "1", "0"),
+                      summaryContainer("0", "0", "0", "0", "1", "0"),
+                    ],
+                  );
+                }),
           )
         ],
       ),
     );
   }
 
-  Widget summaryContainer(
-    String auto,
-    String fixed,
-    String reverse,
-    String fee,
-    String active,
-    String inActive
-  ){
-    return Builder(
-      builder: (context) {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Row(
-              children: [
-                Text(
-                  "Followers Auto scale",
-                  style: CustomThemeData.generateColoredStyle(fontSize: 12, context: context, fontWeight: FontWeight.w400),
-                ),
-                const Spacer(),
-                Text(
-                  auto,
-                  style: CustomThemeData.generateColoredStyle(fontSize: 14, context: context, fontWeight: FontWeight.w600),
-                )
-              ],
-            ),
-            Row(
-              children: [
-                Text(
-                  "Followers Fixed Lot",
-                  style: CustomThemeData.generateColoredStyle(fontSize: 12, context: context, fontWeight: FontWeight.w400),
-                ),
-                const Spacer(),
-                Text(
-                  fixed,
-                  style: CustomThemeData.generateColoredStyle(fontSize: 14, context: context, fontWeight: FontWeight.w600),
-                )
-              ],
-            ),
-            Row(
-              children: [
-                Text(
-                  "Followers Reverse",
-                  style: CustomThemeData.generateColoredStyle(fontSize: 12, context: context, fontWeight: FontWeight.w400),
-                ),
-                const Spacer(),
-                Text(
-                  reverse,
-                  style: CustomThemeData.generateColoredStyle(fontSize: 14, context: context, fontWeight: FontWeight.w600),
-                )
-              ],
-            ),
-            Row(
-              children: [
-                Text(
-                  "Performance fee",
-                  style: CustomThemeData.generateColoredStyle(fontSize: 12, context: context, fontWeight: FontWeight.w400),
-                ),
-                const Spacer(),
-                Text(
-                  "$fee%",
-                  style: CustomThemeData.generateColoredStyle(fontSize: 14, context: context, fontWeight: FontWeight.w600),
-                )
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Status",
-                  style: CustomThemeData.generateColoredStyle(fontSize: 12, context: context, fontWeight: FontWeight.w400),
-                ),
-                const Spacer(),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Active",
-                      style: CustomThemeData.generateColoredStyle(fontSize: 12, context: context, fontWeight: FontWeight.w400),
-                    ),
-                    SizedBox(height: 4.pHeight(context),),
-                    Text(
-                      active,
-                      style: CustomThemeData.generateColoredStyle(fontSize: 14, context: context, fontWeight: FontWeight.w400,darkTextColor: const Color(0xFF47B0F5), lightTextColor: const Color(0xFF47B0F5)),
-                    )
-                  ],
-                ),
-                SizedBox(width: 16.pWidth(context),),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      "InActive",
-                      style: CustomThemeData.generateColoredStyle(fontSize: 12, context: context, fontWeight: FontWeight.w400),
-                    ),
-                    SizedBox(height: 4.pHeight(context),),
-                    Text(
-                      inActive,
-                      style: CustomThemeData.generateColoredStyle(fontSize: 14, context: context, fontWeight: FontWeight.w400,darkTextColor: const Color(0xFF47B0F5), lightTextColor: const Color(0xFF47B0F5)),
-                    )
-                  ],
-                ),
-              ],
-            ),
-            
-          ],
-        );
-      }
-    );
+  Widget summaryContainer(String auto, String fixed, String reverse, String fee,
+      String active, String inActive) {
+    return Builder(builder: (context) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Row(
+            children: [
+              Text(
+                "Followers Auto scale",
+                style: CustomThemeData.generateColoredStyle(
+                    fontSize: 12,
+                    context: context,
+                    fontWeight: FontWeight.w400),
+              ),
+              const Spacer(),
+              Text(
+                auto,
+                style: CustomThemeData.generateColoredStyle(
+                    fontSize: 14,
+                    context: context,
+                    fontWeight: FontWeight.w600),
+              )
+            ],
+          ),
+          Row(
+            children: [
+              Text(
+                "Followers Fixed Lot",
+                style: CustomThemeData.generateColoredStyle(
+                    fontSize: 12,
+                    context: context,
+                    fontWeight: FontWeight.w400),
+              ),
+              const Spacer(),
+              Text(
+                fixed,
+                style: CustomThemeData.generateColoredStyle(
+                    fontSize: 14,
+                    context: context,
+                    fontWeight: FontWeight.w600),
+              )
+            ],
+          ),
+          Row(
+            children: [
+              Text(
+                "Followers Reverse",
+                style: CustomThemeData.generateColoredStyle(
+                    fontSize: 12,
+                    context: context,
+                    fontWeight: FontWeight.w400),
+              ),
+              const Spacer(),
+              Text(
+                reverse,
+                style: CustomThemeData.generateColoredStyle(
+                    fontSize: 14,
+                    context: context,
+                    fontWeight: FontWeight.w600),
+              )
+            ],
+          ),
+          Row(
+            children: [
+              Text(
+                "Performance fee",
+                style: CustomThemeData.generateColoredStyle(
+                    fontSize: 12,
+                    context: context,
+                    fontWeight: FontWeight.w400),
+              ),
+              const Spacer(),
+              Text(
+                "$fee%",
+                style: CustomThemeData.generateColoredStyle(
+                    fontSize: 14,
+                    context: context,
+                    fontWeight: FontWeight.w600),
+              )
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Status",
+                style: CustomThemeData.generateColoredStyle(
+                    fontSize: 12,
+                    context: context,
+                    fontWeight: FontWeight.w400),
+              ),
+              const Spacer(),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    "Active",
+                    style: CustomThemeData.generateColoredStyle(
+                        fontSize: 12,
+                        context: context,
+                        fontWeight: FontWeight.w400),
+                  ),
+                  SizedBox(
+                    height: 4.pHeight(context),
+                  ),
+                  Text(
+                    active,
+                    style: CustomThemeData.generateColoredStyle(
+                        fontSize: 14,
+                        context: context,
+                        fontWeight: FontWeight.w400,
+                        darkTextColor: const Color(0xFF47B0F5),
+                        lightTextColor: const Color(0xFF47B0F5)),
+                  )
+                ],
+              ),
+              SizedBox(
+                width: 16.pWidth(context),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    "InActive",
+                    style: CustomThemeData.generateColoredStyle(
+                        fontSize: 12,
+                        context: context,
+                        fontWeight: FontWeight.w400),
+                  ),
+                  SizedBox(
+                    height: 4.pHeight(context),
+                  ),
+                  Text(
+                    inActive,
+                    style: CustomThemeData.generateColoredStyle(
+                        fontSize: 14,
+                        context: context,
+                        fontWeight: FontWeight.w400,
+                        darkTextColor: const Color(0xFF47B0F5),
+                        lightTextColor: const Color(0xFF47B0F5)),
+                  )
+                ],
+              ),
+            ],
+          ),
+        ],
+      );
+    });
   }
 }
