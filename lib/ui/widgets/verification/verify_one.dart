@@ -31,7 +31,8 @@ class VerifyOnePage extends StatelessWidget {
             Text(
               'Verify Your Account',
               style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 2.4),
+                fontSize: McGyver.textSize(context, 2.6),
+                // fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: isDarkMode ? Colors.white : Colors.black87,
               ),
@@ -42,6 +43,7 @@ class VerifyOnePage extends StatelessWidget {
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.6),
+                // fontSize: 14,
                 fontWeight: FontWeight.normal,
                 color: isDarkMode ? Colors.white : Colors.black54,
               ),

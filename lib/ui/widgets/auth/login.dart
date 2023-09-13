@@ -73,8 +73,10 @@ class LoginPage extends StatelessWidget {
             Row(
               children: [
                 Checkbox(
-                  value: false,
-                  onChanged: (val) {},
+                  value: model.savePassword,
+                  onChanged: (val) {
+                    model.setSavePassword = val ?? false;
+                  },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(4),
                   ),

@@ -20,6 +20,11 @@ enum AuthPageEnum {
   created
 }
 
+enum CreatedAccountPageEnum {
+  demo,
+  real,
+}
+
 class AuthViewModel extends CustomBaseViewModel {
   Future<void> init() async {}
 
@@ -29,11 +34,20 @@ class AuthViewModel extends CustomBaseViewModel {
   bool _isTyping = false;
   bool get isTyping => _isTyping;
 
+  bool _savePassword = false;
+  bool get savePassword => _savePassword;
+
+  bool _termsAndConditions = false;
+  bool get termsAndConditions => _termsAndConditions;
+
   TextEditingController _brokerSearchController = TextEditingController();
   TextEditingController get brokerSearchController => _brokerSearchController;
 
   AuthPageEnum _authPageEnum = AuthPageEnum.chooseAccount;
   AuthPageEnum get authPageEnum => _authPageEnum;
+
+  CreatedAccountPageEnum _createdAccountPageEnum = CreatedAccountPageEnum.demo;
+  CreatedAccountPageEnum get createdAccountPageEnum => _createdAccountPageEnum;
 
   String? _radioItem;
   String? get radioItem => _radioItem;
@@ -61,8 +75,23 @@ class AuthViewModel extends CustomBaseViewModel {
     rebuildUi();
   }
 
+  set setSavePassword(bool val) {
+    _savePassword = !_savePassword;
+    rebuildUi();
+  }
+
+  set setTermsAndConditions(bool val) {
+    _termsAndConditions = !_termsAndConditions;
+    rebuildUi();
+  }
+
   set setAuthPageEnum(AuthPageEnum e) {
     _authPageEnum = e;
+    rebuildUi();
+  }
+
+  set setCreatedAccountPageEnum(CreatedAccountPageEnum e) {
+    _createdAccountPageEnum = e;
     rebuildUi();
   }
 
@@ -102,7 +131,12 @@ class AuthViewModel extends CustomBaseViewModel {
             context, 'Open A Real Account', 'Enter your information', this);
       case AuthPageEnum.created:
         return authAppBar(
-            context, 'Open An Account', 'Created account information', this);
+            context,
+            _createdAccountPageEnum == CreatedAccountPageEnum.demo
+                ? 'Open A Demo Account'
+                : 'Open A Real Account',
+            'Created account information',
+            this);
       default:
         return null;
     }

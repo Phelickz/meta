@@ -4,6 +4,7 @@ import 'package:meta_trader/app/core/custom_base_view_model.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/ui/widgets/withdraw_funds/app_bar.dart';
 import 'package:meta_trader/ui/widgets/withdraw_funds/binance_pay.dart';
+import 'package:meta_trader/ui/widgets/withdraw_funds/block_bee.dart';
 import 'package:meta_trader/ui/widgets/withdraw_funds/neteller.dart';
 import 'package:meta_trader/ui/widgets/withdraw_funds/online_bank.dart';
 import 'package:meta_trader/ui/widgets/withdraw_funds/payment_methods.dart';
@@ -20,6 +21,7 @@ enum WithdrawFundPageEnum {
   neteller,
   confirmation,
   success,
+  blockBee,
 }
 
 class WithdrawFundViewModel extends CustomBaseViewModel {
@@ -71,6 +73,10 @@ class WithdrawFundViewModel extends CustomBaseViewModel {
         return BinancePayWithdraw(
           model: this,
         );
+      case WithdrawFundPageEnum.blockBee:
+        return BlockBeeWithdraw(
+          model: this,
+        );
       case WithdrawFundPageEnum.neteller:
         return NetellerWithdraw(
           model: this,
@@ -116,6 +122,9 @@ class WithdrawFundViewModel extends CustomBaseViewModel {
       case WithdrawFundPageEnum.binancePay:
         return withdrawFundAppBar(
             context, 'BinancePay', 'Withdraw to BinancePay', this);
+      case WithdrawFundPageEnum.blockBee:
+        return withdrawFundAppBar(
+            context, 'BlockBee', 'Withdraw to BlockBee', this);
       case WithdrawFundPageEnum.neteller:
         return withdrawFundAppBar(
             context, 'Neteller', 'Withdraw to Neteller', this);
@@ -159,6 +168,16 @@ class WithdrawFundViewModel extends CustomBaseViewModel {
           height: McGyver.rsDoubleH(context, 4),
           child: Image.asset(
             "assets/images/binance_pay.png",
+            width: 20,
+            height: 20,
+          ),
+        );
+      case PaymentMethodEnum.blockBee:
+        return SizedBox(
+          width: McGyver.rsDoubleH(context, 4),
+          height: McGyver.rsDoubleH(context, 4),
+          child: Image.asset(
+            "assets/images/blocbee.png",
             width: 20,
             height: 20,
           ),
@@ -223,6 +242,8 @@ class WithdrawFundViewModel extends CustomBaseViewModel {
         return "SticPay";
       case PaymentMethodEnum.tether:
         return "Tether (USDT ERC20)";
+      case PaymentMethodEnum.blockBee:
+        return "BlockBee";
       default:
         return "Tether";
     }

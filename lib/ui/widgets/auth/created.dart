@@ -44,7 +44,7 @@ class CreatedPage extends StatelessWidget {
                     horizontalSpaceSmall(context),
                     Expanded(
                       child: Text(
-                        'Your demo account has been created successfully',
+                        'Your ${model.createdAccountPageEnum == CreatedAccountPageEnum.demo ? "demo" : "real"} account has been created successfully',
                         style: CustomThemeData.generateStyle(
                             fontSize: 14, color: Colors.white70),
                       ),

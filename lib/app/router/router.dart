@@ -38,5 +38,6 @@ class MetaTraderRouter extends $MetaTraderRouter {
         AdaptiveRoute(page: ChartRoute.page),
         AdaptiveRoute(page: ProviderRoute.page),
         AdaptiveRoute(page: ProviderFollowerPage.page),
+        AdaptiveRoute(page: RecentActivity.page),
       ];
 }

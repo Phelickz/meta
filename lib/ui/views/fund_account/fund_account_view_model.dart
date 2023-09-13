@@ -3,6 +3,7 @@ import 'package:meta_trader/app/core/custom_base_view_model.dart';
 import 'package:meta_trader/ui/widgets/fund_account/app_bar.dart';
 import 'package:meta_trader/ui/widgets/fund_account/binance_pay.dart';
 import 'package:meta_trader/ui/widgets/fund_account/bitcoin.dart';
+import 'package:meta_trader/ui/widgets/fund_account/block_bee.dart';
 import 'package:meta_trader/ui/widgets/fund_account/neteller.dart';
 import 'package:meta_trader/ui/widgets/fund_account/online_bank.dart';
 import 'package:meta_trader/ui/widgets/fund_account/perfect_money.dart';
@@ -10,6 +11,7 @@ import 'package:meta_trader/ui/widgets/fund_account/select_account.dart';
 import 'package:meta_trader/ui/widgets/fund_account/select_deposit_method.dart';
 import 'package:meta_trader/ui/widgets/fund_account/skrill.dart';
 import 'package:meta_trader/ui/widgets/fund_account/stic_pay.dart';
+import 'package:meta_trader/ui/widgets/fund_account/success.dart';
 import 'package:meta_trader/ui/widgets/fund_account/tether.dart';
 
 enum FundAccountPageEnum {
@@ -22,25 +24,28 @@ enum FundAccountPageEnum {
   perfectMoney,
   skrill,
   sticPay,
-  tether
+  tether,
+  blockBee,
+  success,
 }
 
 enum DepositMethod {
-  onlineBank,
-  bitcoin,
-  binancePay,
-  neteller,
-  perfectMoney,
-  skrill,
-  sticPay,
-  tether
+  // onlineBank,
+  // bitcoin,
+  // binancePay,
+  // neteller,
+  // perfectMoney,
+  // skrill,
+  // sticPay,
+  // tether
+  blockBee,
 }
 
 class FundAccountViewModel extends CustomBaseViewModel {
   FundAccountPageEnum _fundAccountPageEnum = FundAccountPageEnum.selectAccount;
   FundAccountPageEnum get fundAccountPageEnum => _fundAccountPageEnum;
 
-  DepositMethod _depositMethod = DepositMethod.onlineBank;
+  DepositMethod _depositMethod = DepositMethod.blockBee;
   DepositMethod get depositMethod => _depositMethod;
 
   int _account = 0;
@@ -103,6 +108,14 @@ class FundAccountViewModel extends CustomBaseViewModel {
         return Skrill(
           model: this,
         );
+      case FundAccountPageEnum.blockBee:
+        return BlockBee(
+          model: this,
+        );
+      case FundAccountPageEnum.success:
+        return DepositSuccess(
+          model: this,
+        );
       default:
         return Container();
     }
@@ -139,6 +152,9 @@ class FundAccountViewModel extends CustomBaseViewModel {
             context, 'Tether (USD)', 'Fund using Tether', this);
       case FundAccountPageEnum.skrill:
         return fundAccountAppBar(context, 'Skrill', 'Fund using Skrill', this);
+      case FundAccountPageEnum.blockBee:
+        return fundAccountAppBar(
+            context, 'BlockBee', 'Fund using BlockBee', this);
       default:
         return null;
     }

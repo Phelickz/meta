@@ -28,7 +28,7 @@ Widget paymentInformationCard(
       ),
     ),
     child: SizedBox(
-      height: McGyver.rsDoubleH(context, 20),
+      // height: McGyver.rsDoubleH(context, 20),
       child: Padding(
         padding: const EdgeInsets.all(14.0),
         child: Row(
@@ -40,7 +40,7 @@ Widget paymentInformationCard(
               child: vm.payemntMethodIcon(e, context),
             ),
             Expanded(
-              flex: 2,
+              flex: 9,
               child: Padding(
                 padding: const EdgeInsets.only(right: 10, left: 15),
                 child: Column(
@@ -170,18 +170,20 @@ Widget paymentInformationCard(
             ),
             horizontalSpaceXSmall(context),
             Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Spacer(),
+                verticalSpaceMedium(context),
                 Align(
                   alignment: Alignment.center,
                   child: Transform.scale(
                     scale: 1.2,
                     child: SvgPicture.asset(
                       'assets/icons/edit.svg',
+                      color: Colors.black54,
                     ),
                   ),
                 ),
-                const Spacer(),
               ],
             )
           ],

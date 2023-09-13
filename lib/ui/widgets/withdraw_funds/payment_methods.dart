@@ -36,44 +36,52 @@ class PaymentMethodWithdraw extends StatelessWidget {
             verticalSpaceXSmall(context),
             PaymentMethodTileWithdraw(
               vm: model,
-              paymentMethodEnum: PaymentMethodEnum.onlineBank,
+              paymentMethodEnum: PaymentMethodEnum.blockBee,
               onTap: () {
-                model.setWithdrawFundViewEnum = WithdrawFundPageEnum.onlineBank;
-                model.setPaymentMethod = PaymentMethodEnum.onlineBank;
+                model.setWithdrawFundViewEnum = WithdrawFundPageEnum.blockBee;
+                model.setPaymentMethod = PaymentMethodEnum.blockBee;
               },
             ),
-            PaymentMethodTileWithdraw(
-              vm: model,
-              paymentMethodEnum: PaymentMethodEnum.binancePay,
-              onTap: () {
-                model.setWithdrawFundViewEnum = WithdrawFundPageEnum.binancePay;
-                model.setPaymentMethod = PaymentMethodEnum.binancePay;
-              },
-            ),
-            PaymentMethodTileWithdraw(
-              vm: model,
-              paymentMethodEnum: PaymentMethodEnum.neteller,
-              onTap: () {
-                model.setWithdrawFundViewEnum = WithdrawFundPageEnum.neteller;
-                model.setPaymentMethod = PaymentMethodEnum.neteller;
-              },
-            ),
-            PaymentMethodTileWithdraw(
-              vm: model,
-              paymentMethodEnum: PaymentMethodEnum.perfectMoney,
-            ),
-            PaymentMethodTileWithdraw(
-              vm: model,
-              paymentMethodEnum: PaymentMethodEnum.skrill,
-            ),
-            PaymentMethodTileWithdraw(
-              vm: model,
-              paymentMethodEnum: PaymentMethodEnum.sticPay,
-            ),
-            PaymentMethodTileWithdraw(
-              vm: model,
-              paymentMethodEnum: PaymentMethodEnum.tether,
-            ),
+            // PaymentMethodTileWithdraw(
+            //   vm: model,
+            //   paymentMethodEnum: PaymentMethodEnum.onlineBank,
+            //   onTap: () {
+            //     model.setWithdrawFundViewEnum = WithdrawFundPageEnum.onlineBank;
+            //     model.setPaymentMethod = PaymentMethodEnum.onlineBank;
+            //   },
+            // ),
+            // PaymentMethodTileWithdraw(
+            //   vm: model,
+            //   paymentMethodEnum: PaymentMethodEnum.binancePay,
+            //   onTap: () {
+            //     model.setWithdrawFundViewEnum = WithdrawFundPageEnum.binancePay;
+            //     model.setPaymentMethod = PaymentMethodEnum.binancePay;
+            //   },
+            // ),
+            // PaymentMethodTileWithdraw(
+            //   vm: model,
+            //   paymentMethodEnum: PaymentMethodEnum.neteller,
+            //   onTap: () {
+            //     model.setWithdrawFundViewEnum = WithdrawFundPageEnum.neteller;
+            //     model.setPaymentMethod = PaymentMethodEnum.neteller;
+            //   },
+            // ),
+            // PaymentMethodTileWithdraw(
+            //   vm: model,
+            //   paymentMethodEnum: PaymentMethodEnum.perfectMoney,
+            // ),
+            // PaymentMethodTileWithdraw(
+            //   vm: model,
+            //   paymentMethodEnum: PaymentMethodEnum.skrill,
+            // ),
+            // PaymentMethodTileWithdraw(
+            //   vm: model,
+            //   paymentMethodEnum: PaymentMethodEnum.sticPay,
+            // ),
+            // PaymentMethodTileWithdraw(
+            //   vm: model,
+            //   paymentMethodEnum: PaymentMethodEnum.tether,
+            // ),
           ],
         ),
       ),

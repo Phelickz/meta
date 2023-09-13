@@ -86,9 +86,9 @@ class ChooseAccount extends StatelessWidget {
       void Function(bool) onChanged) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return GestureDetector(
-      // onTap: () {
-      //   onChanged;
-      // },
+      onTap: () {
+        onChanged(value);
+      },
       child: Card(
         elevation: 0,
         color: isDarkMode

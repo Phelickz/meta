@@ -13,6 +13,7 @@ AppBar authAppBar(
     elevation: 0,
     backgroundColor: Theme.of(context).scaffoldBackgroundColor,
     automaticallyImplyLeading: false,
+    toolbarHeight: Platform.isIOS ? kToolbarHeight : 70,
     leading: IconButton(
       icon: Icon(
         Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
@@ -24,7 +25,8 @@ AppBar authAppBar(
         }
 
         if (model.authPageEnum == AuthPageEnum.chooseAccount) {
-          model.setAuthPageEnum = AuthPageEnum.broker;
+          // model.setAuthPageEnum = AuthPageEnum.broker;
+          model.goBack();
         }
 
         if (model.authPageEnum == AuthPageEnum.login) {

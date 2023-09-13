@@ -44,18 +44,16 @@ class TradingTools extends StatelessWidget {
               ),
             ),
             verticalSpaceXSmall(context),
-            Expanded(
-              child: Text(
-                text,
-                textAlign: TextAlign.center,
-                style: CustomThemeData.generateStyle(
-                  fontSize: McGyver.textSize(
-                    context,
-                    1.5,
-                  ),
-                  fontWeight: FontWeight.normal,
-                  color: isDarkMode ? Colors.white70 : Colors.black,
+            Text(
+              text,
+              textAlign: TextAlign.center,
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(
+                  context,
+                  1.5,
                 ),
+                fontWeight: FontWeight.normal,
+                color: isDarkMode ? Colors.white70 : Colors.black,
               ),
             ),
             verticalSpaceSmall(context)

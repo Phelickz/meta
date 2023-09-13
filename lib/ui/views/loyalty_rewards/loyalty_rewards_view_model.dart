@@ -6,8 +6,16 @@ class LoyaltyRewardsViewModel extends CustomBaseViewModel {
   LoyaltyRewardsViewEnum _loyaltyRewardsViewEnum = LoyaltyRewardsViewEnum.base;
   LoyaltyRewardsViewEnum get loyaltyRewardsViewEnum => _loyaltyRewardsViewEnum;
 
+  bool _viewDailyRewards = false;
+  bool get viewDailyRewards => _viewDailyRewards;
+
   set setLoyaltyRewardsViewEnum(LoyaltyRewardsViewEnum e) {
     _loyaltyRewardsViewEnum = e;
+    rebuildUi();
+  }
+
+  set setViewDailyRewards(bool val) {
+    _viewDailyRewards = val;
     rebuildUi();
   }
 }

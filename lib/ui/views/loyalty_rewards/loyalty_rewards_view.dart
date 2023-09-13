@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/loyalty_rewards/loyalty_rewards_view_model.dart';
 import 'package:meta_trader/ui/widgets/appbar.dart';
@@ -128,7 +129,7 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                     decoration: BoxDecoration(
                       color: isDarkMode
                           ? const Color(0xff052844)
-                          : const Color(0xffF2F4F7),
+                          : const Color(0xffEBE9FE),
                     ),
                     child: Padding(
                       padding: EdgeInsets.symmetric(
@@ -147,37 +148,63 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                             ),
                           ),
                           const Spacer(),
-                          Container(
-                            decoration: BoxDecoration(
-                              color: isDarkMode
-                                  ? Theme.of(context).scaffoldBackgroundColor
-                                  : Colors.black,
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 8.0, vertical: 4),
-                              child: Row(
-                                children: [
-                                  Text(
-                                    "Today's Tasks",
-                                    style: CustomThemeData.generateStyle(
-                                      fontSize: 12,
+                          GestureDetector(
+                            onTap: () {
+                              viewModel.setViewDailyRewards =
+                                  !viewModel.viewDailyRewards;
+                            },
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: isDarkMode
+                                    ? Theme.of(context).scaffoldBackgroundColor
+                                    : Colors.black,
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 8.0, vertical: 4),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      "Today's Tasks",
+                                      style: CustomThemeData.generateStyle(
+                                        fontSize: 12,
+                                        color: isDarkMode
+                                            ? const Color(0xffD0D5DD)
+                                            : const Color(0xffD0D5DD),
+                                      ),
+                                    ),
+                                    Icon(
+                                      viewModel.viewDailyRewards
+                                          ? Icons.keyboard_arrow_down_rounded
+                                          : Icons.keyboard_arrow_up_rounded,
                                       color: isDarkMode
                                           ? const Color(0xffD0D5DD)
                                           : const Color(0xffD0D5DD),
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.keyboard_arrow_up_rounded,
-                                    color: isDarkMode
-                                        ? const Color(0xffD0D5DD)
-                                        : const Color(0xffD0D5DD),
-                                  )
-                                ],
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           )
+                        ],
+                      ),
+                    ),
+                  ),
+                  Visibility(
+                    visible: viewModel.viewDailyRewards,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: isDarkMode
+                            ? const Color(0xff052844)
+                            : const Color(0xffEBE9FE),
+                      ),
+                      child: Column(
+                        children: [
+                          dailyRewards(context, 'Trade with 3 lot size',
+                              isActive: true),
+                          dailyRewards(context, 'Refer 3 Friends',
+                              isActive: false),
                         ],
                       ),
                     ),
@@ -201,7 +228,10 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                           ),
                         ),
                         TextButton(
-                            onPressed: () {}, child: const Text('View All'))
+                            onPressed: () {
+                              viewModel.push(RecentActivity(model: viewModel));
+                            },
+                            child: const Text('View All'))
                       ],
                     ),
                   ),
@@ -285,6 +315,103 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget dailyRewards(BuildContext context, String title,
+      {bool isActive = false}) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: McGyver.rsDoubleW(context, 5),
+        vertical: 8,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          isDarkMode
+              ? SvgPicture.asset("assets/images/earn_rewards.svg")
+              : SvgPicture.asset("assets/images/earn_rewards.svg"),
+          horizontalSpaceXSmall(context),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 1.9),
+                    fontWeight: FontWeight.bold,
+                    color: isDarkMode ? Colors.white : const Color(0xff475467),
+                  ),
+                ),
+                verticalSpaceXXSmall(context),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Status:',
+                          style: CustomThemeData.generateStyle(
+                            fontSize: McGyver.textSize(context, 1.2),
+                            color: isDarkMode
+                                ? Colors.white
+                                : const Color(0xff475467),
+                          ),
+                        ),
+                        verticalSpaceXXSmall(context),
+                        Text(
+                          'Reward',
+                          style: CustomThemeData.generateStyle(
+                            fontSize: McGyver.textSize(context, 1.2),
+                            color: isDarkMode
+                                ? Colors.white
+                                : const Color(0xff475467),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Not Completed:',
+                          style: CustomThemeData.generateStyle(
+                            fontSize: McGyver.textSize(context, 1.2),
+                            color: isDarkMode
+                                ? Colors.white
+                                : const Color(0xff475467),
+                          ),
+                        ),
+                        verticalSpaceXXSmall(context),
+                        Text(
+                          '3 Points',
+                          style: CustomThemeData.generateStyle(
+                            fontSize: McGyver.textSize(context, 1.2),
+                            color: isDarkMode
+                                ? Colors.white
+                                : const Color(0xff475467),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Icon(
+                      Icons.check_circle,
+                      color: isActive
+                          ? Colors.black38
+                          : Theme.of(context).primaryColor,
+                      size: 20,
+                    )
+                  ],
+                )
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

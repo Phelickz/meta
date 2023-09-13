@@ -65,7 +65,9 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
           items: [
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
-                'assets/images/home.svg',
+                _currentIndex != 0
+                    ? 'assets/images/home_inactive.svg'
+                    : 'assets/images/home.svg',
                 color: _currentIndex != 0
                     ? const Color(0xff667085)
                     : Theme.of(context).primaryColor,
@@ -74,7 +76,9 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
-                'assets/images/chart-success.svg',
+                _currentIndex == 1
+                    ? 'assets/images/quotes_selected.svg'
+                    : 'assets/images/chart-success.svg',
                 color: _currentIndex != 1
                     ? const Color(0xff667085)
                     : Theme.of(context).primaryColor,
@@ -83,7 +87,9 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
-                'assets/images/chart.svg',
+                _currentIndex == 2
+                    ? 'assets/images/chart_selected.svg'
+                    : 'assets/images/chart.svg',
                 color: _currentIndex != 2
                     ? const Color(0xff667085)
                     : Theme.of(context).primaryColor,
@@ -92,7 +98,9 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
-                'assets/images/status-up.svg',
+                _currentIndex == 3
+                    ? 'assets/images/trade_selected.svg'
+                    : 'assets/images/status-up.svg',
                 color: _currentIndex != 3
                     ? const Color(0xff667085)
                     : Theme.of(context).primaryColor,
@@ -101,7 +109,9 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
-                'assets/images/user.svg',
+                _currentIndex == 4
+                    ? 'assets/images/user_selected.svg'
+                    : 'assets/images/user.svg',
                 color: _currentIndex != 4
                     ? const Color(0xff667085)
                     : Theme.of(context).primaryColor,

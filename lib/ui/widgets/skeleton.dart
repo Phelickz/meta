@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 import '../../app/responsiveness/res.dart';
@@ -67,26 +69,51 @@ class Skeleton extends StatelessWidget {
             onTap: () {
               FocusScope.of(context).requestFocus(FocusNode());
             },
-            child: Scaffold(
-              key: scaffoldKey,
-              resizeToAvoidBottomInset: true,
-              backgroundColor: backgroundColor,
-              appBar: appBar,
-              body: Container(
-                padding: bodyPadding ??
-                    EdgeInsets.symmetric(
-                      horizontal: McGyver.rsDoubleW(context, 6),
+            child: Platform.isAndroid
+                ? SafeArea(
+                    child: Scaffold(
+                      key: scaffoldKey,
+                      resizeToAvoidBottomInset: true,
+                      backgroundColor: backgroundColor,
+                      appBar: appBar,
+                      body: Container(
+                        padding: bodyPadding ??
+                            EdgeInsets.symmetric(
+                              horizontal: McGyver.rsDoubleW(context, 6),
+                            ),
+                        child: body,
+                      ),
+                      floatingActionButton: floatingActionButton,
+                      floatingActionButtonAnimator:
+                          floatingActionButtonAnimator,
+                      floatingActionButtonLocation:
+                          floatingActionButtonLocation,
+                      drawer: drawer,
+                      endDrawer: endDrawer,
+                      bottomNavigationBar: bottomNavigationBar,
+                      bottomSheet: bottomSheet,
                     ),
-                child: body,
-              ),
-              floatingActionButton: floatingActionButton,
-              floatingActionButtonAnimator: floatingActionButtonAnimator,
-              floatingActionButtonLocation: floatingActionButtonLocation,
-              drawer: drawer,
-              endDrawer: endDrawer,
-              bottomNavigationBar: bottomNavigationBar,
-              bottomSheet: bottomSheet,
-            ),
+                  )
+                : Scaffold(
+                    key: scaffoldKey,
+                    resizeToAvoidBottomInset: true,
+                    backgroundColor: backgroundColor,
+                    appBar: appBar,
+                    body: Container(
+                      padding: bodyPadding ??
+                          EdgeInsets.symmetric(
+                            horizontal: McGyver.rsDoubleW(context, 6),
+                          ),
+                      child: body,
+                    ),
+                    floatingActionButton: floatingActionButton,
+                    floatingActionButtonAnimator: floatingActionButtonAnimator,
+                    floatingActionButtonLocation: floatingActionButtonLocation,
+                    drawer: drawer,
+                    endDrawer: endDrawer,
+                    bottomNavigationBar: bottomNavigationBar,
+                    bottomSheet: bottomSheet,
+                  ),
           ),
           isBusy!
               ? Busy(

@@ -29,6 +29,7 @@ enum PaymentMethodPageEnum {
   qrCode,
   addPaymentMethod,
   addPaymentMethodSuccess,
+  blockBee,
 }
 
 enum PaymentMethodEnum {
@@ -40,6 +41,7 @@ enum PaymentMethodEnum {
   skrill,
   sticPay,
   tether,
+  blockBee,
   none,
 }
 

@@ -78,17 +78,37 @@ class LoyaltyRewardCard extends StatelessWidget {
                         ),
                       ),
                       verticalSpaceXXSmall(context),
-                      SizedBox(
-                        width: double.infinity,
-                        child: LinearProgressIndicator(
-                            // borderRadius: BorderRadius.circular(10),
-                            value: 23 / 100,
-                            backgroundColor: isDarkMode
-                                ? const Color(0xFF073961)
-                                : const Color(0xFFE4E7EC),
-                            color: Colors.purple),
+                      SliderTheme(
+                        data: SliderThemeData(
+                          thumbShape:
+                              RoundSliderThumbShape(enabledThumbRadius: 12),
+                          // here
+                          trackShape: CustomTrackShape(),
+                        ),
+                        child: Slider(
+                          inactiveColor: isDarkMode
+                              ? const Color(0xFF073961)
+                              : const Color(0xFFE4E7EC),
+                          activeColor: Colors.purple,
+                          value: 1,
+                          onChanged: (v) {
+                            // setState(() {
+                            //   sliderValue = v;
+                            // });
+                          },
+                        ),
                       ),
-                      verticalSpaceXXSmall(context),
+                      // SizedBox(
+                      //   width: double.infinity,
+                      //   child: LinearProgressIndicator(
+                      //       // borderRadius: BorderRadius.circular(10),
+                      //       value: 100 / 100,
+                      //       backgroundColor: isDarkMode
+                      //           ? const Color(0xFF073961)
+                      //           : const Color(0xFFE4E7EC),
+                      //       color: Colors.purple),
+                      // ),
+                      // verticalSpaceXXSmall(context),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -142,5 +162,22 @@ class LoyaltyRewardCard extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class CustomTrackShape extends RoundedRectSliderTrackShape {
+  @override
+  Rect getPreferredRect({
+    required RenderBox parentBox,
+    Offset offset = Offset.zero,
+    required SliderThemeData sliderTheme,
+    bool isEnabled = false,
+    bool isDiscrete = false,
+  }) {
+    final trackHeight = sliderTheme.trackHeight;
+    final trackLeft = offset.dx;
+    final trackTop = offset.dy + (parentBox.size.height - trackHeight!) / 2;
+    final trackWidth = parentBox.size.width;
+    return Rect.fromLTWH(trackLeft, trackTop + 16, trackWidth, 1);
   }
 }

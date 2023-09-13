@@ -8,8 +8,8 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i35;
-import 'package:flutter/material.dart' as _i36;
+import 'package:auto_route/auto_route.dart' as _i36;
+import 'package:flutter/material.dart' as _i37;
 import 'package:meta_trader/ui/views/auth/auth_view.dart' as _i1;
 import 'package:meta_trader/ui/views/bottomNav/bottom_nav.dart' as _i2;
 import 'package:meta_trader/ui/views/chart/chart_view.dart' as _i3;
@@ -24,6 +24,8 @@ import 'package:meta_trader/ui/views/help_and_support/help_and_support_view.dart
 import 'package:meta_trader/ui/views/home/home_view.dart' as _i9;
 import 'package:meta_trader/ui/views/loyalty_rewards/loyalty_rewards_view.dart'
     as _i10;
+import 'package:meta_trader/ui/views/loyalty_rewards/loyalty_rewards_view_model.dart'
+    as _i40;
 import 'package:meta_trader/ui/views/manage_accounts/manage_account_view.dart'
     as _i11;
 import 'package:meta_trader/ui/views/margin_calculator/margin_calculator_view.dart'
@@ -41,43 +43,45 @@ import 'package:meta_trader/ui/views/profile/profile_view.dart' as _i19;
 import 'package:meta_trader/ui/views/profit_calculator/profit_calculator_view.dart'
     as _i20;
 import 'package:meta_trader/ui/views/provider/provider_view.dart' as _i22;
-import 'package:meta_trader/ui/views/provider/provider_view_model.dart' as _i38;
+import 'package:meta_trader/ui/views/provider/provider_view_model.dart' as _i39;
 import 'package:meta_trader/ui/views/quotes/quotes_view.dart' as _i23;
-import 'package:meta_trader/ui/views/referral/referral_view.dart' as _i24;
-import 'package:meta_trader/ui/views/security/security_view.dart' as _i25;
-import 'package:meta_trader/ui/views/settings/settings_view.dart' as _i26;
-import 'package:meta_trader/ui/views/social_trading/dashboard.dart' as _i27;
+import 'package:meta_trader/ui/views/referral/referral_view.dart' as _i25;
+import 'package:meta_trader/ui/views/security/security_view.dart' as _i26;
+import 'package:meta_trader/ui/views/settings/settings_view.dart' as _i27;
+import 'package:meta_trader/ui/views/social_trading/dashboard.dart' as _i28;
 import 'package:meta_trader/ui/views/social_trading/master_trader_overview.dart'
     as _i13;
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart'
-    as _i37;
-import 'package:meta_trader/ui/views/social_trading/welcome.dart' as _i28;
-import 'package:meta_trader/ui/views/startup/startup_view.dart' as _i29;
-import 'package:meta_trader/ui/views/trade/trade_view.dart' as _i31;
+    as _i38;
+import 'package:meta_trader/ui/views/social_trading/welcome.dart' as _i29;
+import 'package:meta_trader/ui/views/startup/startup_view.dart' as _i30;
+import 'package:meta_trader/ui/views/trade/trade_view.dart' as _i32;
 import 'package:meta_trader/ui/views/trade_history/trade_history_view.dart'
-    as _i30;
+    as _i31;
 import 'package:meta_trader/ui/views/transactions/transactions_view.dart'
-    as _i32;
-import 'package:meta_trader/ui/views/verification/verification_view.dart'
     as _i33;
-import 'package:meta_trader/ui/views/withdraw_funds/withdraw_funds_view.dart'
+import 'package:meta_trader/ui/views/verification/verification_view.dart'
     as _i34;
+import 'package:meta_trader/ui/views/withdraw_funds/withdraw_funds_view.dart'
+    as _i35;
+import 'package:meta_trader/ui/widgets/loyalty_rewards/recent_activity.dart'
+    as _i24;
 import 'package:meta_trader/ui/widgets/provider/provider_followers.dart'
     as _i21;
 
-abstract class $MetaTraderRouter extends _i35.RootStackRouter {
+abstract class $MetaTraderRouter extends _i36.RootStackRouter {
   $MetaTraderRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i35.PageFactory> pagesMap = {
+  final Map<String, _i36.PageFactory> pagesMap = {
     AuthRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i1.AuthView(),
       );
     },
     BottomNavBarRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i2.BottomNavBarView(),
       );
@@ -85,7 +89,7 @@ abstract class $MetaTraderRouter extends _i35.RootStackRouter {
     ChartRoute.name: (routeData) {
       final args = routeData.argsAs<ChartRouteArgs>(
           orElse: () => const ChartRouteArgs());
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i3.ChartView(
           key: args.key,
@@ -94,62 +98,62 @@ abstract class $MetaTraderRouter extends _i35.RootStackRouter {
       );
     },
     CurrencyConverterRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i4.CurrencyConverterView(),
       );
     },
     DashboardRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i5.DashboardView(),
       );
     },
     ForexNewsRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i6.ForexNewsView(),
       );
     },
     FundAccountRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i7.FundAccountView(),
       );
     },
     HelpAndSupportRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i8.HelpAndSupportView(),
       );
     },
     HomeRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i9.HomeView(),
       );
     },
     LoyaltyRewardsRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i10.LoyaltyRewardsView(),
       );
     },
     ManageAccountRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i11.ManageAccountView(),
       );
     },
     MarginCalculatorRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i12.MarginCalculatorView(),
       );
     },
     MasterTraderOverview.name: (routeData) {
       final args = routeData.argsAs<MasterTraderOverviewArgs>();
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i13.MasterTraderOverview(
           key: args.key,
@@ -158,50 +162,50 @@ abstract class $MetaTraderRouter extends _i35.RootStackRouter {
       );
     },
     NotificationRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i14.NotificationView(),
       );
     },
     OnboardingRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i15.OnboardingView(),
       );
     },
     PaymentMethodRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i16.PaymentMethodView(),
       );
     },
     PipCalculatorRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i17.PipCalculatorView(),
       );
     },
     PriceSentimentsRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i18.PriceSentimentsView(),
       );
     },
     ProfileRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i19.ProfileView(),
       );
     },
     ProfitCalculatorRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i20.ProfitCalculatorView(),
       );
     },
     ProviderFollowerPage.name: (routeData) {
       final args = routeData.argsAs<ProviderFollowerPageArgs>();
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i21.ProviderFollowerPage(
           key: args.key,
@@ -210,81 +214,91 @@ abstract class $MetaTraderRouter extends _i35.RootStackRouter {
       );
     },
     ProviderRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i22.ProviderView(),
       );
     },
     QuotesRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i23.QuotesView(),
       );
     },
-    ReferralRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+    RecentActivity.name: (routeData) {
+      final args = routeData.argsAs<RecentActivityArgs>();
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i24.ReferralView(),
+        child: _i24.RecentActivity(
+          key: args.key,
+          model: args.model,
+        ),
+      );
+    },
+    ReferralRoute.name: (routeData) {
+      return _i36.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i25.ReferralView(),
       );
     },
     SecurityRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i25.SecurityView(),
+        child: const _i26.SecurityView(),
       );
     },
     SettingsRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i26.SettingsView(),
+        child: const _i27.SettingsView(),
       );
     },
     SocialTradingDasboard.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i27.SocialTradingDasboard(),
+        child: const _i28.SocialTradingDasboard(),
       );
     },
     SocialTradingWelcome.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i28.SocialTradingWelcome(),
+        child: const _i29.SocialTradingWelcome(),
       );
     },
     StartupRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i29.StartupView(),
+        child: const _i30.StartupView(),
       );
     },
     TradeHistoryRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i30.TradeHistoryView(),
+        child: const _i31.TradeHistoryView(),
       );
     },
     TradeRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i31.TradeView(),
+        child: const _i32.TradeView(),
       );
     },
     TransactionsRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i32.TransactionsView(),
+        child: const _i33.TransactionsView(),
       );
     },
     VerificationRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i33.VerificationView(),
+        child: const _i34.VerificationView(),
       );
     },
     WithdrawFundRoute.name: (routeData) {
-      return _i35.AutoRoutePage<dynamic>(
+      return _i36.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i34.WithdrawFundView(),
+        child: const _i35.WithdrawFundView(),
       );
     },
   };
@@ -292,8 +306,8 @@ abstract class $MetaTraderRouter extends _i35.RootStackRouter {
 
 /// generated route for
 /// [_i1.AuthView]
-class AuthRoute extends _i35.PageRouteInfo<void> {
-  const AuthRoute({List<_i35.PageRouteInfo>? children})
+class AuthRoute extends _i36.PageRouteInfo<void> {
+  const AuthRoute({List<_i36.PageRouteInfo>? children})
       : super(
           AuthRoute.name,
           initialChildren: children,
@@ -301,13 +315,13 @@ class AuthRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'AuthRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i2.BottomNavBarView]
-class BottomNavBarRoute extends _i35.PageRouteInfo<void> {
-  const BottomNavBarRoute({List<_i35.PageRouteInfo>? children})
+class BottomNavBarRoute extends _i36.PageRouteInfo<void> {
+  const BottomNavBarRoute({List<_i36.PageRouteInfo>? children})
       : super(
           BottomNavBarRoute.name,
           initialChildren: children,
@@ -315,16 +329,16 @@ class BottomNavBarRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'BottomNavBarRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i3.ChartView]
-class ChartRoute extends _i35.PageRouteInfo<ChartRouteArgs> {
+class ChartRoute extends _i36.PageRouteInfo<ChartRouteArgs> {
   ChartRoute({
-    _i36.Key? key,
+    _i37.Key? key,
     bool? showBackButton = false,
-    List<_i35.PageRouteInfo>? children,
+    List<_i36.PageRouteInfo>? children,
   }) : super(
           ChartRoute.name,
           args: ChartRouteArgs(
@@ -336,8 +350,8 @@ class ChartRoute extends _i35.PageRouteInfo<ChartRouteArgs> {
 
   static const String name = 'ChartRoute';
 
-  static const _i35.PageInfo<ChartRouteArgs> page =
-      _i35.PageInfo<ChartRouteArgs>(name);
+  static const _i36.PageInfo<ChartRouteArgs> page =
+      _i36.PageInfo<ChartRouteArgs>(name);
 }
 
 class ChartRouteArgs {
@@ -346,7 +360,7 @@ class ChartRouteArgs {
     this.showBackButton = false,
   });
 
-  final _i36.Key? key;
+  final _i37.Key? key;
 
   final bool? showBackButton;
 
@@ -358,8 +372,8 @@ class ChartRouteArgs {
 
 /// generated route for
 /// [_i4.CurrencyConverterView]
-class CurrencyConverterRoute extends _i35.PageRouteInfo<void> {
-  const CurrencyConverterRoute({List<_i35.PageRouteInfo>? children})
+class CurrencyConverterRoute extends _i36.PageRouteInfo<void> {
+  const CurrencyConverterRoute({List<_i36.PageRouteInfo>? children})
       : super(
           CurrencyConverterRoute.name,
           initialChildren: children,
@@ -367,13 +381,13 @@ class CurrencyConverterRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'CurrencyConverterRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i5.DashboardView]
-class DashboardRoute extends _i35.PageRouteInfo<void> {
-  const DashboardRoute({List<_i35.PageRouteInfo>? children})
+class DashboardRoute extends _i36.PageRouteInfo<void> {
+  const DashboardRoute({List<_i36.PageRouteInfo>? children})
       : super(
           DashboardRoute.name,
           initialChildren: children,
@@ -381,13 +395,13 @@ class DashboardRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'DashboardRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i6.ForexNewsView]
-class ForexNewsRoute extends _i35.PageRouteInfo<void> {
-  const ForexNewsRoute({List<_i35.PageRouteInfo>? children})
+class ForexNewsRoute extends _i36.PageRouteInfo<void> {
+  const ForexNewsRoute({List<_i36.PageRouteInfo>? children})
       : super(
           ForexNewsRoute.name,
           initialChildren: children,
@@ -395,13 +409,13 @@ class ForexNewsRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'ForexNewsRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i7.FundAccountView]
-class FundAccountRoute extends _i35.PageRouteInfo<void> {
-  const FundAccountRoute({List<_i35.PageRouteInfo>? children})
+class FundAccountRoute extends _i36.PageRouteInfo<void> {
+  const FundAccountRoute({List<_i36.PageRouteInfo>? children})
       : super(
           FundAccountRoute.name,
           initialChildren: children,
@@ -409,13 +423,13 @@ class FundAccountRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'FundAccountRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i8.HelpAndSupportView]
-class HelpAndSupportRoute extends _i35.PageRouteInfo<void> {
-  const HelpAndSupportRoute({List<_i35.PageRouteInfo>? children})
+class HelpAndSupportRoute extends _i36.PageRouteInfo<void> {
+  const HelpAndSupportRoute({List<_i36.PageRouteInfo>? children})
       : super(
           HelpAndSupportRoute.name,
           initialChildren: children,
@@ -423,13 +437,13 @@ class HelpAndSupportRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'HelpAndSupportRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i9.HomeView]
-class HomeRoute extends _i35.PageRouteInfo<void> {
-  const HomeRoute({List<_i35.PageRouteInfo>? children})
+class HomeRoute extends _i36.PageRouteInfo<void> {
+  const HomeRoute({List<_i36.PageRouteInfo>? children})
       : super(
           HomeRoute.name,
           initialChildren: children,
@@ -437,13 +451,13 @@ class HomeRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'HomeRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i10.LoyaltyRewardsView]
-class LoyaltyRewardsRoute extends _i35.PageRouteInfo<void> {
-  const LoyaltyRewardsRoute({List<_i35.PageRouteInfo>? children})
+class LoyaltyRewardsRoute extends _i36.PageRouteInfo<void> {
+  const LoyaltyRewardsRoute({List<_i36.PageRouteInfo>? children})
       : super(
           LoyaltyRewardsRoute.name,
           initialChildren: children,
@@ -451,13 +465,13 @@ class LoyaltyRewardsRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'LoyaltyRewardsRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i11.ManageAccountView]
-class ManageAccountRoute extends _i35.PageRouteInfo<void> {
-  const ManageAccountRoute({List<_i35.PageRouteInfo>? children})
+class ManageAccountRoute extends _i36.PageRouteInfo<void> {
+  const ManageAccountRoute({List<_i36.PageRouteInfo>? children})
       : super(
           ManageAccountRoute.name,
           initialChildren: children,
@@ -465,13 +479,13 @@ class ManageAccountRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'ManageAccountRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i12.MarginCalculatorView]
-class MarginCalculatorRoute extends _i35.PageRouteInfo<void> {
-  const MarginCalculatorRoute({List<_i35.PageRouteInfo>? children})
+class MarginCalculatorRoute extends _i36.PageRouteInfo<void> {
+  const MarginCalculatorRoute({List<_i36.PageRouteInfo>? children})
       : super(
           MarginCalculatorRoute.name,
           initialChildren: children,
@@ -479,17 +493,17 @@ class MarginCalculatorRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'MarginCalculatorRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i13.MasterTraderOverview]
 class MasterTraderOverview
-    extends _i35.PageRouteInfo<MasterTraderOverviewArgs> {
+    extends _i36.PageRouteInfo<MasterTraderOverviewArgs> {
   MasterTraderOverview({
-    _i36.Key? key,
-    required _i37.SocialTradingViewModel model,
-    List<_i35.PageRouteInfo>? children,
+    _i37.Key? key,
+    required _i38.SocialTradingViewModel model,
+    List<_i36.PageRouteInfo>? children,
   }) : super(
           MasterTraderOverview.name,
           args: MasterTraderOverviewArgs(
@@ -501,8 +515,8 @@ class MasterTraderOverview
 
   static const String name = 'MasterTraderOverview';
 
-  static const _i35.PageInfo<MasterTraderOverviewArgs> page =
-      _i35.PageInfo<MasterTraderOverviewArgs>(name);
+  static const _i36.PageInfo<MasterTraderOverviewArgs> page =
+      _i36.PageInfo<MasterTraderOverviewArgs>(name);
 }
 
 class MasterTraderOverviewArgs {
@@ -511,9 +525,9 @@ class MasterTraderOverviewArgs {
     required this.model,
   });
 
-  final _i36.Key? key;
+  final _i37.Key? key;
 
-  final _i37.SocialTradingViewModel model;
+  final _i38.SocialTradingViewModel model;
 
   @override
   String toString() {
@@ -523,8 +537,8 @@ class MasterTraderOverviewArgs {
 
 /// generated route for
 /// [_i14.NotificationView]
-class NotificationRoute extends _i35.PageRouteInfo<void> {
-  const NotificationRoute({List<_i35.PageRouteInfo>? children})
+class NotificationRoute extends _i36.PageRouteInfo<void> {
+  const NotificationRoute({List<_i36.PageRouteInfo>? children})
       : super(
           NotificationRoute.name,
           initialChildren: children,
@@ -532,13 +546,13 @@ class NotificationRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'NotificationRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i15.OnboardingView]
-class OnboardingRoute extends _i35.PageRouteInfo<void> {
-  const OnboardingRoute({List<_i35.PageRouteInfo>? children})
+class OnboardingRoute extends _i36.PageRouteInfo<void> {
+  const OnboardingRoute({List<_i36.PageRouteInfo>? children})
       : super(
           OnboardingRoute.name,
           initialChildren: children,
@@ -546,13 +560,13 @@ class OnboardingRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'OnboardingRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i16.PaymentMethodView]
-class PaymentMethodRoute extends _i35.PageRouteInfo<void> {
-  const PaymentMethodRoute({List<_i35.PageRouteInfo>? children})
+class PaymentMethodRoute extends _i36.PageRouteInfo<void> {
+  const PaymentMethodRoute({List<_i36.PageRouteInfo>? children})
       : super(
           PaymentMethodRoute.name,
           initialChildren: children,
@@ -560,13 +574,13 @@ class PaymentMethodRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'PaymentMethodRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i17.PipCalculatorView]
-class PipCalculatorRoute extends _i35.PageRouteInfo<void> {
-  const PipCalculatorRoute({List<_i35.PageRouteInfo>? children})
+class PipCalculatorRoute extends _i36.PageRouteInfo<void> {
+  const PipCalculatorRoute({List<_i36.PageRouteInfo>? children})
       : super(
           PipCalculatorRoute.name,
           initialChildren: children,
@@ -574,13 +588,13 @@ class PipCalculatorRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'PipCalculatorRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i18.PriceSentimentsView]
-class PriceSentimentsRoute extends _i35.PageRouteInfo<void> {
-  const PriceSentimentsRoute({List<_i35.PageRouteInfo>? children})
+class PriceSentimentsRoute extends _i36.PageRouteInfo<void> {
+  const PriceSentimentsRoute({List<_i36.PageRouteInfo>? children})
       : super(
           PriceSentimentsRoute.name,
           initialChildren: children,
@@ -588,13 +602,13 @@ class PriceSentimentsRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'PriceSentimentsRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i19.ProfileView]
-class ProfileRoute extends _i35.PageRouteInfo<void> {
-  const ProfileRoute({List<_i35.PageRouteInfo>? children})
+class ProfileRoute extends _i36.PageRouteInfo<void> {
+  const ProfileRoute({List<_i36.PageRouteInfo>? children})
       : super(
           ProfileRoute.name,
           initialChildren: children,
@@ -602,13 +616,13 @@ class ProfileRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'ProfileRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i20.ProfitCalculatorView]
-class ProfitCalculatorRoute extends _i35.PageRouteInfo<void> {
-  const ProfitCalculatorRoute({List<_i35.PageRouteInfo>? children})
+class ProfitCalculatorRoute extends _i36.PageRouteInfo<void> {
+  const ProfitCalculatorRoute({List<_i36.PageRouteInfo>? children})
       : super(
           ProfitCalculatorRoute.name,
           initialChildren: children,
@@ -616,17 +630,17 @@ class ProfitCalculatorRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'ProfitCalculatorRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i21.ProviderFollowerPage]
 class ProviderFollowerPage
-    extends _i35.PageRouteInfo<ProviderFollowerPageArgs> {
+    extends _i36.PageRouteInfo<ProviderFollowerPageArgs> {
   ProviderFollowerPage({
-    _i36.Key? key,
-    required _i38.ProviderViewModel viewModel,
-    List<_i35.PageRouteInfo>? children,
+    _i37.Key? key,
+    required _i39.ProviderViewModel viewModel,
+    List<_i36.PageRouteInfo>? children,
   }) : super(
           ProviderFollowerPage.name,
           args: ProviderFollowerPageArgs(
@@ -638,8 +652,8 @@ class ProviderFollowerPage
 
   static const String name = 'ProviderFollowerPage';
 
-  static const _i35.PageInfo<ProviderFollowerPageArgs> page =
-      _i35.PageInfo<ProviderFollowerPageArgs>(name);
+  static const _i36.PageInfo<ProviderFollowerPageArgs> page =
+      _i36.PageInfo<ProviderFollowerPageArgs>(name);
 }
 
 class ProviderFollowerPageArgs {
@@ -648,9 +662,9 @@ class ProviderFollowerPageArgs {
     required this.viewModel,
   });
 
-  final _i36.Key? key;
+  final _i37.Key? key;
 
-  final _i38.ProviderViewModel viewModel;
+  final _i39.ProviderViewModel viewModel;
 
   @override
   String toString() {
@@ -660,8 +674,8 @@ class ProviderFollowerPageArgs {
 
 /// generated route for
 /// [_i22.ProviderView]
-class ProviderRoute extends _i35.PageRouteInfo<void> {
-  const ProviderRoute({List<_i35.PageRouteInfo>? children})
+class ProviderRoute extends _i36.PageRouteInfo<void> {
+  const ProviderRoute({List<_i36.PageRouteInfo>? children})
       : super(
           ProviderRoute.name,
           initialChildren: children,
@@ -669,13 +683,13 @@ class ProviderRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'ProviderRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i23.QuotesView]
-class QuotesRoute extends _i35.PageRouteInfo<void> {
-  const QuotesRoute({List<_i35.PageRouteInfo>? children})
+class QuotesRoute extends _i36.PageRouteInfo<void> {
+  const QuotesRoute({List<_i36.PageRouteInfo>? children})
       : super(
           QuotesRoute.name,
           initialChildren: children,
@@ -683,13 +697,51 @@ class QuotesRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'QuotesRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i24.ReferralView]
-class ReferralRoute extends _i35.PageRouteInfo<void> {
-  const ReferralRoute({List<_i35.PageRouteInfo>? children})
+/// [_i24.RecentActivity]
+class RecentActivity extends _i36.PageRouteInfo<RecentActivityArgs> {
+  RecentActivity({
+    _i37.Key? key,
+    required _i40.LoyaltyRewardsViewModel model,
+    List<_i36.PageRouteInfo>? children,
+  }) : super(
+          RecentActivity.name,
+          args: RecentActivityArgs(
+            key: key,
+            model: model,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'RecentActivity';
+
+  static const _i36.PageInfo<RecentActivityArgs> page =
+      _i36.PageInfo<RecentActivityArgs>(name);
+}
+
+class RecentActivityArgs {
+  const RecentActivityArgs({
+    this.key,
+    required this.model,
+  });
+
+  final _i37.Key? key;
+
+  final _i40.LoyaltyRewardsViewModel model;
+
+  @override
+  String toString() {
+    return 'RecentActivityArgs{key: $key, model: $model}';
+  }
+}
+
+/// generated route for
+/// [_i25.ReferralView]
+class ReferralRoute extends _i36.PageRouteInfo<void> {
+  const ReferralRoute({List<_i36.PageRouteInfo>? children})
       : super(
           ReferralRoute.name,
           initialChildren: children,
@@ -697,13 +749,13 @@ class ReferralRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'ReferralRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i25.SecurityView]
-class SecurityRoute extends _i35.PageRouteInfo<void> {
-  const SecurityRoute({List<_i35.PageRouteInfo>? children})
+/// [_i26.SecurityView]
+class SecurityRoute extends _i36.PageRouteInfo<void> {
+  const SecurityRoute({List<_i36.PageRouteInfo>? children})
       : super(
           SecurityRoute.name,
           initialChildren: children,
@@ -711,13 +763,13 @@ class SecurityRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'SecurityRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i26.SettingsView]
-class SettingsRoute extends _i35.PageRouteInfo<void> {
-  const SettingsRoute({List<_i35.PageRouteInfo>? children})
+/// [_i27.SettingsView]
+class SettingsRoute extends _i36.PageRouteInfo<void> {
+  const SettingsRoute({List<_i36.PageRouteInfo>? children})
       : super(
           SettingsRoute.name,
           initialChildren: children,
@@ -725,13 +777,13 @@ class SettingsRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'SettingsRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i27.SocialTradingDasboard]
-class SocialTradingDasboard extends _i35.PageRouteInfo<void> {
-  const SocialTradingDasboard({List<_i35.PageRouteInfo>? children})
+/// [_i28.SocialTradingDasboard]
+class SocialTradingDasboard extends _i36.PageRouteInfo<void> {
+  const SocialTradingDasboard({List<_i36.PageRouteInfo>? children})
       : super(
           SocialTradingDasboard.name,
           initialChildren: children,
@@ -739,13 +791,13 @@ class SocialTradingDasboard extends _i35.PageRouteInfo<void> {
 
   static const String name = 'SocialTradingDasboard';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i28.SocialTradingWelcome]
-class SocialTradingWelcome extends _i35.PageRouteInfo<void> {
-  const SocialTradingWelcome({List<_i35.PageRouteInfo>? children})
+/// [_i29.SocialTradingWelcome]
+class SocialTradingWelcome extends _i36.PageRouteInfo<void> {
+  const SocialTradingWelcome({List<_i36.PageRouteInfo>? children})
       : super(
           SocialTradingWelcome.name,
           initialChildren: children,
@@ -753,13 +805,13 @@ class SocialTradingWelcome extends _i35.PageRouteInfo<void> {
 
   static const String name = 'SocialTradingWelcome';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i29.StartupView]
-class StartupRoute extends _i35.PageRouteInfo<void> {
-  const StartupRoute({List<_i35.PageRouteInfo>? children})
+/// [_i30.StartupView]
+class StartupRoute extends _i36.PageRouteInfo<void> {
+  const StartupRoute({List<_i36.PageRouteInfo>? children})
       : super(
           StartupRoute.name,
           initialChildren: children,
@@ -767,13 +819,13 @@ class StartupRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'StartupRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i30.TradeHistoryView]
-class TradeHistoryRoute extends _i35.PageRouteInfo<void> {
-  const TradeHistoryRoute({List<_i35.PageRouteInfo>? children})
+/// [_i31.TradeHistoryView]
+class TradeHistoryRoute extends _i36.PageRouteInfo<void> {
+  const TradeHistoryRoute({List<_i36.PageRouteInfo>? children})
       : super(
           TradeHistoryRoute.name,
           initialChildren: children,
@@ -781,13 +833,13 @@ class TradeHistoryRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'TradeHistoryRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i31.TradeView]
-class TradeRoute extends _i35.PageRouteInfo<void> {
-  const TradeRoute({List<_i35.PageRouteInfo>? children})
+/// [_i32.TradeView]
+class TradeRoute extends _i36.PageRouteInfo<void> {
+  const TradeRoute({List<_i36.PageRouteInfo>? children})
       : super(
           TradeRoute.name,
           initialChildren: children,
@@ -795,13 +847,13 @@ class TradeRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'TradeRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i32.TransactionsView]
-class TransactionsRoute extends _i35.PageRouteInfo<void> {
-  const TransactionsRoute({List<_i35.PageRouteInfo>? children})
+/// [_i33.TransactionsView]
+class TransactionsRoute extends _i36.PageRouteInfo<void> {
+  const TransactionsRoute({List<_i36.PageRouteInfo>? children})
       : super(
           TransactionsRoute.name,
           initialChildren: children,
@@ -809,13 +861,13 @@ class TransactionsRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'TransactionsRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i33.VerificationView]
-class VerificationRoute extends _i35.PageRouteInfo<void> {
-  const VerificationRoute({List<_i35.PageRouteInfo>? children})
+/// [_i34.VerificationView]
+class VerificationRoute extends _i36.PageRouteInfo<void> {
+  const VerificationRoute({List<_i36.PageRouteInfo>? children})
       : super(
           VerificationRoute.name,
           initialChildren: children,
@@ -823,13 +875,13 @@ class VerificationRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'VerificationRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i34.WithdrawFundView]
-class WithdrawFundRoute extends _i35.PageRouteInfo<void> {
-  const WithdrawFundRoute({List<_i35.PageRouteInfo>? children})
+/// [_i35.WithdrawFundView]
+class WithdrawFundRoute extends _i36.PageRouteInfo<void> {
+  const WithdrawFundRoute({List<_i36.PageRouteInfo>? children})
       : super(
           WithdrawFundRoute.name,
           initialChildren: children,
@@ -837,5 +889,5 @@ class WithdrawFundRoute extends _i35.PageRouteInfo<void> {
 
   static const String name = 'WithdrawFundRoute';
 
-  static const _i35.PageInfo<void> page = _i35.PageInfo<void>(name);
+  static const _i36.PageInfo<void> page = _i36.PageInfo<void>(name);
 }

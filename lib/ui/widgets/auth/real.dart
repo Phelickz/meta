@@ -147,8 +147,10 @@ class RealPage extends StatelessWidget {
             Row(
               children: [
                 Checkbox(
-                  value: false,
-                  onChanged: (val) {},
+                  value: model.termsAndConditions,
+                  onChanged: (val) {
+                    model.setTermsAndConditions = val ?? false;
+                  },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(4),
                   ),
@@ -172,6 +174,7 @@ class RealPage extends StatelessWidget {
             CustomButtons.generalButton(
               context: context,
               onTap: () {
+                model.setCreatedAccountPageEnum = CreatedAccountPageEnum.real;
                 model.setAuthPageEnum = AuthPageEnum.created;
               },
               text: 'Next',

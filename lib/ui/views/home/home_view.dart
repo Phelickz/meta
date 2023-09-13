@@ -1,5 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
+import 'dart:io';
+
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -70,7 +72,9 @@ class HomeView extends StackedView<HomeViewModel> {
           )
         ],
         appBarCenterTitle: false,
+        toolbarHeight: Platform.isIOS ? kToolbarHeight : 85,
         appBarTitle: returnAppBar(context),
+        collapsedHeight: Platform.isIOS ? 65 : 90,
         appBarForegroundColor: Colors.amber,
         pinned: true,
         appBarShape: const RoundedRectangleBorder(
@@ -89,36 +93,43 @@ class HomeView extends StackedView<HomeViewModel> {
           children: [sliverBody(context, viewModel)],
         ),
         bottomWidgetHeight: McGyver.rsDoubleH(context, 14),
-        bottomWidget: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            bottomIcons(
-                context, 'assets/images/money-recive.svg', 'Deposit Funds', () {
-              viewModel.push(const FundAccountRoute());
-            }),
-            const SizedBox(width: 10),
-            bottomIcons(
-                context, 'assets/images/money-send.svg', 'Withdraw Funds', () {
-              viewModel.push(const WithdrawFundRoute());
-            }),
-            const SizedBox(width: 10),
-            bottomIcons(context, 'assets/images/gift.svg', 'Loyalty Rewards',
-                () {
-              viewModel.push(const LoyaltyRewardsRoute());
-            }),
-            const SizedBox(width: 10),
-            bottomIcons(
-                context, 'assets/images/note-2.svg', 'Transaction History', () {
-              viewModel.push(const TransactionsRoute());
-            }),
-          ],
+        bottomWidget: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 14.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              bottomIcons(
+                  context, 'assets/images/money-recive.svg', 'Deposit Funds',
+                  () {
+                viewModel.push(const FundAccountRoute());
+              }),
+              const SizedBox(width: 10),
+              bottomIcons(
+                  context, 'assets/images/money-send.svg', 'Withdraw Funds',
+                  () {
+                viewModel.push(const WithdrawFundRoute());
+              }),
+              const SizedBox(width: 10),
+              bottomIcons(context, 'assets/images/gift.svg', 'Loyalty Rewards',
+                  () {
+                viewModel.push(const LoyaltyRewardsRoute());
+              }),
+              const SizedBox(width: 10),
+              bottomIcons(
+                  context, 'assets/images/note-2.svg', 'Transaction History',
+                  () {
+                viewModel.push(const TransactionsRoute());
+              }),
+            ],
+          ),
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 6),
+            horizontal: McGyver.rsDoubleW(context, 4),
           ),
           child: ListView(
             children: [
+              verticalSpaceSmall(context),
               Text(
                 'Trade Features',
                 style: CustomThemeData.generateStyle(
@@ -131,36 +142,40 @@ class HomeView extends StackedView<HomeViewModel> {
               ),
               verticalSpaceXSmall(context),
               SizedBox(
-                height: McGyver.rsDoubleH(context, 20),
+                // height: McGyver.rsDoubleH(context, 23),
                 width: McGyver.rsDoubleW(context, 100),
-                child: ListView(
+                child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
-                  children: [
-                    TradeFeatures(
-                      onTap: () {
-                        viewModel.push(const SocialTradingWelcome());
-                      },
-                      image: 'assets/images/trade.svg',
-                      title: 'Social Trading',
-                      subtitle: 'Copy and earn with experienced traders',
-                    ),
-                    TradeFeatures(
-                      onTap: () {
-                        viewModel.push(const ForexNewsRoute());
-                      },
-                      image: 'assets/images/trade.svg',
-                      title: 'Forex News',
-                      subtitle: 'Stay up to date with forex news',
-                    ),
-                    TradeFeatures(
-                      onTap: () {
-                        viewModel.push(ChartRoute(showBackButton: true));
-                      },
-                      image: 'assets/images/trade.svg',
-                      title: 'Chart Analysis',
-                      subtitle: 'Copy and earn with experienced traders',
-                    ),
-                  ],
+                  child: Row(
+                    // shrinkWrap: true,
+                    // scrollDirection: Axis.horizontal,
+                    children: [
+                      TradeFeatures(
+                        onTap: () {
+                          viewModel.push(const SocialTradingWelcome());
+                        },
+                        image: 'assets/images/trade.svg',
+                        title: 'Social Trading',
+                        subtitle: 'Copy and earn with experienced traders',
+                      ),
+                      TradeFeatures(
+                        onTap: () {
+                          viewModel.push(const ForexNewsRoute());
+                        },
+                        image: 'assets/images/trade.svg',
+                        title: 'Forex News',
+                        subtitle: 'Stay up to date with forex news',
+                      ),
+                      TradeFeatures(
+                        onTap: () {
+                          viewModel.push(ChartRoute(showBackButton: true));
+                        },
+                        image: 'assets/images/trade.svg',
+                        title: 'Chart Analysis',
+                        subtitle: 'Copy and earn with experienced traders',
+                      ),
+                    ],
+                  ),
                 ),
               ),
               verticalSpaceSmall(context),
@@ -177,7 +192,7 @@ class HomeView extends StackedView<HomeViewModel> {
               ),
               verticalSpaceXSmall(context),
               SizedBox(
-                height: McGyver.rsDoubleH(context, 16),
+                // height: McGyver.rsDoubleH(context, 16),
                 width: McGyver.rsDoubleW(context, 100),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -236,23 +251,49 @@ class HomeView extends StackedView<HomeViewModel> {
               ),
               verticalSpaceXSmall(context),
               SizedBox(
-                height: McGyver.rsDoubleH(context, 35),
+                // height: McGyver.rsDoubleH(context, 35),
                 width: McGyver.rsDoubleW(context, 100),
-                child: ListView.separated(
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: 3,
-                  itemBuilder: (context, index) {
-                    return GestureDetector(
+                child: Column(
+                  children: [
+                    GestureDetector(
                         onTap: () {
                           viewModel.push(const ForexNewsRoute());
                         },
-                        child: const MarketNews());
-                  },
-                  separatorBuilder: (BuildContext context, int index) {
-                    return verticalSpaceSmall(context);
-                  },
+                        child: const MarketNews()),
+                    verticalSpaceSmall(context),
+                    GestureDetector(
+                        onTap: () {
+                          viewModel.push(const ForexNewsRoute());
+                        },
+                        child: const MarketNews()),
+                    verticalSpaceSmall(context),
+                    GestureDetector(
+                        onTap: () {
+                          viewModel.push(const ForexNewsRoute());
+                        },
+                        child: const MarketNews()),
+                  ],
                 ),
               ),
+              // SizedBox(
+              //   height: McGyver.rsDoubleH(context, 35),
+              //   width: McGyver.rsDoubleW(context, 100),
+              //   child: ListView.separated(
+              //     physics: const NeverScrollableScrollPhysics(),
+              //     itemCount: 3,
+              //     itemBuilder: (context, index) {
+              //       return GestureDetector(
+              //           onTap: () {
+              //             viewModel.push(const ForexNewsRoute());
+              //           },
+              //           child: const MarketNews());
+              //     },
+              //     separatorBuilder: (BuildContext context, int index) {
+              //       return verticalSpaceSmall(context);
+              //     },
+              //   ),
+              // ),
+              verticalSpaceSmall(context),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -273,27 +314,64 @@ class HomeView extends StackedView<HomeViewModel> {
                       child: const Text('View more'))
                 ],
               ),
+              verticalSpaceXSmall(context),
               SizedBox(
-                height: McGyver.rsDoubleH(context, 19),
+                // height: McGyver.rsDoubleH(context, 19),
                 width: McGyver.rsDoubleW(context, 100),
-                child: ListView.separated(
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: 3,
-                  itemBuilder: (context, index) {
-                    return GestureDetector(
+                child: Column(
+                  children: [
+                    GestureDetector(
                       onTap: () {
                         viewModel.push(const PriceSentimentsRoute());
                       },
                       child: const PriceSentiments(
                         pair: 'AUDUSD',
                       ),
-                    );
-                  },
-                  separatorBuilder: (BuildContext context, int index) {
-                    return verticalSpaceSmall(context);
-                  },
+                    ),
+                    verticalSpaceSmall(context),
+                    GestureDetector(
+                      onTap: () {
+                        viewModel.push(const PriceSentimentsRoute());
+                      },
+                      child: const PriceSentiments(
+                        pair: 'AUDUSD',
+                      ),
+                    ),
+                    verticalSpaceSmall(context),
+                    GestureDetector(
+                      onTap: () {
+                        viewModel.push(const PriceSentimentsRoute());
+                      },
+                      child: const PriceSentiments(
+                        pair: 'AUDUSD',
+                      ),
+                    ),
+                  ],
                 ),
               ),
+              // SizedBox(
+              //   height: McGyver.rsDoubleH(context, 19),
+              //   width: McGyver.rsDoubleW(context, 100),
+              //   child: ListView.separated(
+              //     physics: const NeverScrollableScrollPhysics(),
+              //     itemCount: 3,
+              //     itemBuilder: (context, index) {
+              //       return GestureDetector(
+              //         onTap: () {
+              //           viewModel.push(const PriceSentimentsRoute());
+              //         },
+              //         child: const PriceSentiments(
+              //           pair: 'AUDUSD',
+              //         ),
+              //       );
+              //     },
+              //     separatorBuilder: (BuildContext context, int index) {
+              //       return verticalSpaceSmall(context);
+              //     },
+              //   ),
+              // ),
+              verticalSpaceSmall(context),
+              verticalSpaceXSmall(context),
               Text(
                 'Rewards',
                 style: CustomThemeData.generateStyle(
@@ -304,7 +382,7 @@ class HomeView extends StackedView<HomeViewModel> {
                       : const Color(0xff475467),
                 ),
               ),
-              verticalSpaceXSmall(context),
+              verticalSpaceSmall(context),
               GestureDetector(
                 onTap: () {
                   viewModel.push(const LoyaltyRewardsRoute());
@@ -338,25 +416,52 @@ class HomeView extends StackedView<HomeViewModel> {
                 ],
               ),
               SizedBox(
-                height: McGyver.rsDoubleH(context, 55),
-                width: McGyver.rsDoubleW(context, 100),
-                child: ListView.separated(
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: 3,
-                  itemBuilder: (context, index) {
-                    return GestureDetector(
-                        onTap: () {
-                          viewModel.push(MasterTraderOverview(
-                              model: SocialTradingViewModel()));
-                        },
-                        child: const HigherSuccessRates());
-                  },
-                  separatorBuilder: (BuildContext context, int index) {
-                    return verticalSpaceXSmall(context);
-                  },
-                ),
-              ),
-              verticalSpaceXSmall(context),
+                  // height: McGyver.rsDoubleH(context, 55),
+                  width: McGyver.rsDoubleW(context, 100),
+                  child: Column(
+                    children: [
+                      GestureDetector(
+                          onTap: () {
+                            viewModel.push(MasterTraderOverview(
+                                model: SocialTradingViewModel()));
+                          },
+                          child: const HigherSuccessRates()),
+                      verticalSpaceXSmall(context),
+                      GestureDetector(
+                          onTap: () {
+                            viewModel.push(MasterTraderOverview(
+                                model: SocialTradingViewModel()));
+                          },
+                          child: const HigherSuccessRates()),
+                      verticalSpaceXSmall(context),
+                      GestureDetector(
+                          onTap: () {
+                            viewModel.push(MasterTraderOverview(
+                                model: SocialTradingViewModel()));
+                          },
+                          child: const HigherSuccessRates()),
+                    ],
+                  )),
+              // SizedBox(
+              //   height: McGyver.rsDoubleH(context, 55),
+              //   width: McGyver.rsDoubleW(context, 100),
+              //   child: ListView.separated(
+              //     physics: const NeverScrollableScrollPhysics(),
+              //     itemCount: 3,
+              //     itemBuilder: (context, index) {
+              //       return GestureDetector(
+              //           onTap: () {
+              //             viewModel.push(MasterTraderOverview(
+              //                 model: SocialTradingViewModel()));
+              //           },
+              //           child: const HigherSuccessRates());
+              //     },
+              //     separatorBuilder: (BuildContext context, int index) {
+              //       return verticalSpaceXSmall(context);
+              //     },
+              //   ),
+              // ),
+              verticalSpaceSmall(context),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -383,6 +488,7 @@ class HomeView extends StackedView<HomeViewModel> {
               verticalSpaceXSmall(context),
               verticalSpaceXSmall(context),
               Psummary2(viewModel: ProviderViewModel()),
+              verticalSpaceSmall(context),
             ],
           ),
         ),
@@ -549,7 +655,9 @@ class HomeView extends StackedView<HomeViewModel> {
                     model.setShowBalance();
                   },
                   icon: Icon(
-                    Icons.remove_red_eye_outlined,
+                    model.showBalance == true
+                        ? Icons.remove_red_eye_outlined
+                        : Icons.visibility_off_outlined,
                     color: isDarkMode
                         ? const Color(0xffD0D5DD)
                         : Colors.white.withOpacity(0.8),

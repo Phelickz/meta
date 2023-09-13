@@ -39,29 +39,33 @@ class SelectDepositMethod extends StatelessWidget {
           CustomButtons.generalButton(
             context: context,
             onTap: () {
-              if (model.depositMethod == DepositMethod.onlineBank) {
-                model.setFundAccountPageEnum = FundAccountPageEnum.onlineBank;
-              }
-              if (model.depositMethod == DepositMethod.binancePay) {
-                model.setFundAccountPageEnum = FundAccountPageEnum.binancePay;
-              }
-              if (model.depositMethod == DepositMethod.bitcoin) {
-                model.setFundAccountPageEnum = FundAccountPageEnum.bitcoin;
-              }
-              if (model.depositMethod == DepositMethod.neteller) {
-                model.setFundAccountPageEnum = FundAccountPageEnum.neteller;
-              }
-              if (model.depositMethod == DepositMethod.perfectMoney) {
-                model.setFundAccountPageEnum = FundAccountPageEnum.perfectMoney;
-              }
-              if (model.depositMethod == DepositMethod.skrill) {
-                model.setFundAccountPageEnum = FundAccountPageEnum.skrill;
-              }
-              if (model.depositMethod == DepositMethod.sticPay) {
-                model.setFundAccountPageEnum = FundAccountPageEnum.sticPay;
-              }
-              if (model.depositMethod == DepositMethod.tether) {
-                model.setFundAccountPageEnum = FundAccountPageEnum.tether;
+              // if (model.depositMethod == DepositMethod.onlineBank) {
+              //   model.setFundAccountPageEnum = FundAccountPageEnum.onlineBank;
+              // }
+              // if (model.depositMethod == DepositMethod.binancePay) {
+              //   model.setFundAccountPageEnum = FundAccountPageEnum.binancePay;
+              // }
+              // if (model.depositMethod == DepositMethod.bitcoin) {
+              //   model.setFundAccountPageEnum = FundAccountPageEnum.bitcoin;
+              // }
+              // if (model.depositMethod == DepositMethod.neteller) {
+              //   model.setFundAccountPageEnum = FundAccountPageEnum.neteller;
+              // }
+              // if (model.depositMethod == DepositMethod.perfectMoney) {
+              //   model.setFundAccountPageEnum = FundAccountPageEnum.perfectMoney;
+              // }
+              // if (model.depositMethod == DepositMethod.skrill) {
+              //   model.setFundAccountPageEnum = FundAccountPageEnum.skrill;
+              // }
+              // if (model.depositMethod == DepositMethod.sticPay) {
+              //   model.setFundAccountPageEnum = FundAccountPageEnum.sticPay;
+              // }
+              // if (model.depositMethod == DepositMethod.tether) {
+              //   model.setFundAccountPageEnum = FundAccountPageEnum.tether;
+              // }
+
+              if (model.depositMethod == DepositMethod.blockBee) {
+                model.setFundAccountPageEnum = FundAccountPageEnum.blockBee;
               }
             },
             text: 'Next',
@@ -93,7 +97,7 @@ class SelectDepositMethod extends StatelessWidget {
         ),
       ),
       child: SizedBox(
-        height: McGyver.rsDoubleH(context, 18),
+        // height: McGyver.rsDoubleH(context, 18),
         child: Padding(
           padding: const EdgeInsets.all(14.0),
           child: Row(
@@ -228,11 +232,13 @@ class SelectDepositMethod extends StatelessWidget {
               horizontalSpaceXSmall(context),
               Column(
                 children: [
-                  const Spacer(),
+                  // const Spacer(),
+                  verticalSpaceSmall(context),
+                  verticalSpaceSmall(context),
                   Align(
                     alignment: Alignment.center,
                     child: Transform.scale(
-                      scale: McGyver.rsDoubleH(context, 0.3),
+                      scale: McGyver.rsDoubleH(context, 0.24),
                       child: CustomRadioWidget(
                         value: value,
                         groupValue: groupValue,
@@ -240,7 +246,7 @@ class SelectDepositMethod extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const Spacer(),
+                  // const Spacer(),
                 ],
               )
             ],
