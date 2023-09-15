@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/responsiveness/res.dart';
+import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/app/utils/theme.dart';
 
 class FAQContainer extends StatelessWidget {
   final String faqQuestion;
@@ -10,6 +13,7 @@ class FAQContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
     return SizedBox(
       width: double.infinity,
       child: Column(
@@ -18,14 +22,25 @@ class FAQContainer extends StatelessWidget {
         children: [
           Text(
             faqQuestion,
-            style: Theme.of(context).textTheme.titleMedium,
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  fontSize: McGyver.textSize(context, 2),
+                  fontWeight: FontWeight.bold,
+                  color: isDarkMode
+                      ? ColorManager.darkText
+                      : ColorManager.lightText,
+                ),
           ),
           SizedBox(
             height: 2.pHeight(context),
           ),
           Text(
             answer,
-            style: Theme.of(context).textTheme.bodySmall,
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                  fontSize: McGyver.textSize(context, 1.6),
+                  color: isDarkMode
+                      ? ColorManager.darkText
+                      : ColorManager.lightText,
+                ),
           ),
           SizedBox(
             height: 16.pHeight(context),

@@ -65,8 +65,7 @@ class DeviceTile extends StatelessWidget {
             ),
           ),
           horizontalSpaceSmall(context),
-          SizedBox(
-            width: McGyver.rsDoubleW(context, 58),
+          Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

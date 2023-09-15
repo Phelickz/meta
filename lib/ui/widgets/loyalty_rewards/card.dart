@@ -9,7 +9,6 @@ class LoyaltyRewardCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var isDarkMode = CustomThemeData.isDarkMode(context);
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: McGyver.rsDoubleW(context, 5),
@@ -91,7 +90,7 @@ class LoyaltyRewardCard extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(0.0),
                         child: SfSlider(
-                          overlayShape: SfOverlayShape(),
+                          overlayShape: const SfOverlayShape(),
                           min: 0.0,
                           max: 100.0,
                           value: 100,

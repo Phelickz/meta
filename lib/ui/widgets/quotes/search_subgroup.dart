@@ -49,43 +49,52 @@ class SearchSubgroupPage extends StatelessWidget {
                   itemCount: model.symbolSubgroup.length,
                   itemBuilder: (context, index) {
                     final list = model.symbolSubgroup[index];
-                    return CheckboxListTile(
-                      contentPadding: EdgeInsets.zero,
-                      controlAffinity: ListTileControlAffinity
-                          .leading, // Checkbox on the left
-                      title: Text(
-                        list["title"],
-                        style: CustomThemeData.generateColoredStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            context: context),
+                    return Theme(
+                      data: ThemeData(
+                        unselectedWidgetColor:
+                            isDarkMode ? Colors.white54 : Colors.black54,
                       ),
-                      // subtitle: Text(
-                      //   list["subtitle"],
-                      //   style: CustomThemeData.generateColoredStyle(
-                      //       fontSize: 10,
-                      //       fontWeight: FontWeight.bold,
-                      //       context: context),
-                      // ),
-                      // value: model.selectedOptions.contains(list["title"]),
-                      // onChanged: (value) => model.togglePair(list["title"]),
-                      // secondary:
-                      //     Icon(Icons.arrow_forward_ios), // Trailing icon
+                      child: CheckboxListTile(
+                        contentPadding: EdgeInsets.zero,
+                        controlAffinity: ListTileControlAffinity
+                            .leading, // Checkbox on the left
+                        title: Text(
+                          list["title"],
+                          style: CustomThemeData.generateColoredStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              context: context),
+                        ),
+                        // subtitle: Text(
+                        //   list["subtitle"],
+                        //   style: CustomThemeData.generateColoredStyle(
+                        //       fontSize: 10,
+                        //       fontWeight: FontWeight.bold,
+                        //       context: context),
+                        // ),
+                        // value: model.selectedOptions.contains(list["title"]),
+                        // onChanged: (value) => model.togglePair(list["title"]),
+                        // secondary:
+                        //     Icon(Icons.arrow_forward_ios), // Trailing icon
 
-                      subtitle: Text(
-                        list["subtitle"],
-                        style: CustomThemeData.generateColoredStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.bold,
-                            context: context),
-                      ),
-                      value: model.selectedOptions.contains(list["title"]),
-                      onChanged: (value) => model.togglePair(list["title"]),
-                      secondary: IconButton(
-                        icon: const Icon(Icons.arrow_forward_ios),
-                        onPressed: () {
-                          model.setQuotesPageEnum = QuotesPageEnum.details;
-                        },
+                        subtitle: Text(
+                          list["subtitle"],
+                          style: CustomThemeData.generateColoredStyle(
+                              fontSize: 10,
+                              fontWeight: FontWeight.bold,
+                              context: context),
+                        ),
+                        value: model.selectedOptions.contains(list["title"]),
+                        onChanged: (value) => model.togglePair(list["title"]),
+                        secondary: IconButton(
+                          icon: Icon(
+                            Icons.arrow_forward_ios,
+                            color: isDarkMode ? Colors.white54 : Colors.black54,
+                          ),
+                          onPressed: () {
+                            model.setQuotesPageEnum = QuotesPageEnum.details;
+                          },
+                        ),
                       ),
                     );
                   }),

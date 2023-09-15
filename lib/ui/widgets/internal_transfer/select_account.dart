@@ -44,7 +44,7 @@ class SelectAccountInternalTransfer extends StatelessWidget {
             },
             text: 'Next',
           ),
-          verticalSpaceMedium(context),
+          verticalSpaceSmall(context),
         ],
       ),
     );

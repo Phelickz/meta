@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -43,7 +45,7 @@ class OnboardingView extends StackedView<OnboardingViewModel> {
             Column(
               children: [
                 Expanded(
-                  flex: 10,
+                  flex: Platform.isAndroid ? 14 : 10,
                   child: ValueListenableBuilder<int>(
                     valueListenable: viewModel.counter,
                     builder: (context, currentPage, child) {
@@ -108,7 +110,9 @@ class OnboardingView extends StackedView<OnboardingViewModel> {
                       }
                     },
                     text: 'Next'),
-                verticalSpaceMedium(context)
+                Platform.isIOS
+                    ? verticalSpaceMedium(context)
+                    : verticalSpaceSmall(context)
               ],
             )
           ],

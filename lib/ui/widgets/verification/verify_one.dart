@@ -22,7 +22,7 @@ class VerifyOnePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            verticalSpaceMedium(context),
+            verticalSpaceSmall(context),
             SvgPicture.asset(
               'assets/images/verify.svg',
               height: McGyver.rsDoubleH(context, 50),
@@ -63,7 +63,8 @@ class VerifyOnePage extends StatelessWidget {
                 model.push(const BottomNavBarRoute());
               },
               child: const Text('Skip'),
-            )
+            ),
+            verticalSpaceMedium(context),
           ],
         ),
       ),

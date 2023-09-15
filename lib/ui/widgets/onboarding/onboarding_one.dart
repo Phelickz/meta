@@ -1,5 +1,7 @@
 // ignore_for_file: must_be_immutable
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -19,7 +21,9 @@ class OnboardingOne extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            verticalSpaceSmall(context),
+            if (Platform.isIOS) ...[
+              verticalSpaceSmall(context),
+            ],
             SvgPicture.asset(
               'assets/images/onboarding1.svg',
               height: McGyver.rsDoubleH(context, 50),

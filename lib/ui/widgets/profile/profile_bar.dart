@@ -1,5 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
@@ -171,12 +173,13 @@ PreferredSize profileAppBar(
   var isDarkMode = CustomThemeData.isDarkMode(context);
   return PreferredSize(
     preferredSize: Size.fromHeight(
-      McGyver.rsDoubleH(context, 8),
+      McGyver.rsDoubleH(context, Platform.isIOS ? 8 : 10),
     ),
     child: AppBar(
       backgroundColor:
           isDarkMode ? const Color(0xff052844) : Theme.of(context).primaryColor,
       automaticallyImplyLeading: false,
+      toolbarHeight: Platform.isIOS ? kToolbarHeight : kToolbarHeight + 20,
       elevation: 0,
       actions: [
         SizedBox(
@@ -194,108 +197,114 @@ PreferredSize profileAppBar(
         ),
         horizontalSpaceSmall(context),
       ],
-      title: Row(
-        children: [
-          const CircleAvatar(
-            radius: 27,
-            backgroundImage: AssetImage(
-              'assets/images/avi.png',
+      title: Padding(
+        padding: const EdgeInsets.only(top: 8.0),
+        child: Row(
+          children: [
+            const CircleAvatar(
+              radius: 27,
+              backgroundImage: AssetImage(
+                'assets/images/avi.png',
+              ),
+              backgroundColor: Colors.white,
             ),
-            backgroundColor: Colors.white,
-          ),
-          horizontalSpaceXSmall(context),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Welcome, ${model.userName}",
-                style: CustomThemeData.generateStyle(
-                  fontSize: 18,
-                  color: isDarkMode ? Colors.white : Colors.white,
-                  fontWeight: FontWeight.w700,
+            horizontalSpaceXSmall(context),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Welcome, ${model.userName}",
+                  style: CustomThemeData.generateStyle(
+                    fontSize: 18,
+                    color: isDarkMode ? Colors.white : Colors.white,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
-              ),
-              const SizedBox(
-                height: 4,
-              ),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        color:
-                            isDarkMode ? Colors.black : const Color(0xff101828),
-                        borderRadius: BorderRadius.circular(15)),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 7.0, vertical: 3),
-                      child: Row(
-                        children: [
-                          CircleAvatar(
-                            radius: 10,
-                            child: SvgPicture.asset('assets/images/silver.svg'),
-                          ),
-                          const SizedBox(
-                            width: 5,
-                          ),
-                          Text(
-                            model.rank,
-                            style: CustomThemeData.generateStyle(
-                                fontSize: 9,
-                                fontWeight: FontWeight.w500,
-                                color: isDarkMode
-                                    ? Colors.white
-                                    : const Color(0xffD0D5DD)),
-                          )
-                        ],
+                const SizedBox(
+                  height: 4,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                          color: isDarkMode
+                              ? Colors.black
+                              : const Color(0xff101828),
+                          borderRadius: BorderRadius.circular(15)),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 7.0, vertical: 3),
+                        child: Row(
+                          children: [
+                            CircleAvatar(
+                              radius: 10,
+                              child:
+                                  SvgPicture.asset('assets/images/silver.svg'),
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              model.rank,
+                              style: CustomThemeData.generateStyle(
+                                  fontSize: 9,
+                                  fontWeight: FontWeight.w500,
+                                  color: isDarkMode
+                                      ? Colors.white
+                                      : const Color(0xffD0D5DD)),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  horizontalSpaceXSmall(context),
-                  isDarkMode
-                      ? Text(
-                          isVerified ? "Verified " : "Unverified",
-                          style: CustomThemeData.generateStyle(
-                            fontSize: 14,
-                            color: Colors.red[400]!,
-                          ),
-                        )
-                      : Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 5.0, horizontal: 7),
-                            child: Row(
-                              children: [
-                                Text(
-                                  isVerified ? "Verified" : "UNVERIFIED",
-                                  style: CustomThemeData.generateStyle(
-                                    fontSize: 9,
-                                    color:
-                                        isVerified ? Colors.green : Colors.red,
+                    horizontalSpaceXSmall(context),
+                    isDarkMode
+                        ? Text(
+                            isVerified ? "Verified " : "Unverified",
+                            style: CustomThemeData.generateStyle(
+                              fontSize: 14,
+                              color: Colors.red[400]!,
+                            ),
+                          )
+                        : Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 5.0, horizontal: 7),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    isVerified ? "Verified" : "UNVERIFIED",
+                                    style: CustomThemeData.generateStyle(
+                                      fontSize: 9,
+                                      color: isVerified
+                                          ? Colors.green
+                                          : Colors.red,
+                                    ),
                                   ),
-                                ),
-                                const SizedBox(
-                                  width: 5,
-                                ),
-                                isVerified
-                                    ? const SizedBox()
-                                    : Icon(
-                                        Icons.info_outline,
-                                        color: Colors.red,
-                                        size: 12.pWidth(context),
-                                      )
-                              ],
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  isVerified
+                                      ? const SizedBox()
+                                      : Icon(
+                                          Icons.info_outline,
+                                          color: Colors.red,
+                                          size: 12.pWidth(context),
+                                        )
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                ],
-              )
-            ],
-          ),
-        ],
+                  ],
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     ),
   );

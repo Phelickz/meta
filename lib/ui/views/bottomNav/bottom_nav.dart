@@ -48,12 +48,12 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
           backgroundColor:
               isDarkMode ? const Color(0xff052844) : const Color(0xffD3ECFD),
           unselectedLabelStyle: CustomThemeData.generateStyle(
-            fontSize: 15,
+            fontSize: 13,
             // color: isDarkMode ? Colors.white : Colors.black,
             // color: Colors.red,
           ),
           selectedLabelStyle: CustomThemeData.generateStyle(
-            fontSize: 15,
+            fontSize: 13,
             color: isDarkMode ? Colors.white : Theme.of(context).primaryColor,
           ),
           currentIndex: _currentIndex,
@@ -71,11 +71,13 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
                 color: _currentIndex != 0
                     ? const Color(0xff667085)
                     : Theme.of(context).primaryColor,
+                height: 20,
               ),
               label: 'Home',
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
+                height: 20,
                 _currentIndex == 1
                     ? 'assets/images/quotes_selected.svg'
                     : 'assets/images/chart-success.svg',
@@ -87,6 +89,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
+                height: 20,
                 _currentIndex == 2
                     ? 'assets/images/chart_selected.svg'
                     : 'assets/images/chart.svg',
@@ -98,6 +101,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
+                height: 20,
                 _currentIndex == 3
                     ? 'assets/images/trade_selected.svg'
                     : 'assets/images/status-up.svg',
@@ -109,6 +113,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
+                height: 20,
                 _currentIndex == 4
                     ? 'assets/images/user_selected.svg'
                     : 'assets/images/user.svg',

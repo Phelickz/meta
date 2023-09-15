@@ -146,15 +146,21 @@ class RealPage extends StatelessWidget {
             verticalSpaceSmall(context),
             Row(
               children: [
-                Checkbox(
-                  value: model.termsAndConditions,
-                  onChanged: (val) {
-                    model.setTermsAndConditions = val ?? false;
-                  },
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(4),
+                Theme(
+                  data: ThemeData(
+                    unselectedWidgetColor:
+                        isDarkMode ? Colors.white38 : Colors.black45,
                   ),
-                  activeColor: Theme.of(context).primaryColor,
+                  child: Checkbox(
+                    value: model.termsAndConditions,
+                    onChanged: (val) {
+                      model.setTermsAndConditions = val ?? false;
+                    },
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    activeColor: Theme.of(context).primaryColor,
+                  ),
                 ),
                 // SizedBox(width: 1),
                 Expanded(

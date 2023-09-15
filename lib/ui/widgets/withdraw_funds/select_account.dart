@@ -44,7 +44,7 @@ class SelectAccountWithdraw extends StatelessWidget {
             },
             text: 'Next',
           ),
-          verticalSpaceMedium(context),
+          verticalSpaceSmall(context),
         ],
       ),
     );

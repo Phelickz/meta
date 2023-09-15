@@ -181,7 +181,7 @@ Widget paymentInformationCard(
                     child: SvgPicture.asset(
                       'assets/icons/edit.svg',
                       // ignore: deprecated_member_use
-                      color: Colors.black54,
+                      color: isDarkMode ? Colors.white54 : Colors.black54,
                     ),
                   ),
                 ),

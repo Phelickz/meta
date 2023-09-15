@@ -48,6 +48,13 @@ AppBar maanageAccountAppBar(
           onTap: () {
             showModalBottomSheet(
                 context: context,
+                backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(12),
+                    topRight: Radius.circular(12),
+                  ),
+                ),
                 builder: (context) {
                   return const ManageAccountBottomSheet2(
                     accountDetail: "44291097-Deriv-Real",
@@ -65,6 +72,13 @@ AppBar maanageAccountAppBar(
           onTap: () {
             showModalBottomSheet(
                 context: context,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(12),
+                    topRight: Radius.circular(12),
+                  ),
+                ),
+                backgroundColor: Theme.of(context).scaffoldBackgroundColor,
                 builder: (context) {
                   return const ManageAccountBottomSheet1(
                     accountDetail: "44291097-Deriv-Real",

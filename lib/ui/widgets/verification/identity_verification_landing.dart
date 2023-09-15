@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -23,7 +25,9 @@ class IdentityVerificationLandingPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           // mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            verticalSpaceMedium(context),
+            if (Platform.isIOS) ...[
+              verticalSpaceSmall(context),
+            ],
             SvgPicture.asset(
               'assets/images/verify4.svg',
               height: McGyver.rsDoubleH(context, 50),

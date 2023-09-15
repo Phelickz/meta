@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/ui/widgets/social_trading/components/filter_modal.dart';
 
 import '../../../../app/utils/asset_manager.dart';
 import '../../../../app/utils/theme.dart';
@@ -48,7 +49,9 @@ AppBar transactionsAppBar(
           ? Padding(
               padding: EdgeInsets.only(right: 24.pWidth(context)),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  showFilterModal(context);
+                },
                 child: SvgPicture.asset(
                   AssetManager.filter,
                   color: const Color(0xff98A2B3),
@@ -58,4 +61,24 @@ AppBar transactionsAppBar(
           : const SizedBox()
     ],
   );
+}
+
+void showFilterModal(BuildContext context) {
+  var isDarkMode = CustomThemeData.isDarkMode(context);
+  showModalBottomSheet(
+      backgroundColor:
+          isDarkMode ? const Color(0xFF0C2031) : const Color(0xFFFAFDFF),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(McGyver.rsDoubleH(context, 2)),
+          topRight: Radius.circular(McGyver.rsDoubleH(context, 2)),
+        ),
+      ),
+      context: context,
+      isDismissible: true,
+      enableDrag: true,
+      isScrollControlled: true,
+      builder: (context) {
+        return const FilterTransactionModal();
+      });
 }

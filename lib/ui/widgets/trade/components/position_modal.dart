@@ -15,48 +15,52 @@ class PositionModal extends StatelessWidget {
       height: McGyver.rsDoubleH(context, 40),
       padding: EdgeInsets.symmetric(
         horizontal: McGyver.rsDoubleH(context, 2),
-        vertical: McGyver.rsDoubleH(context, 4),
+        vertical: McGyver.rsDoubleH(context, 2),
       ),
-      child: Column(
-        children: [
-          Text(
-            "Bulk Operations",
-            style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 1.9),
-              fontWeight: FontWeight.bold,
-              color: const Color(0xFF98A2B3),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Text(
+              "Bulk Operations",
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 1.9),
+                fontWeight: FontWeight.bold,
+                color: const Color(0xFF98A2B3),
+              ),
             ),
-          ),
-          verticalSpaceSmall(context),
-          _buttonText(
-            context: context,
-            label: "Close all positions",
-            onTap: () {},
-          ),
-          _buttonText(
-            context: context,
-            label: "Close profitable positions",
-            onTap: () {},
-          ),
-          _buttonText(
-            context: context,
-            label: "Close losing positions",
-            onTap: () {},
-          ),
-          verticalSpaceSmall(context),
-          verticalSpaceSmall(context),
-          CustomButtons.generalButton(
-            context: context,
-            onTap: () {
-              Navigator.pop(context);
-            },
-            text: "Cancel",
-            color:
-                isDarkMode ? const Color(0xFF052844) : const Color(0xFFD3ECFD),
-            textColor:
-                isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF667085),
-          ),
-        ],
+            verticalSpaceSmall(context),
+            _buttonText(
+              context: context,
+              label: "Close all positions",
+              onTap: () {},
+            ),
+            _buttonText(
+              context: context,
+              label: "Close profitable positions",
+              onTap: () {},
+            ),
+            _buttonText(
+              context: context,
+              label: "Close losing positions",
+              onTap: () {},
+            ),
+            verticalSpaceSmall(context),
+            verticalSpaceSmall(context),
+            CustomButtons.generalButton(
+              context: context,
+              onTap: () {
+                Navigator.pop(context);
+              },
+              text: "Cancel",
+              color: isDarkMode
+                  ? const Color(0xFF052844)
+                  : const Color(0xFFD3ECFD),
+              textColor: isDarkMode
+                  ? const Color(0xFFD0D5DD)
+                  : const Color(0xFF667085),
+            ),
+          ],
+        ),
       ),
     );
   }

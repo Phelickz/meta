@@ -115,7 +115,7 @@ class SelectDepositMethod extends StatelessWidget {
                       color: Theme.of(context).secondaryHeaderColor,
                     ),
                     image: const DecorationImage(
-                      image: AssetImage('assets/images/sticpay.png'),
+                      image: AssetImage('assets/images/blocbee.png'),
                       fit: BoxFit.cover,
                     ),
                   ),

@@ -153,8 +153,8 @@ class CustomRadioButton extends StatelessWidget {
               SvgPicture.asset(AssetManager.downTrendChart),
               SvgPicture.asset(AssetManager.downTrendChart),
               SvgPicture.asset(AssetManager.downTrendChart),
-              SvgPicture.asset(AssetManager.downTrendChart),
-              SvgPicture.asset(AssetManager.downTrendChart),
+              // SvgPicture.asset(AssetManager.downTrendChart),
+              // SvgPicture.asset(AssetManager.downTrendChart),
               const Spacer(),
               Transform.scale(
                 scale: 2.0,

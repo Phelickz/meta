@@ -75,9 +75,10 @@ class ManageAccountBottomSheet2 extends StatelessWidget {
       height: 300.pHeight(context),
       width: double.infinity,
       decoration: BoxDecoration(
-          borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(12), topRight: Radius.circular(12)),
-          color: Theme.of(context).scaffoldBackgroundColor),
+        borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(12), topRight: Radius.circular(12)),
+        color: Theme.of(context).scaffoldBackgroundColor,
+      ),
       padding: EdgeInsets.symmetric(
           horizontal: 24.pWidth(context), vertical: 22.pHeight(context)),
       child: Column(

@@ -9,12 +9,9 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
-import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/home/price_sentiments.dart';
 import 'package:meta_trader/ui/widgets/home/trading_tools.dart';
-import 'package:meta_trader/ui/widgets/provider/components/psummary.dart';
-import 'package:meta_trader/ui/widgets/provider/components/psummary2.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:meta_trader/ui/widgets/sliverappbar/fade_scroll_app_bar.dart';
 import 'package:stacked/stacked.dart';
@@ -66,7 +63,7 @@ class HomeView extends StackedView<HomeViewModel> {
             },
             icon: const Icon(
               Icons.notifications_outlined,
-              size: 30,
+              size: 23,
             ),
             color: isDarkMode ? Colors.white54 : Colors.white,
           )

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/ui/views/help_and_support/help_and_support_view_model.dart';
 import 'package:meta_trader/ui/widgets/help_and_support/components/faq_container.dart';
@@ -18,6 +19,7 @@ class FAQPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          verticalSpaceSmall(context),
           Text(
             "Our FAQs,",
             style: Theme.of(context).textTheme.bodyLarge,
@@ -25,12 +27,13 @@ class FAQPage extends StatelessWidget {
           SizedBox(height: 16.pHeight(context)),
           Expanded(
             child: ListView.builder(
-                itemCount: model.faqs.length,
-                itemBuilder: (context, index) {
-                  return FAQContainer(
-                      faqQuestion: model.faqs[index]["question"],
-                      answer: model.faqs[index]["answer"]);
-                }),
+              itemCount: model.faqs.length,
+              itemBuilder: (context, index) {
+                return FAQContainer(
+                    faqQuestion: model.faqs[index]["question"],
+                    answer: model.faqs[index]["answer"]);
+              },
+            ),
           )
         ],
       ),

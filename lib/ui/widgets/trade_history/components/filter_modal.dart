@@ -19,68 +19,72 @@ class FilterModal extends StatelessWidget {
         horizontal: McGyver.rsDoubleH(context, 2),
         vertical: McGyver.rsDoubleH(context, 4),
       ),
-      child: Column(
-        children: [
-          Text(
-            "Filter by",
-            style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 1.9),
-              fontWeight: FontWeight.bold,
-              color: const Color(0xFF98A2B3),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Text(
+              "Filter by",
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 1.9),
+                fontWeight: FontWeight.bold,
+                color: const Color(0xFF98A2B3),
+              ),
             ),
-          ),
-          verticalSpaceSmall(context),
-          _twoText(
-            context: context,
-            title: "Today",
-            subtitle: "16.01.2023",
-            onTap: () {},
-          ),
-          verticalSpaceSmall(context),
-          _twoText(
-            context: context,
-            title: "Last week",
-            subtitle: "7.01.2023 - 14.01.2023",
-            onTap: () {},
-          ),
-          verticalSpaceSmall(context),
-          _twoText(
-            context: context,
-            title: "Last Month",
-            subtitle: "1.12.2022 - 31.01.2022",
-            onTap: () {},
-          ),
-          verticalSpaceSmall(context),
-          _twoText(
-            context: context,
-            title: "Last 3 Month",
-            subtitle: "1.11.2022 - 16.01.2023  ",
-            onTap: () {},
-          ),
-          verticalSpaceSmall(context),
-          _twoText(
-            context: context,
-            title: "Custom period",
-            subtitle: "1.11.2022 - 16.01.2023",
-            onTap: () {
-              Navigator.pop(context);
-              showCustomPeriodModal(context);
-            },
-          ),
-          verticalSpaceSmall(context),
-          verticalSpaceSmall(context),
-          CustomButtons.generalButton(
-            context: context,
-            onTap: () {
-              Navigator.pop(context);
-            },
-            text: "Cancel",
-            color:
-                isDarkMode ? const Color(0xFF052844) : const Color(0xFFD3ECFD),
-            textColor:
-                isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF667085),
-          ),
-        ],
+            verticalSpaceSmall(context),
+            _twoText(
+              context: context,
+              title: "Today",
+              subtitle: "16.01.2023",
+              onTap: () {},
+            ),
+            verticalSpaceSmall(context),
+            _twoText(
+              context: context,
+              title: "Last week",
+              subtitle: "7.01.2023 - 14.01.2023",
+              onTap: () {},
+            ),
+            verticalSpaceSmall(context),
+            _twoText(
+              context: context,
+              title: "Last Month",
+              subtitle: "1.12.2022 - 31.01.2022",
+              onTap: () {},
+            ),
+            verticalSpaceSmall(context),
+            _twoText(
+              context: context,
+              title: "Last 3 Month",
+              subtitle: "1.11.2022 - 16.01.2023  ",
+              onTap: () {},
+            ),
+            verticalSpaceSmall(context),
+            _twoText(
+              context: context,
+              title: "Custom period",
+              subtitle: "1.11.2022 - 16.01.2023",
+              onTap: () {
+                Navigator.pop(context);
+                showCustomPeriodModal(context);
+              },
+            ),
+            verticalSpaceSmall(context),
+            verticalSpaceSmall(context),
+            CustomButtons.generalButton(
+              context: context,
+              onTap: () {
+                Navigator.pop(context);
+              },
+              text: "Cancel",
+              color: isDarkMode
+                  ? const Color(0xFF052844)
+                  : const Color(0xFFD3ECFD),
+              textColor: isDarkMode
+                  ? const Color(0xFFD0D5DD)
+                  : const Color(0xFF667085),
+            ),
+          ],
+        ),
       ),
     );
   }

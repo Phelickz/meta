@@ -13,49 +13,51 @@ class FilterTransactionModal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: McGyver.rsDoubleH(context, 60),
+      height: McGyver.rsDoubleH(context, 64),
       padding: EdgeInsets.symmetric(
         horizontal: McGyver.rsDoubleH(context, 2),
         vertical: McGyver.rsDoubleH(context, 4),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            "Filter by",
-            style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 1.5),
-              fontWeight: FontWeight.w500,
-              color: const Color(0xFF98A2B3),
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Filter by",
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 1.5),
+                fontWeight: FontWeight.w500,
+                color: const Color(0xFF98A2B3),
+              ),
             ),
-          ),
-          verticalSpaceSmall(context),
-          LabelDatePicker(
-            label: "Start Date",
-            context: context,
-            onDateSelected: (date) {},
-          ),
-          LabelDatePicker(
-            label: "End Date",
-            context: context,
-            selectedDate: null,
-            lastDate: null,
-            onDateSelected: (date) {},
-          ),
-          const LabelSearchField(
-            label: "Search Transaction",
-            controller: null,
-            hintText: "Enter your search term ",
-          ),
-          verticalSpaceSmall(context),
-          CustomButtons.generalButton(
-            context: context,
-            onTap: () {
-              Navigator.pop(context);
-            },
-            text: "Confirm",
-          ),
-        ],
+            verticalSpaceSmall(context),
+            LabelDatePicker(
+              label: "Start Date",
+              context: context,
+              onDateSelected: (date) {},
+            ),
+            LabelDatePicker(
+              label: "End Date",
+              context: context,
+              selectedDate: null,
+              lastDate: null,
+              onDateSelected: (date) {},
+            ),
+            const LabelSearchField(
+              label: "Search Transaction",
+              controller: null,
+              hintText: "Enter your search term ",
+            ),
+            verticalSpaceSmall(context),
+            CustomButtons.generalButton(
+              context: context,
+              onTap: () {
+                Navigator.pop(context);
+              },
+              text: "Confirm",
+            ),
+          ],
+        ),
       ),
     );
   }

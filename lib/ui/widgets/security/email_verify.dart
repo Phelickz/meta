@@ -31,7 +31,7 @@ class EmailVerificationPage extends StatelessWidget {
               "Passkey Added Successfully",
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 3),
+                fontSize: McGyver.textSize(context, 2.6),
                 fontWeight: FontWeight.w700,
                 color: isDarkMode
                     ? const Color(0xFFF2F4F7)
@@ -49,7 +49,7 @@ class EmailVerificationPage extends StatelessWidget {
               text: TextSpan(
                   text: "We sent a verification email to ",
                   style: CustomThemeData.generateStyle(
-                    fontSize: McGyver.textSize(context, 1.8),
+                    fontSize: McGyver.textSize(context, 1.6),
                     fontWeight: FontWeight.w500,
                     color: isDarkMode
                         ? const Color(0xff98A2B3)
@@ -59,7 +59,7 @@ class EmailVerificationPage extends StatelessWidget {
                     TextSpan(
                       text: "Susan@gmail.com",
                       style: CustomThemeData.generateStyle(
-                        fontSize: McGyver.textSize(context, 2),
+                        fontSize: McGyver.textSize(context, 1.6),
                         fontWeight: FontWeight.w500,
                         color: isDarkMode
                             ? const Color(0xFF47B0F5)
