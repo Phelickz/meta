@@ -3,13 +3,13 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
-import 'package:meta_trader/ui/views/withdraw_funds/withdraw_funds_view_model.dart';
+import 'package:meta_trader/ui/views/internal_transfer/internal_transfer_view_model.dart';
 import 'package:meta_trader/ui/widgets/auth/radio_button.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
-class SelectAccountWithdraw extends StatelessWidget {
-  const SelectAccountWithdraw({super.key, required this.model});
-  final WithdrawFundViewModel model;
+class SelectAccountInternalTransfer extends StatelessWidget {
+  const SelectAccountInternalTransfer({super.key, required this.model});
+  final InternalTransferViewModel model;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class SelectAccountWithdraw extends StatelessWidget {
       ),
       child: Column(
         children: [
-          verticalSpaceSmall(context),
+          verticalSpaceXSmall(context),
           Expanded(
             child: ListView.separated(
               itemCount: 4,
@@ -39,8 +39,8 @@ class SelectAccountWithdraw extends StatelessWidget {
           CustomButtons.generalButton(
             context: context,
             onTap: () {
-              model.setWithdrawFundViewEnum =
-                  WithdrawFundPageEnum.paymentMethods;
+              model.setInternalAccountPageEnum =
+                  InternalAccountPageEnum.selectDestination;
             },
             text: 'Next',
           ),

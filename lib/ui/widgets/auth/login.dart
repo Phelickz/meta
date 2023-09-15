@@ -72,15 +72,21 @@ class LoginPage extends StatelessWidget {
             verticalSpaceSmall(context),
             Row(
               children: [
-                Checkbox(
-                  value: model.savePassword,
-                  onChanged: (val) {
-                    model.setSavePassword = val ?? false;
-                  },
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(4),
+                Theme(
+                  data: ThemeData(
+                    unselectedWidgetColor:
+                        isDarkMode ? Colors.white54 : const Color(0xff98A2B3),
                   ),
-                  activeColor: Theme.of(context).primaryColor,
+                  child: Checkbox(
+                    value: model.savePassword,
+                    onChanged: (val) {
+                      model.setSavePassword = val ?? false;
+                    },
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    activeColor: Theme.of(context).primaryColor,
+                  ),
                 ),
                 // SizedBox(width: 1),
                 Text(

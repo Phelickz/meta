@@ -110,9 +110,9 @@ class HomeView extends StackedView<HomeViewModel> {
                 viewModel.push(const WithdrawFundRoute());
               }),
               const SizedBox(width: 10),
-              bottomIcons(context, 'assets/images/gift.svg', 'Loyalty Rewards',
-                  () {
-                viewModel.push(const LoyaltyRewardsRoute());
+              bottomIcons(context, 'assets/icons/recovery-convert.svg',
+                  'Internal Transfer', () {
+                viewModel.push(const InternalTransferRoute());
               }),
               const SizedBox(width: 10),
               bottomIcons(
@@ -462,33 +462,33 @@ class HomeView extends StackedView<HomeViewModel> {
               //   ),
               // ),
               verticalSpaceSmall(context),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Provider Stats',
-                    style: CustomThemeData.generateStyle(
-                      fontSize: McGyver.textSize(context, 2),
-                      fontWeight: FontWeight.bold,
-                      color: isDarkMode
-                          ? const Color(0xff98A2B3)
-                          : const Color(0xff475467),
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      viewModel.push(const ProviderRoute());
-                    },
-                    child: const Text('View more'),
-                  )
-                ],
-              ),
-              verticalSpaceXSmall(context),
-              Psummary(viewModel: ProviderViewModel()),
-              verticalSpaceXSmall(context),
-              verticalSpaceXSmall(context),
-              Psummary2(viewModel: ProviderViewModel()),
-              verticalSpaceSmall(context),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [
+              //     Text(
+              //       'Provider Stats',
+              //       style: CustomThemeData.generateStyle(
+              //         fontSize: McGyver.textSize(context, 2),
+              //         fontWeight: FontWeight.bold,
+              //         color: isDarkMode
+              //             ? const Color(0xff98A2B3)
+              //             : const Color(0xff475467),
+              //       ),
+              //     ),
+              //     TextButton(
+              //       onPressed: () {
+              //         viewModel.push(const ProviderRoute());
+              //       },
+              //       child: const Text('View more'),
+              //     )
+              //   ],
+              // ),
+              // verticalSpaceXSmall(context),
+              // Psummary(viewModel: ProviderViewModel()),
+              // verticalSpaceXSmall(context),
+              // verticalSpaceXSmall(context),
+              // Psummary2(viewModel: ProviderViewModel()),
+              // verticalSpaceSmall(context),
             ],
           ),
         ),

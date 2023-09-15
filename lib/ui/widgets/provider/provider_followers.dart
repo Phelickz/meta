@@ -6,7 +6,6 @@ import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
-import 'package:meta_trader/ui/widgets/provider/components/p_modal_bottomsheet.dart';
 import 'package:meta_trader/ui/widgets/provider/components/provider_appbar.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 

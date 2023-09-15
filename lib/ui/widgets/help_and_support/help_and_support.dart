@@ -35,7 +35,8 @@ class HelpAndSupportPage extends StatelessWidget {
           ),
           HelpAndSupportTile(
             title: "Send us a message",
-            icon: AssetManager.emptyNotifications,
+            // icon: AssetManager.emptyNotifications,
+            icon: 'assets/images/message-text.svg',
             onTap: () {
               // model.setHelpAndSupportPageEnum =
               //     HelpAndSupportPageEnum.sendAMessage;

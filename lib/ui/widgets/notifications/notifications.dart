@@ -18,20 +18,25 @@ class NotificationPage extends StatelessWidget {
         horizontal: McGyver.rsDoubleW(context, 6),
       ),
       child: ListView.builder(
-          shrinkWrap: true,
-          itemCount: model.notifications.length,
-          itemBuilder: (context, index) {
-            final notification = model.notifications[index];
-            return NotificationTile(
-                title: notification["title"],
-                description: notification['description'],
-                date: notification["date"],
-                time: notification["time"],
-                onPressed: () {
-                  model.markAsRead(index);
-                },
-                isRead: notification["isRead"]);
-          }),
+        shrinkWrap: true,
+        itemCount: model.notifications.length,
+        itemBuilder: (context, index) {
+          final notification = model.notifications[index];
+          return Opacity(
+            opacity: model.markAllAsRead == true ? 0.5 : 1,
+            child: NotificationTile(
+              title: notification["title"],
+              description: notification['description'],
+              date: notification["date"],
+              time: notification["time"],
+              onPressed: () {
+                model.markAsRead(index);
+              },
+              isRead: notification["isRead"],
+            ),
+          );
+        },
+      ),
     );
   }
 }

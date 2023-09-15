@@ -2,8 +2,11 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:meta_trader/app/locator/locator.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
+import 'package:meta_trader/app/services/router_service.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/filter_modal.dart';
@@ -87,7 +90,8 @@ AppBar socialTradingAvatarAppBar(
           SocialTradingPageEnum.copiedTraderPosition)
         IconButton(
           onPressed: () {
-            showFilterModal(context);
+            // showFilterModal(context);
+            viewModel.push(MasterTraderOverview(model: viewModel));
           },
           icon: SizedBox(
             height: McGyver.rsDoubleH(context, 2.8),
@@ -105,7 +109,8 @@ AppBar socialTradingAvatarAppBar(
           SocialTradingPageEnum.copiedTraderPosition)
         IconButton(
           onPressed: () {
-            showFilterModal(context);
+            // showFilterModal(context);
+            viewModel.push(SubscriptionSetupPage(viewModel: viewModel));
           },
           icon: SizedBox(
             height: McGyver.rsDoubleH(context, 2.8),
@@ -140,7 +145,8 @@ AppBar socialTradingDashboardAppBar(
         color: isDarkMode ? Colors.white : Colors.black,
       ),
       onPressed: () {
-        viewModel.goBack();
+        final router = locator<RouterService>();
+        router.router.replaceAll([const BottomNavBarRoute()]);
       },
     ),
     actions: [
@@ -287,6 +293,7 @@ AppBar socialTradingCustomAppBar(BuildContext context, String title,
           if (viewModel.socialTradingPageEnum ==
               SocialTradingPageEnum.subscriptionSetup) {
             viewModel.setSocialTradingPageEnum = SocialTradingPageEnum.myTrades;
+            viewModel.goBack();
           }
         }),
     centerTitle: false,
@@ -296,10 +303,9 @@ AppBar socialTradingCustomAppBar(BuildContext context, String title,
         Text(
           title,
           style: CustomThemeData.generateStyle(
-            fontSize: McGyver.textSize(context, 2),
-            fontWeight: FontWeight.bold,
-            color: isDarkMode ? const Color(0xFFD0D5DD) : Colors.white,
-          ),
+              fontSize: McGyver.textSize(context, 2),
+              fontWeight: FontWeight.bold,
+              color: isDarkMode ? const Color(0xFFD0D5DD) : Colors.white),
         ),
         if (subtitle != '')
           Text(
@@ -321,6 +327,7 @@ AppBar socialTradingCustomAppBar(BuildContext context, String title,
           onPressed: () {
             viewModel.setSocialTradingPageEnum =
                 SocialTradingPageEnum.subscriptionGuide;
+            viewModel.push(SubscriptionGuidePage(viewModel: viewModel));
           },
           icon: SizedBox(
             height: McGyver.rsDoubleH(context, 2.8),
@@ -328,7 +335,7 @@ AppBar socialTradingCustomAppBar(BuildContext context, String title,
             child: SvgPicture.asset(
               "assets/icons/info-circle.svg",
               colorFilter: ColorFilter.mode(
-                isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF667085),
+                isDarkMode ? const Color(0xFFD0D5DD) : Colors.black,
                 BlendMode.srcIn,
               ),
             ),

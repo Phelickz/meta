@@ -38,16 +38,19 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                 viewModel.goBack();
               },
               [
-                IconButton(
-                  onPressed: () {
-                    viewModel.setLoyaltyRewardsViewEnum =
-                        LoyaltyRewardsViewEnum.about;
-                  },
-                  icon: Icon(
-                    Icons.info_outlined,
-                    color: isDarkMode ? Colors.white : Colors.black87,
+                if (viewModel.loyaltyRewardsViewEnum ==
+                    LoyaltyRewardsViewEnum.base) ...[
+                  IconButton(
+                    onPressed: () {
+                      viewModel.setLoyaltyRewardsViewEnum =
+                          LoyaltyRewardsViewEnum.about;
+                    },
+                    icon: Icon(
+                      Icons.info_outlined,
+                      color: isDarkMode ? Colors.white : Colors.black87,
+                    ),
                   ),
-                ),
+                ]
               ],
             )
           : globalAppBar(
@@ -58,15 +61,7 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                 viewModel.setLoyaltyRewardsViewEnum =
                     LoyaltyRewardsViewEnum.base;
               },
-              [
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.info_outlined,
-                    color: isDarkMode ? Colors.white : Colors.black87,
-                  ),
-                ),
-              ],
+              [],
             ),
       body: viewModel.loyaltyRewardsViewEnum == LoyaltyRewardsViewEnum.about
           ? const AboutLoyaltyRewards()

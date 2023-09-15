@@ -18,7 +18,7 @@ class ProfileViewModel extends CustomBaseViewModel {
   bool _isVerified = false;
   bool get isVerified => _isVerified;
 
-  int _verificationState = 2;
+  int _verificationState = 1;
   int get verificationState => _verificationState;
 
   set userName(String name) {
@@ -41,7 +41,7 @@ class ProfileViewModel extends CustomBaseViewModel {
     rebuildUi();
   }
 
-  ProfileStateEnum _profileStateEnum = ProfileStateEnum.verified;
+  ProfileStateEnum _profileStateEnum = ProfileStateEnum.halfVerified;
   ProfileStateEnum get profileStateEnum => _profileStateEnum;
 
   set setProfileStateEnum(ProfileStateEnum e) {

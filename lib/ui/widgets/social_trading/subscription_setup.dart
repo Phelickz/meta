@@ -1,13 +1,19 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
+import 'package:meta_trader/ui/widgets/appbar.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
+import 'package:meta_trader/ui/widgets/skeleton.dart';
+import 'package:meta_trader/ui/widgets/social_trading/components/cancel_sub_modal.dart';
 import 'package:meta_trader/ui/widgets/textfields/label_text_field.dart';
 import 'package:meta_trader/ui/widgets/trade/components/plus_minus_text.dart';
 
+@RoutePage()
 class SubscriptionSetupPage extends StatelessWidget {
   final SocialTradingViewModel viewModel;
   const SubscriptionSetupPage({
@@ -18,11 +24,31 @@ class SubscriptionSetupPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
-    return SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: McGyver.rsDoubleW(context, 5),
+    return Skeleton(
+      isBusy: viewModel.isBusy,
+      appBar: globalAppBar(context, 'Subscription Setup', '', () {
+        viewModel.goBack();
+      }, [
+        IconButton(
+          onPressed: () {
+            // viewModel.setSocialTradingPageEnum =
+            //     SocialTradingPageEnum.subscriptionGuide;
+            viewModel.push(SubscriptionGuidePage(viewModel: viewModel));
+          },
+          icon: SizedBox(
+            height: McGyver.rsDoubleH(context, 2.8),
+            width: McGyver.rsDoubleH(context, 2.8),
+            child: SvgPicture.asset(
+              "assets/icons/info-circle.svg",
+              colorFilter: ColorFilter.mode(
+                isDarkMode ? const Color(0xFFD0D5DD) : Colors.black,
+                BlendMode.srcIn,
+              ),
+            ),
+          ),
         ),
+      ]),
+      body: SingleChildScrollView(
         child: Column(
           children: [
             verticalSpaceXSmall(context),
@@ -163,7 +189,7 @@ class SubscriptionSetupPage extends StatelessWidget {
                 ),
               ],
             ),
-            verticalSpaceXSmall(context),
+            verticalSpaceSmall(context),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -260,7 +286,7 @@ class SubscriptionSetupPage extends StatelessWidget {
                                         .selectedCopyProportionNotifier,
                                     builder: (context, selectedIndex, child) {
                                       return Container(
-                                        height: McGyver.rsDoubleH(context, 9),
+                                        height: McGyver.rsDoubleH(context, 11),
                                         width: McGyver.rsDoubleW(context, 26),
                                         decoration: BoxDecoration(
                                             borderRadius: BorderRadius.circular(
@@ -298,7 +324,10 @@ class SubscriptionSetupPage extends StatelessWidget {
                                                   fontWeight: FontWeight.bold,
                                                   color: isDarkMode
                                                       ? const Color(0xFFFFFFFF)
-                                                      : const Color(0xFF475467),
+                                                      : selectedIndex == index
+                                                          ? Colors.white
+                                                          : const Color(
+                                                              0xFF475467),
                                                 ),
                                               ),
                                               const SizedBox(height: 7),
@@ -311,7 +340,10 @@ class SubscriptionSetupPage extends StatelessWidget {
                                                   fontWeight: FontWeight.normal,
                                                   color: isDarkMode
                                                       ? const Color(0xFFFFFFFF)
-                                                      : const Color(0xFF475467),
+                                                      : selectedIndex == index
+                                                          ? Colors.white
+                                                          : const Color(
+                                                              0xFF475467),
                                                 ),
                                               ),
                                               const SizedBox(height: 3),
@@ -324,7 +356,10 @@ class SubscriptionSetupPage extends StatelessWidget {
                                                   fontWeight: FontWeight.w500,
                                                   color: isDarkMode
                                                       ? const Color(0xFF98A2B3)
-                                                      : const Color(0xFF667085),
+                                                      : selectedIndex == index
+                                                          ? Colors.white
+                                                          : const Color(
+                                                              0xFF475467),
                                                 ),
                                               ),
                                             ],
@@ -404,7 +439,9 @@ class SubscriptionSetupPage extends StatelessWidget {
                               decoration: BoxDecoration(
                                 color: isDarkMode
                                     ? const Color(0xFF052844)
-                                    : const Color(0xFFE4E7EC),
+                                    : Theme.of(context)
+                                        .primaryColor
+                                        .withOpacity(0.1),
                                 borderRadius: BorderRadius.circular(
                                   McGyver.rsDoubleW(context, 2),
                                 ),
@@ -487,7 +524,7 @@ class SubscriptionSetupPage extends StatelessWidget {
               decoration: BoxDecoration(
                 color: isDarkMode
                     ? const Color(0xFF052844)
-                    : const Color(0xFFFAFDFF),
+                    : Theme.of(context).primaryColor.withOpacity(0.2),
                 borderRadius:
                     BorderRadius.circular(McGyver.rsDoubleW(context, 4)),
               ),
@@ -604,14 +641,50 @@ class SubscriptionSetupPage extends StatelessWidget {
             verticalSpaceSmall(context),
             CustomButtons.generalButton(
               context: context,
-              onTap: () {},
-              text: "Start Copying",
+              color: viewModel.socialTradingPageEnum ==
+                      SocialTradingPageEnum.copiedTraderPosition
+                  ? Colors.red
+                  : Theme.of(context).primaryColor,
+              onTap: () {
+                if (viewModel.socialTradingPageEnum ==
+                    SocialTradingPageEnum.copiedTraderPosition) {
+                  showFilterModal(context, viewModel);
+                } else {
+                  viewModel.push(CopiedTraderSuccessPage(viewModel: viewModel));
+                }
+              },
+              text: viewModel.socialTradingPageEnum ==
+                      SocialTradingPageEnum.copiedTraderPosition
+                  ? "Stop Copying"
+                  : "Start Copying",
             ),
             verticalSpaceSmall(context),
           ],
         ),
       ),
     );
+  }
+
+  void showFilterModal(BuildContext context, SocialTradingViewModel vm) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
+    showModalBottomSheet(
+        backgroundColor:
+            isDarkMode ? const Color(0xFF0C2031) : const Color(0xFFFAFDFF),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(McGyver.rsDoubleH(context, 2)),
+            topRight: Radius.circular(McGyver.rsDoubleH(context, 2)),
+          ),
+        ),
+        context: context,
+        isDismissible: true,
+        enableDrag: true,
+        isScrollControlled: true,
+        builder: (context) {
+          return CancelSubModal(
+            viewModel: vm,
+          );
+        });
   }
 
   Widget _twotext(BuildContext context, String text1, String text2) {

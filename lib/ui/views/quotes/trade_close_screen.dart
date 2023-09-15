@@ -6,7 +6,6 @@ import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/quotes/quotes_view_model.dart';
 import 'package:meta_trader/ui/widgets/quotes/components/generic_trade_body.dart';
 import 'package:meta_trader/ui/widgets/quotes/components/trade_appbar.dart';
-import 'package:meta_trader/ui/widgets/quotes/components/trade_appbar_extension.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
 
@@ -26,7 +25,7 @@ class TradeCloseScreen extends StackedView<QuotesViewModel> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const TradeAppbarExtension(),
+                // const TradeAppbarExtension(),
                 SizedBox(
                   height: 13.pHeight(context),
                 ),

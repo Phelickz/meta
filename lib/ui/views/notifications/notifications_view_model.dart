@@ -18,8 +18,16 @@ class NotificationViewModel extends CustomBaseViewModel {
       NotificationStateEnum.hasNotifications;
   NotificationStateEnum get notificationStateEnum => _notificationStateEnum;
 
+  bool _markAllAsRead = false;
+  bool get markAllAsRead => _markAllAsRead;
+
   set setNotificationStateEnum(NotificationStateEnum e) {
     _notificationStateEnum = e;
+    rebuildUi();
+  }
+
+  set setMarkAllAsRead(bool e) {
+    _markAllAsRead = e;
     rebuildUi();
   }
 
@@ -129,7 +137,7 @@ class NotificationViewModel extends CustomBaseViewModel {
         return notificationsAppBar(
             context, "Notifications", this, NotificationStateEnum.empty);
       case NotificationStateEnum.hasNotifications:
-        return notificationsAppBar(context, 'Notification', this,
+        return notificationsAppBar(context, 'Notifications', this,
             NotificationStateEnum.hasNotifications);
       default:
         return null;

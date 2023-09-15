@@ -49,6 +49,7 @@ class PTradeHistory extends StatelessWidget {
                 // ignore: deprecated_member_use
                 child: SvgPicture.asset(
                   AssetManager.filter,
+                  // ignore: deprecated_member_use
                   color: const Color(0xFF98A2B3),
                   height: 20,
                   width: 20,

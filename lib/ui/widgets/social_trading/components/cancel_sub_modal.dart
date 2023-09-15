@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
@@ -17,7 +18,7 @@ class CancelSubModal extends StatelessWidget {
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Container(
-      height: McGyver.rsDoubleH(context, 58),
+      height: McGyver.rsDoubleH(context, 60),
       padding: EdgeInsets.symmetric(
         horizontal: McGyver.rsDoubleW(context, 6),
         vertical: McGyver.rsDoubleH(context, 4),
@@ -76,7 +77,9 @@ class CancelSubModal extends StatelessWidget {
           CustomButtons.generalButton(
             text: "Proceed",
             context: context,
-            onTap: () {},
+            onTap: () {
+              viewModel.push(CopiedTraderTerminatedPage(viewModel: viewModel));
+            },
           ),
           verticalSpaceSmall(context),
           CustomButtons.outlineButton(
@@ -85,8 +88,8 @@ class CancelSubModal extends StatelessWidget {
             textColor: Theme.of(context).primaryColor,
             onTap: () {
               Navigator.pop(context);
-              viewModel.setSocialTradingPageEnum =
-                  SocialTradingPageEnum.myTrades;
+              // viewModel.setSocialTradingPageEnum =
+              //     SocialTradingPageEnum.myTrades;
             },
           )
         ],

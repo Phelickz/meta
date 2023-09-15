@@ -33,7 +33,7 @@ class ProfilePage extends StatelessWidget {
                 model.returnVerifiedBar(),
                 InkWell(
                   onTap: () {},
-                  child: SvgPicture.asset(AssetManager.referralImage),
+                  child: Image.asset(AssetManager.referralImage),
                 ),
                 SizedBox(height: 32.pHeight(context)),
                 Row(

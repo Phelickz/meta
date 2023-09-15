@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
-import 'package:meta_trader/ui/views/withdraw_funds/withdraw_funds_view_model.dart';
+import 'package:meta_trader/ui/views/internal_transfer/internal_transfer_view_model.dart';
 import 'package:meta_trader/ui/widgets/auth/radio_button.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
-class SelectAccountWithdraw extends StatelessWidget {
-  const SelectAccountWithdraw({super.key, required this.model});
-  final WithdrawFundViewModel model;
+class SelectDestinationInternalTransfer extends StatelessWidget {
+  const SelectDestinationInternalTransfer({super.key, required this.model});
+  final InternalTransferViewModel model;
 
   @override
   Widget build(BuildContext context) {
@@ -19,16 +20,16 @@ class SelectAccountWithdraw extends StatelessWidget {
       ),
       child: Column(
         children: [
-          verticalSpaceSmall(context),
+          verticalSpaceXSmall(context),
           Expanded(
             child: ListView.separated(
               itemCount: 4,
               itemBuilder: (context, index) {
                 return accountTile(
                   context,
-                  model.account == index,
+                  model.account2 == index,
                   true,
-                  (value) => model.setAccount = index,
+                  (value) => model.setAccount2 = index,
                 );
               },
               separatorBuilder: (BuildContext context, int index) {
@@ -39,8 +40,7 @@ class SelectAccountWithdraw extends StatelessWidget {
           CustomButtons.generalButton(
             context: context,
             onTap: () {
-              model.setWithdrawFundViewEnum =
-                  WithdrawFundPageEnum.paymentMethods;
+              model.push(InternalTransferAmount(model: model));
             },
             text: 'Next',
           ),

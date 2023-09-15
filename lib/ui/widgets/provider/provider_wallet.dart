@@ -57,7 +57,7 @@ class WalletPage extends StatelessWidget {
                   'assets/icons/recovery_convert.svg',
                   'Internal Transfer',
                   () {
-                    viewModel.push(const FundAccountRoute());
+                    viewModel.push(const InternalTransferRoute());
                   },
                 ),
                 bottomIcons(

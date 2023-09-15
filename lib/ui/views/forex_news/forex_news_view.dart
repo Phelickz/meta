@@ -80,12 +80,12 @@ class ForexNewsView extends StackedView<ForexNewsViewModel> {
                     indicator: UnderlineTabIndicator(
                       borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(
-                        width: 5.0,
+                        width: 2.0,
                         color: isDarkMode
                             ? const Color(0xff0C95EF)
                             : Theme.of(context).primaryColor,
                       ),
-                      insets: const EdgeInsets.symmetric(horizontal: 40.0),
+                      insets: const EdgeInsets.symmetric(horizontal: 10.0),
                     ),
                     labelStyle: CustomThemeData.generateStyle(
                       fontSize: 13,

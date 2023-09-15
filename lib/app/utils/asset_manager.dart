@@ -7,7 +7,7 @@ const String TESTIMAGEPATH = 'assets/testimages';
 
 class AssetManager {
   static const profile = "$IMAGEPATH/profile.png";
-  static const referralImage = "$IMAGEPATH/referralimage.svg";
+  static const referralImage = "$IMAGEPATH/referral-program.png";
   static const metaLogo = "$IMAGEPATH/metalogo.svg";
   static const metaPngLogo = "$IMAGEPATH/metapnglogo.png";
   static const brokerLogo = "$IMAGEPATH/logo.png";
@@ -20,7 +20,7 @@ class AssetManager {
 
   static const manageAccountIcon = "$ICONPATH/courthouse.svg";
   static const referralsIcon = "$ICONPATH/people.svg";
-  static const emptyNotifications = "$ICONPATH/messagetext.svg";
+  static const emptyNotifications = "$ICONPATH/notificationss.svg";
 
   static const tradeHistoryIcon = "$ICONPATH/note.svg";
   static const loyaltyRewards = "$ICONPATH/cup.svg";

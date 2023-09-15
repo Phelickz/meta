@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 class LoyaltyRewardCard extends StatelessWidget {
   const LoyaltyRewardCard({super.key});
@@ -31,15 +32,15 @@ class LoyaltyRewardCard extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                  child: Column(
-                    children: [
-                      verticalSpaceXXSmall(context),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
+                child: Column(
+                  children: [
+                    verticalSpaceXXSmall(context),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                          child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               verticalSpaceSmall(context),
@@ -59,14 +60,20 @@ class LoyaltyRewardCard extends StatelessWidget {
                               ),
                             ],
                           ),
-                          Image.asset(
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                          child: Image.asset(
                             "assets/images/Frame_349.png",
                             height: McGyver.rsDoubleH(context, 8),
-                          )
-                        ],
-                      ),
-                      const Spacer(),
-                      Align(
+                          ),
+                        )
+                      ],
+                    ),
+                    const Spacer(),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                      child: Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
                           'You are at the peak!',
@@ -77,39 +84,72 @@ class LoyaltyRewardCard extends StatelessWidget {
                           ),
                         ),
                       ),
-                      verticalSpaceXXSmall(context),
-                      SliderTheme(
-                        data: SliderThemeData(
-                          thumbShape:
-                              RoundSliderThumbShape(enabledThumbRadius: 12),
-                          // here
-                          trackShape: CustomTrackShape(),
-                        ),
-                        child: Slider(
-                          inactiveColor: isDarkMode
-                              ? const Color(0xFF073961)
-                              : const Color(0xFFE4E7EC),
-                          activeColor: Colors.purple,
-                          value: 1,
-                          onChanged: (v) {
+                    ),
+                    verticalSpaceXXSmall(context),
+                    SizedBox(
+                      width: 1000,
+                      child: Padding(
+                        padding: const EdgeInsets.all(0.0),
+                        child: SfSlider(
+                          overlayShape: SfOverlayShape(),
+                          min: 0.0,
+                          max: 100.0,
+                          value: 100,
+                          interval: 20,
+                          activeColor: Colors.deepPurple,
+                          // showTicks: true,
+                          // showLabels: true,
+                          enableTooltip: true,
+                          minorTicksPerInterval: 1,
+                          thumbIcon: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.deepPurple,
+                              shape: BoxShape.circle,
+                              border: Border.all(color: Colors.white, width: 3),
+                            ),
+                          ),
+                          onChanged: (dynamic value) {
                             // setState(() {
-                            //   sliderValue = v;
+                            //   _value = value;
                             // });
                           },
                         ),
                       ),
-                      // SizedBox(
-                      //   width: double.infinity,
-                      //   child: LinearProgressIndicator(
-                      //       // borderRadius: BorderRadius.circular(10),
-                      //       value: 100 / 100,
-                      //       backgroundColor: isDarkMode
-                      //           ? const Color(0xFF073961)
-                      //           : const Color(0xFFE4E7EC),
-                      //       color: Colors.purple),
-                      // ),
-                      // verticalSpaceXXSmall(context),
-                      Row(
+                    ),
+                    // SliderTheme(
+                    //   data: SliderThemeData(
+                    //     thumbShape: const RoundSliderThumbShape(
+                    //         enabledThumbRadius: 12),
+                    //     // here
+                    //     trackShape: CustomTrackShape(),
+                    //   ),
+                    //   child: Slider(
+                    //     inactiveColor: isDarkMode
+                    //         ? const Color(0xFF073961)
+                    //         : const Color(0xFFE4E7EC),
+                    //     activeColor: Colors.purple,
+                    //     value: 1,
+                    //     onChanged: (v) {
+                    //       // setState(() {
+                    //       //   sliderValue = v;
+                    //       // });
+                    //     },
+                    //   ),
+                    // ),
+                    // SizedBox(
+                    //   width: double.infinity,
+                    //   child: LinearProgressIndicator(
+                    //       // borderRadius: BorderRadius.circular(10),
+                    //       value: 100 / 100,
+                    //       backgroundColor: isDarkMode
+                    //           ? const Color(0xFF073961)
+                    //           : const Color(0xFFE4E7EC),
+                    //       color: Colors.purple),
+                    // ),
+                    // verticalSpaceXXSmall(context),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
@@ -135,9 +175,9 @@ class LoyaltyRewardCard extends StatelessWidget {
                           ),
                         ],
                       ),
-                      verticalSpaceXSmall(context),
-                    ],
-                  ),
+                    ),
+                    verticalSpaceXSmall(context),
+                  ],
                 ),
               ),
             ),

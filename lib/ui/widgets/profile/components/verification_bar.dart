@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/profile/components/verification_status_indicator.dart';
@@ -44,8 +46,7 @@ class VerificationBar extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
-                    width: 220.pWidth(context),
+                  Expanded(
                     child: Column(
                       children: [
                         Align(
@@ -53,11 +54,9 @@ class VerificationBar extends StatelessWidget {
                             "Verify your account",
                             textAlign: TextAlign.left,
                             style: CustomThemeData.generateStyle(
-                              fontSize: McGyver.textSize(context, 1.5),
-                              fontWeight: FontWeight.w600,
-                              color: isDarkMode
-                                  ? ColorManager.darkText
-                                  : ColorManager.lightText,
+                              fontSize: McGyver.textSize(context, 1.9),
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).primaryColor,
                             ),
                           ),
                           alignment: Alignment.topLeft,
@@ -65,13 +64,16 @@ class VerificationBar extends StatelessWidget {
                         SizedBox(
                           height: 5.pHeight(context),
                         ),
-                        SizedBox(
-                          width: 220.pWidth(context),
-                          child: Text(
-                            "To make your first deposit, we would like to know you better. click ‘continue’ to get started",
-                            style: Theme.of(context).textTheme.titleSmall,
-                          ),
+                        Text(
+                          "To make your first deposit, we would like to know you better. click ‘continue’ to get started",
+                          style: CustomThemeData.generateStyle(
+                              fontSize: McGyver.textSize(context, 1.4),
+                              fontWeight: FontWeight.w400,
+                              color: isDarkMode
+                                  ? const Color(0xff98A2B3)
+                                  : ColorManager.lightText),
                         ),
+                        verticalSpaceXXSmall(context),
                       ],
                     ),
                   ),
@@ -79,7 +81,11 @@ class VerificationBar extends StatelessWidget {
                 ],
               ),
               CustomButtons.generalButton(
-                  context: context, onTap: () {}, text: "Continue")
+                  context: context,
+                  onTap: () {
+                    model.push(const VerificationRoute());
+                  },
+                  text: "Continue")
             ],
           ),
         ),

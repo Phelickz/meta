@@ -180,6 +180,7 @@ Widget paymentInformationCard(
                     scale: 1.2,
                     child: SvgPicture.asset(
                       'assets/icons/edit.svg',
+                      // ignore: deprecated_member_use
                       color: Colors.black54,
                     ),
                   ),

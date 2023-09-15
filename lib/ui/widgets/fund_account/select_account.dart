@@ -160,7 +160,7 @@ class SelectAccount extends StatelessWidget {
               ),
               horizontalSpaceXSmall(context),
               Transform.scale(
-                scale: 2.5,
+                scale: 2,
                 child: CustomRadioWidget(
                   value: value,
                   groupValue: groupValue,

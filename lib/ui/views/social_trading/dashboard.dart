@@ -18,13 +18,20 @@ class SocialTradingDasboard extends StackedView<SocialTradingViewModel> {
     Widget? child,
   ) {
     // var isDarkMode = CustomThemeData.isDarkMode(context);
-    return Skeleton(
-      isBusy: viewModel.isBusy,
-      bodyPadding: EdgeInsets.symmetric(
-        horizontal: McGyver.rsDoubleW(context, 0),
+    return WillPopScope(
+      onWillPop: () async {
+        // final router = locator<RouterService>();
+        // router.router.replaceAll([const BottomNavBarRoute()]);
+        return false;
+      },
+      child: Skeleton(
+        isBusy: viewModel.isBusy,
+        bodyPadding: EdgeInsets.symmetric(
+          horizontal: McGyver.rsDoubleW(context, 0),
+        ),
+        appBar: viewModel.returnAppBar(context),
+        body: viewModel.returnPage(context),
       ),
-      appBar: viewModel.returnAppBar(context),
-      body: viewModel.returnPage(context),
     );
   }
 

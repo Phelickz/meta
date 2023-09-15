@@ -212,7 +212,7 @@ class McGyver {
       rsHeight = McGyver.roundToDecimals(
           hPxlsInpVal - (hPxlsRatDelta + hAdjStatsBarPxls), decimalPlaces);
     }
-    return Platform.isAndroid ? (rsHeight * 0.85) : rsHeight;
+    return Platform.isAndroid ? (rsHeight * 1) : rsHeight;
   }
 
   static Widget rsWidget(BuildContext context, Widget inWidget,

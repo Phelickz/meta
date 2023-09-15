@@ -38,26 +38,54 @@ class MasterTraders extends StatelessWidget {
               ],
             ),
             verticalSpaceXSmall(context),
-            SizedBox(
-              height: McGyver.rsDoubleH(context, 50),
-              width: McGyver.rsDoubleW(context, 100),
-              child: ListView.separated(
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: 3,
-                itemBuilder: (context, index) {
-                  return GestureDetector(onTap: () {
+            Column(
+              children: [
+                GestureDetector(onTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                }, child: HigherSuccessRates(
+                  copyOnTap: () {
                     model.push(MasterTraderOverview(model: model));
-                  }, child: HigherSuccessRates(
-                    copyOnTap: () {
-                      model.push(MasterTraderOverview(model: model));
-                    },
-                  ));
-                },
-                separatorBuilder: (BuildContext context, int index) {
-                  return verticalSpaceXSmall(context);
-                },
-              ),
+                  },
+                )),
+                verticalSpaceSmall(context),
+                GestureDetector(onTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                }, child: HigherSuccessRates(
+                  copyOnTap: () {
+                    model.push(MasterTraderOverview(model: model));
+                  },
+                )),
+                verticalSpaceSmall(context),
+                GestureDetector(onTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                }, child: HigherSuccessRates(
+                  copyOnTap: () {
+                    model.push(MasterTraderOverview(model: model));
+                  },
+                )),
+              ],
             ),
+            verticalSpaceSmall(context),
+            // SizedBox(
+            //   height: McGyver.rsDoubleH(context, 50),
+            //   width: McGyver.rsDoubleW(context, 100),
+            //   child: ListView.separated(
+            //     physics: const NeverScrollableScrollPhysics(),
+            //     itemCount: 3,
+            //     itemBuilder: (context, index) {
+            //       return GestureDetector(onTap: () {
+            //         model.push(MasterTraderOverview(model: model));
+            //       }, child: HigherSuccessRates(
+            //         copyOnTap: () {
+            //           model.push(MasterTraderOverview(model: model));
+            //         },
+            //       ));
+            //     },
+            //     separatorBuilder: (BuildContext context, int index) {
+            //       return verticalSpaceXSmall(context);
+            //     },
+            //   ),
+            // ),
             // verticalSpaceSmall(context),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -77,19 +105,46 @@ class MasterTraders extends StatelessWidget {
             ),
             verticalSpaceXSmall(context),
             // verticalSpaceSmall(context),
-            SizedBox(
-              height: McGyver.rsDoubleH(context, 50),
-              width: McGyver.rsDoubleW(context, 100),
-              child: ListView.separated(
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: 3,
-                itemBuilder: (context, index) {
-                  return const HigherSuccessRates();
-                },
-                separatorBuilder: (BuildContext context, int index) {
-                  return verticalSpaceXSmall(context);
-                },
-              ),
+            // SizedBox(
+            //   height: McGyver.rsDoubleH(context, 50),
+            //   width: McGyver.rsDoubleW(context, 100),
+            //   child: ListView.separated(
+            //     physics: const NeverScrollableScrollPhysics(),
+            //     itemCount: 3,
+            //     itemBuilder: (context, index) {
+            //       return const HigherSuccessRates();
+            //     },
+            //     separatorBuilder: (BuildContext context, int index) {
+            //       return verticalSpaceXSmall(context);
+            //     },
+            //   ),
+            // ),
+            Column(
+              children: [
+                GestureDetector(onTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                }, child: HigherSuccessRates(
+                  copyOnTap: () {
+                    model.push(MasterTraderOverview(model: model));
+                  },
+                )),
+                verticalSpaceSmall(context),
+                GestureDetector(onTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                }, child: HigherSuccessRates(
+                  copyOnTap: () {
+                    model.push(MasterTraderOverview(model: model));
+                  },
+                )),
+                verticalSpaceSmall(context),
+                GestureDetector(onTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                }, child: HigherSuccessRates(
+                  copyOnTap: () {
+                    model.push(MasterTraderOverview(model: model));
+                  },
+                )),
+              ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -108,20 +163,47 @@ class MasterTraders extends StatelessWidget {
               ],
             ),
             verticalSpaceXSmall(context),
-            SizedBox(
-              height: McGyver.rsDoubleH(context, 50),
-              width: McGyver.rsDoubleW(context, 100),
-              child: ListView.separated(
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: 3,
-                itemBuilder: (context, index) {
-                  return const HigherSuccessRates();
-                },
-                separatorBuilder: (BuildContext context, int index) {
-                  return verticalSpaceXSmall(context);
-                },
-              ),
+            Column(
+              children: [
+                GestureDetector(onTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                }, child: HigherSuccessRates(
+                  copyOnTap: () {
+                    model.push(MasterTraderOverview(model: model));
+                  },
+                )),
+                verticalSpaceSmall(context),
+                GestureDetector(onTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                }, child: HigherSuccessRates(
+                  copyOnTap: () {
+                    model.push(MasterTraderOverview(model: model));
+                  },
+                )),
+                verticalSpaceSmall(context),
+                GestureDetector(onTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                }, child: HigherSuccessRates(
+                  copyOnTap: () {
+                    model.push(MasterTraderOverview(model: model));
+                  },
+                )),
+              ],
             ),
+            // SizedBox(
+            //   height: McGyver.rsDoubleH(context, 50),
+            //   width: McGyver.rsDoubleW(context, 100),
+            //   child: ListView.separated(
+            //     physics: const NeverScrollableScrollPhysics(),
+            //     itemCount: 3,
+            //     itemBuilder: (context, index) {
+            //       return const HigherSuccessRates();
+            //     },
+            //     separatorBuilder: (BuildContext context, int index) {
+            //       return verticalSpaceXSmall(context);
+            //     },
+            //   ),
+            // ),
             verticalSpaceMedium(context),
           ],
         ),

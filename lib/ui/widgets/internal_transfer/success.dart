@@ -1,29 +1,27 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/responsiveness/res.dart';
+import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
-import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
+import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/ui/views/internal_transfer/internal_transfer_view_model.dart';
+import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 
-import '../../../app/responsiveness/res.dart';
-import '../../../app/responsiveness/size.dart';
-import '../../../app/utils/theme.dart';
-import '../buttons/buttons.dart';
-
 @RoutePage()
-class CopiedTraderSuccessPage extends StatelessWidget {
-  final SocialTradingViewModel viewModel;
-
-  const CopiedTraderSuccessPage({super.key, required this.viewModel});
+class InternalTransferSuccess extends StatelessWidget {
+  const InternalTransferSuccess({super.key, required this.model});
+  final InternalTransferViewModel model;
 
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Skeleton(
-      isBusy: viewModel.isBusy,
+      isBusy: model.isBusy,
       body: Column(
         children: [
           verticalSpaceSmall(context),
-          // verticalSpaceSmall(context),
+          verticalSpaceSmall(context),
           SizedBox(
             height: McGyver.rsDoubleH(context, 50),
             width: McGyver.rsDoubleW(context, 100),
@@ -42,10 +40,10 @@ class CopiedTraderSuccessPage extends StatelessWidget {
             ),
           ),
           Text(
-            "Master trader copied Successfully",
+            "Transfer Successful",
             textAlign: TextAlign.center,
             style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 2.6),
+              fontSize: McGyver.textSize(context, 2.5),
               fontWeight: FontWeight.w700,
               color: isDarkMode
                   ? const Color(0xFFF2F4F7)
@@ -57,7 +55,7 @@ class CopiedTraderSuccessPage extends StatelessWidget {
             textAlign: TextAlign.center,
             text: TextSpan(
               text:
-                  "You have successfully started copying Satoshi Nakamoto’s trades automatically. \n\n  Notifications would be sent to you when he opens or closes a trade",
+                  "500 USD has been successfully transferred from Deriv to FXPro",
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.5),
                 fontWeight: FontWeight.w500,
@@ -71,11 +69,10 @@ class CopiedTraderSuccessPage extends StatelessWidget {
           CustomButtons.generalButton(
             context: context,
             onTap: () {
-              viewModel.push(const SocialTradingDasboard());
+              model.push(const BottomNavBarRoute());
             },
-            text: 'Continue',
+            text: 'Close',
           ),
-          verticalSpaceSmall(context),
         ],
       ),
     );

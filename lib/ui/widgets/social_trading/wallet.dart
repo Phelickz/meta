@@ -61,7 +61,9 @@ class WalletPage extends StatelessWidget {
                         onPressed: () {
                           viewModel.setShowBalance();
                         },
-                        icon: const Icon(Icons.remove_red_eye_outlined),
+                        icon: viewModel.showBalance == false
+                            ? const Icon(Icons.visibility_off)
+                            : const Icon(Icons.remove_red_eye_outlined),
                         color: isDarkMode
                             ? const Color(0xff98A2B3)
                             : const Color(0xFFD3ECFD),
@@ -144,7 +146,7 @@ class WalletPage extends StatelessWidget {
                     'assets/icons/recovery_convert.svg',
                     'Internal Transfer',
                     () {
-                      viewModel.push(const FundAccountRoute());
+                      viewModel.push(const InternalTransferRoute());
                     },
                   ),
                   bottomIcons(

@@ -37,7 +37,7 @@ class TransactionDetailsPage extends StatelessWidget {
           ),
           Expanded(child: model.returnTransactionDetails()),
           CustomButtons.generalButton(
-              context: context, onTap: () {}, text: "Share Receipts"),
+              context: context, onTap: () {}, text: "Report Transaction"),
           verticalSpaceMedium(context),
         ],
       ),

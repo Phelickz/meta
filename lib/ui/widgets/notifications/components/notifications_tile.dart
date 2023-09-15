@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
-import 'package:meta_trader/app/utils/dimensions.dart';
 
 class NotificationTile extends StatelessWidget {
   final String title;
@@ -27,29 +27,22 @@ class NotificationTile extends StatelessWidget {
     return ListTile(
       contentPadding: EdgeInsets.zero,
       onTap: onPressed,
-      leading: Container(
-        width: 36,
-        height: 36,
-        padding: EdgeInsets.symmetric(horizontal: 8.pWidth(context)),
-        decoration: BoxDecoration(
-          color: const Color(0xffD3ECFD),
-          shape: BoxShape.circle,
-          border: Border.all(
-            color: Theme.of(context).primaryColor.withOpacity(0.5),
-          ),
-        ),
-        child: SvgPicture.asset(
-          AssetManager.emptyNotifications,
-          color: Theme.of(context).primaryColor,
-        ),
+      leading: SvgPicture.asset(
+        AssetManager.emptyNotifications,
+        // color: Theme.of(context).primaryColor,
       ),
       title: Text(
         title,
-        style: Theme.of(context).textTheme.titleMedium,
+        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.w700,
+              fontSize: McGyver.textSize(context, 1.8),
+            ),
       ),
       subtitle: Text(
         title,
-        style: Theme.of(context).textTheme.titleSmall,
+        style: Theme.of(context).textTheme.titleSmall?.copyWith(
+              fontSize: McGyver.textSize(context, 1.3),
+            ),
       ),
       trailing: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -57,11 +50,15 @@ class NotificationTile extends StatelessWidget {
         children: [
           Text(
             date,
-            style: Theme.of(context).textTheme.bodySmall,
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                  fontSize: McGyver.textSize(context, 1.1),
+                ),
           ),
           Text(
             time,
-            style: Theme.of(context).textTheme.bodySmall,
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                  fontSize: McGyver.textSize(context, 1.1),
+                ),
           )
         ],
       ),

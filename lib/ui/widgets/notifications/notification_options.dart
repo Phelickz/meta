@@ -25,15 +25,22 @@ class NotificationOptionsBottomSheet extends StatelessWidget {
             CustomButtons.generalButton(
                 context: context,
                 width: 150.pWidth(context),
-                onTap: () {},
+                onTap: () {
+                  model.setMarkAllAsRead = true;
+                  Navigator.pop(context);
+                },
                 text: "Mark all as read"),
             CustomButtons.clearButton(
-                context: context,
-                width: 150.pWidth(context),
-                color: Theme.of(context).scaffoldBackgroundColor,
-                textColor: ColorManager.secondaryTextButtonColor,
-                onTap: () {},
-                text: "Clear All")
+              context: context,
+              width: 150.pWidth(context),
+              color: Theme.of(context).scaffoldBackgroundColor,
+              textColor: ColorManager.secondaryTextButtonColor,
+              onTap: () {
+                model.setNotificationStateEnum = NotificationStateEnum.empty;
+                Navigator.pop(context);
+              },
+              text: "Clear All",
+            )
             // Add other widgets here
           ],
         ),

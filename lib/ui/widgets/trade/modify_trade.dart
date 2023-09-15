@@ -84,65 +84,72 @@ class ModifyTrade extends StatelessWidget {
                                 : const Color(0xFF667085),
                           ),
                         ),
-                        Switch.adaptive(value: true, onChanged: (value) {})
+                        Switch.adaptive(
+                            value: viewModel.openDuration,
+                            onChanged: (value) {
+                              viewModel.setOpenDuration = value;
+                            })
                       ],
                     ),
                   ),
                   verticalSpaceXSmall(context),
-                  Container(
-                    padding: EdgeInsets.all(McGyver.rsDoubleW(context, 4)),
-                    decoration: BoxDecoration(
-                      color: isDarkMode
-                          ? const Color(0xFF344054)
-                          : const Color(0xFFE4E7EC),
-                      borderRadius: BorderRadius.circular(
-                        McGyver.rsDoubleW(context, 2),
-                      ),
-                      border: Border.all(
-                        width: 0.3,
+                  Visibility(
+                    visible: viewModel.openDuration,
+                    child: Container(
+                      padding: EdgeInsets.all(McGyver.rsDoubleW(context, 4)),
+                      decoration: BoxDecoration(
                         color: isDarkMode
-                            ? const Color(0xFF667085)
-                            : const Color(0xFF98A2B3),
+                            ? const Color(0xFF344054)
+                            : const Color(0xFFE4E7EC),
+                        borderRadius: BorderRadius.circular(
+                          McGyver.rsDoubleW(context, 2),
+                        ),
+                        border: Border.all(
+                          width: 0.3,
+                          color: isDarkMode
+                              ? const Color(0xFF667085)
+                              : const Color(0xFF98A2B3),
+                        ),
                       ),
-                    ),
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            PlusMinusText(
-                              width: McGyver.rsDoubleW(context, 35),
-                              value: "1 Hr",
-                              label: "Time Frame",
-                              onPlus: () {},
-                              onMinus: () {},
-                              onTextChanged: (val) {},
-                              hasMargin: false,
-                            ),
-                            PlusMinusText(
-                              width: McGyver.rsDoubleW(context, 35),
-                              value: "1.2311",
-                              label: "Current Price",
-                              onPlus: () {},
-                              onMinus: () {},
-                              onTextChanged: (val) {},
-                              hasMargin: false,
-                            ),
-                          ],
-                        ),
-                        verticalSpaceXSmall(context),
-                        Text(
-                          "In 1 Hour at 10:41 on 29th July 2023 your trade will automatically close",
-                          textAlign: TextAlign.start,
-                          style: CustomThemeData.generateStyle(
-                            fontSize: McGyver.textSize(context, 1.4),
-                            fontWeight: FontWeight.w500,
-                            color: isDarkMode
-                                ? const Color(0xFF98A2B3)
-                                : const Color(0xFF20A0F3),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              PlusMinusText(
+                                width: McGyver.rsDoubleW(context, 35),
+                                value: "1 Hr",
+                                label: "Time Frame",
+                                onPlus: () {},
+                                onMinus: () {},
+                                onTextChanged: (val) {},
+                                hasMargin: false,
+                              ),
+                              PlusMinusText(
+                                width: McGyver.rsDoubleW(context, 35),
+                                value: "1.2311",
+                                label: "Current Price",
+                                onPlus: () {},
+                                onMinus: () {},
+                                onTextChanged: (val) {},
+                                hasMargin: false,
+                              ),
+                            ],
                           ),
-                        ),
-                      ],
+                          verticalSpaceXSmall(context),
+                          Text(
+                            "In 1 Hour at 10:41 on 29th July 2023 your trade will automatically close",
+                            textAlign: TextAlign.start,
+                            style: CustomThemeData.generateStyle(
+                              fontSize: McGyver.textSize(context, 1.4),
+                              fontWeight: FontWeight.w500,
+                              color: isDarkMode
+                                  ? const Color(0xFF98A2B3)
+                                  : const Color(0xFF20A0F3),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],

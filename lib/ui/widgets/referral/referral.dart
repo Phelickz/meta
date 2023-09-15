@@ -6,6 +6,7 @@ import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/ui/widgets/referral/components/referral_tile.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/utils/color_manager.dart';
@@ -134,7 +135,9 @@ class ReferralPage extends StatelessWidget {
             ),
             CustomButtons.generalButton(
               context: context,
-              onTap: () {},
+              onTap: () async {
+                await Share.share('check out my app https://example.com');
+              },
               text: "Refer Now",
             ),
             verticalSpaceMedium(context),

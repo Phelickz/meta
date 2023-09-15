@@ -18,11 +18,20 @@ class TradeViewModel extends CustomBaseViewModel {
   bool isBuy = true;
   bool isEmpty = false;
   bool hasCredit = true;
+
+  bool _openDuration = false;
+  bool get openDuration => _openDuration;
+
   TradePageEnum _tradePageEnum = TradePageEnum.trade;
   TradePageEnum get tradePageEnum => _tradePageEnum;
 
   set tradePageEnum(TradePageEnum e) {
     _tradePageEnum = e;
+    rebuildUi();
+  }
+
+  set setOpenDuration(bool val) {
+    _openDuration = val;
     rebuildUi();
   }
 

@@ -230,7 +230,7 @@ class TransactionDetailsPage extends StatelessWidget {
           CustomButtons.generalButton(
             context: context,
             onTap: () {},
-            text: "Share Receipts",
+            text: "Report Transaction",
           ),
           verticalSpaceSmall(context),
           verticalSpaceSmall(context),

@@ -24,8 +24,10 @@ class MenuMainPage extends StatelessWidget {
           label: "Notifications",
           assetName: "assets/images/notification.svg",
           onTap: () {
-            viewModel.setSocialTradingPageEnum =
-                SocialTradingPageEnum.notification;
+            // viewModel.setSocialTradingPageEnum =
+            //     SocialTradingPageEnum.notification;
+
+            viewModel.push(const NotificationRoute());
           },
         ),
         OptionTile(

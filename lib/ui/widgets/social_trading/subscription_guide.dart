@@ -1,9 +1,13 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
+import 'package:meta_trader/ui/widgets/appbar.dart';
+import 'package:meta_trader/ui/widgets/skeleton.dart';
 
+@RoutePage()
 class SubscriptionGuidePage extends StatelessWidget {
   final SocialTradingViewModel viewModel;
   const SubscriptionGuidePage({super.key, required this.viewModel});
@@ -11,11 +15,13 @@ class SubscriptionGuidePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
-    return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: McGyver.rsDoubleW(context, 5),
-      ),
-      child: Column(
+    return Skeleton(
+      appBar: globalAppBar(
+          context, 'Subscription Guide', 'Learn about subscription setup', () {
+        viewModel.goBack();
+      }, []),
+      isBusy: viewModel.isBusy,
+      body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           verticalSpaceXSmall(context),

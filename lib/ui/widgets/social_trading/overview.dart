@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
+import 'package:meta_trader/ui/widgets/social_trading/components/cancel_sub_modal.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/filter_positon_modal.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
@@ -45,12 +47,30 @@ class TraderOverview extends StatelessWidget {
             ),
             child: CustomButtons.generalButton(
               context: context,
+              color: model.socialTradingPageEnum ==
+                      SocialTradingPageEnum.copiedTraderPosition
+                  ? Colors.red
+                  : Theme.of(context).primaryColor,
               onTap: () {
-                showFilterModal(context);
+                // showFilterModal(context);
                 // model.setSocialTradingPageEnum =
                 //     SocialTradingPageEnum.subscriptionSetup;
+                // if (model.socialTradingPageEnum ==
+                //     SocialTradingPageEnum.masterTraders) {
+                if (model.socialTradingPageEnum ==
+                    SocialTradingPageEnum.copiedTraderPosition) {
+                  showCancelCopyingModal(context, model);
+                } else {
+                  model.setSocialTradingPageEnum =
+                      SocialTradingPageEnum.subscriptionSetup;
+                  model.push(SubscriptionSetupPage(viewModel: model));
+                }
+                // }
               },
-              text: 'Setup Copying',
+              text: model.socialTradingPageEnum ==
+                      SocialTradingPageEnum.copiedTraderPosition
+                  ? 'Stop Copying'
+                  : 'Setup Copying',
             ),
           ),
           verticalSpaceSmall(context),
@@ -58,6 +78,28 @@ class TraderOverview extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void showCancelCopyingModal(BuildContext context, SocialTradingViewModel vm) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
+    showModalBottomSheet(
+        backgroundColor:
+            isDarkMode ? const Color(0xFF0C2031) : const Color(0xFFFAFDFF),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(McGyver.rsDoubleH(context, 2)),
+            topRight: Radius.circular(McGyver.rsDoubleH(context, 2)),
+          ),
+        ),
+        context: context,
+        isDismissible: true,
+        enableDrag: true,
+        isScrollControlled: true,
+        builder: (context) {
+          return CancelSubModal(
+            viewModel: vm,
+          );
+        });
   }
 
   Widget _summaryBottomComponent(
@@ -449,7 +491,7 @@ class TraderOverview extends StatelessWidget {
             valueListenable: viewModel.overviewSummaryTabSelectedNotifier,
             builder: (context, index, child) {
               return SizedBox(
-                height: McGyver.rsDoubleH(context, 6.5),
+                height: McGyver.rsDoubleH(context, 8.5),
                 child: IndexedStack(
                   index: index,
                   children: [

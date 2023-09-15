@@ -19,128 +19,154 @@ class OpenPositionsComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
-    return Column(
-      children: [
-        verticalSpaceSmall(context),
-        Container(
-          padding: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 3.5),
-            vertical: McGyver.rsDoubleH(context, 2),
-          ),
-          margin: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 6),
-          ),
-          decoration: BoxDecoration(
-            color:
-                isDarkMode ? const Color(0xFF052844) : const Color(0xFFFAFDFF),
-            borderRadius: BorderRadius.circular(McGyver.rsDoubleW(context, 4)),
-          ),
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Summary",
-                    style: CustomThemeData.generateStyle(
-                      fontSize: McGyver.textSize(context, 2),
-                      fontWeight: FontWeight.bold,
-                      color: isDarkMode
-                          ? const Color(0xFFFFFFFF)
-                          : const Color(0xFF667085),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          verticalSpaceSmall(context),
+          Container(
+            padding: EdgeInsets.symmetric(
+              horizontal: McGyver.rsDoubleW(context, 3.5),
+              vertical: McGyver.rsDoubleH(context, 2),
+            ),
+            margin: EdgeInsets.symmetric(
+              horizontal: McGyver.rsDoubleW(context, 6),
+            ),
+            decoration: BoxDecoration(
+              color: isDarkMode
+                  ? const Color(0xFF052844)
+                  : const Color(0xFFFAFDFF),
+              borderRadius:
+                  BorderRadius.circular(McGyver.rsDoubleW(context, 4)),
+            ),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Summary",
+                      style: CustomThemeData.generateStyle(
+                        fontSize: McGyver.textSize(context, 2),
+                        fontWeight: FontWeight.bold,
+                        color: isDarkMode
+                            ? const Color(0xFFFFFFFF)
+                            : const Color(0xFF667085),
+                      ),
                     ),
-                  ),
-                  CustomSummaryTab(
-                    firstTabName: "1W",
-                    secondTabName: "2W",
-                    thirdTabName: "1M",
-                    fourthTabName: "3M",
-                    fifthTabName: "6M",
-                    tabIndex: viewModel.openSummaryTabSelectedNotifier.value,
-                    onSelectTab: (val) {
-                      viewModel.openSummaryTabSelectedNotifier.value = val;
-                    },
-                  ),
-                ],
-              ),
-              verticalSpaceSmall(context),
-              ValueListenableBuilder<int>(
-                valueListenable: viewModel.openSummaryTabSelectedNotifier,
-                builder: (context, index, child) {
-                  return SizedBox(
-                    height: McGyver.rsDoubleH(context, 33),
-                    child: IndexedStack(
-                      index: index,
-                      children: [
-                        SummaryComponent(viewModel: viewModel),
-                        SummaryComponent(viewModel: viewModel),
-                        SummaryComponent(viewModel: viewModel),
-                        SummaryComponent(viewModel: viewModel),
-                        SummaryComponent(viewModel: viewModel),
-                      ],
+                    CustomSummaryTab(
+                      firstTabName: "1W",
+                      secondTabName: "2W",
+                      thirdTabName: "1M",
+                      fourthTabName: "3M",
+                      fifthTabName: "6M",
+                      tabIndex: viewModel.openSummaryTabSelectedNotifier.value,
+                      onSelectTab: (val) {
+                        viewModel.openSummaryTabSelectedNotifier.value = val;
+                      },
                     ),
-                  );
-                },
-              ),
-            ],
+                  ],
+                ),
+                verticalSpaceSmall(context),
+                ValueListenableBuilder<int>(
+                  valueListenable: viewModel.openSummaryTabSelectedNotifier,
+                  builder: (context, index, child) {
+                    return SizedBox(
+                      height: McGyver.rsDoubleH(context, 35),
+                      child: IndexedStack(
+                        index: index,
+                        children: [
+                          SummaryComponent(viewModel: viewModel),
+                          SummaryComponent(viewModel: viewModel),
+                          SummaryComponent(viewModel: viewModel),
+                          SummaryComponent(viewModel: viewModel),
+                          SummaryComponent(viewModel: viewModel),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
-        ),
 
-        //
-        verticalSpaceSmall(context),
-        verticalSpaceXSmall(context),
-        Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: McGyver.rsDoubleW(context, 6),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Positions",
-                style: CustomThemeData.generateStyle(
-                  fontSize: McGyver.textSize(context, 1.8),
-                  fontWeight: FontWeight.bold,
-                  color: isDarkMode
-                      ? const Color(0xFF98A2B3)
-                      : const Color(0xFF667085),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  showFilterModal(context);
-                },
-                child: SvgPicture.asset(
-                  "assets/icons/filter.svg",
-                  colorFilter: ColorFilter.mode(
-                    isDarkMode
-                        ? const Color(0xff98A2B3)
+          //
+          verticalSpaceSmall(context),
+          verticalSpaceXSmall(context),
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: McGyver.rsDoubleW(context, 6),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Positions",
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 1.8),
+                    fontWeight: FontWeight.bold,
+                    color: isDarkMode
+                        ? const Color(0xFF98A2B3)
                         : const Color(0xFF667085),
-                    BlendMode.srcIn,
                   ),
                 ),
-              )
-            ],
+                GestureDetector(
+                  onTap: () {
+                    showFilterModal(context);
+                  },
+                  child: SvgPicture.asset(
+                    "assets/icons/filter.svg",
+                    colorFilter: ColorFilter.mode(
+                      isDarkMode
+                          ? const Color(0xff98A2B3)
+                          : const Color(0xFF667085),
+                      BlendMode.srcIn,
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
-        ),
-        verticalSpaceXSmall(context),
-        Expanded(
-          child: ListView(
-            children: [
-              TradePositionTile(
-                tradeType: TradeType.buy,
-                viewModel: viewModel,
-                positionType: PositionType.open,
-              ),
-              TradePositionTile(
-                tradeType: TradeType.sell,
-                viewModel: viewModel,
-                positionType: PositionType.open,
-              ),
-            ],
+          verticalSpaceXSmall(context),
+          SizedBox(
+            height: McGyver.rsDoubleH(context, 100),
+            child: ListView(
+              physics: const NeverScrollableScrollPhysics(),
+              children: [
+                TradePositionTile(
+                  tradeType: TradeType.buy,
+                  viewModel: viewModel,
+                  positionType: PositionType.open,
+                ),
+                TradePositionTile(
+                  tradeType: TradeType.sell,
+                  viewModel: viewModel,
+                  positionType: PositionType.open,
+                ),
+                TradePositionTile(
+                  tradeType: TradeType.buy,
+                  viewModel: viewModel,
+                  positionType: PositionType.open,
+                ),
+                TradePositionTile(
+                  tradeType: TradeType.sell,
+                  viewModel: viewModel,
+                  positionType: PositionType.open,
+                ),
+                TradePositionTile(
+                  tradeType: TradeType.buy,
+                  viewModel: viewModel,
+                  positionType: PositionType.open,
+                ),
+                TradePositionTile(
+                  tradeType: TradeType.sell,
+                  viewModel: viewModel,
+                  positionType: PositionType.open,
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 

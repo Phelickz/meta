@@ -6,7 +6,9 @@ import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.da
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/filter_positon_modal.dart';
 
+import 'components/cancel_sub_modal.dart';
 import 'components/trade_position_tile.dart';
+import 'subscription_setup.dart';
 
 class TradingHistory extends StatelessWidget {
   const TradingHistory({super.key, required this.model});
@@ -67,15 +69,50 @@ class TradingHistory extends StatelessWidget {
         ),
         verticalSpaceXSmall(context),
         CustomButtons.generalButton(
-          context: context,
-          onTap: () {
-            showFilterModal(context);
-          },
-          text: 'Setup Copying',
-        ),
+            context: context,
+            color: model.socialTradingPageEnum ==
+                    SocialTradingPageEnum.copiedTraderPosition
+                ? Colors.red
+                : Theme.of(context).primaryColor,
+            onTap: () {
+              if (model.socialTradingPageEnum ==
+                  SocialTradingPageEnum.copiedTraderPosition) {
+                showCancelCopyingModal(context, model);
+              } else {
+                model.setSocialTradingPageEnum =
+                    SocialTradingPageEnum.subscriptionSetup;
+                model.push(SubscriptionSetupPage(viewModel: model));
+              }
+            },
+            text: model.socialTradingPageEnum ==
+                    SocialTradingPageEnum.copiedTraderPosition
+                ? 'Stop Copying'
+                : 'Start Copying'),
         verticalSpaceMedium(context)
       ],
     );
+  }
+
+  void showCancelCopyingModal(BuildContext context, SocialTradingViewModel vm) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
+    showModalBottomSheet(
+        backgroundColor:
+            isDarkMode ? const Color(0xFF0C2031) : const Color(0xFFFAFDFF),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(McGyver.rsDoubleH(context, 2)),
+            topRight: Radius.circular(McGyver.rsDoubleH(context, 2)),
+          ),
+        ),
+        context: context,
+        isDismissible: true,
+        enableDrag: true,
+        isScrollControlled: true,
+        builder: (context) {
+          return CancelSubModal(
+            viewModel: vm,
+          );
+        });
   }
 
   void showFilterModal(BuildContext context) {
