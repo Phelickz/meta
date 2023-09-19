@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/ui/widgets/security/components/change_password_modal.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/utils/theme.dart';
 import '../../views/security/security_view_model.dart';
+import '../manage_accounts/manage_accounts/manage_account_bottomsheet.dart';
 import 'components/security_option_tile.dart';
 
 class SecurityMainPage extends StatelessWidget {
@@ -111,7 +113,13 @@ class SecurityMainPage extends StatelessWidget {
           vm: model,
           label: "Disable Account",
           hasRedLabel: true,
-          onTap: () {},
+          onTap: () {
+            showDialog(
+                context: context,
+                builder: (context) {
+                  return const DisableccountDialog();
+                });
+          },
         ),
       ],
     );
@@ -135,5 +143,89 @@ class SecurityMainPage extends StatelessWidget {
         builder: (context) {
           return ChangePasswordModal(vm: model);
         });
+  }
+}
+
+class DisableccountDialog extends StatelessWidget {
+  const DisableccountDialog({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
+    return Dialog(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
+      elevation: 0,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      child: Container(
+        height: 170.pHeight(context),
+        width: 300.pWidth(context),
+        padding: EdgeInsets.symmetric(
+            vertical: 24.pHeight(context), horizontal: 12.pWidth(context)),
+        decoration: BoxDecoration(
+          color: Theme.of(context).scaffoldBackgroundColor,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              "Disable account",
+              style: Theme.of(context)
+                  .textTheme
+                  .labelLarge
+                  ?.copyWith(fontSize: 17),
+            ),
+            SizedBox(height: 12.pHeight(context)),
+            Text(
+              'Do you really want to disable account?',
+              style: Theme.of(context).textTheme.labelMedium,
+            ),
+            SizedBox(height: 24.pWidth(context)),
+            Row(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    height: 48.pHeight(context),
+                    width: 154.pWidth(context),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: Colors.red)),
+                    child: Center(
+                      child: Text(
+                        "Disable",
+                        style: CustomThemeData.generateStyle(
+                            fontSize: McGyver.textSize(context, 2),
+                            color: Colors.red,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 30.pWidth(context),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text(
+                    "Cancel",
+                    style: CustomThemeData.generateStyle(
+                        fontSize: McGyver.textSize(context, 2),
+                        color: isDarkMode ? Colors.white : Colors.black,
+                        fontWeight: FontWeight.w500),
+                  ),
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
+    );
   }
 }

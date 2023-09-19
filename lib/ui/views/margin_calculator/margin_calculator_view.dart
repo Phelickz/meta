@@ -34,7 +34,7 @@ class MarginCalculatorView extends StackedView<MarginCalculatorViewModel> {
         horizontal: McGyver.rsDoubleW(context, 0),
       ),
       appBar: globalAppBar(context, 'Margin Calculator', '', () {
-        viewModel.goBack();
+        Navigator.pop(context);
       }, []),
       body: Padding(
         padding: EdgeInsets.symmetric(

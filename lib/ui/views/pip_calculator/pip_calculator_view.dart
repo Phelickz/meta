@@ -34,7 +34,7 @@ class PipCalculatorView extends StackedView<PipCalculatorViewModel> {
         horizontal: McGyver.rsDoubleW(context, 0),
       ),
       appBar: globalAppBar(context, 'Pip Calculator', '', () {
-        viewModel.goBack();
+        Navigator.pop(context);
       }, []),
       body: Padding(
         padding: EdgeInsets.symmetric(

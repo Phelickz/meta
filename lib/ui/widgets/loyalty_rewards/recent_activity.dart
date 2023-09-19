@@ -18,7 +18,7 @@ class RecentActivity extends StatelessWidget {
     return Skeleton(
       isBusy: model.isBusy,
       appBar: globalAppBar(context, 'Recent Activities', '', () {
-        model.goBack();
+        Navigator.pop(context);
       }, []),
       body: SingleChildScrollView(
         child: Column(

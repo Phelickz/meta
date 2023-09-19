@@ -133,7 +133,7 @@ class _MarginBottomSheetCurrencyState extends State<MarginBottomSheetCurrency> {
                   widget.viewModel.setSelectedCurrency =
                       widget.viewModel.currency[index];
                   setState(() {});
-                  widget.viewModel.goBack();
+                  Navigator.pop(context);
                 });
               },
             ),

@@ -28,7 +28,7 @@ AppBar transactionsAppBar(
         ),
         onPressed: () {
           if (model.transactionsPageEnum == TransactionsPageEnum.transactions) {
-            model.goBack();
+            Navigator.pop(context);
           }
           if (model.transactionsPageEnum ==
               TransactionsPageEnum.transactionDetails) {

@@ -22,7 +22,7 @@ AppBar settingsAppBar(BuildContext context, String title, String subtitle,
         ),
         onPressed: () {
           if (settingsPageEnum == SettingsPageEnum.settings) {
-            model.goBack();
+            Navigator.pop(context);
           } else {
             model.setSettingsPageEnum = SettingsPageEnum.settings;
           }

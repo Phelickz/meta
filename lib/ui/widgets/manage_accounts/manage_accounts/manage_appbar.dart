@@ -27,7 +27,7 @@ AppBar maanageAccountAppBar(
     automaticallyImplyLeading: false,
     leading: IconButton(
         onPressed: () {
-          model.goBack();
+          Navigator.pop(context);
         },
         icon: Icon(
           Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,

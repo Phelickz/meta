@@ -48,6 +48,7 @@ dependencies:
   device_preview: ^1.1.0
   syncfusion_flutter_sliders:
   flutter_widget_from_html:
+  image_picker:
 
 dev_dependencies:
   flutter_test:

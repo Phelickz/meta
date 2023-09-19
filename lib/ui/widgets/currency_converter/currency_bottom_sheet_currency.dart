@@ -151,7 +151,7 @@ class _CurrencyConverterBottomSheetCurrencyState
                         widget.viewModel.currency[index];
                   }
                   setState(() {});
-                  widget.viewModel.goBack();
+                  Navigator.pop(context);
                 });
               },
             ),

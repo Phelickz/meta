@@ -61,17 +61,44 @@ class Skeleton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IgnorePointer(
-      ignoring: isBusy!,
-      child: Stack(
-        children: <Widget>[
-          GestureDetector(
-            onTap: () {
-              FocusScope.of(context).requestFocus(FocusNode());
-            },
-            child: Platform.isAndroid
-                ? SafeArea(
-                    child: Scaffold(
+    return WillPopScope(
+      onWillPop: () async {
+        return false;
+      },
+      child: IgnorePointer(
+        ignoring: isBusy!,
+        child: Stack(
+          children: <Widget>[
+            GestureDetector(
+              onTap: () {
+                FocusScope.of(context).requestFocus(FocusNode());
+              },
+              child: Platform.isAndroid
+                  ? SafeArea(
+                      child: Scaffold(
+                        key: scaffoldKey,
+                        resizeToAvoidBottomInset: true,
+                        backgroundColor: backgroundColor,
+                        appBar: appBar,
+                        body: Container(
+                          padding: bodyPadding ??
+                              EdgeInsets.symmetric(
+                                horizontal: McGyver.rsDoubleW(context, 6),
+                              ),
+                          child: body,
+                        ),
+                        floatingActionButton: floatingActionButton,
+                        floatingActionButtonAnimator:
+                            floatingActionButtonAnimator,
+                        floatingActionButtonLocation:
+                            floatingActionButtonLocation,
+                        drawer: drawer,
+                        endDrawer: endDrawer,
+                        bottomNavigationBar: bottomNavigationBar,
+                        bottomSheet: bottomSheet,
+                      ),
+                    )
+                  : Scaffold(
                       key: scaffoldKey,
                       resizeToAvoidBottomInset: true,
                       backgroundColor: backgroundColor,
@@ -93,34 +120,14 @@ class Skeleton extends StatelessWidget {
                       bottomNavigationBar: bottomNavigationBar,
                       bottomSheet: bottomSheet,
                     ),
+            ),
+            isBusy!
+                ? Busy(
+                    text: busyText ?? '',
                   )
-                : Scaffold(
-                    key: scaffoldKey,
-                    resizeToAvoidBottomInset: true,
-                    backgroundColor: backgroundColor,
-                    appBar: appBar,
-                    body: Container(
-                      padding: bodyPadding ??
-                          EdgeInsets.symmetric(
-                            horizontal: McGyver.rsDoubleW(context, 6),
-                          ),
-                      child: body,
-                    ),
-                    floatingActionButton: floatingActionButton,
-                    floatingActionButtonAnimator: floatingActionButtonAnimator,
-                    floatingActionButtonLocation: floatingActionButtonLocation,
-                    drawer: drawer,
-                    endDrawer: endDrawer,
-                    bottomNavigationBar: bottomNavigationBar,
-                    bottomSheet: bottomSheet,
-                  ),
-          ),
-          isBusy!
-              ? Busy(
-                  text: busyText ?? '',
-                )
-              : const SizedBox.shrink(),
-        ],
+                : const SizedBox.shrink(),
+          ],
+        ),
       ),
     );
   }

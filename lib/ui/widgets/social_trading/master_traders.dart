@@ -21,50 +21,12 @@ class MasterTraders extends StatelessWidget {
         child: Column(
           children: [
             verticalSpaceSmall(context),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Popular Traders',
-                  style: CustomThemeData.generateStyle(
-                    fontSize: McGyver.textSize(context, 2),
-                    fontWeight: FontWeight.bold,
-                    color: isDarkMode
-                        ? const Color(0xff98A2B3)
-                        : const Color(0xff475467),
-                  ),
-                ),
-                TextButton(onPressed: () {}, child: const Text('View more'))
-              ],
-            ),
-            verticalSpaceXSmall(context),
-            Column(
-              children: [
-                GestureDetector(onTap: () {
-                  model.push(MasterTraderOverview(model: model));
-                }, child: HigherSuccessRates(
-                  copyOnTap: () {
-                    model.push(MasterTraderOverview(model: model));
-                  },
-                )),
-                verticalSpaceSmall(context),
-                GestureDetector(onTap: () {
-                  model.push(MasterTraderOverview(model: model));
-                }, child: HigherSuccessRates(
-                  copyOnTap: () {
-                    model.push(MasterTraderOverview(model: model));
-                  },
-                )),
-                verticalSpaceSmall(context),
-                GestureDetector(onTap: () {
-                  model.push(MasterTraderOverview(model: model));
-                }, child: HigherSuccessRates(
-                  copyOnTap: () {
-                    model.push(MasterTraderOverview(model: model));
-                  },
-                )),
-              ],
-            ),
+            if (model.viewMoreEnum == null ||
+                model.viewMoreEnum == ViewMoreEnum.pt) ...[
+              PopularTraders(
+                model: model,
+              ),
+            ],
             verticalSpaceSmall(context),
             // SizedBox(
             //   height: McGyver.rsDoubleH(context, 50),
@@ -87,109 +49,20 @@ class MasterTraders extends StatelessWidget {
             //   ),
             // ),
             // verticalSpaceSmall(context),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Higher Success Rates',
-                  style: CustomThemeData.generateStyle(
-                    fontSize: McGyver.textSize(context, 2),
-                    fontWeight: FontWeight.bold,
-                    color: isDarkMode
-                        ? const Color(0xff98A2B3)
-                        : const Color(0xff475467),
-                  ),
-                ),
-                TextButton(onPressed: () {}, child: const Text('View more'))
-              ],
-            ),
-            verticalSpaceXSmall(context),
-            // verticalSpaceSmall(context),
-            // SizedBox(
-            //   height: McGyver.rsDoubleH(context, 50),
-            //   width: McGyver.rsDoubleW(context, 100),
-            //   child: ListView.separated(
-            //     physics: const NeverScrollableScrollPhysics(),
-            //     itemCount: 3,
-            //     itemBuilder: (context, index) {
-            //       return const HigherSuccessRates();
-            //     },
-            //     separatorBuilder: (BuildContext context, int index) {
-            //       return verticalSpaceXSmall(context);
-            //     },
-            //   ),
-            // ),
-            Column(
-              children: [
-                GestureDetector(onTap: () {
-                  model.push(MasterTraderOverview(model: model));
-                }, child: HigherSuccessRates(
-                  copyOnTap: () {
-                    model.push(MasterTraderOverview(model: model));
-                  },
-                )),
-                verticalSpaceSmall(context),
-                GestureDetector(onTap: () {
-                  model.push(MasterTraderOverview(model: model));
-                }, child: HigherSuccessRates(
-                  copyOnTap: () {
-                    model.push(MasterTraderOverview(model: model));
-                  },
-                )),
-                verticalSpaceSmall(context),
-                GestureDetector(onTap: () {
-                  model.push(MasterTraderOverview(model: model));
-                }, child: HigherSuccessRates(
-                  copyOnTap: () {
-                    model.push(MasterTraderOverview(model: model));
-                  },
-                )),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Low Commissions',
-                  style: CustomThemeData.generateStyle(
-                    fontSize: McGyver.textSize(context, 2),
-                    fontWeight: FontWeight.bold,
-                    color: isDarkMode
-                        ? const Color(0xff98A2B3)
-                        : const Color(0xff475467),
-                  ),
-                ),
-                TextButton(onPressed: () {}, child: const Text('View more'))
-              ],
-            ),
-            verticalSpaceXSmall(context),
-            Column(
-              children: [
-                GestureDetector(onTap: () {
-                  model.push(MasterTraderOverview(model: model));
-                }, child: HigherSuccessRates(
-                  copyOnTap: () {
-                    model.push(MasterTraderOverview(model: model));
-                  },
-                )),
-                verticalSpaceSmall(context),
-                GestureDetector(onTap: () {
-                  model.push(MasterTraderOverview(model: model));
-                }, child: HigherSuccessRates(
-                  copyOnTap: () {
-                    model.push(MasterTraderOverview(model: model));
-                  },
-                )),
-                verticalSpaceSmall(context),
-                GestureDetector(onTap: () {
-                  model.push(MasterTraderOverview(model: model));
-                }, child: HigherSuccessRates(
-                  copyOnTap: () {
-                    model.push(MasterTraderOverview(model: model));
-                  },
-                )),
-              ],
-            ),
+            if (model.viewMoreEnum == ViewMoreEnum.hsr ||
+                model.viewMoreEnum == null) ...[
+              HigherSuccessRatesCol(
+                model: model,
+              ),
+            ],
+
+            if (model.viewMoreEnum == ViewMoreEnum.lc ||
+                model.viewMoreEnum == null) ...[
+              LowCommissionCol(
+                model: model,
+              ),
+            ],
+
             // SizedBox(
             //   height: McGyver.rsDoubleH(context, 50),
             //   width: McGyver.rsDoubleW(context, 100),
@@ -208,6 +81,406 @@ class MasterTraders extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class PopularTraders extends StatelessWidget {
+  const PopularTraders({super.key, required this.model});
+  final SocialTradingViewModel model;
+
+  @override
+  Widget build(BuildContext context) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Popular Traders',
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 2),
+                fontWeight: FontWeight.bold,
+                color: isDarkMode
+                    ? const Color(0xff98A2B3)
+                    : const Color(0xff475467),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                if (model.viewMoreEnum == ViewMoreEnum.pt) {
+                  model.setViewMoreEnum = null;
+                } else {
+                  model.setViewMoreEnum = ViewMoreEnum.pt;
+                }
+              },
+              child: Text(
+                model.viewMoreEnum == ViewMoreEnum.pt
+                    ? 'hide more'
+                    : 'View more',
+              ),
+            )
+          ],
+        ),
+        verticalSpaceXSmall(context),
+        Column(
+          children: [
+            GestureDetector(onTap: () {
+              model.push(MasterTraderOverview(model: model));
+            }, child: HigherSuccessRates(
+              copyOnTap: () {
+                model.push(MasterTraderOverview(model: model));
+              },
+            )),
+            verticalSpaceSmall(context),
+            GestureDetector(onTap: () {
+              model.push(MasterTraderOverview(model: model));
+            }, child: HigherSuccessRates(
+              copyOnTap: () {
+                model.push(MasterTraderOverview(model: model));
+              },
+            )),
+            verticalSpaceSmall(context),
+            GestureDetector(
+              onTap: () {
+                model.push(MasterTraderOverview(model: model));
+              },
+              child: HigherSuccessRates(
+                copyOnTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+              ),
+            ),
+            if (model.viewMoreEnum == ViewMoreEnum.pt) ...[
+              verticalSpaceSmall(context),
+              GestureDetector(onTap: () {
+                model.push(MasterTraderOverview(model: model));
+              }, child: HigherSuccessRates(
+                copyOnTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+              )),
+              verticalSpaceSmall(context),
+              GestureDetector(onTap: () {
+                model.push(MasterTraderOverview(model: model));
+              }, child: HigherSuccessRates(
+                copyOnTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+              )),
+              verticalSpaceSmall(context),
+              GestureDetector(
+                onTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+                child: HigherSuccessRates(
+                  copyOnTap: () {
+                    model.push(MasterTraderOverview(model: model));
+                  },
+                ),
+              ),
+              verticalSpaceSmall(context),
+              GestureDetector(onTap: () {
+                model.push(MasterTraderOverview(model: model));
+              }, child: HigherSuccessRates(
+                copyOnTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+              )),
+              verticalSpaceSmall(context),
+              GestureDetector(onTap: () {
+                model.push(MasterTraderOverview(model: model));
+              }, child: HigherSuccessRates(
+                copyOnTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+              )),
+              verticalSpaceSmall(context),
+              GestureDetector(
+                onTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+                child: HigherSuccessRates(
+                  copyOnTap: () {
+                    model.push(MasterTraderOverview(model: model));
+                  },
+                ),
+              ),
+            ]
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class HigherSuccessRatesCol extends StatelessWidget {
+  const HigherSuccessRatesCol({super.key, required this.model});
+  final SocialTradingViewModel model;
+
+  @override
+  Widget build(BuildContext context) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Higher Success Rates',
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 2),
+                fontWeight: FontWeight.bold,
+                color: isDarkMode
+                    ? const Color(0xff98A2B3)
+                    : const Color(0xff475467),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                if (model.viewMoreEnum == ViewMoreEnum.hsr) {
+                  model.setViewMoreEnum = null;
+                } else {
+                  model.setViewMoreEnum = ViewMoreEnum.hsr;
+                }
+              },
+              child: Text(
+                model.viewMoreEnum == ViewMoreEnum.hsr
+                    ? 'hide more'
+                    : 'View more',
+              ),
+            )
+          ],
+        ),
+        verticalSpaceXSmall(context),
+        // verticalSpaceSmall(context),
+        // SizedBox(
+        //   height: McGyver.rsDoubleH(context, 50),
+        //   width: McGyver.rsDoubleW(context, 100),
+        //   child: ListView.separated(
+        //     physics: const NeverScrollableScrollPhysics(),
+        //     itemCount: 3,
+        //     itemBuilder: (context, index) {
+        //       return const HigherSuccessRates();
+        //     },
+        //     separatorBuilder: (BuildContext context, int index) {
+        //       return verticalSpaceXSmall(context);
+        //     },
+        //   ),
+        // ),
+        Column(
+          children: [
+            GestureDetector(onTap: () {
+              model.push(MasterTraderOverview(model: model));
+            }, child: HigherSuccessRates(
+              copyOnTap: () {
+                model.push(MasterTraderOverview(model: model));
+              },
+            )),
+            verticalSpaceSmall(context),
+            GestureDetector(onTap: () {
+              model.push(MasterTraderOverview(model: model));
+            }, child: HigherSuccessRates(
+              copyOnTap: () {
+                model.push(MasterTraderOverview(model: model));
+              },
+            )),
+            verticalSpaceSmall(context),
+            GestureDetector(onTap: () {
+              model.push(MasterTraderOverview(model: model));
+            }, child: HigherSuccessRates(
+              copyOnTap: () {
+                model.push(MasterTraderOverview(model: model));
+              },
+            )),
+            if (model.viewMoreEnum == ViewMoreEnum.hsr) ...[
+              verticalSpaceSmall(context),
+              GestureDetector(onTap: () {
+                model.push(MasterTraderOverview(model: model));
+              }, child: HigherSuccessRates(
+                copyOnTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+              )),
+              verticalSpaceSmall(context),
+              GestureDetector(onTap: () {
+                model.push(MasterTraderOverview(model: model));
+              }, child: HigherSuccessRates(
+                copyOnTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+              )),
+              verticalSpaceSmall(context),
+              GestureDetector(
+                onTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+                child: HigherSuccessRates(
+                  copyOnTap: () {
+                    model.push(MasterTraderOverview(model: model));
+                  },
+                ),
+              ),
+              verticalSpaceSmall(context),
+              GestureDetector(onTap: () {
+                model.push(MasterTraderOverview(model: model));
+              }, child: HigherSuccessRates(
+                copyOnTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+              )),
+              verticalSpaceSmall(context),
+              GestureDetector(onTap: () {
+                model.push(MasterTraderOverview(model: model));
+              }, child: HigherSuccessRates(
+                copyOnTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+              )),
+              verticalSpaceSmall(context),
+              GestureDetector(
+                onTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+                child: HigherSuccessRates(
+                  copyOnTap: () {
+                    model.push(MasterTraderOverview(model: model));
+                  },
+                ),
+              ),
+            ]
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class LowCommissionCol extends StatelessWidget {
+  const LowCommissionCol({super.key, required this.model});
+  final SocialTradingViewModel model;
+
+  @override
+  Widget build(BuildContext context) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
+    return Column(
+      children: [
+        verticalSpaceXSmall(context),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Low Commissions',
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 2),
+                fontWeight: FontWeight.bold,
+                color: isDarkMode
+                    ? const Color(0xff98A2B3)
+                    : const Color(0xff475467),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                if (model.viewMoreEnum == ViewMoreEnum.lc) {
+                  model.setViewMoreEnum = null;
+                } else {
+                  model.setViewMoreEnum = ViewMoreEnum.lc;
+                }
+              },
+              child: Text(
+                model.viewMoreEnum == ViewMoreEnum.lc
+                    ? 'hide more'
+                    : 'View more',
+              ),
+            )
+          ],
+        ),
+        verticalSpaceXSmall(context),
+        Column(
+          children: [
+            GestureDetector(onTap: () {
+              model.push(MasterTraderOverview(model: model));
+            }, child: HigherSuccessRates(
+              copyOnTap: () {
+                model.push(MasterTraderOverview(model: model));
+              },
+            )),
+            verticalSpaceSmall(context),
+            GestureDetector(onTap: () {
+              model.push(MasterTraderOverview(model: model));
+            }, child: HigherSuccessRates(
+              copyOnTap: () {
+                model.push(MasterTraderOverview(model: model));
+              },
+            )),
+            verticalSpaceSmall(context),
+            GestureDetector(onTap: () {
+              model.push(MasterTraderOverview(model: model));
+            }, child: HigherSuccessRates(
+              copyOnTap: () {
+                model.push(MasterTraderOverview(model: model));
+              },
+            )),
+            if (model.viewMoreEnum == ViewMoreEnum.lc) ...[
+              verticalSpaceSmall(context),
+              GestureDetector(onTap: () {
+                model.push(MasterTraderOverview(model: model));
+              }, child: HigherSuccessRates(
+                copyOnTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+              )),
+              verticalSpaceSmall(context),
+              GestureDetector(onTap: () {
+                model.push(MasterTraderOverview(model: model));
+              }, child: HigherSuccessRates(
+                copyOnTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+              )),
+              verticalSpaceSmall(context),
+              GestureDetector(
+                onTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+                child: HigherSuccessRates(
+                  copyOnTap: () {
+                    model.push(MasterTraderOverview(model: model));
+                  },
+                ),
+              ),
+              verticalSpaceSmall(context),
+              GestureDetector(onTap: () {
+                model.push(MasterTraderOverview(model: model));
+              }, child: HigherSuccessRates(
+                copyOnTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+              )),
+              verticalSpaceSmall(context),
+              GestureDetector(onTap: () {
+                model.push(MasterTraderOverview(model: model));
+              }, child: HigherSuccessRates(
+                copyOnTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+              )),
+              verticalSpaceSmall(context),
+              GestureDetector(
+                onTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+                child: HigherSuccessRates(
+                  copyOnTap: () {
+                    model.push(MasterTraderOverview(model: model));
+                  },
+                ),
+              ),
+            ]
+          ],
+        ),
+      ],
     );
   }
 }

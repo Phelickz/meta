@@ -29,7 +29,7 @@ AppBar helpAndSupportAppBar(
         ),
         onPressed: () {
           if (helpAndSupportPageEnum == HelpAndSupportPageEnum.helpAndSupport) {
-            model.goBack();
+            Navigator.pop(context);
           } else {
             model.setHelpAndSupportPageEnum =
                 HelpAndSupportPageEnum.helpAndSupport;

@@ -9,6 +9,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/ui/views/price_sentiments/price_sentiments_view_model.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/home/price_sentiments.dart';
 import 'package:meta_trader/ui/widgets/home/trading_tools.dart';
@@ -159,7 +160,7 @@ class HomeView extends StackedView<HomeViewModel> {
                         onTap: () {
                           viewModel.push(const ForexNewsRoute());
                         },
-                        image: 'assets/images/trade.svg',
+                        image: 'assets/images/forex-news.svg',
                         title: 'Forex News',
                         subtitle: 'Stay up to date with forex news',
                       ),
@@ -167,7 +168,7 @@ class HomeView extends StackedView<HomeViewModel> {
                         onTap: () {
                           viewModel.push(ChartRoute(showBackButton: true));
                         },
-                        image: 'assets/images/trade.svg',
+                        image: 'assets/images/loyalty-re.svg',
                         title: 'Chart Analysis',
                         subtitle: 'Copy and earn with experienced traders',
                       ),
@@ -196,28 +197,28 @@ class HomeView extends StackedView<HomeViewModel> {
                   // scrollDirection: Axis.horizontal,
                   children: [
                     TradingTools(
-                      image: 'assets/images/trade.svg',
+                      image: 'assets/images/profit_calc.svg',
                       text: 'Profit calculator',
                       onTap: () {
                         viewModel.push(const ProfitCalculatorRoute());
                       },
                     ),
                     TradingTools(
-                      image: 'assets/images/trade.svg',
+                      image: 'assets/images/currency_conv.svg',
                       text: 'Currency converter',
                       onTap: () {
                         viewModel.push(const CurrencyConverterRoute());
                       },
                     ),
                     TradingTools(
-                      image: 'assets/images/trade.svg',
+                      image: 'assets/images/pips_calc.svg',
                       text: 'Pips calculator',
                       onTap: () {
                         viewModel.push(const PipCalculatorRoute());
                       },
                     ),
                     TradingTools(
-                      image: 'assets/images/trade.svg',
+                      image: 'assets/images/margin_calc.svg',
                       text: 'Margin calculator',
                       onTap: () {
                         viewModel.push(const MarginCalculatorRoute());
@@ -319,7 +320,10 @@ class HomeView extends StackedView<HomeViewModel> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        viewModel.push(const PriceSentimentsRoute());
+                        // viewModel.push(const PriceSentimentsRoute());
+                        final m = PriceSentimentViewModel();
+                        m.setSelectedPrice = 'AUDUSD';
+                        viewModel.push(PriceSentimentDetails(model: m));
                       },
                       child: const PriceSentiments(
                         pair: 'AUDUSD',
@@ -328,7 +332,9 @@ class HomeView extends StackedView<HomeViewModel> {
                     verticalSpaceSmall(context),
                     GestureDetector(
                       onTap: () {
-                        viewModel.push(const PriceSentimentsRoute());
+                        final m = PriceSentimentViewModel();
+                        m.setSelectedPrice = 'AUDUSD';
+                        viewModel.push(PriceSentimentDetails(model: m));
                       },
                       child: const PriceSentiments(
                         pair: 'AUDUSD',
@@ -337,7 +343,9 @@ class HomeView extends StackedView<HomeViewModel> {
                     verticalSpaceSmall(context),
                     GestureDetector(
                       onTap: () {
-                        viewModel.push(const PriceSentimentsRoute());
+                        final m = PriceSentimentViewModel();
+                        m.setSelectedPrice = 'AUDUSD';
+                        viewModel.push(PriceSentimentDetails(model: m));
                       },
                       child: const PriceSentiments(
                         pair: 'AUDUSD',

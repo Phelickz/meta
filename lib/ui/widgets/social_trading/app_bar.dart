@@ -293,7 +293,7 @@ AppBar socialTradingCustomAppBar(BuildContext context, String title,
           if (viewModel.socialTradingPageEnum ==
               SocialTradingPageEnum.subscriptionSetup) {
             viewModel.setSocialTradingPageEnum = SocialTradingPageEnum.myTrades;
-            viewModel.goBack();
+            Navigator.pop(context);
           }
         }),
     centerTitle: false,

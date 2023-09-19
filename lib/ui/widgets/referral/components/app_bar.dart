@@ -21,7 +21,7 @@ AppBar referralAppBar(
           color: isDarkMode ? Colors.white : Colors.black,
         ),
         onPressed: () {
-          model.goBack();
+          Navigator.pop(context);
         }),
     centerTitle: false,
     title: Text(

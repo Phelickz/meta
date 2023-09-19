@@ -24,7 +24,7 @@ AppBar tradeHistoryAppBar(BuildContext context, String title, String subtitle,
           color: isDarkMode ? const Color(0xffD2D2D2) : Colors.black,
         ),
         onPressed: () {
-          model.goBack();
+          Navigator.pop(context);
         }),
     centerTitle: false,
     title: Text(

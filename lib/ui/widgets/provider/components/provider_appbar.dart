@@ -32,9 +32,9 @@ class ProviderAppbar {
             } else if (model.providerPageEnum == ProviderPageEnum.followers) {
               model.setProviderPageEnum = ProviderPageEnum.dashboard;
             } else {
-              model.goBack();
+              Navigator.pop(context);
             }
-            // model.goBack();
+            // Navigator.pop(context);
           }),
       centerTitle: false,
       title: Column(
@@ -80,7 +80,7 @@ class ProviderAppbar {
             color: model.isDarkMode() ? const Color(0xffD2D2D2) : Colors.black,
           ),
           onPressed: () {
-            model.goBack();
+            Navigator.pop(context);
           }),
       centerTitle: true,
       title: Container(

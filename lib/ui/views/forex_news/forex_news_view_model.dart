@@ -43,7 +43,7 @@ class ForexNewsViewModel extends CustomBaseViewModel {
           'Forex News',
           '',
           () {
-            goBack();
+            Navigator.pop(context);
           },
           [
             IconButton(
@@ -59,7 +59,8 @@ class ForexNewsViewModel extends CustomBaseViewModel {
         );
       case ForexNewsViewEnum.currencyPairs:
         return globalAppBar(context, 'Forex News', '', () {
-          goBack();
+          //  Navigator.pop(context);
+          Navigator.pop(context);
         }, [
           IconButton(
             onPressed: () {
@@ -73,7 +74,7 @@ class ForexNewsViewModel extends CustomBaseViewModel {
         ]);
       case ForexNewsViewEnum.metals:
         return globalAppBar(context, 'Forex News', '', () {
-          goBack();
+          Navigator.pop(context);
         }, [
           IconButton(
             onPressed: () {
@@ -87,7 +88,7 @@ class ForexNewsViewModel extends CustomBaseViewModel {
         ]);
       case ForexNewsViewEnum.cryptoCurrency:
         return globalAppBar(context, 'Forex News', '', () {
-          goBack();
+          Navigator.pop(context);
         }, [
           IconButton(
             onPressed: () {

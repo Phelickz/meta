@@ -179,7 +179,7 @@ PreferredSize profileAppBar(
       backgroundColor:
           isDarkMode ? const Color(0xff052844) : Theme.of(context).primaryColor,
       automaticallyImplyLeading: false,
-      toolbarHeight: Platform.isIOS ? kToolbarHeight : kToolbarHeight + 20,
+      toolbarHeight: Platform.isIOS ? kToolbarHeight + 10 : kToolbarHeight + 20,
       elevation: 0,
       actions: [
         SizedBox(

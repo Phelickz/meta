@@ -1,12 +1,16 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/price_sentiments/price_sentiments_view_model.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
+import 'package:meta_trader/ui/widgets/appbar.dart';
+import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/custom_overview_summary_tab.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
+@RoutePage()
 class PriceSentimentDetails extends StatelessWidget {
   const PriceSentimentDetails({super.key, required this.model});
   final PriceSentimentViewModel model;
@@ -14,11 +18,42 @@ class PriceSentimentDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
-    return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: McGyver.rsDoubleW(context, 5),
+    return Skeleton(
+      isBusy: model.isBusy,
+      appBar: globalAppBar(
+        context,
+        model.selectedPrice,
+        'Price sentiments',
+        () {
+          Navigator.pop(context);
+        },
+        [
+          IconButton(
+            padding: EdgeInsets.zero,
+            onPressed: () {
+              print(model.stars);
+              if (model.stars.contains(1)) {
+                model.removeStar(1);
+              } else {
+                model.addStar(1);
+              }
+            },
+            icon: Icon(
+              Icons.star,
+              size: 27,
+              color: isDarkMode
+                  ? model.stars.contains(1)
+                      ? Colors.amber[300]
+                      : Colors.black45
+                  : model.stars.contains(1)
+                      ? Colors.amber
+                      : Colors.black45,
+            ),
+          ),
+          horizontalSpaceSmall(context),
+        ],
       ),
-      child: SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

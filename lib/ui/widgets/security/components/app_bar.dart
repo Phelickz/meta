@@ -21,7 +21,7 @@ AppBar securityAppBar(BuildContext context, String title, String subtitle,
         ),
         onPressed: () {
           if (model.securityPageEnum == SecurityPageEnum.main) {
-            model.goBack();
+            Navigator.pop(context);
           }
 
           if (model.securityPageEnum == SecurityPageEnum.passkey) {
@@ -97,7 +97,7 @@ PreferredSizeWidget securityAppBar2(BuildContext context, String title,
         child: CustomBackButton(
           onTap: () {
             if (model.securityPageEnum == SecurityPageEnum.main) {
-              model.goBack();
+              Navigator.pop(context);
             }
 
             if (model.securityPageEnum == SecurityPageEnum.passkey) {

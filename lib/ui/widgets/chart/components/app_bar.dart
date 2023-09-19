@@ -22,7 +22,7 @@ AppBar chartAppBar(
                 Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
                 color: isDarkMode ? const Color(0xffD2D2D2) : Colors.black),
             onPressed: () {
-              model.goBack();
+              Navigator.pop(context);
             })
         : null,
     centerTitle: true,

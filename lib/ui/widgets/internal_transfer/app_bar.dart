@@ -23,13 +23,13 @@ AppBar internalAccountAppBar(BuildContext context, String title,
       onPressed: () {
         if (model.internalTransferPageEnum ==
             InternalAccountPageEnum.selectAccount) {
-          model.goBack();
+          Navigator.pop(context);
         } else if (model.internalTransferPageEnum ==
             InternalAccountPageEnum.selectDestination) {
           model.setInternalAccountPageEnum =
               InternalAccountPageEnum.selectAccount;
         } else {
-          model.goBack();
+          Navigator.pop(context);
         }
       },
     ),

@@ -46,11 +46,29 @@ enum TransactionsTypeEnum { withdrawal, deposit, internalTransfer }
 
 enum TransactionStatusEnum { successful, pending, failed }
 
+enum ViewMoreEnum { pt, hsr, lc }
+
 class SocialTradingViewModel extends CustomBaseViewModel {
   late TransactionModel _transaction;
 
   bool _showBalance = true;
   bool get showBalance => _showBalance;
+
+  ViewMoreEnum? _viewMoreEnum;
+  ViewMoreEnum? get viewMoreEnum => _viewMoreEnum;
+
+  int _viewMoreCount = 3;
+  int get viewMoreCount => _viewMoreCount;
+
+  set setViewMoreEnum(ViewMoreEnum? vm) {
+    _viewMoreEnum = vm;
+    rebuildUi();
+  }
+
+  set setViewMoreCount(int vm) {
+    _viewMoreCount = vm;
+    rebuildUi();
+  }
 
   set setTransaction(TransactionModel t) {
     _transaction = t;

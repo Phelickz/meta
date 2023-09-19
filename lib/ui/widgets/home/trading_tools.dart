@@ -34,11 +34,14 @@ class TradingTools extends StatelessWidget {
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(17.0),
                 child: Center(
                   child: SvgPicture.asset(
                     image,
-                    color: isDarkMode ? const Color(0xff8ACDF9) : Colors.white,
+                    height: 32,
+                    color: isDarkMode
+                        ? const Color(0xff8ACDF9)
+                        : const Color(0xffecf7fe),
                   ),
                 ),
               ),

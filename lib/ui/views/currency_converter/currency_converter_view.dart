@@ -32,7 +32,7 @@ class CurrencyConverterView extends StackedView<CurrencyConverterViewModel> {
         horizontal: McGyver.rsDoubleW(context, 0),
       ),
       appBar: globalAppBar(context, 'Currency Converter', '', () {
-        viewModel.goBack();
+        Navigator.pop(context);
       }, []),
       body: Padding(
         padding: EdgeInsets.symmetric(

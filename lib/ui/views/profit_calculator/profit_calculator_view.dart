@@ -34,7 +34,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
         horizontal: McGyver.rsDoubleW(context, 0),
       ),
       appBar: globalAppBar(context, 'Profit Calculator', '', () {
-        viewModel.goBack();
+        Navigator.pop(context);
       }, []),
       body: Padding(
         padding: EdgeInsets.symmetric(

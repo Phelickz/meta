@@ -133,7 +133,7 @@ class _ProfitBottomSheetCurrencyState extends State<ProfitBottomSheetCurrency> {
                   widget.viewModel.setSelectedCurrency =
                       widget.viewModel.currency[index];
                   setState(() {});
-                  widget.viewModel.goBack();
+                  Navigator.pop(context);
                 });
               },
             ),

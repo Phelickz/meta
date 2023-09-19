@@ -22,7 +22,7 @@ AppBar withdrawFundAppBar(BuildContext context, String title, String subtitle,
       ),
       onPressed: () {
         if (model.withdrawFundPageEnum == WithdrawFundPageEnum.selectAccount) {
-          model.goBack();
+          Navigator.pop(context);
         } else if (model.withdrawFundPageEnum ==
             WithdrawFundPageEnum.paymentMethods) {
           model.setWithdrawFundViewEnum = WithdrawFundPageEnum.selectAccount;

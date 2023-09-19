@@ -35,7 +35,7 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
               'Loyalty Rewards',
               '',
               () {
-                viewModel.goBack();
+                Navigator.pop(context);
               },
               [
                 if (viewModel.loyaltyRewardsViewEnum ==

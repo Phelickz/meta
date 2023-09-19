@@ -32,7 +32,7 @@ class MasterTraderOverview extends StatelessWidget {
             color: isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
-            model.goBack();
+            Navigator.pop(context);
           },
         ),
         title: Row(

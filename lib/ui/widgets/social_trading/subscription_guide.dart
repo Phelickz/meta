@@ -18,7 +18,7 @@ class SubscriptionGuidePage extends StatelessWidget {
     return Skeleton(
       appBar: globalAppBar(
           context, 'Subscription Guide', 'Learn about subscription setup', () {
-        viewModel.goBack();
+        Navigator.pop(context);
       }, []),
       isBusy: viewModel.isBusy,
       body: Column(

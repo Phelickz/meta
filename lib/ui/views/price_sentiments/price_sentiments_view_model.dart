@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
-import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/appbar.dart';
@@ -33,6 +32,19 @@ class PriceSentimentViewModel extends CustomBaseViewModel {
   final performanceSummaryTabSelectedNotifier = ValueNotifier(0);
   final overviewSummaryTabSelectedNotifier = ValueNotifier(0);
 
+  List<int> _stars = [];
+  List<int> get stars => _stars;
+
+  void addStar(int val) {
+    _stars.add(val);
+    rebuildUi();
+  }
+
+  void removeStar(int val) {
+    _stars.remove(val);
+    rebuildUi();
+  }
+
   set setTyping(bool val) {
     _isTyping = val;
     rebuildUi();
@@ -56,27 +68,27 @@ class PriceSentimentViewModel extends CustomBaseViewModel {
   AppBar? returnAppbar(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     switch (priceSentimentPageEnum) {
-      case PriceSentimentPageEnum.details:
-        return globalAppBar(
-          context,
-          selectedPrice,
-          'Price sentiments',
-          () {
-            setPriceSentimentPageEnum = PriceSentimentPageEnum.home;
-          },
-          [
-            IconButton(
-              padding: EdgeInsets.zero,
-              onPressed: () {},
-              icon: Icon(
-                Icons.star,
-                size: 27,
-                color: isDarkMode ? Colors.white70 : Colors.amber,
-              ),
-            ),
-            horizontalSpaceSmall(context),
-          ],
-        );
+      // case PriceSentimentPageEnum.details:
+      //   return globalAppBar(
+      //     context,
+      //     selectedPrice,
+      //     'Price sentiments',
+      //     () {
+      //       setPriceSentimentPageEnum = PriceSentimentPageEnum.home;
+      //     },
+      //     [
+      //       IconButton(
+      //         padding: EdgeInsets.zero,
+      //         onPressed: () {},
+      //         icon: Icon(
+      //           Icons.star,
+      //           size: 27,
+      //           color: isDarkMode ? Colors.white70 : Colors.amber,
+      //         ),
+      //       ),
+      //       horizontalSpaceSmall(context),
+      //     ],
+      //   );
       case PriceSentimentPageEnum.search:
         return globalAppBar(
           context,
@@ -100,7 +112,7 @@ class PriceSentimentViewModel extends CustomBaseViewModel {
               color: isDarkMode ? Colors.white : Colors.black,
             ),
             onPressed: () {
-              goBack();
+              Navigator.pop(context);
             },
           ),
           actions: [

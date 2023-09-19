@@ -29,6 +29,15 @@ class MetaTraderApp extends StatelessWidget {
           // theme: ThemeData(brightness: Brightness.light, fontFamily: 'Gilroy'),
           darkTheme: darkTheme,
           // home: const ProviderView(),
+          builder: (context, child) {
+            final mediaQueryData = MediaQuery.of(context);
+            final scale = mediaQueryData.textScaleFactor.clamp(0.8, 0.9);
+            return MediaQuery(
+              child: child ?? Container(),
+              // data: MediaQuery.of(context).copyWith(textScaleFactor: 0.8),
+              data: MediaQuery.of(context).copyWith(textScaleFactor: scale),
+            );
+          },
         );
 
         // return MaterialApp(

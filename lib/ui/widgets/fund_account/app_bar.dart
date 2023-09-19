@@ -22,7 +22,7 @@ AppBar fundAccountAppBar(BuildContext context, String title, String subtitle,
       ),
       onPressed: () {
         if (model.fundAccountPageEnum == FundAccountPageEnum.selectAccount) {
-          model.goBack();
+          Navigator.pop(context);
         } else if (model.fundAccountPageEnum ==
             FundAccountPageEnum.selectDepositMethod) {
           model.setFundAccountPageEnum = FundAccountPageEnum.selectAccount;

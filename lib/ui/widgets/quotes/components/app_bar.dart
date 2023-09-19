@@ -42,7 +42,7 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
               } else if (model.quotesPageEnum == QuotesPageEnum.search) {
                 model.setQuotesPageEnum = QuotesPageEnum.markets;
               } else {
-                model.goBack();
+                Navigator.pop(context);
               }
             }),
     centerTitle: model.quotesPageEnum == QuotesPageEnum.markets ||

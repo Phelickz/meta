@@ -22,8 +22,9 @@ class InternalTransferAmount extends StatelessWidget {
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Skeleton(
-      appBar: globalAppBar(
-          context, 'Amount', 'Enter amount to transfer', () {}, []),
+      appBar: globalAppBar(context, 'Amount', 'Enter amount to transfer', () {
+        Navigator.pop(context);
+      }, []),
       isBusy: model.isBusy,
       body: Column(
         children: [

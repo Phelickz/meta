@@ -27,7 +27,7 @@ class SubscriptionSetupPage extends StatelessWidget {
     return Skeleton(
       isBusy: viewModel.isBusy,
       appBar: globalAppBar(context, 'Subscription Setup', '', () {
-        viewModel.goBack();
+        Navigator.pop(context);
       }, [
         IconButton(
           onPressed: () {

@@ -24,7 +24,7 @@ AppBar paymentMethodAppBar(BuildContext context, String title, String subtitle,
         ),
         onPressed: () {
           if (model.paymentMethodPageEnum == PaymentMethodPageEnum.main) {
-            model.goBack();
+            Navigator.pop(context);
           }
 
           if (model.paymentMethodPageEnum == PaymentMethodPageEnum.binancePay) {
@@ -125,7 +125,7 @@ PreferredSizeWidget paymentMethodAppBar2(BuildContext context, String title,
         child: CustomBackButton(
           onTap: () {
             if (model.paymentMethodPageEnum == PaymentMethodPageEnum.main) {
-              model.goBack();
+              Navigator.pop(context);
             }
 
             if (model.paymentMethodPageEnum ==

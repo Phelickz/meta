@@ -32,7 +32,7 @@ AppBar tradeAppBar(
             ),
             onPressed: () {
               if (model.tradePageEnum == TradePageEnum.trade) {
-                model.goBack();
+                Navigator.pop(context);
               }
               if (model.tradePageEnum == TradePageEnum.modifyTrade) {
                 model.tradePageEnum = TradePageEnum.trade;

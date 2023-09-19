@@ -81,58 +81,58 @@ class RealPage extends StatelessWidget {
               hintText: '+1234567890',
             ),
             verticalSpaceSmall(context),
-            Text(
-              'Language',
-              style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.8),
-                color: isDarkMode ? Colors.white : const Color(0xff667085),
-              ),
-            ),
-            verticalSpaceXSmall(context),
-            CustomTextFields(
-              hintText: 'Select language',
-              password: false,
-              suffixIcon: Icon(
-                Icons.arrow_forward_ios,
-                size: 20,
-                color: Theme.of(context).secondaryHeaderColor,
-              ),
-            ),
-            verticalSpaceSmall(context),
-            verticalSpaceSmall(context),
-            Text(
-              'Enter Account Information',
-              style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.6),
-                color: Theme.of(context).primaryColor,
-              ),
-            ),
-            verticalSpaceSmall(context),
-            Text(
-              'Country',
-              style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.8),
-                color: isDarkMode ? Colors.white : const Color(0xff667085),
-              ),
-            ),
-            verticalSpaceXSmall(context),
-            CustomTextFields(
-              hintText: 'Nigeria',
-              password: false,
-              suffixIcon: Icon(
-                Icons.arrow_forward_ios,
-                size: 20,
-                color: Theme.of(context).secondaryHeaderColor,
-              ),
-            ),
-            verticalSpaceSmall(context),
-            Text(
-              'Use Hedge',
-              style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.8),
-                color: isDarkMode ? Colors.white : const Color(0xff667085),
-              ),
-            ),
+            // Text(
+            //   'Language',
+            //   style: CustomThemeData.generateStyle(
+            //     fontSize: McGyver.textSize(context, 1.8),
+            //     color: isDarkMode ? Colors.white : const Color(0xff667085),
+            //   ),
+            // ),
+            // verticalSpaceXSmall(context),
+            // CustomTextFields(
+            //   hintText: 'Select language',
+            //   password: false,
+            //   suffixIcon: Icon(
+            //     Icons.arrow_forward_ios,
+            //     size: 20,
+            //     color: Theme.of(context).secondaryHeaderColor,
+            //   ),
+            // ),
+            // verticalSpaceSmall(context),
+            // verticalSpaceSmall(context),
+            // Text(
+            //   'Enter Account Information',
+            //   style: CustomThemeData.generateStyle(
+            //     fontSize: McGyver.textSize(context, 1.6),
+            //     color: Theme.of(context).primaryColor,
+            //   ),
+            // ),
+            // verticalSpaceSmall(context),
+            // Text(
+            //   'Country',
+            //   style: CustomThemeData.generateStyle(
+            //     fontSize: McGyver.textSize(context, 1.8),
+            //     color: isDarkMode ? Colors.white : const Color(0xff667085),
+            //   ),
+            // ),
+            // verticalSpaceXSmall(context),
+            // CustomTextFields(
+            //   hintText: 'Nigeria',
+            //   password: false,
+            //   suffixIcon: Icon(
+            //     Icons.arrow_forward_ios,
+            //     size: 20,
+            //     color: Theme.of(context).secondaryHeaderColor,
+            //   ),
+            // ),
+            // verticalSpaceSmall(context),
+            // Text(
+            //   'Use Hedge',
+            //   style: CustomThemeData.generateStyle(
+            //     fontSize: McGyver.textSize(context, 1.8),
+            //     color: isDarkMode ? Colors.white : const Color(0xff667085),
+            //   ),
+            // ),
             verticalSpaceXSmall(context),
             CustomTextFields(
               hintText: 'Preliminary Account',

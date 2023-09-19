@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/price_sentiments/price_sentiments_view_model.dart';
 import 'package:meta_trader/ui/widgets/home/price_sentiments.dart';
@@ -111,8 +112,12 @@ class SearchPriceSentiments extends StatelessWidget {
               itemBuilder: (context, index) {
                 return GestureDetector(
                   onTap: () {
-                    model.setPriceSentimentPageEnum =
-                        PriceSentimentPageEnum.details;
+                    // model.setPriceSentimentPageEnum =
+                    //     PriceSentimentPageEnum.details;
+                    // model.setSelectedPrice = 'AUDUSD';
+                    model.push(PriceSentimentDetails(model: model));
+                    // viewModel.setPriceSentimentPageEnum =
+                    //     PriceSentimentPageEnum.details;
                     model.setSelectedPrice = 'AUDUSD';
                   },
                   child: PriceSentiments(
@@ -120,11 +125,23 @@ class SearchPriceSentiments extends StatelessWidget {
                     big: true,
                     iconButton: IconButton(
                       padding: EdgeInsets.zero,
-                      onPressed: () {},
+                      onPressed: () {
+                        if (model.stars.contains(index)) {
+                          model.removeStar(index);
+                        } else {
+                          model.addStar(index);
+                        }
+                      },
                       icon: Icon(
                         Icons.star,
                         size: 27,
-                        color: isDarkMode ? Colors.amber[300] : Colors.amber,
+                        color: isDarkMode
+                            ? model.stars.contains(index)
+                                ? Colors.amber[300]
+                                : Colors.black45
+                            : model.stars.contains(index)
+                                ? Colors.amber
+                                : Colors.black45,
                       ),
                     ),
                   ),

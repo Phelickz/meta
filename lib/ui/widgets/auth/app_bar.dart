@@ -21,12 +21,14 @@ AppBar authAppBar(
       ),
       onPressed: () {
         if (model.authPageEnum == AuthPageEnum.broker) {
-          model.goBack();
+          Navigator.pop(context);
         }
 
         if (model.authPageEnum == AuthPageEnum.chooseAccount) {
           // model.setAuthPageEnum = AuthPageEnum.broker;
-          model.goBack();
+          // print("here");
+          Navigator.pop(context);
+          // Navigator.pop(context);
         }
 
         if (model.authPageEnum == AuthPageEnum.login) {

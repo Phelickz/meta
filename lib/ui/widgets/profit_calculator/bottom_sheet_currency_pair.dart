@@ -134,7 +134,7 @@ class _ProfitBottomSheetCurrencyPairState
                   widget.viewModel.setSelectedCurrencyPair =
                       widget.viewModel.currencyPair[index];
                   setState(() {});
-                  widget.viewModel.goBack();
+                  Navigator.pop(context);
                 });
               },
             ),
