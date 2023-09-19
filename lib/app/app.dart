@@ -3,6 +3,7 @@ import 'package:meta_trader/app/locator/locator.dart';
 import 'package:meta_trader/app/services/router_service.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:stacked_themes/stacked_themes.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class MetaTraderApp extends StatelessWidget {
   const MetaTraderApp({super.key});
@@ -38,6 +39,16 @@ class MetaTraderApp extends StatelessWidget {
               data: MediaQuery.of(context).copyWith(textScaleFactor: scale),
             );
           },
+          localizationsDelegates: const [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: const [
+            Locale('en'), // English
+            Locale('ar'),
+            Locale('fa'),
+          ],
         );
 
         // return MaterialApp(

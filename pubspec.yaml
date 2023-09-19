@@ -28,7 +28,7 @@ dependencies:
   flutter_svg: 
   get:
   google_fonts: ^5.1.0
-  intl: 
+  intl: any 
   logger: 1.1.0
   one_context: 
   provider: 
@@ -49,6 +49,8 @@ dependencies:
   syncfusion_flutter_sliders:
   flutter_widget_from_html:
   image_picker:
+  flutter_localizations:
+    sdk: flutter
 
 dev_dependencies:
   flutter_test:
@@ -77,6 +79,7 @@ flutter_app_name:
 
 flutter:
   uses-material-design: true
+  generate: true
 
   # Assets Example
   assets:
@@ -96,3 +99,4 @@ flutter:
           weight: 300
         - asset: fonts/Gilroy-Regular.ttf
           weight: 300
+
