@@ -34,7 +34,7 @@ class DemoPage extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             Text(
-              'Full Name',
+              'First Name',
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 color: isDarkMode ? Colors.white70 : const Color(0xff667085),
@@ -42,11 +42,11 @@ class DemoPage extends StatelessWidget {
             ),
             verticalSpaceXSmall(context),
             const CustomTextFields(
-              hintText: 'Enter your full name',
+              hintText: 'Enter your first name',
             ),
             verticalSpaceSmall(context),
             Text(
-              'Login ID',
+              'Last Name',
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 color: isDarkMode ? Colors.white70 : const Color(0xff667085),
@@ -54,71 +54,95 @@ class DemoPage extends StatelessWidget {
             ),
             verticalSpaceXSmall(context),
             const CustomTextFields(
-              hintText: 'Enter your login ID',
+              hintText: 'Enter your last name',
             ),
             verticalSpaceSmall(context),
             Text(
-              'Account Information',
-              style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.6),
-                color: Theme.of(context).primaryColor,
-              ),
-            ),
-            verticalSpaceSmall(context),
-            Text(
-              'Server',
+              'Email',
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 color: isDarkMode ? Colors.white70 : const Color(0xff667085),
               ),
             ),
             verticalSpaceXSmall(context),
-            CustomTextFields(
-              hintText: 'DCFXPrime-Real',
-              password: false,
-              suffixIcon: Icon(
-                Icons.arrow_forward_ios,
-                size: 20,
-                color: Theme.of(context).secondaryHeaderColor,
-              ),
+            const CustomTextFields(
+              hintText: 'Enter your Email',
             ),
             verticalSpaceSmall(context),
             Text(
-              'Use Hedge',
+              'Phone',
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 color: isDarkMode ? Colors.white70 : const Color(0xff667085),
               ),
             ),
             verticalSpaceXSmall(context),
-            CustomTextFields(
-              hintText: 'Select Option',
-              password: false,
-              suffixIcon: Icon(
-                Icons.arrow_forward_ios,
-                size: 20,
-                color: Theme.of(context).secondaryHeaderColor,
-              ),
+            const CustomTextFields(
+              hintText: 'Enter your phone number',
             ),
             verticalSpaceSmall(context),
-            Text(
-              'Leverage',
-              style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.8),
-                color: isDarkMode ? Colors.white70 : const Color(0xff667085),
-              ),
-            ),
-            verticalSpaceXSmall(context),
-            CustomTextFields(
-              hintText: '1:100',
-              password: false,
-              suffixIcon: Icon(
-                Icons.arrow_forward_ios,
-                size: 20,
-                color: Theme.of(context).secondaryHeaderColor,
-              ),
-            ),
-            verticalSpaceSmall(context),
+            // Text(
+            //   'Account Information',
+            //   style: CustomThemeData.generateStyle(
+            //     fontSize: McGyver.textSize(context, 1.6),
+            //     color: Theme.of(context).primaryColor,
+            //   ),
+            // ),
+            // verticalSpaceSmall(context),
+            // Text(
+            //   'Server',
+            //   style: CustomThemeData.generateStyle(
+            //     fontSize: McGyver.textSize(context, 1.8),
+            //     color: isDarkMode ? Colors.white70 : const Color(0xff667085),
+            //   ),
+            // ),
+            // verticalSpaceXSmall(context),
+            // CustomTextFields(
+            //   hintText: 'DCFXPrime-Real',
+            //   password: false,
+            //   suffixIcon: Icon(
+            //     Icons.arrow_forward_ios,
+            //     size: 20,
+            //     color: Theme.of(context).secondaryHeaderColor,
+            //   ),
+            // ),
+            // verticalSpaceSmall(context),
+            // Text(
+            //   'Use Hedge',
+            //   style: CustomThemeData.generateStyle(
+            //     fontSize: McGyver.textSize(context, 1.8),
+            //     color: isDarkMode ? Colors.white70 : const Color(0xff667085),
+            //   ),
+            // ),
+            // verticalSpaceXSmall(context),
+            // CustomTextFields(
+            //   hintText: 'Select Option',
+            //   password: false,
+            //   suffixIcon: Icon(
+            //     Icons.arrow_forward_ios,
+            //     size: 20,
+            //     color: Theme.of(context).secondaryHeaderColor,
+            //   ),
+            // ),
+            // verticalSpaceSmall(context),
+            // Text(
+            //   'Leverage',
+            //   style: CustomThemeData.generateStyle(
+            //     fontSize: McGyver.textSize(context, 1.8),
+            //     color: isDarkMode ? Colors.white70 : const Color(0xff667085),
+            //   ),
+            // ),
+            // verticalSpaceXSmall(context),
+            // CustomTextFields(
+            //   hintText: '1:100',
+            //   password: false,
+            //   suffixIcon: Icon(
+            //     Icons.arrow_forward_ios,
+            //     size: 20,
+            //     color: Theme.of(context).secondaryHeaderColor,
+            //   ),
+            // ),
+            // verticalSpaceSmall(context),
             Text(
               'Deposit',
               style: CustomThemeData.generateStyle(

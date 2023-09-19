@@ -6,7 +6,6 @@ import 'package:meta_trader/ui/widgets/security/components/change_password_modal
 import '../../../app/responsiveness/res.dart';
 import '../../../app/utils/theme.dart';
 import '../../views/security/security_view_model.dart';
-import '../manage_accounts/manage_accounts/manage_account_bottomsheet.dart';
 import 'components/security_option_tile.dart';
 
 class SecurityMainPage extends StatelessWidget {

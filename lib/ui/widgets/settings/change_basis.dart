@@ -74,7 +74,7 @@ class ChangeBasisPage extends StatelessWidget {
                               value: model.timezones[index],
                               groupValue: model.selectedLanguage,
                               onChanged: (value) {
-                                model.changeLanguage(value.toString());
+                                model.changeLanguage(value.toString(), context);
                               },
                             ),
                           ),
@@ -93,7 +93,7 @@ class ChangeBasisPage extends StatelessWidget {
                         ],
                       ),
                       onTap: () {
-                        model.changeLanguage(model.timezones[index]);
+                        model.changeLanguage(model.timezones[index], context);
                       },
                     );
                   }),

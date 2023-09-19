@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 
@@ -71,16 +72,23 @@ class LanguageSettingsPage extends StatelessWidget {
                                     isDarkMode ? Colors.white : Colors.black),
                             child: Radio<String>(
                               value: model.languages[index],
-                              groupValue: model.selectedLanguage,
+                              // groupValue: model.selectedLanguage,
+                              groupValue: context.locale.toString() == 'en'
+                                  ? 'English'
+                                  : context.locale.toString() == 'ar'
+                                      ? 'Arabic'
+                                      : context.locale.toString() == 'fa'
+                                          ? 'Persian'
+                                          : context.locale.toString(),
                               onChanged: (value) {
-                                model.changeLanguage(value!);
+                                model.changeLanguage(value!, context);
                               },
                             ),
                           ),
                         ],
                       ),
                       onTap: () {
-                        model.changeLanguage(model.languages[index]);
+                        model.changeLanguage(model.languages[index], context);
                       },
                     );
                   }),

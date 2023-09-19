@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_final_fields
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
 import 'package:meta_trader/app/utils/strings_manager.dart';
@@ -17,6 +18,7 @@ import 'package:stacked_themes/stacked_themes.dart';
 
 import '../../widgets/settings/about_us.dart';
 import '../../widgets/settings/components/app_bar.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 enum SettingsPageEnum {
   settings,
@@ -44,12 +46,8 @@ class SettingsViewModel extends CustomBaseViewModel {
 
   List _languages = [
     "English",
-    "French",
-    "Spanish",
-    "Deutsch",
-    "Bahasa",
-    "Italiano",
-    "vlaams"
+    "Arabic",
+    "Persian",
   ];
 
   List get languages => _languages;
@@ -171,8 +169,22 @@ class SettingsViewModel extends CustomBaseViewModel {
     rebuildUi();
   }
 
-  void changeLanguage(String language) {
+  void changeLanguage(String language, BuildContext context) {
     _selectedLanguage = language;
+    if (kDebugMode) {
+      print(language);
+    }
+    if (language == 'English') {
+      context.setLocale(const Locale('en'));
+    }
+
+    if (language == 'Arabic') {
+      context.setLocale(const Locale('ar'));
+    }
+
+    if (language == 'Persian') {
+      context.setLocale(const Locale('fa'));
+    }
     rebuildUi();
   }
 

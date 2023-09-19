@@ -12,7 +12,6 @@ class MasterTraders extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var isDarkMode = CustomThemeData.isDarkMode(context);
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: McGyver.rsDoubleW(context, 5),
