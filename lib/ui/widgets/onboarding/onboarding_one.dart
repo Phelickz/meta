@@ -7,6 +7,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/codegen_loader.g.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 class OnboardingOne extends StatelessWidget {
   const OnboardingOne({super.key});
@@ -32,7 +35,7 @@ class OnboardingOne extends StatelessWidget {
             RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                text: 'Trade at the cutting edge with our ',
+                text: LocaleKeys.onboarding_onboarding_one_title1.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 3.2),
                   fontWeight: FontWeight.w700,
@@ -40,7 +43,7 @@ class OnboardingOne extends StatelessWidget {
                 ),
                 children: [
                   TextSpan(
-                    text: 'state-of-the-art ',
+                    text: LocaleKeys.onboarding_onboarding_one_titleblue.tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 3.2),
                       fontWeight: FontWeight.w700,
@@ -48,7 +51,7 @@ class OnboardingOne extends StatelessWidget {
                     ),
                   ),
                   TextSpan(
-                    text: 'platform and stay ahead',
+                    text: LocaleKeys.onboarding_onboarding_one_title3.tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 3.2),
                       fontWeight: FontWeight.w700,

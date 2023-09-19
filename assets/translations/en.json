@@ -1,3 +1,10 @@
 {
-  "hello": "Hello, How are you?"
+  "hello": "Hello, How are you?",
+  "onboarding": {
+    "onboarding_one": {
+      "title1": "Trade at the cutting edge with our",
+      "titleblue": " state-of-the-art ",
+      "title3": "platform and stay ahead"
+    }
+  }
 }

@@ -15,13 +15,34 @@ class CodegenLoader extends AssetLoader{
   }
 
   static const Map<String,dynamic> en = {
-  "hello": "Hello, How are you?"
+  "hello": "Hello, How are you?",
+  "onboarding": {
+    "onboarding_one": {
+      "title1": "Trade at the cutting edge with our",
+      "titleblue": " state-of-the-art ",
+      "title3": "platform and stay ahead"
+    }
+  }
 };
 static const Map<String,dynamic> fa = {
-  "hello": "Hello, How are you?"
+  "hello": "Hello, How are you?",
+  "onboarding": {
+    "onboarding_one": {
+      "title1": "Trade at the cutting edge with our",
+      "titleblue": " state-of-the-art ",
+      "title3": "platform and stay ahead"
+    }
+  }
 };
 static const Map<String,dynamic> ar = {
-  "hello": "Hello, How are you?"
+  "hello": "Hello, How are you?",
+  "onboarding": {
+    "onboarding_one": {
+      "title1": "Trade at the cutting edge with our",
+      "titleblue": " state-of-the-art ",
+      "title3": "platform and stay ahead"
+    }
+  }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "fa": fa, "ar": ar};
 }

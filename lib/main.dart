@@ -6,9 +6,10 @@ import 'package:flutter/services.dart';
 import 'package:logger/logger.dart';
 import 'package:meta_trader/app/app.dart';
 import 'package:meta_trader/app/locator/locator.dart';
+import 'package:meta_trader/generated/codegen_loader.g.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
-import 'generated/codegen_loader.g.dart';
+// import 'generated/codegen_loader.g.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +28,7 @@ Future main() async {
   }
 
   /// Runs the app :)
-  runApp(const MetaTraderApp());
+  // runApp(const MetaTraderApp());
 
   runApp(
     EasyLocalization(
@@ -53,3 +54,4 @@ Future main() async {
 
 
 // flutter pub run easy_localization:generate --source-dir ./assets/translations
+// flutter pub run easy_localization:generate --source-dir ./assets/translations -f keys -o locale_keys.g.dart
