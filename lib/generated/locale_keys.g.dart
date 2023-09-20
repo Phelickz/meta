@@ -8,5 +8,17 @@ abstract class  LocaleKeys {
   static const onboarding_onboarding_one_bodyText = 'onboarding.onboarding_one.bodyText';
   static const onboarding_onboarding_one = 'onboarding.onboarding_one';
   static const onboarding = 'onboarding';
+  static const onboarding2_onboarding_two_text = 'onboarding2.onboarding_two.text';
+  static const onboarding2_onboarding_two_text1 = 'onboarding2.onboarding_two.text1';
+  static const onboarding2_onboarding_two_text2 = 'onboarding2.onboarding_two.text2';
+  static const onboarding2_onboarding_two_bodyText = 'onboarding2.onboarding_two.bodyText';
+  static const onboarding2_onboarding_two = 'onboarding2.onboarding_two';
+  static const onboarding2 = 'onboarding2';
+  static const onboarding3_onboarding_two_text = 'onboarding3.onboarding_two.text';
+  static const onboarding3_onboarding_two_text1 = 'onboarding3.onboarding_two.text1';
+  static const onboarding3_onboarding_two_text2 = 'onboarding3.onboarding_two.text2';
+  static const onboarding3_onboarding_two_bodyText = 'onboarding3.onboarding_two.bodyText';
+  static const onboarding3_onboarding_two = 'onboarding3.onboarding_two';
+  static const onboarding3 = 'onboarding3';
 
 }
