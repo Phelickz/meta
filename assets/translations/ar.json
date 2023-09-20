@@ -1,11 +1,19 @@
 {
-    "hello": "Hello, How are you?",
-    "onboarding": {
-      "onboarding_one": {
-        "title1": "Trade at the cutting edge with our",
-        "titleblue": " state-of-the-art ",
-        "title3": "platform and stay ahead"
-      }
+  "hello": "مرحبا، كيف حالك؟",
+  "onboarding": {
+    "onboarding_one": {
+      "title1": "تداول بأحدث التقنيات مع شركائنا",
+      "titleblue": " مثال رائع من الف ",
+      "title3": "منصة والبقاء في المقدمة",
+      "bodyText": "كتشف الراحة الكاملة لرحلة التداول الخاصة بك من خلال منصتنا الشاملة. استمتع بالتداول السلس واحصل على ميزات إضافية للارتقاء بتجربتك المالية."
     }
-  }
-  
+  },
+    "onboarding2": {
+     "onboarding_two": {
+      "text": "يؤمن ",
+      "text1": "نموك ",
+      "text2": "بمواردنا الوفيرة ودعمنا الذي لا يتزعزع",
+      "bodyText": "قم بتأمين مستقبلك من خلال مواردنا الشاملة ودعمنا الثابت للنمو المستدام."
+    }
+}
+}
