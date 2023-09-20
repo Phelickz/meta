@@ -9,7 +9,7 @@ import 'package:meta_trader/app/locator/locator.dart';
 import 'package:meta_trader/generated/codegen_loader.g.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
-// import 'generated/codegen_loader.g.dart';
+import 'generated/codegen_loader.g.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();

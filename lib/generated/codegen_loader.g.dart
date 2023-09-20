@@ -20,7 +20,8 @@ class CodegenLoader extends AssetLoader{
     "onboarding_one": {
       "title1": "Trade at the cutting edge with our",
       "titleblue": " state-of-the-art ",
-      "title3": "platform and stay ahead"
+      "title3": "platform and stay ahead",
+      "bodyText": "Explore total convenience for your trading journey with our 360-degree platform. Enjoy seamless trading and access extra features to elevate your financial experience."
     }
   }
 };

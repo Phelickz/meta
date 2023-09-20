@@ -1,11 +1,11 @@
 {
-    "hello": "Hello, How are you?",
-    "onboarding": {
-      "onboarding_one": {
-        "title1": "Trade at the cutting edge with our",
-        "titleblue": " state-of-the-art ",
-        "title3": "platform and stay ahead"
-      }
+  "hello": "سلام حال شما چطور؟",
+  "onboarding": {
+    "onboarding_one": {
+      "title1": "تجارت در لبه برش با ما",
+      "titleblue": " مدرن ",
+      "title3": "پلت فرم و جلوتر بمان",
+      "bodyText": "با پلتفرم 360 درجه ما، راحتی کامل را برای سفر تجاری خود کاوش کنید. از تجارت یکپارچه لذت ببرید و به ویژگی های اضافی برای ارتقاء تجربه مالی خود دسترسی داشته باشید."
     }
   }
-  
+}

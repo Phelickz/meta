@@ -63,7 +63,7 @@ class OnboardingOne extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             Text(
-              "Explore total convenience for your trading journey with our 360-degree platform. Enjoy seamless trading and access extra features to elevate your financial experience.",
+              LocaleKeys.onboarding_onboarding_one_bodyText.tr(),
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
