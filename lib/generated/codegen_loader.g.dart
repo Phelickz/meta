@@ -33,12 +33,19 @@ class CodegenLoader extends AssetLoader{
     }
   },
   "onboarding3": {
-    "onboarding_two": {
+    "onboarding_three": {
       "text": "Deposit ",
       "text1": "and ",
       "text2": "withdraw funds ",
       "text3": "seamlessly on our cutting edge platform",
       "bodyText": "Enjoy seamless fund management with our platform's wide range of options, allowing you to effortlessly deposit and withdraw funds."
+    }
+  },
+  "onboarding4": {
+    "onboarding_four": {
+      "text": "Unlock the power ",
+      "text1": "of diverse tools tailored for your success",
+      "bodyText": "Embark on a successful trading journey with our extensive range of tools, meticulously crafted to ensure your triumph."
     }
   }
 };
@@ -68,6 +75,13 @@ static const Map<String,dynamic> fa = {
       "text3": "یکپارچه بر روی پلت فرم لبه ما",
       "bodyText": "از مدیریت یکپارچه وجوه با طیف وسیعی از گزینه‌های پلتفرم ما لذت ببرید، که به شما امکان می‌دهد بدون زحمت وجوه را واریز و برداشت کنید."
     }
+  },
+  "onboarding4": {
+    "onboarding_four": {
+      "text": "قفل برق را باز کنید",
+      "text1": "ابزارهای متنوعی که برای موفقیت شما طراحی شده است",
+      "bodyText": "با طیف گسترده ای از ابزارهای ما که به دقت ساخته شده اند تا پیروزی شما را تضمین کنند، یک سفر تجاری موفق را آغاز کنید."
+    }
   }
 };
 static const Map<String,dynamic> ar = {
@@ -95,6 +109,13 @@ static const Map<String,dynamic> ar = {
       "text2": "سحب الأموال",
       "text3": "بسلاسة على منصتنا المتطورة",
       "bodyText": "استمتع بإدارة الأموال بشكل سلس مع مجموعة واسعة من الخيارات في منصتنا، مما يسمح لك بإيداع وسحب الأموال دون عناء"
+    }
+  },
+  "onboarding4": {
+    "onboarding_three": {
+      "text": "فتح الطاقة",
+      "text1": "من الأدوات المتنوعة المصممة خصيصًا لنجاحك",
+      "bodyText": "انطلق في رحلة تداول ناجحة باستخدام مجموعتنا الواسعة من الأدوات، المصممة بدقة لضمان نجاحك."
     }
   }
 };
