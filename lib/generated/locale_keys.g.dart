@@ -14,11 +14,12 @@ abstract class  LocaleKeys {
   static const onboarding2_onboarding_two_bodyText = 'onboarding2.onboarding_two.bodyText';
   static const onboarding2_onboarding_two = 'onboarding2.onboarding_two';
   static const onboarding2 = 'onboarding2';
-  static const onboarding3_onboarding_two_text = 'onboarding3.onboarding_two.text';
-  static const onboarding3_onboarding_two_text1 = 'onboarding3.onboarding_two.text1';
-  static const onboarding3_onboarding_two_text2 = 'onboarding3.onboarding_two.text2';
-  static const onboarding3_onboarding_two_bodyText = 'onboarding3.onboarding_two.bodyText';
-  static const onboarding3_onboarding_two = 'onboarding3.onboarding_two';
+  static const onboarding3_onboarding_three_text = 'onboarding3.onboarding_three.text';
+  static const onboarding3_onboarding_three_text1 = 'onboarding3.onboarding_three.text1';
+  static const onboarding3_onboarding_three_text2 = 'onboarding3.onboarding_three.text2';
+  static const onboarding3_onboarding_three_text3 = 'onboarding3.onboarding_three.text3';
+  static const onboarding3_onboarding_three_bodyText = 'onboarding3.onboarding_three.bodyText';
+  static const onboarding3_onboarding_three = 'onboarding3.onboarding_three';
   static const onboarding3 = 'onboarding3';
 
 }

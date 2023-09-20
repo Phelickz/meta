@@ -34,10 +34,11 @@ class CodegenLoader extends AssetLoader{
   },
   "onboarding3": {
     "onboarding_two": {
-      "text": "Secure ",
-      "text1": "your growth  ",
-      "text2": "with our abundant resources and unwavering support",
-      "bodyText": "Secure your future with our comprehensive resources and unwavering support for sustainable growth."
+      "text": "Deposit ",
+      "text1": "and ",
+      "text2": "withdraw funds ",
+      "text3": "seamlessly on our cutting edge platform",
+      "bodyText": "Enjoy seamless fund management with our platform's wide range of options, allowing you to effortlessly deposit and withdraw funds."
     }
   }
 };
@@ -57,6 +58,15 @@ static const Map<String,dynamic> fa = {
       "text1": "رشد شما ",
       "text2": "با منابع فراوان و حمایت بی دریغ ما",
       "bodyText": "آینده خود را با منابع جامع و حمایت تزلزل ناپذیر ما برای رشد پایدار تضمین کنید."
+    }
+  },
+  "onboarding3": {
+    "onboarding_three": {
+      "text": "سپرده",
+      "text1": "و",
+      "text2": "برداشت وجوه",
+      "text3": "یکپارچه بر روی پلت فرم لبه ما",
+      "bodyText": "از مدیریت یکپارچه وجوه با طیف وسیعی از گزینه‌های پلتفرم ما لذت ببرید، که به شما امکان می‌دهد بدون زحمت وجوه را واریز و برداشت کنید."
     }
   }
 };
@@ -79,11 +89,12 @@ static const Map<String,dynamic> ar = {
     }
   },
   "onboarding3": {
-    "onboarding_two": {
-      "text": "Secure ",
-      "text1": "your growth  ",
-      "text2": "with our abundant resources and unwavering support",
-      "bodyText": "Secure your future with our comprehensive resources and unwavering support for sustainable growth."
+    "onboarding_three": {
+      "text": "إيداع",
+      "text1": "و",
+      "text2": "سحب الأموال",
+      "text3": "بسلاسة على منصتنا المتطورة",
+      "bodyText": "استمتع بإدارة الأموال بشكل سلس مع مجموعة واسعة من الخيارات في منصتنا، مما يسمح لك بإيداع وسحب الأموال دون عناء"
     }
   }
 };

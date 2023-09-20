@@ -1,10 +1,13 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+
+import '../../../generated/locale_keys.g.dart';
 
 class OnboardingThree extends StatelessWidget {
   const OnboardingThree({super.key});
@@ -28,7 +31,7 @@ class OnboardingThree extends StatelessWidget {
             RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                text: 'Deposit ',
+                text: LocaleKeys.onboarding3_onboarding_three_text.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 3.2),
                   fontWeight: FontWeight.w700,
@@ -36,7 +39,7 @@ class OnboardingThree extends StatelessWidget {
                 ),
                 children: [
                   TextSpan(
-                    text: 'and ',
+                    text: LocaleKeys.onboarding3_onboarding_three_text1.tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 3.2),
                       fontWeight: FontWeight.w700,
@@ -44,7 +47,7 @@ class OnboardingThree extends StatelessWidget {
                     ),
                   ),
                   TextSpan(
-                    text: 'withdraw funds ',
+                    text: LocaleKeys.onboarding3_onboarding_three_text2.tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 3.2),
                       fontWeight: FontWeight.w700,
@@ -52,7 +55,7 @@ class OnboardingThree extends StatelessWidget {
                     ),
                   ),
                   TextSpan(
-                    text: 'seamlessly on our cutting edge platform',
+                    text: LocaleKeys.onboarding3_onboarding_three_text3.tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 3.2),
                       fontWeight: FontWeight.w700,
@@ -64,7 +67,7 @@ class OnboardingThree extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             Text(
-              "Enjoy seamless fund management with our platform's wide range of options, allowing you to effortlessly deposit and withdraw funds.",
+              LocaleKeys.onboarding3_onboarding_three_bodyText.tr(),
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),

@@ -17,11 +17,12 @@
     }
  },
   "onboarding3": {
-     "onboarding_two": {
-      "text": "Secure ",
-      "text1": "your growth  ",
-      "text2": "with our abundant resources and unwavering support",
-      "bodyText": "Secure your future with our comprehensive resources and unwavering support for sustainable growth."
+     "onboarding_three": {
+      "text": "Deposit ",
+      "text1": "and ",
+      "text2": "withdraw funds ",
+      "text3": "seamlessly on our cutting edge platform",
+      "bodyText": "Enjoy seamless fund management with our platform's wide range of options, allowing you to effortlessly deposit and withdraw funds."
     }
 }
 }
