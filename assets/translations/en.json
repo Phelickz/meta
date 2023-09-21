@@ -47,6 +47,28 @@
     "dashboard":{
       "dashboard": "Dashboard"
     },
+    "forexNews":{
+      "forexNewsView":{
+        "enum" : {
+          "all" : "all",
+          "currencyPairs" : "currencyPairs",
+          "metals" : "metals",
+          "cryptoCurrency" : "cryptoCurrency",
+          "search" : "search",
+          "details" : "details"
+        },
+        "forexNews": "Forex News",
+        "exploreForex": "Explore Forex news across the world"
+      },
+      "forexModel": {
+         "all" : "All",
+         "currencyPairs" : "Currency pairs",
+         "metals" : "Metals",
+         "cryptoCurrency" : "Cryptocurrency"
+
+      }  
+    },
+
   
 "//commentEnd": {}
   },
