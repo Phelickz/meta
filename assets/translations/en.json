@@ -65,10 +65,49 @@
          "currencyPairs" : "Currency pairs",
          "metals" : "Metals",
          "cryptoCurrency" : "Cryptocurrency"
-
       }  
     },
-
+    "fundAccountView": {
+      "fundAccountPageEnum":{
+        "selectAccount" : "selectAccount",
+        "selectDepositMethod" : "selectDepositMethod",
+        "onlineBank" : "onlineBank",
+        "bitcoin" : "bitcoin",
+        "binancePay" : "binancePay",
+        "neteller" : "neteller",
+        "perfectMoney" : "perfectMoney",
+        "skrill" : "skrill",
+        "sticPay" : "sticPay",
+        "tether" : "tether",
+        "blockBee" : "blockBee",
+        "success" : "success"
+      },
+      "depositMethodEnum":{
+        "blockBee" : "blockBee"
+      },
+      "fundAccountAppBar": {
+        "fundAccount": "Fund Account",
+        "selectAccountToFund": "Select account to fund",
+        "depositFunds": "Deposit Funds",
+        "selectDepositMethod": "Select deposit method",
+        "onlineBank": "Online Bank",
+        "bitcoin": "Bitcoin",
+        "fundUsingBitcoin": "Fund using Bitcoin wallet",
+        "binancePay": "BinancePay",
+        "neteller": "Neteller",
+        "fundUsingNeteller": "Fund using Neteller",
+        "perfectMoney": "Perfect Money",
+        "fundUsingPerfectMoney": "Fund using Perfect Money",
+        "sticPay": "SticPay",
+        "fundUsingSticPay": "Fund using Stic Pay",
+        "tether": "Tether",
+        "fundUsingTether": "Fund using Tether",
+        "skrill": "Skrill",
+        "fundUsingSkrill": "Fund using Skrill",
+        "blockBee": "BlockBee",
+        "fundUsingBlockBee": "Fund using BlockBee"
+      }
+    },
   
 "//commentEnd": {}
   },
