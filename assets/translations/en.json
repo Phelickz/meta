@@ -28,8 +28,17 @@
         "created_account_info": "Created account information"
       }
       }
+    },
+    "bottomNav": {
+      "home": "Home",
+      "quotes": "Quotes",
+      "chart": "Chart",
+      "trade": "Trade",
+      
+      "profile": "Profile"
     }
   },
+
   "onboarding": {
     "onboarding_one": {
       "title1": "Trade at the cutting edge with our",

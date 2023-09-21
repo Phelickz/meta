@@ -1,9 +1,11 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:auto_route/annotations.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/chart/chart_view.dart';
 import 'package:meta_trader/ui/views/home/home_view.dart';
 import 'package:meta_trader/ui/views/quotes/quotes_view.dart';
@@ -73,7 +75,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
                     : Theme.of(context).primaryColor,
                 height: 20,
               ),
-              label: 'Home',
+              label: LocaleKeys.views_bottomNav_home.tr(),
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
@@ -85,7 +87,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
                     ? const Color(0xff667085)
                     : Theme.of(context).primaryColor,
               ),
-              label: 'Quotes',
+              label: LocaleKeys.views_bottomNav_quotes.tr(),
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
@@ -97,7 +99,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
                     ? const Color(0xff667085)
                     : Theme.of(context).primaryColor,
               ),
-              label: 'Chart',
+              label: LocaleKeys.views_bottomNav_chart.tr(),
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
@@ -109,7 +111,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
                     ? const Color(0xff667085)
                     : Theme.of(context).primaryColor,
               ),
-              label: 'Trade',
+              label: LocaleKeys.views_bottomNav_trade.tr(),
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
@@ -121,7 +123,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
                     ? const Color(0xff667085)
                     : Theme.of(context).primaryColor,
               ),
-              label: 'Profile',
+              label: LocaleKeys.views_bottomNav_profile.tr(),
             ),
           ],
         ),

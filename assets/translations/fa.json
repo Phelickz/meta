@@ -26,6 +26,13 @@
         "created_account_info": "اطلاعات حساب ایجاد کرد"
       }
       }
+    },
+    "bottomNav": {
+      "home": "صفحه اصلی",
+      "quotes": "نقل قول ها",
+      "chart": "چارت سازمانی",
+      "trade": "تجارت",
+      "profile": "مشخصات"
     }
   },
   "onboarding": {

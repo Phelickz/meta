@@ -23,6 +23,12 @@ abstract class  LocaleKeys {
   static const views_auth_auth_view_return_app_bar = 'views.auth.auth_view.return_app_bar';
   static const views_auth_auth_view = 'views.auth.auth_view';
   static const views_auth = 'views.auth';
+  static const views_bottomNav_home = 'views.bottomNav.home';
+  static const views_bottomNav_quotes = 'views.bottomNav.quotes';
+  static const views_bottomNav_chart = 'views.bottomNav.chart';
+  static const views_bottomNav_trade = 'views.bottomNav.trade';
+  static const views_bottomNav_profile = 'views.bottomNav.profile';
+  static const views_bottomNav = 'views.bottomNav';
   static const views = 'views';
   static const onboarding_onboarding_one_title1 = 'onboarding.onboarding_one.title1';
   static const onboarding_onboarding_one_titleblue = 'onboarding.onboarding_one.titleblue';

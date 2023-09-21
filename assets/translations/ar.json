@@ -26,6 +26,13 @@
         "created_account_info": "معلومات الحساب التي تم إنشاؤها"
       }
       }
+    },
+    "bottomNav": {
+      "home": "بيت",
+      "quotes": "يقتبس",
+      "chart": "جدول",
+      "trade": "تجارة",
+      "profile": "حساب تعريفي"
     }
   },
   "onboarding": {

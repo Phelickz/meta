@@ -42,6 +42,13 @@ class CodegenLoader extends AssetLoader{
           "created_account_info": "Created account information"
         }
       }
+    },
+    "bottomNav": {
+      "home": "Home",
+      "quotes": "Quotes",
+      "chart": "Chart",
+      "trade": "Trade",
+      "profile": "Profile"
     }
   },
   "onboarding": {
@@ -105,6 +112,13 @@ static const Map<String,dynamic> fa = {
           "created_account_info": "اطلاعات حساب ایجاد کرد"
         }
       }
+    },
+    "bottomNav": {
+      "home": "صفحه اصلی",
+      "quotes": "نقل قول ها",
+      "chart": "چارت سازمانی",
+      "trade": "تجارت",
+      "profile": "مشخصات"
     }
   },
   "onboarding": {
@@ -168,6 +182,13 @@ static const Map<String,dynamic> ar = {
           "created_account_info": "معلومات الحساب التي تم إنشاؤها"
         }
       }
+    },
+    "bottomNav": {
+      "home": "بيت",
+      "quotes": "يقتبس",
+      "chart": "جدول",
+      "trade": "تجارة",
+      "profile": "حساب تعريفي"
     }
   },
   "onboarding": {
