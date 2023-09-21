@@ -64,10 +64,10 @@ class CurrencyConverterView extends StackedView<CurrencyConverterViewModel> {
                           Text(
                             viewModel.selectedCurrency ?? '',
                             style: CustomThemeData.generateStyle(
-                                fontSize: 13,
-                                color:
-                                    isDarkMode ? Colors.white70 : Colors.white,
-                                fontWeight: FontWeight.w600),
+                              fontSize: 13,
+                              color: isDarkMode ? Colors.white70 : Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                           verticalSpaceSmall(context),
                           Text(
@@ -76,10 +76,12 @@ class CurrencyConverterView extends StackedView<CurrencyConverterViewModel> {
                               fontSize: McGyver.textSize(context, 2.2),
                               fontWeight: FontWeight.bold,
                               color: isDarkMode
-                                  ? const Color(0xff98A2B3)
+                                  ? const Color(
+                                      0xff98A2B3,
+                                    )
                                   : Colors.white,
                             ),
-                          )
+                          ),
                         ],
                       ),
                       const Spacer(),

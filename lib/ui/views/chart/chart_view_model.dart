@@ -68,6 +68,7 @@ class ChartViewModel extends CustomBaseViewModel {
   }
 
   List<CandleData> getCandleData() {
+    //TODO: work on the localization for charts
     return [
       CandleData('3 Sept 20:14', 50000, 70000, 60000, 55000),
       CandleData('3 Sept 20:24', 60000, 80000, 70000, 65000),
