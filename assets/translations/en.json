@@ -35,11 +35,20 @@
       "chart": "Chart",
       "trade": "Trade",
       "profile": "Profile"
-    }
+    },
+  "//comment": {},
+    "currencyConverter": {
+      "currencyConverter": "Currency Converter",
+      "currency1": "Currency 1",
+      "currency2": "Currency 2",
+      "enterCurrency1": "Enter Amount (Currency 1)",
+      "enterCurrency2": "Enter Amount (Currency 2)"
+    },
+  
+"//commentEnd": {}
   },
-"//comment": {},
 
-"//commentEnd": {},
+
   "onboarding": {
     "onboarding_one": {
       "title1": "Trade at the cutting edge with our",
