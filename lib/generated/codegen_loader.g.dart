@@ -16,6 +16,34 @@ class CodegenLoader extends AssetLoader{
 
   static const Map<String,dynamic> en = {
   "hello": "Hello, How are you?",
+  "brokers": "Brokers",
+  "views": {
+    "auth": {
+      "auth_view": {
+        "auth_page_enum": {
+          "broker": "broker,",
+          "chooseAccount": "chooseAccount,",
+          "demoAccount": "demoAccount,",
+          "realAccount": "realAccount,",
+          "login": "login,",
+          "created": "created"
+        },
+        "created_account_page_enum": {
+          "demo": "demo,",
+          "real": "real"
+        },
+        "return_app_bar": {
+          "find_broker": "Find a broker",
+          "login_existing_account": "Login to Existing Account",
+          "enter_login": "Enter login details",
+          "open_demo_account": "Open A Demo Account",
+          "enter_information": "Enter your information",
+          "open_real_account": "Open A Real Account",
+          "created_account_info": "Created account information"
+        }
+      }
+    }
+  },
   "onboarding": {
     "onboarding_one": {
       "title1": "Trade at the cutting edge with our",
@@ -51,6 +79,34 @@ class CodegenLoader extends AssetLoader{
 };
 static const Map<String,dynamic> fa = {
   "hello": "سلام حال شما چطور؟",
+  "brokers": "دلالان",
+  "views": {
+    "auth": {
+      "auth_view": {
+        "auth_page_enum": {
+          "broker": "دلال،",
+          "chooseAccount": "انتخاب حساب،",
+          "demoAccount": "حساب آزمایشی،",
+          "realAccount": "حساب واقعی،",
+          "login": "وارد شدن،",
+          "created": "ایجاد شده"
+        },
+        "created_account_page_enum": {
+          "demo": "نسخه ی نمایشی،",
+          "real": "واقعی"
+        },
+        "return_app_bar": {
+          "find_broker": "یک دلال پیدا کنید",
+          "login_existing_account": "وارد حساب کاربری موجود شوید",
+          "enter_login": "جزئیات ورود را وارد کنید",
+          "open_demo_account": "یک حساب آزمایشی باز کنید",
+          "enter_information": "اطلاعات خود را وارد کنید",
+          "open_real_account": "یک حساب واقعی باز کنید",
+          "created_account_info": "اطلاعات حساب ایجاد کرد"
+        }
+      }
+    }
+  },
   "onboarding": {
     "onboarding_one": {
       "title1": "تجارت در لبه برش با ما",
@@ -86,6 +142,34 @@ static const Map<String,dynamic> fa = {
 };
 static const Map<String,dynamic> ar = {
   "hello": "مرحبا، كيف حالك؟",
+  "brokers": "وسطاء",
+  "views": {
+    "auth": {
+      "auth_view": {
+        "auth_page_enum": {
+          "broker": "وسيط,",
+          "chooseAccount": "اختر الحساب,",
+          "demoAccount": "حساب تجريبي,",
+          "realAccount": "حساب حقيقي،",
+          "login": "تسجيل الدخول،",
+          "created": "تسجيل الدخول،"
+        },
+        "created_account_page_enum": {
+          "demo": "عرض توضيحي,",
+          "real": "حقيقي"
+        },
+        "return_app_bar": {
+          "find_broker": "ابحث عن وسيط",
+          "login_existing_account": "يدخل إلى الحساب الحالي",
+          "enter_login": "أدخل تفاصيل تسجيل الدخول",
+          "open_demo_account": "افتح حساب تجريبي",
+          "enter_information": "أدخل المعلومات الخاصة بك",
+          "open_real_account": "افتح حساب حقيقي",
+          "created_account_info": "معلومات الحساب التي تم إنشاؤها"
+        }
+      }
+    }
+  },
   "onboarding": {
     "onboarding_one": {
       "title1": "تداول بأحدث التقنيات مع شركائنا",
@@ -112,7 +196,7 @@ static const Map<String,dynamic> ar = {
     }
   },
   "onboarding4": {
-    "onboarding_three": {
+    "onboarding_four": {
       "text": "فتح الطاقة",
       "text1": "من الأدوات المتنوعة المصممة خصيصًا لنجاحك",
       "bodyText": "انطلق في رحلة تداول ناجحة باستخدام مجموعتنا الواسعة من الأدوات، المصممة بدقة لضمان نجاحك."

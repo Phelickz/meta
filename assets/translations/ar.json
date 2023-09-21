@@ -1,5 +1,33 @@
 {
   "hello": "مرحبا، كيف حالك؟",
+  "brokers": "وسطاء",
+  "views": {
+    "auth": {
+      "auth_view": {
+        "auth_page_enum": {
+          "broker": "وسيط,",
+          "chooseAccount": "اختر الحساب,",
+          "demoAccount": "حساب تجريبي,",
+          "realAccount": "حساب حقيقي،",
+          "login": "تسجيل الدخول،",
+          "created": "تسجيل الدخول،"
+        },
+      "created_account_page_enum": {
+          "demo": "عرض توضيحي,",
+          "real": "حقيقي"
+        },
+      "return_app_bar": {
+        "find_broker": "ابحث عن وسيط",
+        "login_existing_account": "يدخل إلى الحساب الحالي",
+        "enter_login": "أدخل تفاصيل تسجيل الدخول",
+        "open_demo_account": "افتح حساب تجريبي",
+        "enter_information": "أدخل المعلومات الخاصة بك",
+        "open_real_account": "افتح حساب حقيقي",
+        "created_account_info": "معلومات الحساب التي تم إنشاؤها"
+      }
+      }
+    }
+  },
   "onboarding": {
     "onboarding_one": {
       "title1": "تداول بأحدث التقنيات مع شركائنا",
@@ -26,7 +54,7 @@
     }
 },
   "onboarding4": {
-     "onboarding_three": {
+     "onboarding_four": {
       "text": "فتح الطاقة",
       "text1": "من الأدوات المتنوعة المصممة خصيصًا لنجاحك",
       "bodyText": "انطلق في رحلة تداول ناجحة باستخدام مجموعتنا الواسعة من الأدوات، المصممة بدقة لضمان نجاحك."

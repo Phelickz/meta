@@ -1,5 +1,35 @@
 {
+
   "hello": "Hello, How are you?",
+  "brokers": "Brokers",
+  "views": {
+    "auth": {
+      "auth_view": {
+        "auth_page_enum": {
+          "broker": "broker,",
+          "chooseAccount": "chooseAccount,",
+          "demoAccount": "demoAccount,",
+          "realAccount": "realAccount,",
+          "login": "login,",
+          "created": "created"
+        },
+      "created_account_page_enum": {
+          "demo": "demo,",
+          "real": "real"
+        },
+        
+      "return_app_bar": {
+        "find_broker": "Find a broker",
+        "login_existing_account": "Login to Existing Account",
+        "enter_login": "Enter login details",
+        "open_demo_account": "Open A Demo Account",
+        "enter_information": "Enter your information",
+        "open_real_account": "Open A Real Account",
+        "created_account_info": "Created account information"
+      }
+      }
+    }
+  },
   "onboarding": {
     "onboarding_one": {
       "title1": "Trade at the cutting edge with our",

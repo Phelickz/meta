@@ -1,5 +1,33 @@
 {
   "hello": "سلام حال شما چطور؟",
+  "brokers": "دلالان",
+  "views": {
+    "auth": {
+      "auth_view": {
+        "auth_page_enum": {
+          "broker": "دلال،",
+          "chooseAccount": "انتخاب حساب،",
+          "demoAccount": "حساب آزمایشی،",
+          "realAccount": "حساب واقعی،",
+          "login": "وارد شدن،",
+          "created": "ایجاد شده"
+        },
+      "created_account_page_enum": {
+          "demo": "نسخه ی نمایشی،",
+          "real": "واقعی"
+        },
+      "return_app_bar": {
+        "find_broker": "یک دلال پیدا کنید",
+        "login_existing_account": "وارد حساب کاربری موجود شوید",
+        "enter_login": "جزئیات ورود را وارد کنید",
+        "open_demo_account": "یک حساب آزمایشی باز کنید",
+        "enter_information": "اطلاعات خود را وارد کنید",
+        "open_real_account": "یک حساب واقعی باز کنید",
+        "created_account_info": "اطلاعات حساب ایجاد کرد"
+      }
+      }
+    }
+  },
   "onboarding": {
     "onboarding_one": {
       "title1": "تجارت در لبه برش با ما",
