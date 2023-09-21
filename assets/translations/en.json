@@ -44,6 +44,9 @@
       "enterCurrency1": "Enter Amount (Currency 1)",
       "enterCurrency2": "Enter Amount (Currency 2)"
     },
+    "dashboard":{
+      "dashboard": "Dashboard"
+    },
   
 "//commentEnd": {}
   },
