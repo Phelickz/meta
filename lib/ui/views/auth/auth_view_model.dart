@@ -158,9 +158,7 @@ class AuthViewModel extends CustomBaseViewModel {
       case AuthPageEnum.login:
         return authAppBar(
             context,
-            LocaleKeys
-                .views_auth_auth_view_return_app_bar_login_existing_account
-                .tr(),
+            LocaleKeys.login_existing_account.tr(),
             LocaleKeys.views_auth_auth_view_return_app_bar_enter_login.tr(),
             this);
       case AuthPageEnum.demoAccount:

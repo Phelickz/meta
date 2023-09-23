@@ -3,17 +3,24 @@
   "hello": "Hello, How are you?",
   "brokers": "Brokers",
   "depositFunds": "Deposit Funds",
+  "demo": "demo",
   "forexNews": "Forex News",
   "currencyConverter": "Currency Converter",
   "viewMore": "View more",
   "rewards": "Rewards",
   "socialTrading": "Social Trading",
   "sliver": "Silver",
+  "login": "login",
   "verifiedCap": "VERIFIED",
+  "charts": "Chart",
+  "select": "Select",
+  "overview": "Overview",
+  "specification": "Specification",
   "margin": "Margin",
   "equity": "Equity",
   "reward": "Reward",
   "website": "Website",
+  "trending": "Trending",
   "fxproSite": "www.fxpro.com",
   "support": "Support",
   "phone": "Phone",
@@ -27,6 +34,32 @@
   "accountCurrency": "Account Currency",
   "currencyPair": "Currency Pair",
   "tradeSize": "Trade Size",
+  "search": "Search",
+  "deposit": "Deposit",
+  "login_existing_account": "Login to Existing Account",
+  "savePassword" : "Save Password",
+  "password": "Password",
+  "investor": "Investor",
+  "done": "Done",
+  "email":"Email",
+  "indicators":"Indicators",
+  "hour":"Hour",
+  "today":"Today",
+  "week":"Week",
+  "month":"Month",
+  "year":"Year",
+  "maximum":"Maximum",
+  "minimum":"Minimum",
+  "metals":"Metals",
+  "cryptoNews":"Crypto News",
+  "step":"Step",
+  "loginID": "Login ID",
+  "forgetPassword": "Forgot Password? ",
+  "contactBroker": "Contact Broker",
+  "enterPersonalInformation": "Enter Personal Information",
+  "termsAndCondition": "I agree with the terms and conditions for opening an account and the data protection policy.",
+
+
 
   "views": {
     "auth": {
@@ -46,7 +79,6 @@
         
       "return_app_bar": {
         "find_broker": "Find a broker",
-        "login_existing_account": "Login to Existing Account",
         "enter_login": "Enter login details",
         "open_demo_account": "Open A Demo Account",
         "enter_information": "Enter your information",
@@ -62,7 +94,7 @@
       "trade": "Trade",
       "profile": "Profile"
     },
-  "//comment": {},
+
 
     "currencyConverter": {
       "currency1": "Currency 1",
@@ -168,9 +200,9 @@
       "recentActivity": "Recent Activity",
       "activityTileText": "You earned 23 points",
       "activityTileTextSub": "credits awarded for using 5 lot sizes",
-      "status:":"Status:",
-      "notComplete:":"Not Completed:",
-      "points:":"3 Points"
+      "status":"Status",
+      "notComplete":"Not Completed",
+      "points":"3 Points"
     },
     "manageAccount":{
       "brokerInformationView": {
@@ -180,10 +212,7 @@
       },
       "existingAccountScreen": {
         "changePassword": "Change Password",
-        "savePassword" : "Save Password",
         "saveChanges": "Save Changes",
-        "forgetPassword": "Forgot Password? ",
-        "contactBroker": "Contact Broker",
         "searchBroker": "Contact Broker",
         "findBroker": "Find a broker"
       }
@@ -206,11 +235,7 @@
    "pipCalculatorView":{
     "pipValue": "Pip value",
     "numberOfPips": "Number of Pips" 
-  },
-
-  
-  
-"//commentEnd": {}
+  }
   },
 
 
@@ -245,5 +270,93 @@
       "text1": "of diverse tools tailored for your success",
       "bodyText": "Embark on a successful trading journey with our extensive range of tools, meticulously crafted to ensure your triumph."
     }
-}
+},
+ "auth" : {
+  "chooseAccount": {
+    "offersYouVirtual": "Offers you virtual funds to learn forex trading and test your strategies and setups before using a real account.",
+    "demoAccount": "Demo Account",
+    "realAccount": "Real Account",
+    "forLiveTrading": "For live trading. additional verification is required. Not advisable for beginners"
+  },
+  "created": {
+    "yourModelCreated": {
+      "demo": "Your {model} account has been created successfully ",
+      "real": "Your {model} account has been created successfully "
+    },
+    "accountInformation": "Account Information",
+    "FullName": "Full Name",
+    "accountType": "Account Type",
+    "forexHedge": "Forex Hedge 100"
+  },
+    "firstName": "First Name",
+    "enterFirstName": "Enter your first name",
+    "lastName": "Last Name",
+    "enterLastName": "Enter your last name",
+    "enterEmail": "Enter your Email",
+    "enterPhone": "Enter your phone number",
+
+    "loginWidget":{
+      "enterYourLoginId": "Enter your login ID"
+    },
+    "realWidget":{
+      "enterPersonalInformation": "Enter your login ID",
+      "preliminaryAccount": "Preliminary Account"
+    }
+  },
+ "chart" : {
+  "sellAt": "Sell at 1.234564",
+  "text": "23%",
+  "buyAt": "Buy at 1.234564",
+  "text1": "77%",
+  "text2": "1.2",
+  "specification": {
+    "marketIsOpen" : "Market is open. Closes tomorrow, 12:58 AM",
+    "contractSize": "Contract Size",
+    "spreadUnits": "Spread Units",
+    "stopLevelPips": "Stop level, pips"
+  },
+  "tradingSignalTiles": {
+    "intraday" : "Intraday: under pressure",
+    "timeText": "6:00 PM",
+    "miamiCryptoText": "Miami Crypto Aspirations",
+    "miamiCryptoTextContinue": "Boosted by Borderless Capital’s 25 Milion Fund"
+  }
+ },
+ "currencyConverterWidget" : {
+  "selectAccountCurrency":"Select Account Currency"
+ },
+ "datePicker" : {},
+ "dropDown" : {},
+ "forexNewsWidget" : {
+    "allWidget": {
+      "text": "recovers following mixed NFPs from the US",
+      "text2": "Aug 4, 2034 15:07 GMT"
+    },
+    "detailsWidget": {
+     "coinTelegraph": "Coin Telegraph",
+      "text": "Thank you for choosing Meta trader  as your trusted forex trading platform. We are committed to safeguarding your privacy and protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data. By accessing or using our services, you agree to the practices described in this policy.",
+      "text1": "Personal Information: This may include your name, email address, phone number, residential address, date of birth, government-issued identification, and other necessary details required for account registration and compliance with",
+      "text2": "Financial Information: To facilitate transactions, we may collect details related to your bank account, credit/debit card information, and transaction history.",
+      "text3": "Device and Usage Information: We may automatically collect information about your device, operating system, browser type, IP address, and interactions with our platform to improve our services and user experience.",
+      "text4": "Cookies and Tracking Technologies: We may use cookies and similar technologies to gather information about your usage patterns and preferences while using our platform. This helps us to optimize our website, improve navigation, and personalize your experience.",
+      "text5": "Data Sharing And Disclosure",
+      "text6": "We use the collected information for the following purposes:",
+      "text7": "Account Creation: To create and maintain your account, verify your identity, and provide customer support.",
+      "text8": "Forex Trading Services: To process your trades, transactions, and withdrawals in accordance with your instructions."
+    },
+       "searchWidget": {
+      "searchResult": "Search Results:",
+      "moreResult": "More Results"
+    }
+ },
+ "fundAccount" : {},
+ "helpAndSupport" : {},
+ "home" : {},
+ "internalTransfer" : {},
+ "loyaltyReward" : {},
+ "manageAccounts" : {},
+ "marginCalculatorWidget" : {},
+ "notification" : {},
+ "paymentMethod" : {},
+ "pipCalculator" : {}
 }

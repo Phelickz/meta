@@ -33,7 +33,155 @@
       "chart": "چارت سازمانی",
       "trade": "تجارت",
       "profile": "مشخصات"
-    }
+    },
+
+    "currencyConverter": {
+      "currencyConverter": "مبدل ارز",
+      "currency1": "واحد پول 1",
+      "currency2": "واحد پول 2",
+      "enterCurrency1": "مقدار را وارد کنید (واحد پول 1)",
+      "enterCurrency2": "مقدار را وارد کنید (واحد پول 2)"
+    },
+    "dashboard":{
+      "dashboard": "داشبورد"
+    },
+    "forexNews":{
+      "forexNewsView":{
+        "forexNews": "اخبار فارکس",
+        "exploreForex": "اخبار فارکس را در سراسر جهان کاوش کنید"
+      },
+      "forexModel": {
+         "all" : "همه",
+         "currencyPairs" : "جفت ارز",
+         "metals" : "فلزات",
+         "cryptoCurrency" : "ارز رمزنگاری شده"
+      }  
+    },
+    "fundAccountView": {
+      "fundAccountAppBar": {
+        "fundAccount": "حساب صندوق",
+        "selectAccountToFund": "حساب را برای تامین مالی انتخاب کنید",
+        "depositFunds": "سپرده گذاری وجوه",
+        "selectDepositMethod": "روش واریز را انتخاب کنید",
+        "onlineBank": "بانک آنلاین",
+        "bitcoin": "بیت کوین",
+        "fundUsingBitcoin": "با استفاده از کیف پول بیت کوین سرمایه گذاری کنید",
+        "binancePay": "بایننس پرداخت",
+        "neteller": "نتلر",
+        "fundUsingNeteller": "با استفاده از Neteller سرمایه گذاری کنید",
+        "perfectMoney": "بهترین پول",
+        "fundUsingPerfectMoney": "با استفاده از پرفکت مانی سرمایه گذاری کنید",
+        "sticPay": "SticPay",
+        "fundUsingSticPay": "با استفاده از Stic Pay، سرمایه گذاری کنید",
+        "tether": "تتر",
+        "fundUsingTether": "با تتر سرمایه گذاری کنید",
+        "skrill": "اسکریل",
+        "fundUsingSkrill": "با استفاده از Skrill سرمایه گذاری کنید",
+        "blockBee": "BlockBee",
+        "fundUsingBlockBee": "با استفاده از BlockBee سرمایه گذاری کنید"
+      }
+    },
+    "helpAndSupportView":{
+      "question": "پرسش",
+      "answer": "جواب",
+      "helpAndSupport": "کمک و پشتیبانی",
+      "faq": "سوالات متداول",
+      "customerCare": "مراقبت از مشتری",
+      "online": "برخط",
+      
+      "faqList": {
+        "question1": "چگونه برداشت کنم؟",
+        "answer1": "می‌خواستم از این فرصت استفاده کنم و اشتیاق خود را برای این موقعیت و علاقه شدید خود به تبدیل شدن به عضوی ارزشمند در تیم [نام شرکت] تکرار کنم. پس از گفتگوی ما، من حتی بیشتر متقاعد شدم که این نقشی است که می توانم در آن تخصص خود را به اشتراک بگذارم و تأثیر مثبت بگذارم.\n\n",
+        "answer1Continue": "من به ویژه تحت تأثیر [جنبه یا پروژه خاصی که در طول مصاحبه مورد بحث قرار گرفت] شدم، و معتقدم پیشینه من در [تجربه مربوطه] به من اجازه می دهد دیدگاه های تازه و بینش ارزشمندی را به تیم بیاورم."
+      },
+      "suggestionList":{
+        "suggestion1": "به کمک نیاز دارم",
+        "suggestion2": "چگونه برداشت کنم؟",
+        "suggestion3": "من نمی توانم کیف پولم را تامین کنم"
+      }
+    },
+    "homeView": {
+      "withdrawFunds": "برداشت وجوه",
+      "internalTransfer": "انتقال داخلی",
+      "transactionHistory": "تاریخچه معاملات",
+      "tradeFeatures": "ویژگی های تجارت",
+      "chartAnalysis": "تجزیه و تحلیل نمودار",      
+      "tradingTools": "ابزارهای معاملاتی",      
+      "profitCalculator": "ماشین حساب سود",                
+      "marketNews": "اخبار بازار",  
+      "priceSentiments": "احساسات قیمت",  
+      "TradeFeaturesSub":{
+        "subtitle": "کپی کنید و با معامله گران با تجربه کسب درآمد کنید",
+        "subtitle1": "با اخبار فارکس به روز باشید"
+      },
+      "welcome": "خوش اومدی سوزان",
+      "walletBalance": "موجودی کیف پول"
+      
+    },
+    "internalTransferView": {
+      "transferFunds": "انتقال وجه",
+      "selectAccountToSendFund": "حساب را برای ارسال صندوق انتخاب کنید",
+      "receivingAccount": "در حال دریافت حساب",
+      "selectAccountToReceiveFund": "حساب را برای دریافت وجوه انتخاب کنید"
+    },
+
+    "loyaltyRewardsView": {
+      "loyaltyRewards": "جوایز وفاداری",
+      "aboutLoyaltyFeature": "درباره ویژگی وفاداری",
+      "yourSilverBenefits": "مزایای نقره ای شما",
+      "sliverBenefit1": "بازگشت نقدی در هر معامله",
+      "sliverBenefit1Sub": "اکنون می‌توانید در هر معامله‌ای که در پلتفرم خود انجام می‌دهید، پاداش 1٪ بازگشت نقدی دریافت کنید",
+      "sliverBenefit2": "برداشت های انعطاف پذیر",
+      "sliverBenefit2Sub": "اکنون می توانید تا 4 بار در ماه با هزینه کمتر برداشت کنید",
+      "sliverBenefit3": "دسترسی به ابزارهای معاملاتی",
+      "sliverBenefit3Sub": "شما می توانید به مبدل ارز و ماشین حساب سود دسترسی داشته باشید",
+      "earnDailyRewards": "دریافت جوایز روزانه",
+      "todayTask": "وظایف امروز",
+      "dailyReward": "تجارت با اندازه 3 لات",
+      "dailyReward1": "به 3 دوست مراجعه کنید",
+      "recentActivity": "فعالیت اخیر",
+      "activityTileText": "شما 23 امتیاز کسب کردید",
+      "activityTileTextSub": "اعتبار برای استفاده از 5 اندازه لات اعطا می شود",
+      "status:":"وضعیت:",
+      "notComplete:":"تکمیل نشده:",
+      "points:":"3 امتیاز"
+    },
+    "manageAccount":{
+      "brokerInformationView": {
+        "regAddress": "آدرس ثبت نام",
+        "level2" : "سطح 2، ساختمان کن لی، خیابان ادیت کاول 20، پورت لوئیس، موریس",
+        "supportSite": "support@fxpro.com"
+      },
+      "existingAccountScreen": {
+        "changePassword": "رمز عبور را تغییر دهید",
+        "savePassword" : "ذخیره رمز عبور",
+        "saveChanges": "ذخیره تغییرات",
+        "forgetPassword": "رمز عبور را فراموش کرده اید؟ ",
+        "contactBroker": "با کارگزار تماس بگیرید",
+        "searchBroker": "با کارگزار تماس بگیرید",
+        "findBroker": "یک دلال پیدا کنید"
+      }
+  },
+  "marginCalculatorView":{
+    "requiredMargin": "نیاز حاشیه"
+  },
+    "paymentMethodPageView":{
+    "paymentMethod": "روش های پرداخت",
+    "addBinancePay": "جزئیات BinancePay را اضافه کنید",
+    "enterNetellerAccount": "جزئیات حساب Neteller را وارد کنید",
+    "addBitcoinDetails": "جزئیات بیت کوین را اضافه کنید",
+    "enterSkrillAccount": "جزئیات حساب Skrill را وارد کنید",
+    "enterPaymentDetails": "جزئیات پرداخت را وارد کنید",
+    "enterSticPayAccount": "جزئیات حساب SticPay را وارد کنید",
+    "enterTetherDetails": "جزئیات TetherUSD را اضافه کنید",
+    "scanQr": "کد QR را اسکن کنید",
+    "editOnlineBank": "ویرایش بانک آنلاین"
+  },
+   "pipCalculatorView":{
+    "pipValue": "ارزش پیپ",
+    "numberOfPips": "تعداد پیپ ها" 
+  }
+  
   },
   "onboarding": {
     "onboarding_one": {
