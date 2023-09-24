@@ -56,8 +56,9 @@ AppBar maanageAccountAppBar(
                   ),
                 ),
                 builder: (context) {
-                  return const ManageAccountBottomSheet2(
+                  return ManageAccountBottomSheet2(
                     accountDetail: "44291097-Deriv-Real",
+                    model: model,
                   );
                 });
           },
@@ -80,13 +81,14 @@ AppBar maanageAccountAppBar(
                 ),
                 backgroundColor: Theme.of(context).scaffoldBackgroundColor,
                 builder: (context) {
-                  return const ManageAccountBottomSheet1(
+                  return ManageAccountBottomSheet1(
                     accountDetail: "44291097-Deriv-Real",
+                    model: model,
                   );
                 });
           },
           child: SvgPicture.asset(
-            AssetManager.filter,
+            AssetManager.settings4,
             color: isDarkMode ? Colors.white : Colors.white,
           ),
         ),

@@ -25,7 +25,8 @@ class DepositsTransactionsPage extends StatelessWidget {
             'August',
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.8),
-              color: isDarkMode ? ColorManager.darkText : ColorManager.darkText,
+              color:
+                  isDarkMode ? ColorManager.darkText : ColorManager.lightText,
               fontWeight: FontWeight.bold,
             ),
           ),

@@ -166,10 +166,11 @@ class HomeView extends StackedView<HomeViewModel> {
                       ),
                       TradeFeatures(
                         onTap: () {
-                          viewModel.push(ChartRoute(showBackButton: true));
+                          // viewModel.push(ChartRoute(showBackButton: true));
+                          viewModel.push(const LoyaltyRewardsRoute());
                         },
                         image: 'assets/images/loyalty-re.svg',
-                        title: 'Chart Analysis',
+                        title: 'Loyalty Rewards',
                         subtitle: 'Copy and earn with experienced traders',
                       ),
                     ],

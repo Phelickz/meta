@@ -47,5 +47,7 @@ class MetaTraderRouter extends $MetaTraderRouter {
         AdaptiveRoute(page: InternalTransferAmount.page),
         AdaptiveRoute(page: InternalTransferSuccess.page),
         AdaptiveRoute(page: PriceSentimentDetails.page),
+        AdaptiveRoute(page: ManageAccountPasswordPage.page),
+        AdaptiveRoute(page: ManageAccountLoginPage.page),
       ];
 }

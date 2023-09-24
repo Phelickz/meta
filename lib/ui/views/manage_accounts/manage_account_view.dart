@@ -5,6 +5,7 @@ import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/manage_accounts/manage_accounts_view_model.dart';
 import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/account_tile.dart';
+import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/manage_account_bottomsheet.dart';
 import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/manage_appbar.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
@@ -27,7 +28,26 @@ class ManageAccountView extends StackedView<ManageAccountViewModel> {
       body: SafeArea(
         child: Stack(
           children: [
-            const ManageAppbarExtension(),
+            GestureDetector(
+              onTap: () {
+                showModalBottomSheet(
+                    context: context,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(12),
+                        topRight: Radius.circular(12),
+                      ),
+                    ),
+                    backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                    builder: (context) {
+                      return ManageAccountBottomSheet1(
+                        accountDetail: "44291097-Deriv-Real",
+                        model: viewModel,
+                      );
+                    });
+              },
+              child: const ManageAppbarExtension(),
+            ),
             Container(
               height: double.infinity,
               padding: EdgeInsets.symmetric(
@@ -39,13 +59,15 @@ class ManageAccountView extends StackedView<ManageAccountViewModel> {
                   SizedBox(
                     height: 160.pHeight(context),
                   ),
-                  Text("Connect to",
-                      style: CustomThemeData.generateStyle(
-                          fontSize: McGyver.textSize(context, 2.2),
-                          color: CustomThemeData.isDarkMode(context)
-                              ? Colors.white
-                              : Colors.black,
-                          fontWeight: FontWeight.w600)),
+                  Text(
+                    "Connect to",
+                    style: CustomThemeData.generateStyle(
+                        fontSize: McGyver.textSize(context, 2.2),
+                        color: CustomThemeData.isDarkMode(context)
+                            ? Colors.white
+                            : Colors.black,
+                        fontWeight: FontWeight.w600),
+                  ),
                   SizedBox(
                     height: 16.pHeight(context),
                   ),
@@ -55,6 +77,7 @@ class ManageAccountView extends StackedView<ManageAccountViewModel> {
                         // padding: EdgeInsets.symmetric(horizontal: 15.pWidth(context),),
                         itemBuilder: (context, index) {
                           return AccountTile(
+                              model: viewModel,
                               type: viewModel.brokers_list[index]["type"],
                               email: viewModel.brokers_list[index]["email"],
                               brokerLogoPath: viewModel.brokers_list[index]
