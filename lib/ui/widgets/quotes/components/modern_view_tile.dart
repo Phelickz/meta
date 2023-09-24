@@ -6,7 +6,7 @@ import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 
-class ModernViewTile extends StatelessWidget {
+class ModernViewTile extends StatefulWidget {
   final String currencyIcon,
       currencyPair,
       currencyPairFull,
@@ -33,10 +33,16 @@ class ModernViewTile extends StatelessWidget {
       : super(key: key);
 
   @override
+  State<ModernViewTile> createState() => _ModernViewTileState();
+}
+
+class _ModernViewTileState extends State<ModernViewTile> {
+  bool _showStar = false;
+  @override
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return InkWell(
-      onLongPress: onLongPress,
+      onLongPress: widget.onLongPress,
       child: Card(
         elevation: 0,
         color: isDarkMode ? const Color(0xff052844) : Colors.white,
@@ -66,11 +72,11 @@ class ModernViewTile extends StatelessWidget {
                           SizedBox(
                             width: 22.pWidth(context),
                             height: 22.pHeight(context),
-                            child: Image.asset(currencyIcon),
+                            child: Image.asset(widget.currencyIcon),
                           ),
                           horizontalSpaceXXSmall(context),
                           Text(
-                            currencyPair,
+                            widget.currencyPair,
                             style: CustomThemeData.generateColoredStyle(
                                 fontSize: McGyver.textSize(context, 2),
                                 fontWeight: FontWeight.bold,
@@ -80,7 +86,7 @@ class ModernViewTile extends StatelessWidget {
                       ),
                       verticalSpaceXXSmall(context),
                       Text(
-                        currencyPairFull,
+                        widget.currencyPairFull,
                         style: CustomThemeData.generateColoredStyle(
                           fontSize: McGyver.textSize(context, 1.1),
                           context: context,
@@ -91,7 +97,7 @@ class ModernViewTile extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            percentageChange + '%',
+                            widget.percentageChange + '%',
                             style: CustomThemeData.generateColoredStyle(
                                 fontSize: 8, context: context),
                           ),
@@ -104,10 +110,11 @@ class ModernViewTile extends StatelessWidget {
                                     .darkTheme.scaffoldBackgroundColor
                                 : const Color(0xffE4E7EC),
                             child: FractionallySizedBox(
-                              widthFactor: double.parse(percentageChange) / 100,
+                              widthFactor:
+                                  double.parse(widget.percentageChange) / 100,
                               child: Container(
                                 decoration: BoxDecoration(
-                                    color: trend == "positive"
+                                    color: widget.trend == "positive"
                                         ? const Color(0xff77C5F8)
                                         : const Color(
                                             0xffF97066) // Secondary color for progress
@@ -125,7 +132,7 @@ class ModernViewTile extends StatelessWidget {
                   child: SizedBox(
                     width: 40.pWidth(context),
                     height: 40.pHeight(context),
-                    child: SvgPicture.asset(trend == "positive"
+                    child: SvgPicture.asset(widget.trend == "positive"
                         ? AssetManager.upTrendChart
                         : AssetManager.downTrendChart),
                   ),
@@ -139,7 +146,7 @@ class ModernViewTile extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Text(
-                        bidPrice,
+                        widget.bidPrice,
                         style: CustomThemeData.generateColoredStyle(
                             fontSize: McGyver.textSize(context, 2),
                             context: context),
@@ -148,7 +155,7 @@ class ModernViewTile extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          trend == "positive"
+                          widget.trend == "positive"
                               ? const Icon(
                                   Icons.arrow_upward,
                                   color: Colors.blue,
@@ -160,7 +167,7 @@ class ModernViewTile extends StatelessWidget {
                                   size: 20,
                                 ),
                           Text(
-                            spread + '%',
+                            widget.spread + '%',
                             style: CustomThemeData.generateColoredStyle(
                                 fontSize: McGyver.textSize(context, 1.3),
                                 context: context),
@@ -172,10 +179,14 @@ class ModernViewTile extends StatelessWidget {
                 ),
                 const Spacer(),
                 InkWell(
-                  onTap: onLike,
+                  onTap: () {
+                    setState(() {
+                      _showStar = !_showStar;
+                    });
+                  },
                   child: Icon(
                     Icons.star,
-                    color: isFav ? Colors.yellow : Colors.grey,
+                    color: _showStar ? Colors.amber : Colors.grey,
                   ),
                 )
               ],

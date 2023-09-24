@@ -62,6 +62,13 @@ class ChartViewModel extends CustomBaseViewModel {
   }
 
   bool isCandle = false;
+
+  bool isFav = false;
+  void toggleFav() {
+    isFav = !isFav;
+    notifyListeners();
+  }
+
   void toggleCandleView() {
     isCandle = !isCandle;
     notifyListeners();

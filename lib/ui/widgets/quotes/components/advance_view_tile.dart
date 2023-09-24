@@ -4,7 +4,7 @@ import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 
-class AdvancedViewTile extends StatelessWidget {
+class AdvancedViewTile extends StatefulWidget {
   final String percentageChange,
       currencyPair,
       spread,
@@ -43,6 +43,12 @@ class AdvancedViewTile extends StatelessWidget {
       : super(key: key);
 
   @override
+  State<AdvancedViewTile> createState() => _AdvancedViewTileState();
+}
+
+class _AdvancedViewTileState extends State<AdvancedViewTile> {
+  bool _showStar = false;
+  @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 12.pHeight(context)),
@@ -55,16 +61,16 @@ class AdvancedViewTile extends StatelessWidget {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: "-$pairId ",
+                      text: "-${widget.pairId} ",
                       style: CustomThemeData.generateColoredStyle(
                         fontSize: 10,
                         context: context,
                       ),
                     ),
                     TextSpan(
-                      text: trend == "positive"
-                          ? "$percentageChange %"
-                          : "-$percentageChange %",
+                      text: widget.trend == "positive"
+                          ? "${widget.percentageChange} %"
+                          : "-${widget.percentageChange} %",
                       style: CustomThemeData.generateColoredStyle(
                           fontSize: 10,
                           darkTextColor: const Color(0xffF97066),
@@ -76,7 +82,7 @@ class AdvancedViewTile extends StatelessWidget {
               ),
               verticalSpaceXXSmall(context),
               Text(
-                currencyPair,
+                widget.currencyPair,
                 style: CustomThemeData.generateColoredStyle(
                     fontSize: McGyver.textSize(context, 2.2),
                     fontWeight: FontWeight.bold,
@@ -87,7 +93,7 @@ class AdvancedViewTile extends StatelessWidget {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: "$time | ",
+                      text: "${widget.time} | ",
                       style: CustomThemeData.generateColoredStyle(
                           fontSize: 10, context: context),
                     ),
@@ -99,7 +105,7 @@ class AdvancedViewTile extends StatelessWidget {
                           context: context),
                     ),
                     TextSpan(
-                      text: spread.isEmpty ? '280' : spread,
+                      text: widget.spread.isEmpty ? '280' : widget.spread,
                       style: CustomThemeData.generateColoredStyle(
                           fontWeight: FontWeight.normal,
                           fontSize: 10,
@@ -119,7 +125,7 @@ class AdvancedViewTile extends StatelessWidget {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: askingPricePrimary,
+                      text: widget.askingPricePrimary,
                       style: CustomThemeData.generateColoredStyle(
                           fontSize: McGyver.textSize(context, 2),
                           darkTextColor: const Color(0xff77C5F8),
@@ -127,7 +133,7 @@ class AdvancedViewTile extends StatelessWidget {
                           context: context),
                     ),
                     TextSpan(
-                      text: askingPriceSecondary +
+                      text: widget.askingPriceSecondary +
                           '\u00B3', //  https://stackoverflow.com/a/54255383
                       style: CustomThemeData.generateColoredStyle(
                           fontSize: McGyver.textSize(context, 2.7),
@@ -158,7 +164,7 @@ class AdvancedViewTile extends StatelessWidget {
                 ),
               ),
               Text(
-                "L: $low",
+                "L: ${widget.low}",
                 textAlign: TextAlign.end,
                 style: CustomThemeData.generateColoredStyle(
                     fontSize: 10, context: context),
@@ -172,14 +178,14 @@ class AdvancedViewTile extends StatelessWidget {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                        text: sellingPricePrimary,
+                        text: widget.sellingPricePrimary,
                         style: CustomThemeData.generateColoredStyle(
                             fontSize: McGyver.textSize(context, 2),
                             darkTextColor: const Color(0xffF97066),
                             lightTextColor: const Color(0xffF04438),
                             context: context)),
                     TextSpan(
-                      text: sellingPriceSecondary + '\u00B3',
+                      text: widget.sellingPriceSecondary + '\u00B3',
                       style: CustomThemeData.generateColoredStyle(
                         fontSize: McGyver.textSize(context, 2.7),
                         fontWeight: FontWeight.bold,
@@ -209,7 +215,7 @@ class AdvancedViewTile extends StatelessWidget {
                 ),
               ),
               Text(
-                "H: $high",
+                "H: ${widget.high}",
                 textAlign: TextAlign.end,
                 style: CustomThemeData.generateColoredStyle(
                     fontSize: 10, context: context),
@@ -220,10 +226,14 @@ class AdvancedViewTile extends StatelessWidget {
             width: 14.pWidth(context),
           ),
           InkWell(
-            onTap: onPressed,
+            onTap: () {
+              setState(() {
+                _showStar = !_showStar;
+              });
+            },
             child: Icon(
               Icons.star,
-              color: isFav ? Colors.yellow : Colors.grey,
+              color: _showStar ? Colors.amber : Colors.grey,
             ),
           )
         ],
