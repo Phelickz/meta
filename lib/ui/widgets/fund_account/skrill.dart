@@ -8,6 +8,8 @@ import 'package:meta_trader/ui/views/fund_account/fund_account_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
 
+import '../../../generated/locale_keys.g.dart';
+
 class Skrill extends StatelessWidget {
   const Skrill({super.key, required this.model});
   final FundAccountViewModel model;
@@ -26,7 +28,7 @@ class Skrill extends StatelessWidget {
             child: ListView(
               children: [
                 Text(
-                  'Amount To Fund',
+                  LocaleKeys.amountToFund,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
@@ -41,7 +43,7 @@ class Skrill extends StatelessWidget {
                 ),
                 verticalSpaceSmall(context),
                 Text(
-                  'Pay ID',
+                  LocaleKeys.payId,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
@@ -70,7 +72,7 @@ class Skrill extends StatelessWidget {
                 ),
                 verticalSpaceSmall(context),
                 Text(
-                  'Email Address',
+                  LocaleKeys.emailAddress,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
@@ -99,7 +101,8 @@ class Skrill extends StatelessWidget {
                     horizontalSpaceXSmall(context),
                     Expanded(
                       child: Text(
-                        'Note that it might take up to 24 hours for your deposit to reflect on your dashboard',
+                        LocaleKeys
+                            .fundAccountWidget_perfectMoneyWidget_noteThat,
                         style: CustomThemeData.generateStyle(
                           fontSize: 13,
                           color: isDarkMode
@@ -114,7 +117,7 @@ class Skrill extends StatelessWidget {
             ),
           ),
           CustomButtons.generalButton(
-              context: context, onTap: () {}, text: 'Next'),
+              context: context, onTap: () {}, text: LocaleKeys.next),
           verticalSpaceMedium(context),
         ],
       ),

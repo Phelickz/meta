@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/forex_news/forex_news_view_model.dart';
 import 'package:meta_trader/ui/widgets/home/market_news.dart';
 
@@ -36,7 +38,7 @@ class Search extends StatelessWidget {
                   }
                 },
                 decoration: InputDecoration(
-                  hintText: 'Search',
+                  hintText: LocaleKeys.search.tr(),
                   hintStyle: CustomThemeData.generateStyle(
                     fontSize: 15,
                     color: Theme.of(context).secondaryHeaderColor,
@@ -83,7 +85,8 @@ class Search extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Search Results:',
+                        LocaleKeys.forexNewsWidget_searchWidget_searchResult
+                            .tr(),
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 2),
                           fontWeight: FontWeight.bold,
@@ -138,7 +141,7 @@ class Search extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'More Results',
+                        LocaleKeys.forexNewsWidget_searchWidget_moreResult.tr(),
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 2),
                           fontWeight: FontWeight.bold,

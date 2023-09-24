@@ -5,6 +5,7 @@ import 'package:meta_trader/ui/views/help_and_support/help_and_support_view_mode
 import 'package:meta_trader/ui/widgets/help_and_support/components/help_and_support_tile.dart';
 
 import '../../../app/responsiveness/res.dart';
+import '../../../generated/locale_keys.g.dart';
 
 class HelpAndSupportPage extends StatelessWidget {
   final HelpAndSupportViewModel model;
@@ -19,7 +20,8 @@ class HelpAndSupportPage extends StatelessWidget {
         children: [
           verticalSpaceXSmall(context),
           HelpAndSupportTile(
-            title: "Chat with customer care",
+            title:
+                LocaleKeys.helpAndSupport_helpAndSupportWidget_chatWithCustomer,
             icon: AssetManager.chat,
             onTap: () {
               model.setHelpAndSupportPageEnum =
@@ -27,14 +29,16 @@ class HelpAndSupportPage extends StatelessWidget {
             },
           ),
           HelpAndSupportTile(
-            title: "Frequently asked questions",
+            title:
+                LocaleKeys.helpAndSupport_helpAndSupportWidget_frequentlyAskedQ,
             icon: AssetManager.faq,
             onTap: () {
               model.setHelpAndSupportPageEnum = HelpAndSupportPageEnum.faq;
             },
           ),
           HelpAndSupportTile(
-            title: "Send us a message",
+            title:
+                LocaleKeys.helpAndSupport_helpAndSupportWidget_sendUsAMessage,
             // icon: AssetManager.emptyNotifications,
             icon: 'assets/images/message-text.svg',
             onTap: () {

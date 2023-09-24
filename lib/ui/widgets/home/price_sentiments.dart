@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 class PriceSentiments extends StatelessWidget {
   const PriceSentiments(
@@ -32,7 +33,7 @@ class PriceSentiments extends StatelessWidget {
           child: Row(
             children: [
               Text(
-                '65% Buy',
+                LocaleKeys.home_priceSentiments_buySixty,
                 style: CustomThemeData.generateStyle(
                   fontSize: 13,
                   color: isDarkMode ? Colors.white70 : Colors.black54,
@@ -55,7 +56,7 @@ class PriceSentiments extends StatelessWidget {
                 width: 5,
               ),
               Text(
-                '35% Sell ',
+                LocaleKeys.home_priceSentiments_sellThirty,
                 style: CustomThemeData.generateStyle(
                   fontSize: 13,
                   color: isDarkMode ? Colors.white70 : Colors.black54,

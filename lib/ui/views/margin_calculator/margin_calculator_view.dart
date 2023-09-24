@@ -1,11 +1,13 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/margin_calculator/margin_calculator_view_model.dart';
 import 'package:meta_trader/ui/widgets/appbar.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
@@ -33,7 +35,7 @@ class MarginCalculatorView extends StackedView<MarginCalculatorViewModel> {
       bodyPadding: EdgeInsets.symmetric(
         horizontal: McGyver.rsDoubleW(context, 0),
       ),
-      appBar: globalAppBar(context, 'Margin Calculator', '', () {
+      appBar: globalAppBar(context, LocaleKeys.marginCalculator.tr(), '', () {
         Navigator.pop(context);
       }, []),
       body: Padding(
@@ -65,7 +67,8 @@ class MarginCalculatorView extends StackedView<MarginCalculatorViewModel> {
                       Row(
                         children: [
                           Text(
-                            'Required Margin (USD)',
+                            LocaleKeys.views_marginCalculatorView_requiredMargin
+                                .tr(args: ['(USD)']),
                             style: CustomThemeData.generateStyle(
                                 fontSize: 13,
                                 color:
@@ -101,7 +104,7 @@ class MarginCalculatorView extends StackedView<MarginCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                'Account Currency',
+                LocaleKeys.accountCurrency.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
@@ -149,7 +152,7 @@ class MarginCalculatorView extends StackedView<MarginCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                'Currency Pair',
+                LocaleKeys.currencyPair.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
@@ -197,7 +200,7 @@ class MarginCalculatorView extends StackedView<MarginCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                'Trade Size (units)',
+                LocaleKeys.tradeSize.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
@@ -212,7 +215,7 @@ class MarginCalculatorView extends StackedView<MarginCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                'Leverage',
+                LocaleKeys.leverage.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode ? Colors.white70 : const Color(0xff667085),
@@ -235,7 +238,7 @@ class MarginCalculatorView extends StackedView<MarginCalculatorViewModel> {
               CustomButtons.generalButton(
                 context: context,
                 onTap: () {},
-                text: 'Calculate',
+                text: LocaleKeys.calculate.tr(),
               ),
               verticalSpaceSmall(context),
             ],

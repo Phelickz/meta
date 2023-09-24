@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:intl/intl.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/chart/chart_view_model.dart';
 
 class OverviewChart extends StatelessWidget {
@@ -49,7 +51,7 @@ class OverviewChart extends StatelessWidget {
               return touchedSpots.map(
                 (LineBarSpot touchedSpot) {
                   return LineTooltipItem(
-                    "max",
+                    LocaleKeys.max.tr(),
                     const TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.w500,

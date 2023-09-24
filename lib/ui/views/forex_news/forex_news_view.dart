@@ -1,7 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/forex_news/forex_news_view_model.dart';
 import 'package:meta_trader/ui/widgets/forex_news/all.dart';
 import 'package:meta_trader/ui/widgets/forex_news/cryptocurrency.dart';
@@ -39,28 +41,28 @@ class ForexNewsView extends StackedView<ForexNewsViewModel> {
               : ContainedTabBarView(
                   tabs: [
                     Text(
-                      'All',
+                      LocaleKeys.views_forexNews_forexModel_all.tr(),
                       style: CustomThemeData.generateStyle(
                         fontSize: 12,
                         color: isDarkMode ? Colors.white54 : Colors.black,
                       ),
                     ),
                     Text(
-                      'Currency pairs',
+                      LocaleKeys.currencyPair.tr(),
                       style: CustomThemeData.generateStyle(
                         fontSize: 12,
                         color: isDarkMode ? Colors.white54 : Colors.black,
                       ),
                     ),
                     Text(
-                      'Metals',
+                      LocaleKeys.metals.tr(),
                       style: CustomThemeData.generateStyle(
                         fontSize: 12,
                         color: isDarkMode ? Colors.white54 : Colors.black,
                       ),
                     ),
                     Text(
-                      'Cryptocurrency',
+                      LocaleKeys.views_forexNews_forexModel_cryptoCurrency.tr(),
                       style: CustomThemeData.generateStyle(
                         fontSize: 12,
                         color: isDarkMode ? Colors.white54 : Colors.black,

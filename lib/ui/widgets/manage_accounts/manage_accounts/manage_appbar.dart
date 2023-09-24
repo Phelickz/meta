@@ -16,6 +16,8 @@ import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/status_ta
 import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/type_tag.dart';
 import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
 
+import '../../../../generated/locale_keys.g.dart';
+
 AppBar maanageAccountAppBar(
     BuildContext context, ManageAccountViewModel model) {
   var isDarkMode = CustomThemeData.isDarkMode(context);
@@ -35,7 +37,7 @@ AppBar maanageAccountAppBar(
         )),
     centerTitle: false,
     title: Text(
-      "Manage Account",
+      LocaleKeys.manageAccount,
       style: CustomThemeData.generateStyle(
           fontSize: McGyver.textSize(context, 2),
           color: isDarkMode ? Colors.white : Colors.white,
@@ -119,7 +121,7 @@ class ManageAppbarExtension extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Balance",
+                LocaleKeys.balance,
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.2),
                     color: isDarkMode ? Colors.white : Colors.white,
@@ -148,7 +150,7 @@ class ManageAppbarExtension extends StatelessWidget {
               SizedBox(
                 height: 4.pHeight(context),
               ),
-              const StatusTag(status: "Active", color: Colors.green),
+              const StatusTag(status: LocaleKeys.active, color: Colors.green),
             ],
           ),
           const Spacer(),
@@ -159,7 +161,7 @@ class ManageAppbarExtension extends StatelessWidget {
               SizedBox(
                 height: 8.pHeight(context),
               ),
-              const TypeTag(tag: "Real"),
+              const TypeTag(tag: LocaleKeys.real),
               SizedBox(
                 height: 8.pHeight(context),
               ),
@@ -174,7 +176,8 @@ class ManageAppbarExtension extends StatelessWidget {
                 height: 2.pHeight(context),
               ),
               Text(
-                "Access point EU 3 1:100, Hedge",
+                LocaleKeys
+                    .manageAccounts_manageAccountsWidget_manageAccountAppBar_accessPointHedge,
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1),
                     color: isDarkMode ? Colors.white : Colors.white,

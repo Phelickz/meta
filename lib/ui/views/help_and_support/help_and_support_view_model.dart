@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_final_fields, unused_field
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/help_and_support/app_bar.dart';
 import 'package:meta_trader/ui/widgets/help_and_support/customer_support.dart';
 import 'package:meta_trader/ui/widgets/help_and_support/empty.dart';
@@ -51,26 +53,29 @@ class HelpAndSupportViewModel extends CustomBaseViewModel {
 
   List faqs = [
     {
-      "question": "How do i make withdrawals?",
-      "answer":
-          "I wanted to take this opportunity to reiterate my enthusiasm for the position and my strong interest in becoming a valuable member of the [Company Name] team. After our conversation, I am even more convinced that this is a role where I can contribute my expertise and make a positive impact.\n\nI was particularly impressed by [specific aspect or project discussed during the interview], and I believe my background in [relevant experience] would allow me to bring fresh perspectives and valuable insights to the team"
+      LocaleKeys.views_helpAndSupportView_question.tr():
+          LocaleKeys.views_helpAndSupportView_faqList_question1.tr(),
+      LocaleKeys.views_helpAndSupportView_answer.tr():
+          "${LocaleKeys.views_helpAndSupportView_faqList_answer1.tr()} \n\n ${LocaleKeys.views_helpAndSupportView_faqList_question1.tr()}"
     },
     {
-      "question": "How do i make withdrawals?",
-      "answer":
-          "I wanted to take this opportunity to reiterate my enthusiasm for the position and my strong interest in becoming a valuable member of the [Company Name] team. After our conversation, I am even more convinced that this is a role where I can contribute my expertise and make a positive impact.\n\nI was particularly impressed by [specific aspect or project discussed during the interview], and I believe my background in [relevant experience] would allow me to bring fresh perspectives and valuable insights to the team"
+      LocaleKeys.views_helpAndSupportView_question.tr():
+          LocaleKeys.views_helpAndSupportView_faqList_question1.tr(),
+      LocaleKeys.views_helpAndSupportView_answer.tr():
+          "${LocaleKeys.views_helpAndSupportView_faqList_answer1.tr()} \n\n ${LocaleKeys.views_helpAndSupportView_faqList_question1.tr()}"
     },
     {
-      "question": "How do i make withdrawals?",
-      "answer":
-          "I wanted to take this opportunity to reiterate my enthusiasm for the position and my strong interest in becoming a valuable member of the [Company Name] team. After our conversation, I am even more convinced that this is a role where I can contribute my expertise and make a positive impact.\n\nI was particularly impressed by [specific aspect or project discussed during the interview], and I believe my background in [relevant experience] would allow me to bring fresh perspectives and valuable insights to the team"
+      LocaleKeys.views_helpAndSupportView_question.tr():
+          LocaleKeys.views_helpAndSupportView_faqList_question1.tr(),
+      LocaleKeys.views_helpAndSupportView_answer.tr():
+          "${LocaleKeys.views_helpAndSupportView_faqList_answer1.tr()} \n\n ${LocaleKeys.views_helpAndSupportView_faqList_question1.tr()}"
     }
   ];
 
   List _suggestionsList = [
-    "I need a favor",
-    "How do I withdraw",
-    "I cant fund my wallet"
+    LocaleKeys.views_helpAndSupportView_suggestionList_suggestion1.tr(),
+    LocaleKeys.views_helpAndSupportView_suggestionList_suggestion2.tr(),
+    LocaleKeys.views_helpAndSupportView_suggestionList_suggestion3.tr(),
   ];
 
   List get suggestionList => _suggestionsList;
@@ -109,14 +114,26 @@ class HelpAndSupportViewModel extends CustomBaseViewModel {
   AppBar? returnAppBar(BuildContext context) {
     switch (_helpAndSupportPageEnum) {
       case HelpAndSupportPageEnum.helpAndSupport:
-        return helpAndSupportAppBar(context, "Help and Support", "", this,
+        return helpAndSupportAppBar(
+            context,
+            LocaleKeys.views_helpAndSupportView_helpAndSupport.tr(),
+            "",
+            this,
             HelpAndSupportPageEnum.helpAndSupport);
       case HelpAndSupportPageEnum.faq:
         return helpAndSupportAppBar(
-            context, "FAQ", "", this, HelpAndSupportPageEnum.faq);
+            context,
+            LocaleKeys.views_helpAndSupportView_faq.tr(),
+            "",
+            this,
+            HelpAndSupportPageEnum.faq);
       case HelpAndSupportPageEnum.customerSupport:
         return helpAndSupportAppBar(
-            context, "Customer care", "Online", this, helpAndSupportPageEnum);
+            context,
+            LocaleKeys.views_helpAndSupportView_customerCare.tr(),
+            LocaleKeys.views_helpAndSupportView_online.tr(),
+            this,
+            helpAndSupportPageEnum);
 
       default:
         return null;

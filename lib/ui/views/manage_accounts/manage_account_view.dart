@@ -1,8 +1,10 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/manage_accounts/manage_accounts_view_model.dart';
 import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/account_tile.dart';
 import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/manage_appbar.dart';
@@ -39,7 +41,7 @@ class ManageAccountView extends StackedView<ManageAccountViewModel> {
                   SizedBox(
                     height: 160.pHeight(context),
                   ),
-                  Text("Connect to",
+                  Text(LocaleKeys.connectTo.tr(),
                       style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 2.2),
                           color: CustomThemeData.isDarkMode(context)

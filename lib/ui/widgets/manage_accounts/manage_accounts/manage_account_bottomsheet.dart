@@ -4,6 +4,8 @@ import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
+import '../../../../generated/locale_keys.g.dart';
+
 class ManageAccountBottomSheet1 extends StatelessWidget {
   final String accountDetail;
   const ManageAccountBottomSheet1({super.key, required this.accountDetail});
@@ -33,7 +35,7 @@ class ManageAccountBottomSheet1 extends StatelessWidget {
             height: 30.pHeight(context),
           ),
           Text(
-            "Change Password",
+            LocaleKeys.changePassword,
             style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2),
                 color: isDarkMode ? Colors.white : Colors.black,
@@ -43,7 +45,7 @@ class ManageAccountBottomSheet1 extends StatelessWidget {
             height: 16.pHeight(context),
           ),
           Text(
-            "Delete Account",
+            LocaleKeys.deleteAccount,
             style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2),
                 color: Colors.red,
@@ -55,7 +57,7 @@ class ManageAccountBottomSheet1 extends StatelessWidget {
           CustomButtons.generalButton(
             context: context,
             onTap: () {},
-            text: "Cancel",
+            text: LocaleKeys.cancel,
             textSize: 2,
           )
         ],
@@ -94,7 +96,7 @@ class ManageAccountBottomSheet2 extends StatelessWidget {
             height: 30.pHeight(context),
           ),
           Text(
-            "Login",
+            LocaleKeys.login,
             style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2),
                 color: isDarkMode ? Colors.white : Colors.black,
@@ -112,7 +114,7 @@ class ManageAccountBottomSheet2 extends StatelessWidget {
                   });
             },
             child: Text(
-              "Properties",
+              LocaleKeys.properties,
               style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2),
                   color: isDarkMode ? Colors.white : Colors.black,
@@ -131,7 +133,7 @@ class ManageAccountBottomSheet2 extends StatelessWidget {
                   });
             },
             child: Text(
-              "Delete Account",
+              LocaleKeys.deleteAccount,
               style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2),
                   color: Colors.red,
@@ -174,12 +176,13 @@ class DeleteAccountDialog extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              "Delete account",
+              LocaleKeys.deleteAccount,
               style: Theme.of(context).textTheme.labelLarge,
             ),
             SizedBox(height: 12.pHeight(context)),
             Text(
-              'Do you really want to delete account?',
+              LocaleKeys
+                  .manageAccounts_manageAccountsWidget_manageAccountBottomSheet_doYouReallyWant,
               style: Theme.of(context).textTheme.labelMedium,
             ),
             SizedBox(height: 24.pWidth(context)),
@@ -193,7 +196,7 @@ class DeleteAccountDialog extends StatelessWidget {
                       border: Border.all(color: Colors.red)),
                   child: Center(
                     child: Text(
-                      "Delete",
+                      LocaleKeys.delete,
                       style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 2),
                           color: Colors.red,
@@ -205,7 +208,7 @@ class DeleteAccountDialog extends StatelessWidget {
                   width: 30.pWidth(context),
                 ),
                 Text(
-                  "Cancel",
+                  LocaleKeys.cancel,
                   style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 2),
                       color: isDarkMode ? Colors.white : Colors.black,
@@ -245,7 +248,7 @@ class DetailDialog extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              "Properties",
+              LocaleKeys.properties,
               style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.5),
                   color: isDarkMode ? Colors.white : const Color(0xFF98A2B3),
@@ -253,7 +256,8 @@ class DetailDialog extends StatelessWidget {
             ),
             SizedBox(height: 12.pHeight(context)),
             Text(
-              '23299752',
+              LocaleKeys
+                  .manageAccounts_manageAccountsWidget_manageAccountBottomSheet_figure,
               style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.5),
                   color: isDarkMode ? Colors.white : Colors.black,
@@ -267,14 +271,16 @@ class DetailDialog extends StatelessWidget {
                   fontWeight: FontWeight.w500),
             ),
             Text(
-              'USD 12 000 000.00',
+              LocaleKeys
+                  .manageAccounts_manageAccountsWidget_manageAccountBottomSheet_twelveUsd,
               style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.5),
                   color: isDarkMode ? Colors.white : Colors.black,
                   fontWeight: FontWeight.w500),
             ),
             Text(
-              'demo-account',
+              LocaleKeys
+                  .manageAccounts_manageAccountsWidget_manageAccountBottomSheet_demo_account,
               style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.5),
                   color: isDarkMode ? Colors.white : Colors.black,
@@ -282,7 +288,10 @@ class DetailDialog extends StatelessWidget {
             ),
             SizedBox(height: 23.pHeight(context)),
             CustomButtons.clearButton(
-                context: context, onTap: () {}, text: "Ok", textSize: 2)
+                context: context,
+                onTap: () {},
+                text: LocaleKeys.ok,
+                textSize: 2)
           ],
         ),
       ),

@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/auth/auth_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
@@ -28,27 +30,27 @@ class LoginPage extends StatelessWidget {
             loginListTile(context, 'Deriv Limited', 'Deriv', isDarkMode),
             verticalSpaceSmall(context),
             Text(
-              'Login ID',
+              LocaleKeys.loginID.tr(),
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 color: isDarkMode ? Colors.white70 : const Color(0xff667085),
               ),
             ),
             verticalSpaceXSmall(context),
-            const CustomTextFields(
-              hintText: 'Enter your login ID',
+            CustomTextFields(
+              hintText: LocaleKeys.enterYourLoginId.tr(),
             ),
             verticalSpaceSmall(context),
             Text(
-              'Password',
+              LocaleKeys.password.tr(),
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 color: isDarkMode ? Colors.white70 : const Color(0xff667085),
               ),
             ),
             verticalSpaceXSmall(context),
-            const CustomTextFields(
-              hintText: 'Password',
+            CustomTextFields(
+              hintText: LocaleKeys.password.tr(),
               password: true,
             ),
             // verticalSpaceSmall(context),
@@ -90,7 +92,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 // SizedBox(width: 1),
                 Text(
-                  "Save Password",
+                  LocaleKeys.savePassword.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.normal,
@@ -106,14 +108,14 @@ class LoginPage extends StatelessWidget {
               onTap: () {
                 model.push(const VerificationRoute());
               },
-              text: 'Sign in',
+              text: LocaleKeys.signIn.tr(),
             ),
             verticalSpaceXSmall(context),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Forgot password ?',
+                  LocaleKeys.forgetPassword.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: 13,
                     color: isDarkMode ? Colors.white : const Color(0xff667085),
@@ -124,7 +126,7 @@ class LoginPage extends StatelessWidget {
                       foregroundColor: Theme.of(context).primaryColor),
                   onPressed: () {},
                   child: Text(
-                    "Contact Broker",
+                    LocaleKeys.contactBroker.tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w500,

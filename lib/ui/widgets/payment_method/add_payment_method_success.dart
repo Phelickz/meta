@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
@@ -38,7 +39,8 @@ class AddPaymentMethodSuccessPage extends StatelessWidget {
             horizontal: McGyver.rsDoubleW(context, 10),
           ),
           child: Text(
-            "Payment Method Added Successfully",
+            LocaleKeys
+                .paymentMethod_addPaymentMethodSuccess_paymentMethodAddSuccess,
             textAlign: TextAlign.center,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 3),
@@ -53,7 +55,8 @@ class AddPaymentMethodSuccessPage extends StatelessWidget {
         RichText(
           textAlign: TextAlign.center,
           text: TextSpan(
-            text: 'Now you can make withdrawals via ',
+            text:
+                LocaleKeys.paymentMethod_addPaymentMethodSuccess_nowYouCanMake,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 2),
               fontWeight: FontWeight.w500,
@@ -72,7 +75,8 @@ class AddPaymentMethodSuccessPage extends StatelessWidget {
                 ),
               ),
               const TextSpan(
-                text: ', using the information you provided',
+                text: LocaleKeys
+                    .paymentMethod_addPaymentMethodSuccess_usingInformation,
               )
             ],
           ),
@@ -83,7 +87,7 @@ class AddPaymentMethodSuccessPage extends StatelessWidget {
           onTap: () {
             viewModel.paymentMethodPageEnum = PaymentMethodPageEnum.main;
           },
-          text: 'Continue',
+          text: LocaleKeys.continueWord,
         ),
       ],
     );

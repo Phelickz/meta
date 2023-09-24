@@ -7,6 +7,8 @@ import 'package:meta_trader/ui/views/fund_account/fund_account_view_model.dart';
 import 'package:meta_trader/ui/widgets/auth/radio_button.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
+import '../../../generated/locale_keys.g.dart';
+
 class SelectAccount extends StatelessWidget {
   const SelectAccount({super.key, required this.model});
   final FundAccountViewModel model;
@@ -42,7 +44,7 @@ class SelectAccount extends StatelessWidget {
               model.setFundAccountPageEnum =
                   FundAccountPageEnum.selectDepositMethod;
             },
-            text: 'Next',
+            text: LocaleKeys.next,
           ),
           verticalSpaceSmall(context),
         ],
@@ -95,7 +97,7 @@ class SelectAccount extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Balance',
+                            LocaleKeys.balance,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.2),
                               color: isDarkMode ? Colors.white : Colors.black45,
@@ -145,7 +147,7 @@ class SelectAccount extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Last Activity: 23.12.2023',
+                            LocaleKeys.lastActivity,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.2),
                               fontWeight: FontWeight.normal,

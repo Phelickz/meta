@@ -8,6 +8,8 @@ import 'package:meta_trader/ui/views/fund_account/fund_account_view_model.dart';
 import 'package:meta_trader/ui/widgets/auth/radio_button.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
+import '../../../generated/locale_keys.g.dart';
+
 class SelectDepositMethod extends StatelessWidget {
   const SelectDepositMethod({super.key, required this.model});
   final FundAccountViewModel model;
@@ -68,7 +70,7 @@ class SelectDepositMethod extends StatelessWidget {
                 model.setFundAccountPageEnum = FundAccountPageEnum.blockBee;
               }
             },
-            text: 'Next',
+            text: LocaleKeys.next,
           ),
           verticalSpaceMedium(context),
         ],
@@ -143,14 +145,14 @@ class SelectDepositMethod extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Average time:',
+                            LocaleKeys.averageTime,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.4),
                               color: isDarkMode ? Colors.white : Colors.black45,
                             ),
                           ),
                           Text(
-                            'Instant',
+                            LocaleKeys.instant,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.4),
                               color: isDarkMode ? Colors.white : Colors.black45,
@@ -166,14 +168,14 @@ class SelectDepositMethod extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Duration:',
+                            LocaleKeys.duration,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.4),
                               color: isDarkMode ? Colors.white : Colors.black45,
                             ),
                           ),
                           Text(
-                            'up to 30mins',
+                            LocaleKeys.upTo,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.4),
                               color: isDarkMode ? Colors.white : Colors.black45,
@@ -188,7 +190,7 @@ class SelectDepositMethod extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Fee:',
+                            LocaleKeys.fee,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.4),
                               color: isDarkMode ? Colors.white : Colors.black45,
@@ -210,14 +212,15 @@ class SelectDepositMethod extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Limit:',
+                            LocaleKeys.limit,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.4),
                               color: isDarkMode ? Colors.white : Colors.black45,
                             ),
                           ),
                           Text(
-                            '10-200,00 USD',
+                            LocaleKeys
+                                .fundAccountWidget_selectDepositMethodWidget_tenUsd,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.4),
                               color: isDarkMode ? Colors.white : Colors.black45,

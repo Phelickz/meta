@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/forex_news/forex_news_view_model.dart';
 import 'package:meta_trader/ui/widgets/home/market_news.dart';
 
@@ -22,7 +24,7 @@ class Metals extends StatelessWidget {
         children: [
           verticalSpaceSmall(context),
           Text(
-            'Trending 🔥',
+            '${LocaleKeys.trending.tr()}🔥',
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.8),
               fontWeight: FontWeight.bold,
@@ -54,7 +56,7 @@ class Metals extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'NZD/USD recovers following mixed NFPs from the US',
+                            'NZD/USD ${LocaleKeys.forexNewsWidget_allWidget_text.tr()}',
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 2.3),
                               fontWeight: FontWeight.w800,
@@ -62,7 +64,7 @@ class Metals extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Aug 4, 2034 15:07 GMT',
+                            LocaleKeys.forexNewsWidget_allWidget_text2.tr(),
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.5),
                               fontWeight: FontWeight.normal,
@@ -93,7 +95,7 @@ class Metals extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'NZD/USD recovers following mixed NFPs from the US',
+                            'NZD/USD ${LocaleKeys.forexNewsWidget_allWidget_text.tr()}',
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 2.3),
                               fontWeight: FontWeight.w800,
@@ -101,7 +103,7 @@ class Metals extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Aug 4, 2034 15:07 GMT',
+                            LocaleKeys.forexNewsWidget_allWidget_text2.tr(),
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.5),
                               fontWeight: FontWeight.normal,
@@ -132,7 +134,7 @@ class Metals extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'NZD/USD recovers following mixed NFPs from the US',
+                            'NZD/USD ${LocaleKeys.forexNewsWidget_allWidget_text.tr()}',
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 2.3),
                               fontWeight: FontWeight.w800,
@@ -140,7 +142,7 @@ class Metals extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Aug 4, 2034 15:07 GMT',
+                            LocaleKeys.forexNewsWidget_allWidget_text2.tr(),
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.5),
                               fontWeight: FontWeight.normal,
@@ -217,7 +219,8 @@ class Metals extends StatelessWidget {
                       : const Color(0xff475467),
                 ),
               ),
-              TextButton(onPressed: () {}, child: const Text('View more'))
+              TextButton(
+                  onPressed: () {}, child: Text(LocaleKeys.viewMore.tr()))
             ],
           ),
           verticalSpaceXXSmall(context),
@@ -269,7 +272,8 @@ class Metals extends StatelessWidget {
                       : const Color(0xff475467),
                 ),
               ),
-              TextButton(onPressed: () {}, child: const Text('View more'))
+              TextButton(
+                  onPressed: () {}, child: Text(LocaleKeys.viewMore.tr()))
             ],
           ),
           verticalSpaceXXSmall(context),
@@ -321,7 +325,8 @@ class Metals extends StatelessWidget {
                       : const Color(0xff475467),
                 ),
               ),
-              TextButton(onPressed: () {}, child: const Text('View more'))
+              TextButton(
+                  onPressed: () {}, child: Text(LocaleKeys.viewMore.tr()))
             ],
           ),
           verticalSpaceXXSmall(context),

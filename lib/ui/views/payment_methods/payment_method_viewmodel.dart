@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/payment_method/app_bar.dart';
 import 'package:meta_trader/ui/widgets/payment_method/binance_pay.dart';
 import 'package:meta_trader/ui/widgets/payment_method/neteller.dart';
@@ -183,23 +185,26 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
   String paymentMethodLabel(PaymentMethodEnum payment) {
     switch (payment) {
       case PaymentMethodEnum.onlineBank:
-        return "Online Bank";
+        return LocaleKeys.views_fundAccountView_fundAccountAppBar_onlineBank
+            .tr();
       case PaymentMethodEnum.binancePay:
-        return "BinancePay";
+        return LocaleKeys.views_fundAccountView_fundAccountAppBar_binancePay
+            .tr();
       case PaymentMethodEnum.neteller:
-        return "Neteller";
+        return LocaleKeys.views_fundAccountView_fundAccountAppBar_neteller.tr();
       case PaymentMethodEnum.bitcoin:
-        return "Bitcoin (BTC)";
+        return LocaleKeys.views_fundAccountView_fundAccountAppBar_bitcoin.tr();
       case PaymentMethodEnum.perfectMoney:
-        return "Perfect Money";
+        return LocaleKeys.views_fundAccountView_fundAccountAppBar_perfectMoney
+            .tr();
       case PaymentMethodEnum.skrill:
-        return "Skrill";
+        return LocaleKeys.views_fundAccountView_fundAccountAppBar_skrill;
       case PaymentMethodEnum.sticPay:
-        return "SticPay";
+        return LocaleKeys.views_fundAccountView_fundAccountAppBar_sticPay.tr();
       case PaymentMethodEnum.tether:
         return "Tether (USDT ERC20)";
       default:
-        return "Tether";
+        return LocaleKeys.views_fundAccountView_fundAccountAppBar_tether.tr();
     }
   }
 
@@ -237,7 +242,7 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
       case PaymentMethodPageEnum.main:
         return paymentMethodAppBar2(
           context,
-          'Payment Methods',
+          LocaleKeys.paymentMethod.tr(),
           '',
           this,
           'assets/images/add_square.svg',
@@ -245,73 +250,73 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
       case PaymentMethodPageEnum.binancePay:
         return paymentMethodAppBar2(
           context,
-          'BinancePay',
-          'Add BinancePay details',
+          LocaleKeys.views_fundAccountView_fundAccountAppBar_binancePay.tr(),
+          LocaleKeys.views_paymentMethodPageView_addBinancePay.tr(),
           this,
           'assets/images/trash.svg',
         );
       case PaymentMethodPageEnum.neteller:
         return paymentMethodAppBar2(
           context,
-          'Neteller',
-          'Enter Neteller account details',
+          LocaleKeys.views_fundAccountView_fundAccountAppBar_neteller.tr(),
+          LocaleKeys.views_paymentMethodPageView_enterNetellerAccount.tr(),
           this,
         );
       case PaymentMethodPageEnum.bitcoin:
         return paymentMethodAppBar2(
           context,
-          'Bitcoin',
-          'Add Bitcoin details',
+          LocaleKeys.views_fundAccountView_fundAccountAppBar_bitcoin,
+          LocaleKeys.views_paymentMethodPageView_addBitcoinDetails.tr(),
           this,
         );
       case PaymentMethodPageEnum.skrill:
         return paymentMethodAppBar2(
           context,
-          'Skrill',
-          'Enter Skrill account details',
+          LocaleKeys.views_fundAccountView_fundAccountAppBar_skrill.tr(),
+          LocaleKeys.views_paymentMethodPageView_enterSkrillAccount.tr(),
           this,
         );
       case PaymentMethodPageEnum.perfectMoney:
         return paymentMethodAppBar2(
           context,
-          'Perfect Money',
-          'Enter payment details',
+          LocaleKeys.views_fundAccountView_fundAccountAppBar_perfectMoney.tr(),
+          LocaleKeys.views_paymentMethodPageView_enterPaymentDetails.tr(),
           this,
         );
       case PaymentMethodPageEnum.sticPay:
         return paymentMethodAppBar2(
           context,
-          'SticPay',
-          'Enter SticPay account details',
+          LocaleKeys.views_fundAccountView_fundAccountAppBar_sticPay.tr(),
+          LocaleKeys.views_paymentMethodPageView_enterSticPayAccount.tr(),
           this,
         );
       case PaymentMethodPageEnum.tether:
         return paymentMethodAppBar2(
           context,
-          'TetherUSD',
-          'Add TetherUSD details',
+          LocaleKeys.views_fundAccountView_fundAccountAppBar_tether.tr(),
+          LocaleKeys.views_paymentMethodPageView_enterTetherDetails.tr(),
           this,
         );
       case PaymentMethodPageEnum.qrCode:
         return paymentMethodAppBar2(
           context,
-          'BinancePay',
-          'Scan QR code',
+          LocaleKeys.views_fundAccountView_fundAccountAppBar_binancePay.tr(),
+          LocaleKeys.views_paymentMethodPageView_scanQr.tr(),
           this,
         );
       case PaymentMethodPageEnum.onlineBank:
         return paymentMethodAppBar2(
           context,
-          'Online Bank',
-          'Edit online bank',
+          LocaleKeys.views_fundAccountView_fundAccountAppBar_onlineBank.tr(),
+          LocaleKeys.views_paymentMethodPageView_editOnlineBank.tr(),
           this,
           'assets/images/trash.svg',
         );
       case PaymentMethodPageEnum.addPaymentMethod:
         return paymentMethodAppBar2(
           context,
-          'Online Bank',
-          'Edit online bank',
+          LocaleKeys.views_fundAccountView_fundAccountAppBar_onlineBank.tr(),
+          LocaleKeys.views_paymentMethodPageView_editOnlineBank.tr(),
           this,
         );
       default:

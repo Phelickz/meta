@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../app/responsiveness/size.dart';
 import '../../views/payment_methods/payment_method_viewmodel.dart';
@@ -23,21 +24,26 @@ class OnlineBankPage extends StatelessWidget {
               children: [
                 verticalSpaceXSmall(context),
                 const LabelTextField(
-                  label: "Account Name",
+                  label:
+                      LocaleKeys.fundAccountWidget_onlineBankWidget_accountName,
                   hintText: "Susan Blake",
                   isEnabled: false,
                 ),
                 const LabelTextField(
-                  label: "Account Number",
+                  label: LocaleKeys
+                      .fundAccountWidget_onlineBankWidget_accountNumber,
                   hintText: "23458755632",
                 ),
                 const LabelTextField(
-                  label: "Bank Name",
-                  hintText: "Enter bank name",
+                  label: LocaleKeys.paymentMethod_onlineBankWidgetP_bankName,
+                  hintText:
+                      LocaleKeys.paymentMethod_onlineBankWidgetP_enterBankName,
                 ),
                 const LabelTextField(
-                  label: "Account opening branch (optional)",
-                  hintText: "Enter bank branch information",
+                  label:
+                      LocaleKeys.paymentMethod_onlineBankWidgetP_accountOpening,
+                  hintText: LocaleKeys
+                      .paymentMethod_onlineBankWidgetP_enterBranchInformation,
                 ),
               ],
             ),
@@ -49,7 +55,7 @@ class OnlineBankPage extends StatelessWidget {
             viewModel.paymentMethodPageEnum =
                 PaymentMethodPageEnum.addPaymentMethodSuccess;
           },
-          text: 'Save Changes',
+          text: LocaleKeys.saveChanges,
         ),
         verticalSpaceSmall(context),
         verticalSpaceXSmall(context),

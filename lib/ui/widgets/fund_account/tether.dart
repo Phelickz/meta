@@ -8,6 +8,8 @@ import 'package:meta_trader/ui/views/fund_account/fund_account_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
 
+import '../../../generated/locale_keys.g.dart';
+
 class Tether extends StatelessWidget {
   const Tether({super.key, required this.model});
   final FundAccountViewModel model;
@@ -26,7 +28,7 @@ class Tether extends StatelessWidget {
             child: ListView(
               children: [
                 Text(
-                  'Wallet Address',
+                  LocaleKeys.walletAddress,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
@@ -55,7 +57,7 @@ class Tether extends StatelessWidget {
                 ),
                 verticalSpaceSmall(context),
                 Text(
-                  'Amount To Fund',
+                  LocaleKeys.amountToFund,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
@@ -70,7 +72,7 @@ class Tether extends StatelessWidget {
                 ),
                 verticalSpaceSmall(context),
                 Text(
-                  'Choose Network',
+                  LocaleKeys.chooseNetwork,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
@@ -80,7 +82,7 @@ class Tether extends StatelessWidget {
                 ),
                 verticalSpaceXXSmall(context),
                 CustomTextFields(
-                  hintText: 'BTC Beacon Chain (BEP2)',
+                  hintText: LocaleKeys.btcBeacon,
                   password: false,
                   suffixIcon: Icon(
                     Icons.arrow_forward_ios,
@@ -101,7 +103,8 @@ class Tether extends StatelessWidget {
                     horizontalSpaceXSmall(context),
                     Expanded(
                       child: Text(
-                        'Make sure to fund using the chosen network, otherwise, your asset will be lost.',
+                        LocaleKeys
+                            .fundAccountWidget_tetherWidget_makeSureToChoose,
                         style: CustomThemeData.generateStyle(
                           fontSize: 13,
                           color: isDarkMode
@@ -118,7 +121,7 @@ class Tether extends StatelessWidget {
             ),
           ),
           CustomButtons.generalButton(
-              context: context, onTap: () {}, text: 'Fund Account'),
+              context: context, onTap: () {}, text: LocaleKeys.fundAccount),
           verticalSpaceMedium(context),
         ],
       ),

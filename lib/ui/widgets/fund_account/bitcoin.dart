@@ -1,9 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/fund_account/fund_account_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
@@ -26,7 +28,7 @@ class Bitcoin extends StatelessWidget {
             child: ListView(
               children: [
                 Text(
-                  'Wallet Address',
+                  LocaleKeys.walletAddress.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
@@ -55,7 +57,7 @@ class Bitcoin extends StatelessWidget {
                 ),
                 verticalSpaceSmall(context),
                 Text(
-                  'Amount To Fund',
+                  LocaleKeys.amountToFund.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
@@ -70,7 +72,7 @@ class Bitcoin extends StatelessWidget {
                 ),
                 verticalSpaceSmall(context),
                 Text(
-                  'Choose Network',
+                  LocaleKeys.chooseNetwork.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
@@ -80,7 +82,7 @@ class Bitcoin extends StatelessWidget {
                 ),
                 verticalSpaceXXSmall(context),
                 CustomTextFields(
-                  hintText: 'BTC Beacon Chain (BEP2)',
+                  hintText: LocaleKeys.btcBeacon.tr(),
                   password: false,
                   suffixIcon: Icon(
                     Icons.arrow_forward_ios,
@@ -101,7 +103,9 @@ class Bitcoin extends StatelessWidget {
                     horizontalSpaceXSmall(context),
                     Expanded(
                       child: Text(
-                        'Make sure to fund using the chosen network, otherwise, your asset will be lost.',
+                        LocaleKeys
+                            .fundAccountWidget_bitcoinWidget_makeSureToFund
+                            .tr(),
                         style: CustomThemeData.generateStyle(
                           fontSize: 13,
                           color: isDarkMode
@@ -118,7 +122,9 @@ class Bitcoin extends StatelessWidget {
             ),
           ),
           CustomButtons.generalButton(
-              context: context, onTap: () {}, text: 'Fund Account'),
+              context: context,
+              onTap: () {},
+              text: LocaleKeys.fundAccount.tr()),
           verticalSpaceMedium(context),
         ],
       ),

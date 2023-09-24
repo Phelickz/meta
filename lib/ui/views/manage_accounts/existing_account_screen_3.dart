@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/manage_accounts/manage_accounts_view_model.dart';
 import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/broker_logo.dart';
 import 'package:stacked/stacked.dart';
@@ -24,7 +26,7 @@ class ExistingAccountView3 extends StackedView<ManageAccountViewModel> {
         isBusy: viewModel.isBusy,
         appBar: existingAccountAppbar2(
           context,
-          "Change Password",
+          LocaleKeys.changePassword.tr(),
         ),
         body: SafeArea(
           child: Column(
@@ -47,7 +49,7 @@ class ExistingAccountView3 extends StackedView<ManageAccountViewModel> {
                   Checkbox(value: false, onChanged: (value) => {}),
                   // SizedBox(width: 6.pWidth(context),),
                   Text(
-                    "Save Password",
+                    LocaleKeys.savePassword.tr(),
                     style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.7),
                         color:
@@ -62,7 +64,7 @@ class ExistingAccountView3 extends StackedView<ManageAccountViewModel> {
               CustomButtons.generalButton(
                   context: context,
                   onTap: () {},
-                  text: "Save Changes",
+                  text: LocaleKeys.saveChanges,
                   textSize: 2),
               SizedBox(
                 height: 16.pHeight(context),
@@ -71,7 +73,7 @@ class ExistingAccountView3 extends StackedView<ManageAccountViewModel> {
                 alignment: Alignment.bottomCenter,
                 child: RichText(
                     text: TextSpan(
-                        text: "Forgot Password?   ",
+                        text: LocaleKeys.forgetPassword.tr(),
                         style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.8),
                             color: isDarkMode
@@ -80,7 +82,7 @@ class ExistingAccountView3 extends StackedView<ManageAccountViewModel> {
                             fontWeight: FontWeight.w500),
                         children: [
                       TextSpan(
-                        text: "Contact Broker",
+                        text: LocaleKeys.contactBroker,
                         style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.8),
                             color: ColorManager.lightHeaderColor,

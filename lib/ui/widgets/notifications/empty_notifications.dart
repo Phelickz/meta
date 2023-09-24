@@ -7,6 +7,7 @@ import 'package:meta_trader/app/utils/dimensions.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/utils/theme.dart';
+import '../../../generated/locale_keys.g.dart';
 import '../../views/notifications/notifications_view_model.dart';
 
 class EmptyNotificationPage extends StatelessWidget {
@@ -50,7 +51,7 @@ class EmptyNotificationPage extends StatelessWidget {
               SizedBox(
                 height: 30.pHeight(context),
               ),
-              Text("No Notifications Yet",
+              Text(LocaleKeys.notification_noNotifications,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.6),
                     color: isDarkMode ? Colors.white : const Color(0xff667085),

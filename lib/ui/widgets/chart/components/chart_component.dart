@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/chart/chart_view_model.dart';
 
 import 'chart_display.dart';
@@ -128,7 +130,7 @@ class ChartComponent extends StatelessWidget {
                     ),
                     horizontalSpaceXXSmall(context),
                     Text(
-                      "Indicators",
+                      LocaleKeys.indicators.tr(),
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.5),
                         fontWeight: FontWeight.w500,

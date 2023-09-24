@@ -1,10 +1,12 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/auth/auth_view_model.dart';
 
 class BrokerPage extends StatelessWidget {
@@ -34,7 +36,7 @@ class BrokerPage extends StatelessWidget {
               }
             },
             decoration: InputDecoration(
-              hintText: 'Search',
+              hintText: LocaleKeys.search.tr(),
               hintStyle: CustomThemeData.generateStyle(
                 fontSize: 15,
                 color: Theme.of(context).secondaryHeaderColor,

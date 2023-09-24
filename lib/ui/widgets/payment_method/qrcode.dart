@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
+import '../../../generated/locale_keys.g.dart';
 import '../../views/payment_methods/payment_method_viewmodel.dart';
 import '../buttons/buttons.dart';
 
@@ -29,7 +30,7 @@ class QrcodePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Point the camera at the QR code",
+                    LocaleKeys.paymentMethod_qrCodeP_pointCamera,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.8),
                       fontWeight: FontWeight.bold,
@@ -54,7 +55,7 @@ class QrcodePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Or enter BinancePay ID Instead",
+                    LocaleKeys.paymentMethod_qrCodeP_enterBinancePay,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.8),
                       fontWeight: FontWeight.bold,
@@ -69,7 +70,7 @@ class QrcodePage extends StatelessWidget {
                 onTap: () {
                   //TODO:
                 },
-                text: 'Enter Pay ID',
+                text: LocaleKeys.enterPayId,
               ),
               verticalSpaceSmall(context),
               verticalSpaceXSmall(context),

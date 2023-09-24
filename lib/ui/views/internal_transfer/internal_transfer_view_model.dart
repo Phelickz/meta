@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/internal_transfer/app_bar.dart';
 import 'package:meta_trader/ui/widgets/internal_transfer/select_account.dart';
 import 'package:meta_trader/ui/widgets/internal_transfer/select_destination.dart';
@@ -40,10 +42,17 @@ class InternalTransferViewModel extends CustomBaseViewModel {
     switch (_internalTransferPageEnum) {
       case InternalAccountPageEnum.selectAccount:
         return internalAccountAppBar(
-            context, 'Transfer Funds', 'Select account to send fund', this);
+            context,
+            LocaleKeys.views_internalTransferView_transferFunds.tr(),
+            LocaleKeys.views_internalTransferView_selectAccountToSendFund.tr(),
+            this);
       case InternalAccountPageEnum.selectDestination:
-        return internalAccountAppBar(context, 'Receiving Account',
-            'Select account to receive fund', this);
+        return internalAccountAppBar(
+            context,
+            LocaleKeys.views_internalTransferView_receivingAccount.tr(),
+            LocaleKeys.views_internalTransferView_selectAccountToReceiveFund
+                .tr(),
+            this);
       default:
         return null;
     }

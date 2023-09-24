@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/auth/auth_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
@@ -26,7 +28,7 @@ class RealPage extends StatelessWidget {
             loginListTile(context, 'Deriv Limited', 'Deriv', isDarkMode),
             verticalSpaceSmall(context),
             Text(
-              'Enter Personal Information',
+              LocaleKeys.enterPersonalInformation.tr(),
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.6),
                 color: Theme.of(context).primaryColor,
@@ -34,43 +36,43 @@ class RealPage extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             Text(
-              'First Name',
+              LocaleKeys.auth_firstName.tr(),
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 color: isDarkMode ? Colors.white : const Color(0xff667085),
               ),
             ),
             verticalSpaceXSmall(context),
-            const CustomTextFields(
-              hintText: 'Enter your first name',
+            CustomTextFields(
+              hintText: LocaleKeys.auth_enterFirstName.tr(),
             ),
             verticalSpaceSmall(context),
             Text(
-              'Last Name',
+              LocaleKeys.auth_lastName.tr(),
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 color: isDarkMode ? Colors.white : const Color(0xff667085),
               ),
             ),
             verticalSpaceXSmall(context),
-            const CustomTextFields(
-              hintText: 'Enter your last name',
+            CustomTextFields(
+              hintText: LocaleKeys.auth_enterLastName.tr(),
             ),
             verticalSpaceSmall(context),
             Text(
-              'Email Address',
+              LocaleKeys.emailAddress.tr(),
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 color: isDarkMode ? Colors.white : const Color(0xff667085),
               ),
             ),
             verticalSpaceXSmall(context),
-            const CustomTextFields(
-              hintText: 'Enter your email address',
+            CustomTextFields(
+              hintText: LocaleKeys.auth_enterEmail.tr(),
             ),
             verticalSpaceSmall(context),
             Text(
-              'Phone Number',
+              LocaleKeys.phoneNumber.tr(),
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 color: isDarkMode ? Colors.white : const Color(0xff667085),
@@ -135,7 +137,7 @@ class RealPage extends StatelessWidget {
             // ),
             verticalSpaceXSmall(context),
             CustomTextFields(
-              hintText: 'Preliminary Account',
+              hintText: LocaleKeys.auth_realWidget_preliminaryAccount.tr(),
               password: false,
               suffixIcon: Icon(
                 Icons.arrow_forward_ios,
@@ -165,7 +167,7 @@ class RealPage extends StatelessWidget {
                 // SizedBox(width: 1),
                 Expanded(
                   child: Text(
-                    "I agree with the terms and conditions for opening an account and the data protection policy.",
+                    LocaleKeys.termsAndCondition.tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.normal,
@@ -183,7 +185,7 @@ class RealPage extends StatelessWidget {
                 model.setCreatedAccountPageEnum = CreatedAccountPageEnum.real;
                 model.setAuthPageEnum = AuthPageEnum.created;
               },
-              text: 'Next',
+              text: LocaleKeys.next.tr(),
             ),
             verticalSpaceMedium(context),
           ],

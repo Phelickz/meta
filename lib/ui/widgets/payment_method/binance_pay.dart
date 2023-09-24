@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../app/responsiveness/size.dart';
+import '../../../generated/locale_keys.g.dart';
 import '../../views/payment_methods/payment_method_viewmodel.dart';
 import '../buttons/buttons.dart';
 import '../textfields/label_text_field.dart';
@@ -19,12 +20,13 @@ class BinancePayPage extends StatelessWidget {
             children: [
               verticalSpaceXSmall(context),
               const LabelTextField(
-                label: "Name",
-                hintText: "Enter Wallet Information",
+                label: LocaleKeys.name,
+                hintText: LocaleKeys
+                    .paymentMethod_binancePayWidgetP_enterWalletInformation,
               ),
               const LabelTextField(
-                label: "Pay ID",
-                hintText: "Enter Pay ID",
+                label: LocaleKeys.payId,
+                hintText: LocaleKeys.enterPayId,
               ),
             ],
           ),
@@ -36,7 +38,7 @@ class BinancePayPage extends StatelessWidget {
           viewModel.paymentMethodPageEnum =
               PaymentMethodPageEnum.addPaymentMethodSuccess;
         },
-        text: 'Save',
+        text: LocaleKeys.save,
       ),
       verticalSpaceSmall(context),
       verticalSpaceXSmall(context),

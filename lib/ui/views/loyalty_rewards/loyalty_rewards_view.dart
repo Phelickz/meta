@@ -1,9 +1,11 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/loyalty_rewards/loyalty_rewards_view_model.dart';
 import 'package:meta_trader/ui/widgets/appbar.dart';
 import 'package:meta_trader/ui/widgets/loyalty_rewards/about_loyalty_rewards.dart';
@@ -32,7 +34,7 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
       appBar: viewModel.loyaltyRewardsViewEnum == LoyaltyRewardsViewEnum.base
           ? globalAppBar(
               context,
-              'Loyalty Rewards',
+              LocaleKeys.views_loyaltyRewardsView_loyaltyRewards.tr(),
               '',
               () {
                 Navigator.pop(context);
@@ -55,7 +57,7 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
             )
           : globalAppBar(
               context,
-              'About Loyalty Feature',
+              LocaleKeys.views_loyaltyRewardsView_aboutLoyaltyFeature.tr(),
               '',
               () {
                 viewModel.setLoyaltyRewardsViewEnum =
@@ -91,7 +93,8 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                       horizontal: McGyver.rsDoubleW(context, 5),
                     ),
                     child: Text(
-                      'Your Silver Benefits',
+                      LocaleKeys.views_loyaltyRewardsView_yourSilverBenefits
+                          .tr(),
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 2.2),
                         fontWeight: FontWeight.bold,
@@ -103,20 +106,22 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                   verticalSpaceSmall(context),
                   silverBenefits(
                     context,
-                    '1% cashback on any trade',
-                    'Now you can receive a bonus of 1% cashback on any trade you place on your platform',
+                    LocaleKeys.views_loyaltyRewardsView_sliverBenefit1
+                        .tr(args: ['1%']),
+                    LocaleKeys.views_loyaltyRewardsView_sliverBenefit1Sub.tr(),
                   ),
                   verticalSpaceXSmall(context),
                   silverBenefits(
                     context,
-                    'Flexible withdrawals',
-                    'Now you can withdraw up to 4 times a month with lower charges (-3%)',
+                    LocaleKeys.views_loyaltyRewardsView_sliverBenefit2.tr(),
+                    LocaleKeys.views_loyaltyRewardsView_sliverBenefit2Sub
+                        .tr(args: ['(-3%)']),
                   ),
                   verticalSpaceXSmall(context),
                   silverBenefits(
                     context,
-                    'Access to trading tools',
-                    'You can have access to the Currency Converter and Profits Calculator',
+                    LocaleKeys.views_loyaltyRewardsView_sliverBenefit3.tr(),
+                    LocaleKeys.views_loyaltyRewardsView_sliverBenefit3Sub.tr(),
                   ),
                   verticalSpaceSmall(context),
                   verticalSpaceSmall(context),
@@ -133,7 +138,8 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                       child: Row(
                         children: [
                           Text(
-                            'Earn Daily Rewards',
+                            LocaleKeys.views_loyaltyRewardsView_earnDailyRewards
+                                .tr(),
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 2),
                               color: isDarkMode
@@ -161,7 +167,9 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                                 child: Row(
                                   children: [
                                     Text(
-                                      "Today's Tasks",
+                                      LocaleKeys
+                                          .views_loyaltyRewardsView_todayTask
+                                          .tr(),
                                       style: CustomThemeData.generateStyle(
                                         fontSize: 12,
                                         color: isDarkMode
@@ -196,9 +204,15 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                       ),
                       child: Column(
                         children: [
-                          dailyRewards(context, 'Trade with 3 lot size',
+                          dailyRewards(
+                              context,
+                              LocaleKeys.views_loyaltyRewardsView_dailyReward
+                                  .tr(),
                               isActive: true),
-                          dailyRewards(context, 'Refer 3 Friends',
+                          dailyRewards(
+                              context,
+                              LocaleKeys.views_loyaltyRewardsView_dailyReward1
+                                  .tr(),
                               isActive: false),
                         ],
                       ),
@@ -213,7 +227,8 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Recent Activity',
+                          LocaleKeys.views_loyaltyRewardsView_recentActivity
+                              .tr(),
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.8),
                             fontWeight: FontWeight.bold,
@@ -226,33 +241,37 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                             onPressed: () {
                               viewModel.push(RecentActivity(model: viewModel));
                             },
-                            child: const Text('View All'))
+                            child: Text(LocaleKeys.viewMore.tr()))
                       ],
                     ),
                   ),
                   verticalSpaceSmall(context),
                   activityTile(
                     context,
-                    'You earned 23 points',
-                    '\$23 credits awarded for using 5 lot sizes',
+                    LocaleKeys.views_loyaltyRewardsView_activityTileText.tr(),
+                    LocaleKeys.views_loyaltyRewardsView_activityTileTextSub
+                        .tr(args: ['\$23']),
                   ),
                   verticalSpaceSmall(context),
                   activityTile(
                     context,
-                    'You earned 23 points',
-                    '\$23 credits awarded for using 5 lot sizes',
+                    LocaleKeys.views_loyaltyRewardsView_activityTileText.tr(),
+                    LocaleKeys.views_loyaltyRewardsView_activityTileTextSub
+                        .tr(args: ['\$23']),
                   ),
                   verticalSpaceSmall(context),
                   activityTile(
                     context,
-                    'You earned 23 points',
-                    '\$23 credits awarded for using 5 lot sizes',
+                    LocaleKeys.views_loyaltyRewardsView_activityTileText.tr(),
+                    LocaleKeys.views_loyaltyRewardsView_activityTileTextSub
+                        .tr(args: ['\$23']),
                   ),
                   verticalSpaceSmall(context),
                   activityTile(
                     context,
-                    'You earned 23 points',
-                    '\$23 credits awarded for using 5 lot sizes',
+                    LocaleKeys.views_loyaltyRewardsView_activityTileText.tr(),
+                    LocaleKeys.views_loyaltyRewardsView_activityTileTextSub
+                        .tr(args: ['\$23']),
                   ),
                   verticalSpaceMedium(context),
                 ],
@@ -350,7 +369,7 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Status:',
+                          LocaleKeys.views_loyaltyRewardsView_status.tr(),
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.2),
                             color: isDarkMode
@@ -360,7 +379,7 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                         ),
                         verticalSpaceXXSmall(context),
                         Text(
-                          'Reward',
+                          LocaleKeys.reward.tr(),
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.2),
                             color: isDarkMode
@@ -374,7 +393,7 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Not Completed:',
+                          LocaleKeys.views_loyaltyRewardsView_notComplete.tr(),
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.2),
                             color: isDarkMode
@@ -384,7 +403,7 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                         ),
                         verticalSpaceXXSmall(context),
                         Text(
-                          '3 Points',
+                          LocaleKeys.views_loyaltyRewardsView_points.tr(),
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.2),
                             color: isDarkMode

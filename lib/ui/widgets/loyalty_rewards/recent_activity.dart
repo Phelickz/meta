@@ -8,6 +8,8 @@ import 'package:meta_trader/ui/views/loyalty_rewards/loyalty_rewards_view_model.
 import 'package:meta_trader/ui/widgets/appbar.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 
+import '../../../generated/locale_keys.g.dart';
+
 @RoutePage()
 class RecentActivity extends StatelessWidget {
   const RecentActivity({super.key, required this.model});
@@ -17,7 +19,8 @@ class RecentActivity extends StatelessWidget {
   Widget build(BuildContext context) {
     return Skeleton(
       isBusy: model.isBusy,
-      appBar: globalAppBar(context, 'Recent Activities', '', () {
+      appBar: globalAppBar(
+          context, LocaleKeys.views_loyaltyRewardsView_recentActivity, '', () {
         Navigator.pop(context);
       }, []),
       body: SingleChildScrollView(
@@ -26,26 +29,26 @@ class RecentActivity extends StatelessWidget {
             verticalSpaceSmall(context),
             activityTile(
               context,
-              'You earned 23 points',
-              '\$23 credits awarded for using 5 lot sizes',
+              LocaleKeys.loyaltyReward_recentActivityWidget_activityTile1,
+              LocaleKeys.loyaltyReward_recentActivityWidget_activityTile2,
             ),
             verticalSpaceSmall(context),
             activityTile(
               context,
-              'You earned 23 points',
-              '\$23 credits awarded for using 5 lot sizes',
+              LocaleKeys.loyaltyReward_recentActivityWidget_activityTile1,
+              LocaleKeys.loyaltyReward_recentActivityWidget_activityTile2,
             ),
             verticalSpaceSmall(context),
             activityTile(
               context,
-              'You earned 23 points',
-              '\$23 credits awarded for using 5 lot sizes',
+              LocaleKeys.loyaltyReward_recentActivityWidget_activityTile1,
+              LocaleKeys.loyaltyReward_recentActivityWidget_activityTile2,
             ),
             verticalSpaceSmall(context),
             activityTile(
               context,
-              'You earned 23 points',
-              '\$23 credits awarded for using 5 lot sizes',
+              LocaleKeys.loyaltyReward_recentActivityWidget_activityTile1,
+              LocaleKeys.loyaltyReward_recentActivityWidget_activityTile2,
             ),
           ],
         ),

@@ -6,6 +6,7 @@ import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
+import '../../../generated/locale_keys.g.dart';
 import '../../views/fund_account/fund_account_view_model.dart';
 
 class DepositSuccess extends StatelessWidget {
@@ -31,7 +32,7 @@ class DepositSuccess extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: Text(
-              'Your Transaction is Being Processed',
+              LocaleKeys.fundAccountWidget_successWidget_yourTransaction,
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2.4),
@@ -46,8 +47,8 @@ class DepositSuccess extends StatelessWidget {
             child: RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                text:
-                    'Financial regulations require us to verify your ID. This helps prevent someone else from creating a MT5 account in your name.',
+                text: LocaleKeys
+                    .fundAccountWidget_successWidget_financialRegulation,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
                   color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -61,8 +62,7 @@ class DepositSuccess extends StatelessWidget {
                     ),
                   ),
                   TextSpan(
-                    text:
-                        'You can skip this step but you will not be able to withdraw your funds. ',
+                    text: LocaleKeys.fundAccountWidget_successWidget_youCan,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.6),
                       color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -78,7 +78,7 @@ class DepositSuccess extends StatelessWidget {
               onTap: () {
                 model.push(const BottomNavBarRoute());
               },
-              text: 'Back'),
+              text: LocaleKeys.back),
           verticalSpaceMedium(context),
         ],
       ),

@@ -1,11 +1,13 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/pip_calculator/pip_calculator_view_model.dart';
 import 'package:meta_trader/ui/widgets/appbar.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
@@ -33,7 +35,7 @@ class PipCalculatorView extends StackedView<PipCalculatorViewModel> {
       bodyPadding: EdgeInsets.symmetric(
         horizontal: McGyver.rsDoubleW(context, 0),
       ),
-      appBar: globalAppBar(context, 'Pip Calculator', '', () {
+      appBar: globalAppBar(context, LocaleKeys.pipsCalculator.tr(), '', () {
         Navigator.pop(context);
       }, []),
       body: Padding(
@@ -65,7 +67,7 @@ class PipCalculatorView extends StackedView<PipCalculatorViewModel> {
                       Row(
                         children: [
                           Text(
-                            'Pip value (USD)',
+                            LocaleKeys.views_pipCalculatorView_pipValue.tr(),
                             style: CustomThemeData.generateStyle(
                                 fontSize: 13,
                                 color:
@@ -101,7 +103,7 @@ class PipCalculatorView extends StackedView<PipCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                'Account Currency',
+                LocaleKeys.accountCurrency,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
@@ -149,7 +151,7 @@ class PipCalculatorView extends StackedView<PipCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                'Currency Pair',
+                LocaleKeys.currencyPair,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
@@ -197,7 +199,7 @@ class PipCalculatorView extends StackedView<PipCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                'Trade Size (units)',
+                LocaleKeys.tradeSize.tr(args: ['(units)']),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
@@ -212,7 +214,8 @@ class PipCalculatorView extends StackedView<PipCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                'Number of Pips (optional)',
+                LocaleKeys.views_pipCalculatorView_numberOfPips
+                    .tr(args: ['(optional)']),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
@@ -229,7 +232,7 @@ class PipCalculatorView extends StackedView<PipCalculatorViewModel> {
               CustomButtons.generalButton(
                 context: context,
                 onTap: () {},
-                text: 'Calculate',
+                text: LocaleKeys.calculate,
               ),
               verticalSpaceSmall(context),
             ],

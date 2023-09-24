@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/chart/chart_view_model.dart';
 import 'package:meta_trader/ui/widgets/chart/components/trading_signal_tile.dart';
 import 'package:meta_trader/ui/widgets/chart/components/overview_chart.dart';
@@ -29,11 +31,11 @@ class OverviewComponent extends StatelessWidget {
           verticalSpaceSmall(context),
           // verticalSpaceLarge(context),
           CustomOverviewTab(
-            firstTabName: "Hour",
-            secondTabName: "Today",
-            thirdTabName: "Week",
-            fourthTabName: "Month",
-            fifthTabName: "Year",
+            firstTabName: LocaleKeys.hour.tr(),
+            secondTabName: LocaleKeys.today.tr(),
+            thirdTabName: LocaleKeys.week.tr(),
+            fourthTabName: LocaleKeys.month.tr(),
+            fifthTabName: LocaleKeys.year.tr(),
             tabIndex: viewModel.overviewTabSelectedNotifier.value,
             onSelectTab: (val) {
               viewModel.overviewTabSelectedNotifier.value = val;
@@ -68,7 +70,7 @@ class OverviewComponent extends StatelessWidget {
             },
           ),
           Text(
-            "Trading Signals",
+            LocaleKeys.tradingSignal.tr(),
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 2),
               fontWeight: FontWeight.bold,

@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/chart/chart_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
@@ -22,9 +24,9 @@ class ChartPage extends StatelessWidget {
         Column(
           children: [
             CustomHeadTab(
-              firstTabName: "Chart",
-              secondTabName: "Overview",
-              thirdTabName: "Specification",
+              firstTabName: LocaleKeys.chart.tr(),
+              secondTabName: LocaleKeys.overview.tr(),
+              thirdTabName: LocaleKeys.specification.tr(),
               tabIndex: viewModel.tabSelectedNotifier.value,
               onSelectTab: (val) {
                 viewModel.tabSelectedNotifier.value = val;
@@ -69,7 +71,7 @@ class ChartPage extends StatelessWidget {
                             width: McGyver.rsDoubleW(context, 42),
                             context: context,
                             onTap: () {},
-                            text: "Sell at 1.234564",
+                            text: LocaleKeys.chart_sellAt.tr(),
                             color: const Color(0xFFF04438),
                           ),
                           verticalSpaceXXSmall(context),
@@ -84,7 +86,7 @@ class ChartPage extends StatelessWidget {
                           ),
                           verticalSpaceXXSmall(context),
                           Text(
-                            "23%",
+                            LocaleKeys.chart_text.tr(),
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.6),
                               fontWeight: FontWeight.w500,
@@ -101,7 +103,7 @@ class ChartPage extends StatelessWidget {
                             width: McGyver.rsDoubleW(context, 42),
                             context: context,
                             onTap: () {},
-                            text: "Buy at 1.234564",
+                            text: LocaleKeys.chart_buyAt.tr(),
                             color: isDarkMode
                                 ? const Color(0xFF0B7FCB)
                                 : const Color(0xFF0C95EF),
@@ -121,7 +123,7 @@ class ChartPage extends StatelessWidget {
                           ),
                           verticalSpaceXXSmall(context),
                           Text(
-                            "77%",
+                            LocaleKeys.chart_text1.tr(),
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.6),
                               fontWeight: FontWeight.w500,
@@ -156,7 +158,7 @@ class ChartPage extends StatelessWidget {
                         ),
                         child: Center(
                           child: Text(
-                            "1.2",
+                            LocaleKeys.chart_text2.tr(),
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.6),
                               fontWeight: FontWeight.w500,

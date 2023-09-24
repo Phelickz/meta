@@ -4,6 +4,8 @@ import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';
 
+import '../../../generated/locale_keys.g.dart';
+
 class LoyaltyRewardCard extends StatelessWidget {
   const LoyaltyRewardCard({super.key});
 
@@ -44,14 +46,16 @@ class LoyaltyRewardCard extends StatelessWidget {
                             children: [
                               verticalSpaceSmall(context),
                               Text(
-                                'Total Points Balance',
+                                LocaleKeys
+                                    .loyaltyReward_cardWidget_totalPointsBalance,
                                 style: CustomThemeData.generateStyle(
                                   fontSize: McGyver.textSize(context, 1.2),
                                 ),
                               ),
                               verticalSpaceXSmall(context),
                               Text(
-                                '5000 Pts',
+                                LocaleKeys
+                                    .loyaltyReward_cardWidget_fiveThousandPoints,
                                 style: CustomThemeData.generateStyle(
                                   fontSize: McGyver.textSize(context, 2.4),
                                   fontWeight: FontWeight.bold,
@@ -75,7 +79,7 @@ class LoyaltyRewardCard extends StatelessWidget {
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
-                          'You are at the peak!',
+                          LocaleKeys.loyaltyReward_cardWidget_youAreAtThePeak,
                           textAlign: TextAlign.left,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.4),
@@ -152,21 +156,21 @@ class LoyaltyRewardCard extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Silver',
+                            LocaleKeys.sliver,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.4),
                               fontWeight: FontWeight.w500,
                             ),
                           ),
                           Text(
-                            'Gold',
+                            LocaleKeys.gold,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.4),
                               fontWeight: FontWeight.w500,
                             ),
                           ),
                           Text(
-                            'Platinum',
+                            LocaleKeys.platinum,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.4),
                               fontWeight: FontWeight.w500,

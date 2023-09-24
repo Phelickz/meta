@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../app/responsiveness/size.dart';
+import '../../../generated/locale_keys.g.dart';
 import '../../views/payment_methods/payment_method_viewmodel.dart';
 import '../buttons/buttons.dart';
 import '../dropdown/label_dropdown.dart';
@@ -24,15 +25,16 @@ class TetherPage extends StatelessWidget {
               children: [
                 verticalSpaceXSmall(context),
                 const LabelTextField(
-                  label: "Wallet Address",
-                  hintText: "Enter  TetherUSD Wallet Address",
+                  label: LocaleKeys.walletAddress,
+                  hintText:
+                      LocaleKeys.paymentMethod_tetherWidgetP_enterTetherUSd,
                 ),
                 LabelDropdown(
-                  value: "BTC Beacon Chain (BEP2)",
-                  label: "Choose Network",
+                  value: LocaleKeys.btcBeacon,
+                  label: LocaleKeys.chooseNetwork,
                   options: const [
-                    "BTC Beacon Chain (BEP2)",
-                    "BTC Beacon Chain (BEP3)",
+                    LocaleKeys.btcBeacon,
+                    LocaleKeys.btcBeanBEP3,
                   ],
                   onChanged: (val) {
                     // viewModel.onChanged(val);
@@ -48,7 +50,7 @@ class TetherPage extends StatelessWidget {
             viewModel.paymentMethodPageEnum =
                 PaymentMethodPageEnum.addPaymentMethodSuccess;
           },
-          text: 'Save',
+          text: LocaleKeys.save,
         ),
         verticalSpaceSmall(context),
         verticalSpaceXSmall(context),

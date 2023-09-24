@@ -8,6 +8,8 @@ import 'package:meta_trader/ui/views/internal_transfer/internal_transfer_view_mo
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 
+import '../../../generated/locale_keys.g.dart';
+
 @RoutePage()
 class InternalTransferSuccess extends StatelessWidget {
   const InternalTransferSuccess({super.key, required this.model});
@@ -40,7 +42,7 @@ class InternalTransferSuccess extends StatelessWidget {
             ),
           ),
           Text(
-            "Transfer Successful",
+            LocaleKeys.internalTransfer_successWidget_transferSuccessful,
             textAlign: TextAlign.center,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 2.5),
@@ -54,8 +56,7 @@ class InternalTransferSuccess extends StatelessWidget {
           RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
-              text:
-                  "500 USD has been successfully transferred from Deriv to FXPro",
+              text: LocaleKeys.internalTransfer_successWidget_fiveHunUSD,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.5),
                 fontWeight: FontWeight.w500,
@@ -71,7 +72,7 @@ class InternalTransferSuccess extends StatelessWidget {
             onTap: () {
               model.push(const BottomNavBarRoute());
             },
-            text: 'Close',
+            text: LocaleKeys.close,
           ),
         ],
       ),

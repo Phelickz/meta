@@ -3,6 +3,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/internal_transfer/internal_transfer_view_model.dart';
 import 'package:meta_trader/ui/widgets/auth/radio_button.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
@@ -42,7 +43,7 @@ class SelectAccountInternalTransfer extends StatelessWidget {
               model.setInternalAccountPageEnum =
                   InternalAccountPageEnum.selectDestination;
             },
-            text: 'Next',
+            text: LocaleKeys.next,
           ),
           verticalSpaceSmall(context),
         ],
@@ -95,7 +96,7 @@ class SelectAccountInternalTransfer extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Balance',
+                            LocaleKeys.balance,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.2),
                               color: isDarkMode ? Colors.white : Colors.black45,
@@ -145,7 +146,7 @@ class SelectAccountInternalTransfer extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Last Activity: 23.12.2023',
+                            LocaleKeys.lastActivity,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.2),
                               fontWeight: FontWeight.normal,

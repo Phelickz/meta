@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../views/notifications/notifications_view_model.dart';
 import '../buttons/buttons.dart';
@@ -29,7 +30,7 @@ class NotificationOptionsBottomSheet extends StatelessWidget {
                   model.setMarkAllAsRead = true;
                   Navigator.pop(context);
                 },
-                text: "Mark all as read"),
+                text: LocaleKeys.notification_markAllAsRead),
             CustomButtons.clearButton(
               context: context,
               width: 150.pWidth(context),
@@ -39,7 +40,7 @@ class NotificationOptionsBottomSheet extends StatelessWidget {
                 model.setNotificationStateEnum = NotificationStateEnum.empty;
                 Navigator.pop(context);
               },
-              text: "Clear All",
+              text: LocaleKeys.notification_clearAll,
             )
             // Add other widgets here
           ],

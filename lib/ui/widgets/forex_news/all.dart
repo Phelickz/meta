@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/forex_news/forex_news_view_model.dart';
 import 'package:meta_trader/ui/widgets/home/market_news.dart';
 
@@ -22,7 +24,7 @@ class ForexNewsAll extends StatelessWidget {
         children: [
           verticalSpaceSmall(context),
           Text(
-            'Trending 🔥',
+            '${LocaleKeys.trending.tr()}🔥',
             style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 fontWeight: FontWeight.bold,
@@ -51,7 +53,7 @@ class ForexNewsAll extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'NZD/USD recovers following mixed NFPs from the US',
+                            'NZD/USD ${LocaleKeys.forexNewsWidget_allWidget_text.tr()}',
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 2.3),
                               fontWeight: FontWeight.w800,
@@ -59,7 +61,7 @@ class ForexNewsAll extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Aug 4, 2034 15:07 GMT',
+                            LocaleKeys.forexNewsWidget_allWidget_text2.tr(),
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.5),
                               fontWeight: FontWeight.normal,
@@ -90,7 +92,7 @@ class ForexNewsAll extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'NZD/USD recovers following mixed NFPs from the US',
+                            'NZD/USD ${LocaleKeys.forexNewsWidget_allWidget_text.tr()}',
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 2.3),
                               fontWeight: FontWeight.w800,
@@ -98,7 +100,7 @@ class ForexNewsAll extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Aug 4, 2034 15:07 GMT',
+                            LocaleKeys.forexNewsWidget_allWidget_text2.tr(),
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.5),
                               fontWeight: FontWeight.normal,
@@ -129,7 +131,7 @@ class ForexNewsAll extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'NZD/USD recovers following mixed NFPs from the US',
+                            'NZD/USD ${LocaleKeys.forexNewsWidget_allWidget_text.tr()}',
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 2.3),
                               fontWeight: FontWeight.w800,
@@ -137,7 +139,7 @@ class ForexNewsAll extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Aug 4, 2034 15:07 GMT',
+                            LocaleKeys.forexNewsWidget_allWidget_text2.tr(),
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.5),
                               fontWeight: FontWeight.normal,
@@ -210,7 +212,7 @@ class ForexNewsAll extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Currency pairs',
+                LocaleKeys.currencyPair.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2),
                   fontWeight: FontWeight.bold,
@@ -266,7 +268,7 @@ class ForexNewsAll extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Metals',
+                LocaleKeys.metals.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2),
                   fontWeight: FontWeight.bold,
@@ -322,7 +324,7 @@ class ForexNewsAll extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Crypto News',
+                LocaleKeys.cryptoNews.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2),
                   fontWeight: FontWeight.bold,

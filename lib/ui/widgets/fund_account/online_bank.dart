@@ -8,6 +8,8 @@ import 'package:meta_trader/ui/views/fund_account/fund_account_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
 
+import '../../../generated/locale_keys.g.dart';
+
 class OnlineBank extends StatelessWidget {
   const OnlineBank({super.key, required this.model});
   final FundAccountViewModel model;
@@ -26,7 +28,7 @@ class OnlineBank extends StatelessWidget {
             child: ListView(
               children: [
                 Text(
-                  'Select Bank',
+                  LocaleKeys.fundAccountWidget_onlineBankWidget_selectBank,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
@@ -36,7 +38,8 @@ class OnlineBank extends StatelessWidget {
                 ),
                 verticalSpaceXXSmall(context),
                 CustomTextFields(
-                  hintText: 'Choose available bank',
+                  hintText: LocaleKeys
+                      .fundAccountWidget_onlineBankWidget_chooseAvailableBank,
                   password: false,
                   suffixIcon: Icon(
                     Icons.arrow_forward_ios,
@@ -46,7 +49,7 @@ class OnlineBank extends StatelessWidget {
                 ),
                 verticalSpaceSmall(context),
                 Text(
-                  'Amount To Fund',
+                  LocaleKeys.amountToFund,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
@@ -61,7 +64,7 @@ class OnlineBank extends StatelessWidget {
                 ),
                 verticalSpaceSmall(context),
                 Text(
-                  'Account Number',
+                  LocaleKeys.fundAccountWidget_onlineBankWidget_accountNumber,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
@@ -90,7 +93,7 @@ class OnlineBank extends StatelessWidget {
                 ),
                 verticalSpaceSmall(context),
                 Text(
-                  'Account Name',
+                  LocaleKeys.fundAccountWidget_onlineBankWidget_accountName,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
@@ -111,7 +114,7 @@ class OnlineBank extends StatelessWidget {
             ),
           ),
           CustomButtons.generalButton(
-              context: context, onTap: () {}, text: 'Next'),
+              context: context, onTap: () {}, text: LocaleKeys.next),
           verticalSpaceMedium(context),
         ],
       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../app/responsiveness/size.dart';
+import '../../../generated/locale_keys.g.dart';
 import '../../views/payment_methods/payment_method_viewmodel.dart';
 import '../buttons/buttons.dart';
 import '../textfields/label_text_field.dart';
@@ -20,15 +21,16 @@ class PerfectMoneyPage extends StatelessWidget {
               children: [
                 verticalSpaceXSmall(context),
                 const LabelTextField(
-                  label: "Email Address",
-                  hintText: "Enter Email address",
+                  label: LocaleKeys.emailAddress,
+                  hintText: LocaleKeys.auth_enterEmail,
                 ),
                 const LabelTextField(
-                  label: "Pay ID",
-                  hintText: "Enter Pay ID",
+                  label: LocaleKeys.payId,
+                  hintText: LocaleKeys.enterPayId,
                 ),
                 const LabelTextField(
-                  label: "Account Name",
+                  label:
+                      LocaleKeys.fundAccountWidget_onlineBankWidget_accountName,
                   hintText: "Susan Blake",
                   isEnabled: false,
                 ),
@@ -42,7 +44,7 @@ class PerfectMoneyPage extends StatelessWidget {
             viewModel.paymentMethodPageEnum =
                 PaymentMethodPageEnum.addPaymentMethodSuccess;
           },
-          text: 'Save',
+          text: LocaleKeys.save,
         ),
         verticalSpaceSmall(context),
         verticalSpaceXSmall(context),

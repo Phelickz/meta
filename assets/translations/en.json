@@ -18,6 +18,7 @@
   "select": "Select",
   "overview": "Overview",
   "specification": "Specification",
+  "marginWithP": "Margin {} {}",
   "margin": "Margin",
   "equity": "Equity",
   "reward": "Reward",
@@ -26,17 +27,18 @@
   "fxproSite": "www.fxpro.com",
   "support": "Support",
   "phone": "Phone",
+  "phoneNumber": "Phone Number",
   "forexPro": "ForexPro",
-  "ConnectTo": "Connect to",
+  "connectTo": "Connect to",
   "marginCalculator": "Margin calculator",  
   "leverage": "Leverage",  
   "calculate": "Calculate",  
-  "continue": "Continue",  
+  "continueWord": "Continue",  
   "next": "Next",  
   "pipsCalculator": "Pips calculator", 
   "accountCurrency": "Account Currency",
   "currencyPair": "Currency Pair",
-  "tradeSize": "Trade Size",
+  "tradeSize": "Trade Size {}",
   "search": "Search",
   "deposit": "Deposit",
   "login_existing_account": "Login to Existing Account",
@@ -98,9 +100,18 @@
   "btcBeacon": "BTC Beacon Chain (BEP2)",
   "lastActivity": "Last Activity: 23.12.2023",
   "enterYourLoginId": "Enter your login ID",
+  "enterLoginDetails": "Enter login details",
   "enterPayId":"Enter Pay ID",
   "selectCurrencyPair": "Select currency pair",
   "selectAccountCurrency": "Select Account Currency",
+  "fundUsingBinancePay": "Fund using BinancePay",
+  "server": "Server",
+  "signIn": "Sign In",
+  "max": "max",
+  "tradingSignal": "Trading Signals",
+  "ok": "Ok",
+  "name": "Name",
+  "btcBeanBEP3": "BTC Beacon Chain (BEP3)",
 
 
   "views": {
@@ -139,6 +150,7 @@
 
 
     "currencyConverter": {
+      "twentyThree": "23",
       "currency1": "Currency 1",
       "currency2": "Currency 2",
       "enterCurrency1": "Enter Amount (Currency 1)",
@@ -163,6 +175,7 @@
         "selectAccountToFund": "Select account to fund",
         "selectDepositMethod": "Select deposit method",
         "onlineBank": "Online Bank",
+        "addOnlineBank": "Add online bank",
         "bitcoin": "Bitcoin",
         "fundUsingBitcoin": "Fund using Bitcoin wallet",
         "binancePay": "BinancePay",
@@ -228,10 +241,10 @@
       "loyaltyRewards": "Loyalty Rewards",
       "aboutLoyaltyFeature": "About Loyalty Feature",
       "yourSilverBenefits": "Your Silver Benefits",
-      "sliverBenefit1": "cashback on any trade",
+      "sliverBenefit1": "{} cashback on any trade",
       "sliverBenefit1Sub": "Now you can receive a bonus of 1% cashback on any trade you place on your platform",
       "sliverBenefit2": "Flexible withdrawals",
-      "sliverBenefit2Sub": "Now you can withdraw up to 4 times a month with lower charges",
+      "sliverBenefit2Sub": "Now you can withdraw up to 4 times a month with lower charges {}",
       "sliverBenefit3": "Access to trading tools",
       "sliverBenefit3Sub": "You can have access to the Currency Converter and Profits Calculator",
       "earnDailyRewards": "Earn Daily Rewards",
@@ -240,7 +253,7 @@
       "dailyReward1": "Refer 3 Friends",
       "recentActivity": "Recent Activity",
       "activityTileText": "You earned 23 points",
-      "activityTileTextSub": "credits awarded for using 5 lot sizes",
+      "activityTileTextSub": "{} credits awarded for using 5 lot sizes",
       "status":"Status",
       "notComplete":"Not Completed",
       "points":"3 Points"
@@ -248,16 +261,17 @@
     "manageAccount":{
       "brokerInformationView": {
         "regAddress": "Registration Address",
+        "brokersInformation": "Broker Information",
         "level2" : "Level 2, ken Lee building, 20 Edith Cavell street, Port Luis, Mauritius",
         "supportSite": "support@fxpro.com"
       },
       "existingAccountScreen": {
-        "searchBroker": "Contact Broker",
+        "searchBroker": "Search Broker",
         "findBroker": "Find a broker"
       }
   },
   "marginCalculatorView":{
-    "requiredMargin": "Required Margin"
+    "requiredMargin": "Required Margin {}"
   },
     "paymentMethodPageView":{
     "paymentMethod": "Payment Methods",
@@ -272,8 +286,8 @@
     "editOnlineBank": "Edit online bank"
   },
    "pipCalculatorView":{
-    "pipValue": "Pip value",
-    "numberOfPips": "Number of Pips" 
+    "pipValue": "Pip value (USD)",
+    "numberOfPips": "Number of Pips {}" 
   }
   },
 
@@ -349,6 +363,7 @@
     "marketIsOpen" : "Market is open. Closes tomorrow, 12:58 AM",
     "contractSize": "Contract Size",
     "spreadUnits": "Spread Units",
+    "volumeLots": "Volume, lots",
     "stopLevelPips": "Stop level, pips"
   },
   "tradingSignalTiles": {
@@ -408,6 +423,7 @@
         "tenUsd": "10-200,00 USD"
     },
       "successWidget": {
+        "yourTransaction": "Your Transaction is Being Processed",
         "financialRegulation": "Financial regulations require us to verify your ID. This helps prevent someone else from creating a MT5 account in your name.",
         "youCan": "You can skip this step but you will not be able to withdraw your funds."
     },
@@ -450,7 +466,7 @@
     "marketNewsWidget": {
         "hoursAgo": "18 hours ago",
         "usdCoin": "USD Coin",
-        "maimiCryptoAsp": "Maimi Crypto Aspirations Boosted by Borderless Capital's $25 Million Fund Lorem Ipsum "
+        "maimiCryptoAsp": "Maimi Crypto Aspirations Boosted by Borderless Capital's 25 Million Fund Lorem Ipsum "
     },
     "priceSentiments": {
         "buySixty": "65% Buy",
@@ -477,7 +493,7 @@
     },
     "recentActivityWidget": {
         "activityTile1": "You earned 23 points",
-        "activityTile2": "$23 credits awarded for using 5 lot sizes"
+        "activityTile2": "23 credits awarded for using 5 lot sizes"
     }
  },
  "manageAccounts" : {

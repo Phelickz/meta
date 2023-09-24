@@ -5,6 +5,7 @@ import 'package:meta_trader/ui/views/help_and_support/help_and_support_view_mode
 import 'package:meta_trader/ui/widgets/help_and_support/components/faq_container.dart';
 
 import '../../../app/responsiveness/res.dart';
+import '../../../generated/locale_keys.g.dart';
 
 class FAQPage extends StatelessWidget {
   final HelpAndSupportViewModel model;
@@ -21,7 +22,7 @@ class FAQPage extends StatelessWidget {
         children: [
           verticalSpaceSmall(context),
           Text(
-            "Our FAQs,",
+            LocaleKeys.helpAndSupport_faqWidget_ourFaq,
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           SizedBox(height: 16.pHeight(context)),

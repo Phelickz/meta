@@ -1,9 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/currency_converter/currency_converter_view_model.dart';
 import 'package:meta_trader/ui/widgets/auth/radio_button.dart';
 
@@ -51,7 +53,8 @@ class _CurrencyConverterBottomSheetCurrencyState
                 children: [
                   verticalSpaceSmall(context),
                   Text(
-                    'Select Account Currency',
+                    LocaleKeys.currencyConverterWidget_selectAccountCurrency
+                        .tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.8),
                       color: isDarkMode ? Colors.white : ColorManager.lightText,
@@ -76,7 +79,7 @@ class _CurrencyConverterBottomSheetCurrencyState
                         setState(() {});
                       },
                       decoration: InputDecoration(
-                        hintText: 'Search',
+                        hintText: LocaleKeys.search.tr(),
                         hintStyle: CustomThemeData.generateStyle(
                           fontSize: 15,
                           color: Theme.of(context).secondaryHeaderColor,

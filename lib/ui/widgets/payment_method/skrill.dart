@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../app/responsiveness/size.dart';
 import '../../views/payment_methods/payment_method_viewmodel.dart';
@@ -20,12 +21,12 @@ class SkrillPage extends StatelessWidget {
               children: [
                 verticalSpaceXSmall(context),
                 const LabelTextField(
-                  label: "Email Address",
-                  hintText: "Enter Email address",
+                  label: LocaleKeys.emailAddress,
+                  hintText: LocaleKeys.auth_enterEmail,
                 ),
                 const LabelTextField(
-                  label: "Pay ID",
-                  hintText: "Enter Pay ID",
+                  label: LocaleKeys.payId,
+                  hintText: LocaleKeys.enterPayId,
                 ),
               ],
             ),
@@ -37,7 +38,7 @@ class SkrillPage extends StatelessWidget {
             viewModel.paymentMethodPageEnum =
                 PaymentMethodPageEnum.addPaymentMethodSuccess;
           },
-          text: 'Save',
+          text: LocaleKeys.save,
         ),
         verticalSpaceSmall(context),
         verticalSpaceXSmall(context),

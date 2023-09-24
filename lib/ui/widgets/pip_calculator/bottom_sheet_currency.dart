@@ -7,6 +7,8 @@ import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/pip_calculator/pip_calculator_view_model.dart';
 import 'package:meta_trader/ui/widgets/auth/radio_button.dart';
 
+import '../../../generated/locale_keys.g.dart';
+
 class PipBottomSheetCurrency extends StatefulWidget {
   const PipBottomSheetCurrency({super.key, required this.viewModel});
   final PipCalculatorViewModel viewModel;
@@ -44,7 +46,7 @@ class _PipBottomSheetCurrencyState extends State<PipBottomSheetCurrency> {
                 children: [
                   verticalSpaceSmall(context),
                   Text(
-                    'Select Account Currency',
+                    LocaleKeys.selectAccountCurrency,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.8),
                       color: isDarkMode ? Colors.white : ColorManager.lightText,
@@ -69,7 +71,7 @@ class _PipBottomSheetCurrencyState extends State<PipBottomSheetCurrency> {
                         setState(() {});
                       },
                       decoration: InputDecoration(
-                        hintText: 'Search',
+                        hintText: LocaleKeys.search,
                         hintStyle: CustomThemeData.generateStyle(
                           fontSize: 15,
                           color: Theme.of(context).secondaryHeaderColor,

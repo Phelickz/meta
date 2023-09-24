@@ -3,12 +3,14 @@
 import 'dart:io';
 
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/price_sentiments/price_sentiments_view_model.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/home/price_sentiments.dart';
@@ -96,26 +98,23 @@ class HomeView extends StackedView<HomeViewModel> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              bottomIcons(
-                  context, 'assets/images/money-recive.svg', 'Deposit Funds',
-                  () {
+              bottomIcons(context, 'assets/images/money-recive.svg',
+                  LocaleKeys.depositFunds.tr(), () {
                 viewModel.push(const FundAccountRoute());
               }),
               const SizedBox(width: 10),
-              bottomIcons(
-                  context, 'assets/images/money-send.svg', 'Withdraw Funds',
-                  () {
+              bottomIcons(context, 'assets/images/money-send.svg',
+                  LocaleKeys.views_homeView_withdrawFunds.tr(), () {
                 viewModel.push(const WithdrawFundRoute());
               }),
               const SizedBox(width: 10),
               bottomIcons(context, 'assets/icons/recovery-convert.svg',
-                  'Internal Transfer', () {
+                  LocaleKeys.views_homeView_internalTransfer.tr(), () {
                 viewModel.push(const InternalTransferRoute());
               }),
               const SizedBox(width: 10),
-              bottomIcons(
-                  context, 'assets/images/note-2.svg', 'Transaction History',
-                  () {
+              bottomIcons(context, 'assets/images/note-2.svg',
+                  LocaleKeys.views_homeView_transactionHistory.tr(), () {
                 viewModel.push(const TransactionsRoute());
               }),
             ],
@@ -129,7 +128,7 @@ class HomeView extends StackedView<HomeViewModel> {
             children: [
               verticalSpaceSmall(context),
               Text(
-                'Trade Features',
+                LocaleKeys.views_homeView_tradeFeatures.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2),
                   fontWeight: FontWeight.bold,
@@ -153,24 +152,30 @@ class HomeView extends StackedView<HomeViewModel> {
                           viewModel.push(const SocialTradingWelcome());
                         },
                         image: 'assets/images/trade.svg',
-                        title: 'Social Trading',
-                        subtitle: 'Copy and earn with experienced traders',
+                        title: LocaleKeys.socialTrading.tr(),
+                        subtitle: LocaleKeys
+                            .views_homeView_TradeFeaturesSub_subtitle
+                            .tr(),
                       ),
                       TradeFeatures(
                         onTap: () {
                           viewModel.push(const ForexNewsRoute());
                         },
                         image: 'assets/images/forex-news.svg',
-                        title: 'Forex News',
-                        subtitle: 'Stay up to date with forex news',
+                        title: LocaleKeys.forexNews.tr(),
+                        subtitle: LocaleKeys
+                            .views_homeView_TradeFeaturesSub_subtitle1
+                            .tr(),
                       ),
                       TradeFeatures(
                         onTap: () {
                           viewModel.push(ChartRoute(showBackButton: true));
                         },
                         image: 'assets/images/loyalty-re.svg',
-                        title: 'Chart Analysis',
-                        subtitle: 'Copy and earn with experienced traders',
+                        title: LocaleKeys.views_homeView_chartAnalysis.tr(),
+                        subtitle: LocaleKeys
+                            .views_homeView_TradeFeaturesSub_subtitle
+                            .tr(),
                       ),
                     ],
                   ),
@@ -179,7 +184,7 @@ class HomeView extends StackedView<HomeViewModel> {
               verticalSpaceSmall(context),
               verticalSpaceXSmall(context),
               Text(
-                'Trading Tools',
+                LocaleKeys.views_homeView_tradingTools.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2),
                   fontWeight: FontWeight.bold,
@@ -198,28 +203,28 @@ class HomeView extends StackedView<HomeViewModel> {
                   children: [
                     TradingTools(
                       image: 'assets/images/profit_calc.svg',
-                      text: 'Profit calculator',
+                      text: LocaleKeys.views_homeView_profitCalculator.tr(),
                       onTap: () {
                         viewModel.push(const ProfitCalculatorRoute());
                       },
                     ),
                     TradingTools(
                       image: 'assets/images/currency_conv.svg',
-                      text: 'Currency converter',
+                      text: LocaleKeys.currencyConverter.tr(),
                       onTap: () {
                         viewModel.push(const CurrencyConverterRoute());
                       },
                     ),
                     TradingTools(
                       image: 'assets/images/pips_calc.svg',
-                      text: 'Pips calculator',
+                      text: LocaleKeys.pipsCalculator.tr(),
                       onTap: () {
                         viewModel.push(const PipCalculatorRoute());
                       },
                     ),
                     TradingTools(
                       image: 'assets/images/margin_calc.svg',
-                      text: 'Margin calculator',
+                      text: LocaleKeys.marginCalculator.tr(),
                       onTap: () {
                         viewModel.push(const MarginCalculatorRoute());
                       },
@@ -231,7 +236,7 @@ class HomeView extends StackedView<HomeViewModel> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Market News',
+                    LocaleKeys.views_homeView_marketNews.tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 2),
                       fontWeight: FontWeight.bold,
@@ -244,7 +249,7 @@ class HomeView extends StackedView<HomeViewModel> {
                       onPressed: () {
                         viewModel.push(const ForexNewsRoute());
                       },
-                      child: const Text('View more'))
+                      child: Text(LocaleKeys.viewMore.tr()))
                 ],
               ),
               verticalSpaceXSmall(context),
@@ -296,7 +301,7 @@ class HomeView extends StackedView<HomeViewModel> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Price Sentiments',
+                    LocaleKeys.views_homeView_priceSentiments.tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 2),
                       fontWeight: FontWeight.bold,
@@ -309,7 +314,7 @@ class HomeView extends StackedView<HomeViewModel> {
                       onPressed: () {
                         viewModel.push(const PriceSentimentsRoute());
                       },
-                      child: const Text('View more'))
+                      child: Text(LocaleKeys.viewMore.tr()))
                 ],
               ),
               verticalSpaceXSmall(context),
@@ -378,7 +383,7 @@ class HomeView extends StackedView<HomeViewModel> {
               verticalSpaceSmall(context),
               verticalSpaceXSmall(context),
               Text(
-                'Rewards',
+                LocaleKeys.rewards.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2),
                   fontWeight: FontWeight.bold,
@@ -404,7 +409,7 @@ class HomeView extends StackedView<HomeViewModel> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Social Trading',
+                    LocaleKeys.socialTrading.tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 2),
                       fontWeight: FontWeight.bold,
@@ -417,7 +422,7 @@ class HomeView extends StackedView<HomeViewModel> {
                       onPressed: () {
                         viewModel.push(const SocialTradingDasboard());
                       },
-                      child: const Text('View more'))
+                      child: Text(LocaleKeys.viewMore.tr()))
                 ],
               ),
               SizedBox(
@@ -517,7 +522,7 @@ class HomeView extends StackedView<HomeViewModel> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Welcome, Susan",
+              LocaleKeys.views_homeView_welcome.tr(),
               style: CustomThemeData.generateStyle(
                 fontSize: 18,
                 color: isDarkMode ? Colors.white : Colors.white,
@@ -547,7 +552,7 @@ class HomeView extends StackedView<HomeViewModel> {
                           width: 5,
                         ),
                         Text(
-                          'Silver',
+                          LocaleKeys.sliver.tr(),
                           style: CustomThemeData.generateStyle(
                               fontSize: 9,
                               fontWeight: FontWeight.w500,
@@ -571,7 +576,7 @@ class HomeView extends StackedView<HomeViewModel> {
                     child: Row(
                       children: [
                         Text(
-                          'VERIFIED',
+                          LocaleKeys.verifiedCap.tr(),
                           style: CustomThemeData.generateStyle(
                             fontSize: 9,
                             fontWeight: FontWeight.w400,
@@ -612,7 +617,7 @@ class HomeView extends StackedView<HomeViewModel> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Wallet balance',
+                LocaleKeys.views_homeView_walletBalance.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.5),
                   color: isDarkMode
@@ -622,7 +627,7 @@ class HomeView extends StackedView<HomeViewModel> {
               ),
               RichText(
                 text: TextSpan(
-                  text: 'Margin (%): ',
+                  text: LocaleKeys.marginWithP.tr(args: ['%', ':']),
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.5),
                     color: isDarkMode
@@ -670,7 +675,7 @@ class HomeView extends StackedView<HomeViewModel> {
               const Spacer(),
               RichText(
                 text: TextSpan(
-                  text: 'Equity: ',
+                  text: LocaleKeys.equity.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.5),
                     color: isDarkMode

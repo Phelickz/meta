@@ -4,6 +4,8 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 
+import '../../../generated/locale_keys.g.dart';
+
 class HigherSuccessRates extends StatelessWidget {
   const HigherSuccessRates({super.key, this.copyOnTap});
   final void Function()? copyOnTap;
@@ -34,7 +36,7 @@ class HigherSuccessRates extends StatelessWidget {
                   ),
                   horizontalSpaceXSmall(context),
                   Text(
-                    'Profit_goddess',
+                    LocaleKeys.home_higherSuccessRates_profit_goddess,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.8),
                       color: isDarkMode ? Colors.white70 : Colors.black54,
@@ -79,7 +81,7 @@ class HigherSuccessRates extends StatelessWidget {
                 children: [
                   RichText(
                     text: TextSpan(
-                      text: 'Copiers: ',
+                      text: LocaleKeys.home_higherSuccessRates_copiers,
                       style: CustomThemeData.generateStyle(
                         fontSize: 10,
                         color: isDarkMode ? Colors.white : Colors.black45,
@@ -104,14 +106,15 @@ class HigherSuccessRates extends StatelessWidget {
                       padding: const EdgeInsets.all(5.0),
                       child: RichText(
                         text: TextSpan(
-                          text: 'Risk score: ',
+                          text: LocaleKeys.home_higherSuccessRates_riskScore,
                           style: CustomThemeData.generateStyle(
                             fontSize: 8,
                             color: isDarkMode ? Colors.white : Colors.black,
                           ),
                           children: [
                             TextSpan(
-                              text: 'MEDIUM',
+                              text:
+                                  LocaleKeys.home_higherSuccessRates_mediumCap,
                               style: CustomThemeData.generateStyle(
                                 fontSize: 8,
                                 fontWeight: FontWeight.bold,
@@ -143,7 +146,7 @@ class HigherSuccessRates extends StatelessWidget {
                               ),
                               children: [
                                 TextSpan(
-                                  text: 'Days',
+                                  text: LocaleKeys.days,
                                   style: CustomThemeData.generateStyle(
                                     fontSize: 8,
                                     color: Theme.of(context).primaryColor,
@@ -153,7 +156,7 @@ class HigherSuccessRates extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Experience',
+                            LocaleKeys.experience,
                             style: CustomThemeData.generateStyle(
                               fontSize: 8,
                               color: isDarkMode ? Colors.white : Colors.black54,
@@ -192,7 +195,7 @@ class HigherSuccessRates extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Success Rate',
+                            LocaleKeys.home_higherSuccessRates_successRate,
                             style: CustomThemeData.generateStyle(
                               fontSize: 8,
                               color: isDarkMode ? Colors.white : Colors.black54,
@@ -231,7 +234,7 @@ class HigherSuccessRates extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Commission',
+                            LocaleKeys.commission,
                             style: CustomThemeData.generateStyle(
                               fontSize: 8,
                               color: isDarkMode ? Colors.white : Colors.black54,
@@ -256,7 +259,7 @@ class HigherSuccessRates extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              'Copy',
+                              LocaleKeys.copy,
                               style: CustomThemeData.generateStyle(
                                 fontSize: 11,
                                 color: isDarkMode ? Colors.white : Colors.white,

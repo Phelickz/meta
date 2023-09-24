@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/manage_accounts/manage_accounts_view_model.dart';
 import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/broker_logo.dart';
 import 'package:stacked/stacked.dart';
@@ -20,7 +22,11 @@ class BrokerInfomationView extends StackedView<ManageAccountViewModel> {
     // TODO: implement builder
     return Skeleton(
         isBusy: viewModel.isBusy,
-        appBar: existingAccountAppbar2(context, "Broker Information"),
+        appBar: existingAccountAppbar2(
+            context,
+            LocaleKeys
+                .views_manageAccount_brokerInformationView_brokersInformation
+                .tr()),
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,7 +36,8 @@ class BrokerInfomationView extends StackedView<ManageAccountViewModel> {
                 height: 40.pHeight(context),
               ),
               Text(
-                "Registration Address",
+                LocaleKeys.views_manageAccount_brokerInformationView_regAddress
+                    .tr(),
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.5),
                     color: isDarkMode ? Colors.white : Colors.black,
@@ -40,7 +47,8 @@ class BrokerInfomationView extends StackedView<ManageAccountViewModel> {
                 height: 4.pHeight(context),
               ),
               Text(
-                "Level 2, ken Lee building, 20 Edith Cavell street, Port Luis, Mauritius",
+                LocaleKeys.views_manageAccount_brokerInformationView_level2
+                    .tr(),
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.5),
                     color: isDarkMode ? Colors.white : const Color(0xFF667085),
@@ -50,7 +58,7 @@ class BrokerInfomationView extends StackedView<ManageAccountViewModel> {
                 height: 24.pHeight(context),
               ),
               Text(
-                "Website",
+                LocaleKeys.website.tr(),
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.5),
                     color: isDarkMode ? Colors.white : Colors.black,
@@ -60,7 +68,7 @@ class BrokerInfomationView extends StackedView<ManageAccountViewModel> {
                 height: 4.pHeight(context),
               ),
               Text(
-                "www.fxpro.com",
+                LocaleKeys.fxproSite,
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.4),
                     color: ColorManager.lightHeaderColor,
@@ -70,7 +78,7 @@ class BrokerInfomationView extends StackedView<ManageAccountViewModel> {
                 height: 24.pHeight(context),
               ),
               Text(
-                "Support",
+                LocaleKeys.support,
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.5),
                     color: isDarkMode ? Colors.white : Colors.black,
@@ -80,7 +88,8 @@ class BrokerInfomationView extends StackedView<ManageAccountViewModel> {
                 height: 4.pHeight(context),
               ),
               Text(
-                "support@fxpro.com",
+                LocaleKeys.views_manageAccount_brokerInformationView_supportSite
+                    .tr(),
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.4),
                     color: ColorManager.lightHeaderColor,
@@ -90,7 +99,7 @@ class BrokerInfomationView extends StackedView<ManageAccountViewModel> {
                 height: 24.pHeight(context),
               ),
               Text(
-                "Phone",
+                LocaleKeys.phone,
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.5),
                     color: isDarkMode ? Colors.white : Colors.black,

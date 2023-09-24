@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/fund_account/app_bar.dart';
 import 'package:meta_trader/ui/widgets/fund_account/binance_pay.dart';
 import 'package:meta_trader/ui/widgets/fund_account/bitcoin.dart';
@@ -125,36 +127,84 @@ class FundAccountViewModel extends CustomBaseViewModel {
     switch (_fundAccountPageEnum) {
       case FundAccountPageEnum.selectAccount:
         return fundAccountAppBar(
-            context, 'Fund Account', 'Select account to fund', this);
+            context,
+            LocaleKeys.fundAccount.tr(),
+            LocaleKeys
+                .views_fundAccountView_fundAccountAppBar_selectAccountToFund
+                .tr(),
+            this);
       case FundAccountPageEnum.selectDepositMethod:
         return fundAccountAppBar(
-            context, 'Deposit Funds', 'Select deposit method', this);
+            context,
+            LocaleKeys.deposit.tr(),
+            LocaleKeys
+                .views_fundAccountView_fundAccountAppBar_selectDepositMethod
+                .tr(),
+            this);
       case FundAccountPageEnum.onlineBank:
         return fundAccountAppBar(
-            context, 'Online Bank', 'Add online bank', this);
+            context,
+            LocaleKeys.views_fundAccountView_fundAccountAppBar_onlineBank.tr(),
+            LocaleKeys.views_fundAccountView_fundAccountAppBar_addOnlineBank
+                .tr(),
+            this);
       case FundAccountPageEnum.bitcoin:
         return fundAccountAppBar(
-            context, 'Bitcoin (BTC)', 'Fund using Bitcoin wallet', this);
+            context,
+            LocaleKeys.views_fundAccountView_fundAccountAppBar_bitcoin.tr(),
+            LocaleKeys.views_fundAccountView_fundAccountAppBar_fundUsingBitcoin
+                .tr(),
+            this);
       case FundAccountPageEnum.binancePay:
         return fundAccountAppBar(
-            context, 'BinancePay', 'Fund using BinancePay', this);
+            context,
+            LocaleKeys.views_fundAccountView_fundAccountAppBar_binancePay.tr(),
+            LocaleKeys.fundUsingBinancePay.tr(),
+            this);
       case FundAccountPageEnum.neteller:
         return fundAccountAppBar(
-            context, 'Neteller', 'Fund using Neteller', this);
+            context,
+            LocaleKeys.views_fundAccountView_fundAccountAppBar_neteller.tr(),
+            LocaleKeys.views_fundAccountView_fundAccountAppBar_fundUsingNeteller
+                .tr(),
+            this);
       case FundAccountPageEnum.perfectMoney:
         return fundAccountAppBar(
-            context, 'Perfect Money', 'Fund using Perfect Money', this);
+            context,
+            LocaleKeys.views_fundAccountView_fundAccountAppBar_perfectMoney
+                .tr(),
+            LocaleKeys
+                .views_fundAccountView_fundAccountAppBar_fundUsingPerfectMoney
+                .tr(),
+            this);
       case FundAccountPageEnum.sticPay:
         return fundAccountAppBar(
-            context, 'SticPay', 'Fund using Stic Pay', this);
+            context,
+            LocaleKeys.views_fundAccountView_fundAccountAppBar_sticPay.tr(),
+            LocaleKeys.views_fundAccountView_fundAccountAppBar_fundUsingSticPay
+                .tr(),
+            this);
       case FundAccountPageEnum.tether:
         return fundAccountAppBar(
-            context, 'Tether (USD)', 'Fund using Tether', this);
+            context,
+            LocaleKeys.views_fundAccountView_fundAccountAppBar_tether.tr(),
+            LocaleKeys.views_fundAccountView_fundAccountAppBar_fundUsingTether
+                .tr(),
+            this);
       case FundAccountPageEnum.skrill:
-        return fundAccountAppBar(context, 'Skrill', 'Fund using Skrill', this);
+        return fundAccountAppBar(
+            context,
+            LocaleKeys.views_fundAccountView_fundAccountAppBar_skrill.tr(),
+            LocaleKeys.views_fundAccountView_fundAccountAppBar_fundUsingSkrill
+                .tr(),
+            this);
       case FundAccountPageEnum.blockBee:
         return fundAccountAppBar(
-            context, 'BlockBee', 'Fund using BlockBee', this);
+            context,
+            LocaleKeys.views_fundAccountView_fundAccountAppBar_blockBee.tr(),
+            LocaleKeys.views_fundAccountView_fundAccountAppBar_fundUsingBlockBee
+                .tr(),
+            this);
       default:
         return null;
     }

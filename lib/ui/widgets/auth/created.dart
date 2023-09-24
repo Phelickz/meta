@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
 import '../../views/auth/auth_view_model.dart';
@@ -44,6 +46,7 @@ class CreatedPage extends StatelessWidget {
                     horizontalSpaceSmall(context),
                     Expanded(
                       child: Text(
+                        // TODO: localization used a namedArgs named model
                         'Your ${model.createdAccountPageEnum == CreatedAccountPageEnum.demo ? "demo" : "real"} account has been created successfully',
                         style: CustomThemeData.generateStyle(
                             fontSize: 14, color: Colors.white70),
@@ -56,7 +59,7 @@ class CreatedPage extends StatelessWidget {
             verticalSpaceSmall(context),
             verticalSpaceSmall(context),
             Text(
-              'Account Information',
+              LocaleKeys.auth_created_accountInformation.tr(),
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.6),
                 color: Theme.of(context).primaryColor,
@@ -68,7 +71,7 @@ class CreatedPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Full Name',
+                  LocaleKeys.auth_created_FullName.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode ? Colors.white60 : Colors.black,
@@ -88,14 +91,14 @@ class CreatedPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Account Type',
+                  LocaleKeys.auth_created_accountType.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode ? Colors.white60 : Colors.black,
                   ),
                 ),
                 Text(
-                  'Forex Hedge 100',
+                  LocaleKeys.auth_created_forexHedge.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode ? Colors.white : Colors.black54,
@@ -108,7 +111,7 @@ class CreatedPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Deposit',
+                  LocaleKeys.deposit.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode ? Colors.white60 : Colors.black,
@@ -128,7 +131,7 @@ class CreatedPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Login ID',
+                  LocaleKeys.loginID.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode ? Colors.white60 : Colors.black,
@@ -148,7 +151,7 @@ class CreatedPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Password',
+                  LocaleKeys.password.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode ? Colors.white60 : Colors.black,
@@ -168,7 +171,7 @@ class CreatedPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Investor',
+                  LocaleKeys.investor.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode ? Colors.white60 : Colors.black,
@@ -190,7 +193,7 @@ class CreatedPage extends StatelessWidget {
                 onTap: () {
                   model.setAuthPageEnum = AuthPageEnum.login;
                 },
-                text: 'Done',
+                text: LocaleKeys.done.tr(),
                 color: model.radioItem == null
                     ? Colors.black54
                     : Theme.of(context).primaryColor),

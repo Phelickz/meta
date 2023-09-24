@@ -1,6 +1,119 @@
 {
   "hello": "مرحبا، كيف حالك؟",
   "brokers": "وسطاء",
+  "depositFunds": "إيداع الأموال",
+  "demo": "تجريبي",
+  "forexNews": "أخبار الفوركس",
+  "currencyConverter": "محول العملات",
+  "viewMore": "عرض المزيد",
+  "rewards": "المكافآت",
+  "socialTrading": "التجارة الاجتماعية",
+  "sliver": "فضة",
+  "gold": "ذهب",
+  "platinum": "البلاتين",
+  "login": "تسجيل الدخول",
+  "close": "يغلق",
+  "verifiedCap": "تم التحقق",
+  "charts": "جدول",
+  "select": "يختار",
+  "overview": "ملخص",
+  "specification": "متطلبات",
+  "marginWithP": "هامِش {} {}",
+  "margin": "هامِش ",
+  "equity": "أسهم عادية",
+  "reward": "جائزة",
+  "website": "موقع إلكتروني",
+  "trending": "الشائع",
+  "fxproSite": "www.fxpro.com",
+  "support": "يدعم",
+  "phone": "هاتف",
+  "phoneNumber": "رقم التليفون",
+  "forexPro": "فوركسبرو",
+  "connectTo": "رابط ل",
+  "marginCalculator": "حاسبة الهامش",  
+  "leverage": "الفائدة الميكانيكية",  
+  "calculate": "احسب",  
+  "continueWord": "واصل",  
+  "next": "التالي",  
+  "pipsCalculator": "حاسبة النقاط", 
+  "accountCurrency": "عملة الحساب",
+  "currencyPair": "زوج العملات",
+  "tradeSize": "حجم التجارة {}",
+  "search": "يبحث",
+  "deposit": "إيداع",
+  "login_existing_account": "قم بتسجيل الدخول إلى حسابك الحالي",
+  "savePassword" : "حفظ كلمة المرور",
+  "password": "كلمة المرور",
+  "investor": "مستثمر",
+  "changePassword": "تغيير كلمة المرور",
+  "deleteAccount": "حذف الحساب",
+  "cancel": "ألغى",
+  "delete": "حذف",
+  "properties": "ملكيات",
+  "done": "منتهي",
+  "email":"بريد إلكتروني",
+  "days":"أيام",
+  "indicators":"المؤشرات",
+  "experience":"خبرة",
+  "hour":"ساعة",
+  "today":"اليوم",
+  "week":"أسبوع",
+  "month":"شهر",
+  "year":"سنة",
+  "maximum":"أقصى",
+  "minimum":"الحد الأدنى",
+  "fundAccount": "حساب الصندوق",
+  "manageAccount": "إدارة الحساب",
+  "amount": "كمية",
+  "save": "حفظ",
+  "metals":"المعادن",
+  "cryptoNews":"أخبار التشفير",
+  "step":"خطوة",
+  "btcText": "0 بيتكوين",
+  "loginID": "اسمك",
+  "forgetPassword": "هل نسيت كلمة السر؟ ",
+  "contactBroker": "اتصل بالوسيط",
+  "amountToFund": "المبلغ المراد إيداعه",
+  "enterPersonalInformation": "أدخل المعلومات الشخصية",
+  "termsAndCondition": "أوافق على شروط وأحكام فتح الحساب وسياسة حماية البيانات.",
+  "emailAddress": "عنوان البريد الإلكتروني",
+  "zeroUsd": "0.00 دولار أمريكي",
+  "zeroUsdT": "0 USDT",
+  "payId": "معرف الدفع",
+  "balance": "توازن",
+  "instant": "فوري",
+  "duration": "مدة:",
+  "fee": "مصاريف:",
+  "limit": "حد:",
+  "back": "سابق",
+  "commission": "عمولة",
+  "copy": "ينسخ",
+  "active": "نشيط",
+  "real": "رجل ذو همة",
+  "decrypt": "فك التشفير",
+  "logOut": "تسجيل خروج",
+  "saveChanges": "حفظ التغيير",
+  "averageTime": "متوسط ​​الوقت:",
+  "upTo": "تصل إلى 30 دقيقة",
+  "walletAddress": "عنوان المحفظة",
+  "chooseNetwork": "اختر الشبكة",
+  "btcBeacon": "BTC منارة سلسلة (BEP2)",
+  "lastActivity": "آخر نشاط: 23.12.2023",
+  "enterYourLoginId": "أدخل معرف تسجيل الدخول الخاص بك",
+  "enterLoginDetails": "أدخل تفاصيل تسجيل الدخول",
+  "enterPayId":"أدخل معرف الدفع",
+  "selectCurrencyPair": "حدد زوج العملات",
+  "selectAccountCurrency": "حدد عملة الحساب",
+  "fundUsingBinancePay": "التمويل باستخدام BinancePay",
+  "server": "الخادم",
+  "signIn": "تسجيل الدخول",
+  "max": "الأعلى",
+  "tradingSignal": "إشارات التداول",
+  "ok": "نعم",
+  "name": "اسم",
+  "btcBeanBEP3": "BTC منارة سلسلة (BEP3)",
+
+
   "views": {
     "auth": {
       "auth_view": {
@@ -16,9 +129,9 @@
           "demo": "عرض توضيحي,",
           "real": "حقيقي"
         },
+
       "return_app_bar": {
         "find_broker": "ابحث عن وسيط",
-        "login_existing_account": "يدخل إلى الحساب الحالي",
         "enter_login": "أدخل تفاصيل تسجيل الدخول",
         "open_demo_account": "افتح حساب تجريبي",
         "enter_information": "أدخل المعلومات الخاصة بك",
@@ -33,8 +146,152 @@
       "chart": "جدول",
       "trade": "تجارة",
       "profile": "حساب تعريفي"
-    }
+    },
+
+
+    "currencyConverter": {
+      "twentyThree": "ثلاثة وعشرون",
+      "currency1": "العملة 1",
+      "currency2": "العملة 2",
+      "enterCurrency1": "أدخل المبلغ (العملة 1)",
+      "enterCurrency2": "أدخل المبلغ (العملة 2)"
+    },
+    "dashboard":{
+      "dashboard": "لوحة القيادة"
+    },
+    "forexNews":{
+      "forexNewsView":{
+        "exploreForex": "اكتشف أخبار الفوركس حول العالم"
+      },
+      "forexModel": {
+         "all" : "الجميع",
+         "currencyPairs" : "أزواج العملات",
+         "metals" : "المعادن",
+         "cryptoCurrency" : "عملة مشفرة"
+      }  
+    },
+    "fundAccountView": {
+      "fundAccountAppBar": {
+        "selectAccountToFund": "اختر الحساب لتمويله",
+        "selectDepositMethod": "اختر طريقة الإيداع",
+        "onlineBank": "البنك عبر الإنترنت",
+        "addOnlineBank": "إضافة البنك عبر الإنترنت",
+        "bitcoin": "بيتكوين",
+        "fundUsingBitcoin": "التمويل باستخدام محفظة بيتكوين",
+        "binancePay": "الدفع بينانس",
+        "neteller": "نيتيلر",
+        "fundUsingNeteller": "التمويل باستخدام نيتيلر",
+        "perfectMoney": "مال مناسب",
+        "fundUsingPerfectMoney": "الصندوق باستخدام المال المثالي",
+        "sticPay": "SticPay",
+        "fundUsingSticPay": "SticPay التمويل باستخدام",
+        "tether": "قيد بحبل",
+        "fundUsingTether": "الصندوق باستخدام الحبل",
+        "skrill": "Skrill",
+        "fundUsingSkrill": "Skrill التمويل باستخدام",
+        "blockBee": "BlockBee",
+        "fundUsingBlockBee": "BlockBee التمويل باستخدام"
+      }
+    },
+    "helpAndSupportView":{
+      "question": "سؤال",
+      "answer": "إجابة",
+      "helpAndSupport": "مساعدة و دعم",
+      "faq": "التعليمات",
+      "customerCare": "رعاية العميل",
+      "online": "متصل",
+      
+      "faqList": {
+        "question1": "كيف أقوم بالسحب؟",
+        "answer1": "أردت أن أغتنم هذه الفرصة لأكرر حماسي لهذا المنصب واهتمامي القوي بأن أصبح عضوًا قيمًا في فريق [اسم الشركة]. وبعد محادثتنا، أصبحت أكثر اقتناعًا بأن هذا هو الدور الذي يمكنني من خلاله المساهمة بخبراتي وإحداث تأثير إيجابي.\n\n",
+        "answer1Continue": "لقد تأثرت بشكل خاص بـ [جانب معين أو مشروع تمت مناقشته أثناء المقابلة]، وأعتقد أن خلفيتي في [الخبرة ذات الصلة] ستسمح لي بتقديم وجهات نظر جديدة ورؤى قيمة للفريق"
+      },
+      "suggestionList":{
+        "suggestion1": "احتاج معروفا",
+        "suggestion2": "كيف أنسحب",
+        "suggestion3": "لا أستطيع تمويل محفظتي"
+      }
+    },
+    "homeView": {
+      "withdrawFunds": "سحب الأموال",
+      "internalTransfer": "التحويل الداخلي",
+      "transactionHistory": "تاريخ المعاملات",
+      "tradeFeatures": "ميزات التجارة",
+      "chartAnalysis": "تحليل الرسم البياني",      
+      "tradingTools": "أدوات التداول",      
+      "profitCalculator": "حاسبة الربح",                
+      "marketNews": "أخبار السوق",  
+      "priceSentiments": "مشاعر السعر",  
+      "TradeFeaturesSub":{
+        "subtitle": "انسخ واربح مع المتداولين ذوي الخبرة",
+        "subtitle1": "ابق على اطلاع بأخبار الفوركس"
+      },
+      "welcome": "مرحباً سوزان",
+      "walletBalance": "رصيد المحفظة"
+      
+    },
+    "internalTransferView": {
+      "transferFunds": "تحويل الأموال",
+      "selectAccountToSendFund": "حدد الحساب لإرسال الأموال",
+      "receivingAccount": "حساب الاستلام",
+      "selectAccountToReceiveFund": "اختر الحساب لتلقي الأموال"
+    },
+
+    "loyaltyRewardsView": {
+      "loyaltyRewards": "مكافآت الولاء",
+      "aboutLoyaltyFeature": "حول ميزة الولاء",
+      "yourSilverBenefits": "فوائد الفضة الخاصة بك",
+      "sliverBenefit1": "{} استرداد نقدي على أي صفقة",
+      "sliverBenefit1Sub": "يمكنك الآن الحصول على مكافأة استرداد نقدي بنسبة 1% على أي تداول تقوم به على منصتنا",
+      "sliverBenefit2": "عمليات سحب مرنة",
+      "sliverBenefit2Sub": "{} الآن يمكنك سحب ما يصل إلى 4 مرات في الشهر مع رسوم أقل",
+      "sliverBenefit3": "الوصول إلى أدوات التداول",
+      "sliverBenefit3Sub": "يمكنك الوصول إلى محول العملات وحاسبة الأرباح",
+      "earnDailyRewards": "كسب المكافآت اليومية",
+      "todayTask": "مهام اليوم",
+      "dailyReward": "تداول بحجم 3 قطع",
+      "dailyReward1": "إحالة 3 أصدقاء",
+      "recentActivity": "النشاط الأخير",
+      "activityTileText": "لقد حصلت على 23 نقطة",
+      "activityTileTextSub": "{} الاعتمادات الممنوحة لاستخدام 5 أحجام لوت",
+      "status:":"حالة:",
+      "notComplete:":"غير مكتمل:",
+      "points:":"3 نقاط"
+    },
+    "manageAccount":{
+      "brokerInformationView": {
+        "regAddress": "عنوان التسجيل",
+        "brokersInformation": "معلومات الوسيط",
+        "level2" : "الطابق الثاني، مبنى كين لي، 20 شارع إديث كافيل، بورت لويس، موريشيوس",
+        "supportSite": "support@fxpro.com"
+      },
+      "existingAccountScreen": {
+        "searchBroker": "ابحث عن العامل",
+        "findBroker": "ابحث عن وسيط"
+      }
   },
+  "marginCalculatorView":{
+    "requiredMargin": "الهامش المطلوب {}"
+  },
+    "paymentMethodPageView":{
+    "paymentMethod": "طرق الدفع",
+    "addBinancePay": "Binance قم بإضافة تفاصيل الدفع الخاصة بك على",
+    "enterNetellerAccount": "أدخل تفاصيل حساب نيتيلر",
+    "addBitcoinDetails": "أضف تفاصيل البيتكوين",
+    "enterSkrillAccount": "Skrill أدخل تفاصيل حساب ",
+    "enterPaymentDetails": "أدخل تفاصيل الدفع",
+    "enterSticPayAccount": "SticPay أدخل تفاصيل حساب ",
+    "enterTetherDetails": " TetherUSD أضف تفاصيل",
+    "scanQr": "مسح رمز الاستجابة السريعة",
+    "editOnlineBank": "تحرير البنك عبر الإنترنت"
+  },
+   "pipCalculatorView":{
+    "pipValue": "قيمة النقطة (بالدولار الأمريكي",
+    "numberOfPips": "عدد النقاط {}"
+  }
+  },
+
+
   "onboarding": {
     "onboarding_one": {
       "title1": "تداول بأحدث التقنيات مع شركائنا",
@@ -66,6 +323,243 @@
       "text1": "من الأدوات المتنوعة المصممة خصيصًا لنجاحك",
       "bodyText": "انطلق في رحلة تداول ناجحة باستخدام مجموعتنا الواسعة من الأدوات، المصممة بدقة لضمان نجاحك."
     }
+},
+"auth" : {
+  "chooseAccount": {
+    "offersYouVirtual": "يقدم لك أموالاً افتراضية لتعلم تداول العملات الأجنبية واختبار استراتيجياتك وإعداداتك قبل استخدام حساب حقيقي.",
+    "demoAccount": "الحساب التجريبي",
+    "realAccount": "حساب حقيقي",
+    "forLiveTrading": "للتداول المباشر. مطلوب التحقق الإضافي. لا ينصح للمبتدئين"
+  },
+  "created": {
+    "yourModelCreated": {
+      "demo": "لقد تم إنشاء حساب {نموذج} الخاص بك بنجاح",
+      "real": "لقد تم إنشاء حساب {نموذج} الخاص بك بنجاح"
+    },
+    "accountInformation": "معلومات الحساب",
+    "FullName": "الاسم الكامل",
+    "accountType": "نوع الحساب",
+    "forexHedge": "تحوط الفوركس 100"
+  },
+    "firstName": "الاسم الأول",
+    "enterFirstName": "أدخل اسمك الأول",
+    "lastName": "اسم العائلة",
+    "enterLastName": "أدخل اسمك الأخير",
+    "enterEmail": "أدخل بريدك الإلكتروني",
+    "enterPhone": "أدخل رقم هاتفك",
+
+    "realWidget":{
+      "enterPersonalInformation": "أدخل معرف تسجيل الدخول الخاص بك",
+      "preliminaryAccount": "الحساب الأولي"
+    }
+  },
+ "chart" : {
+  "sellAt": "بيع بسعر 1.234564",
+  "text": "23%",
+  "buyAt": "شراء بسعر 1.234564",
+  "text1": "77%",
+  "text2": "1.2",
+  "specification": {
+    "marketIsOpen" : "السوق مفتوح. يغلق غدا، 12:58 صباحا",
+    "contractSize": "حجم العقد",
+    "spreadUnits": "توزيع الوحدات",
+    "volumeLots": "الحجم، الكثير",
+    "stopLevelPips": "مستوى التوقف، نقطة"
+  },
+  "tradingSignalTiles": {
+    "intraday" : "خلال اليوم: تحت الضغط",
+    "timeText": "6:00 مساءً",
+    "miamiCryptoText": "تطلعات ميامي للعملات المشفرة",
+    "miamiCryptoTextContinue": "مدعومة بصندوق Borderless Capital الذي تبلغ قيمته 25 مليونًا"
+  }
+ },
+ "currencyConverterWidget" : {
+  "selectAccountCurrency":"حدد عملة الحساب"
+ },
+ "datePicker" : {},
+ "dropDown" : {},
+ "forexNewsWidget" : {
+    "allWidget": {
+      "text": "يتعافى بعد نتائج الوظائف غير الزراعية المختلطة من الولايات المتحدة",
+      "text2": "4 أغسطس 2034 الساعة 15:07 بتوقيت جرينتش"
+    },
+    "detailsWidget": {
+     "coinTelegraph": "كوينتيليغراف",
+      "text": "شكرًا لك على اختيار Meta trader كمنصة موثوقة لتداول العملات الأجنبية. نحن ملتزمون بحماية خصوصيتك وحماية معلوماتك الشخصية. توضح سياسة الخصوصية هذه كيفية جمع بياناتك واستخدامها والكشف عنها وحمايتها. من خلال الوصول إلى خدماتنا أو استخدامها، فإنك توافق على الممارسات الموضحة في هذه السياسة.",
+      "text1": "المعلومات الشخصية: قد يشمل ذلك اسمك وعنوان بريدك الإلكتروني ورقم هاتفك وعنوان إقامتك وتاريخ ميلادك وهويتك الصادرة عن الحكومة وغيرها من التفاصيل الضرورية المطلوبة لتسجيل الحساب والامتثال لـ",
+      "text2": "المعلومات المالية: لتسهيل المعاملات، قد نقوم بجمع التفاصيل المتعلقة بحسابك المصرفي ومعلومات بطاقة الائتمان/الخصم وتاريخ المعاملات.",
+      "text3": "معلومات الجهاز والاستخدام: قد نقوم تلقائيًا بجمع معلومات حول جهازك ونظام التشغيل ونوع المتصفح وعنوان IP والتفاعلات مع نظامنا الأساسي لتحسين خدماتنا وتجربة المستخدم.",
+      "text4": "ملفات تعريف الارتباط وتقنيات التتبع: قد نستخدم ملفات تعريف الارتباط والتقنيات المشابهة لجمع معلومات حول أنماط الاستخدام والتفضيلات الخاصة بك أثناء استخدام نظامنا الأساسي. يساعدنا هذا على تحسين موقعنا الإلكتروني وتحسين التنقل وتخصيص تجربتك.",
+      "text5": "مشاركة البيانات والإفصاح عنها",
+      "text6": "نحن نستخدم المعلومات التي تم جمعها للأغراض التالية:",
+      "text7": "إنشاء الحساب: لإنشاء حسابك والحفاظ عليه، والتحقق من هويتك، وتقديم دعم العملاء.",
+      "text8": "خدمات تداول العملات الأجنبية: لمعالجة عمليات التداول والمعاملات والسحوبات الخاصة بك وفقًا لتعليماتك."
+    },
+     "searchWidget": {
+        "searchResult": "نتائج البحث:",
+        "moreResult": "نتائج أخرى"
+    }
+ },
+ "fundAccountWidget" : {
+   "binancePayWidget": {
+     "binancePayId": "معرف باينانس باي"
+ },
+   "bitcoinWidget": {
+     "makeSureToFund": "تأكد من التمويل باستخدام الشبكة المختارة، وإلا سيتم فقدان الأصول الخاصة بك."
+ },
+   "blockBeeWidget": {
+     "blockBeePayId": "معرف بلوك بي"
+ },
+   "onlineBankWidget": {
+     "selectBank": "حدد البنك",
+     "chooseAvailableBank": "اختر البنك المتاح",
+     "accountNumber": "رقم حساب",
+     "accountName": "إسم الحساب"
+ },
+   "perfectMoneyWidget": {
+     "noteThat": "لاحظ أن الأمر قد يستغرق ما يصل إلى 24 ساعة حتى يظهر إيداعك على لوحة التحكم الخاصة بك"
+ },
+   "selectDepositMethodWidget": {
+     "tenUsd": "10-200,00 دولار أمريكي"
+ },
+   "successWidget": {
+     "yourTransaction": "تتم معالجة معاملتك",
+     "financialRegulation": "تتطلب اللوائح المالية منا التحقق من هويتك. يساعد هذا في منع أي شخص آخر من إنشاء حساب MT5 باسمك.",
+     "youCan": "يمكنك تخطي هذه الخطوة ولكنك لن تتمكن من سحب أموالك."
+ },
+   "tetherWidget": {
+     "makeSureToChoose": "تأكد من التمويل باستخدام الشبكة المختارة، وإلا سيتم فقدان الأصول الخاصة بك."
+ }
+},
+"helpAndSupport" : {
+ "components": {
+   "logoutDialog": {
+     "wantToLogout": "هل تريد تسجيل الخروج من حسابك؟"
+   },
+   "messageBottomSheet": {
+     "writeYourMessage": "اكتب رسالتك"
+   },
+   "suggestionsBar": {
+     "suggestion": "اقتراحات"
+   }
+ },
+ "emptyIcon": {
+     "noMessage": "لا توجد رسائل حتى الآن"
+ },
+ "faqWidget": {
+     "ourFaq": "الأسئلة الشائعة لدينا،"
+ },
+ "helpAndSupportWidget": {
+     "chatWithCustomer": "الدردشة مع خدمة العملاء",
+     "frequentlyAskedQ": "أسئلة مكررة",
+     "sendUsAMessage": "أرسل لنا رسالة"
+ }
+},
+"home" : {
+ "higherSuccessRates": {
+     "profit_goddess": "آلهة الربح",
+     "copiers": "الناسخات",
+     "riskScore": "درجة المخاطر:",
+     "mediumCap": "وسط",
+     "successRate": "معدل النجاح"
+ },
+ "marketNewsWidget": {
+     "hoursAgo": "منذ 18 ساعة",
+     "usdCoin": "عملة الدولار",
+     "maimiCryptoAsp": "تطلعات Maimi Crypto مدعومة بصندوق Borderless Capital بقيمة 25 مليون دولار لوريم إيبسوم"
+ },
+ "priceSentiments": {
+     "buySixty": "شراء 65%",
+     "sellThirty": "بيع 35%"
+ }
+},
+"internalTransfer" : {
+  "amountWidget": {
+     "enterAmountToTransfer": "أدخل المبلغ المراد تحويله",
+     "sendingAccountPassword": "إرسال كلمة مرور الحساب",
+     "enterAccountPassword": "أدخل كلمة مرور الحساب"
+ },
+  "successWidget": {
+     "transferSuccessful": "تم النقل بنجاح",
+     "fiveHunUSD": "تم تحويل 500 دولار أمريكي بنجاح من Deriv إلى FXPro",
+     "enterAccountPassword": "أدخل كلمة مرور الحساب"
+ }
+},
+"loyaltyReward" : {
+ "cardWidget": {
+     "totalPointsBalance": "إجمالي رصيد النقاط",
+     "fiveThousandPoints": "5000 نقطة",
+     "youAreAtThePeak": "أنت في القمة!"
+ },
+ "recentActivityWidget": {
+     "activityTile1": "لقد حصلت على 23 نقطة",
+     "activityTile2": "يتم منح 23 دولارًا أمريكيًا لاستخدام 5 أحجام لوت"
+ }
+},
+"manageAccounts" : {
+ "manageAccountsWidget":{
+   "manageAccountBottomSheet":{
+     "doYouReallyWant": "هل تريد حقا حذف الحساب؟",
+     "figure": "23299752",
+     "fxLimited": "شركة FXPro محدودة",
+     "twelveUsd": "12000000.00 دولار أمريكي",
+     "demo_account": "حساب تجريبي"
+   },
+   "manageAccountAppBar":{
+     "doYouReallyWant": "هل تريد حقا حذف الحساب؟",
+     "accessPointHedge": "نقطة الوصول EU 3 1:100، التحوط"
+   }
+ },
+ "existingAccountsForm":{
+     "currentPassword": "كلمة السر الحالية",
+     "enterCurrentPassword": "إدخل كلمة السر الحالية",
+     "newPassword": "كلمة المرور الجديدة",
+     "enterNewPassword": "أدخل كلمة المرور الجديدة",
+     "reEnterPassword": "إعادة إدخال كلمة المرور",
+     "reEnterNewPassword": "أعد إدخال كلمة المرور الجديدة"
+ }
+},
+"notification" : {
+"noNotifications":"لا توجد إخطارات حتى الآن",
+"markAllAsRead":"ضع علامة على كل شيء كمقروء",
+"clearAll":"امسح الكل"
+},
+"paymentMethod" : {
+"addPaymentMethodSuccess" : {
+"paymentMethodAddSuccess": "تمت إضافة طريقة الدفع بنجاح",
+"nowYouCanMake": "الآن يمكنك إجراء عمليات السحب عبر",
+"usingInformation": "باستخدام المعلومات التي قدمتها"
+},
+"addPaymentMethodTile" : {
+ "figure":"10-200,000 دولار أمريكي"
+},
+"binancePayWidgetP" : {
+ "enterWalletInformation":"أدخل معلومات المحفظة"
+},
+"bitcoinWidgetP" : {
+ "enterBitcoinWallet":"أدخل عنوان محفظة البيتكوين"
+},
+"emptyPaymentWidgetP" : {
+ "noPaymentMethod":"لم تتم إضافة أي طريقة دفع",
+ "addPayMethod":"إضافة طريقة دفع"
+},
+"onlineBankWidgetP" : {
+ "bankName":"اسم البنك",
+ "enterBankName":"أدخل اسم البنك",
+ "accountOpening":"فرع فتح الحساب (اختياري)",
+ "enterBranchInformation":"أدخل معلومات فرع البنك"
+},
+"paymentMethodWidgetP" : {
+ "manageYourCash":"إدارة طرق الدفع النقدي الخاصة بك"
+},
+"qrCodeP" : {
+ "pointCamera":"قم بتوجيه الكاميرا نحو رمز QR",
+ "enterBinancePay":"أو أدخل معرف الدفع الخاص بـ Binance بدلاً من ذلك"
+},
+"tetherWidgetP" : {
+ "enterTetherUSd":"TetherUSD أدخل عنوان محفظة"
+}
+
 }
 
 }

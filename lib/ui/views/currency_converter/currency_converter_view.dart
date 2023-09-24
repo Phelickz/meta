@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -13,6 +14,7 @@ import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
 import 'package:stacked/stacked.dart';
 import '../../../app/responsiveness/res.dart';
+import '../../../generated/locale_keys.g.dart';
 
 @RoutePage()
 class CurrencyConverterView extends StackedView<CurrencyConverterViewModel> {
@@ -31,7 +33,7 @@ class CurrencyConverterView extends StackedView<CurrencyConverterViewModel> {
       bodyPadding: EdgeInsets.symmetric(
         horizontal: McGyver.rsDoubleW(context, 0),
       ),
-      appBar: globalAppBar(context, 'Currency Converter', '', () {
+      appBar: globalAppBar(context, LocaleKeys.currencyConverter.tr(), '', () {
         Navigator.pop(context);
       }, []),
       body: Padding(
@@ -71,7 +73,7 @@ class CurrencyConverterView extends StackedView<CurrencyConverterViewModel> {
                           ),
                           verticalSpaceSmall(context),
                           Text(
-                            '23',
+                            LocaleKeys.views_currencyConverter_twentyThree.tr(),
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 2.2),
                               fontWeight: FontWeight.bold,
@@ -145,7 +147,7 @@ class CurrencyConverterView extends StackedView<CurrencyConverterViewModel> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Currency 1',
+                        LocaleKeys.views_currencyConverter_currency1.tr(),
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.8),
                           color: isDarkMode
@@ -199,7 +201,7 @@ class CurrencyConverterView extends StackedView<CurrencyConverterViewModel> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Currency 2',
+                        LocaleKeys.views_currencyConverter_currency2.tr(),
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.8),
                           color: isDarkMode
@@ -252,7 +254,7 @@ class CurrencyConverterView extends StackedView<CurrencyConverterViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                'Enter Amount (Currency 1)',
+                LocaleKeys.views_currencyConverter_enterCurrency1.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
@@ -267,7 +269,7 @@ class CurrencyConverterView extends StackedView<CurrencyConverterViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                'Enter Amount (Currency 2)',
+                LocaleKeys.views_currencyConverter_currency2.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode

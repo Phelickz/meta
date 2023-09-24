@@ -1,10 +1,13 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+
+import '../../../generated/locale_keys.g.dart';
 
 class OnboardingFour extends StatelessWidget {
   const OnboardingFour({super.key});
@@ -28,7 +31,7 @@ class OnboardingFour extends StatelessWidget {
             RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                text: 'Unlock the power ',
+                text: LocaleKeys.onboarding4_onboarding_four_text.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 3.2),
                   fontWeight: FontWeight.w700,
@@ -36,7 +39,7 @@ class OnboardingFour extends StatelessWidget {
                 ),
                 children: [
                   TextSpan(
-                    text: 'of diverse tools tailored for your success',
+                    text: LocaleKeys.onboarding4_onboarding_four_text1.tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 3.2),
                       fontWeight: FontWeight.w700,
@@ -48,7 +51,7 @@ class OnboardingFour extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             Text(
-              "Embark on a successful trading journey with our extensive range of tools, meticulously crafted to ensure your triumph.",
+              LocaleKeys.onboarding4_onboarding_four_bodyText.tr(),
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),

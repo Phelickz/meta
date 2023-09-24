@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/chart/chart_view_model.dart';
 
 class SpecificationComponent extends StatelessWidget {
@@ -40,7 +42,7 @@ class SpecificationComponent extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Text(
-                        "Market is open. Closes tomorrow, 12:58 AM",
+                        LocaleKeys.chart_specification_marketIsOpen.tr(),
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.6),
                           fontWeight: FontWeight.bold,
@@ -63,7 +65,7 @@ class SpecificationComponent extends StatelessWidget {
           ),
           verticalSpaceXSmall(context),
           Text(
-            "Volume, lots",
+            LocaleKeys.chart_specification_volumeLots.tr(),
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.9),
               fontWeight: FontWeight.bold,
@@ -73,18 +75,28 @@ class SpecificationComponent extends StatelessWidget {
             ),
           ),
           verticalSpaceXXSmall(context),
-          _twoText(context: context, left: "Minimum", right: "0.01"),
+          _twoText(
+              context: context, left: LocaleKeys.minimum.tr(), right: "0.01"),
           verticalSpaceXXSmall(context),
-          _twoText(context: context, left: "Maximum", right: "200"),
+          _twoText(
+              context: context, left: LocaleKeys.maximum.tr(), right: "200"),
           verticalSpaceXXSmall(context),
-          _twoText(context: context, left: "Step", right: "0.01"),
-          verticalSpaceSmall(context),
-          _twoTitleText(context: context, left: "Contract size", right: "100"),
-          verticalSpaceSmall(context),
-          _twoTitleText(context: context, left: "Spread units", right: "100"),
+          _twoText(context: context, left: LocaleKeys.step.tr(), right: "0.01"),
           verticalSpaceSmall(context),
           _twoTitleText(
-              context: context, left: "Stop level, pips", right: "100")
+              context: context,
+              left: LocaleKeys.chart_specification_contractSize.tr(),
+              right: "100"),
+          verticalSpaceSmall(context),
+          _twoTitleText(
+              context: context,
+              left: LocaleKeys.chart_specification_spreadUnits.tr(),
+              right: "100"),
+          verticalSpaceSmall(context),
+          _twoTitleText(
+              context: context,
+              left: LocaleKeys.chart_specification_stopLevelPips.tr(),
+              right: "100")
         ],
       ),
     );

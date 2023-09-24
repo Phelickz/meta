@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
+import '../../../generated/locale_keys.g.dart';
 import '../../views/payment_methods/payment_method_viewmodel.dart';
 
 class AddPaymentMethodTile extends StatelessWidget {
@@ -52,29 +53,32 @@ class AddPaymentMethodTile extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          _infoLeftText("Average time:", context),
-                          _infoRightText("Instant", context),
+                          _infoLeftText(LocaleKeys.averageTime, context),
+                          _infoRightText(LocaleKeys.instant, context),
                         ],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          _infoLeftText("Duration:", context),
-                          _infoRightText("up to 30mins", context),
+                          _infoLeftText(LocaleKeys.duration, context),
+                          _infoRightText(LocaleKeys.upTo, context),
                         ],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          _infoLeftText("Fee:", context),
+                          _infoLeftText(LocaleKeys.fee, context),
                           _infoRightText("0%", context),
                         ],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          _infoLeftText("Limit:", context),
-                          _infoRightText("10-200,000 USD", context),
+                          _infoLeftText(LocaleKeys.limit, context),
+                          _infoRightText(
+                              LocaleKeys
+                                  .paymentMethod_addPaymentMethodTile_figure,
+                              context),
                         ],
                       ),
                     ],

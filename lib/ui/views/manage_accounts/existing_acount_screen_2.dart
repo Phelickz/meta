@@ -1,9 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/manage_accounts/manage_accounts_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/manage_accounts/existing_account_forms.dart';
@@ -23,7 +25,9 @@ class ExistingAccountView2 extends StackedView<ManageAccountViewModel> {
     return Skeleton(
         isBusy: viewModel.isBusy,
         appBar: existingAccountAppbar(
-            context, "Login to existing account", "Enter login details"),
+            context,
+            LocaleKeys.login_existing_account.tr(),
+            LocaleKeys.enterLoginDetails.tr()),
         body: SafeArea(
           child: Column(
             // crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,8 +39,11 @@ class ExistingAccountView2 extends StackedView<ManageAccountViewModel> {
               SizedBox(
                 height: 40.pHeight(context),
               ),
-              const ExistingAccountFormView(
-                  header1: "Login", header2: "Password", header3: "Server"),
+              ExistingAccountFormView(
+                header1: LocaleKeys.login.tr(),
+                header2: LocaleKeys.password.tr(),
+                header3: LocaleKeys.server.tr(),
+              ),
               SizedBox(
                 height: 5.pHeight(context),
               ),
@@ -46,7 +53,7 @@ class ExistingAccountView2 extends StackedView<ManageAccountViewModel> {
                   Checkbox(value: false, onChanged: (value) => {}),
                   // SizedBox(width: 6.pWidth(context),),
                   Text(
-                    "Save Password",
+                    LocaleKeys.savePassword.tr(),
                     style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.7),
                         color:
@@ -59,7 +66,10 @@ class ExistingAccountView2 extends StackedView<ManageAccountViewModel> {
                 height: 54.pHeight(context),
               ),
               CustomButtons.generalButton(
-                  context: context, onTap: () {}, text: "Sign In", textSize: 2),
+                  context: context,
+                  onTap: () {},
+                  text: LocaleKeys.signIn.tr(),
+                  textSize: 2),
               SizedBox(
                 height: 16.pHeight(context),
               ),
@@ -67,7 +77,7 @@ class ExistingAccountView2 extends StackedView<ManageAccountViewModel> {
                 alignment: Alignment.bottomCenter,
                 child: RichText(
                     text: TextSpan(
-                        text: "Forgot Password?   ",
+                        text: LocaleKeys.forgetPassword.tr(),
                         style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.8),
                             color: isDarkMode
@@ -76,7 +86,7 @@ class ExistingAccountView2 extends StackedView<ManageAccountViewModel> {
                             fontWeight: FontWeight.w500),
                         children: [
                       TextSpan(
-                        text: "Contact Broker",
+                        text: LocaleKeys.contactBroker.tr(),
                         style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.8),
                             color: ColorManager.lightHeaderColor,

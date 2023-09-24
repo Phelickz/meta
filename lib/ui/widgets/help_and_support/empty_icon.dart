@@ -5,6 +5,7 @@ import 'package:meta_trader/app/utils/dimensions.dart';
 import '../../../app/responsiveness/res.dart';
 import '../../../app/utils/asset_manager.dart';
 import '../../../app/utils/theme.dart';
+import '../../../generated/locale_keys.g.dart';
 import '../../views/help_and_support/help_and_support_view_model.dart';
 
 class CustomerSupportEmptyIcon extends StatelessWidget {
@@ -41,7 +42,7 @@ class CustomerSupportEmptyIcon extends StatelessWidget {
         SizedBox(
           height: 30.pHeight(context),
         ),
-        Text("No Messages Yet",
+        Text(LocaleKeys.helpAndSupport_emptyIcon_noMessage,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.6),
               color: isDarkMode ? Colors.white : const Color(0xff667085),

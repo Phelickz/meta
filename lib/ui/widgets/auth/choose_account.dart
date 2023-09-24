@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/auth/radio_button.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
@@ -22,51 +24,51 @@ class ChooseAccount extends StatelessWidget {
         children: [
           verticalSpaceSmall(context),
           returnTile(
-            'Login To Existing Account',
-            'Offers you virtual funds to learn forex trading and test your strategies and setups before using a real account.',
+            LocaleKeys.login_existing_account.tr(),
+            LocaleKeys.auth_chooseAccount_offersYouVirtual.tr(),
             AuthPageEnum.login,
             context,
-            model.radioItem == 'login',
+            model.radioItem == LocaleKeys.login.tr(),
             true,
-            (value) => model.setRadio = 'login',
+            (value) => model.setRadio = LocaleKeys.login.tr(),
           ),
           verticalSpaceSmall(context),
           returnTile(
-            'Demo Account',
-            'Offers you virtual funds to learn forex trading and test your strategies and setups before using a real account.',
+            LocaleKeys.auth_chooseAccount_demoAccount.tr(),
+            LocaleKeys.auth_chooseAccount_offersYouVirtual.tr(),
             AuthPageEnum.demoAccount,
             context,
-            model.radioItem == 'demo',
+            model.radioItem == LocaleKeys.demo.tr(),
             true,
-            (value) => model.setRadio = 'demo',
+            (value) => model.setRadio = LocaleKeys.demo.tr(),
           ),
           verticalSpaceSmall(context),
           returnTile(
-            'Real Account',
-            'For live trading. additional verification is required. Not advisable for beginners',
+            LocaleKeys.auth_chooseAccount_realAccount.tr(),
+            LocaleKeys.auth_chooseAccount_forLiveTrading.tr(),
             AuthPageEnum.realAccount,
             context,
-            model.radioItem == 'real',
+            model.radioItem == LocaleKeys.real.tr(),
             true,
-            (value) => model.setRadio = 'real',
+            (value) => model.setRadio = LocaleKeys.real.tr(),
           ),
           const Spacer(),
           CustomButtons.generalButton(
               context: context,
               onTap: () {
-                if (model.radioItem == 'login') {
+                if (model.radioItem == LocaleKeys.login.tr()) {
                   model.setAuthPageEnum = AuthPageEnum.login;
                 }
 
-                if (model.radioItem == 'demo') {
+                if (model.radioItem == LocaleKeys.demo.tr()) {
                   model.setAuthPageEnum = AuthPageEnum.demoAccount;
                 }
 
-                if (model.radioItem == 'real') {
+                if (model.radioItem == LocaleKeys.real.tr()) {
                   model.setAuthPageEnum = AuthPageEnum.realAccount;
                 }
               },
-              text: 'Next',
+              text: LocaleKeys.next.tr(),
               color: model.radioItem == null
                   ? (isDarkMode ? const Color(0xff344054) : Colors.black54)
                   : Theme.of(context).primaryColor),

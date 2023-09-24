@@ -4,6 +4,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/onboarding/onboarding_four.dart';
 import 'package:meta_trader/ui/widgets/onboarding/onboarding_three.dart';
@@ -109,7 +110,7 @@ class OnboardingView extends StackedView<OnboardingViewModel> {
                         viewModel.push(const AuthRoute());
                       }
                     },
-                    text: 'Next'),
+                    text: LocaleKeys.next),
                 Platform.isIOS
                     ? verticalSpaceMedium(context)
                     : verticalSpaceSmall(context)

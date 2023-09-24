@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 
+import '../../../../generated/locale_keys.g.dart';
+
 class SuggestionBar extends StatelessWidget {
   final List suggestionsList;
   const SuggestionBar({Key? key, required this.suggestionsList})
@@ -21,7 +23,7 @@ class SuggestionBar extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Suggestions",
+            LocaleKeys.helpAndSupport_components_suggestionsBar_suggestion,
             style: CustomThemeData.generateColoredStyle(
               fontSize: 10,
               context: context,

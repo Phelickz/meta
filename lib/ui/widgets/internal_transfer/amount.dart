@@ -12,6 +12,7 @@ import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
 
 import '../../../app/utils/theme.dart';
+import '../../../generated/locale_keys.g.dart';
 
 @RoutePage()
 class InternalTransferAmount extends StatelessWidget {
@@ -22,7 +23,8 @@ class InternalTransferAmount extends StatelessWidget {
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Skeleton(
-      appBar: globalAppBar(context, 'Amount', 'Enter amount to transfer', () {
+      appBar: globalAppBar(context, LocaleKeys.amount,
+          LocaleKeys.internalTransfer_amountWidget_enterAmountToTransfer, () {
         Navigator.pop(context);
       }, []),
       isBusy: model.isBusy,
@@ -33,7 +35,7 @@ class InternalTransferAmount extends StatelessWidget {
             child: ListView(
               children: [
                 Text(
-                  'Amount To Fund',
+                  LocaleKeys.amountToFund,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
@@ -48,7 +50,8 @@ class InternalTransferAmount extends StatelessWidget {
                 ),
                 verticalSpaceSmall(context),
                 Text(
-                  'Sending Account Password',
+                  LocaleKeys
+                      .internalTransfer_amountWidget_sendingAccountPassword,
                   style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.8),
                       color: ColorManager.lightText),
@@ -57,7 +60,8 @@ class InternalTransferAmount extends StatelessWidget {
                 IgnorePointer(
                   ignoring: true,
                   child: CustomTextFields(
-                    hintText: 'Enter Account Password',
+                    hintText: LocaleKeys
+                        .internalTransfer_amountWidget_enterAccountPassword,
                     password: true,
                     filledWithColor: false,
                     suffixIconConstraints:
@@ -81,7 +85,7 @@ class InternalTransferAmount extends StatelessWidget {
               onTap: () {
                 model.push(InternalTransferSuccess(model: model));
               },
-              text: 'Fund Account'),
+              text: LocaleKeys.fundAccount),
           verticalSpaceMedium(context),
         ],
       ),

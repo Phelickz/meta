@@ -6,6 +6,7 @@ import 'package:meta_trader/ui/widgets/help_and_support/components/suggestions_b
 import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
 
 import '../../../../app/utils/theme.dart';
+import '../../../../generated/locale_keys.g.dart';
 import '../../../views/help_and_support/help_and_support_view_model.dart';
 
 class MessageBottomSheet extends StatelessWidget {
@@ -55,7 +56,8 @@ class MessageBottomSheet extends StatelessWidget {
                             AssetManager.messageTyping,
                           )),
                     ),
-                    hintText: "Write your message",
+                    hintText: LocaleKeys
+                        .helpAndSupport_components_messageBottomSheet_writeYourMessage,
                   )),
               SizedBox(
                 height: 24.pHeight(context),

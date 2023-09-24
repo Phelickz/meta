@@ -4,6 +4,8 @@ import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 
+import '../../../generated/locale_keys.g.dart';
+
 class MarketNews extends StatelessWidget {
   const MarketNews({super.key});
 
@@ -20,7 +22,7 @@ class MarketNews extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      'Decrypt',
+                      LocaleKeys.decrypt,
                       style: CustomThemeData.generateStyle(
                         fontSize: 12,
                         color: isDarkMode ? Colors.white60 : Colors.black45,
@@ -33,7 +35,7 @@ class MarketNews extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '18 hours ago',
+                      LocaleKeys.home_marketNewsWidget_hoursAgo,
                       style: CustomThemeData.generateStyle(
                         fontSize: 12,
                         color: isDarkMode ? Colors.white60 : Colors.black45,
@@ -46,7 +48,7 @@ class MarketNews extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'USD Coin',
+                      LocaleKeys.home_marketNewsWidget_usdCoin,
                       style: CustomThemeData.generateStyle(
                         fontSize: 12,
                         color: isDarkMode ? Colors.blue : Colors.blue,
@@ -56,7 +58,7 @@ class MarketNews extends StatelessWidget {
                 ),
                 verticalSpaceXSmall(context),
                 Text(
-                  'Maimi Crypto Aspirations Boosted by Borderless Capital\'s \$25 Million Fund Lorem Ipsum',
+                  LocaleKeys.home_marketNewsWidget_maimiCryptoAsp,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.4),
                     color: isDarkMode ? ColorManager.darkText : Colors.black45,

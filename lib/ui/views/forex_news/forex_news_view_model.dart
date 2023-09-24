@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_final_fields
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/appbar.dart';
 
 enum ForexNewsViewEnum {
@@ -11,7 +13,15 @@ enum ForexNewsViewEnum {
   metals,
   cryptoCurrency,
   search,
-  details
+  details;
+
+  // String get label {
+  //   switch (this) {
+  //     case ForexNewsViewEnum.all:
+  //       return '';
+
+  //   }
+  // }
 }
 
 class ForexNewsViewModel extends CustomBaseViewModel {
@@ -40,7 +50,7 @@ class ForexNewsViewModel extends CustomBaseViewModel {
       case ForexNewsViewEnum.all:
         return globalAppBar(
           context,
-          'Forex News',
+          LocaleKeys.forexNews.tr(),
           '',
           () {
             Navigator.pop(context);
@@ -58,7 +68,7 @@ class ForexNewsViewModel extends CustomBaseViewModel {
           ],
         );
       case ForexNewsViewEnum.currencyPairs:
-        return globalAppBar(context, 'Forex News', '', () {
+        return globalAppBar(context, LocaleKeys.forexNews.tr(), '', () {
           //  Navigator.pop(context);
           Navigator.pop(context);
         }, [
@@ -73,7 +83,7 @@ class ForexNewsViewModel extends CustomBaseViewModel {
           )
         ]);
       case ForexNewsViewEnum.metals:
-        return globalAppBar(context, 'Forex News', '', () {
+        return globalAppBar(context, LocaleKeys.forexNews.tr(), '', () {
           Navigator.pop(context);
         }, [
           IconButton(
@@ -87,7 +97,7 @@ class ForexNewsViewModel extends CustomBaseViewModel {
           )
         ]);
       case ForexNewsViewEnum.cryptoCurrency:
-        return globalAppBar(context, 'Forex News', '', () {
+        return globalAppBar(context, LocaleKeys.forexNews.tr(), '', () {
           Navigator.pop(context);
         }, [
           IconButton(
@@ -101,12 +111,12 @@ class ForexNewsViewModel extends CustomBaseViewModel {
           )
         ]);
       case ForexNewsViewEnum.search:
-        return globalAppBar(
-            context, 'Forex News', 'Explore Forex news across the world', () {
+        return globalAppBar(context, LocaleKeys.forexNews.tr(),
+            LocaleKeys.views_forexNews_forexNewsView_exploreForex.tr(), () {
           setForexNewsViewEnum = ForexNewsViewEnum.all;
         }, []);
       case ForexNewsViewEnum.details:
-        return globalAppBar(context, 'Forex News', '', () {
+        return globalAppBar(context, LocaleKeys.forexNews.tr(), '', () {
           setForexNewsViewEnum = ForexNewsViewEnum.all;
         }, []);
 

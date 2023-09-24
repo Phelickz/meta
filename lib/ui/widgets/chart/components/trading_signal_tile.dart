@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 class TraadingSignalTile extends StatelessWidget {
   final Widget leadingIcon;
@@ -39,7 +41,7 @@ class TraadingSignalTile extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Text(
-                        "Intraday: under pressure",
+                        LocaleKeys.chart_tradingSignalTiles_intraday.tr(),
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.8),
                           color: isDarkMode
@@ -53,7 +55,7 @@ class TraadingSignalTile extends StatelessWidget {
                 ),
               ),
               Text(
-                "6:00 PM",
+                LocaleKeys.chart_tradingSignalTiles_timeText.tr(),
                 textAlign: TextAlign.right,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
@@ -65,7 +67,7 @@ class TraadingSignalTile extends StatelessWidget {
           ),
           verticalSpaceXXSmall(context),
           Text(
-            "Miami Crypto Aspirations\nBoosted by Borderless Capital’s \$25 Milion Fund",
+            "${LocaleKeys.chart_tradingSignalTiles_miamiCryptoText.tr()}\n${LocaleKeys.chart_tradingSignalTiles_miamiCryptoTextContinue.tr()}",
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.6),
               color: isDarkMode

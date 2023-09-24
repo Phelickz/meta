@@ -4,6 +4,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 
 import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
+import '../../../generated/locale_keys.g.dart';
 import '../../views/payment_methods/payment_method_viewmodel.dart';
 import '../buttons/buttons.dart';
 
@@ -39,7 +40,7 @@ class EmptyPaymentMethod extends StatelessWidget {
           ),
           verticalSpaceSmall(context),
           Text(
-            "No payment method added ",
+            LocaleKeys.paymentMethod_emptyPaymentWidgetP_noPaymentMethod,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.8),
               fontWeight: FontWeight.bold,
@@ -57,7 +58,7 @@ class EmptyPaymentMethod extends StatelessWidget {
               viewModel.paymentMethodPageEnum =
                   PaymentMethodPageEnum.addPaymentMethod;
             },
-            text: 'Add Payment Method',
+            text: LocaleKeys.paymentMethod_emptyPaymentWidgetP_addPayMethod,
           ),
         ],
       ),

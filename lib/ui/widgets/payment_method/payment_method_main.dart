@@ -4,6 +4,7 @@ import 'package:meta_trader/ui/widgets/payment_method/payment_method_tile.dart';
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
+import '../../../generated/locale_keys.g.dart';
 import '../../views/payment_methods/payment_method_viewmodel.dart';
 import 'empty_payment_method.dart';
 
@@ -24,7 +25,7 @@ class PaymentMethodMainPage extends StatelessWidget {
               children: [
                 verticalSpaceXSmall(context),
                 Text(
-                  "Manage your cash payment methods",
+                  LocaleKeys.paymentMethod_paymentMethodWidgetP_manageYourCash,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.5),
                     fontWeight: FontWeight.w500,

@@ -3,6 +3,7 @@ import 'package:meta_trader/app/utils/dimensions.dart';
 
 import '../../../../app/responsiveness/res.dart';
 import '../../../../app/utils/theme.dart';
+import '../../../../generated/locale_keys.g.dart';
 
 class TypeTag extends StatelessWidget {
   final String tag;
@@ -16,7 +17,7 @@ class TypeTag extends StatelessWidget {
       width: 39.pWidth(context),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.pWidth(context)),
-        color: tag == "Real" ? Colors.red : Colors.green,
+        color: tag == LocaleKeys.real ? Colors.red : Colors.green,
       ),
       child: Center(
         child: Text(
