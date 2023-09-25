@@ -59,4 +59,12 @@ class ManageAccountViewModel extends CustomBaseViewModel {
       "brokerLogoPath": AssetManager.brokerLogo
     },
   ];
+
+  bool _savePassword = false;
+  bool get savePassword => _savePassword;
+
+  set setSavePassword(bool val) {
+    _savePassword = !_savePassword;
+    rebuildUi();
+  }
 }

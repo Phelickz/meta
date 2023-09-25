@@ -56,10 +56,12 @@ AppBar chartAppBar(
     ),
     actions: [
       IconButton(
-        onPressed: () {},
-        icon: const Icon(
+        onPressed: () {
+          model.toggleFav();
+        },
+        icon: Icon(
           Icons.star,
-          color: Colors.amber,
+          color: model.isFav == true ? Colors.amber : Colors.grey,
         ),
       ),
       IconButton(

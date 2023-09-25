@@ -20,8 +20,9 @@ AppBar tradeAppBars(
     automaticallyImplyLeading: false,
     leading: IconButton(
       onPressed: () {
-        final router = locator<RouterService>();
-        router.router.pop();
+        // final router = locator<RouterService>();
+        // router.router.pop();
+        Navigator.pop(context);
       },
       icon: Icon(
         Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
@@ -72,8 +73,9 @@ AppBar tradeAppBars1(
     automaticallyImplyLeading: false,
     leading: IconButton(
       onPressed: () {
-        final router = locator<RouterService>();
-        router.router.pop();
+        // final router = locator<RouterService>();
+        // router.router.pop();
+        Navigator.pop(context);
       },
       icon: Icon(
         Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,

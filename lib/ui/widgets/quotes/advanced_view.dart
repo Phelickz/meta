@@ -37,6 +37,9 @@ class AdvancedMarketView extends StatelessWidget {
                 trend: quote["trend"],
                 spread: quote["spread"],
                 isFav: model.isFav,
+                // onPressed: () {
+                //   model.toggleFavQuote(quote);
+                // },
               ),
             );
           }),

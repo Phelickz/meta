@@ -7,6 +7,7 @@ import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/manage_accounts/manage_accounts_view_model.dart';
 import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/account_tile.dart';
+import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/manage_account_bottomsheet.dart';
 import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/manage_appbar.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
@@ -29,7 +30,26 @@ class ManageAccountView extends StackedView<ManageAccountViewModel> {
       body: SafeArea(
         child: Stack(
           children: [
-            const ManageAppbarExtension(),
+            GestureDetector(
+              onTap: () {
+                showModalBottomSheet(
+                    context: context,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(12),
+                        topRight: Radius.circular(12),
+                      ),
+                    ),
+                    backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                    builder: (context) {
+                      return ManageAccountBottomSheet1(
+                        accountDetail: "44291097-Deriv-Real",
+                        model: viewModel,
+                      );
+                    });
+              },
+              child: const ManageAppbarExtension(),
+            ),
             Container(
               height: double.infinity,
               padding: EdgeInsets.symmetric(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/ui/widgets/settings/components/about_us_tile.dart';
@@ -25,7 +26,11 @@ class AboutUsPage extends StatelessWidget {
           SizedBox(
             height: 60.pHeight(context),
           ),
-          Image.asset(AssetManager.metaPngLogo),
+          Image.asset(
+            'assets/images/launcher.png',
+            height: 80,
+          ),
+          verticalSpaceXXSmall(context),
           Center(
             child: Text(
               model.appVersion,

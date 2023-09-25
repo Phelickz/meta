@@ -3,7 +3,9 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/ui/views/manage_accounts/manage_accounts_view_model.dart';
 import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/broker_logo.dart';
+import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/manage_account_bottomsheet.dart';
 import 'package:meta_trader/ui/widgets/manage_accounts/manage_accounts/type_tag.dart';
 
 import '../../../../generated/locale_keys.g.dart';
