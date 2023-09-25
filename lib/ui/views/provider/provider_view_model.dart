@@ -240,7 +240,7 @@ class ProviderViewModel extends CustomBaseViewModel {
     {
       "title": "subscription terminated",
       "description":
-          "You have successfully terminated your copu trading with satoshi nakamoto. ",
+          "You have successfully terminated your copy trading with satoshi nakamoto. ",
       "date": "2.1.2023 ",
       "time": "16:23:41",
       "isRead": false
@@ -248,7 +248,7 @@ class ProviderViewModel extends CustomBaseViewModel {
     {
       "title": "subscription terminated",
       "description":
-          "You have successfully terminated your copu trading with satoshi nakamoto. ",
+          "You have successfully terminated your copy trading with satoshi nakamoto. ",
       "date": "2.1.2023",
       "time": "16:23:41",
       "isRead": false

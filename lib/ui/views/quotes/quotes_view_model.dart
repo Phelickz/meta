@@ -96,7 +96,7 @@ class QuotesViewModel extends CustomBaseViewModel {
       "low": "63.2018",
       "high": "11.8018",
       "trend": "negative",
-      "currencyPairFull": "US Dollar vs Canagian Dollor",
+      "currencyPairFull": "US Dollar vs Canadian Dollar",
       "currencyIcon": AssetManager.gbpUSD
     },
     {

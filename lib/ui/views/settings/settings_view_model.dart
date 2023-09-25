@@ -66,7 +66,7 @@ class SettingsViewModel extends CustomBaseViewModel {
   List _updateFeatures = [
     "WhatsApp addition",
     "add notice of upcoming signals",
-    "adding different views on the market ection"
+    "adding different views on the market section"
   ];
 
   List get updateFeatures => _updateFeatures;
@@ -109,7 +109,7 @@ class SettingsViewModel extends CustomBaseViewModel {
                 "To facilitate transactions, we may collect details related to your bank account, credit/debit card information, and transaction history."
           },
           {
-            "subheading": "Device and Usag e Information",
+            "subheading": "Device and Usage Information",
             "description":
                 "We may automatically collect information about your device, operating system, browser type, IP address, and interactions with our platform to improve our services and user experience."
           },

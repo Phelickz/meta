@@ -112,6 +112,52 @@
   "ok": "Ok",
   "name": "Name",
   "btcBeanBEP3": "BTC Beacon Chain (BEP3)",
+  "sentiments": "Sentiments",
+  "favorites": "Favorites",
+  "buy": "Buy",
+  "options": "Options",
+  "option": "Option",
+  "wallet": "Wallet",
+  "followers": "Followers",
+  "open": "Open",
+  "positive": "positive",
+  "negative": "negative",
+  "sector": "Sector",
+  "industry": "Industry",
+  "country": "Country",
+  "digits": "Digits",
+  "spread": "Spread",
+  "exotics": "Exotic",
+  "minors": "Minors",
+  "quotes": "Quotes",
+  "details": "Details",
+  "lots": "Lots",
+  "euroVsUs": "Euro vs US dollar",
+  "theTradeWill": "The trade will be executed at market conditions. Difference with requested price maybe significant",
+  "statistics": "Statistic",
+  "referralProgram": "Referral Program",
+  "security": "Security",
+  "passKeys": "Passkeys",
+  "devices": "Devices",
+  "value": "value",
+  "default": "Default",
+  "aboutUs": "About Us",
+  "overView": "Overview",
+  "tradingHistory": "Trading History",
+  "transferToBank":"Transfer to Bank",
+  "transferToPerfect":"Transfer to Perfect Money",
+  "onlineBankTransfer":"Online Bank Transfer",
+  "walletToDeriv":"Wallet to deriv",
+  "fxtmToWallet":"FXTM  to Wallet",
+  "tradeHistory":"Trade History",
+  "transactions":"Transactions",
+  "failed":"Failed",
+  "successful":"Successful",
+  "deposits":"Deposits",
+  "pending":"Pending",
+  "withdrawal":"Withdrawal",
+  "internalTransferText":"Internal Transfer",
+  "fiftyFiveThousand":"55,000",
 
 
   "views": {
@@ -288,7 +334,125 @@
    "pipCalculatorView":{
     "pipValue": "Pip value (USD)",
     "numberOfPips": "Number of Pips {}" 
-  }
+  },
+  "priceSentiments": {
+      "marketSentiments" : "Market Sentiments",
+      "sentimentsAcrossM" : "Sentiments across markets"
+    },
+    "priceCalculatorView": {
+      "profitUSD" : "Profit (USD)",
+      "buyOrSell" : "Buy or Sell",
+      "openingPrice" : "Opening price",
+      "closingPrice" : "Closing Price"
+    },
+    "providerView": {
+      "notificationList":{
+      "notificationListTitle": "Subscription Successful",
+      "notificationListTitle1": "subscription terminated",
+      "notificationListTime": "16:23:41",
+      "notificationListDate": "2.1.2023",
+      "notificationListDescription": "You are now copying satoshi nakamoto.",
+      "notificationListDescription1": "You have successfully terminated your copy trading with satoshi nakamoto."
+      },
+      "strategyDescription":"Hello Everyone, 👉 this account is totally safe to copy for all investors, Newbies and Professionals. I will try my best to make 25-50% profits weekly 💪. Our first priority is to keep safety of your funds.Happy trading ✨",
+      "signUpAsProvider" : "Sign up as a Provider",
+      "enterYourInformation" : "Enter your information",
+      "providerLogin" : "Provider Login",
+      "approvedRegistration" : "Approved provider registration",
+      "profileSettings" : "Profile Settings",
+      "changeYourProfileInfo" : "Change your profile information",
+      "viewYourFollowers" : "View your followers"
+    },
+    "quotesView": {
+      "quotesViewModel": {
+        "quoteList" : {
+          "greatBritainPounds" : "Great Britain Pound vs US Dollar",
+          "usDollarCan" : "US Dollar vs Canadian Dollar"
+        },
+        "stopLevel": "Stop Level",
+        "marginCurrency": "Margin currency",
+        "profitCurrency": "Profit currency",
+        "tickSize": "Tick size",
+        "tickValue": "Tick value",
+        "addSymbol": "Add symbol to market list"
+      },
+      "tradeCloseScreen" : {
+        "closeBuy": "Close #312443 buy 0.1 by Market with loss of 0.80"
+      },
+      "tradeDepthScreen": {
+        "depthMarket": "Depth of Market"
+      }
+    },
+    "security": {
+      "autoLock":"Auto-Lock",
+      "enableToLock":"Enable to lock app automatically",
+      "addPasskey":"Add Passkey"
+    },
+    "settings": {
+      "whatsappAddition" : "WhatsApp addition",
+      "addNoticeOfUpcoming" : "add notice of upcoming signals",
+      "addingDifferentViews" : "adding different views on the market section",
+      "last2Hrs" : "Last 24 Hrs",
+      "blueBuy" : "Blue-Buy/Red-Sell",
+      "notificationSettings" : "Notification Settings",
+      "languageSettings" : "Language Settings",
+      "changeAppLanguage" : "Change app language",
+      "chartColor" : "Chart Color",
+      "colorPreference" : "Color Preference",
+      "changeBasis" : "Change Basis",
+      "privacyPolicyText": "Privacy policy",
+      "TermsOfUse": "Terms of use",
+      "privacyPolicy" : {
+        "privacyPolicyHead1": "Information Collection",
+        "privacyPolicyHead2": "Data Sharing And Disclosure",
+        "privacyPolicySubH": "Personal Information",
+        "privacyPolicySubH1": "Financial Information",
+        "privacyPolicySubH2": "Device and Usage Information",
+        "privacyPolicySubH3": "Cookies and Tracking Technologies",
+        "privacyPolicySubH4": "Account Creation",
+        "privacyPolicySubH5": "Forex Trading Services",
+        "privacyPolicyIntro" : "Thank you for choosing Meta trader  as your trusted forex trading platform. We are committed to safeguarding your privacy and protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data. By accessing or using our services, you agree to the practices described in this policy.",
+        "privacyPolicyD2" : "We may collect various types of information from you when you use our platform or services, including:",
+        "privacyPolicyD3" : "This may include your name, email address, phone number, residential address, date of birth, government-issued identification, and other necessary details required for account registration and compliance with financial regulations.",
+        "privacyPolicyD4" : "To facilitate transactions, we may collect details related to your bank account, credit/debit card information, and transaction history.",
+        "privacyPolicyD5" : "We may automatically collect information about your device, operating system, browser type, IP address, and interactions with our platform to improve our services and user experience.",
+        "privacyPolicyD6" : "We may use cookies and similar technologies to gather information about your usage patterns and preferences while using our platform. This helps us to optimize our website, improve navigation, and personalize your experience",
+        "privacyPolicyD7" : "We use the collected information for the following purposes",
+        "privacyPolicyD8" : "To create and maintain your account, verify your identity, and provide customer support.",
+        "privacyPolicyD9" : "To process your trades, transactions, and withdrawals in accordance with your instructions."
+      }
+    },
+    "socialTradingView":{
+      "transactionDetails":"Transaction Details",
+      "subscriptionSetup":"Subscription Setup",
+      "subscriptionGuide":"Subscription Guide",
+      "transferToBinance":"Transfer to BinancePay",
+      "depositToBinance":"Deposit from BinancePay",
+      "depositToNeteller":"Deposit from Neteller",
+      "depositToPerfect":"Deposit from Perfect Money",
+      "subSuccessful":"Subscription Successful",
+      "subTerminated":"Subscription terminated",
+      "equal1":"Equal 1x",
+      "double2":"Double 2x",
+      "triple3":"Triple 3x",
+      "socialTradingWelcome": {
+        "welcomeToMT5":"Welcome to MT5 Social Trading Platform",
+        "nowYouCanStart":"Now you can start investing with top master traders, track and manage your subscriptions.",
+        "getStarted":"Get Started"
+      }
+    },
+    "verificationView": {
+      "verifyAccount": "Verify Account",
+      "Verify Identity": "Verify Identity",
+      "selectIdToCapture": "Select ID to capture"
+    },
+    "withdrawFundsView": {
+      "selectAccountToWithdraw": "Select account to withdraw",
+      "withdrawToBank": "Withdraw to bank",
+      "withdrawToBinancePay": "Withdraw to BinancePay",
+      "withdrawToBlockBee": "Withdraw to BlockBee",
+      "withdrawToNeteller": "Withdraw to Neteller"
+    }
   },
 
 
