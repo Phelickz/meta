@@ -176,9 +176,48 @@
   "summary":"Summary ",
   "status":"Status",
   "inActive":"InActive",
-
-
-
+  "Register":"Register",
+  "strategyDescriptionText": "Strategy Description",
+  "attachment": "Attachment",
+  "submit": "Submit",
+  "actions": "Actions",
+  "markets": "Markets",
+  "euroVsGreatBritain": "Euro Vs Great Britain Pounds",
+  "modernView": "Modern view",
+  "advancedView": "Advanced view",
+  "simpleView": "Simple view",
+  "trade": "Trade",
+  "popular": "Popular",
+  "ask": "Ask",
+  "bid": "Bid",
+  "symbol": "Symbol",
+  "major": "major",
+  "crypto": "Crypto",
+  "searchPairs": "Search pairs",
+  "deleteWithArgument": "Delete {}",
+  "date": "Date:",
+  "passkey": "Passkey",
+  "addAPasskey": "Add A Passkey",
+  "hasBeenVerified": " has been verified successfully",
+  "resendCode": "Resend code",
+  "disable": "Disable",
+  "presets": "Presets",
+  "warm": "Warm",
+  "marble": "Marble",
+  "others": "Others",
+  "general": "General",
+  "language": "Language",
+  "appearance": "Appearance",
+  "market": "Market",
+  "chartColor" : "Chart Color",
+  "colorPreference" : "Color Preference",
+  "privacyPolicyText": "Privacy policy",
+  "update": "Update",
+  "proceed": "Proceed",
+  "abort": "Abort",
+  "positions": "Positions",
+  "filterBy": "Filter by",
+   "selectPosition": "Select Position",
 
 
 
@@ -419,10 +458,7 @@
       "notificationSettings" : "Notification Settings",
       "languageSettings" : "Language Settings",
       "changeAppLanguage" : "Change app language",
-      "chartColor" : "Chart Color",
-      "colorPreference" : "Color Preference",
       "changeBasis" : "Change Basis",
-      "privacyPolicyText": "Privacy policy",
       "TermsOfUse": "Terms of use",
       "privacyPolicy" : {
         "privacyPolicyHead1": "Information Collection",
@@ -780,9 +816,7 @@
     "changePasswordWidget": {
       "confirmPassword": "Confirm Password"
     },
-    "editStrategyDescription": {
-      "strategyDescriptionText": "Strategy Description"
-    },
+
     "pGraph": {
       "myPerformance": "My Performance"
     },
@@ -821,6 +855,215 @@
   "providerConfirmation": {
     "yourRequestHas": "Your request has been\nsubmitted successfully",
     "youWillReceive": "You will receive a feedback within 3-4\nworking days via email on successful\nverification"
+  },
+  "providerFollowers": {
+    "followedRecently": "Followed Recently",
+    "startedFollowing": "Started Following: {}s"
+  },
+  "providerLogin": {
+    "enterYourAccount": "Enter your account ID",
+    "accountID": "Account ID",
+    "desiredFee": "Desired Fee",
+    "iAgreeWith": "I agree with the",
+    "termsAndConditionProvider": "terms and conditions",
+    "forOPening": "for opening an account and the",
+    "dataProtectionPolicy": "data protection policy"
+  },
+  "providerOption": {
+    "myWallet": "My Wallet",
+    "profileSettings": "Profile Settings"
+  },
+  "providerSettings": {
+    "desiredFeeCommission": "Desired Fees (Commission)",
+    "publicVisibility": "Public Visibility",
+    "visibilityPublic": "Visibility: Public",
+    "saveChanges": "Save changes"
+  },
+  "providerSignUp": {
+    "uploadAttachment": "Upload Attachment"
+  },
+  "providerWallet": {
+    "reportAnIssue": "Report an Issue",
+    "recentTransaction": "Recent Transactions",
+    "depositFromNeteller": "Deposit from Neteller",
+    "metaWalletToWallet": "Metawallet to Wallet",
+    "transferToSticPay": "Transfer to SticPay",
+    "depositToDeriv": "Deposit to deriv"
+  },
+  "welcomeProvider": {
+    "startGenerating": "Start Generating Income\nFor Your Followers",
+    "becomeAProvider": "Become a Provider on our\nplatform, showcasing your trading\nskills and earning income from\nyour followers",
+    "loginInstead": "Login Instead"
+  } 
+ },
+ "quotesWidget": {
+  "components": {
+    "genericTradeBody":{
+      "lotSize": "Lot Size",
+      "stopLoss": "Stop Loss",
+      "takeProfit": "Take Profit",
+      "fillPolicy": "Fill Policy",
+      "fillOrKill": "Fill or Kill",
+      "timeFrame": "Time Frame",
+      "currencyPrice": "Current Price",
+      "inOneHour": "In 1 Hour at 10:41 on 29th July 2023 your trade will automatically close",
+      "sellByMarket": "Sell by Market",
+      "buyByMarket": "Buy by Market"
+    },
+    "marketStats": {
+      "initialMargin": "Initial Margin",
+      "bigHigh": "Bid High",
+      "bigLow": "Bid Low",
+      "askHigh": "Ask High",
+      "askLow": "Ask Low",
+      "priceChange": "Price Change",
+      "openPrice": "Open Price",
+      "closePrice": "Close Price"
+    },
+    "quotesBottomSheet": {
+      "euroVsDollar": "EURUSDs: Euro vs US Dollar",
+      "depthOfMarket": "Depth of market"
+    },
+    "tradeAppBar": {
+      "marketExec": "Market Execution"
+    }
+  }, 
+
+  "modernViewWidget": {
+    "topMovers": "Top Movers"
+  }
+ },
+ "referralWidget":{
+  "referNowAndEarn": "Refer now and earn $10 credit on your next trade",
+  "referralCode": "Referral Code",
+  "howDoesItWork": "How does it work",
+  "inviteYourFriends": "Invite your friends to register on Meta Trader 5 ",
+  "whenYourFriend": "When your friend registers on app, both of you will get $10 reward credit",
+  "yourRewardCredit": "Your reward credit can then be used on your next trade",
+  "checkOutMyApp": "check out my app https://example.com",
+  "referNow": "Refer Now"
+ },
+ "securityWidget": {
+  "securityComponents":{
+        "addPassKeyModel" : {
+        "appPasskey": "Add Passkey",
+        "noNeedToRemember": "No need to remember a password",
+        "withPasskey": "With passkeys, you can use things like your fingerprint or face to login",
+        "worksOnAll": "Works on all your devices",
+        "passkeysWill": "Passkeys will automatically be available across your synced devices",
+        "keepYourAccountSafe": "keep your account safe",
+        "passkeysOffer": "passkeys offer state-of-the-art phishing resistance"
+    },
+    "changePasswordModel":{
+      "inOrderToProtect": "In order to protect your account, withdrawals will be disabled for 24 hours after you change your password"
+    },
+    "deletePopUP":{
+      "doYouReallyWantToDelete": "Do you really want to delete this {}"
+    },
+    "emptyPasskey":{
+      "passkeyAddedYet": "Passkeys added Yet"
+    },
+    "passkeyTile":{
+      "added12": "Added: 12 July, 2023",
+      "lastUsed": "Last used: 2 days ago"
+    }
+  },
+  "addPasskeyEnter": {
+    "enterAUnique": "Enter a unique 4-digit passkey",
+    "yourPasskeyWillBe": "Your passkey will be used to authorize your withdrawals. Please you are not advised to share this with anyone.",
+    "enter4digitsPasskey": "Enter 4-digits passkey",
+    "enterYourPassword": "Enter Your password"
+  },
+  "addPasskey": {
+    "securityVerification": "Security Verification Requirements",
+    "youNeedToCompleteAll": "You need to complete all of the following verification to continue"
+  },
+  "autoLockWidget": {
+    "usingPattern": "using pattern to unlock app",
+    "usingYourFace": "using your face to unlock app",
+    "faceUnlock": "Face lock"
+  },
+  "emailVerifiedSuccessfullyWidget": {
+    "emailVerifiedSuccessfully": "Email Verified Successfully",
+    "yourEmailAccount": "Your email account "
+  },
+  "emailVerify": {
+    "passKeyAdded": "Passkey Added Successfully",
+    "weSentAVerification": "We sent a verification email to",
+    "pleaseTapLink": "Please tap the link sent in the email to continue",
+    "checkMail": "Check mail"
+  },
+  "passkeyAddedSuccess": {
+    "passkeyAddedSuccessfully": "Passkey Added Successfully",
+    "yourPasskeyIs": "Your passkey is",
+    "pleaseKeepThisPasskey": " please keep this passkey safe, so you won’t forget it"
+  },
+  "passwordChangedSuccess": {
+    "passwordChangedSuccessText": "Password Changed Successfully",
+    "itWillTake24": "It will take 24 hours before you can make withdrawals. Please wait patiently"
+  },
+  "phoneVerifiedSuccess": {
+    "phoneVerifiedSuccessFully": "Phone Verified Successfully",
+    "yourPhoneNumber": "Your phone number "
+  },
+  "phoneVerify": {
+    "weSentVerificationCode": "We sent a verification code to ",
+    "enter6Digits": "Enter 6-digits verification code"
+  },
+  "securityMain": {
+    "twoFactorAuthentication": "Two-Factor Authentication",
+    "toProtectYourAccount": "To protect your account, it is required for you to turn on at least one 2FA",
+    "autoLockText": "Auto-Lock",
+    "disableAccount": "Disable Account",
+    "doYouReallyWantToDisable": "Do you really want to disable account?"
+  }
+
+ },
+ "settings":{
+  "aboutUs": {
+    "serviceAgreement": "Service Agreement",
+    "likeUsOnFacebook": "Like us on facebook",
+    "followUsOnTwitter": "Follow us on Twitter",
+    "joinUsOnTelegram": "Join us on Telegram",
+    "checkForUpdate": "Check for updates"
+  },
+  "changeBasis": {
+    "whenYouSwitch": "When you switch to a new UTC time zone, the change (%) for markets and trades will be calculated based on the new time zone "
+  },
+  "settingsPage": {
+    "pushNotification": "Push Notifications",
+    "useDeviceTheme": "Use Device Theme",
+    "darkMode": "Dark Mode",
+    "changeBasisText" : "Change Basis",
+    "currentVersion ":"Current Version"
+  },
+  "updateRelease": {
+    "updateReleaseText": "Update release",
+    "thisUpdate": "This update"
+  }
+ },
+ "socialTradingWidget": {
+  "socialTradingComponent":{
+    "cancelSub": {
+      "cancelCoping": "Cancel Copying?",
+      "onceYouCancel": "Once you cancel your subscription, your open trades with the master trader will be terminated automatically"
+    },
+    "copiedTrader": {
+      "followingSince": "Following since:",
+      "stopCoping": "Stop Copying"
+    },
+    "filterModel": {
+      "searchTransaction": "Search Transaction",
+      "enterYourSearch": "Enter your search term"
+    },
+    "filterPosition": {
+      "closedPositions": "Closed positions",
+      "openPositions": "Open positions"
+    },
+    "rateModel": {
+      "rateSatoshi": "Rate Satoshi Nakamoto",
+      "takeAMoment": "Take a moment and rate me"
+    }
   }
  }
 

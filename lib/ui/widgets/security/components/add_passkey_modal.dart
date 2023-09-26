@@ -71,7 +71,7 @@ class AddPasskeyModal extends StatelessWidget {
               assetName: "assets/images/devices.svg",
               title: "Works on all your devices",
               subtitle:
-                  "Passkeys wil automatically be available across your synced devices",
+                  "Passkeys will automatically be available across your synced devices",
             ),
             _addPasskeyModalTile(
               context: context,
