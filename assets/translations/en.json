@@ -172,6 +172,12 @@
   "loss":"Loss",
   "ascending":"Ascending",
   "descending":"Descending",
+  "location":"Location",
+  "summary":"Summary ",
+  "status":"Status",
+  "inActive":"InActive",
+
+
 
 
 
@@ -766,30 +772,55 @@
   }
  },
  "providerWidget": {
-  "changeNickName": {
-    "changeNickNameT": "Change NickName",
-    "enterNewNickName": "Enter new nickname"
+  "providerComponent": {
+    "changeNickName": {
+      "changeNickNameT": "Change NickName",
+      "enterNewNickName": "Enter new nickname"
+    },
+    "changePasswordWidget": {
+      "confirmPassword": "Confirm Password"
+    },
+    "editStrategyDescription": {
+      "strategyDescriptionText": "Strategy Description"
+    },
+    "pGraph": {
+      "myPerformance": "My Performance"
+    },
+    "pGraph2": {
+      "followersStats": "Follower Stats"
+    },
+    "pModelBottomSheet": {
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "openPosition": "Open Position",
+      "selectCountry": "Select Country"
+    },
+    "pProfitsBar": {
+      "totalTrade":"Total Trades"
+    },
+    "pTradeBar": {
+      "dateW":"Date:",
+      "orderId":"Order ID:",
+      "followersCommission":"Followers commission:"
+    },
+    "pSummary": {
+      "viewFollowers":"View followers",
+      "followersAutoScale":"Followers Auto scale",
+      "followersFixedLot":"Followers Fixed Lot",
+      "followersReverse":"Followers Reverse",
+      "performanceFee":"Performance fee"
+    },
+    "updatePhoneNumber": {
+      "updatePhoneNumberText":"Update Phone Number"
+    },
+    "walletBalanceContainer": {
+    "walletBalance":"Wallet Balance",
+    "over24hours":"over 24 Hrs"
+    }
   },
-  "changePasswordWidget": {
-    "confirmPassword": "Confirm Password"
-  },
-  "editStrategyDescription": {
-    "strategyDescriptionText": "Strategy Description"
-  },
-  "pGraph": {
-    "myPerformance": "My Performance"
-  },
-  "pGraph2": {
-    "followersStats": "Follower Stats"
-  },
-  "pModelBottomSheet": {
-    "startDate": "Start Date",
-    "endDate": "End Date",
-    "openPosition": "Open Position",
-    "selectCountry": "Select Country"
-  },
-  "pProfitsBar": {
-    "totalTrade":"Total Trades"
+  "providerConfirmation": {
+    "yourRequestHas": "Your request has been\nsubmitted successfully",
+    "youWillReceive": "You will receive a feedback within 3-4\nworking days via email on successful\nverification"
   }
  }
 
