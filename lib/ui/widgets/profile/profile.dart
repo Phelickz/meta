@@ -47,7 +47,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                     ProfileIconButton(
                       icon: AssetManager.referralsIcon,
-                      title: "Referrals",
+                      title: "logOut",
                       onTap: () {
                         model.push(const ReferralRoute());
                       },

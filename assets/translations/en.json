@@ -158,6 +158,22 @@
   "withdrawal":"Withdrawal",
   "internalTransferText":"Internal Transfer",
   "fiftyFiveThousand":"55,000",
+  "activity":"Activity",
+  "price":"Price",
+  "welcome":"Welcome, {}",
+  "verified":"Verified",
+  "unVerified":"Unverified",
+  "referrals":"Referrals",
+  "nickName":"Nickname",
+  "confirm":"confirm",
+  "filter":"Filter",
+  "profits":"Profits",
+  "profit":"Profit",
+  "loss":"Loss",
+  "ascending":"Ascending",
+  "descending":"Descending",
+
+
 
 
   "views": {
@@ -724,6 +740,57 @@
     "enterTetherUSd":"Enter  TetherUSD Wallet Address"
   }
 
+ },
+ "priceSentimentWidget": {
+  "details":{
+    "clientSentiment": "Client Sentiment:",
+    "tradingActivity": "Trading Activity",
+    "priceRange": "Price Range",
+    "priceVolatility": "Price Volatility",
+    "priceMovement": "price Movement"
+  },
+  "searchResults": "Search Results:"
+ },
+ "profile": {
+  "verificationBar":{
+    "verifyYourAccount" : "Verify your account",
+    "toMakeFirstD" : "To make your first deposit, we would like to know you better. click ‘continue’ to get started"
+  },
+  "profileWidget": {
+    "viewYourWithD":"view your withdrawal and deposit history",
+    "updatePaymentM":"update payment methods",
+    "fileAComplaint":"file a complaint with our team",
+    "rateTheApp":"Rate the app",
+    "giveUsAReview":"give us a review on appstore",
+    "viewWithDrawalH":"view your withdrawal and deposit history"
+  }
+ },
+ "providerWidget": {
+  "changeNickName": {
+    "changeNickNameT": "Change NickName",
+    "enterNewNickName": "Enter new nickname"
+  },
+  "changePasswordWidget": {
+    "confirmPassword": "Confirm Password"
+  },
+  "editStrategyDescription": {
+    "strategyDescriptionText": "Strategy Description"
+  },
+  "pGraph": {
+    "myPerformance": "My Performance"
+  },
+  "pGraph2": {
+    "followersStats": "Follower Stats"
+  },
+  "pModelBottomSheet": {
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "openPosition": "Open Position",
+    "selectCountry": "Select Country"
+  },
+  "pProfitsBar": {
+    "totalTrade":"Total Trades"
+  }
  }
 
 }
