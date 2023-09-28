@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/transactions/components/app_bar.dart';
 import 'package:meta_trader/ui/widgets/transactions/components/transaction_details_card.dart';
 import 'package:meta_trader/ui/widgets/transactions/transaction_details.dart';
@@ -52,198 +53,228 @@ class TransactionsViewModel extends CustomBaseViewModel {
 
   List withdrawals = [
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "receiver": "FcPro",
       "amount": "55,000",
-      "date": "2.1.2023",
-      "time": "16:23:41",
-      "status": "Successful",
-      "type": "Withdrawal",
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
+      "status": LocaleKeys.successful,
+      "type": LocaleKeys.withdrawal,
       "transactionId": "232443564642"
     },
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "receiver": "FcPro",
       "amount": "55,000",
-      "date": "2.1.2023",
-      "time": "16:23:41",
-      "status": "Successful",
-      "type": "Withdrawal",
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
+      "status": LocaleKeys.successful,
+      "type": LocaleKeys.withdrawal,
       "transactionId": "232443564642"
     },
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "receiver": "FcPro",
       "amount": "55,000",
-      "date": "2.1.2023",
-      "time": "16:23:41",
-      "status": "Pending",
-      "type": "Withdrawal",
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
+      "status": LocaleKeys.pending,
+      "type": LocaleKeys.withdrawal,
       "transactionId": "232443564642"
     },
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "receiver": "FcPro",
       "amount": "55,000",
       "date": "2.1.2023",
       "time": "16:23:41",
-      "status": "Successful",
-      "type": "Withdrawal",
+      "status": LocaleKeys.successful,
+      "type": LocaleKeys.withdrawal,
       "transactionId": "232443564642"
     },
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "receiver": "FcPro",
       "amount": "55,000",
-      "date": "2.1.2023",
-      "time": "16:23:41",
-      "status": "Failed",
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
+      "status": LocaleKeys.failed,
       "transactionId": "232443564642"
     },
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "receiver": "FcPro",
       "amount": "55,000",
-      "date": "2.1.2023",
-      "time": "16:23:41",
-      "status": "Successful",
-      "type": "Withdrawal",
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
+      "status": LocaleKeys.successful,
+      "type": LocaleKeys.withdrawal,
       "transactionId": "232443564642"
     },
   ];
 
   List deposits = [
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "receiver": "FcPro",
       "amount": "55,000",
       "date": "2.1.2023",
       "time": "16:23:41",
-      "status": "Successful",
-      "type": "withdrawal",
+      "status": LocaleKeys.successful,
+      "type": LocaleKeys.withdrawal,
       "transactionId": "232443564642"
     },
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "receiver": "FcPro",
       "amount": "55,000",
-      "date": "2.1.2023",
-      "time": "16:23:41",
-      "status": "Successful",
-      "type": "Deposits",
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
+      "status": LocaleKeys.successful,
+      "type": LocaleKeys.deposit,
       "transactionId": "232443564642"
     },
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "receiver": "FcPro",
       "amount": "55,000",
-      "date": "2.1.2023",
-      "time": "16:23:41",
-      "status": "Pending",
-      "type": "Deposits",
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
+      "status": LocaleKeys.pending,
+      "type": LocaleKeys.deposit,
       "transactionId": "232443564642"
     },
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "receiver": "FcPro",
       "amount": "55,000",
-      "date": "2.1.2023",
-      "time": "16:23:41",
-      "status": "Successful",
-      "type": "Deposits",
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
+      "status": LocaleKeys.successful,
+      "type": LocaleKeys.deposit,
       "transactionId": "232443564642"
     },
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "receiver": "FcPro",
       "amount": "55,000",
-      "date": "2.1.2023",
-      "time": "16:23:41",
-      "status": "Failed",
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
+      "status": LocaleKeys.failed,
       "transactionId": "232443564642"
     },
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "receiver": "FcPro",
       "amount": "55,000",
-      "date": "2.1.2023",
-      "time": "16:23:41",
-      "status": "Successful",
-      "type": "Deposits",
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
+      "status": LocaleKeys.successful,
+      "type": LocaleKeys.deposit,
       "transactionId": "232443564642"
     },
   ];
 
   List internalTransfers = [
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "amount": "55,000",
-      "date": "2.1.2023",
-      "time": "16:23:41",
-      "status": "Successful",
-      "type": "Internal Transfer",
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
+      "status": LocaleKeys.successful,
+      "type": LocaleKeys.internalTransfer,
       "transactionId": "232443564642"
     },
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "amount": "55,000",
       "date": "2.1.2023",
       "time": "16:23:41",
-      "status": "Successful",
-      "type": "Internal Transfer",
+      "status": LocaleKeys.successful,
+      "type": LocaleKeys.internalTransfer,
       "transactionId": "232443564642"
     },
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "amount": "55,000",
-      "date": "2.1.2023",
-      "time": "16:23:41",
-      "status": "Pending",
-      "type": "Internal Transfer",
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
+      "status": LocaleKeys.pending,
+      "type": LocaleKeys.internalTransfer,
       "transactionId": "232443564642"
     },
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "amount": "55,000",
-      "date": "2.1.2023",
-      "time": "16:23:41",
-      "status": "Successful",
-      "type": "Internal Transfer",
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
+      "status": LocaleKeys.successful,
+      "type": LocaleKeys.internalTransfer,
       "transactionId": "232443564642"
     },
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "amount": "55,000",
-      "date": "2.1.2023",
-      "time": "16:23:41",
-      "status": "Failed",
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
+      "status": LocaleKeys.failed,
       "transactionId": "232443564642"
     },
     {
-      "title": "Transfer to Bank",
+      "title": LocaleKeys.transferToBank,
       "sender": "Binance Pay",
       "amount": "55,000",
-      "date": "2.1.2023",
-      "time": "16:23:41",
-      "status": "Successful",
-      "type": "Internal Transfer",
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
+      "status": LocaleKeys.successful,
+      "type": LocaleKeys.internalTransfer,
       "transactionId": "232443564642"
     },
   ];
@@ -304,9 +335,9 @@ class TransactionsViewModel extends CustomBaseViewModel {
   AppBar? returnAppBar(BuildContext context) {
     switch (_transactionsPageEnum) {
       case TransactionsPageEnum.transactions:
-        return transactionsAppBar(context, 'Transactions', this);
+        return transactionsAppBar(context, LocaleKeys.transactions, this);
       case TransactionsPageEnum.transactionDetails:
-        return transactionsAppBar(context, 'Transactions', this);
+        return transactionsAppBar(context, LocaleKeys.transactions, this);
       default:
         return null;
     }

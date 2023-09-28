@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/quotes/advanced_view.dart';
 import 'package:meta_trader/ui/widgets/quotes/components/quotes_bottom_sheet.dart';
 import 'package:meta_trader/ui/widgets/quotes/edit.dart';
@@ -59,8 +60,9 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPriceSecondary": "23",
       "low": "63.2018",
       "high": "11.8018",
-      "trend": "positive",
-      "currencyPairFull": "Great Britain Pound vs US Dollar",
+      "trend": LocaleKeys.positive,
+      "currencyPairFull": LocaleKeys
+          .views_quotesView_quotesViewModel_quoteList_greatBritainPounds,
       "currencyIcon": AssetManager.gbpUSD
     },
     {
@@ -77,7 +79,7 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPriceSecondary": "23",
       "low": "63.2018",
       "high": "11.8018",
-      "trend": "positive",
+      "trend": LocaleKeys.positive,
       "currencyPairFull": "Bitcoin",
       "currencyIcon": AssetManager.btc
     },
@@ -95,8 +97,9 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPriceSecondary": "23",
       "low": "63.2018",
       "high": "11.8018",
-      "trend": "negative",
-      "currencyPairFull": "US Dollar vs Canadian Dollar",
+      "trend": LocaleKeys.negative,
+      "currencyPairFull":
+          LocaleKeys.views_quotesView_quotesViewModel_quoteList_usDollarCan,
       "currencyIcon": AssetManager.gbpUSD
     },
     {
@@ -113,8 +116,9 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPriceSecondary": "23",
       "low": "63.2018",
       "high": "11.8018",
-      "trend": "negative",
-      "currencyPairFull": "Great Britain Pound vs US Dollar",
+      "trend": LocaleKeys.negative,
+      "currencyPairFull": LocaleKeys
+          .views_quotesView_quotesViewModel_quoteList_greatBritainPounds,
       "currencyIcon": AssetManager.btc
     },
     {
@@ -131,8 +135,9 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPriceSecondary": "23",
       "low": "63.2018",
       "high": "11.8018",
-      "trend": "negative",
-      "currencyPairFull": "Great Britain Pound vs US Dollar",
+      "trend": LocaleKeys.negative,
+      "currencyPairFull": LocaleKeys
+          .views_quotesView_quotesViewModel_quoteList_greatBritainPounds,
       "currencyIcon": AssetManager.btc
     },
     {
@@ -149,8 +154,9 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPriceSecondary": "23",
       "low": "63.2018",
       "high": "11.8018",
-      "trend": "negative",
-      "currencyPairFull": "Great Britain Pound vs US Dollar",
+      "trend": LocaleKeys.negative,
+      "currencyPairFull": LocaleKeys
+          .views_quotesView_quotesViewModel_quoteList_greatBritainPounds,
       "currencyIcon": AssetManager.btc
     },
   ];
@@ -220,57 +226,57 @@ class QuotesViewModel extends CustomBaseViewModel {
       "value": "21212122121",
     },
     {
-      "title": "Sector",
+      "title": LocaleKeys.sector,
       "value": "21212122121",
     },
     {
-      "title": "Industry",
+      "title": LocaleKeys.industry,
       "value": "21212122121",
     },
     {
-      "title": "Country",
+      "title": LocaleKeys.country,
       "value": "21212122121",
     },
     {
-      "title": "Digits",
+      "title": LocaleKeys.digits,
       "value": "21212122121",
     },
     {
-      "title": "Contract Size",
+      "title": LocaleKeys.chart_specification_contractSize,
       "value": "21212122121",
     },
     {
-      "title": "Spread",
+      "title": LocaleKeys.spread,
       "value": "21212122121",
     },
     {
-      "title": "Stop Level",
+      "title": LocaleKeys.views_quotesView_quotesViewModel_stopLevel,
       "value": "21212122121",
     },
     {
-      "title": "Margin currency",
+      "title": LocaleKeys.views_quotesView_quotesViewModel_marginCurrency,
       "value": "21212122121",
     },
     {
-      "title": "Profit currency",
+      "title": LocaleKeys.views_quotesView_quotesViewModel_profitCurrency,
       "value": "21212122121",
     },
     {
-      "title": "Tick size",
+      "title": LocaleKeys.views_quotesView_quotesViewModel_tickSize,
       "value": "21212122121",
     },
     {
-      "title": "Tick value",
+      "title": LocaleKeys.views_quotesView_quotesViewModel_tickValue,
       "value": "21212122121",
     },
   ];
 
   List symbolGroups = [
     {"title": "Forex", "subtitle": "inst\\forex"},
-    {"title": "Metals", "subtitle": "inst\\forx"},
+    {"title": LocaleKeys.metals, "subtitle": "inst\\forx"},
     {"title": "Comms", "subtitle": "inst\\comms"},
-    {"title": "Exotic", "subtitle": "inst\\exotic"},
-    {"title": "Minors", "subtitle": "inst\\minors"},
+    {"title": LocaleKeys.exotics, "subtitle": "inst\\exotic"},
+    {"title": LocaleKeys.minors, "subtitle": "inst\\minors"},
   ];
 
   List symbolSubgroup = [
@@ -369,13 +375,13 @@ class QuotesViewModel extends CustomBaseViewModel {
       case QuotesPageEnum.edit:
         return quotesAppBar(context, "", "", this);
       case QuotesPageEnum.search:
-        return quotesAppBar(
-            context, "Quotes", "Add symbol to market list", this);
+        return quotesAppBar(context, LocaleKeys.quotes,
+            LocaleKeys.views_quotesView_quotesViewModel_addSymbol, this);
       case QuotesPageEnum.subGroups:
-        return quotesAppBar(
-            context, "Quotes", "Add symbol to market list", this);
+        return quotesAppBar(context, LocaleKeys.quotes,
+            LocaleKeys.views_quotesView_quotesViewModel_addSymbol, this);
       case QuotesPageEnum.details:
-        return quotesAppBar(context, "CORN", "Details", this);
+        return quotesAppBar(context, "CORN", LocaleKeys.details, this);
       default:
         return quotesAppBar(context, "", "", this);
     }

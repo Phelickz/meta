@@ -6,6 +6,8 @@ import 'package:meta_trader/ui/widgets/quotes/components/trade_appbar.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
 
+import '../../../generated/locale_keys.g.dart';
+
 class TradeStatisticsScreen extends StackedView<QuotesViewModel> {
   const TradeStatisticsScreen({super.key});
 
@@ -15,7 +17,7 @@ class TradeStatisticsScreen extends StackedView<QuotesViewModel> {
     // TODO: implement builder
     return Skeleton(
         isBusy: viewModel.isBusy,
-        appBar: tradeAppBars(context, true, "EURUSD", "Statistic"),
+        appBar: tradeAppBars(context, true, "EURUSD", LocaleKeys.statistics),
         bodyPadding: EdgeInsets.symmetric(
             vertical: 16.pHeight(context), horizontal: 24.pWidth(context)),
         body: const SafeArea(

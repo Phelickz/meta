@@ -8,6 +8,8 @@ import 'package:meta_trader/ui/widgets/quotes/components/trade_appbar.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
 
+import '../../../generated/locale_keys.g.dart';
+
 class TradeExecutionScreen extends StackedView<QuotesViewModel> {
   const TradeExecutionScreen({super.key});
 
@@ -17,7 +19,7 @@ class TradeExecutionScreen extends StackedView<QuotesViewModel> {
     // var isDarkMode = CustomThemeData.isDarkMode(context);
     return Skeleton(
       isBusy: viewModel.isBusy,
-      appBar: tradeAppBars(context, false, "EURUSD", "Euro vs US dollar"),
+      appBar: tradeAppBars(context, false, "EURUSD", LocaleKeys.euroVsUs),
       bodyPadding: EdgeInsets.zero,
       body: SafeArea(
         child: SingleChildScrollView(
@@ -42,7 +44,7 @@ class TradeExecutionScreen extends StackedView<QuotesViewModel> {
                   ),
                   Expanded(
                     child: Text(
-                      "The trade will be executed at market conditions. Difference with requested price maybe significant",
+                      LocaleKeys.theTradeWill,
                       style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.0),
                           color: const Color(0xFF98A2B3),

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:meta_trader/ui/widgets/social_trading/overview.dart';
@@ -153,8 +154,8 @@ class MasterTraderOverview extends StatelessWidget {
               child: TabBar(
                 // isScrollable: true,
                 tabs: const [
-                  Tab(text: "Overview"),
-                  Tab(text: "Trading History"),
+                  Tab(text: LocaleKeys.overview),
+                  Tab(text: LocaleKeys.tradingHistory),
                 ],
                 isScrollable: true,
                 unselectedLabelColor: isDarkMode

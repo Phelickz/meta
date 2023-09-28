@@ -3,6 +3,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/quotes/quotes_view_model.dart';
 import 'package:meta_trader/ui/widgets/quotes/components/generic_trade_body.dart';
 import 'package:meta_trader/ui/widgets/quotes/components/trade_appbar.dart';
@@ -18,7 +19,7 @@ class TradeCloseScreen extends StackedView<QuotesViewModel> {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Skeleton(
         isBusy: viewModel.isBusy,
-        appBar: tradeAppBars(context, false, "EURUSD", "Euro vs US dollar"),
+        appBar: tradeAppBars(context, false, "EURUSD", LocaleKeys.euroVsUs),
         bodyPadding: EdgeInsets.zero,
         body: SafeArea(
           child: SingleChildScrollView(
@@ -53,7 +54,7 @@ class TradeCloseScreen extends StackedView<QuotesViewModel> {
                     width: double.infinity,
                     // color: isDarkMode ? const Color(0xFF073961) : const Color(0xFF1570EF),
                     child: Text(
-                      "Close #312443 buy 0.1 by Market with loss of 0.80",
+                      LocaleKeys.views_quotesView_tradeCloseScreen_closeBuy,
                       style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.4),
                           color: isDarkMode
@@ -82,7 +83,7 @@ class TradeCloseScreen extends StackedView<QuotesViewModel> {
                       ),
                       Expanded(
                         child: Text(
-                          "The trade will be executed at market conditions. Difference with requested price maybe significant",
+                          LocaleKeys.theTradeWill,
                           style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.0),
                               color: const Color(0xFF98A2B3),

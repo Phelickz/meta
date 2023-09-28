@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/referral/components/app_bar.dart';
 
 import '../../../app/core/custom_base_view_model.dart';
@@ -22,6 +23,6 @@ class ReferralViewModel extends CustomBaseViewModel {
   }
 
   AppBar? returnAppBar(BuildContext context) {
-    return referralAppBar(context, "Referral Program", this);
+    return referralAppBar(context, LocaleKeys.referralProgram, this);
   }
 }

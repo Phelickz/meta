@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/provider/components/change_nickname.dart';
 import 'package:meta_trader/ui/widgets/provider/components/change_password.dart';
 import 'package:meta_trader/ui/widgets/provider/components/edit_strategy_description.dart';
@@ -117,7 +118,7 @@ class ProviderViewModel extends CustomBaseViewModel {
       "amount": "284.57",
       "sell": true,
       "quantity": "5",
-      "available": "open",
+      "available": LocaleKeys.open,
       "date": "2023.7.13 20:40:08",
       "orderID": "23162111",
       "commission": "\$400.00"
@@ -129,7 +130,7 @@ class ProviderViewModel extends CustomBaseViewModel {
       "amount": "284.57",
       "sell": true,
       "quantity": "7",
-      "available": "open",
+      "available": LocaleKeys.open,
       "date": "2023.7.13 20:40:08",
       "orderID": "23162111",
       "commission": "\$400.00"
@@ -141,7 +142,7 @@ class ProviderViewModel extends CustomBaseViewModel {
       "amount": "284.57",
       "sell": false,
       "quantity": "3",
-      "available": "open",
+      "available": LocaleKeys.open,
       "date": "2023.7.13 20:40:08",
       "orderID": "23162111",
       "commission": "\$400.00"
@@ -168,7 +169,7 @@ class ProviderViewModel extends CustomBaseViewModel {
   int get desiredFee => _desiredFee;
 
   String _strategyDescription =
-      "Hello Everyone, 👉 this account is totally safe to copy for all investors, Newbies and Professionals. I will try my best to make 25-50% profits weekly 💪. Our first priority is to keep safety of your funds.Happy trading ✨";
+      LocaleKeys.views_providerView_strategyDescription;
   String get strategyDescription => _strategyDescription;
 
   bool _visibility = true;
@@ -231,26 +232,36 @@ class ProviderViewModel extends CustomBaseViewModel {
 
   List notifications = [
     {
-      "title": "Subscription Successful",
-      "description": "You are now copying satoshi nakamoto. ",
-      "date": "2.1.2023",
-      "time": "16:23:41",
+      "title":
+          LocaleKeys.views_providerView_notificationList_notificationListTitle,
+      "description": LocaleKeys
+          .views_providerView_notificationList_notificationListDescription,
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
       "isRead": false
     },
     {
-      "title": "subscription terminated",
-      "description":
-          "You have successfully terminated your copy trading with satoshi nakamoto. ",
-      "date": "2.1.2023 ",
-      "time": "16:23:41",
+      "title":
+          LocaleKeys.views_providerView_notificationList_notificationListTitle1,
+      "description": LocaleKeys
+          .views_providerView_notificationList_notificationListDescription1,
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
       "isRead": false
     },
     {
-      "title": "subscription terminated",
-      "description":
-          "You have successfully terminated your copy trading with satoshi nakamoto. ",
-      "date": "2.1.2023",
-      "time": "16:23:41",
+      "title":
+          LocaleKeys.views_providerView_notificationList_notificationListTitle1,
+      "description": LocaleKeys
+          .views_providerView_notificationList_notificationListDescription1,
+      "date":
+          LocaleKeys.views_providerView_notificationList_notificationListDate,
+      "time":
+          LocaleKeys.views_providerView_notificationList_notificationListTime,
       "isRead": false
     },
   ];
@@ -311,8 +322,8 @@ class ProviderViewModel extends CustomBaseViewModel {
         return ProviderAppbar.simpleAppBar(
             this,
             context,
-            "Sign up as a Provider",
-            "Enter your information",
+            LocaleKeys.views_providerView_signUpAsProvider,
+            LocaleKeys.views_providerView_enterYourInformation,
             true,
             IconButton(
                 onPressed: () {},
@@ -323,24 +334,35 @@ class ProviderViewModel extends CustomBaseViewModel {
       case ProviderPageEnum.confirmation:
         return null;
       case ProviderPageEnum.login:
-        return ProviderAppbar.simpleAppBar(this, context, "Provider Login",
-            "Approved provider registration", true, null);
+        return ProviderAppbar.simpleAppBar(
+            this,
+            context,
+            LocaleKeys.views_providerView_providerLogin,
+            LocaleKeys.views_providerView_approvedRegistration,
+            true,
+            null);
       case ProviderPageEnum.options:
         return ProviderAppbar.simpleAppBar(
-            this, context, "Options", "", false, null);
+            this, context, LocaleKeys.options, "", false, null);
       case ProviderPageEnum.notifications:
         return ProviderAppbar.simpleAppBar(
-            this, context, "Notifications", "", false, null);
+            this, context, LocaleKeys.notification, "", false, null);
       case ProviderPageEnum.profileSettings:
-        return ProviderAppbar.simpleAppBar(this, context, "Profile Settings",
-            "Change your profile information", true, null);
+        return ProviderAppbar.simpleAppBar(
+            this,
+            context,
+            LocaleKeys.views_providerView_profileSettings,
+            LocaleKeys.views_providerView_changeYourProfileInfo,
+            true,
+            null);
       case ProviderPageEnum.dashboard:
         return ProviderAppbar.appBarTwo(this, context);
       case ProviderPageEnum.wallet:
-        return ProviderAppbar.walletAppBar(context, "Wallet", "", this);
+        return ProviderAppbar.walletAppBar(
+            context, LocaleKeys.wallet, "", this);
       case ProviderPageEnum.followers:
-        return ProviderAppbar.simpleAppBar(
-            this, context, "Followers", "View your followers", true, null);
+        return ProviderAppbar.simpleAppBar(this, context, LocaleKeys.followers,
+            LocaleKeys.views_providerView_viewYourFollowers, true, null);
       default:
         return AppBar();
     }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/security/add_passkey.dart';
 import 'package:meta_trader/ui/widgets/security/auto_lock.dart';
 import 'package:meta_trader/ui/widgets/security/email_verified_success.dart';
@@ -90,14 +91,14 @@ class SecurityViewModel extends CustomBaseViewModel {
       case SecurityPageEnum.main:
         return securityAppBar2(
           context,
-          'Security',
+          LocaleKeys.security,
           '',
           this,
         );
       case SecurityPageEnum.passkey:
         return securityAppBar2(
           context,
-          'Passkeys',
+          LocaleKeys.passKeys,
           '',
           this,
         );
@@ -112,21 +113,21 @@ class SecurityViewModel extends CustomBaseViewModel {
       case SecurityPageEnum.autoLock:
         return securityAppBar2(
           context,
-          'Auto-Lock',
-          'Enable to lock app automatically',
+          LocaleKeys.views_security_autoLock,
+          LocaleKeys.views_security_enableToLock,
           this,
         );
       case SecurityPageEnum.password:
         return securityAppBar2(
           context,
-          'Change Password',
+          LocaleKeys.changePassword,
           '',
           this,
         );
       case SecurityPageEnum.devices:
         return securityAppBar2(
           context,
-          'Devices',
+          LocaleKeys.devices,
           '',
           this,
         );
@@ -134,7 +135,7 @@ class SecurityViewModel extends CustomBaseViewModel {
       case SecurityPageEnum.addPasskeyEnter:
         return securityAppBar2(
           context,
-          'Add Passkey',
+          LocaleKeys.views_security_addPasskey,
           '',
           this,
         );

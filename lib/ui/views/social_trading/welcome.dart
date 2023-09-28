@@ -7,6 +7,7 @@ import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/services/router_service.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 
@@ -34,7 +35,8 @@ class SocialTradingWelcome extends StatelessWidget {
                 width: McGyver.rsDoubleH(context, 50),
               ),
               Text(
-                'Welcome to MT5 Social Trading Platform',
+                LocaleKeys
+                    .views_socialTradingView_socialTradingWelcome_welcomeToMT5,
                 textAlign: TextAlign.center,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2.4),
@@ -44,7 +46,8 @@ class SocialTradingWelcome extends StatelessWidget {
               ),
               verticalSpaceSmall(context),
               Text(
-                'Now you can start investing with top master traders, track and manage your subscriptions.',
+                LocaleKeys
+                    .views_socialTradingView_socialTradingWelcome_nowYouCanStart,
                 textAlign: TextAlign.center,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
@@ -60,7 +63,8 @@ class SocialTradingWelcome extends StatelessWidget {
                     final routerService = locator<RouterService>();
                     routerService.router.push(const SocialTradingDasboard());
                   },
-                  text: 'Get Started'),
+                  text: LocaleKeys
+                      .views_socialTradingView_socialTradingWelcome_getStarted),
               verticalSpaceSmall(context),
             ],
           ),

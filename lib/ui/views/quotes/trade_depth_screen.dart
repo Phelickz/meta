@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/quotes/quotes_view_model.dart';
 import 'package:meta_trader/ui/widgets/quotes/components/trade_appbar.dart';
 import 'package:meta_trader/ui/widgets/quotes/components/trade_depth.dart';
@@ -16,8 +17,8 @@ class TradeDepthScreen extends StackedView<QuotesViewModel> {
       BuildContext context, QuotesViewModel viewModel, Widget? child) {
     return Skeleton(
       isBusy: viewModel.isBusy,
-      appBar:
-          tradeAppBars1(context, true, "EURUSD", "Depth of Market", popMenu()),
+      appBar: tradeAppBars1(context, true, "EURUSD",
+          LocaleKeys.views_quotesView_tradeDepthScreen_depthMarket, popMenu()),
       bodyPadding: EdgeInsets.symmetric(
         // vertical: 16.pHeight(context),
         horizontal: 5.pWidth(context),
@@ -35,12 +36,12 @@ class TradeDepthScreen extends StackedView<QuotesViewModel> {
       ),
       itemBuilder: (context) => [
         PopupMenuItem(
-          child: const Text('Lots'),
+          child: const Text(LocaleKeys.lots),
           onTap: () {},
           enabled: true,
         ),
         PopupMenuItem(
-          child: const Text('Amount'),
+          child: const Text(LocaleKeys.amount),
           onTap: () {},
           enabled: false,
         )

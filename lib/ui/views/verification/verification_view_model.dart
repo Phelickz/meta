@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/verification/email_verify_success.dart';
 import 'package:meta_trader/ui/widgets/verification/identity_verification_landing.dart';
 import 'package:meta_trader/ui/widgets/verification/identity_verification_success.dart';
@@ -88,11 +89,14 @@ class VerificationViewModel extends CustomBaseViewModel {
   AppBar? returnAppBar(BuildContext context) {
     switch (_verificationPageEnum) {
       case VerificationPageEnum.verifyLanding:
-        return verifyAppBar(
-            context, 'Verify Account', 'Enter your information', this);
+        return verifyAppBar(context, LocaleKeys.verifyAccount,
+            LocaleKeys.views_providerView_enterYourInformation, this);
       case VerificationPageEnum.selectIdentity:
         return verifyAppBar(
-            context, 'Verify Identity', 'Select ID to capture', this);
+            context,
+            LocaleKeys.views_verificationView_VerifyIdentity,
+            LocaleKeys.views_verificationView_selectIdToCapture,
+            this);
       default:
         return null;
     }

@@ -276,6 +276,7 @@ abstract class  LocaleKeys {
   static const amountToWithdraw = 'amountToWithdraw';
   static const leaveAMark = 'leaveAMark';
   static const additionalInformation = 'additionalInformation';
+  static const depositFromBinancePay = 'depositFromBinancePay';
   static const views_auth_auth_view_auth_page_enum_broker = 'views.auth.auth_view.auth_page_enum.broker';
   static const views_auth_auth_view_auth_page_enum_chooseAccount = 'views.auth.auth_view.auth_page_enum.chooseAccount';
   static const views_auth_auth_view_auth_page_enum_demoAccount = 'views.auth.auth_view.auth_page_enum.demoAccount';
@@ -497,6 +498,7 @@ abstract class  LocaleKeys {
   static const views_socialTradingView_depositToPerfect = 'views.socialTradingView.depositToPerfect';
   static const views_socialTradingView_subSuccessful = 'views.socialTradingView.subSuccessful';
   static const views_socialTradingView_subTerminated = 'views.socialTradingView.subTerminated';
+  static const views_socialTradingView_copyingSatoshi = 'views.socialTradingView.copyingSatoshi';
   static const views_socialTradingView_socialTradingWelcome_welcomeToMT5 = 'views.socialTradingView.socialTradingWelcome.welcomeToMT5';
   static const views_socialTradingView_socialTradingWelcome_nowYouCanStart = 'views.socialTradingView.socialTradingWelcome.nowYouCanStart';
   static const views_socialTradingView_socialTradingWelcome_getStarted = 'views.socialTradingView.socialTradingWelcome.getStarted';

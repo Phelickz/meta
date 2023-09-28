@@ -274,6 +274,7 @@
   "amountToWithdraw" :"مقدار برداشتی",
   "leaveAMark" :"گذاشتن نشان",
   "additionalInformation" :"اطلاعات اضافی (اختیاری)",
+  "depositFromBinancePay" :"Deposit from BinancePay",
 
 
   "views": {
@@ -545,6 +546,7 @@
       "depositToPerfect": "واریز از Perfect Money",
       "subSuccessful": "اشتراک موفقیت‌آمیز",
       "subTerminated": "اشتراک پایان یافت",
+      "copyingSatoshi":"شما اکنون در حال کپی برداری از ساتوشی ناکاموتو هستید",
       "socialTradingWelcome": {
         "welcomeToMT5": "به پلتفرم معاملات اجتماعی MT5 خوش آمدید",
         "nowYouCanStart": "اکنون می‌توانید با بهترین معامله‌گران اصلی سرمایه‌گذاری کنید، اشتراک‌های خود را پیگیری و مدیریت کنید.",

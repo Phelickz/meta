@@ -274,6 +274,7 @@
   "amountToWithdraw" :"المبلغ المراد سحبه",
   "leaveAMark" :"اترك ملاحظة",
   "additionalInformation" :"معلومات إضافية (اختياري)",
+   "depositFromBinancePay" :"الإيداع من BinancePay",
 
   "views": {
     "auth": {
@@ -543,6 +544,7 @@
     "depositToPerfect": "إيداع من Perfect Money",
     "subSuccessful": "نجاح الاشتراك",
     "subTerminated": "تم إنهاء الاشتراك",
+    "copyingSatoshi":"أنت الآن تنسخ ساتوشي ناكاموتو.",
     "socialTradingWelcome": {
       "welcomeToMT5": "مرحبًا بك في منصة MT5 للتداول الاجتماعي",
       "nowYouCanStart": "يمكنك الآن البدء في الاستثمار مع أفضل متداولين رئيسيين، وتتبع وإدارة اشتراكاتك.",

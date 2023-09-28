@@ -274,6 +274,7 @@
   "amountToWithdraw" :"Amount To Withdraw",
   "leaveAMark" :"Leave a remark",
   "additionalInformation" :"Additional Information (Optional)",
+  "depositFromBinancePay" :"سپرده از BinancePay",
 
   "views": {
     "auth": {
@@ -543,6 +544,7 @@
       "depositToPerfect":"Deposit from Perfect Money",
       "subSuccessful":"Subscription Successful",
       "subTerminated":"Subscription terminated",
+      "copyingSatoshi":"You are now copying satoshi nakamoto.",
       "socialTradingWelcome": {
         "welcomeToMT5":"Welcome to MT5 Social Trading Platform",
         "nowYouCanStart":"Now you can start investing with top master traders, track and manage your subscriptions.",

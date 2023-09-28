@@ -13,6 +13,8 @@ import 'package:meta_trader/ui/widgets/social_trading/transaction_history.dart';
 import 'package:meta_trader/ui/widgets/social_trading/wallet.dart';
 import 'package:meta_trader/ui/widgets/social_trading/transaction_details.dart';
 
+import '../../../generated/locale_keys.g.dart';
+
 enum TradeType {
   buy,
   sell,
@@ -169,23 +171,27 @@ class SocialTradingViewModel extends CustomBaseViewModel {
       case SocialTradingPageEnum.copiedTraderPosition:
         return socialTradingAvatarAppBar(context, this);
       case SocialTradingPageEnum.menuMain:
-        return socialTradingCustomAppBar(context, 'Option', '', this);
+        return socialTradingCustomAppBar(context, LocaleKeys.options, '', this);
       case SocialTradingPageEnum.wallet:
-        return socialTradingCustomAppBar(context, 'Wallet', '', this);
+        return socialTradingCustomAppBar(context, LocaleKeys.wallet, '', this);
       case SocialTradingPageEnum.transactionHistory:
         return socialTradingCustomAppBar(
-            context, 'Transaction History', '', this);
+            context, LocaleKeys.views_homeView_transactionHistory, '', this);
       case SocialTradingPageEnum.transactionDetails:
-        return socialTradingCustomAppBar(
-            context, 'Transaction Details', '', this);
+        return socialTradingCustomAppBar(context,
+            LocaleKeys.views_socialTradingView_transactionDetails, '', this);
       case SocialTradingPageEnum.notification:
-        return socialTradingCustomAppBar(context, 'Notifications', '', this);
-      case SocialTradingPageEnum.subscriptionSetup:
         return socialTradingCustomAppBar(
-            context, 'Subscription Setup', '', this);
+            context, LocaleKeys.notification, '', this);
+      case SocialTradingPageEnum.subscriptionSetup:
+        return socialTradingCustomAppBar(context,
+            LocaleKeys.views_socialTradingView_subscriptionSetup, '', this);
       case SocialTradingPageEnum.subscriptionGuide:
-        return socialTradingCustomAppBar(context, 'Subscription Guide',
-            'Learn about subscription setup', this);
+        return socialTradingCustomAppBar(
+            context,
+            LocaleKeys.subscriptionGuide,
+            LocaleKeys.socialTradingWidget_subscriptionGuideWidget_learnAbout,
+            this);
       default:
         return null;
     }
@@ -244,7 +250,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "1",
       type: TransactionsTypeEnum.withdrawal,
-      title: "Transfer to Bank",
+      title: LocaleKeys.transferToBank,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -253,7 +259,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "2",
       type: TransactionsTypeEnum.withdrawal,
-      title: "Transfer to BinancePay",
+      title: LocaleKeys.views_socialTradingView_transferToBinance,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -262,7 +268,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "3",
       type: TransactionsTypeEnum.withdrawal,
-      title: "Transfer to Bank",
+      title: LocaleKeys.transferToBank,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -271,7 +277,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "4",
       type: TransactionsTypeEnum.withdrawal,
-      title: "Transfer to Perfect Money",
+      title: LocaleKeys.transferToPerfect,
       amount: "55,000",
       status: TransactionStatusEnum.failed,
       date: "2.1.2023",
@@ -284,7 +290,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "1",
       type: TransactionsTypeEnum.deposit,
-      title: "Online Bank Transfer",
+      title: LocaleKeys.onlineBankTransfer,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -293,7 +299,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "2",
       type: TransactionsTypeEnum.deposit,
-      title: "Deposit from BinancePay",
+      title: LocaleKeys.views_socialTradingView_depositToBinance,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -302,7 +308,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "3",
       type: TransactionsTypeEnum.deposit,
-      title: "Deposit from Neteller",
+      title: LocaleKeys.views_socialTradingView_depositToNeteller,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -311,7 +317,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "4",
       type: TransactionsTypeEnum.deposit,
-      title: "Deposit from Perfect Money",
+      title: LocaleKeys.views_socialTradingView_depositToPerfect,
       amount: "55,000",
       status: TransactionStatusEnum.failed,
       date: "2.1.2023",
@@ -320,7 +326,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "5",
       type: TransactionsTypeEnum.deposit,
-      title: "Deposit from BinancePay",
+      title: LocaleKeys.depositFromBinancePay,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -329,7 +335,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "6",
       type: TransactionsTypeEnum.deposit,
-      title: "Online Bank Transfer",
+      title: LocaleKeys.onlineBankTransfer,
       amount: "55,000",
       status: TransactionStatusEnum.pending,
       date: "2.1.2023",
@@ -342,7 +348,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "1",
       type: TransactionsTypeEnum.internalTransfer,
-      title: "FXTM  to Wallet",
+      title: LocaleKeys.fxtmToWallet,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -351,7 +357,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "2",
       type: TransactionsTypeEnum.internalTransfer,
-      title: "Wallet to deriv",
+      title: LocaleKeys.walletToDeriv,
       amount: "55,000",
       status: TransactionStatusEnum.failed,
       date: "2.1.2023",
@@ -360,7 +366,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "3",
       type: TransactionsTypeEnum.internalTransfer,
-      title: "Wallet to deriv",
+      title: LocaleKeys.walletToDeriv,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -369,7 +375,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "4",
       type: TransactionsTypeEnum.internalTransfer,
-      title: "Wallet to deriv",
+      title: LocaleKeys.walletToDeriv,
       amount: "55,000",
       status: TransactionStatusEnum.failed,
       date: "2.1.2023",
@@ -378,7 +384,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "5",
       type: TransactionsTypeEnum.internalTransfer,
-      title: "FXTM  to Wallet",
+      title: LocaleKeys.fxtmToWallet,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -387,7 +393,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "6",
       type: TransactionsTypeEnum.internalTransfer,
-      title: "Wallet to deriv",
+      title: LocaleKeys.walletToDeriv,
       amount: "55,000",
       status: TransactionStatusEnum.pending,
       date: "2.1.2023",
@@ -399,7 +405,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "1",
       type: TransactionsTypeEnum.deposit,
-      title: "Deposit from BinancePay",
+      title: LocaleKeys.depositFromBinancePay,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -408,7 +414,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "2",
       type: TransactionsTypeEnum.deposit,
-      title: "Deposit from Neteller",
+      title: LocaleKeys.providerWidget_providerWallet_depositFromNeteller,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -417,7 +423,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "3",
       type: TransactionsTypeEnum.internalTransfer,
-      title: "FXTM  to Wallet",
+      title: LocaleKeys.fxtmToWallet,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -426,7 +432,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "4",
       type: TransactionsTypeEnum.internalTransfer,
-      title: "Wallet to deriv",
+      title: LocaleKeys.walletToDeriv,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -435,7 +441,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "5",
       type: TransactionsTypeEnum.internalTransfer,
-      title: "Wallet to deriv",
+      title: LocaleKeys.walletToDeriv,
       amount: "55,000",
       status: TransactionStatusEnum.failed,
       date: "2.1.2023",
@@ -444,7 +450,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "6",
       type: TransactionsTypeEnum.withdrawal,
-      title: "Transfer to Bank",
+      title: LocaleKeys.transferToBank,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -453,7 +459,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "7",
       type: TransactionsTypeEnum.withdrawal,
-      title: "Transfer to BinancePay",
+      title: LocaleKeys.views_socialTradingView_transferToBinance,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -462,7 +468,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "8",
       type: TransactionsTypeEnum.withdrawal,
-      title: "Transfer to Bank",
+      title: LocaleKeys.transferToBank,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -471,7 +477,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "9",
       type: TransactionsTypeEnum.internalTransfer,
-      title: "FXTM  to Wallet",
+      title: LocaleKeys.fxtmToWallet,
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -480,7 +486,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "10",
       type: TransactionsTypeEnum.internalTransfer,
-      title: "Wallet to deriv",
+      title: LocaleKeys.walletToDeriv,
       amount: "55,000",
       status: TransactionStatusEnum.pending,
       date: "2.1.2023",
@@ -490,24 +496,22 @@ class SocialTradingViewModel extends CustomBaseViewModel {
 
   List notifications = [
     {
-      "title": "Subscription Successful",
-      "description": "You are now copying satoshi nakamoto.",
+      "title": LocaleKeys.views_socialTradingView_subSuccessful,
+      "description": LocaleKeys.views_socialTradingView_copyingSatoshi,
+      "date": "2.1.2023 ",
+      "time": "16:23:41",
+      "isRead": false
+    },
+    {
+      "title": LocaleKeys.views_socialTradingView_subTerminated,
+      "description": LocaleKeys.youHaveSuccessCopied,
       "date": "2.1.2023 ",
       "time": "16:23:41",
       "isRead": false
     },
     {
       "title": "Subscription terminated",
-      "description":
-          "You have successfully terminated your copu trading with satoshi nakamoto.",
-      "date": "2.1.2023 ",
-      "time": "16:23:41",
-      "isRead": false
-    },
-    {
-      "title": "Subscription terminated",
-      "description":
-          "You have successfully terminated your copu trading with satoshi nakamoto.",
+      "description": LocaleKeys.youHaveSuccessCopied,
       "date": "2.1.2023 ",
       "time": "16:23:41",
       "isRead": false
@@ -533,17 +537,17 @@ class SocialTradingViewModel extends CustomBaseViewModel {
 
   List<Map<String, String>> copyProportions = [
     {
-      "title": "Equal 1x",
+      "title": LocaleKeys.equal1,
       "amount": "26",
       "volume": "1",
     },
     {
-      "title": "Double 2x",
+      "title": LocaleKeys.double2,
       "amount": "52",
       "volume": "1",
     },
     {
-      "title": "Triple 3x",
+      "title": LocaleKeys.triple3,
       "amount": "76",
       "volume": "3",
     },

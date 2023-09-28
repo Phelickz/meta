@@ -3,6 +3,7 @@ import 'package:meta_trader/ui/widgets/profile/components/verification_bar.dart'
 import 'package:meta_trader/ui/widgets/profile/profile.dart';
 
 import '../../../app/core/custom_base_view_model.dart';
+import '../../../generated/locale_keys.g.dart';
 
 enum ProfileStateEnum { unVerified, halfVerified, verified }
 
@@ -12,7 +13,7 @@ class ProfileViewModel extends CustomBaseViewModel {
   String _userName = "Susan";
   String get userName => _userName;
 
-  String _rank = "Silver";
+  String _rank = LocaleKeys.sliver;
   String get rank => _rank;
 
   bool _isVerified = false;

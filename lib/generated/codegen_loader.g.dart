@@ -290,6 +290,7 @@ class CodegenLoader extends AssetLoader{
   "amountToWithdraw": "Amount To Withdraw",
   "leaveAMark": "Leave a remark",
   "additionalInformation": "Additional Information (Optional)",
+  "depositFromBinancePay": "سپرده از BinancePay",
   "views": {
     "auth": {
       "auth_view": {
@@ -551,6 +552,7 @@ class CodegenLoader extends AssetLoader{
       "depositToPerfect": "Deposit from Perfect Money",
       "subSuccessful": "Subscription Successful",
       "subTerminated": "Subscription terminated",
+      "copyingSatoshi": "You are now copying satoshi nakamoto.",
       "socialTradingWelcome": {
         "welcomeToMT5": "Welcome to MT5 Social Trading Platform",
         "nowYouCanStart": "Now you can start investing with top master traders, track and manage your subscriptions.",
@@ -1511,6 +1513,7 @@ static const Map<String,dynamic> fa = {
   "amountToWithdraw": "مقدار برداشتی",
   "leaveAMark": "گذاشتن نشان",
   "additionalInformation": "اطلاعات اضافی (اختیاری)",
+  "depositFromBinancePay": "Deposit from BinancePay",
   "views": {
     "auth": {
       "auth_view": {
@@ -1772,6 +1775,7 @@ static const Map<String,dynamic> fa = {
       "depositToPerfect": "واریز از Perfect Money",
       "subSuccessful": "اشتراک موفقیت‌آمیز",
       "subTerminated": "اشتراک پایان یافت",
+      "copyingSatoshi": "شما اکنون در حال کپی برداری از ساتوشی ناکاموتو هستید",
       "socialTradingWelcome": {
         "welcomeToMT5": "به پلتفرم معاملات اجتماعی MT5 خوش آمدید",
         "nowYouCanStart": "اکنون می‌توانید با بهترین معامله‌گران اصلی سرمایه‌گذاری کنید، اشتراک‌های خود را پیگیری و مدیریت کنید.",
@@ -2733,6 +2737,7 @@ static const Map<String,dynamic> ar = {
   "amountToWithdraw": "المبلغ المراد سحبه",
   "leaveAMark": "اترك ملاحظة",
   "additionalInformation": "معلومات إضافية (اختياري)",
+  "depositFromBinancePay": "الإيداع من BinancePay",
   "views": {
     "auth": {
       "auth_view": {
@@ -2994,6 +2999,7 @@ static const Map<String,dynamic> ar = {
       "depositToPerfect": "إيداع من Perfect Money",
       "subSuccessful": "نجاح الاشتراك",
       "subTerminated": "تم إنهاء الاشتراك",
+      "copyingSatoshi": "أنت الآن تنسخ ساتوشي ناكاموتو.",
       "socialTradingWelcome": {
         "welcomeToMT5": "مرحبًا بك في منصة MT5 للتداول الاجتماعي",
         "nowYouCanStart": "يمكنك الآن البدء في الاستثمار مع أفضل متداولين رئيسيين، وتتبع وإدارة اشتراكاتك.",

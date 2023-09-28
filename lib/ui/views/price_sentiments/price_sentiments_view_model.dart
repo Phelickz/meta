@@ -6,6 +6,8 @@ import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/appbar.dart';
 
+import '../../../generated/locale_keys.g.dart';
+
 enum PriceTypeEnum { sentiments, favorites }
 
 enum PriceSentimentPageEnum { home, details, search }
@@ -92,8 +94,8 @@ class PriceSentimentViewModel extends CustomBaseViewModel {
       case PriceSentimentPageEnum.search:
         return globalAppBar(
           context,
-          'Market Sentiments',
-          'Sentiments across markets',
+          LocaleKeys.views_priceSentiments_marketSentiments,
+          LocaleKeys.views_priceSentiments_sentimentsAcrossM,
           () {
             setPriceSentimentPageEnum = PriceSentimentPageEnum.home;
           },
@@ -151,7 +153,7 @@ class PriceSentimentViewModel extends CustomBaseViewModel {
                       setPrcieTypeEnum = PriceTypeEnum.sentiments;
                     },
                     child: Text(
-                      'Sentiments',
+                      LocaleKeys.sentiments,
                       style: CustomThemeData.generateStyle(
                         fontSize: 13,
                         color: Colors.white,
@@ -171,7 +173,7 @@ class PriceSentimentViewModel extends CustomBaseViewModel {
                       setPrcieTypeEnum = PriceTypeEnum.favorites;
                     },
                     child: Text(
-                      'Favorites',
+                      LocaleKeys.favorites,
                       style: CustomThemeData.generateStyle(
                         fontSize: 13,
                         color: Colors.white,

@@ -1,11 +1,13 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/profit_calculator/profit_calculator_view_model.dart';
 import 'package:meta_trader/ui/widgets/appbar.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
@@ -33,7 +35,8 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
       bodyPadding: EdgeInsets.symmetric(
         horizontal: McGyver.rsDoubleW(context, 0),
       ),
-      appBar: globalAppBar(context, 'Profit Calculator', '', () {
+      appBar: globalAppBar(
+          context, LocaleKeys.views_homeView_profitCalculator, '', () {
         Navigator.pop(context);
       }, []),
       body: Padding(
@@ -65,7 +68,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
                       Row(
                         children: [
                           Text(
-                            'Profit (USD)',
+                            LocaleKeys.views_priceCalculatorView_profitUSD,
                             style: CustomThemeData.generateStyle(
                                 fontSize: 13,
                                 color:
@@ -101,7 +104,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                'Account Currency',
+                LocaleKeys.accountCurrency,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
@@ -149,7 +152,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                'Currency Pair',
+                LocaleKeys.currencyPair,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
@@ -197,7 +200,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                'Buy or Sell',
+                LocaleKeys.views_priceCalculatorView_buyOrSell,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode ? Colors.white70 : const Color(0xff667085),
@@ -207,7 +210,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
               IgnorePointer(
                 ignoring: true,
                 child: CustomTextFields(
-                  hintText: 'Buy',
+                  hintText: LocaleKeys.buy,
                   password: false,
                   suffixIcon: Icon(
                     Icons.arrow_forward_ios,
@@ -223,7 +226,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Opening price',
+                        LocaleKeys.views_priceCalculatorView_openingPrice,
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.8),
                           color: isDarkMode
@@ -271,7 +274,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Closing Price',
+                        LocaleKeys.views_priceCalculatorView_closingPrice,
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.8),
                           color: isDarkMode
@@ -318,7 +321,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                'Trade Size (units)',
+                LocaleKeys.tradeSize.tr(args: ['(units)']),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
@@ -336,7 +339,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
               CustomButtons.generalButton(
                 context: context,
                 onTap: () {},
-                text: 'Calculate',
+                text: LocaleKeys.calculate,
               ),
               verticalSpaceSmall(context),
             ],

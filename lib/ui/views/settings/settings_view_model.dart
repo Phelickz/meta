@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
 import 'package:meta_trader/app/utils/strings_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/settings/change_basis.dart';
 import 'package:meta_trader/ui/widgets/settings/chart_color.dart';
 import 'package:meta_trader/ui/widgets/settings/color_preference.dart';
@@ -64,20 +65,20 @@ class SettingsViewModel extends CustomBaseViewModel {
 
   List get timezones => _timeZones;
   List _updateFeatures = [
-    "WhatsApp addition",
-    "add notice of upcoming signals",
-    "adding different views on the market section"
+    LocaleKeys.views_settings_whatsappAddition,
+    LocaleKeys.views_settings_addNoticeOfUpcoming,
+    LocaleKeys.views_settings_addingDifferentViews
   ];
 
   List get updateFeatures => _updateFeatures;
 
-  String _selectedTimezone = "Last 24 Hrs";
+  String _selectedTimezone = LocaleKeys.last2Hrs;
   String get selectedTimeZone => _selectedTimezone;
 
-  String _chartColor = "Default";
+  String _chartColor = LocaleKeys.defaultText;
   String get chartColor => _chartColor;
 
-  String _colorPreference = "Blue-Buy/Red-Sell";
+  String _colorPreference = LocaleKeys.views_settings_blueBuy;
   String get colorPreference => _colorPreference;
 
   String _selectedLanguage = "English";
@@ -90,50 +91,53 @@ class SettingsViewModel extends CustomBaseViewModel {
   SettingsPageEnum get settingsPageEnum => _settingsPageEnum;
 
   Map privacyPolicy = {
-    "introduction":
-        "Thank you for choosing Meta trader  as your trusted forex trading platform. We are committed to safeguarding your privacy and protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data. By accessing or using our services, you agree to the practices described in this policy.",
+    "introduction": LocaleKeys.views_settings_privacyPolicy_privacyPolicyIntro,
     "data": [
       {
-        "heading": "Information Collection",
-        "description":
-            "We may collect various types of information from you when you use our platform or services, including:",
+        "heading": LocaleKeys.views_settings_privacyPolicy_privacyPolicyHead1,
+        "description": LocaleKeys.views_settings_privacyPolicy_privacyPolicyD2,
         "data": [
           {
-            "subheading": "Personal Information",
+            "subheading":
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH,
             "description":
-                "This may include your name, email address, phone number, residential address, date of birth, government-issued identification, and other necessary details required for account registration and compliance with financial regulations."
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD3
           },
           {
-            "subheading": "Financial Information",
+            "subheading":
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH1,
             "description":
-                "To facilitate transactions, we may collect details related to your bank account, credit/debit card information, and transaction history."
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD4
           },
           {
-            "subheading": "Device and Usage Information",
+            "subheading":
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH2,
             "description":
-                "We may automatically collect information about your device, operating system, browser type, IP address, and interactions with our platform to improve our services and user experience."
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD5
           },
           {
-            "subheading": "Cookies and Tracking Technologies",
+            "subheading":
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH3,
             "description":
-                "We may use cookies and similar technologies to gather information about your usage patterns and preferences while using our platform. This helps us to optimize our website, improve navigation, and personalize your experience"
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD6
           },
         ]
       },
       {
-        "heading": "Data Sharing And Disclosure",
-        "description":
-            "We use the collected information for the following purposes",
+        "heading": LocaleKeys.views_settings_privacyPolicy_privacyPolicyHead2,
+        "description": LocaleKeys.views_settings_privacyPolicy_privacyPolicyD7,
         "data": [
           {
-            "subheading": "Account Creation",
+            "subheading":
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH4,
             "description":
-                "To create and maintain your account, verify your identity, and provide customer support."
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD8
           },
           {
-            "subheading": "Forex Trading Services",
+            "subheading":
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH5,
             "description":
-                "To process your trades, transactions, and withdrawals in accordance with your instructions."
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD9
           },
         ]
       },
@@ -239,33 +243,41 @@ class SettingsViewModel extends CustomBaseViewModel {
     switch (_settingsPageEnum) {
       case SettingsPageEnum.settings:
         return settingsAppBar(
-            context, "Settings", '', this, SettingsPageEnum.settings);
+            context, LocaleKeys.settings, '', this, SettingsPageEnum.settings);
       case SettingsPageEnum.notificationSettings:
-        return settingsAppBar(context, 'Notification Settings', '', this,
+        return settingsAppBar(
+            context,
+            LocaleKeys.views_settings_notificationSettings,
+            '',
+            this,
             SettingsPageEnum.notificationSettings);
       case SettingsPageEnum.languageSettings:
-        return settingsAppBar(context, 'Language Settings',
-            'Change app language', this, SettingsPageEnum.languageSettings);
-      case SettingsPageEnum.chartColor:
         return settingsAppBar(
-            context, 'Chart Color', '', this, SettingsPageEnum.chartColor);
+            context,
+            LocaleKeys.views_settings_languageSettings,
+            LocaleKeys.views_settings_changeAppLanguage,
+            this,
+            SettingsPageEnum.languageSettings);
+      case SettingsPageEnum.chartColor:
+        return settingsAppBar(context, LocaleKeys.chartColor, '', this,
+            SettingsPageEnum.chartColor);
       case SettingsPageEnum.colorPreference:
-        return settingsAppBar(context, 'Color Preference', "", this,
+        return settingsAppBar(context, LocaleKeys.colorPreference, "", this,
             SettingsPageEnum.colorPreference);
       case SettingsPageEnum.changeBasis:
-        return settingsAppBar(
-            context, 'Change Basis', '', this, SettingsPageEnum.changeBasis);
+        return settingsAppBar(context, LocaleKeys.settings_changeBasis, '',
+            this, SettingsPageEnum.changeBasis);
       case SettingsPageEnum.aboutUs:
         return settingsAppBar(
-            context, 'About Us', '', this, SettingsPageEnum.aboutUs);
+            context, LocaleKeys.aboutUs, '', this, SettingsPageEnum.aboutUs);
 
       case SettingsPageEnum.privacyPolicy:
-        return settingsAppBar(context, 'Privacy policy', '', this,
+        return settingsAppBar(context, LocaleKeys.privacyPolicyText, '', this,
             SettingsPageEnum.privacyPolicy);
 
       case SettingsPageEnum.termsOfUSe:
-        return settingsAppBar(
-            context, 'Terms of use', '', this, SettingsPageEnum.termsOfUSe);
+        return settingsAppBar(context, LocaleKeys.views_settings_TermsOfUse, '',
+            this, SettingsPageEnum.termsOfUSe);
       case SettingsPageEnum.updateReleases:
         return null;
       default:
