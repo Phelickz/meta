@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/settings/components/about_us_tile.dart';
 
 import '../../../app/responsiveness/res.dart';
@@ -45,27 +46,31 @@ class AboutUsPage extends StatelessWidget {
             height: 30.pHeight(context),
           ),
           const AboutUsTile(
-              title: "Service Agreement", leading: AssetManager.agreement),
+              title: LocaleKeys.settings_aboutUs_serviceAgreement,
+              leading: AssetManager.agreement),
           SizedBox(
             height: 20.pHeight(context),
           ),
           const AboutUsTile(
-              title: "Like us on facebook", leading: AssetManager.facebook),
+              title: LocaleKeys.settings_aboutUs_likeUsOnFacebook,
+              leading: AssetManager.facebook),
           SizedBox(
             height: 20.pHeight(context),
           ),
           const AboutUsTile(
-              title: "Follow us on Twitter", leading: AssetManager.facebook),
+              title: LocaleKeys.settings_aboutUs_followUsOnTwitter,
+              leading: AssetManager.facebook),
           SizedBox(
             height: 20.pHeight(context),
           ),
           const AboutUsTile(
-              title: "Join us on Telegram", leading: AssetManager.facebook),
+              title: LocaleKeys.settings_aboutUs_joinUsOnTelegram,
+              leading: AssetManager.facebook),
           SizedBox(
             height: 20.pHeight(context),
           ),
           AboutUsTile(
-            title: "Check for updates",
+            title: LocaleKeys.settings_aboutUs_checkForUpdate,
             leading: AssetManager.refresh,
             isArrowTrailing: false,
             secondaryTrailing: Text(

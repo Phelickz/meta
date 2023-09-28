@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/quotes/components/pop_up_menu.dart';
 
 import '../../../../app/responsiveness/res.dart';
@@ -100,7 +101,7 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
                       model.setQuotesPageEnum = QuotesPageEnum.markets;
                     },
                     child: Text(
-                      'Markets',
+                      LocaleKeys.markets,
                       style: CustomThemeData.generateStyle(
                         fontSize: 13,
                         color: Colors.white,
@@ -120,7 +121,7 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
                       model.setQuotesPageEnum = QuotesPageEnum.favorites;
                     },
                     child: Text(
-                      'Favorites',
+                      LocaleKeys.favorites,
                       style: CustomThemeData.generateStyle(
                         fontSize: 13,
                         color: Colors.white,

@@ -290,13 +290,25 @@ class CodegenLoader extends AssetLoader{
   "amountToWithdraw": "Amount To Withdraw",
   "leaveAMark": "Leave a remark",
   "additionalInformation": "Additional Information (Optional)",
-  "depositFromBinancePay": "سپرده از BinancePay",
+  "depositFromBinancePay": "Deposit from BinancePay",
+  "priceSentiments": "Price sentiments",
+  "sell": "Sell",
+  "pattern": "Pattern",
+  "phoneVerification": "Phone Verification",
+  "changePreference": "Change Preference",
+  "lowCommission": "Low Commission",
+  "viewAll": "View All",
+  "closeBuyPosition": "Close Buy positions",
+  "credit": "Credit",
+  "customPeriod": "Custom Period",
+  "swap": "Swap",
+  "deals": "Deals",
   "views": {
     "auth": {
       "auth_view": {
         "auth_page_enum": {
-          "broker": "broker,",
-          "chooseAccount": "chooseAccount,",
+          "broker": "broker",
+          "chooseAccount": "chooseAccount",
           "demoAccount": "demoAccount,",
           "realAccount": "realAccount,",
           "login": "login,",
@@ -852,7 +864,7 @@ class CodegenLoader extends AssetLoader{
       "toMakeFirstD": "To make your first deposit, we would like to know you better. click ‘continue’ to get started"
     },
     "profileWidget": {
-      "viewYourWithD": "view your withdrawal and deposit history",
+      "viewYourWithD": "Withdrawal/Deposit History",
       "updatePaymentM": "update payment methods",
       "fileAComplaint": "file a complaint with our team",
       "rateTheApp": "Rate the app",
@@ -1064,6 +1076,10 @@ class CodegenLoader extends AssetLoader{
       "joinUsOnTelegram": "Join us on Telegram",
       "checkForUpdate": "Check for updates"
     },
+    "colorPreferenceWidget": {
+      "blueBuyRedSell": "Blue-Buy/Red-Sell",
+      "blueSellRedBuy": "Blue-Sell/Red-Buy"
+    },
     "changeBasis": {
       "whenYouSwitch": "When you switch to a new UTC time zone, the change (%) for markets and trades will be calculated based on the new time zone "
     },
@@ -1138,7 +1154,8 @@ class CodegenLoader extends AssetLoader{
       "riskManagement": "Risk Management",
       "maxUnrealizedLoss": "Max Unrealized Loss",
       "maxDrawDownDuration": "Max drawdown Duration",
-      "priceMovement": "price Movement"
+      "priceMovement": "price Movement",
+      "helloEveryOne": "Hello Everyone, 👉 this account is totally safe to copy for all investors, Newbies and Professionals. I will try my best to make 25-50% profits weekly 💪. Our first priority is to keep safety of your funds. \n\nHappy trading ✨"
     },
     "subscriptionGuideWidget": {
       "learnAbout": "Learn about subscription setup",
@@ -1513,7 +1530,19 @@ static const Map<String,dynamic> fa = {
   "amountToWithdraw": "مقدار برداشتی",
   "leaveAMark": "گذاشتن نشان",
   "additionalInformation": "اطلاعات اضافی (اختیاری)",
-  "depositFromBinancePay": "Deposit from BinancePay",
+  "depositFromBinancePay": "سپرده از BinancePay",
+  "priceSentiments": "احساسات قیمت",
+  "sell": "فروش",
+  "pattern": "الگو",
+  "phoneVerification": "تأیید تلفن",
+  "changePreference": "تغییر اولویت",
+  "lowCommission": "کمیسیون کم",
+  "viewAll": "مشاهده همه",
+  "closeBuyPosition": "بستن موقعیت های خرید",
+  "credit": "اعتبار",
+  "customPeriod": "دوره سفارشی",
+  "swap": "تعویض کنید",
+  "deals": "Deals",
   "views": {
     "auth": {
       "auth_view": {
@@ -2076,7 +2105,7 @@ static const Map<String,dynamic> fa = {
       "toMakeFirstD": "برای انجام اولین واریز خود، ما می‌خواهی شما را بهتر بشناسیم. برای شروع، روی 'ادامه' کلیک کنید."
     },
     "profileWidget": {
-      "viewYourWithD": "مشاهده تاریخچه برداشت و واریز خود",
+      "viewYourWithD": "تاریخچه برداشت/سپرده",
       "updatePaymentM": "به‌روزرسانی روش‌های پرداخت",
       "fileAComplaint": "ثبت شکایت به تیم ما",
       "rateTheApp": "امتیاز دهی به اپلیکیشن",
@@ -2288,6 +2317,10 @@ static const Map<String,dynamic> fa = {
       "joinUsOnTelegram": "به ما در تلگرام بپیوندید",
       "checkForUpdate": "بررسی برای به‌روزرسانی"
     },
+    "colorPreferenceWidget": {
+      "blueBuyRedSell": "آبی-خرید/قرمز-فروش",
+      "blueSellRedBuy": "«آبی-فروش/قرمز-خرید"
+    },
     "changeBasis": {
       "whenYouSwitch": "زمانی که به منطقه زمانی جدید UTC تغییر دهید، تغییر (%) برای بازارها و معاملات بر اساس منطقه زمانی جدید محاسبه خواهد شد."
     },
@@ -2362,7 +2395,8 @@ static const Map<String,dynamic> fa = {
       "riskManagement": "مدیریت ریسک",
       "maxUnrealizedLoss": "بیشترین زیان عدم تحقق یافته",
       "maxDrawDownDuration": "مدت زمان بیشترین کاهش قیمت",
-      "priceMovement": "حرکت قیمت"
+      "priceMovement": "حرکت قیمت",
+      "helloEveryOne": "سلام به همه، 👉 این حساب برای همه سرمایه گذاران، تازه کارها و حرفه ای ها کاملا امن است. تمام تلاشم را می کنم که 25 تا 50 درصد سود هفتگی داشته باشم 💪. اولویت اول ما حفظ امنیت سرمایه شماست. \n\nمعامله مبارک ✨"
     },
     "subscriptionGuideWidget": {
       "learnAbout": "آموزش راجع به راه‌اندازی اشتراک",
@@ -2738,6 +2772,18 @@ static const Map<String,dynamic> ar = {
   "leaveAMark": "اترك ملاحظة",
   "additionalInformation": "معلومات إضافية (اختياري)",
   "depositFromBinancePay": "الإيداع من BinancePay",
+  "priceSentiments": "مشاعر السعر",
+  "sell": "يبيع",
+  "pattern": "نمط",
+  "phoneVerification": "التحقق من الهاتف",
+  "changePreference": "تغيير التفضيل",
+  "lowCommission": "عمولة منخفضة",
+  "viewAll": "عرض الكل",
+  "closeBuyPosition": "إغلاق مراكز الشراء",
+  "credit": "ائتمان",
+  "customPeriod": "فترة مخصصة",
+  "swap": "تبديل",
+  "deals": "Deals",
   "views": {
     "auth": {
       "auth_view": {
@@ -3300,7 +3346,7 @@ static const Map<String,dynamic> ar = {
       "toMakeFirstD": "لإجراء إيداعك الأول، نرغب في معرفتك بشكل أفضل. انقر 'متابعة' للبدء"
     },
     "profileWidget": {
-      "viewYourWithD": "عرض سجل سحبك وإيداعك",
+      "viewYourWithD": "تاريخ السحب/الإيداع",
       "updatePaymentM": "تحديث وسائل الدفع",
       "fileAComplaint": "تقديم شكوى لفريق الدعم",
       "rateTheApp": "قيم التطبيق",
@@ -3512,6 +3558,10 @@ static const Map<String,dynamic> ar = {
       "joinUsOnTelegram": "انضم إلينا على تيليجرام",
       "checkForUpdate": "التحقق من التحديثات"
     },
+    "colorPreferenceWidget": {
+      "blueBuyRedSell": "الأزرق شراء / الأحمر بيع",
+      "blueSellRedBuy": "البيع الأزرق / الشراء الأحمر"
+    },
     "changeBasis": {
       "whenYouSwitch": "عندما تقوم بالتبديل إلى منطقة زمنية جديدة بتوقيت تنسيق التعاون العالمي (UTC)، سيتم حساب التغيير (%) في الأسواق والصفقات استنادًا إلى المنطقة الزمنية الجديدة"
     },
@@ -3586,7 +3636,8 @@ static const Map<String,dynamic> ar = {
       "riskManagement": "إدارة المخاطر",
       "maxUnrealizedLoss": "أقصى خسارة غير محققة",
       "maxDrawDownDuration": "أقصى مدة انخفاض",
-      "priceMovement": "حركة الأسعار"
+      "priceMovement": "حركة الأسعار",
+      "helloEveryOne": "مرحبًا بالجميع، 👉 هذا الحساب آمن تمامًا للنسخ لجميع المستثمرين والمبتدئين والمحترفين. سأبذل قصارى جهدي لتحقيق أرباح تتراوح بين 25-50% أسبوعيًا 💪. أولويتنا الأولى هي الحفاظ على سلامة أموالك. \n\nتداول سعيد ✨"
     },
     "subscriptionGuideWidget": {
       "learnAbout": "تعرف على إعداد الاشتراك",

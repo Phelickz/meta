@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/textfields/label_password_field.dart';
 import 'package:meta_trader/ui/widgets/textfields/label_text_field.dart';
 
@@ -23,7 +24,7 @@ class AddPasskeyEnterPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Enter a unique 4-digit passkey",
+              LocaleKeys.securityWidget_addPasskeyEnter_enterAUnique,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2.2),
                 fontWeight: FontWeight.bold,
@@ -33,7 +34,7 @@ class AddPasskeyEnterPage extends StatelessWidget {
               ),
             ),
             Text(
-              "Your passkey will be used to authorize your withdrawals. Please you are not advised to share this with anyone.",
+              LocaleKeys.securityWidget_addPasskeyEnter_yourPasskeyWillBe,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.6),
                 fontWeight: FontWeight.w500,
@@ -46,17 +47,18 @@ class AddPasskeyEnterPage extends StatelessWidget {
         ),
         verticalSpaceSmall(context),
         const LabelTextField(
-          label: "Passkey",
-          hintText: "Enter 4-digits passkey",
+          label: LocaleKeys.passkey,
+          hintText:
+              LocaleKeys.securityWidget_addPasskeyEnter_enter4digitsPasskey,
         ),
         const LabelPasswordField(
-          label: "Password",
-          hintText: "Enter Your password",
+          label: LocaleKeys.password,
+          hintText: LocaleKeys.securityWidget_addPasskeyEnter_enterYourPassword,
         ),
         verticalSpaceSmall(context),
         verticalSpaceSmall(context),
         CustomButtons.generalButton(
-          text: "Continue",
+          text: LocaleKeys.continueWord,
           context: context,
           onTap: () {
             model.securityPageEnum = SecurityPageEnum.passkeyAddedSuccess;

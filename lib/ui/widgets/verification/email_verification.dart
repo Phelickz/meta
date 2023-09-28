@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/verification/verification_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
@@ -28,7 +29,7 @@ class EmailVerificationPage extends StatelessWidget {
               width: McGyver.rsDoubleH(context, 50),
             ),
             Text(
-              'Verify Your Email',
+              LocaleKeys.verificationWidget_emailVerification_verifyYourEmail,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2.4),
                 fontWeight: FontWeight.bold,
@@ -39,7 +40,7 @@ class EmailVerificationPage extends StatelessWidget {
             RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                text: 'We sent a verification email to ',
+                text: LocaleKeys.weSentAVerification,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
                   color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -53,7 +54,7 @@ class EmailVerificationPage extends StatelessWidget {
                     ),
                   ),
                   TextSpan(
-                    text: 'Please tap the link sent in the email to continue.',
+                    text: LocaleKeys.pleaseTapLink,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.6),
                       color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -65,12 +66,13 @@ class EmailVerificationPage extends StatelessWidget {
             verticalSpaceSmall(context),
             verticalSpaceMedium(context),
             CustomButtons.generalButton(
-                context: context,
-                onTap: () {
-                  model.setVerificationViewEnum =
-                      VerificationPageEnum.emailVerifySuccess;
-                },
-                text: 'Check mail'),
+              context: context,
+              onTap: () {
+                model.setVerificationViewEnum =
+                    VerificationPageEnum.emailVerifySuccess;
+              },
+              text: LocaleKeys.checkMail,
+            ),
             verticalSpaceXSmall(context),
             CustomButtons.clearButton(
               context: context,
@@ -78,7 +80,7 @@ class EmailVerificationPage extends StatelessWidget {
                 model.setVerificationViewEnum =
                     VerificationPageEnum.emailVerifySuccess;
               },
-              text: 'Resend code',
+              text: LocaleKeys.resendCode,
               textColor: Theme.of(context).primaryColor,
             ),
           ],

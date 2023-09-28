@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/quotes/components/custom_progress_indicator.dart';
 import 'package:meta_trader/ui/widgets/quotes/trade_utils.dart';
 
@@ -26,7 +27,7 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Lot Size",
+          LocaleKeys.quotesWidget_components_genericTradeBody_lotSize,
           style: CustomThemeData.generateStyle(
             fontSize: McGyver.textSize(context, 1.6),
             color: isDarkMode ? ColorManager.darkText : const Color(0xFF98A2B3),
@@ -49,7 +50,8 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Stop Loss",
+                    LocaleKeys
+                        .quotesWidget_components_genericTradeBody_stopLoss,
                     style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.6),
                         color: isDarkMode
@@ -76,7 +78,8 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Take Profit",
+                    LocaleKeys
+                        .quotesWidget_components_genericTradeBody_takeProfit,
                     style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.6),
                         color: isDarkMode
@@ -97,7 +100,7 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
           height: 16.pHeight(context),
         ),
         Text(
-          "Fill Policy",
+          LocaleKeys.quotesWidget_components_genericTradeBody_fillPolicy,
           style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.6),
               color:
@@ -117,7 +120,7 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
           padding: EdgeInsets.symmetric(
               horizontal: 18.pWidth(context), vertical: 10.pHeight(context)),
           child: Text(
-            "Fill or Kill",
+            LocaleKeys.quotesWidget_components_genericTradeBody_fillOrKill,
             style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.6),
                 color: const Color(0xff98A2B3),
@@ -146,7 +149,7 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Duration",
+                    Text(LocaleKeys.duration,
                         style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.6),
                             color: isDarkMode
@@ -236,7 +239,7 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Duration",
+                Text(LocaleKeys.duration,
                     style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 2.2),
                         color: isDarkMode ? Colors.white : Colors.black54,
@@ -273,7 +276,8 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Time Frame",
+                              LocaleKeys
+                                  .quotesWidget_components_genericTradeBody_timeFrame,
                               style: CustomThemeData.generateStyle(
                                   fontSize: McGyver.textSize(context, 1.8),
                                   color: isDarkMode
@@ -297,7 +301,8 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Current Price",
+                              LocaleKeys
+                                  .quotesWidget_components_genericTradeBody_currencyPrice,
                               style: CustomThemeData.generateStyle(
                                   fontSize: McGyver.textSize(context, 1.8),
                                   color: isDarkMode
@@ -317,7 +322,8 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
                   ),
                   const Spacer(),
                   Text(
-                    "In 1 Hour at 10:41 on 29th July 2023 your trade will automatically close",
+                    LocaleKeys
+                        .quotesWidget_components_genericTradeBody_inOneHour,
                     style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.4),
                         color: isDarkMode
@@ -347,7 +353,9 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
             borderRadius: BorderRadius.circular(8),
           ),
           child: Center(
-              child: Text("Sell by Market",
+              child: Text(
+                  LocaleKeys
+                      .quotesWidget_components_genericTradeBody_sellByMarket,
                   style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.4),
                       color: Colors.white,
@@ -369,7 +377,9 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
             borderRadius: BorderRadius.circular(8),
           ),
           child: Center(
-              child: Text("Buy by Market",
+              child: Text(
+                  LocaleKeys
+                      .quotesWidget_components_genericTradeBody_buyByMarket,
                   style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.4),
                       color: Colors.white,

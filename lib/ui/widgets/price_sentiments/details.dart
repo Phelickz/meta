@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/price_sentiments/price_sentiments_view_model.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/appbar.dart';
@@ -23,7 +24,7 @@ class PriceSentimentDetails extends StatelessWidget {
       appBar: globalAppBar(
         context,
         model.selectedPrice,
-        'Price sentiments',
+        LocaleKeys.priceSentiments,
         () {
           Navigator.pop(context);
         },
@@ -59,7 +60,7 @@ class PriceSentimentDetails extends StatelessWidget {
           children: [
             verticalSpaceSmall(context),
             Text(
-              'Client Sentiment:',
+              LocaleKeys.priceSentimentWidget_details_clientSentiment,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 fontWeight: FontWeight.bold,
@@ -83,7 +84,7 @@ class PriceSentimentDetails extends StatelessWidget {
             verticalSpaceSmall(context),
             verticalSpaceSmall(context),
             Text(
-              'Trading Activity',
+              LocaleKeys.priceSentimentWidget_details_tradingActivity,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 fontWeight: FontWeight.bold,
@@ -107,7 +108,7 @@ class PriceSentimentDetails extends StatelessWidget {
             verticalSpaceSmall(context),
             verticalSpaceSmall(context),
             Text(
-              'Price Range',
+              LocaleKeys.priceSentimentWidget_details_priceRange,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 fontWeight: FontWeight.bold,
@@ -131,7 +132,7 @@ class PriceSentimentDetails extends StatelessWidget {
             verticalSpaceSmall(context),
             verticalSpaceSmall(context),
             Text(
-              'Price Volatility',
+              LocaleKeys.priceSentimentWidget_details_priceVolatility,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 fontWeight: FontWeight.bold,
@@ -184,7 +185,7 @@ class PriceSentimentDetails extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Activity",
+                  LocaleKeys.activity,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 2),
                     fontWeight: FontWeight.bold,
@@ -235,7 +236,7 @@ class PriceSentimentDetails extends StatelessWidget {
     return SfCartesianChart(
       primaryXAxis: CategoryAxis(
         title: AxisTitle(
-          text: 'Days',
+          text: LocaleKeys.days,
           textStyle: CustomThemeData.generateStyle(
             fontSize: McGyver.textSize(context, 1.5),
             fontWeight: FontWeight.bold,
@@ -270,7 +271,7 @@ class PriceSentimentDetails extends StatelessWidget {
           color: isDarkMode ? const Color(0xFFFFFFFF) : const Color(0xFF667085),
         ),
         title: AxisTitle(
-          text: 'price Movement',
+          text: LocaleKeys.priceSentimentWidget_details_priceMovement,
           textStyle: CustomThemeData.generateStyle(
             fontSize: McGyver.textSize(context, 1.5),
             fontWeight: FontWeight.bold,
@@ -298,7 +299,7 @@ class PriceSentimentDetails extends StatelessWidget {
           dataSource: viewModel.activityChartData,
           xValueMapper: (ActivityChartData sales, _) => sales.day,
           yValueMapper: (ActivityChartData sales, _) => sales.price,
-          name: 'Price',
+          name: LocaleKeys.price,
         ),
       ],
     );

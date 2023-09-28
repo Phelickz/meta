@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
@@ -42,7 +43,7 @@ class EmailVerifiedSuccessPage extends StatelessWidget {
             horizontal: McGyver.rsDoubleW(context, 4),
           ),
           child: Text(
-            "Email Verified Successfully",
+            LocaleKeys.emailVerifiedSuccessfully,
             textAlign: TextAlign.center,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 2.6),
@@ -61,7 +62,7 @@ class EmailVerifiedSuccessPage extends StatelessWidget {
           child: RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
-                text: "Your email account ",
+                text: LocaleKeys.yourEmailAccount,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
                   fontWeight: FontWeight.w500,
@@ -81,7 +82,7 @@ class EmailVerifiedSuccessPage extends StatelessWidget {
                     ),
                   ),
                   const TextSpan(
-                    text: ' has been verified successfully',
+                    text: LocaleKeys.hasBeenVerified,
                   )
                 ]),
           ),
@@ -92,7 +93,7 @@ class EmailVerifiedSuccessPage extends StatelessWidget {
           onTap: () {
             model.securityPageEnum = SecurityPageEnum.addPasskeyEnter;
           },
-          text: 'Continue',
+          text: LocaleKeys.continueWord,
         ),
       ],
     );

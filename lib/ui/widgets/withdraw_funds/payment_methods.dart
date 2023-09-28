@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/withdraw_funds/withdraw_funds_view_model.dart';
 import 'package:meta_trader/ui/widgets/withdraw_funds/payment_method_tile_withdraw.dart';
 
@@ -24,7 +25,7 @@ class PaymentMethodWithdraw extends StatelessWidget {
           children: [
             verticalSpaceXSmall(context),
             Text(
-              "Select preferred payment method",
+              LocaleKeys.withdrawFunds_paymentMethodWidget_selectPreferred,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.5),
                 fontWeight: FontWeight.w500,

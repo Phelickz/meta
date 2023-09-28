@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
 import '../../../app/responsiveness/res.dart';
@@ -31,7 +32,7 @@ class UpdateReleasePage extends StatelessWidget {
                 ? AssetManager.updateImageDark
                 : AssetManager.updateImageLight),
           ),
-          Text("Update release",
+          Text(LocaleKeys.settings_updateRelease_updateReleaseText,
               style: CustomThemeData.generateStyle(
                 fontSize: 24,
                 color: isDarkMode ? Colors.white : const Color(0xff667085),
@@ -46,7 +47,7 @@ class UpdateReleasePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("This update",
+                    Text(LocaleKeys.settings_updateRelease_thisUpdate,
                         style: CustomThemeData.generateStyle(
                           fontSize: 16,
                           color: isDarkMode
@@ -97,9 +98,12 @@ class UpdateReleasePage extends StatelessWidget {
                 )),
           ),
           CustomButtons.generalButton(
-              context: context, onTap: () {}, text: "Update"),
+              context: context, onTap: () {}, text: LocaleKeys.update),
           CustomButtons.generalTextButton(
-              context: context, onTap: () {}, text: "Cancel"),
+            context: context,
+            onTap: () {},
+            text: LocaleKeys.cancel,
+          ),
         ],
       ),
     );

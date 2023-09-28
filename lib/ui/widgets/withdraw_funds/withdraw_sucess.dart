@@ -4,6 +4,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/withdraw_funds/withdraw_funds_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
@@ -30,7 +31,8 @@ class WithdrawSuccess extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: Text(
-              'Your Transaction is Being Processed',
+              LocaleKeys
+                  .withdrawFunds_withdrawSuccessWidget_yourTransactionIsBeing,
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2.4),
@@ -45,8 +47,7 @@ class WithdrawSuccess extends StatelessWidget {
             child: RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                text:
-                    'Financial regulations require us to verify your ID. This helps prevent someone else from creating a MT5 account in your name.',
+                text: LocaleKeys.financialRegulation,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
                   color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -60,8 +61,8 @@ class WithdrawSuccess extends StatelessWidget {
                     ),
                   ),
                   TextSpan(
-                    text:
-                        'You can skip this step but you will not be able to withdraw your funds. ',
+                    text: LocaleKeys
+                        .withdrawFunds_withdrawSuccessWidget_youCanSkip,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.6),
                       color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -73,11 +74,12 @@ class WithdrawSuccess extends StatelessWidget {
           ),
           const Spacer(),
           CustomButtons.generalButton(
-              context: context,
-              onTap: () {
-                model.push(const BottomNavBarRoute());
-              },
-              text: 'Back'),
+            context: context,
+            onTap: () {
+              model.push(const BottomNavBarRoute());
+            },
+            text: LocaleKeys.back,
+          ),
           verticalSpaceMedium(context),
         ],
       ),

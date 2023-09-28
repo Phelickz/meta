@@ -1,10 +1,12 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/referral/components/referral_tile.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -45,7 +47,7 @@ class ReferralPage extends StatelessWidget {
               child: SizedBox(
                   width: 300.pWidth(context),
                   child: Text(
-                    "Refer now and earn \$10 credit on your next trade",
+                    LocaleKeys.referralWidget_referNowAndEarn.tr(args: ['\$']),
                     textAlign: TextAlign.center,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 2.4),
@@ -71,7 +73,7 @@ class ReferralPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    "Referral Code",
+                    LocaleKeys.referralWidget_referralCode,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.5),
                       color: const Color(0xffECF7FE),
@@ -103,7 +105,7 @@ class ReferralPage extends StatelessWidget {
               height: 16.pHeight(context),
             ),
             Text(
-              'How does it work',
+              LocaleKeys.referralWidget_howDoesItWork,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2),
                 color: isDarkMode ? Colors.white54 : Colors.black87,
@@ -112,22 +114,21 @@ class ReferralPage extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             const ReferralTile(
-              title: "Invite your friends to register on Meta Trader 5 ",
+              title: LocaleKeys.referralWidget_inviteYourFriends,
               icon: AssetManager.convert,
             ),
             SizedBox(
               height: 16.pHeight(context),
             ),
-            const ReferralTile(
-              title:
-                  "When your friend registers on app, both of you will get \$10 reward credit ",
+            ReferralTile(
+              title: LocaleKeys.referralWidget_whenYourFriend.tr(args: ['\$']),
               icon: AssetManager.paymentMethod,
             ),
             SizedBox(
               height: 16.pHeight(context),
             ),
             const ReferralTile(
-              title: "Your reward credit can then be used on your next trade",
+              title: LocaleKeys.referralWidget_yourRewardCredit,
               icon: AssetManager.reward,
             ),
             SizedBox(
@@ -136,9 +137,9 @@ class ReferralPage extends StatelessWidget {
             CustomButtons.generalButton(
               context: context,
               onTap: () async {
-                await Share.share('check out my app https://example.com');
+                await Share.share(LocaleKeys.referralWidget_checkOutMyApp);
               },
-              text: "Refer Now",
+              text: LocaleKeys.referralWidget_referNow,
             ),
             verticalSpaceMedium(context),
           ],

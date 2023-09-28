@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/transactions/transactions_view_model.dart';
 import 'package:meta_trader/ui/widgets/transactions/components/transaction_tile.dart';
 
@@ -22,7 +23,7 @@ class WithdrawalTransactionsPage extends StatelessWidget {
         children: [
           verticalSpaceSmall(context),
           Text(
-            'August',
+            LocaleKeys.august,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.8),
               color:

@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../app/responsiveness/res.dart';
 import '../../../../app/responsiveness/size.dart';
 import '../../../../app/utils/theme.dart';
+import '../../../../generated/locale_keys.g.dart';
 import 'delete_popup.dart';
 
 class PasskeyTile extends StatelessWidget {
@@ -33,7 +34,7 @@ class PasskeyTile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Passkey",
+                  LocaleKeys.passkey,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 2.1),
                     fontWeight: FontWeight.bold,
@@ -46,7 +47,8 @@ class PasskeyTile extends StatelessWidget {
                   height: McGyver.rsDoubleH(context, 0.3),
                 ),
                 Text(
-                  "Added: 12 July, 2023",
+                  LocaleKeys
+                      .securityWidget_securityComponents_passkeyTile_added12,
                   textAlign: TextAlign.left,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.4),
@@ -55,7 +57,8 @@ class PasskeyTile extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "Last used: 2 days ago",
+                  LocaleKeys
+                      .securityWidget_securityComponents_passkeyTile_lastUsed,
                   textAlign: TextAlign.left,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.4),
@@ -119,7 +122,7 @@ class PasskeyTile extends StatelessWidget {
         alignment: Alignment.center,
         insetPadding: const EdgeInsets.all(10),
         child: DeletePopup(
-          title: "Passkey",
+          title: LocaleKeys.passKeys,
           onDelete: () {},
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/transactions/transactions_view_model.dart';
 import 'package:meta_trader/ui/widgets/transactions/deposits.dart';
 import 'package:meta_trader/ui/widgets/transactions/internal_transfer.dart';
@@ -17,21 +18,21 @@ class TransactionsPage extends StatelessWidget {
     return ContainedTabBarView(
       tabs: [
         Text(
-          'Withdrawal',
+          LocaleKeys.withdrawal,
           style: CustomThemeData.generateStyle(
             fontSize: 12,
             color: isDarkMode ? Colors.white54 : Colors.black,
           ),
         ),
         Text(
-          'Deposits',
+          LocaleKeys.deposit,
           style: CustomThemeData.generateStyle(
             fontSize: 12,
             color: isDarkMode ? Colors.white54 : Colors.black,
           ),
         ),
         Text(
-          'Between Accounts',
+          LocaleKeys.betweenAccounts,
           style: CustomThemeData.generateStyle(
             fontSize: 12,
             color: isDarkMode ? Colors.white54 : Colors.black,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/filter_positon_modal.dart';
@@ -27,7 +28,7 @@ class TradingHistory extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Positions',
+                LocaleKeys.positions,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2),
                   fontWeight: FontWeight.bold,
@@ -86,8 +87,8 @@ class TradingHistory extends StatelessWidget {
             },
             text: model.socialTradingPageEnum ==
                     SocialTradingPageEnum.copiedTraderPosition
-                ? 'Stop Copying'
-                : 'Start Copying'),
+                ? LocaleKeys.stopCoping
+                : LocaleKeys.socialTradingWidget_myTrades_startCopying),
         verticalSpaceMedium(context)
       ],
     );

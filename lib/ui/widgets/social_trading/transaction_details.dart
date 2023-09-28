@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
 import '../../views/social_trading/social_trading_view_model.dart';
@@ -29,10 +30,10 @@ class TransactionDetailsPage extends StatelessWidget {
           verticalSpaceXSmall(context),
           Text(
             transaction.type == TransactionsTypeEnum.withdrawal
-                ? "Withdrawals"
+                ? LocaleKeys.withdrawal
                 : transaction.type == TransactionsTypeEnum.deposit
-                    ? "Deposit"
-                    : "Internal Transfers",
+                    ? LocaleKeys.deposit
+                    : LocaleKeys.internalTransfer,
             textAlign: TextAlign.left,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.9),
@@ -101,7 +102,7 @@ class TransactionDetailsPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Date",
+                              LocaleKeys.date,
                               style: CustomThemeData.generateStyle(
                                   fontSize: McGyver.textSize(context, 1.4),
                                   fontWeight: FontWeight.w500,
@@ -127,7 +128,7 @@ class TransactionDetailsPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Sender",
+                              LocaleKeys.sender,
                               style: CustomThemeData.generateStyle(
                                   fontSize: McGyver.textSize(context, 1.4),
                                   fontWeight: FontWeight.w500,
@@ -153,7 +154,7 @@ class TransactionDetailsPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Receiver",
+                              LocaleKeys.receiver,
                               style: CustomThemeData.generateStyle(
                                 fontSize: McGyver.textSize(context, 1.4),
                                 fontWeight: FontWeight.w500,
@@ -180,7 +181,7 @@ class TransactionDetailsPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Status",
+                              LocaleKeys.status,
                               style: CustomThemeData.generateStyle(
                                   fontSize: McGyver.textSize(context, 1.4),
                                   fontWeight: FontWeight.w500,
@@ -203,7 +204,7 @@ class TransactionDetailsPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Transaction Id",
+                              LocaleKeys.transactionId,
                               style: CustomThemeData.generateStyle(
                                   fontSize: McGyver.textSize(context, 1.4),
                                   fontWeight: FontWeight.w500,
@@ -230,7 +231,7 @@ class TransactionDetailsPage extends StatelessWidget {
           CustomButtons.generalButton(
             context: context,
             onTap: () {},
-            text: "Report Transaction",
+            text: LocaleKeys.reportTransaction,
           ),
           verticalSpaceSmall(context),
           verticalSpaceSmall(context),

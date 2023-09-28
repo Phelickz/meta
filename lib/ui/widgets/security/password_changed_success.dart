@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
@@ -38,7 +39,8 @@ class PasswordChangedSuccessPage extends StatelessWidget {
             horizontal: McGyver.rsDoubleW(context, 10),
           ),
           child: Text(
-            "Password Changed Successfully",
+            LocaleKeys
+                .securityWidget_passwordChangedSuccess_passwordChangedSuccessText,
             textAlign: TextAlign.center,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 3),
@@ -58,7 +60,7 @@ class PasswordChangedSuccessPage extends StatelessWidget {
             textAlign: TextAlign.center,
             text: TextSpan(
               text:
-                  "It will take 24 hours before you can make withdrawals. Please wait patiently",
+                  LocaleKeys.securityWidget_passwordChangedSuccess_itWillTake24,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.7),
                 fontWeight: FontWeight.w500,
@@ -77,7 +79,7 @@ class PasswordChangedSuccessPage extends StatelessWidget {
           child: CustomButtons.generalButton(
             context: context,
             onTap: () {},
-            text: 'Continue',
+            text: LocaleKeys.continueWord,
           ),
         ),
       ],

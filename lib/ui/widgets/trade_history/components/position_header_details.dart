@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../../app/responsiveness/res.dart';
 import '../../../../app/utils/theme.dart';
@@ -36,7 +37,7 @@ class PositionHeaderDetails extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Profit",
+                      LocaleKeys.profit,
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.5),
                         fontWeight: FontWeight.w500,
@@ -64,7 +65,7 @@ class PositionHeaderDetails extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      "Deposit",
+                      LocaleKeys.deposit,
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.5),
                         fontWeight: FontWeight.w500,
@@ -96,7 +97,7 @@ class PositionHeaderDetails extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Balance",
+                      LocaleKeys.balance,
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.5),
                         fontWeight: FontWeight.w500,
@@ -129,7 +130,7 @@ class PositionHeaderDetails extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Swap",
+                      LocaleKeys.swap,
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.5),
                         fontWeight: FontWeight.w500,
@@ -162,7 +163,7 @@ class PositionHeaderDetails extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Commission",
+                      LocaleKeys.commission,
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.5),
                         fontWeight: FontWeight.w500,

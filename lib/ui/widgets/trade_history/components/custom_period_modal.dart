@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../../app/responsiveness/res.dart';
 import '../../../../app/responsiveness/size.dart';
@@ -21,7 +22,7 @@ class CustomPeriodModal extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Custom Period",
+            LocaleKeys.customPeriod,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.9),
               fontWeight: FontWeight.w500,
@@ -31,12 +32,14 @@ class CustomPeriodModal extends StatelessWidget {
           verticalSpaceSmall(context),
           verticalSpaceXSmall(context),
           LabelDatePicker(
-            label: "Start Date",
+            label: LocaleKeys
+                .providerWidget_providerComponent_pModelBottomSheet_startDate,
             context: context,
             onDateSelected: (date) {},
           ),
           LabelDatePicker(
-            label: "End Date",
+            label: LocaleKeys
+                .providerWidget_providerComponent_pModelBottomSheet_endDate,
             context: context,
             selectedDate: null,
             lastDate: null,
@@ -48,7 +51,7 @@ class CustomPeriodModal extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
             },
-            text: "Confirm",
+            text: LocaleKeys.confirm,
           ),
         ],
       ),

@@ -277,6 +277,18 @@ abstract class  LocaleKeys {
   static const leaveAMark = 'leaveAMark';
   static const additionalInformation = 'additionalInformation';
   static const depositFromBinancePay = 'depositFromBinancePay';
+  static const priceSentiments = 'priceSentiments';
+  static const sell = 'sell';
+  static const pattern = 'pattern';
+  static const phoneVerification = 'phoneVerification';
+  static const changePreference = 'changePreference';
+  static const lowCommission = 'lowCommission';
+  static const viewAll = 'viewAll';
+  static const closeBuyPosition = 'closeBuyPosition';
+  static const credit = 'credit';
+  static const customPeriod = 'customPeriod';
+  static const swap = 'swap';
+  static const deals = 'deals';
   static const views_auth_auth_view_auth_page_enum_broker = 'views.auth.auth_view.auth_page_enum.broker';
   static const views_auth_auth_view_auth_page_enum_chooseAccount = 'views.auth.auth_view.auth_page_enum.chooseAccount';
   static const views_auth_auth_view_auth_page_enum_demoAccount = 'views.auth.auth_view.auth_page_enum.demoAccount';
@@ -893,6 +905,9 @@ abstract class  LocaleKeys {
   static const settings_aboutUs_joinUsOnTelegram = 'settings.aboutUs.joinUsOnTelegram';
   static const settings_aboutUs_checkForUpdate = 'settings.aboutUs.checkForUpdate';
   static const settings_aboutUs = 'settings.aboutUs';
+  static const settings_colorPreferenceWidget_blueBuyRedSell = 'settings.colorPreferenceWidget.blueBuyRedSell';
+  static const settings_colorPreferenceWidget_blueSellRedBuy = 'settings.colorPreferenceWidget.blueSellRedBuy';
+  static const settings_colorPreferenceWidget = 'settings.colorPreferenceWidget';
   static const settings_changeBasis_whenYouSwitch = 'settings.changeBasis.whenYouSwitch';
   static const settings_changeBasis = 'settings.changeBasis';
   static const settings_settingsPage_pushNotification = 'settings.settingsPage.pushNotification';
@@ -950,6 +965,7 @@ abstract class  LocaleKeys {
   static const socialTradingWidget_overViewWidget_maxUnrealizedLoss = 'socialTradingWidget.overViewWidget.maxUnrealizedLoss';
   static const socialTradingWidget_overViewWidget_maxDrawDownDuration = 'socialTradingWidget.overViewWidget.maxDrawDownDuration';
   static const socialTradingWidget_overViewWidget_priceMovement = 'socialTradingWidget.overViewWidget.priceMovement';
+  static const socialTradingWidget_overViewWidget_helloEveryOne = 'socialTradingWidget.overViewWidget.helloEveryOne';
   static const socialTradingWidget_overViewWidget = 'socialTradingWidget.overViewWidget';
   static const socialTradingWidget_subscriptionGuideWidget_learnAbout = 'socialTradingWidget.subscriptionGuideWidget.learnAbout';
   static const socialTradingWidget_subscriptionGuideWidget_copyProportion = 'socialTradingWidget.subscriptionGuideWidget.copyProportion';

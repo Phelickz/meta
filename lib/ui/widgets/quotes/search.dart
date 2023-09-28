@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/quotes/quotes_view_model.dart';
 import 'package:meta_trader/ui/widgets/quotes/components/search_quotes_tile.dart';
 
@@ -29,7 +30,7 @@ class SearchPage extends StatelessWidget {
                 horizontal: McGyver.textSize(context, 2),
               ),
               child: CustomTextFields(
-                hintText: "Search pairs",
+                hintText: LocaleKeys.searchPairs,
                 suffixIcon: Icon(
                   Icons.search,
                   color: isDarkMode ? Colors.white38 : Colors.black,

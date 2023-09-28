@@ -2,6 +2,7 @@ import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/quotes/components/modern_view_tile.dart';
 
 import '../../../app/responsiveness/res.dart';
@@ -17,20 +18,18 @@ class ModernMarketView extends StatelessWidget {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return ContainedTabBarView(
       tabs: const [
+        Text(LocaleKeys.popular),
         Text(
-          'Popular',
+          LocaleKeys.quotesWidget_modernViewWidget_topMovers,
         ),
         Text(
-          'Top Movers',
+          LocaleKeys.major,
         ),
         Text(
-          'Major',
+          LocaleKeys.metals,
         ),
         Text(
-          'Metals',
-        ),
-        Text(
-          'Crypto',
+          LocaleKeys.crypto,
         ),
       ],
       tabBarProperties: TabBarProperties(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/profile/components/verification_status_indicator.dart';
 
@@ -51,7 +52,8 @@ class VerificationBar extends StatelessWidget {
                       children: [
                         Align(
                           child: Text(
-                            "Verify your account",
+                            LocaleKeys
+                                .profile_verificationBar_verifyYourAccount,
                             textAlign: TextAlign.left,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.9),
@@ -65,7 +67,7 @@ class VerificationBar extends StatelessWidget {
                           height: 5.pHeight(context),
                         ),
                         Text(
-                          "To make your first deposit, we would like to know you better. click ‘continue’ to get started",
+                          LocaleKeys.profile_verificationBar_toMakeFirstD,
                           style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.4),
                               fontWeight: FontWeight.w400,
@@ -81,11 +83,12 @@ class VerificationBar extends StatelessWidget {
                 ],
               ),
               CustomButtons.generalButton(
-                  context: context,
-                  onTap: () {
-                    model.push(const VerificationRoute());
-                  },
-                  text: "Continue")
+                context: context,
+                onTap: () {
+                  model.push(const VerificationRoute());
+                },
+                text: LocaleKeys.continueWord,
+              )
             ],
           ),
         ),

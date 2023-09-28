@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/trade/trade_view_model.dart';
 import 'package:meta_trader/ui/widgets/trade/components/trade_header_details.dart';
 import 'package:meta_trader/ui/widgets/trade/components/trade_tile.dart';
@@ -33,7 +34,7 @@ class TradePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Positions",
+                LocaleKeys.positions,
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     fontWeight: FontWeight.bold,

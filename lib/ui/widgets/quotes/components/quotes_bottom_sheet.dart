@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/quotes/quotes_view_model.dart';
 import 'package:meta_trader/ui/views/quotes/trade_close_screen.dart';
 import 'package:meta_trader/ui/views/quotes/trade_depth_screen.dart';
@@ -37,7 +38,7 @@ class QuotesBottomSheet extends StatelessWidget {
             child: Column(
           children: [
             Text(
-              "EURUSDs: Euro vs US Dollar",
+              LocaleKeys.quotesWidget_components_quotesBottomSheet_euroVsDollar,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.9),
                 fontWeight: FontWeight.bold,
@@ -46,7 +47,7 @@ class QuotesBottomSheet extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             QuotesBottomSheetTile(
-              label: "Trade",
+              label: LocaleKeys.trade,
               onPressed: () {
                 Navigator.push(
                   context,
@@ -59,7 +60,7 @@ class QuotesBottomSheet extends StatelessWidget {
               },
             ),
             QuotesBottomSheetTile(
-              label: "Chart",
+              label: LocaleKeys.chart,
               onPressed: () {
                 Navigator.push(
                   context,
@@ -72,7 +73,7 @@ class QuotesBottomSheet extends StatelessWidget {
               },
             ),
             QuotesBottomSheetTile(
-              label: "Details",
+              label: LocaleKeys.details,
               onPressed: () {
                 Navigator.push(
                   context,
@@ -85,7 +86,7 @@ class QuotesBottomSheet extends StatelessWidget {
               },
             ),
             QuotesBottomSheetTile(
-              label: "Statistics",
+              label: LocaleKeys.statistics,
               onPressed: () {
                 Navigator.push(
                   context,
@@ -98,7 +99,7 @@ class QuotesBottomSheet extends StatelessWidget {
               },
             ),
             QuotesBottomSheetTile(
-              label: "Depth of market",
+              label: LocaleKeys.depthOfMarket,
               onPressed: () {
                 Navigator.push(
                   context,
@@ -111,14 +112,14 @@ class QuotesBottomSheet extends StatelessWidget {
               },
             ),
             QuotesBottomSheetTile(
-                label: "Delete", isRed: true, onPressed: () {}),
+                label: LocaleKeys.delete, isRed: true, onPressed: () {}),
             verticalSpaceSmall(context),
             CustomButtons.generalButton(
               context: context,
               onTap: () {
                 Navigator.pop(context);
               },
-              text: "Cancel",
+              text: LocaleKeys.cancel,
               color: isDarkMode
                   ? const Color(0xFF052844)
                   : const Color(0xFFD3ECFD),

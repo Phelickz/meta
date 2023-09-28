@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
 import 'package:meta_trader/ui/widgets/provider/components/p_modal_bottomsheet.dart';
 import 'package:meta_trader/ui/widgets/provider/components/p_profit_bar.dart';
@@ -30,7 +31,7 @@ class PTradeHistory extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Positions",
+              LocaleKeys.positions,
               style: CustomThemeData.generateColoredStyle(
                   fontSize: 16,
                   context: context,

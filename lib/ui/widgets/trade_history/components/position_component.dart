@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/trade_history/components/position_header_details.dart';
 import 'package:meta_trader/ui/widgets/trade_history/components/trade_tile.dart';
 
@@ -23,7 +24,7 @@ class PositionComponent extends StatelessWidget {
             horizontal: McGyver.rsDoubleW(context, 6),
           ),
           child: Text(
-            "Last week",
+            LocaleKeys.lastWeek,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.8),
               fontWeight: FontWeight.bold,

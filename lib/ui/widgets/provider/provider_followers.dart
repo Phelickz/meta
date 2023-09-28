@@ -1,10 +1,12 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
 import 'package:meta_trader/ui/widgets/provider/components/provider_appbar.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
@@ -19,7 +21,12 @@ class ProviderFollowerPage extends StatelessWidget {
     return Skeleton(
       isBusy: viewModel.isBusy,
       appBar: ProviderAppbar.simpleAppBar(
-          viewModel, context, "Followers", "View your followers", false, null),
+          viewModel,
+          context,
+          LocaleKeys.followers,
+          LocaleKeys.views_providerView_viewYourFollowers,
+          false,
+          null),
       body: Column(
         children: [
           SizedBox(
@@ -30,7 +37,7 @@ class ProviderFollowerPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Followed Recently",
+                LocaleKeys.providerWidget_providerFollowers_followedRecently,
                 style: CustomThemeData.generateColoredStyle(
                     fontSize: 16,
                     context: context,
@@ -111,7 +118,8 @@ class ProviderFollowerPage extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  "Started Following: ${followerDetail["date"]}",
+                  LocaleKeys.providerWidget_providerFollowers_startedFollowing
+                      .tr(args: [' ${followerDetail["date"]}']),
                   style: CustomThemeData.generateColoredStyle(
                       fontSize: 12,
                       context: context,
@@ -128,7 +136,7 @@ class ProviderFollowerPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
-                  "Location",
+                  LocaleKeys.location,
                   style: CustomThemeData.generateColoredStyle(
                       fontSize: 12,
                       context: context,

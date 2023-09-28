@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
 class TradeBulkOperationModal extends StatelessWidget {
@@ -19,7 +20,7 @@ class TradeBulkOperationModal extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            "Bulk Operations",
+            LocaleKeys.bulkOperations,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.7),
               fontWeight: FontWeight.bold,
@@ -40,32 +41,33 @@ class TradeBulkOperationModal extends StatelessWidget {
           verticalSpaceSmall(context),
           _buttonText(
             context: context,
-            label: "Close all positions",
+            label: LocaleKeys.closeAllPositions,
             onTap: () {},
           ),
           _buttonText(
             context: context,
-            label: "Close profitable positions",
+            label: LocaleKeys.closeProfitable,
             onTap: () {},
           ),
           _buttonText(
             context: context,
-            label: "Close losing positions",
+            label: LocaleKeys.closeAllLosing,
             onTap: () {},
           ),
           _buttonText(
             context: context,
-            label: "Close Buy positions",
+            label: LocaleKeys.closeBuyPosition,
             onTap: () {},
           ),
           _buttonText(
             context: context,
-            label: "Close AUDJPYs positions",
+            label:
+                LocaleKeys.tradeWidget_tradeBulkOperation_closeAUDJPYPosition,
             onTap: () {},
           ),
           _buttonText(
             context: context,
-            label: "Reverse AUDJPY buy",
+            label: LocaleKeys.tradeWidget_tradeBulkOperation_reverseAUDJPYBuy,
             onTap: () {},
           ),
           verticalSpaceSmall(context),
@@ -74,7 +76,7 @@ class TradeBulkOperationModal extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
             },
-            text: "Cancel",
+            text: LocaleKeys.cancel,
             color:
                 isDarkMode ? const Color(0xFF052844) : const Color(0xFFD3ECFD),
             textColor:

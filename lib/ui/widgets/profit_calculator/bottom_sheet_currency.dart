@@ -4,6 +4,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/profit_calculator/profit_calculator_view_model.dart';
 import 'package:meta_trader/ui/widgets/auth/radio_button.dart';
 
@@ -45,7 +46,7 @@ class _ProfitBottomSheetCurrencyState extends State<ProfitBottomSheetCurrency> {
                 children: [
                   verticalSpaceSmall(context),
                   Text(
-                    'Select Account Currency',
+                    LocaleKeys.selectAccountCurrency,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.8),
                       color: isDarkMode ? Colors.white : ColorManager.lightText,
@@ -70,7 +71,7 @@ class _ProfitBottomSheetCurrencyState extends State<ProfitBottomSheetCurrency> {
                         setState(() {});
                       },
                       decoration: InputDecoration(
-                        hintText: 'Search',
+                        hintText: LocaleKeys.search,
                         hintStyle: CustomThemeData.generateStyle(
                           fontSize: 15,
                           color: Theme.of(context).secondaryHeaderColor,

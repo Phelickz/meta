@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/security/components/change_password_modal.dart';
 
 import '../../../app/responsiveness/res.dart';
@@ -24,7 +25,7 @@ class SecurityMainPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Two-Factor Authentication",
+              LocaleKeys.securityWidget_securityMain_twoFactorAuthentication,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2.2),
                 fontWeight: FontWeight.bold,
@@ -34,7 +35,7 @@ class SecurityMainPage extends StatelessWidget {
               ),
             ),
             Text(
-              "To protect your account, it is required for you to turn on at least one 2FA",
+              LocaleKeys.securityWidget_securityMain_toProtectYourAccount,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.6),
                 fontWeight: FontWeight.w500,
@@ -51,7 +52,7 @@ class SecurityMainPage extends StatelessWidget {
           vm: model,
           hasLeadingIcon: true,
           hasStatus: true,
-          label: "Passkey",
+          label: LocaleKeys.passkey,
           status: SecurityOptionStatus.confirmed,
           onTap: () => model.securityPageEnum = SecurityPageEnum.passkey,
         ),
@@ -59,7 +60,7 @@ class SecurityMainPage extends StatelessWidget {
           assetName: "assets/images/message_text.svg",
           vm: model,
           hasLeadingIcon: true,
-          label: "Email",
+          label: LocaleKeys.email,
           status: SecurityOptionStatus.unconfirmed,
           hasStatus: true,
           onTap: () => model.securityPageEnum = SecurityPageEnum.emailVerify,
@@ -68,7 +69,7 @@ class SecurityMainPage extends StatelessWidget {
           assetName: "assets/images/mobile.svg",
           vm: model,
           hasLeadingIcon: true,
-          label: "Phone Number",
+          label: LocaleKeys.phoneNumber,
           status: SecurityOptionStatus.unconfirmed,
           hasStatus: true,
           onTap: () => model.securityPageEnum = SecurityPageEnum.phoneVerify,
@@ -76,7 +77,7 @@ class SecurityMainPage extends StatelessWidget {
         SecurityOptionTile(
           assetName: "assets/images/password_check.svg",
           vm: model,
-          label: "Password",
+          label: LocaleKeys.password,
           hasStatus: true,
           hasLeadingIcon: true,
           status: SecurityOptionStatus.confirmed,
@@ -85,7 +86,7 @@ class SecurityMainPage extends StatelessWidget {
         ),
         verticalSpaceMedium(context),
         Text(
-          "Others",
+          LocaleKeys.others,
           style: CustomThemeData.generateStyle(
             fontSize: McGyver.textSize(context, 2.2),
             fontWeight: FontWeight.bold,
@@ -97,20 +98,20 @@ class SecurityMainPage extends StatelessWidget {
         SecurityOptionTile(
           assetName: "assets/images/password_check.svg",
           vm: model,
-          label: "Auto-Lock",
+          label: LocaleKeys.securityWidget_securityMain_autoLockText,
           onTap: () => model.securityPageEnum = SecurityPageEnum.autoLock,
         ),
         SecurityOptionTile(
           assetName: "assets/images/password_check.svg",
           vm: model,
-          label: "Devices",
+          label: LocaleKeys.devices,
           onTap: () => model.securityPageEnum = SecurityPageEnum.devices,
         ),
         verticalSpaceSmall(context),
         SecurityOptionTile(
           assetName: "assets/images/password_check.svg",
           vm: model,
-          label: "Disable Account",
+          label: LocaleKeys.securityWidget_securityMain_disableAccount,
           hasRedLabel: true,
           onTap: () {
             showDialog(
@@ -170,7 +171,7 @@ class DisableccountDialog extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              "Disable account",
+              LocaleKeys.securityWidget_securityMain_disableAccount,
               style: Theme.of(context)
                   .textTheme
                   .labelLarge
@@ -178,7 +179,7 @@ class DisableccountDialog extends StatelessWidget {
             ),
             SizedBox(height: 12.pHeight(context)),
             Text(
-              'Do you really want to disable account?',
+              LocaleKeys.securityWidget_securityMain_doYouReallyWantToDisable,
               style: Theme.of(context).textTheme.labelMedium,
             ),
             SizedBox(height: 24.pWidth(context)),
@@ -196,7 +197,7 @@ class DisableccountDialog extends StatelessWidget {
                         border: Border.all(color: Colors.red)),
                     child: Center(
                       child: Text(
-                        "Disable",
+                        LocaleKeys.disable,
                         style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 2),
                             color: Colors.red,
@@ -213,7 +214,7 @@ class DisableccountDialog extends StatelessWidget {
                     Navigator.pop(context);
                   },
                   child: Text(
-                    "Cancel",
+                    LocaleKeys.cancel,
                     style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 2),
                         color: isDarkMode ? Colors.white : Colors.black,

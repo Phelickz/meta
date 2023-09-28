@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
 
@@ -39,7 +40,7 @@ class PhoneVerificationPage extends StatelessWidget {
               horizontal: McGyver.rsDoubleW(context, 4),
             ),
             child: Text(
-              "Phone Verification",
+              LocaleKeys.phoneVerification,
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2.6),

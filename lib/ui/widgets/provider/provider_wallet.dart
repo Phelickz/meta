@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
 
 import '../../../app/responsiveness/size.dart';
@@ -23,7 +24,7 @@ class WalletPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Actions",
+              LocaleKeys.actions,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.9),
                 fontWeight: FontWeight.bold,
@@ -39,7 +40,7 @@ class WalletPage extends StatelessWidget {
                 bottomIcons(
                   context,
                   'assets/icons/money_receive_outline.svg',
-                  'Deposit Funds',
+                  LocaleKeys.depositFunds,
                   () {
                     viewModel.push(const FundAccountRoute());
                   },
@@ -47,7 +48,7 @@ class WalletPage extends StatelessWidget {
                 bottomIcons(
                   context,
                   'assets/icons/money_send_outline.svg',
-                  'Withdraw Funds',
+                  LocaleKeys.withdrawFunds,
                   () {
                     viewModel.push(const WithdrawFundRoute());
                   },
@@ -55,7 +56,7 @@ class WalletPage extends StatelessWidget {
                 bottomIcons(
                   context,
                   'assets/icons/recovery_convert.svg',
-                  'Internal Transfer',
+                  LocaleKeys.internalTransfer,
                   () {
                     viewModel.push(const InternalTransferRoute());
                   },
@@ -63,7 +64,7 @@ class WalletPage extends StatelessWidget {
                 bottomIcons(
                   context,
                   'assets/images/message_question.svg',
-                  'Report an Issue',
+                  LocaleKeys.providerWidget_providerWallet_reportAnIssue,
                   () {
                     viewModel.push(const HelpAndSupportRoute());
                   },
@@ -79,7 +80,7 @@ class WalletPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Recent Transactions",
+                  LocaleKeys.recentTransaction,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.9),
                     fontWeight: FontWeight.bold,
@@ -93,7 +94,7 @@ class WalletPage extends StatelessWidget {
                     viewModel.push(const TransactionsRoute());
                   },
                   child: Text(
-                    "View All",
+                    LocaleKeys.viewMore,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.4),
                       fontWeight: FontWeight.w500,
@@ -111,7 +112,8 @@ class WalletPage extends StatelessWidget {
               transaction: TransactionModel(
                 id: "1",
                 type: TransactionsTypeEnum.deposit,
-                title: "Deposit from Neteller",
+                title: LocaleKeys
+                    .providerWidget_providerWallet_depositFromNeteller,
                 amount: "55,000",
                 status: TransactionStatusEnum.successful,
                 date: "2.1.2023",
@@ -123,7 +125,8 @@ class WalletPage extends StatelessWidget {
               transaction: TransactionModel(
                 id: "1",
                 type: TransactionsTypeEnum.internalTransfer,
-                title: "Metawallet to Wallet",
+                title:
+                    LocaleKeys.providerWidget_providerWallet_metaWalletToWallet,
                 amount: "55,000",
                 status: TransactionStatusEnum.pending,
                 date: "2.1.2023",
@@ -135,7 +138,8 @@ class WalletPage extends StatelessWidget {
               transaction: TransactionModel(
                 id: "1",
                 type: TransactionsTypeEnum.withdrawal,
-                title: "Transfer to SticPay",
+                title:
+                    LocaleKeys.providerWidget_providerWallet_transferToSticPay,
                 amount: "55,000",
                 status: TransactionStatusEnum.successful,
                 date: "2.1.2023",
@@ -147,7 +151,7 @@ class WalletPage extends StatelessWidget {
               transaction: TransactionModel(
                 id: "1",
                 type: TransactionsTypeEnum.deposit,
-                title: "Deposit to deriv",
+                title: LocaleKeys.providerWidget_providerWallet_depositToDeriv,
                 amount: "55,000",
                 status: TransactionStatusEnum.failed,
                 date: "2.1.2023",

@@ -2,11 +2,13 @@
 
 import 'dart:io';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/profile/profile_view_model.dart';
 
 import '../../../app/responsiveness/res.dart';
@@ -217,7 +219,7 @@ PreferredSize profileAppBar(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Welcome, ${model.userName}",
+                    LocaleKeys.welcome.tr(args: [' ${model.userName}']),
                     style: CustomThemeData.generateStyle(
                       fontSize: 18,
                       color: isDarkMode ? Colors.white : Colors.white,
@@ -264,7 +266,9 @@ PreferredSize profileAppBar(
                       horizontalSpaceXSmall(context),
                       isDarkMode
                           ? Text(
-                              isVerified ? "Verified " : "Unverified",
+                              isVerified
+                                  ? LocaleKeys.verified
+                                  : LocaleKeys.unVerified,
                               style: CustomThemeData.generateStyle(
                                 fontSize: 14,
                                 color: Colors.red[400]!,
@@ -281,7 +285,9 @@ PreferredSize profileAppBar(
                                 child: Row(
                                   children: [
                                     Text(
-                                      isVerified ? "Verified" : "UNVERIFIED",
+                                      isVerified
+                                          ? LocaleKeys.verified
+                                          : LocaleKeys.unVerified,
                                       style: CustomThemeData.generateStyle(
                                         fontSize: 9,
                                         color: isVerified

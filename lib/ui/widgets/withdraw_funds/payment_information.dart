@@ -4,6 +4,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/payment_methods/payment_method_viewmodel.dart';
 import 'package:meta_trader/ui/views/withdraw_funds/withdraw_funds_view_model.dart';
 
@@ -60,7 +61,8 @@ Widget paymentInformationCard(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Account number:',
+                          LocaleKeys
+                              .withdrawFunds_paymentInformationWidget_accountNumberW,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.4),
                             color: isDarkMode ? Colors.white : Colors.black45,
@@ -83,7 +85,7 @@ Widget paymentInformationCard(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Name:',
+                          LocaleKeys.name,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.4),
                             color: isDarkMode ? Colors.white : Colors.black45,
@@ -105,14 +107,15 @@ Widget paymentInformationCard(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Average time:',
+                          LocaleKeys.averageTime,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.4),
                             color: isDarkMode ? Colors.white : Colors.black45,
                           ),
                         ),
                         Text(
-                          '1-24 hours',
+                          LocaleKeys
+                              .withdrawFunds_paymentInformationWidget_124Hours,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.4),
                             color: isDarkMode ? Colors.white : Colors.black45,
@@ -127,7 +130,7 @@ Widget paymentInformationCard(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Fee:',
+                          LocaleKeys.fee,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.4),
                             color: isDarkMode ? Colors.white : Colors.black45,
@@ -149,7 +152,7 @@ Widget paymentInformationCard(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Limit:',
+                          LocaleKeys.limit,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.4),
                             color: isDarkMode ? Colors.white : Colors.black45,

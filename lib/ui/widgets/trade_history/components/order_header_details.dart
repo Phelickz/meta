@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../../app/responsiveness/res.dart';
 import '../../../../app/utils/theme.dart';
@@ -32,7 +33,7 @@ class OrderHeaderDetails extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  "Filled",
+                  LocaleKeys.filled,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.5),
                     fontWeight: FontWeight.w500,
@@ -64,7 +65,7 @@ class OrderHeaderDetails extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  "Canceled",
+                  LocaleKeys.canceled,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.5),
                     fontWeight: FontWeight.w500,
@@ -96,7 +97,7 @@ class OrderHeaderDetails extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  "Total",
+                  LocaleKeys.total,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.5),
                     fontWeight: FontWeight.w500,

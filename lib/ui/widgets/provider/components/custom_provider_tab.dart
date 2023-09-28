@@ -10,7 +10,15 @@ class CustomProviderTab extends StatefulWidget {
   final String fifthTabName;
   final int tabIndex;
   final Function(int) onSelectTab;
-  const CustomProviderTab({super.key, required this.firstTabName, required this.secondTabName, required this.thirdTabName, required this.fourthTabName, required this.fifthTabName, required this.tabIndex, required this.onSelectTab});
+  const CustomProviderTab(
+      {super.key,
+      required this.firstTabName,
+      required this.secondTabName,
+      required this.thirdTabName,
+      required this.fourthTabName,
+      required this.fifthTabName,
+      required this.tabIndex,
+      required this.onSelectTab});
 
   @override
   State<CustomProviderTab> createState() => _CustomProviderTabState();

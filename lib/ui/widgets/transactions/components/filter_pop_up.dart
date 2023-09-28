@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
 import '../../../../app/responsiveness/res.dart';
@@ -16,7 +17,7 @@ class FilterPopUp extends StatelessWidget {
     return Column(
       children: [
         Text(
-          'Filter by',
+          LocaleKeys.filterBy,
           style: CustomThemeData.generateStyle(
             fontSize: McGyver.textSize(context, 1.6),
             fontWeight: FontWeight.w400,
@@ -27,7 +28,8 @@ class FilterPopUp extends StatelessWidget {
           height: 24.pHeight(context),
         ),
         Text(
-          'Start Date',
+          LocaleKeys
+              .providerWidget_providerComponent_pModelBottomSheet_startDate,
           style: CustomThemeData.generateStyle(
             fontSize: McGyver.textSize(context, 1.8),
             color: isDarkMode ? Colors.white70 : const Color(0xff667085),
@@ -39,7 +41,7 @@ class FilterPopUp extends StatelessWidget {
         ),
         verticalSpaceSmall(context),
         Text(
-          'End Date',
+          LocaleKeys.providerWidget_providerComponent_pModelBottomSheet_endDate,
           style: CustomThemeData.generateStyle(
             fontSize: McGyver.textSize(context, 1.8),
             color: isDarkMode ? Colors.white70 : const Color(0xff667085),
@@ -56,7 +58,8 @@ class FilterPopUp extends StatelessWidget {
         ),
         verticalSpaceSmall(context),
         Text(
-          'Search Term',
+          LocaleKeys
+              .transactionWidget_TransactionComponents_filledPop_searchTerm,
           style: CustomThemeData.generateStyle(
             fontSize: McGyver.textSize(context, 1.8),
             color: isDarkMode ? Colors.white70 : const Color(0xff667085),
@@ -64,7 +67,8 @@ class FilterPopUp extends StatelessWidget {
         ),
         verticalSpaceXSmall(context),
         CustomTextFields(
-          hintText: 'Enter your search term',
+          hintText: LocaleKeys
+              .transactionWidget_TransactionComponents_filledPop_enterYourSearchTerm,
           password: false,
           suffixIcon: Icon(
             Icons.search,
@@ -76,7 +80,10 @@ class FilterPopUp extends StatelessWidget {
           height: 50.pHeight(context),
         ),
         CustomButtons.generalButton(
-            context: context, onTap: () {}, text: "Confirm")
+          context: context,
+          onTap: () {},
+          text: LocaleKeys.confirm,
+        )
       ],
     );
   }

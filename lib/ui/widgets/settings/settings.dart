@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/settings/settings_view_model.dart';
 import 'package:meta_trader/ui/widgets/settings/components/notification_settings_tile.dart';
 import 'package:meta_trader/ui/widgets/settings/components/settings_tile.dart';
@@ -29,7 +30,7 @@ class SettingsPage extends StatelessWidget {
               height: 10.pHeight(context),
             ),
             Text(
-              "General",
+              LocaleKeys.general,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.7),
                 color: isDarkMode ? Colors.white54 : const Color(0xff667085),
@@ -40,7 +41,7 @@ class SettingsPage extends StatelessWidget {
               height: 28.pHeight(context),
             ),
             BasicSettingsTile(
-              title: "Push Notifications",
+              title: LocaleKeys.settings_settingsPage_pushNotification,
               onTap: () {
                 model.setSettingsPageEnum =
                     SettingsPageEnum.notificationSettings;
@@ -48,7 +49,7 @@ class SettingsPage extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             BasicSettingsTile(
-              title: "Language",
+              title: LocaleKeys.language,
               onTap: () {
                 model.setSettingsPageEnum = SettingsPageEnum.languageSettings;
               },
@@ -57,7 +58,7 @@ class SettingsPage extends StatelessWidget {
               height: 40.pHeight(context),
             ),
             Text(
-              "Appearance",
+              LocaleKeys.appearance,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.7),
                 color: isDarkMode ? Colors.white54 : const Color(0xff667085),
@@ -68,14 +69,14 @@ class SettingsPage extends StatelessWidget {
               height: 28.pHeight(context),
             ),
             NotificationSettingsTile(
-              title: "Use Device Theme",
+              title: LocaleKeys.settings_settingsPage_useDeviceTheme,
               value: model.isSystemMode(context),
               onChanged: (value) {
                 model.toggleThemeModeSystem(context);
               },
             ),
             NotificationSettingsTile(
-              title: "Dark Mode",
+              title: LocaleKeys.settings_settingsPage_darkMode,
               value: CustomThemeData.isDarkMode(context),
               onChanged: (value) {
                 model.toggleThemeMode(context);
@@ -83,14 +84,14 @@ class SettingsPage extends StatelessWidget {
             ),
             verticalSpaceXSmall(context),
             BasicSettingsTile(
-              title: "Chart Color",
+              title: LocaleKeys.chartColor,
               onTap: () {
                 model.setSettingsPageEnum = SettingsPageEnum.chartColor;
               },
             ),
             verticalSpaceSmall(context),
             BasicSettingsTile(
-              title: "Color Preference",
+              title: LocaleKeys.colorPreference,
               onTap: () {
                 model.setSettingsPageEnum = SettingsPageEnum.colorPreference;
               },
@@ -99,7 +100,7 @@ class SettingsPage extends StatelessWidget {
               height: 48.pHeight(context),
             ),
             Text(
-              "Market",
+              LocaleKeys.market,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.7),
                 color: isDarkMode ? Colors.white54 : const Color(0xff667085),
@@ -108,7 +109,7 @@ class SettingsPage extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             BasicSettingsTile(
-              title: "Change Basis",
+              title: LocaleKeys.settings_changeBasis,
               onTap: () {
                 model.setSettingsPageEnum = SettingsPageEnum.changeBasis;
               },
@@ -117,7 +118,7 @@ class SettingsPage extends StatelessWidget {
               height: 52.pHeight(context),
             ),
             Text(
-              "Others",
+              LocaleKeys.others,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.7),
                 color: isDarkMode ? Colors.white54 : const Color(0xff667085),
@@ -126,7 +127,7 @@ class SettingsPage extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             BasicSettingsTile(
-              title: "Privacy Policy",
+              title: LocaleKeys.privacyPolicyText,
               isArrowTrailing: false,
               secondaryTrailing: const SizedBox(),
               onTap: () {
@@ -135,14 +136,14 @@ class SettingsPage extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             BasicSettingsTile(
-              title: "About Us",
+              title: LocaleKeys.aboutUs,
               onTap: () {
                 model.setSettingsPageEnum = SettingsPageEnum.aboutUs;
               },
             ),
             verticalSpaceSmall(context),
             BasicSettingsTile(
-              title: "Current Version",
+              title: LocaleKeys.settings_settingsPage_currentVersion,
               isArrowTrailing: false,
               secondaryTrailing: const SizedBox(),
               onTap: () {

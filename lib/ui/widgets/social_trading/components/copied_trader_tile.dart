@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/cancel_sub_modal.dart';
 
@@ -128,7 +129,8 @@ class CopiedTraderTile extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          "Following since:",
+                          LocaleKeys
+                              .socialTradingWidget_socialTradingComponent_copiedTrader_followingSince,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.4),
                             fontWeight: FontWeight.w500,
@@ -169,7 +171,7 @@ class CopiedTraderTile extends StatelessWidget {
                       child: Row(
                         children: [
                           Text(
-                            'Stop Copying',
+                            LocaleKeys.stopCoping,
                             style: CustomThemeData.generateStyle(
                               fontSize: 11,
                               color: isDarkMode ? Colors.white : Colors.white,

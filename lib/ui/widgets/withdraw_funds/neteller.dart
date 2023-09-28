@@ -3,6 +3,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/payment_methods/payment_method_viewmodel.dart';
 import 'package:meta_trader/ui/views/withdraw_funds/withdraw_funds_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
@@ -28,7 +29,7 @@ class NetellerWithdraw extends StatelessWidget {
               children: [
                 // verticalSpaceSmall(context),
                 Text(
-                  'Payment Information',
+                  LocaleKeys.paymentInformation,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.3),
                     color: isDarkMode
@@ -41,7 +42,7 @@ class NetellerWithdraw extends StatelessWidget {
                     context, 'Neteller', model, PaymentMethodEnum.neteller),
                 verticalSpaceSmall(context),
                 Text(
-                  'Amount To Withdraw',
+                  LocaleKeys.amountToWithdraw,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
@@ -56,7 +57,7 @@ class NetellerWithdraw extends StatelessWidget {
                 ),
                 verticalSpaceSmall(context),
                 Text(
-                  'Additional Information (Optional)',
+                  LocaleKeys.additionalInformation,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
@@ -66,18 +67,19 @@ class NetellerWithdraw extends StatelessWidget {
                 ),
                 verticalSpaceXXSmall(context),
                 const CustomTextFields(
-                  hintText: 'Leave a remark',
+                  hintText: LocaleKeys.leaveAMark,
                   password: false,
                 ),
               ],
             ),
           ),
           CustomButtons.generalButton(
-              context: context,
-              onTap: () {
-                model.setWithdrawFundViewEnum = WithdrawFundPageEnum.success;
-              },
-              text: 'Withdraw to Bank'),
+            context: context,
+            onTap: () {
+              model.setWithdrawFundViewEnum = WithdrawFundPageEnum.success;
+            },
+            text: LocaleKeys.withdrawToBank,
+          ),
           verticalSpaceMedium(context),
         ],
       ),

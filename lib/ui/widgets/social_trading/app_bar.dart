@@ -8,6 +8,7 @@ import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/services/router_service.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/filter_modal.dart';
 
@@ -187,7 +188,7 @@ AppBar socialTradingDashboardAppBar(
                       )
                     : null,
                 child: Text(
-                  'Master Traders',
+                  LocaleKeys.socialTradingWidget_masterTrader,
                   style: CustomThemeData.generateStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w500,
@@ -215,7 +216,7 @@ AppBar socialTradingDashboardAppBar(
                       )
                     : null,
                 child: Text(
-                  'My Trades',
+                  LocaleKeys.socialTradingWidget_myTrades,
                   style: CustomThemeData.generateStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w500,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -44,7 +45,7 @@ class ClosedPositionsComponent extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Summary",
+                      LocaleKeys.summary,
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 2),
                         fontWeight: FontWeight.bold,
@@ -116,7 +117,7 @@ class ClosedPositionsComponent extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Positions",
+                  LocaleKeys.positions,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     fontWeight: FontWeight.bold,

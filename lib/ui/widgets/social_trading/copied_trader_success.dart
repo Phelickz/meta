@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 
@@ -42,7 +43,8 @@ class CopiedTraderSuccessPage extends StatelessWidget {
             ),
           ),
           Text(
-            "Master trader copied Successfully",
+            LocaleKeys
+                .socialTradingWidget_copiedTraderSuccess_masterTradeCopiedS,
             textAlign: TextAlign.center,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 2.6),
@@ -56,8 +58,7 @@ class CopiedTraderSuccessPage extends StatelessWidget {
           RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
-              text:
-                  "You have successfully started copying Satoshi Nakamoto’s trades automatically. \n\n  Notifications would be sent to you when he opens or closes a trade",
+              text: LocaleKeys.youHaveSuccessCopied,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.5),
                 fontWeight: FontWeight.w500,
@@ -73,7 +74,7 @@ class CopiedTraderSuccessPage extends StatelessWidget {
             onTap: () {
               viewModel.push(const SocialTradingDasboard());
             },
-            text: 'Continue',
+            text: LocaleKeys.continueWord,
           ),
           verticalSpaceSmall(context),
         ],

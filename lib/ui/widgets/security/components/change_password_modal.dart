@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../../app/responsiveness/res.dart';
 import '../../../../app/responsiveness/size.dart';
@@ -43,7 +44,7 @@ class ChangePasswordModal extends StatelessWidget {
           ),
           verticalSpaceSmall(context),
           Text(
-            "Change Password",
+            LocaleKeys.changePassword,
             textAlign: TextAlign.center,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 2.8),
@@ -59,7 +60,8 @@ class ChangePasswordModal extends StatelessWidget {
               horizontal: McGyver.rsDoubleW(context, 10),
             ),
             child: Text(
-              "In order to protect your account, withdrawals will be disabled for 24 hours after you change your password",
+              LocaleKeys
+                  .securityWidget_securityComponents_changePasswordModel_inOrderToProtect,
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.6),
@@ -72,7 +74,7 @@ class ChangePasswordModal extends StatelessWidget {
           ),
           verticalSpaceMedium(context),
           CustomButtons.generalButton(
-            text: "Continue",
+            text: LocaleKeys.continueWord,
             context: context,
             onTap: () {
               Navigator.pop(context);

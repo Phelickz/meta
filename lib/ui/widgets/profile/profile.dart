@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/profile/components/circular_icon_button.dart';
 import 'package:meta_trader/ui/widgets/profile/components/profile_tiles.dart';
 
@@ -40,21 +41,21 @@ class ProfilePage extends StatelessWidget {
                   children: [
                     ProfileIconButton(
                       icon: AssetManager.manageAccountIcon,
-                      title: "Manage Account",
+                      title: LocaleKeys.manageAccount,
                       onTap: () {
                         model.push(const ManageAccountRoute());
                       },
                     ),
                     ProfileIconButton(
                       icon: AssetManager.referralsIcon,
-                      title: "logOut",
+                      title: LocaleKeys.logOut,
                       onTap: () {
                         model.push(const ReferralRoute());
                       },
                     ),
                     ProfileIconButton(
                       icon: AssetManager.tradeHistoryIcon,
-                      title: "Trade History",
+                      title: LocaleKeys.tradeHistory,
                       onTap: () {
                         model.push(const TradeHistoryRoute());
                       },
@@ -69,21 +70,21 @@ class ProfilePage extends StatelessWidget {
                   children: [
                     ProfileIconButton(
                       icon: AssetManager.loyaltyRewards,
-                      title: "Loyalty Rewards",
+                      title: LocaleKeys.loyaltyReward,
                       onTap: () {
                         model.push(const LoyaltyRewardsRoute());
                       },
                     ),
                     ProfileIconButton(
                       icon: AssetManager.notificationsIcon,
-                      title: "Notifications",
+                      title: LocaleKeys.notification,
                       onTap: () {
                         model.push(const NotificationRoute());
                       },
                     ),
                     ProfileIconButton(
                       icon: AssetManager.security,
-                      title: "Security",
+                      title: LocaleKeys.security,
                       onTap: () {
                         model.push(const SecurityRoute());
                       },
@@ -92,8 +93,8 @@ class ProfilePage extends StatelessWidget {
                 ),
                 SizedBox(height: 32.pHeight(context)),
                 ProfileTiles(
-                  title: "Withdrawal/Deposit History",
-                  subTitle: "view your withdrawal and deposit history",
+                  title: LocaleKeys.profile_profileWidget_viewYourWithD,
+                  subTitle: LocaleKeys.profile_profileWidget_viewWithDrawalH,
                   leadingIcon: AssetManager.withdrawal,
                   trailingIcon: AssetManager.forwardArrow,
                   onTap: () {
@@ -101,8 +102,8 @@ class ProfilePage extends StatelessWidget {
                   },
                 ),
                 ProfileTiles(
-                  title: "Payment Methods",
-                  subTitle: "update payment methods",
+                  title: LocaleKeys.paymentMethod,
+                  subTitle: LocaleKeys.profile_profileWidget_updatePaymentM,
                   leadingIcon: AssetManager.paymentMethod,
                   trailingIcon: AssetManager.forwardArrow,
                   onTap: () {
@@ -110,8 +111,8 @@ class ProfilePage extends StatelessWidget {
                   },
                 ),
                 ProfileTiles(
-                  title: "Help and Support",
-                  subTitle: "file a complaint with our team",
+                  title: LocaleKeys.helpAndSupport,
+                  subTitle: LocaleKeys.profile_profileWidget_fileAComplaint,
                   leadingIcon: AssetManager.withdrawal,
                   trailingIcon: AssetManager.forwardArrow,
                   onTap: () {
@@ -119,13 +120,13 @@ class ProfilePage extends StatelessWidget {
                   },
                 ),
                 const ProfileTiles(
-                  title: "Rate the app",
-                  subTitle: "give us a review on appstore",
+                  title: LocaleKeys.profile_profileWidget_rateTheApp,
+                  subTitle: LocaleKeys.profile_profileWidget_giveUsAReview,
                   leadingIcon: AssetManager.rate,
                 ),
                 const ProfileTiles(
-                  title: "Logout",
-                  subTitle: "view your withdrawal and deposit history",
+                  title: LocaleKeys.logOut,
+                  subTitle: LocaleKeys.profile_profileWidget_viewWithDrawalH,
                   leadingIcon: AssetManager.logout,
                 ),
               ],

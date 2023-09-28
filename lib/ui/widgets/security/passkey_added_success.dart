@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
+import '../../../generated/locale_keys.g.dart';
 import '../../views/security/security_view_model.dart';
 import '../buttons/buttons.dart';
 
@@ -33,7 +34,8 @@ class PasskeyAddedSuccessPage extends StatelessWidget {
             horizontal: McGyver.rsDoubleW(context, 4),
           ),
           child: Text(
-            "Passkey Added Successfully",
+            LocaleKeys
+                .securityWidget_passkeyAddedSuccess_passkeyAddedSuccessfully,
             textAlign: TextAlign.center,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 3),
@@ -52,7 +54,8 @@ class PasskeyAddedSuccessPage extends StatelessWidget {
           child: RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
-                text: "Your passkey is ",
+                text:
+                    LocaleKeys.securityWidget_passkeyAddedSuccess_yourPasskeyIs,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   fontWeight: FontWeight.w500,
@@ -72,8 +75,8 @@ class PasskeyAddedSuccessPage extends StatelessWidget {
                     ),
                   ),
                   const TextSpan(
-                    text:
-                        '. please keep this passkey safe, so you won’t forget it',
+                    text: LocaleKeys
+                        .securityWidget_passkeyAddedSuccess_pleaseKeepThisPasskey,
                   )
                 ]),
           ),
@@ -84,7 +87,7 @@ class PasskeyAddedSuccessPage extends StatelessWidget {
           onTap: () {
             model.securityPageEnum = SecurityPageEnum.passkey;
           },
-          text: 'Continue',
+          text: LocaleKeys.continueWord,
         ),
       ],
     );

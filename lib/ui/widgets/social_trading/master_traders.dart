@@ -3,6 +3,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/home/higher_success_rates.dart';
 
@@ -97,7 +98,7 @@ class PopularTraders extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Popular Traders',
+              LocaleKeys.socialTradingWidget_masterTrader_popularTraders,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2),
                 fontWeight: FontWeight.bold,
@@ -116,8 +117,8 @@ class PopularTraders extends StatelessWidget {
               },
               child: Text(
                 model.viewMoreEnum == ViewMoreEnum.pt
-                    ? 'hide more'
-                    : 'View more',
+                    ? LocaleKeys.hideMore
+                    : LocaleKeys.viewMore,
               ),
             )
           ],
@@ -227,7 +228,8 @@ class HigherSuccessRatesCol extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Higher Success Rates',
+              LocaleKeys
+                  .socialTradingWidget_masterTrader_higherSuccessRatesText,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2),
                 fontWeight: FontWeight.bold,
@@ -246,8 +248,8 @@ class HigherSuccessRatesCol extends StatelessWidget {
               },
               child: Text(
                 model.viewMoreEnum == ViewMoreEnum.hsr
-                    ? 'hide more'
-                    : 'View more',
+                    ? LocaleKeys.hideMore
+                    : LocaleKeys.viewMore,
               ),
             )
           ],
@@ -370,7 +372,7 @@ class LowCommissionCol extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Low Commissions',
+              LocaleKeys.lowCommission,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2),
                 fontWeight: FontWeight.bold,
@@ -389,8 +391,8 @@ class LowCommissionCol extends StatelessWidget {
               },
               child: Text(
                 model.viewMoreEnum == ViewMoreEnum.lc
-                    ? 'hide more'
-                    : 'View more',
+                    ? LocaleKeys.hideMore
+                    : LocaleKeys.viewMore,
               ),
             )
           ],

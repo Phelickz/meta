@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
 import '../../views/verification/verification_view_model.dart';
@@ -23,7 +24,7 @@ class VerifyLandingPage extends StatelessWidget {
           children: [
             verticalSpaceMedium(context),
             Text(
-              "Let's Start Your Verification Process",
+              LocaleKeys.verificationWidget_verifyLanding_letStart,
               // textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2.5),
@@ -34,14 +35,16 @@ class VerifyLandingPage extends StatelessWidget {
             verticalSpaceMedium(context),
             vListTile(
                 context,
-                'Email Verification',
-                'We will send a link to the email address you provided. Please tap the link to complete your email verification',
+                LocaleKeys
+                    .verificationWidget_verifyLanding_emailVerificationText,
+                LocaleKeys.verificationWidget_verifyLanding_weWillSend,
                 1),
             verticalSpaceSmall(context),
             vListTile(
                 context,
-                'Identity Verification',
-                'To help protect you from fraud and to comply with federal regulations, we need some information. It can be either a snapshot of your:',
+                LocaleKeys
+                    .verificationWidget_verifyLanding_identityVerification,
+                LocaleKeys.verificationWidget_verifyLanding_toHelpProtect,
                 2),
             Row(
               // mainAxisAlignment: MainAxisAlignment.center,
@@ -58,7 +61,7 @@ class VerifyLandingPage extends StatelessWidget {
                 ),
                 horizontalSpaceXXSmall(context),
                 Text(
-                  'Driver\'s license',
+                  LocaleKeys.driversLicense,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.6),
                     color: isDarkMode ? Colors.white60 : Colors.black54,
@@ -81,7 +84,7 @@ class VerifyLandingPage extends StatelessWidget {
                 ),
                 horizontalSpaceXXSmall(context),
                 Text(
-                  'International Passport',
+                  LocaleKeys.internationalPassport,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.6),
                     color: isDarkMode ? Colors.white60 : Colors.black54,
@@ -104,7 +107,7 @@ class VerifyLandingPage extends StatelessWidget {
                 ),
                 horizontalSpaceXXSmall(context),
                 Text(
-                  'National ID card',
+                  LocaleKeys.nationalId,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.6),
                     color: isDarkMode ? Colors.white60 : Colors.black54,
@@ -120,7 +123,7 @@ class VerifyLandingPage extends StatelessWidget {
                 model.setVerificationViewEnum =
                     VerificationPageEnum.emailVerification;
               },
-              text: 'Next',
+              text: LocaleKeys.next,
             )
           ],
         ),

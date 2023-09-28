@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/provider/components/provider_form_fields.dart';
@@ -22,7 +23,7 @@ class ProviderModalBottomsheet {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Filter",
+              LocaleKeys.filter,
               style: CustomThemeData.generateColoredStyle(
                   fontSize: 12, context: context),
             ),
@@ -30,7 +31,8 @@ class ProviderModalBottomsheet {
               height: 10.pHeight(context),
             ),
             ProviderFormFields.simpleFieldWithIcon(
-                "Start Date",
+                LocaleKeys
+                    .providerWidget_providerComponent_pModelBottomSheet_startDate,
                 "DD.MM.YYYY",
                 Icon(
                   Icons.calendar_month_outlined,
@@ -43,7 +45,8 @@ class ProviderModalBottomsheet {
               height: 20.pHeight(context),
             ),
             ProviderFormFields.simpleFieldWithIcon(
-                "End Date",
+                LocaleKeys
+                    .providerWidget_providerComponent_pModelBottomSheet_endDate,
                 "DD.MM.YYYY",
                 Icon(
                   Icons.calendar_month_outlined,
@@ -56,8 +59,9 @@ class ProviderModalBottomsheet {
               height: 20.pHeight(context),
             ),
             ProviderFormFields.simpleFieldWithIcon(
-                "Position",
-                "Open Position",
+                LocaleKeys.positions,
+                LocaleKeys
+                    .providerWidget_providerComponent_pModelBottomSheet_openPosition,
                 Icon(
                   Icons.arrow_forward_ios,
                   size: 20,
@@ -71,7 +75,7 @@ class ProviderModalBottomsheet {
                     value: viewModel.checkbox,
                     onChanged: (_) => viewModel.toggleCheckbox()),
                 Text(
-                  "Profits",
+                  LocaleKeys.profit,
                   style: CustomThemeData.generateColoredStyle(
                       fontSize: 16,
                       context: context,
@@ -82,7 +86,7 @@ class ProviderModalBottomsheet {
                     value: !viewModel.checkbox,
                     onChanged: (_) => viewModel.toggleCheckbox()),
                 Text(
-                  "Loss",
+                  LocaleKeys.loss,
                   style: CustomThemeData.generateColoredStyle(
                       fontSize: 16,
                       context: context,
@@ -94,7 +98,7 @@ class ProviderModalBottomsheet {
             CustomButtons.generalButton(
                 context: context,
                 onTap: () => Navigator.of(context).pop(),
-                text: "Filter",
+                text: LocaleKeys.filter,
                 width: double.infinity,
                 textSize: 1.8)
           ],
@@ -119,7 +123,7 @@ class ProviderModalBottomsheet {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
-              "Filter",
+              LocaleKeys.filter,
               style: CustomThemeData.generateColoredStyle(
                   fontSize: 14, context: context),
             ),
@@ -127,7 +131,8 @@ class ProviderModalBottomsheet {
               height: 20.pHeight(context),
             ),
             ProviderFormFields.simpleFieldWithIcon(
-                "Start Date",
+                LocaleKeys
+                    .providerWidget_providerComponent_pModelBottomSheet_startDate,
                 "DD.MM.YYYY",
                 Icon(
                   Icons.calendar_month_outlined,
@@ -140,7 +145,8 @@ class ProviderModalBottomsheet {
               height: 20.pHeight(context),
             ),
             ProviderFormFields.simpleFieldWithIcon(
-                "End Date",
+                LocaleKeys
+                    .providerWidget_providerComponent_pModelBottomSheet_endDate,
                 "DD.MM.YYYY",
                 Icon(
                   Icons.calendar_month_outlined,
@@ -153,7 +159,8 @@ class ProviderModalBottomsheet {
               height: 20.pHeight(context),
             ),
             ProviderFormFields.simpleFieldWithIcon(
-                "Select Country",
+                LocaleKeys
+                    .providerWidget_providerComponent_pModelBottomSheet_selectCountry,
                 "USA",
                 Icon(
                   Icons.arrow_forward_ios,
@@ -168,7 +175,7 @@ class ProviderModalBottomsheet {
                     value: viewModel.checkbox,
                     onChanged: (_) => viewModel.toggleCheckbox()),
                 Text(
-                  "Ascending",
+                  LocaleKeys.ascending,
                   style: CustomThemeData.generateColoredStyle(
                       fontSize: 16,
                       context: context,
@@ -179,7 +186,7 @@ class ProviderModalBottomsheet {
                     value: !viewModel.checkbox,
                     onChanged: (_) => viewModel.toggleCheckbox()),
                 Text(
-                  "Descending",
+                  LocaleKeys.descending,
                   style: CustomThemeData.generateColoredStyle(
                       fontSize: 16,
                       context: context,
@@ -191,7 +198,7 @@ class ProviderModalBottomsheet {
             CustomButtons.generalButton(
                 context: context,
                 onTap: () => Navigator.of(context).pop(),
-                text: "Filter",
+                text: LocaleKeys.filter,
                 width: double.infinity,
                 textSize: 1.8)
           ],

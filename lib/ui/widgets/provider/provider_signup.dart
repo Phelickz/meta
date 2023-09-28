@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/provider/components/provider_form_fields.dart';
@@ -17,21 +18,23 @@ class ProviderSignUpPage extends StatelessWidget {
         SizedBox(
           height: 24.pHeight(context),
         ),
-        ProviderFormFields.simpleField("First Name", "Enter your first name"),
-        SizedBox(
-          height: 16.pHeight(context),
-        ),
-        ProviderFormFields.simpleField("Last Name", "Enter your last name"),
+        ProviderFormFields.simpleField(
+            LocaleKeys.auth_firstName, LocaleKeys.auth_enterFirstName),
         SizedBox(
           height: 16.pHeight(context),
         ),
         ProviderFormFields.simpleField(
-            "Email Address", "Enter your email address"),
+            LocaleKeys.auth_lastName, LocaleKeys.auth_enterLastName),
+        SizedBox(
+          height: 16.pHeight(context),
+        ),
+        ProviderFormFields.simpleField(
+            LocaleKeys.emailAddress, LocaleKeys.auth_enterEmail),
         SizedBox(
           height: 16.pHeight(context),
         ),
         ProviderFormFields.simpleFieldWithIcon(
-            "Country",
+            LocaleKeys.country,
             "USA",
             IconButton(
                 onPressed: () {},
@@ -39,17 +42,19 @@ class ProviderSignUpPage extends StatelessWidget {
         SizedBox(
           height: 16.pHeight(context),
         ),
-        ProviderFormFields.simpleField("Phone Number", "+123 340 674 8"),
+        ProviderFormFields.simpleField(
+            LocaleKeys.phoneNumber, "+123 340 674 8"),
         SizedBox(
           height: 16.pHeight(context),
         ),
-        ProviderFormFields.simpleFieldWithPassword("Password", "Password"),
+        ProviderFormFields.simpleFieldWithPassword(
+            LocaleKeys.password, LocaleKeys.password),
         SizedBox(
           height: 16.pHeight(context),
         ),
         ProviderFormFields.simpleFieldWithIcon(
-            "Attachment",
-            "Upload Attachment",
+            LocaleKeys.attachment,
+            LocaleKeys.providerWidget_providerSignUp_uploadAttachment,
             IconButton(onPressed: () {}, icon: const Icon(Icons.folder_copy))),
         SizedBox(
           height: 20.pHeight(context),
@@ -65,7 +70,7 @@ class ProviderSignUpPage extends StatelessWidget {
             Expanded(
                 child: RichText(
               text: TextSpan(
-                  text: "I agree with the",
+                  text: LocaleKeys.providerWidget_providerLogin_iAgreeWith,
                   style: CustomThemeData.generateColoredStyle(
                       fontSize: 12,
                       context: context,
@@ -74,7 +79,7 @@ class ProviderSignUpPage extends StatelessWidget {
                       darkTextColor: const Color(0xFF98A2B3)),
                   children: [
                     TextSpan(
-                      text: "terms and conditions",
+                      text: LocaleKeys.termsAndCondition,
                       style: CustomThemeData.generateColoredStyle(
                           fontSize: 12,
                           context: context,
@@ -83,7 +88,7 @@ class ProviderSignUpPage extends StatelessWidget {
                           darkTextColor: const Color(0xFF47B0F5)),
                     ),
                     TextSpan(
-                      text: "for opening an account and the",
+                      text: LocaleKeys.providerWidget_providerLogin_forOPening,
                       style: CustomThemeData.generateColoredStyle(
                           fontSize: 12,
                           context: context,
@@ -92,7 +97,8 @@ class ProviderSignUpPage extends StatelessWidget {
                           darkTextColor: const Color(0xFF98A2B3)),
                     ),
                     TextSpan(
-                      text: "data protection policy",
+                      text: LocaleKeys
+                          .providerWidget_providerLogin_dataProtectionPolicy,
                       style: CustomThemeData.generateColoredStyle(
                           fontSize: 12,
                           context: context,
@@ -112,7 +118,7 @@ class ProviderSignUpPage extends StatelessWidget {
           onTap: () {
             viewModel.setProviderPageEnum = ProviderPageEnum.dashboard;
           },
-          text: "Submit",
+          text: LocaleKeys.submit,
           width: double.infinity,
           textSize: 1.8,
         ),

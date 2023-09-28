@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../../app/responsiveness/res.dart';
 import '../../../../app/responsiveness/size.dart';
@@ -16,7 +17,8 @@ class TradeOrderTile extends StatelessWidget {
         ? Theme.of(context).primaryColor
         : const Color(0xFfF97066);
 
-    String typeText = tradeType == TradeType.buy ? "Buy" : "Sell";
+    String typeText =
+        tradeType == TradeType.buy ? LocaleKeys.buy : LocaleKeys.sell;
     return Container(
       margin: EdgeInsets.only(
         bottom: McGyver.rsDoubleH(context, 1.5),
@@ -109,7 +111,7 @@ class TradeOrderTile extends StatelessWidget {
                 ),
               ),
               Text(
-                "Filled",
+                LocaleKeys.filled,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.9),
                   fontWeight: FontWeight.w500,

@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/copied_trader_tile.dart';
@@ -23,7 +24,7 @@ class MyTrades extends StatelessWidget {
         children: [
           verticalSpaceSmall(context),
           Text(
-            "Copied Traders",
+            LocaleKeys.socialTradingWidget_myTrades_copiedTraders,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.9),
               fontWeight: FontWeight.bold,
@@ -81,7 +82,7 @@ class MyTrades extends StatelessWidget {
           ),
           verticalSpaceSmall(context),
           Text(
-            "You Are Not Copying Any Master Trader  Yet",
+            LocaleKeys.socialTradingWidget_myTrades_youAreNotCopying,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.8),
               fontWeight: FontWeight.bold,
@@ -99,7 +100,7 @@ class MyTrades extends StatelessWidget {
               viewModel.setSocialTradingPageEnum =
                   SocialTradingPageEnum.subscriptionSetup;
             },
-            text: 'Start Copying',
+            text: LocaleKeys.socialTradingWidget_myTrades_startCopying,
           ),
         ],
       ),

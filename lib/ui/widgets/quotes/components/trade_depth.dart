@@ -3,6 +3,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/quotes/trade_utils.dart';
 
 class TradeDepthGrid extends StatelessWidget {
@@ -32,15 +33,15 @@ class TradeDepthGrid extends StatelessWidget {
             children: [
               Expanded(
                   child: genericButton(
-                      () => null, "Sell", const Color(0xFFF04438))),
+                      () => null, LocaleKeys.sell, const Color(0xFFF04438))),
               SizedBox(width: 17.pWidth(context)),
               Expanded(
                   child: genericButton(
-                      () => null, "Close", const Color(0xFF475467))),
+                      () => null, LocaleKeys.close, const Color(0xFF475467))),
               SizedBox(width: 17.pWidth(context)),
               Expanded(
                   child: genericButton(
-                      () => null, "Buy", const Color(0xFF0C95EF))),
+                      () => null, LocaleKeys.buy, const Color(0xFF0C95EF))),
             ],
           ),
           verticalSpaceMedium(context),

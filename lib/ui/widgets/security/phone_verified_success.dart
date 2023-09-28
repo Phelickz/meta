@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
@@ -39,7 +40,8 @@ class PhoneVerifiedSuccessPage extends StatelessWidget {
             horizontal: McGyver.rsDoubleW(context, 4),
           ),
           child: Text(
-            "Phone Verified Successfully",
+            LocaleKeys
+                .securityWidget_phoneVerifiedSuccess_phoneVerifiedSuccessFully,
             textAlign: TextAlign.center,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 3),
@@ -58,7 +60,8 @@ class PhoneVerifiedSuccessPage extends StatelessWidget {
           child: RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
-                text: "Your phone number ",
+                text: LocaleKeys
+                    .securityWidget_phoneVerifiedSuccess_yourPhoneNumber,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   fontWeight: FontWeight.w500,
@@ -77,9 +80,7 @@ class PhoneVerifiedSuccessPage extends StatelessWidget {
                           : const Color(0xff77C5F8),
                     ),
                   ),
-                  const TextSpan(
-                    text: ' has been verified successfully',
-                  )
+                  const TextSpan(text: LocaleKeys.hasBeenVerified)
                 ]),
           ),
         ),
@@ -89,7 +90,7 @@ class PhoneVerifiedSuccessPage extends StatelessWidget {
           onTap: () {
             model.securityPageEnum = SecurityPageEnum.main;
           },
-          text: 'Continue',
+          text: LocaleKeys.continueWord,
         ),
       ],
     );

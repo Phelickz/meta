@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/appbar.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
@@ -16,8 +17,9 @@ class SubscriptionGuidePage extends StatelessWidget {
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Skeleton(
-      appBar: globalAppBar(
-          context, 'Subscription Guide', 'Learn about subscription setup', () {
+      appBar: globalAppBar(context, LocaleKeys.subscriptionGuide,
+          LocaleKeys.socialTradingWidget_subscriptionGuideWidget_learnAbout,
+          () {
         Navigator.pop(context);
       }, []),
       isBusy: viewModel.isBusy,
@@ -26,7 +28,8 @@ class SubscriptionGuidePage extends StatelessWidget {
         children: [
           verticalSpaceXSmall(context),
           Text(
-            "Copy Proportion",
+            LocaleKeys
+                .socialTradingWidget_subscriptionGuideWidget_copyProportion,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.9),
               fontWeight: FontWeight.bold,
@@ -37,7 +40,8 @@ class SubscriptionGuidePage extends StatelessWidget {
           ),
           verticalSpaceXSmall(context),
           Text(
-            "Select the size of your investment that will be engaged in copy trading",
+            LocaleKeys
+                .socialTradingWidget_subscriptionGuideWidget_selectTheSize,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.6),
               fontWeight: FontWeight.w500,
@@ -47,17 +51,26 @@ class SubscriptionGuidePage extends StatelessWidget {
             ),
           ),
           verticalSpaceXSmall(context),
-          _bulletPointText(context, "Equal x1:",
-              "The volume of your copied orders will equal the volume of the master trader’s orders."),
+          _bulletPointText(
+              context,
+              LocaleKeys.equal1,
+              LocaleKeys
+                  .socialTradingWidget_subscriptionGuideWidget_theVolumeOf),
           verticalSpaceXSmall(context),
-          _bulletPointText(context, "Double x2:",
-              "To facilitate transactions, we may collect details related to your bank account, credit/debit card information, and transaction history."),
+          _bulletPointText(
+              context,
+              LocaleKeys.double2,
+              LocaleKeys
+                  .socialTradingWidget_subscriptionGuideWidget_toFacilitate),
           verticalSpaceXSmall(context),
-          _bulletPointText(context, "Triple x3:",
-              "We may automatically collect information about your device, operating system, browser type, IP address, and interactions with our platform to improve our services and user experience."),
+          _bulletPointText(
+              context,
+              LocaleKeys.triple3,
+              LocaleKeys
+                  .socialTradingWidget_subscriptionGuideWidget_weMayAutomatically),
           verticalSpaceSmall(context),
           Text(
-            "Add Support Funds",
+            LocaleKeys.addSupportFunds,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.9),
               fontWeight: FontWeight.bold,
@@ -68,7 +81,8 @@ class SubscriptionGuidePage extends StatelessWidget {
           ),
           verticalSpaceXSmall(context),
           Text(
-            "Support funds help to protect your investments from unexpected market movement.\n\nIdeally, you should add support funds that will be at least 50% of the required investment.",
+            LocaleKeys
+                .socialTradingWidget_subscriptionGuideWidget_supportFundsHelp,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.6),
               fontWeight: FontWeight.w500,

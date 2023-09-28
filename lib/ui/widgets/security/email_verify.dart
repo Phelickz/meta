@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
@@ -28,7 +29,7 @@ class EmailVerificationPage extends StatelessWidget {
               horizontal: McGyver.rsDoubleW(context, 4),
             ),
             child: Text(
-              "Passkey Added Successfully",
+              LocaleKeys.securityWidget_emailVerify_passKeyAdded,
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2.6),
@@ -47,7 +48,7 @@ class EmailVerificationPage extends StatelessWidget {
             child: RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                  text: "We sent a verification email to ",
+                  text: LocaleKeys.weSentAVerification,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.6),
                     fontWeight: FontWeight.w500,
@@ -67,8 +68,7 @@ class EmailVerificationPage extends StatelessWidget {
                       ),
                     ),
                     const TextSpan(
-                      text:
-                          '. Please tap the link sent in the email to continue',
+                      text: LocaleKeys.pleaseTapLink,
                     )
                   ]),
             ),
@@ -79,13 +79,13 @@ class EmailVerificationPage extends StatelessWidget {
             onTap: () {
               model.securityPageEnum = SecurityPageEnum.emailVerifySuccess;
             },
-            text: 'Check mail',
+            text: LocaleKeys.checkMail,
           ),
           verticalSpaceXSmall(context),
           CustomButtons.outlineButton(
             context: context,
             onTap: () {},
-            text: 'Resend code',
+            text: LocaleKeys.resendCode,
             textColor: Theme.of(context).primaryColor,
           ),
           verticalSpaceMedium(context),

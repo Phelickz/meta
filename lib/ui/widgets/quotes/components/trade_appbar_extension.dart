@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
 
 import '../../../../app/utils/theme.dart';
@@ -26,7 +27,8 @@ class TradeAppbarExtension extends StatelessWidget {
               vertical: 12,
             ),
             child: const CustomTextFields(
-              hintText: "Market Execution",
+              hintText:
+                  LocaleKeys.quotesWidget_components_tradeAppBar_marketExec,
             ),
           ),
         ),

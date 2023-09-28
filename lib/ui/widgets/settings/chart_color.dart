@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/auth/radio_button.dart';
 
 import '../../../app/responsiveness/res.dart';
@@ -25,38 +26,38 @@ class ChartColorPage extends StatelessWidget {
           children: [
             verticalSpaceSmall(context),
             Text(
-              "Presets",
+              LocaleKeys.presets,
               style: CustomThemeData.generateColoredStyle(
                   fontSize: 16, fontWeight: FontWeight.bold, context: context),
             ),
             verticalSpaceSmall(context),
             CustomRadioButton(
-                value: "Default",
+                value: LocaleKeys.defaultText,
                 groupValue: model.chartColor,
                 onChanged: (chartColor) {
                   model.changeChartColor(chartColor);
                 },
-                label: "Default",
+                label: LocaleKeys.defaultText,
                 colorA: Colors.green,
                 colorB: Colors.red),
             verticalSpaceSmall(context),
             CustomRadioButton(
-                value: "Warm",
+                value: LocaleKeys.warm,
                 groupValue: model.chartColor,
                 onChanged: (chartColor) {
                   model.changeChartColor(chartColor);
                 },
-                label: "Warm",
+                label: LocaleKeys.warm,
                 colorA: Colors.blue,
                 colorB: Colors.red),
             verticalSpaceSmall(context),
             CustomRadioButton(
-                value: "Marble",
+                value: LocaleKeys.marble,
                 groupValue: model.chartColor,
                 onChanged: (chartColor) {
                   model.changeChartColor(chartColor);
                 },
-                label: "Marble",
+                label: LocaleKeys.marble,
                 colorA: Colors.white,
                 colorB: Colors.grey)
           ],

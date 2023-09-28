@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/provider/components/provider_form_fields.dart';
@@ -17,16 +18,19 @@ class ProviderLoginPage extends StatelessWidget {
         SizedBox(
           height: 24.pHeight(context),
         ),
-        ProviderFormFields.simpleField("Account ID", "Enter your account ID"),
+        ProviderFormFields.simpleField(
+            LocaleKeys.providerWidget_providerLogin_accountID,
+            LocaleKeys.providerWidget_providerLogin_enterYourAccount),
         SizedBox(
           height: 16.pHeight(context),
         ),
-        ProviderFormFields.simpleFieldWithPassword("Password", "Password"),
+        ProviderFormFields.simpleFieldWithPassword(
+            LocaleKeys.password, LocaleKeys.password),
         SizedBox(
           height: 16.pHeight(context),
         ),
         ProviderFormFields.simpleFieldWithIcon(
-            "Desired Fee",
+            LocaleKeys.providerWidget_providerLogin_desiredFee,
             "0%",
             IconButton(
                 onPressed: () {},
@@ -45,7 +49,7 @@ class ProviderLoginPage extends StatelessWidget {
             Expanded(
                 child: RichText(
               text: TextSpan(
-                  text: "I agree with the",
+                  text: LocaleKeys.providerWidget_providerLogin_iAgreeWith,
                   style: CustomThemeData.generateColoredStyle(
                       fontSize: 12,
                       context: context,
@@ -54,7 +58,8 @@ class ProviderLoginPage extends StatelessWidget {
                       darkTextColor: const Color(0xFF98A2B3)),
                   children: [
                     TextSpan(
-                      text: "terms and conditions",
+                      text: LocaleKeys
+                          .providerWidget_providerLogin_termsAndConditionProvider,
                       style: CustomThemeData.generateColoredStyle(
                           fontSize: 12,
                           context: context,
@@ -63,7 +68,7 @@ class ProviderLoginPage extends StatelessWidget {
                           darkTextColor: const Color(0xFF47B0F5)),
                     ),
                     TextSpan(
-                      text: "for opening an account and the",
+                      text: LocaleKeys.providerWidget_providerLogin_forOPening,
                       style: CustomThemeData.generateColoredStyle(
                           fontSize: 12,
                           context: context,
@@ -72,7 +77,8 @@ class ProviderLoginPage extends StatelessWidget {
                           darkTextColor: const Color(0xFF98A2B3)),
                     ),
                     TextSpan(
-                      text: "data protection policy",
+                      text: LocaleKeys
+                          .providerWidget_providerLogin_dataProtectionPolicy,
                       style: CustomThemeData.generateColoredStyle(
                           fontSize: 12,
                           context: context,
@@ -90,7 +96,7 @@ class ProviderLoginPage extends StatelessWidget {
           onTap: () {
             viewModel.setProviderPageEnum = ProviderPageEnum.dashboard;
           },
-          text: "Register",
+          text: LocaleKeys.Register,
           width: double.infinity,
           textSize: 1.8,
         ),

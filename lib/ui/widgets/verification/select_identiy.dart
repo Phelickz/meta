@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import '../../../app/responsiveness/res.dart';
 import '../../../app/utils/theme.dart';
@@ -20,7 +21,7 @@ class SelectIdentityPage extends StatelessWidget {
         children: [
           verticalSpaceMedium(context),
           returnTile(
-            'National ID card',
+            LocaleKeys.nationalId,
             context,
             model.identityType == IdentityType.nationalIDCard,
             true,
@@ -31,7 +32,7 @@ class SelectIdentityPage extends StatelessWidget {
           ),
           verticalSpaceSmall(context),
           returnTile(
-            'Valid Drivers License',
+            LocaleKeys.verificationWidget_selectIdentity_validDriverL,
             context,
             model.identityType == IdentityType.driverLicense,
             true,
@@ -42,12 +43,12 @@ class SelectIdentityPage extends StatelessWidget {
           ),
           verticalSpaceSmall(context),
           returnTile(
-            'International Passport',
+            LocaleKeys.internationalPassport,
             context,
             model.identityType == IdentityType.internationalPassport,
             true,
             (value) {
-              model.setRadio = 'Passport';
+              model.setRadio = LocaleKeys.passport;
               model.setIdentityTypeEnum = IdentityType.internationalPassport;
             },
           ),
@@ -58,7 +59,7 @@ class SelectIdentityPage extends StatelessWidget {
               model.setVerificationViewEnum =
                   VerificationPageEnum.identityVerificaitonSuccess;
             },
-            text: 'Next',
+            text: LocaleKeys.next,
           ),
           verticalSpaceMedium(context),
         ],

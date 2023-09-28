@@ -4,6 +4,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/verification/verification_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
@@ -31,7 +32,7 @@ class EmailVerifySuccessPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Text(
-                'Email Verified Successfully',
+                LocaleKeys.emailVerifiedSuccessfully,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2.4),
                   fontWeight: FontWeight.bold,
@@ -45,7 +46,7 @@ class EmailVerifySuccessPage extends StatelessWidget {
               child: RichText(
                 textAlign: TextAlign.center,
                 text: TextSpan(
-                  text: 'Your email account ',
+                  text: LocaleKeys.yourEmailAccount,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.6),
                     color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -59,7 +60,7 @@ class EmailVerifySuccessPage extends StatelessWidget {
                       ),
                     ),
                     TextSpan(
-                      text: 'has been verified successfully',
+                      text: LocaleKeys.hasBeenVerified,
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.6),
                         color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -72,19 +73,21 @@ class EmailVerifySuccessPage extends StatelessWidget {
             verticalSpaceSmall(context),
             verticalSpaceMedium(context),
             CustomButtons.generalButton(
-                context: context,
-                onTap: () {
-                  model.setVerificationViewEnum =
-                      VerificationPageEnum.identityVerificationLanding;
-                },
-                text: 'Next: Verify Identity'),
+              context: context,
+              onTap: () {
+                model.setVerificationViewEnum =
+                    VerificationPageEnum.identityVerificationLanding;
+              },
+              text: LocaleKeys
+                  .verificationWidget_emailVerifiedSuccessfully_nextVerify,
+            ),
             verticalSpaceXSmall(context),
             CustomButtons.clearButton(
               context: context,
               onTap: () {
                 model.push(const BottomNavBarRoute());
               },
-              text: 'Skip',
+              text: LocaleKeys.skip,
               textColor: Theme.of(context).primaryColor,
             ),
           ],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/quotes/components/simple_view_tile.dart';
 
 import '../../../app/responsiveness/res.dart';
@@ -25,7 +26,7 @@ class SimpleMarketView extends StatelessWidget {
               SizedBox(
                 width: 115.pWidth(context),
                 child: Text(
-                  "Symbol",
+                  LocaleKeys.symbol,
                   style: CustomThemeData.generateColoredStyle(
                     fontSize: McGyver.textSize(context, 1.5),
                     fontWeight: FontWeight.bold,
@@ -37,7 +38,7 @@ class SimpleMarketView extends StatelessWidget {
                 width: 14.pWidth(context),
               ),
               Text(
-                "Bid",
+                LocaleKeys.bid,
                 style: CustomThemeData.generateColoredStyle(
                   fontSize: McGyver.textSize(context, 1.5),
                   fontWeight: FontWeight.bold,
@@ -48,7 +49,7 @@ class SimpleMarketView extends StatelessWidget {
                 width: 44.pWidth(context),
               ),
               Text(
-                "Ask",
+                LocaleKeys.ask,
                 style: CustomThemeData.generateColoredStyle(
                     fontSize: McGyver.textSize(context, 1.5),
                     fontWeight: FontWeight.bold,
@@ -58,7 +59,7 @@ class SimpleMarketView extends StatelessWidget {
                 width: 34.pWidth(context),
               ),
               Text(
-                "Spread",
+                LocaleKeys.spread,
                 style: CustomThemeData.generateColoredStyle(
                   fontSize: McGyver.textSize(context, 1.5),
                   fontWeight: FontWeight.bold,

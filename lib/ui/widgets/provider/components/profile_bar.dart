@@ -4,6 +4,7 @@ import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 class ProfileBar extends StatelessWidget {
   final String name, job, nationality;
@@ -60,7 +61,7 @@ class ProfileBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
-                "Location",
+                LocaleKeys.location,
                 style: CustomThemeData.generateColoredStyle(
                     fontSize: 12,
                     context: context,

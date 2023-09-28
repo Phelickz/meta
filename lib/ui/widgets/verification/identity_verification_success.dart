@@ -4,6 +4,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/verification/verification_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
@@ -30,7 +31,8 @@ class IdentityVerificationSuccessPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: Text(
-              'Your ID has been submitted successfully',
+              LocaleKeys
+                  .verificationWidget_identityVerificationSuccess_yourIdHasBeen,
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2.4),
@@ -45,21 +47,24 @@ class IdentityVerificationSuccessPage extends StatelessWidget {
             child: RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                text: 'You will receive a feedback ',
+                text: LocaleKeys
+                    .verificationWidget_identityVerificationSuccess_youWillReceiveFeedback,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
                   color: isDarkMode ? Colors.white60 : Colors.black87,
                 ),
                 children: [
                   TextSpan(
-                    text: 'within 24 hours ',
+                    text: LocaleKeys
+                        .verificationWidget_identityVerificationSuccess_within24,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.6),
                       color: isDarkMode ? Colors.white60 : Colors.black87,
                     ),
                   ),
                   TextSpan(
-                    text: 'via email on successful verification',
+                    text: LocaleKeys
+                        .verificationWidget_identityVerificationSuccess_viaEmailOnSuccessful,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.6),
                       color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -71,11 +76,12 @@ class IdentityVerificationSuccessPage extends StatelessWidget {
           ),
           const Spacer(),
           CustomButtons.generalButton(
-              context: context,
-              onTap: () {
-                model.push(const BottomNavBarRoute());
-              },
-              text: 'Continue'),
+            context: context,
+            onTap: () {
+              model.push(const BottomNavBarRoute());
+            },
+            text: LocaleKeys.continueWord,
+          ),
           verticalSpaceMedium(context),
         ],
       ),

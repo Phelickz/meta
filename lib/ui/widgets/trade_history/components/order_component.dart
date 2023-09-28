@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/trade_history/components/trade_order_tile.dart';
 
 import '../../../../app/responsiveness/res.dart';
@@ -24,7 +25,7 @@ class OrderComponent extends StatelessWidget {
             horizontal: McGyver.rsDoubleW(context, 6),
           ),
           child: Text(
-            "Last week",
+            LocaleKeys.lastWeek,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.8),
               fontWeight: FontWeight.bold,

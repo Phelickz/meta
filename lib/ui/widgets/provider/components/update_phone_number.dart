@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
@@ -27,7 +28,8 @@ class UpdatePhoneNumber extends StatelessWidget {
             height: 35.pHeight(context),
           ),
           Text(
-            "Update Phone Number",
+            LocaleKeys
+                .providerWidget_providerComponent_updatePhoneNumber_updatePhoneNumberText,
             style: CustomThemeData.generateColoredStyle(
                 fontSize: 14, context: context),
           ),
@@ -35,16 +37,17 @@ class UpdatePhoneNumber extends StatelessWidget {
             height: 20.pHeight(context),
           ),
           LabelTextField(
-              label: "Phone Number", hintText: viewModel.phoneNumber),
+              label: LocaleKeys.phoneNumber, hintText: viewModel.phoneNumber),
           SizedBox(
             height: 80.pHeight(context),
           ),
           CustomButtons.generalButton(
-              context: context,
-              onTap: () {
-                Navigator.pop(context);
-              },
-              text: "confirm")
+            context: context,
+            onTap: () {
+              Navigator.pop(context);
+            },
+            text: LocaleKeys.confirm,
+          )
         ],
       ),
     );

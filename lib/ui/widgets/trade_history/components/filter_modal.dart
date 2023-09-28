@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/trade_history/components/custom_period_modal.dart';
 
@@ -23,7 +24,7 @@ class FilterModal extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              "Filter by",
+              LocaleKeys.filterBy,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.9),
                 fontWeight: FontWeight.bold,
@@ -33,35 +34,37 @@ class FilterModal extends StatelessWidget {
             verticalSpaceSmall(context),
             _twoText(
               context: context,
-              title: "Today",
+              title: LocaleKeys.today,
               subtitle: "16.01.2023",
               onTap: () {},
             ),
             verticalSpaceSmall(context),
             _twoText(
               context: context,
-              title: "Last week",
+              title: LocaleKeys.lastWeek,
               subtitle: "7.01.2023 - 14.01.2023",
               onTap: () {},
             ),
             verticalSpaceSmall(context),
             _twoText(
               context: context,
-              title: "Last Month",
+              title: LocaleKeys
+                  .tradeHistoryWidget_TradeComponents_filterModal_lastMonth,
               subtitle: "1.12.2022 - 31.01.2022",
               onTap: () {},
             ),
             verticalSpaceSmall(context),
             _twoText(
               context: context,
-              title: "Last 3 Month",
+              title: LocaleKeys
+                  .tradeHistoryWidget_TradeComponents_filterModal_last3Month,
               subtitle: "1.11.2022 - 16.01.2023  ",
               onTap: () {},
             ),
             verticalSpaceSmall(context),
             _twoText(
               context: context,
-              title: "Custom period",
+              title: LocaleKeys.customPeriod,
               subtitle: "1.11.2022 - 16.01.2023",
               onTap: () {
                 Navigator.pop(context);
@@ -75,7 +78,7 @@ class FilterModal extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context);
               },
-              text: "Cancel",
+              text: LocaleKeys.cancel,
               color: isDarkMode
                   ? const Color(0xFF052844)
                   : const Color(0xFFD3ECFD),

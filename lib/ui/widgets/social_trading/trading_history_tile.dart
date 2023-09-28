@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 
 class TradingHistoryTile extends StatelessWidget {
@@ -22,7 +23,8 @@ class TradingHistoryTile extends StatelessWidget {
             : const Color(0xFF20A0F3)
         : const Color(0xFFF97066);
 
-    String typeText = tradeType == TradeType.buy ? "Buy" : "Sell";
+    String typeText =
+        tradeType == TradeType.buy ? LocaleKeys.buy : LocaleKeys.sell;
     String typeSign = tradeType == TradeType.buy ? "" : "-";
     return Container(
       margin: EdgeInsets.only(

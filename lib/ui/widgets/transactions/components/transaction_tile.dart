@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/transactions/transactions_view_model.dart';
 
 import '../../../../app/utils/theme.dart';
@@ -63,14 +64,14 @@ class WithdrawalTile extends StatelessWidget {
             style: CustomThemeData.generateColoredStyle(
                 fontSize: 8,
                 context: context,
-                lightTextColor: (status == "Successful")
+                lightTextColor: (status == LocaleKeys.successful)
                     ? const Color(0xff20A0F3)
-                    : (status == "Pending")
+                    : (status == LocaleKeys.pending)
                         ? const Color(0xffF79009)
                         : const Color(0xffF04438),
-                darkTextColor: (status == "Successful")
+                darkTextColor: (status == LocaleKeys.successful)
                     ? const Color(0xff77C5F8)
-                    : (status == "Pending")
+                    : (status == LocaleKeys.pending)
                         ? const Color(0xffFEC84B)
                         : const Color(0xffFDA29B)),
           ),
@@ -151,14 +152,14 @@ class DepositTile extends StatelessWidget {
             style: CustomThemeData.generateColoredStyle(
                 fontSize: 8,
                 context: context,
-                lightTextColor: (status == "Successful")
+                lightTextColor: (status == LocaleKeys.successful)
                     ? const Color(0xff20A0F3)
-                    : (status == "Pending")
+                    : (status == LocaleKeys.pending)
                         ? const Color(0xffF79009)
                         : const Color(0xffF04438),
-                darkTextColor: (status == "Successful")
+                darkTextColor: (status == LocaleKeys.successful)
                     ? const Color(0xff77C5F8)
-                    : (status == "Pending")
+                    : (status == LocaleKeys.pending)
                         ? const Color(0xffFEC84B)
                         : const Color(0xffFDA29B)),
           ),
@@ -237,14 +238,14 @@ class InternalTransferTile extends StatelessWidget {
             style: CustomThemeData.generateColoredStyle(
                 fontSize: 8,
                 context: context,
-                lightTextColor: (status == "Successful")
+                lightTextColor: (status == LocaleKeys.successful)
                     ? const Color(0xff20A0F3)
-                    : (status == "Pending")
+                    : (status == LocaleKeys.pending)
                         ? const Color(0xffF79009)
                         : const Color(0xffF04438),
-                darkTextColor: (status == "Successful")
+                darkTextColor: (status == LocaleKeys.successful)
                     ? const Color(0xff77C5F8)
-                    : (status == "Pending")
+                    : (status == LocaleKeys.pending)
                         ? const Color(0xffFEC84B)
                         : const Color(0xffFDA29B)),
           ),

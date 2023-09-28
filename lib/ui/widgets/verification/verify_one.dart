@@ -4,6 +4,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/verification/verification_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
@@ -29,7 +30,7 @@ class VerifyOnePage extends StatelessWidget {
               width: McGyver.rsDoubleH(context, 50),
             ),
             Text(
-              'Verify Your Account',
+              LocaleKeys.profile_verificationBar_verifyYourAccount,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2.6),
                 // fontSize: 24,
@@ -39,7 +40,7 @@ class VerifyOnePage extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             Text(
-              'Financial regulations require us to verify your ID. This helps prevent someone else from creating a MTS account in your name.\n\nYou can skip this step but you will not be able to withdraw your funds.',
+              LocaleKeys.financialRegulation,
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.6),
@@ -56,13 +57,14 @@ class VerifyOnePage extends StatelessWidget {
                   model.setVerificationViewEnum =
                       VerificationPageEnum.verifyLanding;
                 },
-                text: 'Get Started'),
+                text: LocaleKeys
+                    .views_socialTradingView_socialTradingWelcome_getStarted),
             verticalSpaceXSmall(context),
             TextButton(
               onPressed: () {
                 model.push(const BottomNavBarRoute());
               },
-              child: const Text('Skip'),
+              child: const Text(LocaleKeys.skip),
             ),
             verticalSpaceMedium(context),
           ],

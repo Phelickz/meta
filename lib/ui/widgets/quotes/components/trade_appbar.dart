@@ -1,7 +1,5 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:meta_trader/app/locator/locator.dart';
-import 'package:meta_trader/app/services/router_service.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/ui/widgets/quotes/components/trade_appbar_extension.dart';
 

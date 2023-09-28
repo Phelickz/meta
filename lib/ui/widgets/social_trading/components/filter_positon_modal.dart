@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/dropdown/label_dropdown.dart';
 
@@ -21,7 +22,7 @@ class FilterPositionModal extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Filter by",
+            LocaleKeys.filterBy,
             style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.6),
                 fontWeight: FontWeight.w500,
@@ -31,13 +32,13 @@ class FilterPositionModal extends StatelessWidget {
           ),
           verticalSpaceSmall(context),
           LabelDropdown(
-            label: "Select Position",
+            label: LocaleKeys.selectPosition,
             onChanged: (val) {},
-            value: "Profits",
+            value: LocaleKeys.profits,
             options: const [
-              "Profits",
-              "Losses",
-              "All",
+              LocaleKeys.profits,
+              LocaleKeys.loss,
+              LocaleKeys.views_forexNews_forexModel_all,
             ],
           ),
           verticalSpaceSmall(context),
@@ -71,7 +72,7 @@ class FilterPositionModal extends StatelessWidget {
                     width: McGyver.rsDoubleW(context, 1),
                   ),
                   Text(
-                    "Ascending",
+                    LocaleKeys.ascending,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.7),
                       fontWeight: FontWeight.w500,
@@ -111,7 +112,7 @@ class FilterPositionModal extends StatelessWidget {
                     width: McGyver.rsDoubleW(context, 1),
                   ),
                   Text(
-                    "Descending",
+                    LocaleKeys.descending,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.7),
                       fontWeight: FontWeight.w500,
@@ -130,7 +131,7 @@ class FilterPositionModal extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
             },
-            text: "Confirm",
+            text: LocaleKeys.confirm,
           ),
         ],
       ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/textfields/label_search_field.dart';
 
 import '../../buttons/buttons.dart';
@@ -23,7 +24,7 @@ class FilterTransactionModal extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Filter by",
+              LocaleKeys.filterBy,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.5),
                 fontWeight: FontWeight.w500,
@@ -32,21 +33,25 @@ class FilterTransactionModal extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             LabelDatePicker(
-              label: "Start Date",
+              label: LocaleKeys
+                  .providerWidget_providerComponent_pModelBottomSheet_startDate,
               context: context,
               onDateSelected: (date) {},
             ),
             LabelDatePicker(
-              label: "End Date",
+              label: LocaleKeys
+                  .providerWidget_providerComponent_pModelBottomSheet_endDate,
               context: context,
               selectedDate: null,
               lastDate: null,
               onDateSelected: (date) {},
             ),
             const LabelSearchField(
-              label: "Search Transaction",
+              label: LocaleKeys
+                  .socialTradingWidget_socialTradingComponent_filterModel_searchTransaction,
               controller: null,
-              hintText: "Enter your search term ",
+              hintText: LocaleKeys
+                  .socialTradingWidget_socialTradingComponent_filterModel_enterYourSearch,
             ),
             verticalSpaceSmall(context),
             CustomButtons.generalButton(
@@ -54,7 +59,7 @@ class FilterTransactionModal extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context);
               },
-              text: "Confirm",
+              text: LocaleKeys.confirm,
             ),
           ],
         ),

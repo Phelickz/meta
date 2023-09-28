@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/rating_modal.dart';
@@ -42,7 +43,8 @@ class CopiedTraderTerminatedPage extends StatelessWidget {
                     ),
             ),
             Text(
-              "Subscription Terminated Successfully",
+              LocaleKeys
+                  .socialTradingWidget_copiedTraderTerminated_subscriptionTerminated,
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2.6),
@@ -56,8 +58,7 @@ class CopiedTraderTerminatedPage extends StatelessWidget {
             RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                text:
-                    "You have successfully started copying Satoshi Nakamoto’s trades automatically. \n\nNotifications would be sent to you when he opens or closes a trade",
+                text: LocaleKeys.youHaveSuccessCopied,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.7),
                   fontWeight: FontWeight.w500,
@@ -74,7 +75,7 @@ class CopiedTraderTerminatedPage extends StatelessWidget {
                 // viewModel.push(const SocialTxradingDasboard());
                 showRatingCopyingModal(context, viewModel);
               },
-              text: 'Continue',
+              text: LocaleKeys.continueWord,
             ),
           ],
         ),

@@ -274,14 +274,27 @@
   "amountToWithdraw" :"Amount To Withdraw",
   "leaveAMark" :"Leave a remark",
   "additionalInformation" :"Additional Information (Optional)",
-  "depositFromBinancePay" :"سپرده از BinancePay",
+  "depositFromBinancePay" :"Deposit from BinancePay",
+  "priceSentiments" :"Price sentiments",
+  "sell" :"Sell",
+  "pattern" :"Pattern",
+  "phoneVerification" :"Phone Verification",
+  "changePreference" :"Change Preference",
+  "lowCommission" :"Low Commission",
+  "viewAll" :"View All",
+  "closeBuyPosition" :"Close Buy positions",
+  "credit" :"Credit",
+  "customPeriod" :"Custom Period",
+  "swap" :"Swap",
+  "deals" :"Deals",
+
 
   "views": {
     "auth": {
       "auth_view": {
         "auth_page_enum": {
-          "broker": "broker,",
-          "chooseAccount": "chooseAccount,",
+          "broker": "broker",
+          "chooseAccount": "chooseAccount",
           "demoAccount": "demoAccount,",
           "realAccount": "realAccount,",
           "login": "login,",
@@ -848,7 +861,7 @@
     "toMakeFirstD" : "To make your first deposit, we would like to know you better. click ‘continue’ to get started"
   },
   "profileWidget": {
-    "viewYourWithD":"view your withdrawal and deposit history",
+    "viewYourWithD":"Withdrawal/Deposit History",
     "updatePaymentM":"update payment methods",
     "fileAComplaint":"file a complaint with our team",
     "rateTheApp":"Rate the app",
@@ -1066,6 +1079,10 @@
     "joinUsOnTelegram": "Join us on Telegram",
     "checkForUpdate": "Check for updates"
   },
+  "colorPreferenceWidget": {
+    "blueBuyRedSell": "Blue-Buy/Red-Sell",
+    "blueSellRedBuy": "Blue-Sell/Red-Buy"
+  },
   "changeBasis": {
     "whenYouSwitch": "When you switch to a new UTC time zone, the change (%) for markets and trades will be calculated based on the new time zone "
   },
@@ -1140,7 +1157,8 @@
     "riskManagement": "Risk Management",
     "maxUnrealizedLoss": "Max Unrealized Loss",
     "maxDrawDownDuration": "Max drawdown Duration",
-    "priceMovement": "price Movement"
+    "priceMovement": "price Movement",
+    "helloEveryOne": "Hello Everyone, 👉 this account is totally safe to copy for all investors, Newbies and Professionals. I will try my best to make 25-50% profits weekly 💪. Our first priority is to keep safety of your funds. \n\nHappy trading ✨"
   },
   "subscriptionGuideWidget": {
     "learnAbout": "Learn about subscription setup",

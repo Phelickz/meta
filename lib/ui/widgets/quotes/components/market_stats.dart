@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 class MarketStats extends StatelessWidget {
   const MarketStats({super.key});
@@ -12,43 +13,51 @@ class MarketStats extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        viewTile("Initial Margin", "2", false),
+        viewTile(LocaleKeys.quotesWidget_components_marketStats_initialMargin,
+            "2", false),
         SizedBox(
           height: 20.pHeight(context),
         ),
-        viewTile("Bid", "3.1", true),
+        viewTile(LocaleKeys.bid, "3.1", true),
         SizedBox(
           height: 20.pHeight(context),
         ),
-        viewTile("Bid High", "4.55", true),
+        viewTile(LocaleKeys.quotesWidget_components_marketStats_bigHigh, "4.55",
+            true),
         SizedBox(
           height: 20.pHeight(context),
         ),
-        viewTile("Bid Low", "0", false),
+        viewTile(
+            LocaleKeys.quotesWidget_components_marketStats_bigLow, "0", false),
         SizedBox(
           height: 20.pHeight(context),
         ),
-        viewTile("Ask", "1.4", false),
+        viewTile(LocaleKeys.ask, "1.4", false),
         SizedBox(
           height: 20.pHeight(context),
         ),
-        viewTile("Ask High", "1.33", false),
+        viewTile(LocaleKeys.quotesWidget_components_marketStats_askHigh, "1.33",
+            false),
         SizedBox(
           height: 20.pHeight(context),
         ),
-        viewTile("Ask Low", "0.3", true),
+        viewTile(
+            LocaleKeys.quotesWidget_components_marketStats_askLow, "0.3", true),
         SizedBox(
           height: 20.pHeight(context),
         ),
-        viewTile("Price Change", "0.3", true),
+        viewTile(LocaleKeys.quotesWidget_components_marketStats_priceChange,
+            "0.3", true),
         SizedBox(
           height: 20.pHeight(context),
         ),
-        viewTile("Open Price", "2.1", false),
+        viewTile(
+            LocaleKeys.views_priceCalculatorView_openingPrice, "2.1", false),
         SizedBox(
           height: 20.pHeight(context),
         ),
-        viewTile("Close Price", "2.3", true),
+        viewTile(LocaleKeys.quotesWidget_components_marketStats_closePrice,
+            "2.3", true),
       ],
     );
   }

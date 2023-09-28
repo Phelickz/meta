@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/auth/radio_button.dart';
 
 import '../../../app/responsiveness/res.dart';
@@ -29,7 +30,7 @@ class ChangeBasisPage extends StatelessWidget {
                 horizontal: McGyver.textSize(context, 2),
               ),
               child: Text(
-                "When you switch to a new UTC time zone, the change (%) for markets and trades will be calculated based on the new time zone ",
+                LocaleKeys.settings_changeBasis_whenYouSwitch,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
                   color: isDarkMode ? Colors.white : const Color(0xff667085),

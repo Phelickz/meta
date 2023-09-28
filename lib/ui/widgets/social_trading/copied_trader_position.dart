@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/closed_position.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/open_position.dart';
@@ -24,8 +25,12 @@ class CopiedTraderPositionPage extends StatelessWidget {
             child: TabBar(
               // isScrollable: true,
               tabs: const [
-                Tab(text: "Open Positions"),
-                Tab(text: "Closed Positions"),
+                Tab(
+                    text: LocaleKeys
+                        .providerWidget_providerComponent_pModelBottomSheet_openPosition),
+                Tab(
+                    text: LocaleKeys
+                        .socialTradingWidget_socialTradingComponent_filterPosition_closedPositions),
               ],
               isScrollable: true,
               unselectedLabelColor: isDarkMode

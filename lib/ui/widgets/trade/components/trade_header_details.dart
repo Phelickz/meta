@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/trade/trade_view_model.dart';
 
 import '../../../../app/responsiveness/res.dart';
@@ -40,7 +41,7 @@ class TradeHeaderDetails extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Balance",
+                      LocaleKeys.balance,
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.4),
                         fontWeight: FontWeight.w500,
@@ -68,7 +69,7 @@ class TradeHeaderDetails extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      "Equity",
+                      LocaleKeys.equity,
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.4),
                         fontWeight: FontWeight.w500,
@@ -103,7 +104,7 @@ class TradeHeaderDetails extends StatelessWidget {
                 Expanded(
                   child: _TwoTextBelow(
                     context,
-                    "Credit",
+                    LocaleKeys.credit,
                     "100 000.00",
                   ),
                 ),
@@ -111,7 +112,7 @@ class TradeHeaderDetails extends StatelessWidget {
               Expanded(
                 child: _TwoTextBelow(
                   context,
-                  "Margin",
+                  LocaleKeys.margin,
                   "113 436.65",
                 ),
               ),
@@ -119,7 +120,7 @@ class TradeHeaderDetails extends StatelessWidget {
               Expanded(
                 child: _TwoTextBelow(
                   context,
-                  "Free Margin",
+                  LocaleKeys.freeMargin,
                   viewModel.isEmpty ? "-" : "478 944.06",
                 ),
               ),
@@ -127,7 +128,7 @@ class TradeHeaderDetails extends StatelessWidget {
               Expanded(
                 child: _TwoTextBelow(
                   context,
-                  "Margin Level",
+                  LocaleKeys.marginLevel,
                   viewModel.isEmpty ? "-" : "522.21%",
                 ),
               ),
@@ -160,7 +161,7 @@ class TradeHeaderDetails extends StatelessWidget {
                           : const Color(0xFFF04438)),
             ),
             Text(
-              "last 24 hrs",
+              LocaleKeys.last2Hrs,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.3),
                 fontWeight: FontWeight.w500,

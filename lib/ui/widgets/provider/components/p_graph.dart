@@ -3,6 +3,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
 import 'package:meta_trader/ui/widgets/provider/components/custom_provider_tab.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
@@ -19,7 +20,9 @@ class PGraph extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: viewModel.isDarkMode()?ColorManager.darkHeaderColor:const Color(0xFFECF7FE),
+        color: viewModel.isDarkMode()
+            ? ColorManager.darkHeaderColor
+            : const Color(0xFFECF7FE),
       ),
       child: Column(
         children: [
@@ -28,21 +31,28 @@ class PGraph extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
-                "My Performance",
-                style: CustomThemeData.generateColoredStyle(fontSize: 16, context: context, fontWeight: FontWeight.w600),
+                LocaleKeys
+                    .providerWidget_providerComponent_pGraph_myPerformance,
+                style: CustomThemeData.generateColoredStyle(
+                    fontSize: 16,
+                    context: context,
+                    fontWeight: FontWeight.w600),
               ),
               const Spacer(),
               CustomProviderTab(
-                firstTabName: "1W", 
-                secondTabName: "2W", 
-                thirdTabName: "1M", 
-                fourthTabName: "3M", 
-                fifthTabName: "6M", 
-                tabIndex: viewModel.performanceTabSelectorNotifier.value, 
-                onSelectTab: (val){viewModel.performanceTabSelectorNotifier.value=val;})
+                  firstTabName: "1W",
+                  secondTabName: "2W",
+                  thirdTabName: "1M",
+                  fourthTabName: "3M",
+                  fifthTabName: "6M",
+                  tabIndex: viewModel.performanceTabSelectorNotifier.value,
+                  onSelectTab: (val) {
+                    viewModel.performanceTabSelectorNotifier.value = val;
+                  })
             ],
           ),
-          Expanded(child: ValueListenableBuilder<int>(
+          Expanded(
+              child: ValueListenableBuilder<int>(
             valueListenable: viewModel.performanceTabSelectorNotifier,
             builder: (context, index, child) {
               return SizedBox(
@@ -65,8 +75,7 @@ class PGraph extends StatelessWidget {
     );
   }
 
-
-  Widget chartDisplay(BuildContext context){
+  Widget chartDisplay(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return SfCartesianChart(
       backgroundColor: Colors.transparent,
@@ -103,13 +112,13 @@ class PGraph extends StatelessWidget {
         ),
       ),
       series: <ChartSeries>[
-       LineSeries<CandleData, String>(
-                dataSource: viewModel.getCandleData(),
-                xValueMapper: (CandleData data, _) => data.date,
-                yValueMapper: (CandleData data, _) => data.close,
-                // Customize the line color
-                color: Colors.blue,
-              ),
+        LineSeries<CandleData, String>(
+          dataSource: viewModel.getCandleData(),
+          xValueMapper: (CandleData data, _) => data.date,
+          yValueMapper: (CandleData data, _) => data.close,
+          // Customize the line color
+          color: Colors.blue,
+        ),
       ],
       selectionType: SelectionType.cluster,
       selectionGesture: ActivationMode.singleTap,

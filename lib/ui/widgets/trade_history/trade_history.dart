@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/trade_history/trade_history_view_model.dart';
 import 'package:meta_trader/ui/widgets/trade_history/components/custom_head_tab.dart';
 import 'package:meta_trader/ui/widgets/trade_history/components/order_component.dart';
@@ -15,9 +16,9 @@ class TradeHistoryPage extends StatelessWidget {
     return Column(
       children: [
         CustomHeadTab(
-          firstTabName: "Positions",
-          secondTabName: "Orders",
-          thirdTabName: "Deals",
+          firstTabName: LocaleKeys.positions,
+          secondTabName: LocaleKeys.order,
+          thirdTabName: LocaleKeys.deals,
           onSelectTab: (val) {
             viewModel.tabSelectedNotifier.value = val;
           },

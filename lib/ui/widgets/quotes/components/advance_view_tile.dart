@@ -3,6 +3,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 class AdvancedViewTile extends StatefulWidget {
   final String percentageChange,
@@ -98,7 +99,7 @@ class _AdvancedViewTileState extends State<AdvancedViewTile> {
                           fontSize: 10, context: context),
                     ),
                     TextSpan(
-                      text: "Spread: ",
+                      text: LocaleKeys.spread,
                       style: CustomThemeData.generateColoredStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 10,

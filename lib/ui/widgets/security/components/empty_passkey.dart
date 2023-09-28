@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../../app/responsiveness/res.dart';
 import '../../../../app/responsiveness/size.dart';
@@ -41,7 +42,8 @@ class EmptyPasskey extends StatelessWidget {
         ),
         verticalSpaceSmall(context),
         Text(
-          " Passkeys added Yet",
+          LocaleKeys
+              .securityWidget_securityComponents_emptyPasskey_passkeyAddedYet,
           style: CustomThemeData.generateStyle(
             fontSize: McGyver.textSize(context, 1.8),
             fontWeight: FontWeight.bold,
@@ -57,7 +59,7 @@ class EmptyPasskey extends StatelessWidget {
           onTap: () {
             model.securityPageEnum = SecurityPageEnum.addPasskey;
           },
-          text: 'Add A Passkey',
+          text: LocaleKeys.addAPasskey,
         ),
       ],
     );

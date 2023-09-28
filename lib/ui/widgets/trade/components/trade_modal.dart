@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/trade/components/trade_bulk_operation_modal.dart';
 
@@ -112,7 +113,7 @@ class TradeModal extends StatelessWidget {
                     ),
                     verticalSpaceXXSmall(context),
                     Text(
-                      "Australian dollar vs Japanese Yen",
+                      LocaleKeys.tradeWidget_tradeModal_australianDollarVsJap,
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.5),
                         fontWeight: FontWeight.w500,
@@ -248,41 +249,42 @@ class TradeModal extends StatelessWidget {
           verticalSpaceXXSmall(context),
           _buttonText(
             context: context,
-            label: "Close position",
+            label: LocaleKeys
+                .socialTradingWidget_socialTradingComponent_filterPosition_closedPositions,
             onTap: () {},
             labelColor: const Color(0xFFF97066),
           ),
           _buttonText(
             context: context,
-            label: "Modify position",
+            label: LocaleKeys.tradeWidget_tradeModal_modifyPosition,
             onTap: () {},
             labelColor:
                 isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF667085),
           ),
           _buttonText(
             context: context,
-            label: "Trade",
+            label: LocaleKeys.trade,
             onTap: () {},
             labelColor:
                 isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF667085),
           ),
           _buttonText(
             context: context,
-            label: "Depth of market",
+            label: LocaleKeys.depthOfMarket,
             onTap: () {},
             labelColor:
                 isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF667085),
           ),
           _buttonText(
             context: context,
-            label: "Chart",
+            label: LocaleKeys.chart,
             onTap: () {},
             labelColor:
                 isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF667085),
           ),
           _buttonText(
             context: context,
-            label: "Bulk operations...",
+            label: LocaleKeys.tradeWidget_tradeModal_bulkOPerationsW,
             onTap: () {
               Navigator.pop(context);
               showBulkOperationModal(context);
@@ -296,7 +298,7 @@ class TradeModal extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
             },
-            text: "Cancel",
+            text: LocaleKeys.cancel,
             color:
                 isDarkMode ? const Color(0xFF052844) : const Color(0xFFD3ECFD),
             textColor:

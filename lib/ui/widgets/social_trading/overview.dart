@@ -5,6 +5,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/cancel_sub_modal.dart';
@@ -69,8 +70,8 @@ class TraderOverview extends StatelessWidget {
               },
               text: model.socialTradingPageEnum ==
                       SocialTradingPageEnum.copiedTraderPosition
-                  ? 'Stop Copying'
-                  : 'Setup Copying',
+                  ? LocaleKeys.stopCoping
+                  : LocaleKeys.socialTradingWidget_overViewWidget_setupCopying,
             ),
           ),
           verticalSpaceSmall(context),
@@ -141,7 +142,7 @@ class TraderOverview extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          "Experience",
+                          LocaleKeys.experience,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.4),
                             fontWeight: FontWeight.w500,
@@ -170,7 +171,7 @@ class TraderOverview extends StatelessWidget {
                               width: 1,
                             ),
                             Text(
-                              "days",
+                              LocaleKeys.days,
                               style: CustomThemeData.generateStyle(
                                 fontSize: McGyver.textSize(context, 1.3),
                                 fontWeight: FontWeight.normal,
@@ -201,7 +202,7 @@ class TraderOverview extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          "Commission",
+                          LocaleKeys.commission,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.4),
                             fontWeight: FontWeight.w500,
@@ -261,7 +262,7 @@ class TraderOverview extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          "Equity:",
+                          LocaleKeys.equity,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.4),
                             fontWeight: FontWeight.w500,
@@ -291,12 +292,15 @@ class TraderOverview extends StatelessWidget {
             ),
           ),
           verticalSpaceSmall(context),
-          _twotext(context, "Total Copiers:", "326,096"),
+          _twotext(
+              context,
+              LocaleKeys.socialTradingWidget_overViewWidget_totalCopiers,
+              "326,096"),
           verticalSpaceXXSmall(context),
-          _twotext(context, "Strategy Description:", ""),
+          _twotext(context, LocaleKeys.strategyDescriptionText, ""),
           verticalSpaceXXSmall(context),
           Text(
-            "Hello Everyone, 👉 this account is totally safe to copy for all investors, Newbies and Professionals. I will try my best to make 25-50% profits weekly 💪. Our first priority is to keep safety of your funds. \n\nHappy trading ✨",
+            LocaleKeys.socialTradingWidget_overViewWidget_helloEveryOne,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.5),
               fontWeight: FontWeight.bold,
@@ -362,13 +366,14 @@ class TraderOverview extends StatelessWidget {
       BuildContext context, SocialTradingViewModel viewModel) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Column(children: [
-      _twotext(context, "Success Rate:", "99.32%"),
+      _twotext(
+          context, LocaleKeys.home_higherSuccessRates_successRate, "99.32%"),
       verticalSpaceXSmall(context),
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            "Risk Score:",
+            LocaleKeys.home_higherSuccessRates_riskScore,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.4),
               fontWeight: FontWeight.w500,
@@ -386,14 +391,14 @@ class TraderOverview extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5),
               child: RichText(
                 text: TextSpan(
-                  text: 'Risk score: ',
+                  text: LocaleKeys.home_higherSuccessRates_riskScore,
                   style: CustomThemeData.generateStyle(
                     fontSize: 10,
                     color: isDarkMode ? Colors.white : Colors.black,
                   ),
                   children: [
                     TextSpan(
-                      text: ' MEDIUM',
+                      text: LocaleKeys.home_higherSuccessRates_mediumCap,
                       style: CustomThemeData.generateStyle(
                         fontSize: 10,
                         fontWeight: FontWeight.bold,
@@ -465,7 +470,7 @@ class TraderOverview extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Summary",
+                LocaleKeys.summary,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2),
                   fontWeight: FontWeight.bold,
@@ -520,7 +525,7 @@ class TraderOverview extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Gain",
+                  LocaleKeys.gain,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.4),
                     fontWeight: FontWeight.w500,
@@ -566,7 +571,7 @@ class TraderOverview extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Copiers",
+                  LocaleKeys.copiers,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.4),
                     fontWeight: FontWeight.w500,
@@ -622,7 +627,7 @@ class TraderOverview extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              "Profit",
+              LocaleKeys.profits,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.4),
                 fontWeight: FontWeight.w500,
@@ -632,7 +637,7 @@ class TraderOverview extends StatelessWidget {
               ),
             ),
             Text(
-              "loss",
+              LocaleKeys.loss,
               textAlign: TextAlign.end,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.4),
@@ -706,7 +711,7 @@ class TraderOverview extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Performance",
+                LocaleKeys.performance,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2),
                   fontWeight: FontWeight.bold,
@@ -771,7 +776,7 @@ class TraderOverview extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Account Details",
+                LocaleKeys.socialTradingWidget_overViewWidget_accountDetails,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2),
                   fontWeight: FontWeight.bold,
@@ -788,13 +793,13 @@ class TraderOverview extends StatelessWidget {
             children: [
               _twotextInfo(
                 context,
-                "Floating profit",
+                LocaleKeys.socialTradingWidget_overViewWidget_floatingProfit,
                 "\$ 32.8",
                 CrossAxisAlignment.start,
               ),
               _twotextInfo(
                 context,
-                "Master Trader Bonus",
+                LocaleKeys.socialTradingWidget_overViewWidget_masterTraderBonus,
                 "% 73",
                 CrossAxisAlignment.end,
               )
@@ -806,13 +811,13 @@ class TraderOverview extends StatelessWidget {
             children: [
               _twotextInfo(
                 context,
-                "Balance",
+                LocaleKeys.balance,
                 "\$ 32.8",
                 CrossAxisAlignment.start,
               ),
               _twotextInfo(
                 context,
-                "Leverage",
+                LocaleKeys.leverage,
                 "1:500",
                 CrossAxisAlignment.end,
               )
@@ -850,7 +855,7 @@ class TraderOverview extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Risk Management",
+                LocaleKeys.socialTradingWidget_overViewWidget_riskManagement,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2),
                   fontWeight: FontWeight.bold,
@@ -867,13 +872,14 @@ class TraderOverview extends StatelessWidget {
             children: [
               _twotextInfo(
                 context,
-                "Max Unrealized Loss",
+                LocaleKeys.socialTradingWidget_overViewWidget_maxUnrealizedLoss,
                 "\$ 32.8",
                 CrossAxisAlignment.start,
               ),
               _twotextInfo(
                 context,
-                "Max drawdown Duration",
+                LocaleKeys
+                    .socialTradingWidget_overViewWidget_maxDrawDownDuration,
                 "% 73",
                 CrossAxisAlignment.end,
               )
@@ -961,7 +967,7 @@ class TraderOverview extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Activity",
+                  LocaleKeys.activity,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 2),
                     fontWeight: FontWeight.bold,
@@ -1012,7 +1018,7 @@ class TraderOverview extends StatelessWidget {
     return SfCartesianChart(
       primaryXAxis: CategoryAxis(
         title: AxisTitle(
-          text: 'Days',
+          text: LocaleKeys.days,
           textStyle: CustomThemeData.generateStyle(
             fontSize: McGyver.textSize(context, 1.5),
             fontWeight: FontWeight.bold,
@@ -1047,7 +1053,7 @@ class TraderOverview extends StatelessWidget {
           color: isDarkMode ? const Color(0xFFFFFFFF) : const Color(0xFF667085),
         ),
         title: AxisTitle(
-          text: 'price Movement',
+          text: LocaleKeys.priceSentimentWidget_details_priceMovement,
           textStyle: CustomThemeData.generateStyle(
             fontSize: McGyver.textSize(context, 1.5),
             fontWeight: FontWeight.bold,
@@ -1075,7 +1081,7 @@ class TraderOverview extends StatelessWidget {
           dataSource: viewModel.activityChartData,
           xValueMapper: (ActivityChartData sales, _) => sales.day,
           yValueMapper: (ActivityChartData sales, _) => sales.price,
-          name: 'Price',
+          name: LocaleKeys.price,
         ),
       ],
     );

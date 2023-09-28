@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../app/responsiveness/res.dart';
 import '../../../../app/responsiveness/size.dart';
 import '../../../../app/utils/theme.dart';
+import '../../../../generated/locale_keys.g.dart';
 import '../../../views/security/security_view_model.dart';
 
 class DeviceModel {
@@ -85,14 +86,14 @@ class DeviceTile extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    _infoLeftText("Date:", context),
+                    _infoLeftText(LocaleKeys.date, context),
                     _infoRightText(device.date, context),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    _infoLeftText("Location:", context),
+                    _infoLeftText(LocaleKeys.location, context),
                     _infoRightText(device.location, context),
                   ],
                 ),

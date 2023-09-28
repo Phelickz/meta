@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
 import 'package:meta_trader/ui/widgets/provider/components/profile_bar.dart';
 import 'package:meta_trader/ui/widgets/provider/components/wallet_balance_container.dart';
@@ -106,7 +107,7 @@ class ProviderAppbar {
                     : null,
                 onPressed: () => model.setTabNotifiier(0),
                 child: Text(
-                  'Overview',
+                  LocaleKeys.overview,
                   style: CustomThemeData.generateStyle(
                     fontSize: 13,
                     color: Colors.white,
@@ -124,7 +125,7 @@ class ProviderAppbar {
                     : null,
                 onPressed: () => model.setTabNotifiier(1),
                 child: Text(
-                  'Trade History',
+                  LocaleKeys.tradeHistory,
                   style: CustomThemeData.generateStyle(
                     fontSize: 13,
                     color: Colors.white,

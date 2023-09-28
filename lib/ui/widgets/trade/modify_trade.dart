@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/trade/trade_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/trade/components/plus_minus_text.dart';
@@ -24,7 +25,8 @@ class ModifyTrade extends StatelessWidget {
             verticalSpaceXSmall(context),
             PlusMinusText(
               value: "2.0",
-              label: "Lot size",
+              label:
+                  LocaleKeys.quotesWidget_components_genericTradeBody_lotSize,
               onPlus: () {},
               onMinus: () {},
               onTextChanged: (val) {},
@@ -34,16 +36,18 @@ class ModifyTrade extends StatelessWidget {
               children: [
                 PlusMinusText(
                   width: McGyver.rsDoubleW(context, 41),
-                  value: "Not set",
-                  label: "Stop loss",
+                  value: LocaleKeys.notSet,
+                  label: LocaleKeys
+                      .quotesWidget_components_genericTradeBody_stopLoss,
                   onPlus: () {},
                   onMinus: () {},
                   onTextChanged: (val) {},
                 ),
                 PlusMinusText(
                   width: McGyver.rsDoubleW(context, 41),
-                  value: "Not set",
-                  label: "Take Profit",
+                  value: LocaleKeys.notSet,
+                  label: LocaleKeys
+                      .quotesWidget_components_genericTradeBody_takeProfit,
                   onPlus: () {},
                   onMinus: () {},
                   onTextChanged: (val) {},
@@ -75,7 +79,7 @@ class ModifyTrade extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Duration",
+                          LocaleKeys.duration,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.8),
                             fontWeight: FontWeight.w500,
@@ -119,7 +123,8 @@ class ModifyTrade extends StatelessWidget {
                               PlusMinusText(
                                 width: McGyver.rsDoubleW(context, 35),
                                 value: "1 Hr",
-                                label: "Time Frame",
+                                label: LocaleKeys
+                                    .quotesWidget_components_genericTradeBody_timeFrame,
                                 onPlus: () {},
                                 onMinus: () {},
                                 onTextChanged: (val) {},
@@ -128,7 +133,8 @@ class ModifyTrade extends StatelessWidget {
                               PlusMinusText(
                                 width: McGyver.rsDoubleW(context, 35),
                                 value: "1.2311",
-                                label: "Current Price",
+                                label: LocaleKeys
+                                    .quotesWidget_components_genericTradeBody_currencyPrice,
                                 onPlus: () {},
                                 onMinus: () {},
                                 onTextChanged: (val) {},
@@ -138,7 +144,7 @@ class ModifyTrade extends StatelessWidget {
                           ),
                           verticalSpaceXSmall(context),
                           Text(
-                            "In 1 Hour at 10:41 on 29th July 2023 your trade will automatically close",
+                            LocaleKeys.tradeWidget_modifyTrade_in1hour,
                             textAlign: TextAlign.start,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.4),
@@ -289,7 +295,7 @@ class ModifyTrade extends StatelessWidget {
                 horizontalSpaceXXSmall(context),
                 Expanded(
                   child: Text(
-                    "The trade will be executed at market conditions. Difference with requested price maybe significant",
+                    LocaleKeys.tradeWidget_modifyTrade_theMarketWill,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.4),
                       fontWeight: FontWeight.w500,

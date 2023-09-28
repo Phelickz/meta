@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
@@ -54,16 +55,21 @@ class PasswordPage extends StatelessWidget {
           verticalSpaceSmall(context),
           verticalSpaceXSmall(context),
           const LabelPasswordField(
-            label: "Current Password",
-            hintText: "Enter current password",
+            label:
+                LocaleKeys.manageAccounts_existingAccountsForm_currentPassword,
+            hintText: LocaleKeys
+                .manageAccounts_existingAccountsForm_enterCurrentPassword,
           ),
           const LabelPasswordField(
-            label: "New Password",
-            hintText: "Enter new password",
+            label: LocaleKeys.manageAccounts_existingAccountsForm_newPassword,
+            hintText:
+                LocaleKeys.manageAccounts_existingAccountsForm_enterNewPassword,
           ),
           const LabelPasswordField(
-            label: "Re-enter Password",
-            hintText: "Re-enter new password",
+            label:
+                LocaleKeys.manageAccounts_existingAccountsForm_reEnterPassword,
+            hintText: LocaleKeys
+                .manageAccounts_existingAccountsForm_reEnterNewPassword,
           ),
           Row(
             children: [
@@ -94,7 +100,7 @@ class PasswordPage extends StatelessWidget {
               ),
               Expanded(
                 child: Text(
-                  "Save Password",
+                  LocaleKeys.savePassword,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.7),
                     fontWeight: FontWeight.normal,
@@ -109,7 +115,7 @@ class PasswordPage extends StatelessWidget {
           verticalSpaceMedium(context),
           verticalSpaceSmall(context),
           CustomButtons.generalButton(
-            text: "Save Changes",
+            text: LocaleKeys.saveChanges,
             context: context,
             onTap: () {
               model.securityPageEnum = SecurityPageEnum.main;
@@ -122,7 +128,7 @@ class PasswordPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Forgot password?",
+                LocaleKeys.forgetPassword,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
                   fontWeight: FontWeight.w500,
@@ -133,7 +139,7 @@ class PasswordPage extends StatelessWidget {
               ),
               CustomButtons.generalTextButton(
                 width: McGyver.rsDoubleW(context, 27),
-                text: "Contact Broker",
+                text: LocaleKeys.contactBroker,
                 padding: McGyver.rsDoubleH(context, 0.1),
                 context: context,
                 textColor: isDarkMode

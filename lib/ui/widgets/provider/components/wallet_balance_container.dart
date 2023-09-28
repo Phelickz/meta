@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 class WalletBalanceContainer extends StatefulWidget {
   const WalletBalanceContainer({
@@ -28,7 +29,7 @@ class _WalletBalanceContainerState extends State<WalletBalanceContainer> {
         children: [
           verticalSpaceXSmall(context),
           Text(
-            "Wallet Balance",
+            LocaleKeys.walletBalance,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.3),
               fontWeight: FontWeight.w500,
@@ -84,7 +85,7 @@ class _WalletBalanceContainerState extends State<WalletBalanceContainer> {
                     height: McGyver.rsDoubleH(context, 0.2),
                   ),
                   Text(
-                    "over 24 Hrs",
+                    LocaleKeys.over24hours,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.3),
                       fontWeight: FontWeight.w500,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 
 class SummaryComponent extends StatelessWidget {
@@ -40,7 +41,8 @@ class SummaryComponent extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        "Success Rate",
+                        LocaleKeys
+                            .socialTradingWidget_socialTradingComponent_summaryWidget_successRate,
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.4),
                           fontWeight: FontWeight.w500,
@@ -100,7 +102,7 @@ class SummaryComponent extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        "Gain",
+                        LocaleKeys.gain,
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.4),
                           fontWeight: FontWeight.w500,
@@ -160,7 +162,8 @@ class SummaryComponent extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        "Risk Score",
+                        LocaleKeys
+                            .socialTradingWidget_socialTradingComponent_summaryWidget_riskScoreSummary,
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.4),
                           fontWeight: FontWeight.w500,
@@ -195,13 +198,13 @@ class SummaryComponent extends StatelessWidget {
           Column(
             children: [
               verticalSpaceXXSmall(context),
-              _twotext(context, "Equity:", "233 899.12"),
+              _twotext(context, LocaleKeys.equity, "233 899.12"),
               verticalSpaceXXSmall(context),
-              _twotext(context, "Margin", "3 899.12"),
+              _twotext(context, LocaleKeys.margin, "3 899.12"),
               verticalSpaceXXSmall(context),
-              _twotext(context, "Free Margin", "193 899.12"),
+              _twotext(context, LocaleKeys.freeMargin, "193 899.12"),
               verticalSpaceXXSmall(context),
-              _twotext(context, "Margin Level", "121%"),
+              _twotext(context, LocaleKeys.marginLevel, "121%"),
             ],
           ),
         verticalSpaceSmall(context),
@@ -209,7 +212,7 @@ class SummaryComponent extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              "Profit",
+              LocaleKeys.profit,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.4),
                 fontWeight: FontWeight.w500,
@@ -219,7 +222,7 @@ class SummaryComponent extends StatelessWidget {
               ),
             ),
             Text(
-              "loss",
+              LocaleKeys.loss,
               textAlign: TextAlign.end,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.4),

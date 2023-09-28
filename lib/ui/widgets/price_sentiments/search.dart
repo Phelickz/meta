@@ -4,6 +4,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/price_sentiments/price_sentiments_view_model.dart';
 import 'package:meta_trader/ui/widgets/home/price_sentiments.dart';
 
@@ -44,7 +45,7 @@ class SearchPriceSentiments extends StatelessWidget {
                     }
                   },
                   decoration: InputDecoration(
-                    hintText: 'Search',
+                    hintText: LocaleKeys.search,
                     hintStyle: CustomThemeData.generateStyle(
                       fontSize: 15,
                       color: Theme.of(context).secondaryHeaderColor,
@@ -90,7 +91,7 @@ class SearchPriceSentiments extends StatelessWidget {
             horizontal: McGyver.rsDoubleW(context, 5),
           ),
           child: Text(
-            'Search Results:',
+            LocaleKeys.search,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 2),
               fontWeight: FontWeight.bold,

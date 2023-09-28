@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/auth/radio_button.dart';
 
 import '../../../app/responsiveness/res.dart';
@@ -24,7 +25,7 @@ class ColorPreferencesPage extends StatelessWidget {
         children: [
           verticalSpaceXSmall(context),
           Text(
-            "Change Preference",
+            LocaleKeys.changePreference,
             style: CustomThemeData.generateColoredStyle(
                 fontSize: McGyver.textSize(context, 2),
                 fontWeight: FontWeight.bold,
@@ -32,22 +33,22 @@ class ColorPreferencesPage extends StatelessWidget {
           ),
           verticalSpaceSmall(context),
           CustomPreferenceRatioButton(
-              value: "Blue-Buy/Red-Sell",
+              value: LocaleKeys.settings_colorPreferenceWidget_blueBuyRedSell,
               groupValue: model.chartColor,
               onChanged: (chartColor) {
                 model.changeChartColor(chartColor);
               },
-              label: "Blue-Buy/Red-Sell",
+              label: LocaleKeys.settings_colorPreferenceWidget_blueBuyRedSell,
               colorA: Colors.red,
               colorB: Colors.blue),
           verticalSpaceSmall(context),
           CustomPreferenceRatioButton(
-              value: "Blue-Sell/Red-Buy",
+              value: LocaleKeys.settings_colorPreferenceWidget_blueSellRedBuy,
               groupValue: model.chartColor,
               onChanged: (chartColor) {
                 model.changeChartColor(chartColor);
               },
-              label: "Blue-Sell/Red-Buy",
+              label: LocaleKeys.settings_colorPreferenceWidget_blueSellRedBuy,
               colorA: Colors.blue,
               colorB: Colors.red),
           verticalSpaceSmall(context),

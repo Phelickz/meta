@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/all_transactions.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/deposit_transactions.dart';
@@ -26,13 +27,13 @@ class TransactionHistory extends StatelessWidget {
             child: TabBar(
               // isScrollable: true,
               tabs: const [
-                Tab(text: "All"),
-                Tab(text: "Withdrawal"),
+                Tab(text: LocaleKeys.views_forexNews_forexModel_all),
+                Tab(text: LocaleKeys.withdrawal),
                 Tab(
-                  text: "Deposits",
+                  text: LocaleKeys.deposit,
                 ),
                 Tab(
-                  text: "Internal Transfer",
+                  text: LocaleKeys.internalTransfer,
                 ),
               ],
               isScrollable: true,

@@ -3,6 +3,7 @@ import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
 import 'package:meta_trader/ui/widgets/provider/components/custom_provider_tab.dart';
 
@@ -30,7 +31,7 @@ class Psummary extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
-                "Summary",
+                LocaleKeys.summary,
                 style: CustomThemeData.generateColoredStyle(
                     fontSize: 16,
                     context: context,
@@ -67,7 +68,8 @@ class Psummary extends StatelessWidget {
                     color: const Color(0xFF0C95EF),
                     borderRadius: BorderRadius.circular(12)),
                 child: Text(
-                  "View followers",
+                  LocaleKeys
+                      .providerWidget_providerComponent_pSummary_viewFollowers,
                   style: CustomThemeData.generateColoredStyle(
                       fontSize: 12,
                       context: context,
@@ -111,7 +113,8 @@ class Psummary extends StatelessWidget {
           Row(
             children: [
               Text(
-                "Followers Auto scale",
+                LocaleKeys
+                    .providerWidget_providerComponent_pSummary_followersAutoScale,
                 style: CustomThemeData.generateColoredStyle(
                     fontSize: 12,
                     context: context,
@@ -130,7 +133,8 @@ class Psummary extends StatelessWidget {
           Row(
             children: [
               Text(
-                "Followers Fixed Lot",
+                LocaleKeys
+                    .providerWidget_providerComponent_pSummary_followersFixedLot,
                 style: CustomThemeData.generateColoredStyle(
                     fontSize: 12,
                     context: context,
@@ -149,7 +153,8 @@ class Psummary extends StatelessWidget {
           Row(
             children: [
               Text(
-                "Followers Reverse",
+                LocaleKeys
+                    .providerWidget_providerComponent_pSummary_followersReverse,
                 style: CustomThemeData.generateColoredStyle(
                     fontSize: 12,
                     context: context,
@@ -168,7 +173,8 @@ class Psummary extends StatelessWidget {
           Row(
             children: [
               Text(
-                "Performance fee",
+                LocaleKeys
+                    .providerWidget_providerComponent_pSummary_performanceFee,
                 style: CustomThemeData.generateColoredStyle(
                     fontSize: 12,
                     context: context,
@@ -188,7 +194,7 @@ class Psummary extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Status",
+                LocaleKeys.status,
                 style: CustomThemeData.generateColoredStyle(
                     fontSize: 12,
                     context: context,
@@ -199,7 +205,7 @@ class Psummary extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    "Active",
+                    LocaleKeys.active,
                     style: CustomThemeData.generateColoredStyle(
                         fontSize: 12,
                         context: context,
@@ -226,7 +232,7 @@ class Psummary extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    "InActive",
+                    LocaleKeys.inActive,
                     style: CustomThemeData.generateColoredStyle(
                         fontSize: 12,
                         context: context,

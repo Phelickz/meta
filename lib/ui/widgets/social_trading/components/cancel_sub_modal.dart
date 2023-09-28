@@ -4,6 +4,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
@@ -46,7 +47,8 @@ class CancelSubModal extends StatelessWidget {
           ),
           verticalSpaceSmall(context),
           Text(
-            "Cancel Copying?",
+            LocaleKeys
+                .socialTradingWidget_socialTradingComponent_cancelSub_cancelCoping,
             textAlign: TextAlign.center,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 2.8),
@@ -62,7 +64,8 @@ class CancelSubModal extends StatelessWidget {
               horizontal: McGyver.rsDoubleW(context, 10),
             ),
             child: Text(
-              "Once you cancel your subscription, your open trades with the master trader will be terminated automatically",
+              LocaleKeys
+                  .socialTradingWidget_socialTradingComponent_cancelSub_onceYouCancel,
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.6),
@@ -75,7 +78,7 @@ class CancelSubModal extends StatelessWidget {
           ),
           verticalSpaceMedium(context),
           CustomButtons.generalButton(
-            text: "Proceed",
+            text: LocaleKeys.proceed,
             context: context,
             onTap: () {
               viewModel.push(CopiedTraderTerminatedPage(viewModel: viewModel));
@@ -83,7 +86,7 @@ class CancelSubModal extends StatelessWidget {
           ),
           verticalSpaceSmall(context),
           CustomButtons.outlineButton(
-            text: "Abort",
+            text: LocaleKeys.abort,
             context: context,
             textColor: Theme.of(context).primaryColor,
             onTap: () {

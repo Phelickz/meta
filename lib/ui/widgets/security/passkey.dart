@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
@@ -32,7 +33,7 @@ class PasskeyPage extends StatelessWidget {
                 onTap: () {
                   showAddPasskeyModal(context);
                 },
-                text: 'Add A Passkey',
+                text: LocaleKeys.addAPasskey,
               ),
               verticalSpaceMedium(context),
             ],

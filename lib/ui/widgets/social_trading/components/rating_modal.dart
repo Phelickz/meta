@@ -5,6 +5,7 @@ import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/services/router_service.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/rating.dart';
 
@@ -30,7 +31,8 @@ class _RatingModalState extends State<RatingModal> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Rate Satoshi Nakamoto",
+            LocaleKeys
+                .socialTradingWidget_socialTradingComponent_rateModel_rateSatoshi,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.6),
               fontWeight: FontWeight.w500,
@@ -41,7 +43,8 @@ class _RatingModalState extends State<RatingModal> {
           ),
           verticalSpaceSmall(context),
           Text(
-            "Take a moment and rate me",
+            LocaleKeys
+                .socialTradingWidget_socialTradingComponent_rateModel_takeAMoment,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.7),
               fontWeight: FontWeight.bold,
@@ -116,7 +119,8 @@ class _RatingModalState extends State<RatingModal> {
           verticalSpaceSmall(context),
           verticalSpaceSmall(context),
           CustomButtons.generalButton(
-            text: "Submit Feedback",
+            text: LocaleKeys
+                .socialTradingWidget_socialTradingComponent_rateModel_submitFeedback,
             context: context,
             onTap: () {
               Navigator.pop(context);

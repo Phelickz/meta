@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 class PTradeBar extends StatelessWidget {
   final Map<String, dynamic> tradeInfo;
@@ -172,7 +173,7 @@ class PTradeBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Date:",
+              LocaleKeys.providerWidget_providerComponent_pTradeBar_dateW,
               style: CustomThemeData.generateColoredStyle(
                   fontSize: 12,
                   context: context,
@@ -198,7 +199,7 @@ class PTradeBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Order ID:",
+              LocaleKeys.providerWidget_providerComponent_pTradeBar_orderId,
               style: CustomThemeData.generateColoredStyle(
                   fontSize: 12,
                   context: context,
@@ -224,7 +225,8 @@ class PTradeBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Followers commission:",
+              LocaleKeys
+                  .providerWidget_providerComponent_pTradeBar_followersCommission,
               style: CustomThemeData.generateColoredStyle(
                   fontSize: 12,
                   context: context,

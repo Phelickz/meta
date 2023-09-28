@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/utils/theme.dart';
@@ -21,7 +22,7 @@ class AddPasskeyPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Security Verification Requirements",
+              LocaleKeys.securityWidget_addPasskey_securityVerification,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2.2),
                 fontWeight: FontWeight.bold,
@@ -31,7 +32,7 @@ class AddPasskeyPage extends StatelessWidget {
               ),
             ),
             Text(
-              "You need to complete all of the following verification to continue",
+              LocaleKeys.securityWidget_addPasskey_youNeedToCompleteAll,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.6),
                 fontWeight: FontWeight.w500,
@@ -47,7 +48,7 @@ class AddPasskeyPage extends StatelessWidget {
           assetName: "assets/images/message_text.svg",
           vm: model,
           hasLeadingIcon: true,
-          label: "Email Verification",
+          label: LocaleKeys.verificationWidget_emailVerification,
           status: SecurityOptionStatus.unconfirmed,
           hasStatus: true,
           // onTap: () => model.securityPageEnum = SecurityPageEnum.emailVerify,
@@ -58,7 +59,7 @@ class AddPasskeyPage extends StatelessWidget {
           assetName: "assets/images/mobile.svg",
           vm: model,
           hasLeadingIcon: true,
-          label: "Phone Number",
+          label: LocaleKeys.phoneNumber,
           status: SecurityOptionStatus.unconfirmed,
           hasStatus: true,
           // onTap: () => model.securityPageEnum = SecurityPageEnum.phoneVerify,

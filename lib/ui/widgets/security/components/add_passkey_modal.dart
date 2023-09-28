@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import '../../../../app/responsiveness/res.dart';
 import '../../../../app/responsiveness/size.dart';
 import '../../../../app/utils/theme.dart';
@@ -45,7 +46,7 @@ class AddPasskeyModal extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             Text(
-              "Add Passkey",
+              LocaleKeys.addAPasskey,
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2.8),
@@ -61,29 +62,33 @@ class AddPasskeyModal extends StatelessWidget {
               context: context,
               isDarkMode: isDarkMode,
               assetName: "assets/images/security_safe.svg",
-              title: "No need to remember a password",
-              subtitle:
-                  "With passkeys, you can use things like your fingerprint or face to login",
+              title: LocaleKeys
+                  .securityWidget_securityComponents_addPassKeyModel_noNeedToRemember,
+              subtitle: LocaleKeys
+                  .securityWidget_securityComponents_addPassKeyModel_withPasskey,
             ),
             _addPasskeyModalTile(
               context: context,
               isDarkMode: isDarkMode,
               assetName: "assets/images/devices.svg",
-              title: "Works on all your devices",
-              subtitle:
-                  "Passkeys will automatically be available across your synced devices",
+              title: LocaleKeys
+                  .securityWidget_securityComponents_addPassKeyModel_worksOnAll,
+              subtitle: LocaleKeys
+                  .securityWidget_securityComponents_addPassKeyModel_passkeysWill,
             ),
             _addPasskeyModalTile(
               context: context,
               isDarkMode: isDarkMode,
               assetName: "assets/images/safe_home.svg",
-              title: "keep your account safe",
-              subtitle: "passkeys offer state-of-the-art phishing resistance",
+              title: LocaleKeys
+                  .securityWidget_securityComponents_addPassKeyModel_keepYourAccountSafe,
+              subtitle: LocaleKeys
+                  .securityWidget_securityComponents_addPassKeyModel_passkeysOffer,
             ),
             verticalSpaceSmall(context),
             verticalSpaceSmall(context),
             CustomButtons.generalButton(
-              text: "Continue",
+              text: LocaleKeys.continueWord,
               context: context,
               onTap: () {
                 Navigator.pop(context);

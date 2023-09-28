@@ -6,6 +6,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/verification/verification_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 
@@ -38,7 +39,8 @@ class IdentityVerificationLandingPage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30.0),
                 child: Text(
-                  'Verify Your Identity',
+                  LocaleKeys
+                      .verificationWidget_identityVerificationLanding_verifyYourIdentity,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 2.4),
                     fontWeight: FontWeight.bold,
@@ -51,7 +53,8 @@ class IdentityVerificationLandingPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30.0),
               child: Text(
-                'To successfully verify your identity, we accept either a snapshot of your:',
+                LocaleKeys
+                    .verificationWidget_identityVerificationLanding_toSuccessfullyVerify,
                 textAlign: TextAlign.center,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
@@ -74,7 +77,7 @@ class IdentityVerificationLandingPage extends StatelessWidget {
                 ),
                 horizontalSpaceXXSmall(context),
                 Text(
-                  'Driver\'s license',
+                  LocaleKeys.driversLicense,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.6),
                     color: isDarkMode ? Colors.white60 : Colors.black54,
@@ -97,7 +100,7 @@ class IdentityVerificationLandingPage extends StatelessWidget {
                 ),
                 horizontalSpaceXXSmall(context),
                 Text(
-                  'International Passport',
+                  LocaleKeys.internationalPassport,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.6),
                     color: isDarkMode ? Colors.white60 : Colors.black54,
@@ -120,7 +123,7 @@ class IdentityVerificationLandingPage extends StatelessWidget {
                 ),
                 horizontalSpaceXXSmall(context),
                 Text(
-                  'National ID card',
+                  LocaleKeys.nationalId,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.6),
                     color: isDarkMode ? Colors.white60 : Colors.black54,
@@ -133,7 +136,8 @@ class IdentityVerificationLandingPage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30.0),
                 child: Text(
-                  'It takes 8-24 hrs for your ID to be verified.',
+                  LocaleKeys
+                      .verificationWidget_identityVerificationLanding_itTakes8hours,
                   textAlign: TextAlign.left,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.6),
@@ -145,19 +149,20 @@ class IdentityVerificationLandingPage extends StatelessWidget {
             verticalSpaceSmall(context),
             verticalSpaceMedium(context),
             CustomButtons.generalButton(
-                context: context,
-                onTap: () {
-                  model.setVerificationViewEnum =
-                      VerificationPageEnum.selectIdentity;
-                },
-                text: 'Continue'),
+              context: context,
+              onTap: () {
+                model.setVerificationViewEnum =
+                    VerificationPageEnum.selectIdentity;
+              },
+              text: LocaleKeys.continueWord,
+            ),
             verticalSpaceXSmall(context),
             CustomButtons.clearButton(
               context: context,
               onTap: () {
                 model.push(const BottomNavBarRoute());
               },
-              text: 'Skip',
+              text: LocaleKeys.skip,
               textColor: Theme.of(context).primaryColor,
             ),
           ],

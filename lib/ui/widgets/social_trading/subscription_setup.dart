@@ -1,10 +1,12 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/appbar.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
@@ -26,7 +28,11 @@ class SubscriptionSetupPage extends StatelessWidget {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Skeleton(
       isBusy: viewModel.isBusy,
-      appBar: globalAppBar(context, 'Subscription Setup', '', () {
+      appBar: globalAppBar(
+          context,
+          LocaleKeys
+              .socialTradingWidget_subscriptionSetupWidget_supportFundsProtect,
+          '', () {
         Navigator.pop(context);
       }, [
         IconButton(
@@ -115,7 +121,7 @@ class SubscriptionSetupPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Commission",
+                          LocaleKeys.commission,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.4),
                             fontWeight: FontWeight.w500,
@@ -161,7 +167,7 @@ class SubscriptionSetupPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Equity",
+                          LocaleKeys.equity,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.4),
                             fontWeight: FontWeight.w500,
@@ -194,7 +200,8 @@ class SubscriptionSetupPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Funds In Wallet:",
+                  LocaleKeys
+                      .socialTradingWidget_subscriptionSetupWidget_fundInWallet,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.6),
                     fontWeight: FontWeight.w500,
@@ -236,7 +243,7 @@ class SubscriptionSetupPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Copy Proportion",
+                        LocaleKeys.copyProportion,
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.9),
                           fontWeight: FontWeight.bold,
@@ -254,7 +261,9 @@ class SubscriptionSetupPage extends StatelessWidget {
                           valueListenable:
                               viewModel.isCustomCopyProportionNotifier,
                           builder: (context, isCustom, child) => Text(
-                            isCustom ? "Custom" : "Default",
+                            isCustom
+                                ? LocaleKeys.custom
+                                : LocaleKeys.defaultText,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.5),
                               fontWeight: FontWeight.normal,
@@ -332,7 +341,11 @@ class SubscriptionSetupPage extends StatelessWidget {
                                               ),
                                               const SizedBox(height: 7),
                                               Text(
-                                                "\$${item["amount"]} required",
+                                                LocaleKeys
+                                                    .socialTradingWidget_subscriptionSetupWidget_argumentItemRequired
+                                                    .tr(args: [
+                                                  '\$${item["amount"]}'
+                                                ]),
                                                 style: CustomThemeData
                                                     .generateStyle(
                                                   fontSize: McGyver.textSize(
@@ -348,7 +361,11 @@ class SubscriptionSetupPage extends StatelessWidget {
                                               ),
                                               const SizedBox(height: 3),
                                               Text(
-                                                "${item["volume"]}x trade volume",
+                                                LocaleKeys
+                                                    .socialTradingWidget_subscriptionSetupWidget_argumentTradeVolume
+                                                    .tr(args: [
+                                                  '${item["volume"]}'
+                                                ]),
                                                 style: CustomThemeData
                                                     .generateStyle(
                                                   fontSize: McGyver.textSize(
@@ -372,7 +389,8 @@ class SubscriptionSetupPage extends StatelessWidget {
                           )
                         : PlusMinusText(
                             value: "x4",
-                            label: "Enter value",
+                            label: LocaleKeys
+                                .socialTradingWidget_subscriptionSetupWidget_enterValue,
                             onPlus: () {},
                             onMinus: () {},
                             onTextChanged: (val) {},
@@ -407,7 +425,7 @@ class SubscriptionSetupPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Add Support Funds",
+                          LocaleKeys.addSupportFunds,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.8),
                             fontWeight: FontWeight.w500,
@@ -456,13 +474,16 @@ class SubscriptionSetupPage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   const LabelTextField(
-                                    label: "Support amount",
-                                    hintText: "Enter amount",
+                                    label: LocaleKeys
+                                        .socialTradingWidget_subscriptionSetupWidget_supportAmount,
+                                    hintText: LocaleKeys
+                                        .socialTradingWidget_subscriptionSetupWidget_enterAmount,
                                     keyboardType: TextInputType.number,
                                     hasSmallMargin: true,
                                   ),
                                   Text(
-                                    "55% of the required investment",
+                                    LocaleKeys
+                                        .socialTradingWidget_subscriptionSetupWidget_55OfTheRequired,
                                     textAlign: TextAlign.start,
                                     style: CustomThemeData.generateStyle(
                                       fontSize: McGyver.textSize(context, 1.3),
@@ -501,7 +522,8 @@ class SubscriptionSetupPage extends StatelessWidget {
                 ),
                 Expanded(
                   child: Text(
-                    "Support funds protect your business from unexpected market movements",
+                    LocaleKeys
+                        .socialTradingWidget_subscriptionSetupWidget_supportFundsProtect,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.4),
                       fontWeight: FontWeight.w500,
@@ -534,7 +556,7 @@ class SubscriptionSetupPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Summary",
+                        LocaleKeys.summary,
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.9),
                           fontWeight: FontWeight.bold,
@@ -550,19 +572,23 @@ class SubscriptionSetupPage extends StatelessWidget {
                     valueListenable: viewModel.selectedCopyProportionNotifier,
                     builder: (context, selectedIndex, child) => _twotext(
                       context,
-                      "Copy proportion:",
+                      LocaleKeys.copyProportion,
                       "${viewModel.copyProportions[selectedIndex]["title"]}",
                     ),
                   ),
                   verticalSpaceXSmall(context),
-                  _twotext(context, "Required Investment", "\$26.00"),
+                  _twotext(
+                      context,
+                      LocaleKeys
+                          .socialTradingWidget_subscriptionSetupWidget_requiredInvestment,
+                      "\$26.00"),
                   verticalSpaceXSmall(context),
-                  _twotext(context, "Support Funds:", "\$0.00"),
+                  _twotext(context, LocaleKeys.supportFunds, "\$0.00"),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Risk Score:",
+                        LocaleKeys.home_higherSuccessRates_riskScore,
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.4),
                           fontWeight: FontWeight.w500,
@@ -582,14 +608,16 @@ class SubscriptionSetupPage extends StatelessWidget {
                               horizontal: 8.0, vertical: 5),
                           child: RichText(
                             text: TextSpan(
-                              text: 'Risk score: ',
+                              text:
+                                  LocaleKeys.home_higherSuccessRates_riskScore,
                               style: CustomThemeData.generateStyle(
                                 fontSize: 10,
                                 color: isDarkMode ? Colors.white : Colors.black,
                               ),
                               children: [
                                 TextSpan(
-                                  text: ' MEDIUM',
+                                  text: LocaleKeys
+                                      .home_higherSuccessRates_mediumCap,
                                   style: CustomThemeData.generateStyle(
                                     fontSize: 10,
                                     fontWeight: FontWeight.bold,
@@ -655,8 +683,8 @@ class SubscriptionSetupPage extends StatelessWidget {
               },
               text: viewModel.socialTradingPageEnum ==
                       SocialTradingPageEnum.copiedTraderPosition
-                  ? "Stop Copying"
-                  : "Start Copying",
+                  ? LocaleKeys.stopCoping
+                  : LocaleKeys.socialTradingWidget_myTrades_startCopying,
             ),
             verticalSpaceSmall(context),
           ],

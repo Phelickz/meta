@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/provider/provider_view_model.dart';
 import 'package:meta_trader/ui/widgets/provider/components/provider_oprions_tile.dart';
 
@@ -19,25 +20,25 @@ class ProviderOptionsPage extends StatelessWidget {
             onTap: () {
               viewModel.setProviderPageEnum = ProviderPageEnum.wallet;
             },
-            title: "My Wallet",
+            title: LocaleKeys.providerWidget_providerOption_myWallet,
             leading: AssetManager.paymentMethod),
         SizedBox(height: 18.pHeight(context)),
         ProviderOptionsTile(
             onTap: () {
               viewModel.setProviderPageEnum = ProviderPageEnum.profileSettings;
             },
-            title: "Profile Settings",
+            title: LocaleKeys.providerWidget_providerOption_profileSettings,
             leading: AssetManager.editUserIcon),
         SizedBox(height: 18.pHeight(context)),
         ProviderOptionsTile(
             onTap: () {
               viewModel.setProviderPageEnum = ProviderPageEnum.notifications;
             },
-            title: "Notification",
+            title: LocaleKeys.notification,
             leading: AssetManager.notificationsIcon),
         SizedBox(height: 18.pHeight(context)),
         ProviderOptionsTile(
-          title: "Support",
+          title: LocaleKeys.support,
           leading: AssetManager.help,
           onTap: () {
             viewModel.push(const HelpAndSupportRoute());
@@ -45,7 +46,7 @@ class ProviderOptionsPage extends StatelessWidget {
         ),
         SizedBox(height: 18.pHeight(context)),
         ProviderOptionsTile(
-          title: "Logout",
+          title: LocaleKeys.logOut,
           leading: AssetManager.logout,
           onTap: () {
             viewModel.push(const BottomNavBarRoute());

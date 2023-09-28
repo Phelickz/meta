@@ -5,6 +5,7 @@ import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 class ModernViewTile extends StatefulWidget {
   final String currencyIcon,
@@ -114,7 +115,7 @@ class _ModernViewTileState extends State<ModernViewTile> {
                                   double.parse(widget.percentageChange) / 100,
                               child: Container(
                                 decoration: BoxDecoration(
-                                    color: widget.trend == "positive"
+                                    color: widget.trend == LocaleKeys.positive
                                         ? const Color(0xff77C5F8)
                                         : const Color(
                                             0xffF97066) // Secondary color for progress
@@ -132,7 +133,7 @@ class _ModernViewTileState extends State<ModernViewTile> {
                   child: SizedBox(
                     width: 40.pWidth(context),
                     height: 40.pHeight(context),
-                    child: SvgPicture.asset(widget.trend == "positive"
+                    child: SvgPicture.asset(widget.trend == LocaleKeys.positive
                         ? AssetManager.upTrendChart
                         : AssetManager.downTrendChart),
                   ),
@@ -155,7 +156,7 @@ class _ModernViewTileState extends State<ModernViewTile> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          widget.trend == "positive"
+                          widget.trend == LocaleKeys.positive
                               ? const Icon(
                                   Icons.arrow_upward,
                                   color: Colors.blue,

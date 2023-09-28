@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../../app/responsiveness/size.dart';
 import '../../buttons/buttons.dart';
@@ -21,7 +22,7 @@ class PositionModal extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              "Bulk Operations",
+              LocaleKeys.bulkOperations,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.9),
                 fontWeight: FontWeight.bold,
@@ -31,17 +32,17 @@ class PositionModal extends StatelessWidget {
             verticalSpaceSmall(context),
             _buttonText(
               context: context,
-              label: "Close all positions",
+              label: LocaleKeys.closeAllPositions,
               onTap: () {},
             ),
             _buttonText(
               context: context,
-              label: "Close profitable positions",
+              label: LocaleKeys.closeProfitable,
               onTap: () {},
             ),
             _buttonText(
               context: context,
-              label: "Close losing positions",
+              label: LocaleKeys.closeAllPositions,
               onTap: () {},
             ),
             verticalSpaceSmall(context),
@@ -51,7 +52,7 @@ class PositionModal extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context);
               },
-              text: "Cancel",
+              text: LocaleKeys.cancel,
               color: isDarkMode
                   ? const Color(0xFF052844)
                   : const Color(0xFFD3ECFD),

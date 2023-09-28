@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/custom_summary_tab.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/trade_position_tile.dart';
@@ -44,7 +45,7 @@ class OpenPositionsComponent extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Summary",
+                      LocaleKeys.summary,
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 2),
                         fontWeight: FontWeight.bold,
@@ -100,7 +101,7 @@ class OpenPositionsComponent extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Positions",
+                  LocaleKeys.positions,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     fontWeight: FontWeight.bold,
