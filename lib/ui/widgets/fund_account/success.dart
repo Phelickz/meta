@@ -47,8 +47,7 @@ class DepositSuccess extends StatelessWidget {
             child: RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                text: LocaleKeys
-                    .fundAccountWidget_successWidget_financialRegulation,
+                text: LocaleKeys.financialRegulation,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
                   color: isDarkMode ? Colors.white60 : Colors.black87,

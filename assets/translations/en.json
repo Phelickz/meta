@@ -140,7 +140,7 @@
   "passKeys": "Passkeys",
   "devices": "Devices",
   "value": "value",
-  "default": "Default",
+  "defaultText": "Default",
   "aboutUs": "About Us",
   "overView": "Overview",
   "tradingHistory": "Trading History",
@@ -550,7 +550,7 @@
       }
     },
     "verificationView": {
-      "Verify Identity": "Verify Identity",
+      "VerifyIdentity": "Verify Identity",
       "selectIdToCapture": "Select ID to capture"
     },
     "withdrawFundsView": {
@@ -977,11 +977,11 @@
   }
  },
  "referralWidget":{
-  "referNowAndEarn": "Refer now and earn $10 credit on your next trade",
+  "referNowAndEarn": "Refer now and earn {}10 credit on your next trade",
   "referralCode": "Referral Code",
   "howDoesItWork": "How does it work",
   "inviteYourFriends": "Invite your friends to register on Meta Trader 5 ",
-  "whenYourFriend": "When your friend registers on app, both of you will get $10 reward credit",
+  "whenYourFriend": "When your friend registers on app, both of you will get {}10 reward credit",
   "yourRewardCredit": "Your reward credit can then be used on your next trade",
   "checkOutMyApp": "check out my app https://example.com",
   "referNow": "Refer Now"
@@ -1169,9 +1169,9 @@
   },
   "tradeModal": {
     "australianDollarVsJap": "Australian dollar vs Japanese Yen",
-    "swap0.00": "Swap: 0.00",
+    "swap0": "Swap: 0.00",
     "modifyPosition": "Modify position",
-    "bulkOPerations..": "Bulk operations..."
+    "bulkOPerationsW": "Bulk operations..."
   },
   "modifyTrade": {
     "in1hour": "In 1 Hour at 10:41 on 29th July 2023 your trade will automatically close",
@@ -1225,8 +1225,8 @@
  },
  "withdrawFunds": {
   "paymentInformationWidget":{
-      "accountNumber.": "Account number:",
-      "124Hours.": "1-24 hours"
+      "accountNumberW": "Account number:",
+      "124Hours": "1-24 hours"
   },
   "paymentMethodWidget":{
       "selectPreferred": "Select preferred payment method"

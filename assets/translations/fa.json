@@ -140,7 +140,7 @@
   "passKeys": "کلیدهای عبور",
   "devices": "دستگاه‌ها",
   "value": "ارزش",
-  "default": "پیش‌فرض",
+  "defaultText": "پیش‌فرض",
   "aboutUs": "درباره ما",
   "overView": "بررسی کلی",
   "tradingHistory": "تاریخچه معاملات",
@@ -552,7 +552,7 @@
       }
     },
     "verificationView": {
-      "Verify Identity": "تأیید هویت",
+      "VerifyIdentity": "تأیید هویت",
       "selectIdToCapture": "انتخاب شناسنامه برای عکس‌برداری"
     },
     "withdrawFundsView": {
@@ -980,11 +980,11 @@
     }
   },
   "referralWidget":{
-    "referNowAndEarn": "هم‌اکنون معرفی کنید و $10 اعتبار در معامله بعدی‌تان کسب کنید",
+    "referNowAndEarn": "هم‌اکنون معرفی کنید و{}10 اعتبار در معامله بعدی‌تان کسب کنید",
     "referralCode": "کد معرفی",
     "howDoesItWork": "چگونه کار می‌کند",
     "inviteYourFriends": "دوستان خود را به ثبت‌نام در Meta Trader 5 دعوت کنید",
-    "whenYourFriend": "وقتی دوست شما در اپلیکیشن ثبت‌نام کند، هر دوی شما مبلغ $10 اعتبار جایزه دریافت می‌کنید",
+    "whenYourFriend": "وقتی دوست شما در اپلیکیشن ثبت‌نام کند، هر دوی شما مبلغ {}10 اعتبار جایزه دریافت می‌کنید",
     "yourRewardCredit": "سپس اعتبار جایزه‌تان را می‌توانید در معامله بعدی خود استفاده کنید",
     "checkOutMyApp": "اپلیکیشن من را بررسی کنید https://example.com",
     "referNow": "هم‌اکنون معرفی کنید"
@@ -1172,9 +1172,9 @@
     },
     "tradeModal": {
       "australianDollarVsJap": "دلار استرالیایی در مقابل ین ژاپنی",
-      "swap0.00": "سواپ: 0.00",
+      "swap0": "سواپ: 0.00",
       "modifyPosition": "تغییر موقعیت",
-      "bulkOPerations..": "عملیات دسته‌ای..."
+      "bulkOPerationsW": "عملیات دسته‌ای..."
     },
     "modifyTrade": {
       "in1hour": "در 1 ساعت در تاریخ 29 ژوئیه 2023، معامله شما به طور خودکار بسته می‌شود",
@@ -1228,8 +1228,8 @@
   },
   "withdrawFunds": {
     "paymentInformationWidget":{
-      "accountNumber.": "شماره حساب:",
-      "124Hours.": "1-24 ساعت"
+      "accountNumberW": "شماره حساب:",
+      "124Hours": "1-24 ساعت"
     },
     "paymentMethodWidget":{
       "selectPreferred": "روش پرداخت دلخواه خود را انتخاب کنید"

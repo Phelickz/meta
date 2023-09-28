@@ -140,7 +140,7 @@
   "passKeys": "مفاتيح المرور",
   "devices": "الأجهزة",
   "value": "قيمة",
-  "default": "تقصير",
+  "defaultText": "تقصير",
   "aboutUs": "معلومات عنا",
   "overView": "ملخص",
   "tradingHistory": "تاريخ التداول",
@@ -550,7 +550,7 @@
       }
     },
     "verificationView": {
-    "Verify Identity": "تحقق من الهوية",
+    "VerifyIdentity": "تحقق من الهوية",
     "selectIdToCapture": "اختر الهوية لالتقاطها"
     },
     "withdrawFundsView": {
@@ -1168,9 +1168,9 @@
     },
     "tradeModal": {
       "australianDollarVsJap": "الدولار الأسترالي مقابل الين الياباني",
-      "swap0.00": "التبادل: 0.00",
+      "swap0": "التبادل: 0.00",
       "modifyPosition": "تعديل المركز",
-      "bulkOPerations..": "عمليات جماعية..."
+      "bulkOPerationsW": "عمليات جماعية..."
     },
     "modifyTrade": {
       "in1hour": "سيتم إغلاق مركز التداول تلقائيًا في غضون ساعة واحدة في الساعة 10:41 في 29 يوليو 2023",
@@ -1224,8 +1224,8 @@
   },
   "withdrawFunds": {
     "paymentInformationWidget": {
-      "accountNumber.": "رقم الحساب:",
-      "124Hours.": "1-24 ساعة"
+      "accountNumberW": "رقم الحساب:",
+      "124Hours": "1-24 ساعة"
     },
     "paymentMethodWidget": {
       "selectPreferred": "حدد وسيلة الدفع المفضلة"

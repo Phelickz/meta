@@ -128,6 +128,168 @@ class CodegenLoader extends AssetLoader{
   "ok": "Ok",
   "name": "Name",
   "btcBeanBEP3": "BTC Beacon Chain (BEP3)",
+  "sentiments": "Sentiments",
+  "favorites": "Favorites",
+  "buy": "Buy",
+  "options": "Options",
+  "option": "Option",
+  "wallet": "Wallet",
+  "followers": "Followers",
+  "open": "Open",
+  "positive": "positive",
+  "negative": "negative",
+  "sector": "Sector",
+  "industry": "Industry",
+  "country": "Country",
+  "digits": "Digits",
+  "spread": "Spread",
+  "exotics": "Exotic",
+  "minors": "Minors",
+  "quotes": "Quotes",
+  "details": "Details",
+  "lots": "Lots",
+  "euroVsUs": "Euro vs US dollar",
+  "theTradeWill": "The trade will be executed at market conditions. Difference with requested price maybe significant",
+  "statistics": "Statistic",
+  "referralProgram": "Referral Program",
+  "security": "Security",
+  "passKeys": "Passkeys",
+  "devices": "Devices",
+  "value": "value",
+  "defaultText": "Default",
+  "aboutUs": "About Us",
+  "overView": "Overview",
+  "tradingHistory": "Trading History",
+  "transferToBank": "Transfer to Bank",
+  "transferToPerfect": "Transfer to Perfect Money",
+  "onlineBankTransfer": "Online Bank Transfer",
+  "walletToDeriv": "Wallet to deriv",
+  "fxtmToWallet": "FXTM  to Wallet",
+  "tradeHistory": "Trade History",
+  "transactions": "Transactions",
+  "failed": "Failed",
+  "successful": "Successful",
+  "deposits": "Deposits",
+  "pending": "Pending",
+  "withdrawal": "Withdrawal",
+  "internalTransferText": "Internal Transfer",
+  "fiftyFiveThousand": "55,000",
+  "activity": "Activity",
+  "price": "Price",
+  "welcome": "Welcome, {}",
+  "verified": "Verified",
+  "unVerified": "Unverified",
+  "referrals": "Referrals",
+  "nickName": "Nickname",
+  "confirm": "confirm",
+  "filter": "Filter",
+  "profits": "Profits",
+  "profit": "Profit",
+  "loss": "Loss",
+  "ascending": "Ascending",
+  "descending": "Descending",
+  "location": "Location",
+  "summary": "Summary ",
+  "status": "Status",
+  "inActive": "InActive",
+  "Register": "Register",
+  "strategyDescriptionText": "Strategy Description",
+  "attachment": "Attachment",
+  "submit": "Submit",
+  "actions": "Actions",
+  "markets": "Markets",
+  "euroVsGreatBritain": "Euro Vs Great Britain Pounds",
+  "modernView": "Modern view",
+  "advancedView": "Advanced view",
+  "simpleView": "Simple view",
+  "trade": "Trade",
+  "popular": "Popular",
+  "ask": "Ask",
+  "bid": "Bid",
+  "symbol": "Symbol",
+  "major": "major",
+  "crypto": "Crypto",
+  "searchPairs": "Search pairs",
+  "deleteWithArgument": "Delete {}",
+  "date": "Date:",
+  "passkey": "Passkey",
+  "addAPasskey": "Add A Passkey",
+  "hasBeenVerified": " has been verified successfully",
+  "resendCode": "Resend code",
+  "disable": "Disable",
+  "presets": "Presets",
+  "warm": "Warm",
+  "marble": "Marble",
+  "others": "Others",
+  "general": "General",
+  "language": "Language",
+  "appearance": "Appearance",
+  "market": "Market",
+  "chartColor": "Chart Color",
+  "colorPreference": "Color Preference",
+  "privacyPolicyText": "Privacy policy",
+  "update": "Update",
+  "proceed": "Proceed",
+  "abort": "Abort",
+  "positions": "Positions",
+  "filterBy": "Filter by",
+  "selectPosition": "Select Position",
+  "youHaveSuccessCopied": "You have successfully started copying Satoshi Nakamoto’s trades automatically. \n\n  Notifications would be sent to you when he opens or closes a trade",
+  "hideMore": "hide more",
+  "stopCoping": "Stop Copying",
+  "gain": "Gain",
+  "copiers": "Copiers",
+  "performance": "Performance",
+  "subscriptionGuide": "Subscription Guide",
+  "equal1": "Equal 1x",
+  "double2": "Double 2x",
+  "triple3": "Triple 3x",
+  "addSupportFunds": "Add Support Funds",
+  "supportFunds": "Support Funds:",
+  "copyProportion": "Copy proportion:",
+  "custom": "Custom",
+  "sender": "Sender",
+  "receiver": "Receiver",
+  "walletBalance": "Wallet Balance",
+  "over24hours": "over 24 Hrs",
+  "recentTransaction": "Recent Transactions",
+  "order": "Order",
+  "time": "Time",
+  "bulkOperations": "Bulk Operations",
+  "closeAllPositions": "Close all positions",
+  "closeProfitable": "Close profitable positions",
+  "closeAllLosing": "Close losing positions",
+  "freeMargin": "Free Margin",
+  "marginLevel": "Margin Level",
+  "last2Hrs": "Last 24 Hrs",
+  "depthOfMarket": "Depth of market",
+  "notSet": "Not set",
+  "lastWeek": "Last week",
+  "customPeriodText": "Custom Period",
+  "filled": "Filled",
+  "canceled": "Canceled",
+  "total": "Total",
+  "august": "August",
+  "reportTransaction": "Report Transaction",
+  "transactionId": "Transaction Id",
+  "betweenAccounts": "Between Accounts",
+  "weSentAVerification": "We sent a verification email to",
+  "pleaseTapLink": "Please tap the link sent in the email to continue",
+  "checkMail": "Check mail",
+  "emailVerifiedSuccessfully": "Email Verified Successfully",
+  "yourEmailAccount": "Your email account ",
+  "skip": "Skip",
+  "internationalPassport": "International Passport",
+  "nationalId": "National ID card",
+  "passport": "Passport",
+  "driversLicense": "Driver's license",
+  "verifyAccount": "Verify Account",
+  "financialRegulation": "Financial regulations require us to verify your ID. This helps prevent someone else from creating a MT5 account in your name.",
+  "withdrawToBank": "Withdraw to bank",
+  "paymentInformation": "Payment Information",
+  "amountToWithdraw": "Amount To Withdraw",
+  "leaveAMark": "Leave a remark",
+  "additionalInformation": "Additional Information (Optional)",
   "views": {
     "auth": {
       "auth_view": {
@@ -296,6 +458,114 @@ class CodegenLoader extends AssetLoader{
     "pipCalculatorView": {
       "pipValue": "Pip value (USD)",
       "numberOfPips": "Number of Pips {}"
+    },
+    "priceSentiments": {
+      "marketSentiments": "Market Sentiments",
+      "sentimentsAcrossM": "Sentiments across markets"
+    },
+    "priceCalculatorView": {
+      "profitUSD": "Profit (USD)",
+      "buyOrSell": "Buy or Sell",
+      "openingPrice": "Opening price",
+      "closingPrice": "Closing Price"
+    },
+    "providerView": {
+      "notificationList": {
+        "notificationListTitle": "Subscription Successful",
+        "notificationListTitle1": "subscription terminated",
+        "notificationListTime": "16:23:41",
+        "notificationListDate": "2.1.2023",
+        "notificationListDescription": "You are now copying satoshi nakamoto.",
+        "notificationListDescription1": "You have successfully terminated your copy trading with satoshi nakamoto."
+      },
+      "strategyDescription": "Hello Everyone, 👉 this account is totally safe to copy for all investors, Newbies and Professionals. I will try my best to make 25-50% profits weekly 💪. Our first priority is to keep safety of your funds.Happy trading ✨",
+      "signUpAsProvider": "Sign up as a Provider",
+      "enterYourInformation": "Enter your information",
+      "providerLogin": "Provider Login",
+      "approvedRegistration": "Approved provider registration",
+      "profileSettings": "Profile Settings",
+      "changeYourProfileInfo": "Change your profile information",
+      "viewYourFollowers": "View your followers"
+    },
+    "quotesView": {
+      "quotesViewModel": {
+        "quoteList": {
+          "greatBritainPounds": "Great Britain Pound vs US Dollar",
+          "usDollarCan": "US Dollar vs Canadian Dollar"
+        },
+        "stopLevel": "Stop Level",
+        "marginCurrency": "Margin currency",
+        "profitCurrency": "Profit currency",
+        "tickSize": "Tick size",
+        "tickValue": "Tick value",
+        "addSymbol": "Add symbol to market list"
+      },
+      "tradeCloseScreen": {
+        "closeBuy": "Close #312443 buy 0.1 by Market with loss of 0.80"
+      },
+      "tradeDepthScreen": {
+        "depthMarket": "Depth of Market"
+      }
+    },
+    "security": {
+      "autoLock": "Auto-Lock",
+      "enableToLock": "Enable to lock app automatically",
+      "addPasskey": "Add Passkey"
+    },
+    "settings": {
+      "whatsappAddition": "WhatsApp addition",
+      "addNoticeOfUpcoming": "add notice of upcoming signals",
+      "addingDifferentViews": "adding different views on the market section",
+      "blueBuy": "Blue-Buy/Red-Sell",
+      "notificationSettings": "Notification Settings",
+      "languageSettings": "Language Settings",
+      "changeAppLanguage": "Change app language",
+      "changeBasis": "Change Basis",
+      "TermsOfUse": "Terms of use",
+      "privacyPolicy": {
+        "privacyPolicyHead1": "Information Collection",
+        "privacyPolicyHead2": "Data Sharing And Disclosure",
+        "privacyPolicySubH": "Personal Information",
+        "privacyPolicySubH1": "Financial Information",
+        "privacyPolicySubH2": "Device and Usage Information",
+        "privacyPolicySubH3": "Cookies and Tracking Technologies",
+        "privacyPolicySubH4": "Account Creation",
+        "privacyPolicySubH5": "Forex Trading Services",
+        "privacyPolicyIntro": "Thank you for choosing Meta trader  as your trusted forex trading platform. We are committed to safeguarding your privacy and protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data. By accessing or using our services, you agree to the practices described in this policy.",
+        "privacyPolicyD2": "We may collect various types of information from you when you use our platform or services, including:",
+        "privacyPolicyD3": "This may include your name, email address, phone number, residential address, date of birth, government-issued identification, and other necessary details required for account registration and compliance with financial regulations.",
+        "privacyPolicyD4": "To facilitate transactions, we may collect details related to your bank account, credit/debit card information, and transaction history.",
+        "privacyPolicyD5": "We may automatically collect information about your device, operating system, browser type, IP address, and interactions with our platform to improve our services and user experience.",
+        "privacyPolicyD6": "We may use cookies and similar technologies to gather information about your usage patterns and preferences while using our platform. This helps us to optimize our website, improve navigation, and personalize your experience",
+        "privacyPolicyD7": "We use the collected information for the following purposes",
+        "privacyPolicyD8": "To create and maintain your account, verify your identity, and provide customer support.",
+        "privacyPolicyD9": "To process your trades, transactions, and withdrawals in accordance with your instructions."
+      }
+    },
+    "socialTradingView": {
+      "transactionDetails": "Transaction Details",
+      "subscriptionSetup": "Subscription Setup",
+      "transferToBinance": "Transfer to BinancePay",
+      "depositToBinance": "Deposit from BinancePay",
+      "depositToNeteller": "Deposit from Neteller",
+      "depositToPerfect": "Deposit from Perfect Money",
+      "subSuccessful": "Subscription Successful",
+      "subTerminated": "Subscription terminated",
+      "socialTradingWelcome": {
+        "welcomeToMT5": "Welcome to MT5 Social Trading Platform",
+        "nowYouCanStart": "Now you can start investing with top master traders, track and manage your subscriptions.",
+        "getStarted": "Get Started"
+      }
+    },
+    "verificationView": {
+      "VerifyIdentity": "Verify Identity",
+      "selectIdToCapture": "Select ID to capture"
+    },
+    "withdrawFundsView": {
+      "selectAccountToWithdraw": "Select account to withdraw",
+      "withdrawToBinancePay": "Withdraw to BinancePay",
+      "withdrawToBlockBee": "Withdraw to BlockBee",
+      "withdrawToNeteller": "Withdraw to Neteller"
     }
   },
   "onboarding": {
@@ -429,7 +699,6 @@ class CodegenLoader extends AssetLoader{
     },
     "successWidget": {
       "yourTransaction": "Your Transaction is Being Processed",
-      "financialRegulation": "Financial regulations require us to verify your ID. This helps prevent someone else from creating a MT5 account in your name.",
       "youCan": "You can skip this step but you will not be able to withdraw your funds."
     },
     "tetherWidget": {
@@ -564,6 +833,406 @@ class CodegenLoader extends AssetLoader{
     "tetherWidgetP": {
       "enterTetherUSd": "Enter  TetherUSD Wallet Address"
     }
+  },
+  "priceSentimentWidget": {
+    "details": {
+      "clientSentiment": "Client Sentiment:",
+      "tradingActivity": "Trading Activity",
+      "priceRange": "Price Range",
+      "priceVolatility": "Price Volatility",
+      "priceMovement": "price Movement"
+    },
+    "searchResults": "Search Results:"
+  },
+  "profile": {
+    "verificationBar": {
+      "verifyYourAccount": "Verify your account",
+      "toMakeFirstD": "To make your first deposit, we would like to know you better. click ‘continue’ to get started"
+    },
+    "profileWidget": {
+      "viewYourWithD": "view your withdrawal and deposit history",
+      "updatePaymentM": "update payment methods",
+      "fileAComplaint": "file a complaint with our team",
+      "rateTheApp": "Rate the app",
+      "giveUsAReview": "give us a review on appstore",
+      "viewWithDrawalH": "view your withdrawal and deposit history"
+    }
+  },
+  "providerWidget": {
+    "providerComponent": {
+      "changeNickName": {
+        "changeNickNameT": "Change NickName",
+        "enterNewNickName": "Enter new nickname"
+      },
+      "changePasswordWidget": {
+        "confirmPassword": "Confirm Password"
+      },
+      "pGraph": {
+        "myPerformance": "My Performance"
+      },
+      "pGraph2": {
+        "followersStats": "Follower Stats"
+      },
+      "pModelBottomSheet": {
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "openPosition": "Open Position",
+        "selectCountry": "Select Country"
+      },
+      "pProfitsBar": {
+        "totalTrade": "Total Trades"
+      },
+      "pTradeBar": {
+        "dateW": "Date:",
+        "orderId": "Order ID:",
+        "followersCommission": "Followers commission:"
+      },
+      "pSummary": {
+        "viewFollowers": "View followers",
+        "followersAutoScale": "Followers Auto scale",
+        "followersFixedLot": "Followers Fixed Lot",
+        "followersReverse": "Followers Reverse",
+        "performanceFee": "Performance fee"
+      },
+      "updatePhoneNumber": {
+        "updatePhoneNumberText": "Update Phone Number"
+      }
+    },
+    "providerConfirmation": {
+      "yourRequestHas": "Your request has been\nsubmitted successfully",
+      "youWillReceive": "You will receive a feedback within 3-4\nworking days via email on successful\nverification"
+    },
+    "providerFollowers": {
+      "followedRecently": "Followed Recently",
+      "startedFollowing": "Started Following: {}s"
+    },
+    "providerLogin": {
+      "enterYourAccount": "Enter your account ID",
+      "accountID": "Account ID",
+      "desiredFee": "Desired Fee",
+      "iAgreeWith": "I agree with the",
+      "termsAndConditionProvider": "terms and conditions",
+      "forOPening": "for opening an account and the",
+      "dataProtectionPolicy": "data protection policy"
+    },
+    "providerOption": {
+      "myWallet": "My Wallet",
+      "profileSettings": "Profile Settings"
+    },
+    "providerSettings": {
+      "desiredFeeCommission": "Desired Fees (Commission)",
+      "publicVisibility": "Public Visibility",
+      "visibilityPublic": "Visibility: Public",
+      "saveChanges": "Save changes"
+    },
+    "providerSignUp": {
+      "uploadAttachment": "Upload Attachment"
+    },
+    "providerWallet": {
+      "reportAnIssue": "Report an Issue",
+      "depositFromNeteller": "Deposit from Neteller",
+      "metaWalletToWallet": "Metawallet to Wallet",
+      "transferToSticPay": "Transfer to SticPay",
+      "depositToDeriv": "Deposit to deriv"
+    },
+    "welcomeProvider": {
+      "startGenerating": "Start Generating Income\nFor Your Followers",
+      "becomeAProvider": "Become a Provider on our\nplatform, showcasing your trading\nskills and earning income from\nyour followers",
+      "loginInstead": "Login Instead"
+    }
+  },
+  "quotesWidget": {
+    "components": {
+      "genericTradeBody": {
+        "lotSize": "Lot Size",
+        "stopLoss": "Stop Loss",
+        "takeProfit": "Take Profit",
+        "fillPolicy": "Fill Policy",
+        "fillOrKill": "Fill or Kill",
+        "timeFrame": "Time Frame",
+        "currencyPrice": "Current Price",
+        "inOneHour": "In 1 Hour at 10:41 on 29th July 2023 your trade will automatically close",
+        "sellByMarket": "Sell by Market",
+        "buyByMarket": "Buy by Market"
+      },
+      "marketStats": {
+        "initialMargin": "Initial Margin",
+        "bigHigh": "Bid High",
+        "bigLow": "Bid Low",
+        "askHigh": "Ask High",
+        "askLow": "Ask Low",
+        "priceChange": "Price Change",
+        "openPrice": "Open Price",
+        "closePrice": "Close Price"
+      },
+      "quotesBottomSheet": {
+        "euroVsDollar": "EURUSDs: Euro vs US Dollar"
+      },
+      "tradeAppBar": {
+        "marketExec": "Market Execution"
+      }
+    },
+    "modernViewWidget": {
+      "topMovers": "Top Movers"
+    }
+  },
+  "referralWidget": {
+    "referNowAndEarn": "Refer now and earn {}10 credit on your next trade",
+    "referralCode": "Referral Code",
+    "howDoesItWork": "How does it work",
+    "inviteYourFriends": "Invite your friends to register on Meta Trader 5 ",
+    "whenYourFriend": "When your friend registers on app, both of you will get {}10 reward credit",
+    "yourRewardCredit": "Your reward credit can then be used on your next trade",
+    "checkOutMyApp": "check out my app https://example.com",
+    "referNow": "Refer Now"
+  },
+  "securityWidget": {
+    "securityComponents": {
+      "addPassKeyModel": {
+        "appPasskey": "Add Passkey",
+        "noNeedToRemember": "No need to remember a password",
+        "withPasskey": "With passkeys, you can use things like your fingerprint or face to login",
+        "worksOnAll": "Works on all your devices",
+        "passkeysWill": "Passkeys will automatically be available across your synced devices",
+        "keepYourAccountSafe": "keep your account safe",
+        "passkeysOffer": "passkeys offer state-of-the-art phishing resistance"
+      },
+      "changePasswordModel": {
+        "inOrderToProtect": "In order to protect your account, withdrawals will be disabled for 24 hours after you change your password"
+      },
+      "deletePopUP": {
+        "doYouReallyWantToDelete": "Do you really want to delete this {}"
+      },
+      "emptyPasskey": {
+        "passkeyAddedYet": "Passkeys added Yet"
+      },
+      "passkeyTile": {
+        "added12": "Added: 12 July, 2023",
+        "lastUsed": "Last used: 2 days ago"
+      }
+    },
+    "addPasskeyEnter": {
+      "enterAUnique": "Enter a unique 4-digit passkey",
+      "yourPasskeyWillBe": "Your passkey will be used to authorize your withdrawals. Please you are not advised to share this with anyone.",
+      "enter4digitsPasskey": "Enter 4-digits passkey",
+      "enterYourPassword": "Enter Your password"
+    },
+    "addPasskey": {
+      "securityVerification": "Security Verification Requirements",
+      "youNeedToCompleteAll": "You need to complete all of the following verification to continue"
+    },
+    "autoLockWidget": {
+      "usingPattern": "using pattern to unlock app",
+      "usingYourFace": "using your face to unlock app",
+      "faceUnlock": "Face lock"
+    },
+    "emailVerify": {
+      "passKeyAdded": "Passkey Added Successfully"
+    },
+    "passkeyAddedSuccess": {
+      "passkeyAddedSuccessfully": "Passkey Added Successfully",
+      "yourPasskeyIs": "Your passkey is",
+      "pleaseKeepThisPasskey": " please keep this passkey safe, so you won’t forget it"
+    },
+    "passwordChangedSuccess": {
+      "passwordChangedSuccessText": "Password Changed Successfully",
+      "itWillTake24": "It will take 24 hours before you can make withdrawals. Please wait patiently"
+    },
+    "phoneVerifiedSuccess": {
+      "phoneVerifiedSuccessFully": "Phone Verified Successfully",
+      "yourPhoneNumber": "Your phone number "
+    },
+    "phoneVerify": {
+      "weSentVerificationCode": "We sent a verification code to ",
+      "enter6Digits": "Enter 6-digits verification code"
+    },
+    "securityMain": {
+      "twoFactorAuthentication": "Two-Factor Authentication",
+      "toProtectYourAccount": "To protect your account, it is required for you to turn on at least one 2FA",
+      "autoLockText": "Auto-Lock",
+      "disableAccount": "Disable Account",
+      "doYouReallyWantToDisable": "Do you really want to disable account?"
+    }
+  },
+  "settings": {
+    "aboutUs": {
+      "serviceAgreement": "Service Agreement",
+      "likeUsOnFacebook": "Like us on facebook",
+      "followUsOnTwitter": "Follow us on Twitter",
+      "joinUsOnTelegram": "Join us on Telegram",
+      "checkForUpdate": "Check for updates"
+    },
+    "changeBasis": {
+      "whenYouSwitch": "When you switch to a new UTC time zone, the change (%) for markets and trades will be calculated based on the new time zone "
+    },
+    "settingsPage": {
+      "pushNotification": "Push Notifications",
+      "useDeviceTheme": "Use Device Theme",
+      "darkMode": "Dark Mode",
+      "changeBasisText": "Change Basis",
+      "currentVersion ": "Current Version"
+    },
+    "updateRelease": {
+      "updateReleaseText": "Update release",
+      "thisUpdate": "This update"
+    }
+  },
+  "socialTradingWidget": {
+    "socialTradingComponent": {
+      "cancelSub": {
+        "cancelCoping": "Cancel Copying?",
+        "onceYouCancel": "Once you cancel your subscription, your open trades with the master trader will be terminated automatically"
+      },
+      "copiedTrader": {
+        "followingSince": "Following since:"
+      },
+      "filterModel": {
+        "searchTransaction": "Search Transaction",
+        "enterYourSearch": "Enter your search term"
+      },
+      "filterPosition": {
+        "closedPositions": "Closed positions",
+        "openPositions": "Open positions"
+      },
+      "rateModel": {
+        "rateSatoshi": "Rate Satoshi Nakamoto",
+        "takeAMoment": "Take a moment and rate me",
+        "submitFeedback": "Submit Feedback"
+      },
+      "summaryWidget": {
+        "successRate": "successRate",
+        "riskScoreSummary": "Risk Score"
+      }
+    },
+    "socialTradeAppBar": {
+      "masterTraders": "Master Traders",
+      "myTrade": "My Trades"
+    },
+    "copiedTraderSuccess": {
+      "masterTradeCopiedS": "Master trader copied Successfully"
+    },
+    "copiedTraderTerminated": {
+      "subscriptionTerminated": "Subscription Terminated Successfully"
+    },
+    "masterTrader": {
+      "popularTraders": "Popular Traders",
+      "higherSuccessRatesText": "Higher Success Rates"
+    },
+    "menuMain": {
+      "aboutMT5": "About MT 5 Copy Trading"
+    },
+    "myTrades": {
+      "copiedTraders": "Copied Traders",
+      "youAreNotCopying": "You Are Not Copying Any Master Trader  Yet",
+      "startCopying": "Start Copying"
+    },
+    "overViewWidget": {
+      "setupCopying": "Setup Copying",
+      "totalCopiers": "Total Copiers:",
+      "successRateOverview": "Success Rate:",
+      "accountDetails": "Account Details",
+      "floatingProfit": "Floating profit",
+      "masterTraderBonus": "Master Trader Bonus",
+      "riskManagement": "Risk Management",
+      "maxUnrealizedLoss": "Max Unrealized Loss",
+      "maxDrawDownDuration": "Max drawdown Duration",
+      "priceMovement": "price Movement"
+    },
+    "subscriptionGuideWidget": {
+      "learnAbout": "Learn about subscription setup",
+      "copyProportion": "Copy Proportion",
+      "selectTheSize": "Select the size of your investment that will be engaged in copy trading",
+      "theVolumeOf": "The volume of your copied orders will equal the volume of the master trader’s orders.",
+      "toFacilitate": "To facilitate transactions, we may collect details related to your bank account, credit/debit card information, and transaction history.",
+      "weMayAutomatically": "We may automatically collect information about your device, operating system, browser type, IP address, and interactions with our platform to improve our services and user experience.",
+      "supportFundsHelp": "Support funds help to protect your investments from unexpected market movement.\n\nIdeally, you should add support funds that will be at least 50% of the required investment."
+    },
+    "subscriptionSetupWidget": {
+      "subscriptionSetup": "Subscription Setup",
+      "fundInWallet": "Funds In Wallet:",
+      "argumentItemRequired": "{} required",
+      "argumentTradeVolume": "{} trade volume",
+      "enterValue": "Enter value",
+      "supportAmount": "Support amount",
+      "enterAmount": "Enter amount",
+      "55OfTheRequired": "55% of the required investment",
+      "supportFundsProtect": "Support funds protect your business from unexpected market movements",
+      "requiredInvestment": "Required Investment"
+    }
+  },
+  "tradeWidget": {
+    "tradeBulkOperation": {
+      "closeAUDJPYPosition": "Close AUDJPYs positions",
+      "reverseAUDJPYBuy": "Reverse AUDJPY buy"
+    },
+    "tradeModal": {
+      "australianDollarVsJap": "Australian dollar vs Japanese Yen",
+      "swap0": "Swap: 0.00",
+      "modifyPosition": "Modify position",
+      "bulkOPerationsW": "Bulk operations..."
+    },
+    "modifyTrade": {
+      "in1hour": "In 1 Hour at 10:41 on 29th July 2023 your trade will automatically close",
+      "theMarketWill": "The trade will be executed at market conditions. Difference with requested price maybe significant"
+    }
+  },
+  "tradeHistoryWidget": {
+    "TradeComponents": {
+      "filterModal": {
+        "lastMonth": "Last Month",
+        "last3Month": "Last 3 Month"
+      }
+    }
+  },
+  "transactionWidget": {
+    "TransactionComponents": {
+      "filledPop": {
+        "searchTerm": "Search Term",
+        "enterYourSearchTerm": "Enter your search term"
+      }
+    }
+  },
+  "verificationWidget": {
+    "emailVerification": {
+      "verifyYourEmail": "Verify Your Email"
+    },
+    "emailVerifiedSuccessfully": {
+      "nextVerify": "Next: Verify Identity"
+    },
+    "identityVerificationLanding": {
+      "verifyYourIdentity": "Verify Your Identity",
+      "toSuccessfullyVerify": "To successfully verify your identity, we accept either a snapshot of your:",
+      "itTakes8hours": "It takes 8-24 hrs for your ID to be verified."
+    },
+    "identityVerificationSuccess": {
+      "yourIdHasBeen": "Your ID has been submitted successfully",
+      "youWillReceiveFeedback": "You will receive a feedback",
+      "within24": "within 24 hours ",
+      "viaEmailOnSuccessful": "via email on successful verification"
+    },
+    "selectIdentity": {
+      "validDriverL": "Valid Drivers License"
+    },
+    "verifyLanding": {
+      "letStart": "Let's Start Your Verification Process",
+      "emailVerificationText": "Email Verification",
+      "weWillSend": "We will send a link to the email address you provided. Please tap the link to complete your email verification",
+      "identityVerification": "Identity Verification",
+      "toHelpProtect": "To help protect you from fraud and to comply with federal regulations, we need some information. It can be either a snapshot of your:"
+    }
+  },
+  "withdrawFunds": {
+    "paymentInformationWidget": {
+      "accountNumberW": "Account number:",
+      "124Hours": "1-24 hours"
+    },
+    "paymentMethodWidget": {
+      "selectPreferred": "Select preferred payment method"
+    },
+    "withdrawSuccessWidget": {
+      "yourTransactionIsBeing": "Your Transaction is Being Processed",
+      "youCanSkip": "You can skip this step but you will not be able to withdraw your funds. "
+    }
   }
 };
 static const Map<String,dynamic> fa = {
@@ -680,6 +1349,168 @@ static const Map<String,dynamic> fa = {
   "ok": "خوب",
   "name": "نام",
   "btcBeanBEP3": "BTC Beacon Chain (BEP3)",
+  "sentiments": "احساسات",
+  "favorites": "موردعلاقه‌ها",
+  "buy": "خرید",
+  "options": "گزینه‌ها",
+  "option": "گزینه",
+  "wallet": "کیف پول",
+  "followers": "دنبال‌کنندگان",
+  "open": "باز کردن",
+  "positive": "مثبت",
+  "negative": "منفی",
+  "sector": "بخش",
+  "industry": "صنعت",
+  "country": "کشور",
+  "digits": "رقم‌ها",
+  "spread": "پخش",
+  "exotics": "گوناگون",
+  "minors": "کم‌ارزش",
+  "quotes": "نقل قول‌ها",
+  "details": "جزئیات",
+  "lots": "قرعه",
+  "euroVsUs": "یورو به دلار آمریکا",
+  "theTradeWill": "معامله به شرایط بازار انجام می‌شود. تفاوت با قیمت درخواستی ممکن است قابل توجه باشد",
+  "statistics": "آمار",
+  "referralProgram": "برنامه معرفی",
+  "security": "امنیت",
+  "passKeys": "کلیدهای عبور",
+  "devices": "دستگاه‌ها",
+  "value": "ارزش",
+  "defaultText": "پیش‌فرض",
+  "aboutUs": "درباره ما",
+  "overView": "بررسی کلی",
+  "tradingHistory": "تاریخچه معاملات",
+  "transferToBank": "انتقال به بانک",
+  "transferToPerfect": "انتقال به Perfect Money",
+  "onlineBankTransfer": "انتقال آنلاین به بانک",
+  "walletToDeriv": "کیف پول به Deriv",
+  "fxtmToWallet": "FXTM به کیف پول",
+  "tradeHistory": "تاریخچه معاملات",
+  "transactions": "معاملات",
+  "failed": "ناموفق",
+  "successful": "موفق",
+  "deposits": "واریزی‌ها",
+  "pending": "در انتظار",
+  "withdrawal": "برداشت",
+  "internalTransferText": "انتقال داخلی",
+  "fiftyFiveThousand": "55,000",
+  "activity": "فعالیت",
+  "price": "قیمت",
+  "welcome": "خوش آمدید، {}",
+  "verified": "تایید شده",
+  "unVerified": "تایید نشده",
+  "referrals": "معرفی‌ها",
+  "nickName": "نام مستعار",
+  "confirm": "تأیید",
+  "filter": "فیلتر",
+  "profits": "سودها",
+  "profit": "سود",
+  "loss": "ضرر",
+  "ascending": "صعودی",
+  "descending": "نزولی",
+  "location": "موقعیت",
+  "summary": "خلاصه",
+  "status": "وضعیت",
+  "inActive": "غیرفعال",
+  "Register": "ثبت نام",
+  "strategyDescriptionText": "توضیح استراتژی",
+  "attachment": "پیوست",
+  "submit": "ارسال",
+  "actions": "عملیات",
+  "markets": "بازارها",
+  "euroVsGreatBritain": "یورو به پوند بریتانیا بزرگ",
+  "modernView": "نمایش مدرن",
+  "advancedView": "نمایش پیشرفته",
+  "simpleView": "نمایش ساده",
+  "trade": "معامله",
+  "popular": "محبوب",
+  "ask": "پرسیدن",
+  "bid": "پیشنهاد دادن",
+  "symbol": "نماد",
+  "major": "عمده",
+  "crypto": "رمزارز",
+  "searchPairs": "جستجوی جفت‌ها",
+  "deleteWithArgument": "حذف {}",
+  "date": "تاریخ:",
+  "passkey": "کلید عبور",
+  "addAPasskey": "افزودن یک کلید عبور",
+  "hasBeenVerified": "با موفقیت تایید شده است",
+  "resendCode": "ارسال مجدد کد",
+  "disable": "غیرفعال کردن",
+  "presets": "تنظیمات پیش‌فرض",
+  "warm": "گرم",
+  "marble": "مرمر",
+  "others": "دیگران",
+  "general": "عمومی",
+  "language": "زبان",
+  "appearance": "ظاهر",
+  "market": "بازار",
+  "chartColor": "رنگ نمودار",
+  "colorPreference": "ترجیح رنگ",
+  "privacyPolicyText": "سیاست حفظ حریم خصوصی",
+  "update": "به‌روزرسانی",
+  "proceed": "ادامه دهید",
+  "abort": "لغو",
+  "positions": "موقعیت‌ها",
+  "filterBy": "فیلتر کردن بر اساس",
+  "selectPosition": "انتخاب موقعیت",
+  "youHaveSuccessCopied": "شما با موفقیت شروع به کپی کردن معاملات Satoshi Nakamoto به صورت خودکار کرده‌اید. \n\n اطلاعیه‌ها به شما ارسال می‌شود وقتی او معامله‌ای را باز یا ببندد",
+  "hideMore": "مخفی کردن بیشتر",
+  "stopCoping": "متوقف کردن کپی کردن",
+  "gain": "سود",
+  "copiers": "کپی کنندگان",
+  "performance": "عملکرد",
+  "subscriptionGuide": "راهنمای اشتراک",
+  "equal1": "برابر 1x",
+  "double2": "دوبرابر 2x",
+  "triple3": "سه‌برابر 3x",
+  "addSupportFunds": "افزودن اعتبار حمایتی",
+  "supportFunds": "اعتبار حمایتی:",
+  "copyProportion": "نسبت کپی",
+  "custom": "سفارشی",
+  "sender": "فرستنده",
+  "receiver": "دریافت‌کننده",
+  "walletBalance": "موجودی کیف پول",
+  "over24hours": "بیش از 24 ساعت",
+  "recentTransaction": "تراکنش‌های اخیر",
+  "order": "سفارش",
+  "time": "زمان",
+  "bulkOperations": "عملیات دسته‌ای",
+  "closeAllPositions": "بستن تمام موقعیت‌ها",
+  "closeProfitable": "بستن موقعیت‌های سودآور",
+  "closeAllLosing": "بستن موقعیت‌های ضررآور",
+  "freeMargin": "مارجین آزاد",
+  "marginLevel": "سطح مارجین",
+  "last2Hrs": "آخرین 24 ساعت",
+  "depthOfMarket": "عمق بازار",
+  "notSet": "تنظیم نشده",
+  "lastWeek": "هفته گذشته",
+  "customPeriodText": "دوره سفارشی",
+  "filled": "پر شده",
+  "canceled": "لغو شده",
+  "total": "مجموع",
+  "august": "اوت",
+  "reportTransaction": "گزارش تراکنش",
+  "transactionId": "شناسه تراکنش",
+  "betweenAccounts": "بین حساب‌ها",
+  "weSentAVerification": "ما یک ایمیل تأییدیه به آدرس",
+  "pleaseTapLink": "لطفاً بر روی لینک ارسالی در ایمیل کلیک کنید تا ادامه دهید",
+  "checkMail": "بررسی ایمیل",
+  "emailVerifiedSuccessfully": "ایمیل با موفقیت تأیید شد",
+  "yourEmailAccount": "حساب ایمیل شما",
+  "skip": "رد کردن",
+  "internationalPassport": "پاسپورت بین‌المللی",
+  "nationalId": "کارت ملی",
+  "passport": "پاسپورت",
+  "driversLicense": "گواهی نامه رانندگی",
+  "verifyAccount": "تایید حساب",
+  "financialRegulation": "مقررات مالی از ما درخواست تایید هویت شما را دارند. این به جلوگیری از ایجاد حساب MT5 توسط کسی دیگر با نام شما کمک می‌کند.",
+  "withdrawToBank": "برداشت به بانک",
+  "paymentInformation": "اطلاعات پرداخت",
+  "amountToWithdraw": "مقدار برداشتی",
+  "leaveAMark": "گذاشتن نشان",
+  "additionalInformation": "اطلاعات اضافی (اختیاری)",
   "views": {
     "auth": {
       "auth_view": {
@@ -848,6 +1679,114 @@ static const Map<String,dynamic> fa = {
     "pipCalculatorView": {
       "pipValue": "ارزش پیپ (دلار آمریکا)",
       "numberOfPips": "تعداد پیپ ها {}"
+    },
+    "priceSentiments": {
+      "marketSentiments": "احساسات بازار",
+      "sentimentsAcrossM": "احساسات در سراسر بازارها"
+    },
+    "priceCalculatorView": {
+      "profitUSD": "سود (دلار آمریکا)",
+      "buyOrSell": "خرید یا فروش",
+      "openingPrice": "قیمت شروع",
+      "closingPrice": "قیمت پایان"
+    },
+    "providerView": {
+      "notificationList": {
+        "notificationListTitle": "اشتراک با موفقیت",
+        "notificationListTitle1": "اشتراک پایان یافت",
+        "notificationListTime": "16:23:41",
+        "notificationListDate": "2.1.2023",
+        "notificationListDescription": "شما در حال حاضر معاملات Satoshi Nakamoto را کپی می‌کنید.",
+        "notificationListDescription1": "شما با موفقیت اشتراک کپی معاملات با Satoshi Nakamoto را پایان داده‌اید."
+      },
+      "strategyDescription": "سلام به همه، 👉 این حساب کاملاً ایمن برای کپی کردن برای همه سرمایه‌گذاران، مبتدی‌ها و حرفه‌ای‌ها است. من تلاش خود را می‌کنم تا هفتگی 25-50٪ سود کسب کنم 💪. اولین اولویت ما حفظ ایمنی سرمایه شماست. معامله خوشحالی ✨",
+      "signUpAsProvider": "ثبت نام به عنوان ارائه‌دهنده",
+      "enterYourInformation": "اطلاعات خود را وارد کنید",
+      "providerLogin": "ورود به حساب ارائه‌دهنده",
+      "approvedRegistration": "ثبت‌نام تأیید شده ارائه‌دهنده",
+      "profileSettings": "تنظیمات پروفایل",
+      "changeYourProfileInfo": "تغییر اطلاعات پروفایل خود",
+      "viewYourFollowers": "مشاهده دنبال‌کنندگان شما"
+    },
+    "quotesView": {
+      "quotesViewModel": {
+        "quoteList": {
+          "greatBritainPounds": "پوند بریتانیا بزرگ به دلار آمریکا",
+          "usDollarCan": "دلار آمریکا به دلار کانادا"
+        },
+        "stopLevel": "سطح توقف",
+        "marginCurrency": "واحد مارجین",
+        "profitCurrency": "واحد سود",
+        "tickSize": "اندازه تیک",
+        "tickValue": "ارزش تیک",
+        "addSymbol": "افزودن نماد به لیست بازار"
+      },
+      "tradeCloseScreen": {
+        "closeBuy": "بستن خرید #312443 با 0.1 به قیمت با ضرر 0.80 توسط بازار"
+      },
+      "tradeDepthScreen": {
+        "depthMarket": "عمق بازار"
+      }
+    },
+    "security": {
+      "autoLock": "قفل خودکار",
+      "enableToLock": "فعال‌سازی قفل خودکار برنامه",
+      "addPasskey": "افزودن کلید عبور"
+    },
+    "settings": {
+      "whatsappAddition": "اضافه کردن WhatsApp",
+      "addNoticeOfUpcoming": "اضافه کردن اعلان‌های نزدیک",
+      "addingDifferentViews": "اضافه کردن نمای‌های مختلف در بخش بازار",
+      "blueBuy": "خرید آبی / فروش قرمز",
+      "notificationSettings": "تنظیمات اعلان",
+      "languageSettings": "تنظیمات زبان",
+      "changeAppLanguage": "تغییر زبان برنامه",
+      "changeBasis": "تغییر پایه",
+      "TermsOfUse": "شرایط استفاده",
+      "privacyPolicy": {
+        "privacyPolicyHead1": "جمع‌آوری اطلاعات",
+        "privacyPolicyHead2": "اشتراک‌گذاری و افشاء داده‌ها",
+        "privacyPolicySubH": "اطلاعات شخصی",
+        "privacyPolicySubH1": "اطلاعات مالی",
+        "privacyPolicySubH2": "اطلاعات دستگاه و استفاده",
+        "privacyPolicySubH3": "کوکی‌ها و فناوری‌های ردیابی",
+        "privacyPolicySubH4": "ایجاد حساب کاربری",
+        "privacyPolicySubH5": "خدمات معاملات فارکس",
+        "privacyPolicyIntro": "با تشکر از انتخاب MetaTrader به عنوان پلتفرم معاملات فارکس معتبرتان. ما به حفظ حریم خصوصی شما و حفاظت از اطلاعات شخصیتان متعهدیم. این سیاست حفظ حریم خصوصی شرایط جمع‌آوری، استفاده، افشاء و حفاظت داده‌های شما را مشخص می‌کند. با دسترسی به یا استفاده از خدمات ما، شما با تمامی عملکردهای توصیف شده در این سیاست موافقت می‌کنید.",
+        "privacyPolicyD2": "ما ممکن است انواع مختلفی از اطلاعات از شما جمع‌آوری کنیم هنگامی که از پلتفرم یا خدمات ما استفاده می‌کنید، از جمله:",
+        "privacyPolicyD3": "این ممکن است نام شما، آدرس ایمیل، شماره تلفن، آدرس محلی، تاریخ تولد، شناسنامه صادر شده توسط دولت و سایر جزئیات لازم برای ثبت نام حساب و رعایت مقررات مالی را شامل شود.",
+        "privacyPolicyD4": "برای تسهیل تراکنش‌ها، ممکن است جزئیات مرتبط با حساب بانکی شما، اطلاعات کارت اعتباری/پیش‌پرداخت و تاریخچه تراکنش‌ها را جمع‌آوری کنیم.",
+        "privacyPolicyD5": "ما ممکن است به صورت خودکار اطلاعاتی در مورد دستگاه شما، سیستم عامل، نوع مرورگر، آدرس IP و تعاملات شما با پلتفرم ما جمع‌آوری کنیم تا خدمات ما و تجربه کاربری را بهبود بخشیم.",
+        "privacyPolicyD6": "ما ممکن است از کوکی‌ها و فناوری‌های مشابه برای جمع‌آوری اطلاعات در مورد الگوها و ترجیحات استفاده شما در حین استفاده از پلتفرم ما استفاده کنیم. این به ما کمک می‌کند تا وب‌سایت خود را بهینه کنیم، ناوبری را بهبود ببخشیم و تجربه شما را شخصی‌سازی کنیم.",
+        "privacyPolicyD7": "ما اطلاعات جمع‌آوری شده را برای اهداف زیر استفاده می‌کنیم",
+        "privacyPolicyD8": "برای ایجاد و حفظ حساب شما، تأیید هویت شما و ارائه پشتیبانی مشتری.",
+        "privacyPolicyD9": "برای پردازش معاملات، تراکنش‌ها و برداشت‌های شما طبق دستورات شما."
+      }
+    },
+    "socialTradingView": {
+      "transactionDetails": "جزئیات تراکنش",
+      "subscriptionSetup": "راه‌اندازی اشتراک",
+      "transferToBinance": "انتقال به BinancePay",
+      "depositToBinance": "واریز از BinancePay",
+      "depositToNeteller": "واریز از Neteller",
+      "depositToPerfect": "واریز از Perfect Money",
+      "subSuccessful": "اشتراک موفقیت‌آمیز",
+      "subTerminated": "اشتراک پایان یافت",
+      "socialTradingWelcome": {
+        "welcomeToMT5": "به پلتفرم معاملات اجتماعی MT5 خوش آمدید",
+        "nowYouCanStart": "اکنون می‌توانید با بهترین معامله‌گران اصلی سرمایه‌گذاری کنید، اشتراک‌های خود را پیگیری و مدیریت کنید.",
+        "getStarted": "شروع کنید"
+      }
+    },
+    "verificationView": {
+      "VerifyIdentity": "تأیید هویت",
+      "selectIdToCapture": "انتخاب شناسنامه برای عکس‌برداری"
+    },
+    "withdrawFundsView": {
+      "selectAccountToWithdraw": "انتخاب حساب برای برداشت",
+      "withdrawToBinancePay": "برداشت به BinancePay",
+      "withdrawToBlockBee": "برداشت به BlockBee",
+      "withdrawToNeteller": "برداشت به Neteller"
     }
   },
   "onboarding": {
@@ -1116,6 +2055,406 @@ static const Map<String,dynamic> fa = {
     "tetherWidgetP": {
       "enterTetherUSd": "آدرس کیف پول TetherUSD را وارد کنید"
     }
+  },
+  "priceSentimentWidget": {
+    "details": {
+      "clientSentiment": "نظر مشتریان:",
+      "tradingActivity": "فعالیت معاملاتی",
+      "priceRange": "محدوده قیمت",
+      "priceVolatility": "تغییرات قیمت",
+      "priceMovement": "حرکت قیمت"
+    },
+    "searchResults": "نتایج جستجو:"
+  },
+  "profile": {
+    "verificationBar": {
+      "verifyYourAccount": "حساب کاربری خود را تأیید کنید",
+      "toMakeFirstD": "برای انجام اولین واریز خود، ما می‌خواهی شما را بهتر بشناسیم. برای شروع، روی 'ادامه' کلیک کنید."
+    },
+    "profileWidget": {
+      "viewYourWithD": "مشاهده تاریخچه برداشت و واریز خود",
+      "updatePaymentM": "به‌روزرسانی روش‌های پرداخت",
+      "fileAComplaint": "ثبت شکایت به تیم ما",
+      "rateTheApp": "امتیاز دهی به اپلیکیشن",
+      "giveUsAReview": "نظر دادن به ما در App Store",
+      "viewWithDrawalH": "مشاهده تاریخچه برداشت و واریز خود"
+    }
+  },
+  "providerWidget": {
+    "providerComponent": {
+      "changeNickName": {
+        "changeNickNameT": "تغییر نام کاربری",
+        "enterNewNickName": "نام کاربری جدید را وارد کنید"
+      },
+      "changePasswordWidget": {
+        "confirmPassword": "تأیید رمز عبور"
+      },
+      "pGraph": {
+        "myPerformance": "عملکرد من"
+      },
+      "pGraph2": {
+        "followersStats": "آمار دنبال‌کنندگان"
+      },
+      "pModelBottomSheet": {
+        "startDate": "تاریخ شروع",
+        "endDate": "تاریخ پایان",
+        "openPosition": "موقعیت‌های باز",
+        "selectCountry": "انتخاب کشور"
+      },
+      "pProfitsBar": {
+        "totalTrade": "معاملات کل"
+      },
+      "pTradeBar": {
+        "dateW": "تاریخ:",
+        "orderId": "شناسه سفارش:",
+        "followersCommission": "کمیسیون دنبال‌کنندگان:"
+      },
+      "pSummary": {
+        "viewFollowers": "مشاهده دنبال‌کنندگان",
+        "followersAutoScale": "پیروان مقیاس خودکار",
+        "followersFixedLot": "پیروان به میزان ثابت",
+        "followersReverse": "پیروان معکوس",
+        "performanceFee": "کارمزد عملکرد"
+      },
+      "updatePhoneNumber": {
+        "updatePhoneNumberText": "به‌روزرسانی شماره تلفن"
+      }
+    },
+    "providerConfirmation": {
+      "yourRequestHas": "درخواست شما با موفقیت ارسال شد",
+      "youWillReceive": "شما در مدت 3-4 روز کاری بعد از تأیید موفقیت‌آمیز، پاسخی از طریق ایمیل دریافت خواهید کرد."
+    },
+    "providerFollowers": {
+      "followedRecently": "آخرین دنبال‌کنندگان",
+      "startedFollowing": "شروع دنبال‌کردن: {}s"
+    },
+    "providerLogin": {
+      "enterYourAccount": "شماره حساب خود را وارد کنید",
+      "accountID": "شناسه حساب",
+      "desiredFee": "کارمزد مورد نظر",
+      "iAgreeWith": "موافقم با",
+      "termsAndConditionProvider": "شرایط و مقررات",
+      "forOPening": "برای افتتاح حساب و",
+      "dataProtectionPolicy": "سیاست حفاظت از داده‌ها"
+    },
+    "providerOption": {
+      "myWallet": "کیف پول من",
+      "profileSettings": "تنظیمات پروفایل"
+    },
+    "providerSettings": {
+      "desiredFeeCommission": "کارمزد مورد نظر (کمیسیون)",
+      "publicVisibility": "قابلیت دید عمومی",
+      "visibilityPublic": "دید عمومی: عمومی",
+      "saveChanges": "ذخیره تغییرات"
+    },
+    "providerSignUp": {
+      "uploadAttachment": "بارگذاری فایل ضمیمه"
+    },
+    "providerWallet": {
+      "reportAnIssue": "گزارش یک مشکل",
+      "depositFromNeteller": "واریز از Neteller",
+      "metaWalletToWallet": "انتقال از کیف پول Meta به کیف پول",
+      "transferToSticPay": "انتقال به SticPay",
+      "depositToDeriv": "واریز به Deriv"
+    },
+    "welcomeProvider": {
+      "startGenerating": "شروع تولید درآمد\nبرای دنبال‌کنندگان خود",
+      "becomeAProvider": "به عنوان یک ارائه‌دهنده در پلتفرم ما ثبت‌نام کنید، مهارت‌های معامله خود را به نمایش بگذارید و درآمد از دنبال‌کنندگان خود کسب کنید",
+      "loginInstead": "ورود به جای آن"
+    }
+  },
+  "quotesWidget": {
+    "components": {
+      "genericTradeBody": {
+        "lotSize": "سایز لات",
+        "stopLoss": "توقف زیان",
+        "takeProfit": "دریافت سود",
+        "fillPolicy": "سیاست پرکردن",
+        "fillOrKill": "پرکردن یا کشتن",
+        "timeFrame": "زمان‌بندی",
+        "currencyPrice": "قیمت فعلی",
+        "inOneHour": "در یک ساعت در ساعت 10:41 در تاریخ 29 ژوئیه 2023، معامله شما به طور خودکار بسته می‌شود",
+        "sellByMarket": "فروش بازاری",
+        "buyByMarket": "خرید بازاری"
+      },
+      "marketStats": {
+        "initialMargin": "مارجین اولیه",
+        "bigHigh": "بید بالا",
+        "bigLow": "بید پایین",
+        "askHigh": "پرس بالا",
+        "askLow": "پرس پایین",
+        "priceChange": "تغییر قیمت",
+        "openPrice": "قیمت شروع",
+        "closePrice": "قیمت پایان"
+      },
+      "quotesBottomSheet": {
+        "euroVsDollar": "EURUSDs: یورو در مقابل دلار آمریکا"
+      },
+      "tradeAppBar": {
+        "marketExec": "اجرای بازار"
+      }
+    },
+    "modernViewWidget": {
+      "topMovers": "بالاترین تغییر دهندگان"
+    }
+  },
+  "referralWidget": {
+    "referNowAndEarn": "هم‌اکنون معرفی کنید و{}10 اعتبار در معامله بعدی‌تان کسب کنید",
+    "referralCode": "کد معرفی",
+    "howDoesItWork": "چگونه کار می‌کند",
+    "inviteYourFriends": "دوستان خود را به ثبت‌نام در Meta Trader 5 دعوت کنید",
+    "whenYourFriend": "وقتی دوست شما در اپلیکیشن ثبت‌نام کند، هر دوی شما مبلغ {}10 اعتبار جایزه دریافت می‌کنید",
+    "yourRewardCredit": "سپس اعتبار جایزه‌تان را می‌توانید در معامله بعدی خود استفاده کنید",
+    "checkOutMyApp": "اپلیکیشن من را بررسی کنید https://example.com",
+    "referNow": "هم‌اکنون معرفی کنید"
+  },
+  "securityWidget": {
+    "securityComponents": {
+      "addPassKeyModel": {
+        "appPasskey": "افزودن پس‌کی",
+        "noNeedToRemember": "نیازی به یادآوری یک رمز عبور نیست",
+        "withPasskey": "با استفاده از پس‌کی‌ها، می‌توانید از امکاناتی مانند اثر انگشت یا تشخیص چهره برای ورود به حساب خود استفاده کنید",
+        "worksOnAll": "بر روی تمام دستگاه‌های شما کار می‌کند",
+        "passkeysWill": "پس‌کی‌ها به طور خودکار در تمام دستگاه‌های همگام‌سازی شده شما قابل دسترسی خواهند بود",
+        "keepYourAccountSafe": "حساب خود را ایمن نگه دارید",
+        "passkeysOffer": "پس‌کی‌ها مقاومت برجسته در برابر نفوذهای مالیاتی ارائه می‌دهند"
+      },
+      "changePasswordModel": {
+        "inOrderToProtect": "برای حفاظت از حساب خود، بعد از تغییر رمز عبور، عملیات برداشت به مدت 24 ساعت غیرفعال خواهد شد"
+      },
+      "deletePopUP": {
+        "doYouReallyWantToDelete": "آیا واقعاً می‌خواهید این {} را حذف کنید؟"
+      },
+      "emptyPasskey": {
+        "passkeyAddedYet": "هنوز پس‌کی افزوده نشده است"
+      },
+      "passkeyTile": {
+        "added12": "افزوده شده: 12 ژوئیه 2023",
+        "lastUsed": "آخرین استفاده: 2 روز پیش"
+      }
+    },
+    "addPasskeyEnter": {
+      "enterAUnique": "یک پس‌کی 4-رقمی منحصر به فرد وارد کنید",
+      "yourPasskeyWillBe": "پس‌کی شما برای تأیید برداشت‌های شما استفاده می‌شود. لطفاً آن را با دیگران به اشتراک نگذارید.",
+      "enter4digitsPasskey": "یک پس‌کی 4-رقمی وارد کنید",
+      "enterYourPassword": "رمز عبور خود را وارد کنید"
+    },
+    "addPasskey": {
+      "securityVerification": "موردنیازی‌های تأیید امنیتی",
+      "youNeedToCompleteAll": "شما باید همه موارد زیر را برای ادامه تکمیل کنید"
+    },
+    "autoLockWidget": {
+      "usingPattern": "استفاده از الگو برای قفل کردن اپلیکیشن",
+      "usingYourFace": "استفاده از تشخیص چهره برای قفل کردن اپلیکیشن",
+      "faceUnlock": "قفل چهره"
+    },
+    "emailVerify": {
+      "passKeyAdded": "پس‌کی با موفقیت اضافه شد"
+    },
+    "passkeyAddedSuccess": {
+      "passkeyAddedSuccessfully": "پس‌کی با موفقیت اضافه شد",
+      "yourPasskeyIs": "پس‌کی شما:",
+      "pleaseKeepThisPasskey": " لطفاً این پس‌کی را ایمن نگه دارید تا فراموش نشود"
+    },
+    "passwordChangedSuccess": {
+      "passwordChangedSuccessText": "رمز عبور با موفقیت تغییر کرد",
+      "itWillTake24": "پیشنهاد می‌شود که 24 ساعت صبر کنید تا بتوانید برداشت انجام دهید"
+    },
+    "phoneVerifiedSuccess": {
+      "phoneVerifiedSuccessFully": "شماره تلفن با موفقیت تأیید شد",
+      "yourPhoneNumber": "شماره تلفن شما: "
+    },
+    "phoneVerify": {
+      "weSentVerificationCode": "ما یک کد تأیید به ",
+      "enter6Digits": "وارد کردن کد تأیید 6-رقمی"
+    },
+    "securityMain": {
+      "twoFactorAuthentication": "تأیید دو مرحله‌ای",
+      "toProtectYourAccount": "برای حفاظت از حساب خود، حداقل یک تأیید دو مرحله‌ای را روشن کنید",
+      "autoLockText": "قفل خودکار",
+      "disableAccount": "غیرفعال کردن حساب",
+      "doYouReallyWantToDisable": "آیا واقعاً می‌خواهید حساب را غیرفعال کنید؟"
+    }
+  },
+  "settings": {
+    "aboutUs": {
+      "serviceAgreement": "توافق نامه خدمات",
+      "likeUsOnFacebook": "ما را در فیس‌بوک دنبال کنید",
+      "followUsOnTwitter": "ما را در توییتر دنبال کنید",
+      "joinUsOnTelegram": "به ما در تلگرام بپیوندید",
+      "checkForUpdate": "بررسی برای به‌روزرسانی"
+    },
+    "changeBasis": {
+      "whenYouSwitch": "زمانی که به منطقه زمانی جدید UTC تغییر دهید، تغییر (%) برای بازارها و معاملات بر اساس منطقه زمانی جدید محاسبه خواهد شد."
+    },
+    "settingsPage": {
+      "pushNotification": "اعلان‌های پوش",
+      "useDeviceTheme": "استفاده از تم دستگاه",
+      "darkMode": "حالت تاریک",
+      "changeBasisText": "تغییر مبنا",
+      "currentVersion": "نسخه فعلی"
+    },
+    "updateRelease": {
+      "updateReleaseText": "آپدیت منتشر شده",
+      "thisUpdate": "این آپدیت"
+    }
+  },
+  "socialTradingWidget": {
+    "socialTradingComponent": {
+      "cancelSub": {
+        "cancelCoping": "لغو کپی کردن؟",
+        "onceYouCancel": "هنگامی که اشتراک خود را لغو می‌کنید، معاملات باز شما با معامله‌گر اصلی به طور خودکار پایان خواهد یافت."
+      },
+      "copiedTrader": {
+        "followingSince": "دنبال می‌کنید از:"
+      },
+      "filterModel": {
+        "searchTransaction": "جستجوی تراکنش",
+        "enterYourSearch": "متن جستجو خود را وارد کنید"
+      },
+      "filterPosition": {
+        "closedPositions": "موقعیت‌های بسته شده",
+        "openPositions": "موقعیت‌های باز"
+      },
+      "rateModel": {
+        "rateSatoshi": "ارزیابی کردن Satoshi Nakamoto",
+        "takeAMoment": "یک لحظه برای ارزیابی من بگذارید",
+        "submitFeedback": "ثبت بازخورد"
+      },
+      "summaryWidget": {
+        "successRate": "نرخ موفقیت",
+        "riskScoreSummary": "امتیاز ریسک"
+      }
+    },
+    "socialTradeAppBar": {
+      "masterTraders": "معامله‌گران اصلی",
+      "myTrade": "معاملات من"
+    },
+    "copiedTraderSuccess": {
+      "masterTradeCopiedS": "معامله‌گر اصلی با موفقیت کپی شد"
+    },
+    "copiedTraderTerminated": {
+      "subscriptionTerminated": "اشتراک با موفقیت لغو شد"
+    },
+    "masterTrader": {
+      "popularTraders": "معامله‌گران محبوب",
+      "higherSuccessRatesText": "نرخ موفقیت بالا"
+    },
+    "menuMain": {
+      "aboutMT5": "درباره MT 5 کپی تریدینگ"
+    },
+    "myTrades": {
+      "copiedTraders": "معامله‌گران کپی شده",
+      "youAreNotCopying": "هنوز از هیچ معامله‌گر اصلی کپی نمی‌کنید",
+      "startCopying": "شروع کپی"
+    },
+    "overViewWidget": {
+      "setupCopying": "تنظیم کپی کردن",
+      "totalCopiers": "تعداد کپی کنندگان کل:",
+      "successRateOverview": "نرخ موفقیت:",
+      "accountDetails": "جزئیات حساب",
+      "floatingProfit": "سود معلق",
+      "masterTraderBonus": "پاداش معامله‌گر اصلی",
+      "riskManagement": "مدیریت ریسک",
+      "maxUnrealizedLoss": "بیشترین زیان عدم تحقق یافته",
+      "maxDrawDownDuration": "مدت زمان بیشترین کاهش قیمت",
+      "priceMovement": "حرکت قیمت"
+    },
+    "subscriptionGuideWidget": {
+      "learnAbout": "آموزش راجع به راه‌اندازی اشتراک",
+      "copyProportion": "نسبت کپی کردن",
+      "selectTheSize": "انتخاب اندازه سرمایه‌گذاری شما که در معامله‌گری کپی شده خواهد شد",
+      "theVolumeOf": "حجم معاملات کپی شده شما برابر با حجم معاملات معامله‌گر اصلی خواهد بود.",
+      "toFacilitate": "برای تسهیل معاملات، ممکن است جزئیات مرتبط با حساب بانکی شما، اطلاعات کارت اعتباری/پیش‌پرداخت شما و تاریخچه معاملات جمع‌آوری شود.",
+      "weMayAutomatically": "ممکن است به صورت خودکار اطلاعاتی در مورد دستگاه شما، سیستم عامل، نوع مرورگر، آدرس IP و تعاملات شما با پلتفرم ما جمع‌آوری شود تا خدمات و تجربه کاربری ما را بهبود ببخشیم.",
+      "supportFundsHelp": "سرمایه‌گذاری حمایتی به حفاظت از سرمایه‌گذاری‌های شما در مقابل حرکت‌های غیرمنتظره بازار کمک می‌کند.\n\nبهتر است حداقل مقداری از سرمایه‌گذاری مورد نیاز را به عنوان سرمایه‌گذاری حمایتی اضافه کنید که حداقل 50٪ مقدار سرمایه‌گذاری مورد نیاز باشد."
+    },
+    "subscriptionSetupWidget": {
+      "subscriptionSetup": "راه‌اندازی اشتراک",
+      "fundInWallet": "موجودی در کیف پول:",
+      "argumentItemRequired": "{} مورد نیاز",
+      "argumentTradeVolume": "{} حجم معاملات",
+      "enterValue": "مقدار را وارد کنید",
+      "supportAmount": "مقدار حمایتی",
+      "enterAmount": "مقدار را وارد کنید",
+      "55OfTheRequired": "55٪ از سرمایه‌گذاری مورد نیاز",
+      "supportFundsProtect": "سرمایه‌گذاری‌های حمایتی از کسب‌وکار شما در برابر حرکت‌های غیرمنتظره بازار حفاظت می‌کنند",
+      "requiredInvestment": "سرمایه‌گذاری مورد نیاز"
+    }
+  },
+  "tradeWidget": {
+    "tradeBulkOperation": {
+      "closeAUDJPYPosition": "بستن موقعیت‌های AUDJPY",
+      "reverseAUDJPYBuy": "معکوس کردن خرید AUDJPY"
+    },
+    "tradeModal": {
+      "australianDollarVsJap": "دلار استرالیایی در مقابل ین ژاپنی",
+      "swap0": "سواپ: 0.00",
+      "modifyPosition": "تغییر موقعیت",
+      "bulkOPerationsW": "عملیات دسته‌ای..."
+    },
+    "modifyTrade": {
+      "in1hour": "در 1 ساعت در تاریخ 29 ژوئیه 2023، معامله شما به طور خودکار بسته می‌شود",
+      "theMarketWill": "معامله به شرایط بازار اجرا می‌شود. تفاوت با قیمت درخواستی ممکن است قابل توجه باشد"
+    }
+  },
+  "tradeHistoryWidget": {
+    "TradeComponents": {
+      "filterModal": {
+        "lastMonth": "ماه گذشته",
+        "last3Month": "3 ماه گذشته"
+      }
+    }
+  },
+  "transactionWidget": {
+    "TransactionComponents": {
+      "filledPop": {
+        "searchTerm": "متن جستجو",
+        "enterYourSearchTerm": "متن جستجوی خود را وارد کنید"
+      }
+    }
+  },
+  "verificationWidget": {
+    "emailVerification": {
+      "verifyYourEmail": "تایید ایمیل خود را انجام دهید"
+    },
+    "emailVerifiedSuccessfully": {
+      "nextVerify": "مرحله بعد: تایید هویت"
+    },
+    "identityVerificationLanding": {
+      "verifyYourIdentity": "تایید هویت خود را انجام دهید",
+      "toSuccessfullyVerify": "برای موفقیت در تایید هویت خود، ما تصویری از یکی از مدارک زیر را قبول می‌کنیم:",
+      "itTakes8hours": "زمان تایید هویت شما 8-24 ساعت طول می‌کشد."
+    },
+    "identityVerificationSuccess": {
+      "yourIdHasBeen": "مدرک هویت شما با موفقیت ارسال شده است",
+      "youWillReceiveFeedback": "شما با دریافت بازخوردی",
+      "within24": "در مدت 24 ساعت ",
+      "viaEmailOnSuccessful": "از طریق ایمیل در صورت تایید موفقیت‌آمیز"
+    },
+    "selectIdentity": {
+      "validDriverL": "گواهینامه رانندگی معتبر"
+    },
+    "verifyLanding": {
+      "letStart": "بیا برای پروسه تأیید هویت‌تان شروع کنیم",
+      "emailVerificationText": "تأیید ایمیل",
+      "weWillSend": "ما یک لینک به آدرس ایمیلی که وارد کرده‌اید ارسال خواهیم کرد. لطفاً روی لینک کلیک کنید تا فرآیند تأیید ایمیل را تکمیل کنید.",
+      "identityVerification": "تأیید هویت",
+      "toHelpProtect": "برای محافظت از شما در برابر کلاهبرداری و پیروی از مقررات فدرال، ما نیاز به برخی اطلاعات داریم. این می‌تواند عکس‌برداری از یکی از موارد زیر باشد:"
+    }
+  },
+  "withdrawFunds": {
+    "paymentInformationWidget": {
+      "accountNumberW": "شماره حساب:",
+      "124Hours": "1-24 ساعت"
+    },
+    "paymentMethodWidget": {
+      "selectPreferred": "روش پرداخت دلخواه خود را انتخاب کنید"
+    },
+    "withdrawSuccessWidget": {
+      "yourTransactionIsBeing": "تراکنش شما در حال پردازش است",
+      "youCanSkip": "شما می‌توانید این مرحله را رد کنید، اما نخواهید توانست وجه خود را برداشت کنید."
+    }
   }
 };
 static const Map<String,dynamic> ar = {
@@ -1232,6 +2571,168 @@ static const Map<String,dynamic> ar = {
   "ok": "نعم",
   "name": "اسم",
   "btcBeanBEP3": "BTC منارة سلسلة (BEP3)",
+  "sentiments": "المشاعر",
+  "favorites": "المفضلة",
+  "buy": "يشتري",
+  "options": "خيارات",
+  "option": "خيار",
+  "wallet": "محفظة",
+  "followers": "متابعون",
+  "open": "يفتح",
+  "positive": "إيجابي",
+  "negative": "سلبي",
+  "sector": "قطاع",
+  "industry": "صناعة",
+  "country": "دولة",
+  "digits": "أرقام",
+  "spread": "الانتشار",
+  "exotics": "غَرِيب",
+  "minors": "القُصّر",
+  "quotes": "يقتبس",
+  "details": "تفاصيل",
+  "lots": "الكثير",
+  "euroVsUs": "اليورو مقابل الدولار الأمريكي",
+  "theTradeWill": "سيتم تنفيذ التجارة في ظروف السوق. قد يكون الفرق مع السعر المطلوب كبيرًا",
+  "statistics": "إحصائية",
+  "referralProgram": "برنامج الإحالة",
+  "security": "حماية",
+  "passKeys": "مفاتيح المرور",
+  "devices": "الأجهزة",
+  "value": "قيمة",
+  "defaultText": "تقصير",
+  "aboutUs": "معلومات عنا",
+  "overView": "ملخص",
+  "tradingHistory": "تاريخ التداول",
+  "transferToBank": "تحويل إلى البنك",
+  "transferToPerfect": "التحويل إلى بيرفكت موني",
+  "onlineBankTransfer": "التحويل البنكي عبر الإنترنت",
+  "walletToDeriv": "محفظة لاستخلاص",
+  "fxtmToWallet": "FXTM إلى المحفظة",
+  "tradeHistory": "تاريخ التجارة",
+  "transactions": "المعاملات",
+  "failed": "فشل",
+  "successful": "ناجح",
+  "deposits": "الودائع",
+  "pending": "قيد الانتظار",
+  "withdrawal": "انسحاب",
+  "internalTransferText": "التحويل الداخلي",
+  "fiftyFiveThousand": "55,000",
+  "activity": "نشاط",
+  "price": "سعر",
+  "welcome": "مرحباً، {}",
+  "verified": "تم التحقق",
+  "unVerified": "لم يتم التحقق منها",
+  "referrals": "الإحالات",
+  "nickName": "كنية",
+  "confirm": "يتأكد",
+  "filter": "منقي",
+  "profits": "الأرباح",
+  "profit": "ربح",
+  "loss": "خسارة",
+  "ascending": "تصاعدي",
+  "descending": "تنازلي",
+  "location": "موقع",
+  "summary": "ملخص",
+  "status": "حالة",
+  "inActive": "غير نشط",
+  "Register": "يسجل",
+  "strategyDescriptionText": "وصف الاستراتيجية",
+  "attachment": "مرفق",
+  "submit": "يُقدِّم",
+  "actions": "أجراءات",
+  "markets": "الأسواق",
+  "euroVsGreatBritain": "اليورو مقابل الجنيه البريطاني",
+  "modernView": "منظر حديث",
+  "advancedView": "عرض متقدم",
+  "simpleView": "عرض بسيط",
+  "trade": "تجارة",
+  "popular": "شائع",
+  "ask": "بسأل",
+  "bid": "مُنَاقَصَة",
+  "symbol": "رمز",
+  "major": "رئيسي",
+  "crypto": "تشفير",
+  "searchPairs": "أزواج البحث",
+  "deleteWithArgument": "يمسح {}",
+  "date": "تاريخ:",
+  "passkey": "مفتاح المرور",
+  "addAPasskey": "إضافة مفتاح مرور",
+  "hasBeenVerified": "تم التحقق بنجاح",
+  "resendCode": "أعد إرسال الرمز",
+  "disable": "إبطال",
+  "presets": "الإعدادات المسبقة",
+  "warm": "دافيء",
+  "marble": "رخام",
+  "others": "آحرون",
+  "general": "عام",
+  "language": "لغة",
+  "appearance": "مظهر",
+  "market": "سوق",
+  "chartColor": "لون الرسم البياني",
+  "colorPreference": "تفضيل اللون",
+  "privacyPolicyText": "سياسة الخصوصية",
+  "update": "تحديث",
+  "proceed": "المتابعة",
+  "abort": "إلغاء",
+  "positions": "المراكز",
+  "filterBy": "الفلترة حسب",
+  "selectPosition": "تحديد المركز",
+  "youHaveSuccessCopied": "لقد بدأت بنجاح في نسخ تداولات ساتوشي ناكاموتو تلقائيًا. \n\n سيتم إرسال الإشعارات إليك عندما يفتح أو يغلق صفقة",
+  "hideMore": "إخفاء المزيد",
+  "stopCoping": "إيقاف النسخ",
+  "gain": "الربح",
+  "copiers": "النساخون",
+  "performance": "الأداء",
+  "subscriptionGuide": "دليل الاشتراك",
+  "equal1": "متساوٍ 1x",
+  "double2": "مضاعف 2x",
+  "triple3": "ثلاثة أضعاف 3x",
+  "addSupportFunds": "إضافة أموال الدعم",
+  "supportFunds": "أموال الدعم:",
+  "copyProportion": "نسبة النسخ:",
+  "custom": "مخصص",
+  "sender": "المرسِل",
+  "receiver": "المستقبِل",
+  "walletBalance": "رصيد المحفظة",
+  "over24hours": "أكثر من 24 ساعة",
+  "recentTransaction": "المعاملات الحديثة",
+  "order": "الطلب",
+  "time": "الوقت",
+  "bulkOperations": "العمليات المجمعة",
+  "closeAllPositions": "إغلاق جميع المراكز",
+  "closeProfitable": "إغلاق المراكز المربحة",
+  "closeAllLosing": "إغلاق المراكز الخاسرة",
+  "freeMargin": "الهامش الحر",
+  "marginLevel": "مستوى الهامش",
+  "last2Hrs": "آخر 24 ساعة",
+  "depthOfMarket": "عمق السوق",
+  "notSet": "غير محدد",
+  "lastWeek": "الأسبوع الماضي",
+  "customPeriodText": "فترة مخصصة",
+  "filled": "منجز",
+  "canceled": "ملغى",
+  "total": "الإجمالي",
+  "august": "أغسطس",
+  "reportTransaction": "تقرير المعاملة",
+  "transactionId": "معرف المعاملة",
+  "betweenAccounts": "بين الحسابات",
+  "weSentAVerification": "لقد أرسلنا بريدًا إلكترونيًا للتحقق إلى",
+  "pleaseTapLink": "يرجى النقر على الرابط المرسل في البريد الإلكتروني للمتابعة",
+  "checkMail": "التحقق من البريد الإلكتروني",
+  "emailVerifiedSuccessfully": "تم التحقق من البريد الإلكتروني بنجاح",
+  "yourEmailAccount": "حساب البريد الإلكتروني الخاص بك ",
+  "skip": "تخطي",
+  "internationalPassport": "جواز السفر الدولي",
+  "nationalId": "بطاقة الهوية الوطنية",
+  "passport": "جواز سفر",
+  "driversLicense": "رخصة قيادة",
+  "verifyAccount": "تحقق من الحساب",
+  "financialRegulation": "تتطلب منا اللوائح المالية التحقق من هويتك. يساعد هذا على منع أي شخص آخر من إنشاء حساب MT5 باسمك.",
+  "withdrawToBank": "السحب إلى البنك",
+  "paymentInformation": "معلومات الدفع",
+  "amountToWithdraw": "المبلغ المراد سحبه",
+  "leaveAMark": "اترك ملاحظة",
+  "additionalInformation": "معلومات إضافية (اختياري)",
   "views": {
     "auth": {
       "auth_view": {
@@ -1400,6 +2901,114 @@ static const Map<String,dynamic> ar = {
     "pipCalculatorView": {
       "pipValue": "قيمة النقطة (بالدولار الأمريكي",
       "numberOfPips": "عدد النقاط {}"
+    },
+    "priceSentiments": {
+      "marketSentiments": "اتجاهات السوق",
+      "sentimentsAcrossM": "اتجاهات الأسواق"
+    },
+    "priceCalculatorView": {
+      "profitUSD": "الربح (دولار أمريكي)",
+      "buyOrSell": "الشراء أو البيع",
+      "openingPrice": "سعر الافتتاح",
+      "closingPrice": "سعر الإغلاق"
+    },
+    "providerView": {
+      "notificationList": {
+        "notificationListTitle": "نجاح الاشتراك",
+        "notificationListTitle1": "تم إنهاء الاشتراك",
+        "notificationListTime": "16:23:41",
+        "notificationListDate": "2.1.2023",
+        "notificationListDescription": "أنت الآن تقوم بنسخ ساتوشي ناكاموتو.",
+        "notificationListDescription1": "لقد قمت بإنهاء نسخ التداول الخاص بك بنجاح مع ساتوشي ناكاموتو."
+      },
+      "strategyDescription": "مرحبا بالجميع، 👉 هذا الحساب آمن تمامًا للنسخ لجميع المستثمرين، المبتدئين والمحترفين. سأبذل قصارى جهدي لتحقيق أرباح تتراوح بين 25 و50٪ أسبوعيًا 💪. أولويتنا الأولى هي الحفاظ على سلامة أموالك. تداول سعيد ✨",
+      "signUpAsProvider": "التسجيل كمزود",
+      "enterYourInformation": "أدخل معلوماتك",
+      "providerLogin": "تسجيل دخول المزود",
+      "approvedRegistration": "تسجيل المزود المعتمد",
+      "profileSettings": "إعدادات الملف الشخصي",
+      "changeYourProfileInfo": "تغيير معلومات ملفك الشخصي",
+      "viewYourFollowers": "عرض متابعيك"
+    },
+    "quotesView": {
+      "quotesViewModel": {
+        "quoteList": {
+          "greatBritainPounds": "الجنيه الإسترليني مقابل الدولار الأمريكي",
+          "usDollarCan": "الدولار الأمريكي مقابل الدولار الكندي"
+        },
+        "stopLevel": "المستوى الوقفي",
+        "marginCurrency": "عملة الهامش",
+        "profitCurrency": "عملة الربح",
+        "tickSize": "حجم التنفيذ",
+        "tickValue": "قيمة التنفيذ",
+        "addSymbol": "إضافة الرمز إلى قائمة السوق"
+      },
+      "tradeCloseScreen": {
+        "closeBuy": "إغلاق الشراء #312443 بسعر السوق مع خسارة قدرها 0.80"
+      },
+      "tradeDepthScreen": {
+        "depthMarket": "عمق السوق"
+      }
+    },
+    "security": {
+      "autoLock": "القفل التلقائي",
+      "enableToLock": "تمكين القفل التلقائي للتطبيق",
+      "addPasskey": "إضافة رمز المرور"
+    },
+    "settings": {
+      "whatsappAddition": "إضافة WhatsApp",
+      "addNoticeOfUpcoming": "إضافة إشعار بالإشارات القادمة",
+      "addingDifferentViews": "إضافة وجهات نظر مختلفة على قسم السوق",
+      "blueBuy": "الأزرق للشراء / الأحمر للبيع",
+      "notificationSettings": "إعدادات الإشعارات",
+      "languageSettings": "إعدادات اللغة",
+      "changeAppLanguage": "تغيير لغة التطبيق",
+      "changeBasis": "تغيير الأساس",
+      "TermsOfUse": "الشروط والأحكام",
+      "privacyPolicy": {
+        "privacyPolicyHead1": "جمع المعلومات",
+        "privacyPolicyHead2": "مشاركة البيانات والكشف عنها",
+        "privacyPolicySubH": "البيانات الشخصية",
+        "privacyPolicySubH1": "المعلومات المالية",
+        "privacyPolicySubH2": "معلومات الجهاز والاستخدام",
+        "privacyPolicySubH3": "ملفات تعريف الارتباط وتقنيات التتبع",
+        "privacyPolicySubH4": "إنشاء الحساب",
+        "privacyPolicySubH5": "خدمات تداول الفوركس",
+        "privacyPolicyIntro": "شكرًا لك على اختيار Meta trader كمنصة ت,",
+        "privacyPolicyD2": "قد نقوم بجمع أنواع مختلفة من المعلومات منك عند استخدام منصتنا أو خدماتنا، بما في ذلك:",
+        "privacyPolicyD3": "قد تشمل ذلك اسمك، عنوان البريد الإلكتروني، رقم الهاتف، عنوان الإقامة، تاريخ الميلاد، وثيقة الهوية المصدرة من الحكومة، وتفاصيل أخرى ضرورية لتسجيل الحساب والامتثال للوائح المالية.",
+        "privacyPolicyD4": "لتيسير عمليات النقل، قد نقوم بجمع تفاصيل تتعلق بحسابك البنكي، ومعلومات بطاقتك الائتمانية/الخصم، وسجل المعاملات.",
+        "privacyPolicyD5": "قد نقوم تلقائياً بجمع معلومات حول جهازك، نظام التشغيل، نوع المتصفح، عنوان IP، وتفاعلك مع منصتنا لتحسين خدماتنا وتجربة المستخدم.",
+        "privacyPolicyD6": "نستخدم ملفات تعريف الارتباط وتقنيات مماثلة لجمع معلومات حول أنماط استخدامك وتفضيلاتك أثناء استخدام منصتنا. يساعدنا ذلك في تحسين موقع الويب، وتحسين التنقل، وتخصيص تجربتك.",
+        "privacyPolicyD7": "نستخدم المعلومات المجمعة للأغراض التالية",
+        "privacyPolicyD8": "لإنشاء وصيانة حسابك، والتحقق من هويتك، وتقديم دعم العملاء.",
+        "privacyPolicyD9": "لمعالجة معاملاتك وسحوباتك وفقًا لتعليماتك."
+      }
+    },
+    "socialTradingView": {
+      "transactionDetails": "تفاصيل المعاملة",
+      "subscriptionSetup": "إعداد الاشتراك",
+      "transferToBinance": "نقل إلى BinancePay",
+      "depositToBinance": "إيداع من BinancePay",
+      "depositToNeteller": "إيداع من Neteller",
+      "depositToPerfect": "إيداع من Perfect Money",
+      "subSuccessful": "نجاح الاشتراك",
+      "subTerminated": "تم إنهاء الاشتراك",
+      "socialTradingWelcome": {
+        "welcomeToMT5": "مرحبًا بك في منصة MT5 للتداول الاجتماعي",
+        "nowYouCanStart": "يمكنك الآن البدء في الاستثمار مع أفضل متداولين رئيسيين، وتتبع وإدارة اشتراكاتك.",
+        "getStarted": "ابدأ"
+      }
+    },
+    "verificationView": {
+      "VerifyIdentity": "تحقق من الهوية",
+      "selectIdToCapture": "اختر الهوية لالتقاطها"
+    },
+    "withdrawFundsView": {
+      "selectAccountToWithdraw": "حدد الحساب للسحب",
+      "withdrawToBinancePay": "سحب إلى BinancePay",
+      "withdrawToBlockBee": "سحب إلى BlockBee",
+      "withdrawToNeteller": "سحب إلى Neteller"
     }
   },
   "onboarding": {
@@ -1667,6 +3276,406 @@ static const Map<String,dynamic> ar = {
     },
     "tetherWidgetP": {
       "enterTetherUSd": "TetherUSD أدخل عنوان محفظة"
+    }
+  },
+  "priceSentimentWidget": {
+    "details": {
+      "clientSentiment": "مشاعر العميل",
+      "tradingActivity": "نشاط التداول",
+      "priceRange": "نطاق السعر",
+      "priceVolatility": "تقلب السعر",
+      "priceMovement": "حركة السعر"
+    },
+    "searchResults": "نتائج البحث"
+  },
+  "profile": {
+    "verificationBar": {
+      "verifyYourAccount": "تحقق من حسابك",
+      "toMakeFirstD": "لإجراء إيداعك الأول، نرغب في معرفتك بشكل أفضل. انقر 'متابعة' للبدء"
+    },
+    "profileWidget": {
+      "viewYourWithD": "عرض سجل سحبك وإيداعك",
+      "updatePaymentM": "تحديث وسائل الدفع",
+      "fileAComplaint": "تقديم شكوى لفريق الدعم",
+      "rateTheApp": "قيم التطبيق",
+      "giveUsAReview": "قدم لنا تقييمًا على متجر التطبيقات",
+      "viewWithDrawalH": "عرض سجل سحبك وإيداعك"
+    }
+  },
+  "providerWidget": {
+    "providerComponent": {
+      "changeNickName": {
+        "changeNickNameT": "تغيير إسم الكنية",
+        "enterNewNickName": "أدخل اللقب الجديد"
+      },
+      "changePasswordWidget": {
+        "confirmPassword": "تأكيد كلمة المرور"
+      },
+      "pGraph": {
+        "myPerformance": "أدائي"
+      },
+      "pGraph2": {
+        "followersStats": "إحصائيات المتابعين"
+      },
+      "pModelBottomSheet": {
+        "startDate": "تاريخ البدء",
+        "endDate": "تاريخ الانتهاء",
+        "openPosition": "موقف مفتوح",
+        "selectCountry": "حدد الدولة"
+      },
+      "pProfitsBar": {
+        "totalTrade": "إجمالي الصفقات"
+      },
+      "pTradeBar": {
+        "dateW": "التاريخ:",
+        "orderId": "رقم الطلب:",
+        "followersCommission": "عمولة المتابعين:"
+      },
+      "pSummary": {
+        "viewFollowers": "عرض المتابعين",
+        "followersAutoScale": "ضبط تلقائي للمتابعين",
+        "followersFixedLot": "كمية محددة للمتابعين",
+        "followersReverse": "عكس المتابعين",
+        "performanceFee": "رسوم الأداء"
+      },
+      "updatePhoneNumber": {
+        "updatePhoneNumberText": "تحديث رقم الهاتف"
+      }
+    },
+    "providerConfirmation": {
+      "yourRequestHas": "تم تقديم طلبك بنجاح",
+      "youWillReceive": "ستتلقى تقييمًا خلال 3-4 أيام عمل عبر البريد الإلكتروني بعد التحقق الناجح"
+    },
+    "providerFollowers": {
+      "followedRecently": "تم المتابعة مؤخرًا",
+      "startedFollowing": "بدأ المتابعة: {} ثانية"
+    },
+    "providerLogin": {
+      "enterYourAccount": "أدخل معرف حسابك",
+      "accountID": "معرف الحساب",
+      "desiredFee": "الرسوم المرغوبة",
+      "iAgreeWith": "أوافق على",
+      "termsAndConditionProvider": "الشروط والأحكام",
+      "forOPening": "لفتح حساب و",
+      "dataProtectionPolicy": "سياسة حماية البيانات"
+    },
+    "providerOption": {
+      "myWallet": "محفظتي",
+      "profileSettings": "إعدادات الملف الشخصي"
+    },
+    "providerSettings": {
+      "desiredFeeCommission": "الرسوم المرغوبة (العمولة)",
+      "publicVisibility": "الرؤية العامة",
+      "visibilityPublic": "الرؤية: عامة",
+      "saveChanges": "حفظ التغييرات"
+    },
+    "providerSignUp": {
+      "uploadAttachment": "تحميل المرفقات"
+    },
+    "providerWallet": {
+      "reportAnIssue": "تقديم تقرير عن مشكلة",
+      "depositFromNeteller": "إيداع من نيتلر",
+      "metaWalletToWallet": "المحفظة إلى المحفظة",
+      "transferToSticPay": "تحويل إلى ستيك باي",
+      "depositToDeriv": "إيداع إلى ديريف"
+    },
+    "welcomeProvider": {
+      "startGenerating": "ابدأ في تحقيق دخل\nلمتابعيك",
+      "becomeAProvider": "كن مزودًا على منصتنا\nوعرض مهاراتك في التداول وكسب الدخل من متابعيك",
+      "loginInstead": "تسجيل الدخول بدلاً من ذلك"
+    }
+  },
+  "quotesWidget": {
+    "components": {
+      "genericTradeBody": {
+        "lotSize": "حجم اللوت",
+        "stopLoss": "وقف الخسارة",
+        "takeProfit": "أخذ الربح",
+        "fillPolicy": "سياسة التنفيذ",
+        "fillOrKill": "املأ أو اقتل",
+        "timeFrame": "الإطار الزمني",
+        "currencyPrice": "السعر الحالي",
+        "inOneHour": "في ساعة واحدة في 10:41 يوم 29 يوليو 2023، ستُغلق صفقتك تلقائيًا",
+        "sellByMarket": "البيع بالسوق",
+        "buyByMarket": "الشراء بالسوق"
+      },
+      "marketStats": {
+        "initialMargin": "الهامش الأولي",
+        "bigHigh": "أعلى عرض",
+        "bigLow": "أدنى عرض",
+        "askHigh": "أعلى طلب",
+        "askLow": "أدنى طلب",
+        "priceChange": "تغيير السعر",
+        "openPrice": "سعر الافتتاح",
+        "closePrice": "سعر الإغلاق"
+      },
+      "quotesBottomSheet": {
+        "euroVsDollar": "EURUSDs: اليورو مقابل الدولار الأمريكي"
+      },
+      "tradeAppBar": {
+        "marketExec": "تنفيذ السوق"
+      }
+    },
+    "modernViewWidget": {
+      "topMovers": "أفضل المتحركين"
+    }
+  },
+  "referralWidget": {
+    "referNowAndEarn": "قم بالإحالة الآن واكسب رصيدًا بقيمة 10 دولار على صفقتك القادمة",
+    "referralCode": "رمز الإحالة",
+    "howDoesItWork": "كيف يعمل ذلك",
+    "inviteYourFriends": "قم بدعوة أصدقائك للتسجيل في منصة ميتاتريدر 5",
+    "whenYourFriend": "عندما يقوم صديقك بالتسجيل في التطبيق، سيحصل كل منكما على رصيد مكافأة بقيمة 10 دولار",
+    "yourRewardCredit": "يمكنك بعد ذلك استخدام رصيد مكافأتك في صفقتك القادمة",
+    "checkOutMyApp": "تفقد تطبيقي على https://example.com",
+    "referNow": "الإحالة الآن"
+  },
+  "securityWidget": {
+    "securityComponents": {
+      "addPassKeyModel": {
+        "appPasskey": "إضافة مفتاح المرور",
+        "noNeedToRemember": "لا حاجة للتذكر كلمة المرور",
+        "withPasskey": "باستخدام المفاتيح، يمكنك استخدام أشياء مثل بصمة الإصبع أو الوجه لتسجيل الدخول",
+        "worksOnAll": "يعمل على جميع أجهزتك",
+        "passkeysWill": "ستكون المفاتيح تلقائيًا متاحة عبر جميع أجهزتك المتزامنة",
+        "keepYourAccountSafe": "احفظ حسابك آمنًا",
+        "passkeysOffer": "تقدم المفاتيح مقاومة عالية للاختراق بحداثة"
+      },
+      "changePasswordModel": {
+        "inOrderToProtect": "من أجل حماية حسابك، سيتم تعطيل السحب لمدة 24 ساعة بعد تغيير كلمة المرور"
+      },
+      "deletePopUP": {
+        "doYouReallyWantToDelete": "هل ترغب حقًا في حذف هذا {}"
+      },
+      "emptyPasskey": {
+        "passkeyAddedYet": "لم يتم إضافة مفاتيح حتى الآن"
+      },
+      "passkeyTile": {
+        "added12": "تمت الإضافة: 12 يوليو 2023",
+        "lastUsed": "آخر استخدام: منذ 2 أيام"
+      }
+    },
+    "addPasskeyEnter": {
+      "enterAUnique": "أدخل مفتاح مرور فريد مكون من 4 أرقام",
+      "yourPasskeyWillBe": "سيتم استخدام مفتاح مرورك للمصادقة على السحوبات. يُرجى عدم مشاركته مع أي شخص آخر.",
+      "enter4digitsPasskey": "أدخل مفتاح مرور مكون من 4 أرقام",
+      "enterYourPassword": "أدخل كلمة المرور الخاصة بك"
+    },
+    "addPasskey": {
+      "securityVerification": "متطلبات التحقق من الأمان",
+      "youNeedToCompleteAll": "يجب عليك إكمال جميع عمليات التحقق التالية للمتابعة"
+    },
+    "autoLockWidget": {
+      "usingPattern": "استخدام نمط لفتح التطبيق",
+      "usingYourFace": "استخدام وجهك لفتح التطبيق",
+      "faceUnlock": "فتح بواسطة الوجه"
+    },
+    "emailVerify": {
+      "passKeyAdded": "تمت إضافة المفتاح بنجاح"
+    },
+    "passkeyAddedSuccess": {
+      "passkeyAddedSuccessfully": "تمت إضافة المفتاح بنجاح",
+      "yourPasskeyIs": "مفتاح مرورك هو",
+      "pleaseKeepThisPasskey": " يرجى الاحتفاظ بهذا المفتاح بأمان حتى لا تنساه"
+    },
+    "passwordChangedSuccess": {
+      "passwordChangedSuccessText": "تم تغيير كلمة المرور بنجاح",
+      "itWillTake24": "سيستغرق 24 ساعة قبل أن تتمكن من القيام بعمليات السحب. يرجى الانتظار بصبر"
+    },
+    "phoneVerifiedSuccess": {
+      "phoneVerifiedSuccessFully": "تم التحقق من رقم الهاتف بنجاح",
+      "yourPhoneNumber": "رقم هاتفك "
+    },
+    "phoneVerify": {
+      "weSentVerificationCode": "لقد قمنا بإرسال رمز التحقق إلى ",
+      "enter6Digits": "أدخل رمز التحقق المكون من 6 أرقام"
+    },
+    "securityMain": {
+      "twoFactorAuthentication": "المصادقة الثنائية",
+      "toProtectYourAccount": "لحماية حسابك، من الضروري تفعيل واحدة على الأقل من طرق المصادقة الثنائية",
+      "autoLockText": "القفل التلقائي",
+      "disableAccount": "تعطيل الحساب",
+      "doYouReallyWantToDisable": "هل ترغب حقًا في تعطيل الحساب؟"
+    }
+  },
+  "settings": {
+    "aboutUs": {
+      "serviceAgreement": "اتفاقية الخدمة",
+      "likeUsOnFacebook": "قم بالإعجاب بصفحتنا على فيسبوك",
+      "followUsOnTwitter": "تابعنا على تويتر",
+      "joinUsOnTelegram": "انضم إلينا على تيليجرام",
+      "checkForUpdate": "التحقق من التحديثات"
+    },
+    "changeBasis": {
+      "whenYouSwitch": "عندما تقوم بالتبديل إلى منطقة زمنية جديدة بتوقيت تنسيق التعاون العالمي (UTC)، سيتم حساب التغيير (%) في الأسواق والصفقات استنادًا إلى المنطقة الزمنية الجديدة"
+    },
+    "settingsPage": {
+      "pushNotification": "إشعارات الدفع",
+      "useDeviceTheme": "استخدام السمة الظلامية للجهاز",
+      "darkMode": "الوضع الليلي",
+      "changeBasisText": "تغيير الأساس",
+      "currentVersion ": "النسخة الحالية"
+    },
+    "updateRelease": {
+      "updateReleaseText": "إصدار التحديث",
+      "thisUpdate": "هذا التحديث"
+    }
+  },
+  "socialTradingWidget": {
+    "socialTradingComponent": {
+      "cancelSub": {
+        "cancelCoping": "هل تريد إلغاء النسخ؟",
+        "onceYouCancel": "بمجرد إلغاء اشتراكك، ستتم إنهاء الصفقات المفتوحة مع المتداول الرئيسي تلقائيًا"
+      },
+      "copiedTrader": {
+        "followingSince": "متابعة منذ:"
+      },
+      "filterModel": {
+        "searchTransaction": "البحث في المعاملة",
+        "enterYourSearch": "أدخل مصطلح البحث الخاص بك"
+      },
+      "filterPosition": {
+        "closedPositions": "الصفقات المغلقة",
+        "openPositions": "الصفقات المفتوحة"
+      },
+      "rateModel": {
+        "rateSatoshi": "قيم ساتوشي ناكاموتو",
+        "takeAMoment": "خذ لحظة وقيمني",
+        "submitFeedback": "إرسال التقييم"
+      },
+      "summaryWidget": {
+        "successRate": "معدل النجاح",
+        "riskScoreSummary": "نقاط المخاطرة"
+      }
+    },
+    "socialTradeAppBar": {
+      "masterTraders": "متداولون محترفون",
+      "myTrade": "صفقاتي"
+    },
+    "copiedTraderSuccess": {
+      "masterTradeCopiedS": "تم نسخ المتداول الرئيسي بنجاح"
+    },
+    "copiedTraderTerminated": {
+      "subscriptionTerminated": "تم إنهاء الاشتراك بنجاح"
+    },
+    "masterTrader": {
+      "popularTraders": "متداولون مشهورون",
+      "higherSuccessRatesText": "معدلات نجاح أعلى"
+    },
+    "menuMain": {
+      "aboutMT5": "نبذة عن التداول بنسخ MT 5"
+    },
+    "myTrades": {
+      "copiedTraders": "المتداولون المنسوخون",
+      "youAreNotCopying": "لم تقم بنسخ أي متداول رئيسي بعد",
+      "startCopying": "ابدأ النسخ"
+    },
+    "overViewWidget": {
+      "setupCopying": "إعداد النسخ",
+      "totalCopiers": "إجمالي الناسخين:",
+      "successRateOverview": "معدل النجاح:",
+      "accountDetails": "تفاصيل الحساب",
+      "floatingProfit": "ربح عائم",
+      "masterTraderBonus": "مكافأة المتداول الرئيسي",
+      "riskManagement": "إدارة المخاطر",
+      "maxUnrealizedLoss": "أقصى خسارة غير محققة",
+      "maxDrawDownDuration": "أقصى مدة انخفاض",
+      "priceMovement": "حركة الأسعار"
+    },
+    "subscriptionGuideWidget": {
+      "learnAbout": "تعرف على إعداد الاشتراك",
+      "copyProportion": "نسبة النسخ",
+      "selectTheSize": "حدد حجم استثمارك الذي سيشارك في تداول النسخ",
+      "theVolumeOf": "حجم الطلبات المنسوخة سيتساوى مع حجم طلبات المتداول الرئيسي.",
+      "toFacilitate": "لتيسير التعاملات، قد نجمع تفاصيل تتعلق بحسابك المصرفي، ومعلومات بطاقتك الائتمانية/الخصم، وتاريخ العمليات.",
+      "weMayAutomatically": "قد نجمع تلقائيًا معلومات حول جهازك، ونظام التشغيل، ونوع المتصفح، وعنوان IP، وتفاعلاتك مع منصتنا لتحسين خدماتنا وتجربة المستخدم.",
+      "supportFundsHelp": "تساعد أموال الدعم في حماية استثماراتك من التحركات السوقية غير المتوقعة.\n\nعلى الأفضل، يجب أن تضيف أموال الدعم بنسبة تبلغ ما لا يقل عن 50% من الاستثمار المطلوب."
+    },
+    "subscriptionSetupWidget": {
+      "subscriptionSetup": "إعداد الاشتراك",
+      "fundInWallet": "الأموال في المحفظة:",
+      "argumentItemRequired": "{} مطلوب",
+      "argumentTradeVolume": "{} حجم التداول",
+      "enterValue": "أدخل القيمة",
+      "supportAmount": "مبلغ الدعم",
+      "enterAmount": "أدخل المبلغ",
+      "55OfTheRequired": "55% من الاستثمار المطلوب",
+      "supportFundsProtect": "أموال الدعم تحمي عملك من التحركات السوقية غير المتوقعة",
+      "requiredInvestment": "الاستثمار المطلوب"
+    }
+  },
+  "tradeWidget": {
+    "tradeBulkOperation": {
+      "closeAUDJPYPosition": "إغلاق مراكز AUDJPY",
+      "reverseAUDJPYBuy": "عكس شراء AUDJPY"
+    },
+    "tradeModal": {
+      "australianDollarVsJap": "الدولار الأسترالي مقابل الين الياباني",
+      "swap0": "التبادل: 0.00",
+      "modifyPosition": "تعديل المركز",
+      "bulkOPerationsW": "عمليات جماعية..."
+    },
+    "modifyTrade": {
+      "in1hour": "سيتم إغلاق مركز التداول تلقائيًا في غضون ساعة واحدة في الساعة 10:41 في 29 يوليو 2023",
+      "theMarketWill": "سيتم تنفيذ المعاملة وفقًا لظروف السوق. قد تكون الفرق عن السعر المطلوب كبيرة."
+    }
+  },
+  "tradeHistoryWidget": {
+    "TradeComponents": {
+      "filterModal": {
+        "lastMonth": "الشهر الماضي",
+        "last3Month": "آخر 3 أشهر"
+      }
+    }
+  },
+  "transactionWidget": {
+    "TransactionComponents": {
+      "filledPop": {
+        "searchTerm": "مصطلح البحث",
+        "enterYourSearchTerm": "أدخل مصطلح البحث الخاص بك"
+      }
+    }
+  },
+  "verificationWidget": {
+    "emailVerification": {
+      "verifyYourEmail": "تحقق من بريدك الإلكتروني"
+    },
+    "emailVerifiedSuccessfully": {
+      "nextVerify": "التالي: التحقق من الهوية"
+    },
+    "identityVerificationLanding": {
+      "verifyYourIdentity": "تحقق من هويتك",
+      "toSuccessfullyVerify": "للتحقق من هويتك بنجاح، نقبل إما صورة لـ:",
+      "itTakes8hours": "يستغرق 8-24 ساعة للتحقق من هويتك."
+    },
+    "identityVerificationSuccess": {
+      "yourIdHasBeen": "تم إرسال هويتك بنجاح",
+      "youWillReceiveFeedback": "سوف تتلقى تعليقًا",
+      "within24": "خلال 24 ساعة ",
+      "viaEmailOnSuccessful": "عبر البريد الإلكتروني عند التحقق الناجح"
+    },
+    "selectIdentity": {
+      "validDriverL": "رخصة القيادة الصالحة"
+    },
+    "verifyLanding": {
+      "letStart": "لنبدأ عملية التحقق الخاصة بك",
+      "emailVerificationText": "التحقق من البريد الإلكتروني",
+      "weWillSend": "سنرسل رابطًا إلى عنوان البريد الإلكتروني الذي قدمته. يرجى النقر فوق الرابط لإكمال عملية التحقق من البريد الإلكتروني الخاص بك",
+      "identityVerification": "التحقق من الهوية",
+      "toHelpProtect": "للمساعدة في حمايتك من الاحتيال وللامتثال للوائح الفيدرالية، نحتاج إلى بعض المعلومات. يمكن أن تكون إما صورة لـ:"
+    }
+  },
+  "withdrawFunds": {
+    "paymentInformationWidget": {
+      "accountNumberW": "رقم الحساب:",
+      "124Hours": "1-24 ساعة"
+    },
+    "paymentMethodWidget": {
+      "selectPreferred": "حدد وسيلة الدفع المفضلة"
+    },
+    "withdrawSuccessWidget": {
+      "yourTransactionIsBeing": "جار معالجة معاملتك",
+      "youCanSkip": "يمكنك تجاوز هذه الخطوة ولكنك لن تتمكن من سحب أموالك. "
     }
   }
 };
