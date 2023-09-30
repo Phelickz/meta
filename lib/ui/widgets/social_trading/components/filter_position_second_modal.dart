@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -29,19 +30,22 @@ class MyWidget extends StatelessWidget {
                 color: isDarkMode
                     ? const Color(0xFF98A2B3)
                     : const Color(0xFF667085)),
-          ),
+          ).tr(),
           verticalSpaceSmall(context),
           LabelDropdown(
             label: LocaleKeys.selectPosition,
             onChanged: (val) {},
             value: LocaleKeys
-                .socialTradingWidget_socialTradingComponent_filterPosition_closedPositions,
-            options: const [
+                .socialTradingWidget_socialTradingComponent_filterPosition_closedPositions
+                .tr(),
+            options: [
               LocaleKeys
-                  .socialTradingWidget_socialTradingComponent_filterPosition_closedPositions,
+                  .socialTradingWidget_socialTradingComponent_filterPosition_closedPositions
+                  .tr(),
               LocaleKeys
-                  .providerWidget_providerComponent_pModelBottomSheet_openPosition,
-              LocaleKeys.views_forexNews_forexModel_all,
+                  .providerWidget_providerComponent_pModelBottomSheet_openPosition
+                  .tr(),
+              LocaleKeys.views_forexNews_forexModel_all.tr(),
             ],
           ),
           verticalSpaceSmall(context),
@@ -83,7 +87,7 @@ class MyWidget extends StatelessWidget {
                           ? const Color(0xFFD0D5DD)
                           : const Color(0xFF667085),
                     ),
-                  )
+                  ).tr()
                 ],
               ),
               horizontalSpaceSmall(context),
@@ -123,7 +127,7 @@ class MyWidget extends StatelessWidget {
                           ? const Color(0xFFD0D5DD)
                           : const Color(0xFF667085),
                     ),
-                  )
+                  ).tr()
                 ],
               ),
             ],
@@ -134,7 +138,7 @@ class MyWidget extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
             },
-            text: LocaleKeys.confirm,
+            text: LocaleKeys.confirm.tr(),
           ),
         ],
       ),

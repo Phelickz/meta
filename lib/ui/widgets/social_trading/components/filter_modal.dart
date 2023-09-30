@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -30,28 +31,32 @@ class FilterTransactionModal extends StatelessWidget {
                 fontWeight: FontWeight.w500,
                 color: const Color(0xFF98A2B3),
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             LabelDatePicker(
               label: LocaleKeys
-                  .providerWidget_providerComponent_pModelBottomSheet_startDate,
+                  .providerWidget_providerComponent_pModelBottomSheet_startDate
+                  .tr(),
               context: context,
               onDateSelected: (date) {},
             ),
             LabelDatePicker(
               label: LocaleKeys
-                  .providerWidget_providerComponent_pModelBottomSheet_endDate,
+                  .providerWidget_providerComponent_pModelBottomSheet_endDate
+                  .tr(),
               context: context,
               selectedDate: null,
               lastDate: null,
               onDateSelected: (date) {},
             ),
-            const LabelSearchField(
+            LabelSearchField(
               label: LocaleKeys
-                  .socialTradingWidget_socialTradingComponent_filterModel_searchTransaction,
+                  .socialTradingWidget_socialTradingComponent_filterModel_searchTransaction
+                  .tr(),
               controller: null,
               hintText: LocaleKeys
-                  .socialTradingWidget_socialTradingComponent_filterModel_enterYourSearch,
+                  .socialTradingWidget_socialTradingComponent_filterModel_enterYourSearch
+                  .tr(),
             ),
             verticalSpaceSmall(context),
             CustomButtons.generalButton(
@@ -59,7 +64,7 @@ class FilterTransactionModal extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context);
               },
-              text: LocaleKeys.confirm,
+              text: LocaleKeys.confirm.tr(),
             ),
           ],
         ),

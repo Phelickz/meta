@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -29,16 +30,16 @@ class FilterPositionModal extends StatelessWidget {
                 color: isDarkMode
                     ? const Color(0xFF98A2B3)
                     : const Color(0xFF667085)),
-          ),
+          ).tr(),
           verticalSpaceSmall(context),
           LabelDropdown(
-            label: LocaleKeys.selectPosition,
+            label: LocaleKeys.selectPosition.tr(),
             onChanged: (val) {},
-            value: LocaleKeys.profits,
-            options: const [
-              LocaleKeys.profits,
-              LocaleKeys.loss,
-              LocaleKeys.views_forexNews_forexModel_all,
+            value: LocaleKeys.profits.tr(),
+            options: [
+              LocaleKeys.profits.tr(),
+              LocaleKeys.loss.tr(),
+              LocaleKeys.views_forexNews_forexModel_all.tr(),
             ],
           ),
           verticalSpaceSmall(context),
@@ -80,7 +81,7 @@ class FilterPositionModal extends StatelessWidget {
                           ? const Color(0xFFD0D5DD)
                           : const Color(0xFF667085),
                     ),
-                  )
+                  ).tr()
                 ],
               ),
               horizontalSpaceSmall(context),
@@ -120,7 +121,7 @@ class FilterPositionModal extends StatelessWidget {
                           ? const Color(0xFFD0D5DD)
                           : const Color(0xFF667085),
                     ),
-                  )
+                  ).tr()
                 ],
               ),
             ],
@@ -131,7 +132,7 @@ class FilterPositionModal extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
             },
-            text: LocaleKeys.confirm,
+            text: LocaleKeys.confirm.tr(),
           ),
         ],
       ),

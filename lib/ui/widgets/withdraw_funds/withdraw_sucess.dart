@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -39,7 +40,7 @@ class WithdrawSuccess extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: isDarkMode ? Colors.white : Colors.black87,
               ),
-            ),
+            ).tr(),
           ),
           verticalSpaceSmall(context),
           Padding(
@@ -47,7 +48,7 @@ class WithdrawSuccess extends StatelessWidget {
             child: RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                text: LocaleKeys.financialRegulation,
+                text: LocaleKeys.financialRegulation.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
                   color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -62,7 +63,8 @@ class WithdrawSuccess extends StatelessWidget {
                   ),
                   TextSpan(
                     text: LocaleKeys
-                        .withdrawFunds_withdrawSuccessWidget_youCanSkip,
+                        .withdrawFunds_withdrawSuccessWidget_youCanSkip
+                        .tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.6),
                       color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -78,7 +80,7 @@ class WithdrawSuccess extends StatelessWidget {
             onTap: () {
               model.push(const BottomNavBarRoute());
             },
-            text: LocaleKeys.back,
+            text: LocaleKeys.back.tr(),
           ),
           verticalSpaceMedium(context),
         ],

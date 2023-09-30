@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -53,12 +54,12 @@ class CopiedTraderSuccessPage extends StatelessWidget {
                   ? const Color(0xFFF2F4F7)
                   : const Color(0xff475467),
             ),
-          ),
+          ).tr(),
           verticalSpaceSmall(context),
           RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
-              text: LocaleKeys.youHaveSuccessCopied,
+              text: LocaleKeys.youHaveSuccessCopied.tr(),
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.5),
                 fontWeight: FontWeight.w500,
@@ -74,7 +75,7 @@ class CopiedTraderSuccessPage extends StatelessWidget {
             onTap: () {
               viewModel.push(const SocialTradingDasboard());
             },
-            text: LocaleKeys.continueWord,
+            text: LocaleKeys.continueWord.tr(),
           ),
           verticalSpaceSmall(context),
         ],

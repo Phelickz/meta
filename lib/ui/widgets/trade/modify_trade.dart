@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -25,8 +26,8 @@ class ModifyTrade extends StatelessWidget {
             verticalSpaceXSmall(context),
             PlusMinusText(
               value: "2.0",
-              label:
-                  LocaleKeys.quotesWidget_components_genericTradeBody_lotSize,
+              label: LocaleKeys.quotesWidget_components_genericTradeBody_lotSize
+                  .tr(),
               onPlus: () {},
               onMinus: () {},
               onTextChanged: (val) {},
@@ -36,18 +37,20 @@ class ModifyTrade extends StatelessWidget {
               children: [
                 PlusMinusText(
                   width: McGyver.rsDoubleW(context, 41),
-                  value: LocaleKeys.notSet,
+                  value: LocaleKeys.notSet.tr(),
                   label: LocaleKeys
-                      .quotesWidget_components_genericTradeBody_stopLoss,
+                      .quotesWidget_components_genericTradeBody_stopLoss
+                      .tr(),
                   onPlus: () {},
                   onMinus: () {},
                   onTextChanged: (val) {},
                 ),
                 PlusMinusText(
                   width: McGyver.rsDoubleW(context, 41),
-                  value: LocaleKeys.notSet,
+                  value: LocaleKeys.notSet.tr(),
                   label: LocaleKeys
-                      .quotesWidget_components_genericTradeBody_takeProfit,
+                      .quotesWidget_components_genericTradeBody_takeProfit
+                      .tr(),
                   onPlus: () {},
                   onMinus: () {},
                   onTextChanged: (val) {},
@@ -87,7 +90,7 @@ class ModifyTrade extends StatelessWidget {
                                 ? const Color(0xFFD0D5DD)
                                 : const Color(0xFF667085),
                           ),
-                        ),
+                        ).tr(),
                         Switch.adaptive(
                             value: viewModel.openDuration,
                             onChanged: (value) {
@@ -124,7 +127,8 @@ class ModifyTrade extends StatelessWidget {
                                 width: McGyver.rsDoubleW(context, 35),
                                 value: "1 Hr",
                                 label: LocaleKeys
-                                    .quotesWidget_components_genericTradeBody_timeFrame,
+                                    .quotesWidget_components_genericTradeBody_timeFrame
+                                    .tr(),
                                 onPlus: () {},
                                 onMinus: () {},
                                 onTextChanged: (val) {},
@@ -134,7 +138,8 @@ class ModifyTrade extends StatelessWidget {
                                 width: McGyver.rsDoubleW(context, 35),
                                 value: "1.2311",
                                 label: LocaleKeys
-                                    .quotesWidget_components_genericTradeBody_currencyPrice,
+                                    .quotesWidget_components_genericTradeBody_currencyPrice
+                                    .tr(),
                                 onPlus: () {},
                                 onMinus: () {},
                                 onTextChanged: (val) {},
@@ -153,7 +158,7 @@ class ModifyTrade extends StatelessWidget {
                                   ? const Color(0xFF98A2B3)
                                   : const Color(0xFF20A0F3),
                             ),
-                          ),
+                          ).tr(),
                         ],
                       ),
                     ),
@@ -301,7 +306,7 @@ class ModifyTrade extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                       color: const Color(0xFF98A2B3),
                     ),
-                  ),
+                  ).tr(),
                 ),
               ],
             ),

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -23,7 +24,7 @@ class FilterPopUp extends StatelessWidget {
             fontWeight: FontWeight.w400,
             color: isDarkMode ? Colors.white70 : const Color(0xff667085),
           ),
-        ),
+        ).tr(),
         SizedBox(
           height: 24.pHeight(context),
         ),
@@ -34,7 +35,7 @@ class FilterPopUp extends StatelessWidget {
             fontSize: McGyver.textSize(context, 1.8),
             color: isDarkMode ? Colors.white70 : const Color(0xff667085),
           ),
-        ),
+        ).tr(),
         verticalSpaceXSmall(context),
         const CustomTextFields(
           hintText: 'DD.MM.YYYY',
@@ -46,7 +47,7 @@ class FilterPopUp extends StatelessWidget {
             fontSize: McGyver.textSize(context, 1.8),
             color: isDarkMode ? Colors.white70 : const Color(0xff667085),
           ),
-        ),
+        ).tr(),
         verticalSpaceXSmall(context),
         CustomTextFields(
           hintText: 'DD.MM.YYYY',
@@ -64,11 +65,12 @@ class FilterPopUp extends StatelessWidget {
             fontSize: McGyver.textSize(context, 1.8),
             color: isDarkMode ? Colors.white70 : const Color(0xff667085),
           ),
-        ),
+        ).tr(),
         verticalSpaceXSmall(context),
         CustomTextFields(
           hintText: LocaleKeys
-              .transactionWidget_TransactionComponents_filledPop_enterYourSearchTerm,
+              .transactionWidget_TransactionComponents_filledPop_enterYourSearchTerm
+              .tr(),
           password: false,
           suffixIcon: Icon(
             Icons.search,
@@ -82,7 +84,7 @@ class FilterPopUp extends StatelessWidget {
         CustomButtons.generalButton(
           context: context,
           onTap: () {},
-          text: LocaleKeys.confirm,
+          text: LocaleKeys.confirm.tr(),
         )
       ],
     );

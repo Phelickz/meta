@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/theme.dart';
@@ -28,21 +29,21 @@ class PositionModal extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: const Color(0xFF98A2B3),
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             _buttonText(
               context: context,
-              label: LocaleKeys.closeAllPositions,
+              label: LocaleKeys.closeAllPositions.tr(),
               onTap: () {},
             ),
             _buttonText(
               context: context,
-              label: LocaleKeys.closeProfitable,
+              label: LocaleKeys.closeProfitable.tr(),
               onTap: () {},
             ),
             _buttonText(
               context: context,
-              label: LocaleKeys.closeAllPositions,
+              label: LocaleKeys.closeAllPositions.tr(),
               onTap: () {},
             ),
             verticalSpaceSmall(context),
@@ -52,7 +53,7 @@ class PositionModal extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context);
               },
-              text: LocaleKeys.cancel,
+              text: LocaleKeys.cancel.tr(),
               color: isDarkMode
                   ? const Color(0xFF052844)
                   : const Color(0xFFD3ECFD),

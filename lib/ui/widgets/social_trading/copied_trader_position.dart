@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -24,13 +25,15 @@ class CopiedTraderPositionPage extends StatelessWidget {
                 : const Color(0xffD3ECFD), // Container color
             child: TabBar(
               // isScrollable: true,
-              tabs: const [
+              tabs: [
                 Tab(
                     text: LocaleKeys
-                        .providerWidget_providerComponent_pModelBottomSheet_openPosition),
+                        .providerWidget_providerComponent_pModelBottomSheet_openPosition
+                        .tr()),
                 Tab(
                     text: LocaleKeys
-                        .socialTradingWidget_socialTradingComponent_filterPosition_closedPositions),
+                        .socialTradingWidget_socialTradingComponent_filterPosition_closedPositions
+                        .tr()),
               ],
               isScrollable: true,
               unselectedLabelColor: isDarkMode

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -38,7 +39,7 @@ class EmailVerifySuccessPage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: isDarkMode ? Colors.white : Colors.black87,
                 ),
-              ),
+              ).tr(),
             ),
             verticalSpaceSmall(context),
             Padding(
@@ -46,7 +47,7 @@ class EmailVerifySuccessPage extends StatelessWidget {
               child: RichText(
                 textAlign: TextAlign.center,
                 text: TextSpan(
-                  text: LocaleKeys.yourEmailAccount,
+                  text: LocaleKeys.yourEmailAccount.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.6),
                     color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -60,7 +61,7 @@ class EmailVerifySuccessPage extends StatelessWidget {
                       ),
                     ),
                     TextSpan(
-                      text: LocaleKeys.hasBeenVerified,
+                      text: LocaleKeys.hasBeenVerified.tr(),
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.6),
                         color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -79,7 +80,8 @@ class EmailVerifySuccessPage extends StatelessWidget {
                     VerificationPageEnum.identityVerificationLanding;
               },
               text: LocaleKeys
-                  .verificationWidget_emailVerifiedSuccessfully_nextVerify,
+                  .verificationWidget_emailVerifiedSuccessfully_nextVerify
+                  .tr(),
             ),
             verticalSpaceXSmall(context),
             CustomButtons.clearButton(
@@ -87,7 +89,7 @@ class EmailVerifySuccessPage extends StatelessWidget {
               onTap: () {
                 model.push(const BottomNavBarRoute());
               },
-              text: LocaleKeys.skip,
+              text: LocaleKeys.skip.tr(),
               textColor: Theme.of(context).primaryColor,
             ),
           ],

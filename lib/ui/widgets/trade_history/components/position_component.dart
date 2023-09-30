@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -30,7 +31,7 @@ class PositionComponent extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: const Color(0xFF98A2B3),
             ),
-          ),
+          ).tr(),
         ),
         verticalSpaceXSmall(context),
         const TradeTile(tradeType: TradeType.buy),

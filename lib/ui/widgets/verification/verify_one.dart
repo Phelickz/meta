@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -37,7 +38,7 @@ class VerifyOnePage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: isDarkMode ? Colors.white : Colors.black87,
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             Text(
               LocaleKeys.financialRegulation,
@@ -48,7 +49,7 @@ class VerifyOnePage extends StatelessWidget {
                 fontWeight: FontWeight.normal,
                 color: isDarkMode ? Colors.white : Colors.black54,
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             verticalSpaceMedium(context),
             CustomButtons.generalButton(
@@ -58,13 +59,15 @@ class VerifyOnePage extends StatelessWidget {
                       VerificationPageEnum.verifyLanding;
                 },
                 text: LocaleKeys
-                    .views_socialTradingView_socialTradingWelcome_getStarted),
+                    .views_socialTradingView_socialTradingWelcome_getStarted
+                    .tr()
+                    .tr()),
             verticalSpaceXSmall(context),
             TextButton(
               onPressed: () {
                 model.push(const BottomNavBarRoute());
               },
-              child: const Text(LocaleKeys.skip),
+              child: const Text(LocaleKeys.skip).tr(),
             ),
             verticalSpaceMedium(context),
           ],

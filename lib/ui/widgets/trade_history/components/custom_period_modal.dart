@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 
@@ -28,18 +29,21 @@ class CustomPeriodModal extends StatelessWidget {
               fontWeight: FontWeight.w500,
               color: const Color(0xFF98A2B3),
             ),
-          ),
+          ).tr(),
           verticalSpaceSmall(context),
           verticalSpaceXSmall(context),
           LabelDatePicker(
             label: LocaleKeys
-                .providerWidget_providerComponent_pModelBottomSheet_startDate,
+                .providerWidget_providerComponent_pModelBottomSheet_startDate
+                .tr(),
             context: context,
             onDateSelected: (date) {},
           ),
           LabelDatePicker(
             label: LocaleKeys
-                .providerWidget_providerComponent_pModelBottomSheet_endDate,
+                .providerWidget_providerComponent_pModelBottomSheet_endDate
+                .tr()
+                .tr(),
             context: context,
             selectedDate: null,
             lastDate: null,
@@ -51,7 +55,7 @@ class CustomPeriodModal extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
             },
-            text: LocaleKeys.confirm,
+            text: LocaleKeys.confirm.tr(),
           ),
         ],
       ),

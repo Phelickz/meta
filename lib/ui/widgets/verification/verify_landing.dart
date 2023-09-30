@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -31,20 +32,21 @@ class VerifyLandingPage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: isDarkMode ? Colors.white : Colors.black,
               ),
-            ),
+            ).tr(),
             verticalSpaceMedium(context),
             vListTile(
                 context,
                 LocaleKeys
-                    .verificationWidget_verifyLanding_emailVerificationText,
-                LocaleKeys.verificationWidget_verifyLanding_weWillSend,
+                    .verificationWidget_verifyLanding_emailVerificationText
+                    .tr(),
+                LocaleKeys.verificationWidget_verifyLanding_weWillSend.tr(),
                 1),
             verticalSpaceSmall(context),
             vListTile(
                 context,
-                LocaleKeys
-                    .verificationWidget_verifyLanding_identityVerification,
-                LocaleKeys.verificationWidget_verifyLanding_toHelpProtect,
+                LocaleKeys.verificationWidget_verifyLanding_identityVerification
+                    .tr(),
+                LocaleKeys.verificationWidget_verifyLanding_toHelpProtect.tr(),
                 2),
             Row(
               // mainAxisAlignment: MainAxisAlignment.center,
@@ -66,7 +68,7 @@ class VerifyLandingPage extends StatelessWidget {
                     fontSize: McGyver.textSize(context, 1.6),
                     color: isDarkMode ? Colors.white60 : Colors.black54,
                   ),
-                )
+                ).tr()
               ],
             ),
             Row(
@@ -89,7 +91,7 @@ class VerifyLandingPage extends StatelessWidget {
                     fontSize: McGyver.textSize(context, 1.6),
                     color: isDarkMode ? Colors.white60 : Colors.black54,
                   ),
-                )
+                ).tr()
               ],
             ),
             Row(
@@ -112,7 +114,7 @@ class VerifyLandingPage extends StatelessWidget {
                     fontSize: McGyver.textSize(context, 1.6),
                     color: isDarkMode ? Colors.white60 : Colors.black54,
                   ),
-                )
+                ).tr()
               ],
             ),
             verticalSpaceMedium(context),
@@ -123,7 +125,7 @@ class VerifyLandingPage extends StatelessWidget {
                 model.setVerificationViewEnum =
                     VerificationPageEnum.emailVerification;
               },
-              text: LocaleKeys.next,
+              text: LocaleKeys.next.tr(),
             )
           ],
         ),

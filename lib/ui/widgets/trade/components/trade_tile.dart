@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/trade/trade_view_model.dart';
@@ -26,7 +27,7 @@ class TradeTile extends StatelessWidget {
         : const Color(0xFFF97066);
 
     String typeText =
-        tradeType == TradeType.buy ? LocaleKeys.buy : LocaleKeys.sell;
+        tradeType == TradeType.buy ? LocaleKeys.buy.tr() : LocaleKeys.sell.tr();
     String typeSign = tradeType == TradeType.buy ? "" : "-";
     return Container(
       margin: EdgeInsets.only(

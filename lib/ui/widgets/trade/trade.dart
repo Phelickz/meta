@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -41,7 +42,7 @@ class TradePage extends StatelessWidget {
                     color: isDarkMode
                         ? const Color(0xFF98A2B3)
                         : const Color(0xFF667085)),
-              ),
+              ).tr(),
               GestureDetector(
                 onTap: () {
                   showPositionModal(context);

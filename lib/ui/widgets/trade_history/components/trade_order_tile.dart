@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 
@@ -18,7 +19,7 @@ class TradeOrderTile extends StatelessWidget {
         : const Color(0xFfF97066);
 
     String typeText =
-        tradeType == TradeType.buy ? LocaleKeys.buy : LocaleKeys.sell;
+        tradeType == TradeType.buy ? LocaleKeys.buy.tr() : LocaleKeys.sell.tr();
     return Container(
       margin: EdgeInsets.only(
         bottom: McGyver.rsDoubleH(context, 1.5),
@@ -119,7 +120,7 @@ class TradeOrderTile extends StatelessWidget {
                       ? const Color(0xFF98A2B3)
                       : const Color(0xFF667085),
                 ),
-              ),
+              ).tr(),
             ],
           ),
         ],

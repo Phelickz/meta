@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -67,7 +68,7 @@ Widget paymentInformationCard(
                             fontSize: McGyver.textSize(context, 1.4),
                             color: isDarkMode ? Colors.white : Colors.black45,
                           ),
-                        ),
+                        ).tr(),
                         Text(
                           '09879342431',
                           style: CustomThemeData.generateStyle(
@@ -90,7 +91,7 @@ Widget paymentInformationCard(
                             fontSize: McGyver.textSize(context, 1.4),
                             color: isDarkMode ? Colors.white : Colors.black45,
                           ),
-                        ),
+                        ).tr(),
                         Text(
                           'Susan Blake',
                           style: CustomThemeData.generateStyle(
@@ -112,7 +113,7 @@ Widget paymentInformationCard(
                             fontSize: McGyver.textSize(context, 1.4),
                             color: isDarkMode ? Colors.white : Colors.black45,
                           ),
-                        ),
+                        ).tr(),
                         Text(
                           LocaleKeys
                               .withdrawFunds_paymentInformationWidget_124Hours,
@@ -120,7 +121,7 @@ Widget paymentInformationCard(
                             fontSize: McGyver.textSize(context, 1.4),
                             color: isDarkMode ? Colors.white : Colors.black45,
                           ),
-                        ),
+                        ).tr(),
                       ],
                     ),
                     const SizedBox(
@@ -135,7 +136,7 @@ Widget paymentInformationCard(
                             fontSize: McGyver.textSize(context, 1.4),
                             color: isDarkMode ? Colors.white : Colors.black45,
                           ),
-                        ),
+                        ).tr(),
                         Text(
                           '0%',
                           style: CustomThemeData.generateStyle(
@@ -157,7 +158,7 @@ Widget paymentInformationCard(
                             fontSize: McGyver.textSize(context, 1.4),
                             color: isDarkMode ? Colors.white : Colors.black45,
                           ),
-                        ),
+                        ).tr(),
                         Text(
                           '10-200,00 USD',
                           style: CustomThemeData.generateStyle(

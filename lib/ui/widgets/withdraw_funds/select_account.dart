@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -43,7 +44,7 @@ class SelectAccountWithdraw extends StatelessWidget {
               model.setWithdrawFundViewEnum =
                   WithdrawFundPageEnum.paymentMethods;
             },
-            text: LocaleKeys.next,
+            text: LocaleKeys.next.tr(),
           ),
           verticalSpaceSmall(context),
         ],
@@ -101,7 +102,7 @@ class SelectAccountWithdraw extends StatelessWidget {
                               fontSize: McGyver.textSize(context, 1.2),
                               color: isDarkMode ? Colors.white : Colors.black45,
                             ),
-                          ),
+                          ).tr(),
                         ],
                       ),
                       verticalSpaceXXSmall(context),
@@ -152,7 +153,7 @@ class SelectAccountWithdraw extends StatelessWidget {
                               fontWeight: FontWeight.normal,
                               color: isDarkMode ? Colors.white : Colors.black45,
                             ),
-                          ),
+                          ).tr(),
                         ],
                       ),
                     ],

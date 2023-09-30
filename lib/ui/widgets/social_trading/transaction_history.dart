@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -26,14 +27,14 @@ class TransactionHistory extends StatelessWidget {
                 : const Color(0xffD3ECFD), // Container color
             child: TabBar(
               // isScrollable: true,
-              tabs: const [
-                Tab(text: LocaleKeys.views_forexNews_forexModel_all),
-                Tab(text: LocaleKeys.withdrawal),
+              tabs: [
+                Tab(text: LocaleKeys.views_forexNews_forexModel_all.tr()),
+                Tab(text: LocaleKeys.withdrawal.tr()),
                 Tab(
-                  text: LocaleKeys.deposit,
+                  text: LocaleKeys.deposit.tr(),
                 ),
                 Tab(
-                  text: LocaleKeys.internalTransfer,
+                  text: LocaleKeys.internalTransfer.tr(),
                 ),
               ],
               isScrollable: true,

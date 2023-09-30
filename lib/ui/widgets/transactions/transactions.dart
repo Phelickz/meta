@@ -1,4 +1,5 @@
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/transactions/transactions_view_model.dart';
@@ -23,21 +24,21 @@ class TransactionsPage extends StatelessWidget {
             fontSize: 12,
             color: isDarkMode ? Colors.white54 : Colors.black,
           ),
-        ),
+        ).tr(),
         Text(
           LocaleKeys.deposit,
           style: CustomThemeData.generateStyle(
             fontSize: 12,
             color: isDarkMode ? Colors.white54 : Colors.black,
           ),
-        ),
+        ).tr(),
         Text(
           LocaleKeys.betweenAccounts,
           style: CustomThemeData.generateStyle(
             fontSize: 12,
             color: isDarkMode ? Colors.white54 : Colors.black,
           ),
-        ),
+        ).tr(),
       ],
       views: [
         WithdrawalTransactionsPage(model: model), // Second tab content

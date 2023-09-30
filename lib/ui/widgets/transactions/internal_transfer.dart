@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
@@ -30,7 +31,7 @@ class InternalTransferTransactionsPage extends StatelessWidget {
                   isDarkMode ? ColorManager.darkText : ColorManager.lightText,
               fontWeight: FontWeight.bold,
             ),
-          ),
+          ).tr(),
           verticalSpaceXXSmall(context),
           Expanded(
             child: ListView.builder(

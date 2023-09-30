@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -39,7 +40,7 @@ class IdentityVerificationSuccessPage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: isDarkMode ? Colors.white : Colors.black87,
               ),
-            ),
+            ).tr(),
           ),
           verticalSpaceSmall(context),
           Padding(
@@ -48,7 +49,8 @@ class IdentityVerificationSuccessPage extends StatelessWidget {
               textAlign: TextAlign.center,
               text: TextSpan(
                 text: LocaleKeys
-                    .verificationWidget_identityVerificationSuccess_youWillReceiveFeedback,
+                    .verificationWidget_identityVerificationSuccess_youWillReceiveFeedback
+                    .tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
                   color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -56,7 +58,8 @@ class IdentityVerificationSuccessPage extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: LocaleKeys
-                        .verificationWidget_identityVerificationSuccess_within24,
+                        .verificationWidget_identityVerificationSuccess_within24
+                        .tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.6),
                       color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -64,7 +67,8 @@ class IdentityVerificationSuccessPage extends StatelessWidget {
                   ),
                   TextSpan(
                     text: LocaleKeys
-                        .verificationWidget_identityVerificationSuccess_viaEmailOnSuccessful,
+                        .verificationWidget_identityVerificationSuccess_viaEmailOnSuccessful
+                        .tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.6),
                       color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -80,7 +84,7 @@ class IdentityVerificationSuccessPage extends StatelessWidget {
             onTap: () {
               model.push(const BottomNavBarRoute());
             },
-            text: LocaleKeys.continueWord,
+            text: LocaleKeys.continueWord.tr(),
           ),
           verticalSpaceMedium(context),
         ],

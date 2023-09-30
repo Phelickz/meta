@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -17,9 +18,11 @@ class SubscriptionGuidePage extends StatelessWidget {
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Skeleton(
-      appBar: globalAppBar(context, LocaleKeys.subscriptionGuide,
-          LocaleKeys.socialTradingWidget_subscriptionGuideWidget_learnAbout,
-          () {
+      appBar: globalAppBar(
+          context,
+          LocaleKeys.subscriptionGuide.tr(),
+          LocaleKeys.socialTradingWidget_subscriptionGuideWidget_learnAbout
+              .tr(), () {
         Navigator.pop(context);
       }, []),
       isBusy: viewModel.isBusy,
@@ -29,7 +32,8 @@ class SubscriptionGuidePage extends StatelessWidget {
           verticalSpaceXSmall(context),
           Text(
             LocaleKeys
-                .socialTradingWidget_subscriptionGuideWidget_copyProportion,
+                .socialTradingWidget_subscriptionGuideWidget_copyProportion
+                .tr(),
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.9),
               fontWeight: FontWeight.bold,
@@ -40,8 +44,8 @@ class SubscriptionGuidePage extends StatelessWidget {
           ),
           verticalSpaceXSmall(context),
           Text(
-            LocaleKeys
-                .socialTradingWidget_subscriptionGuideWidget_selectTheSize,
+            LocaleKeys.socialTradingWidget_subscriptionGuideWidget_selectTheSize
+                .tr(),
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.6),
               fontWeight: FontWeight.w500,
@@ -53,24 +57,27 @@ class SubscriptionGuidePage extends StatelessWidget {
           verticalSpaceXSmall(context),
           _bulletPointText(
               context,
-              LocaleKeys.equal1,
-              LocaleKeys
-                  .socialTradingWidget_subscriptionGuideWidget_theVolumeOf),
+              LocaleKeys.equal1.tr(),
+              LocaleKeys.socialTradingWidget_subscriptionGuideWidget_theVolumeOf
+                  .tr()),
           verticalSpaceXSmall(context),
           _bulletPointText(
               context,
-              LocaleKeys.double2,
+              LocaleKeys.double2.tr(),
               LocaleKeys
-                  .socialTradingWidget_subscriptionGuideWidget_toFacilitate),
+                  .socialTradingWidget_subscriptionGuideWidget_toFacilitate
+                  .tr()),
           verticalSpaceXSmall(context),
           _bulletPointText(
-              context,
-              LocaleKeys.triple3,
-              LocaleKeys
-                  .socialTradingWidget_subscriptionGuideWidget_weMayAutomatically),
+            context,
+            LocaleKeys.triple3.tr(),
+            LocaleKeys
+                .socialTradingWidget_subscriptionGuideWidget_weMayAutomatically
+                .tr(),
+          ),
           verticalSpaceSmall(context),
           Text(
-            LocaleKeys.addSupportFunds,
+            LocaleKeys.addSupportFunds.tr(),
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.9),
               fontWeight: FontWeight.bold,
@@ -82,7 +89,8 @@ class SubscriptionGuidePage extends StatelessWidget {
           verticalSpaceXSmall(context),
           Text(
             LocaleKeys
-                .socialTradingWidget_subscriptionGuideWidget_supportFundsHelp,
+                .socialTradingWidget_subscriptionGuideWidget_supportFundsHelp
+                .tr(),
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.6),
               fontWeight: FontWeight.w500,

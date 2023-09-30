@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -45,7 +46,7 @@ class PositionHeaderDetails extends StatelessWidget {
                             ? const Color(0xFF98A2B3)
                             : const Color(0xFF667085),
                       ),
-                    ),
+                    ).tr(),
                     verticalSpaceXXSmall(context),
                     Text(
                       "509 082.18",
@@ -73,7 +74,7 @@ class PositionHeaderDetails extends StatelessWidget {
                             ? const Color(0xFF98A2B3)
                             : const Color(0xFF667085),
                       ),
-                    ),
+                    ).tr(),
                     verticalSpaceXXSmall(context),
                     Text(
                       "592 380.17",
@@ -105,7 +106,7 @@ class PositionHeaderDetails extends StatelessWidget {
                             ? const Color(0xFFD0D5DD)
                             : const Color(0xFF667085),
                       ),
-                    ),
+                    ).tr(),
                     Text(
                       "100 000.00",
                       style: CustomThemeData.generateStyle(
@@ -138,7 +139,7 @@ class PositionHeaderDetails extends StatelessWidget {
                             ? const Color(0xFFD0D5DD)
                             : const Color(0xFF667085),
                       ),
-                    ),
+                    ).tr(),
                     Text(
                       "113 436.65",
                       style: CustomThemeData.generateStyle(
@@ -171,7 +172,7 @@ class PositionHeaderDetails extends StatelessWidget {
                             ? const Color(0xFFD0D5DD)
                             : const Color(0xFF667085),
                       ),
-                    ),
+                    ).tr(),
                     Text(
                       "478 944.06",
                       style: CustomThemeData.generateStyle(

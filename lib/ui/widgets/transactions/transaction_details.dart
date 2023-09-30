@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -25,10 +26,10 @@ class TransactionDetailsPage extends StatelessWidget {
         children: [
           Text(
             model.transactionsTypeEnum == TransactionsTypeEnum.withdrawals
-                ? LocaleKeys.withdrawal
+                ? LocaleKeys.withdrawal.tr()
                 : model.transactionsTypeEnum == TransactionsTypeEnum.deposits
-                    ? LocaleKeys.deposit
-                    : LocaleKeys.internalTransfer,
+                    ? LocaleKeys.deposit.tr()
+                    : LocaleKeys.internalTransfer.tr(),
             textAlign: TextAlign.left,
             style: CustomThemeData.generateColoredStyle(
                 fontSize: 16, context: context, fontWeight: FontWeight.bold),
@@ -40,7 +41,7 @@ class TransactionDetailsPage extends StatelessWidget {
           CustomButtons.generalButton(
               context: context,
               onTap: () {},
-              text: LocaleKeys.reportTransaction),
+              text: LocaleKeys.reportTransaction.tr()),
           verticalSpaceMedium(context),
         ],
       ),

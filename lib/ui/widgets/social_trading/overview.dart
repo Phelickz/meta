@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -70,8 +71,9 @@ class TraderOverview extends StatelessWidget {
               },
               text: model.socialTradingPageEnum ==
                       SocialTradingPageEnum.copiedTraderPosition
-                  ? LocaleKeys.stopCoping
-                  : LocaleKeys.socialTradingWidget_overViewWidget_setupCopying,
+                  ? LocaleKeys.stopCoping.tr()
+                  : LocaleKeys.socialTradingWidget_overViewWidget_setupCopying
+                      .tr(),
             ),
           ),
           verticalSpaceSmall(context),
@@ -150,7 +152,7 @@ class TraderOverview extends StatelessWidget {
                                 ? const Color(0xFF98A2B3)
                                 : const Color(0xFF667085),
                           ),
-                        ),
+                        ).tr(),
                         SizedBox(
                           height: McGyver.rsDoubleH(context, 0.7),
                         ),
@@ -179,7 +181,7 @@ class TraderOverview extends StatelessWidget {
                                     ? const Color(0xFFD0D5DD)
                                     : const Color(0xFF98A2B3),
                               ),
-                            ),
+                            ).tr(),
                           ],
                         ),
                       ],
@@ -210,7 +212,7 @@ class TraderOverview extends StatelessWidget {
                                 ? const Color(0xFF98A2B3)
                                 : const Color(0xFF667085),
                           ),
-                        ),
+                        ).tr(),
                         SizedBox(
                           height: McGyver.rsDoubleH(context, 0.7),
                         ),
@@ -270,7 +272,7 @@ class TraderOverview extends StatelessWidget {
                                 ? const Color(0xFF98A2B3)
                                 : const Color(0xFF667085),
                           ),
-                        ),
+                        ).tr(),
                         SizedBox(
                           height: McGyver.rsDoubleH(context, 0.7),
                         ),
@@ -294,10 +296,10 @@ class TraderOverview extends StatelessWidget {
           verticalSpaceSmall(context),
           _twotext(
               context,
-              LocaleKeys.socialTradingWidget_overViewWidget_totalCopiers,
+              LocaleKeys.socialTradingWidget_overViewWidget_totalCopiers.tr(),
               "326,096"),
           verticalSpaceXXSmall(context),
-          _twotext(context, LocaleKeys.strategyDescriptionText, ""),
+          _twotext(context, LocaleKeys.strategyDescriptionText.tr(), ""),
           verticalSpaceXXSmall(context),
           Text(
             LocaleKeys.socialTradingWidget_overViewWidget_helloEveryOne,
@@ -308,7 +310,7 @@ class TraderOverview extends StatelessWidget {
                   ? const Color(0xFFD0D5DD)
                   : const Color(0xFF98A2B3),
             ),
-          )
+          ).tr()
         ],
       ),
     );
@@ -366,8 +368,8 @@ class TraderOverview extends StatelessWidget {
       BuildContext context, SocialTradingViewModel viewModel) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Column(children: [
-      _twotext(
-          context, LocaleKeys.home_higherSuccessRates_successRate, "99.32%"),
+      _twotext(context, LocaleKeys.home_higherSuccessRates_successRate.tr(),
+          "99.32%"),
       verticalSpaceXSmall(context),
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -381,7 +383,7 @@ class TraderOverview extends StatelessWidget {
                   ? const Color(0xFF98A2B3)
                   : const Color(0xFF667085),
             ),
-          ),
+          ).tr(),
           Container(
             decoration: BoxDecoration(
               color: Theme.of(context).primaryColor.withOpacity(0.5),
@@ -391,14 +393,14 @@ class TraderOverview extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5),
               child: RichText(
                 text: TextSpan(
-                  text: LocaleKeys.home_higherSuccessRates_riskScore,
+                  text: LocaleKeys.home_higherSuccessRates_riskScore.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: 10,
                     color: isDarkMode ? Colors.white : Colors.black,
                   ),
                   children: [
                     TextSpan(
-                      text: LocaleKeys.home_higherSuccessRates_mediumCap,
+                      text: LocaleKeys.home_higherSuccessRates_mediumCap.tr(),
                       style: CustomThemeData.generateStyle(
                         fontSize: 10,
                         fontWeight: FontWeight.bold,
@@ -478,7 +480,7 @@ class TraderOverview extends StatelessWidget {
                       ? const Color(0xFFFFFFFF)
                       : const Color(0xFF475467),
                 ),
-              ),
+              ).tr(),
               CustomOverviewSummaryTab(
                 firstTabName: "2W",
                 secondTabName: "1M",
@@ -533,7 +535,7 @@ class TraderOverview extends StatelessWidget {
                         ? const Color(0xFF98A2B3)
                         : const Color(0xFF667085),
                   ),
-                ),
+                ).tr(),
                 const SizedBox(
                   height: 3,
                 ),
@@ -579,7 +581,7 @@ class TraderOverview extends StatelessWidget {
                         ? const Color(0xFF98A2B3)
                         : const Color(0xFF667085),
                   ),
-                ),
+                ).tr(),
                 const SizedBox(
                   height: 3,
                 ),
@@ -635,7 +637,7 @@ class TraderOverview extends StatelessWidget {
                     ? const Color(0xFF98A2B3)
                     : const Color(0xFF667085),
               ),
-            ),
+            ).tr(),
             Text(
               LocaleKeys.loss,
               textAlign: TextAlign.end,
@@ -646,7 +648,7 @@ class TraderOverview extends StatelessWidget {
                     ? const Color(0xFF98A2B3)
                     : const Color(0xFF667085),
               ),
-            ),
+            ).tr(),
           ],
         ),
         verticalSpaceXXSmall(context),
@@ -719,7 +721,7 @@ class TraderOverview extends StatelessWidget {
                       ? const Color(0xFFFFFFFF)
                       : const Color(0xFF475467),
                 ),
-              ),
+              ).tr(),
               CustomOverviewSummaryTab(
                 firstTabName: "2W",
                 secondTabName: "1M",
@@ -784,7 +786,7 @@ class TraderOverview extends StatelessWidget {
                       ? const Color(0xFFFFFFFF)
                       : const Color(0xFF475467),
                 ),
-              ),
+              ).tr(),
             ],
           ),
           verticalSpaceXSmall(context),
@@ -793,13 +795,15 @@ class TraderOverview extends StatelessWidget {
             children: [
               _twotextInfo(
                 context,
-                LocaleKeys.socialTradingWidget_overViewWidget_floatingProfit,
+                LocaleKeys.socialTradingWidget_overViewWidget_floatingProfit
+                    .tr(),
                 "\$ 32.8",
                 CrossAxisAlignment.start,
               ),
               _twotextInfo(
                 context,
-                LocaleKeys.socialTradingWidget_overViewWidget_masterTraderBonus,
+                LocaleKeys.socialTradingWidget_overViewWidget_masterTraderBonus
+                    .tr(),
                 "% 73",
                 CrossAxisAlignment.end,
               )
@@ -811,13 +815,13 @@ class TraderOverview extends StatelessWidget {
             children: [
               _twotextInfo(
                 context,
-                LocaleKeys.balance,
+                LocaleKeys.balance.tr(),
                 "\$ 32.8",
                 CrossAxisAlignment.start,
               ),
               _twotextInfo(
                 context,
-                LocaleKeys.leverage,
+                LocaleKeys.leverage.tr(),
                 "1:500",
                 CrossAxisAlignment.end,
               )
@@ -863,7 +867,7 @@ class TraderOverview extends StatelessWidget {
                       ? const Color(0xFFFFFFFF)
                       : const Color(0xFF475467),
                 ),
-              ),
+              ).tr(),
             ],
           ),
           verticalSpaceXSmall(context),
@@ -872,14 +876,16 @@ class TraderOverview extends StatelessWidget {
             children: [
               _twotextInfo(
                 context,
-                LocaleKeys.socialTradingWidget_overViewWidget_maxUnrealizedLoss,
+                LocaleKeys.socialTradingWidget_overViewWidget_maxUnrealizedLoss
+                    .tr(),
                 "\$ 32.8",
                 CrossAxisAlignment.start,
               ),
               _twotextInfo(
                 context,
                 LocaleKeys
-                    .socialTradingWidget_overViewWidget_maxDrawDownDuration,
+                    .socialTradingWidget_overViewWidget_maxDrawDownDuration
+                    .tr(),
                 "% 73",
                 CrossAxisAlignment.end,
               )
@@ -975,7 +981,7 @@ class TraderOverview extends StatelessWidget {
                         ? const Color(0xFFFFFFFF)
                         : const Color(0xFF475467),
                   ),
-                ),
+                ).tr(),
                 CustomOverviewSummaryTab(
                   firstTabName: "2W",
                   secondTabName: "1M",
@@ -1018,7 +1024,7 @@ class TraderOverview extends StatelessWidget {
     return SfCartesianChart(
       primaryXAxis: CategoryAxis(
         title: AxisTitle(
-          text: LocaleKeys.days,
+          text: LocaleKeys.days.tr(),
           textStyle: CustomThemeData.generateStyle(
             fontSize: McGyver.textSize(context, 1.5),
             fontWeight: FontWeight.bold,
@@ -1053,7 +1059,7 @@ class TraderOverview extends StatelessWidget {
           color: isDarkMode ? const Color(0xFFFFFFFF) : const Color(0xFF667085),
         ),
         title: AxisTitle(
-          text: LocaleKeys.priceSentimentWidget_details_priceMovement,
+          text: LocaleKeys.priceSentimentWidget_details_priceMovement.tr(),
           textStyle: CustomThemeData.generateStyle(
             fontSize: McGyver.textSize(context, 1.5),
             fontWeight: FontWeight.bold,
@@ -1081,7 +1087,7 @@ class TraderOverview extends StatelessWidget {
           dataSource: viewModel.activityChartData,
           xValueMapper: (ActivityChartData sales, _) => sales.day,
           yValueMapper: (ActivityChartData sales, _) => sales.price,
-          name: LocaleKeys.price,
+          name: LocaleKeys.price.tr(),
         ),
       ],
     );

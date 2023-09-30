@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/withdraw_funds/withdraw_funds_view_model.dart';
@@ -33,7 +34,7 @@ class PaymentMethodWithdraw extends StatelessWidget {
                     ? const Color(0xFF98A2B3)
                     : const Color(0xFF475467),
               ),
-            ),
+            ).tr(),
             verticalSpaceXSmall(context),
             PaymentMethodTileWithdraw(
               vm: model,

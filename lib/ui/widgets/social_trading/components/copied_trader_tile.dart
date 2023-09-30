@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -136,7 +137,7 @@ class CopiedTraderTile extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                             color: const Color(0xff98A2B3),
                           ),
-                        ),
+                        ).tr(),
                         const SizedBox(
                           width: 5,
                         ),
@@ -176,7 +177,7 @@ class CopiedTraderTile extends StatelessWidget {
                               fontSize: 11,
                               color: isDarkMode ? Colors.white : Colors.white,
                             ),
-                          ),
+                          ).tr(),
                           const SizedBox(
                             width: 2,
                           ),

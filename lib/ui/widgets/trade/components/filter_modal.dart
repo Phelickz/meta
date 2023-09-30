@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -30,17 +31,17 @@ class FilterModal extends StatelessWidget {
                   ? const Color(0xFFD0D5DD)
                   : const Color(0xFF98A2B3),
             ),
-          ),
+          ).tr(),
           verticalSpaceXSmall(context),
           LabelDropdown(
-            label: LocaleKeys.selectPosition,
+            label: LocaleKeys.selectPosition.tr(),
             onChanged: (val) {},
-            value: LocaleKeys.symbol,
-            options: const [
-              LocaleKeys.symbol,
-              LocaleKeys.order,
-              LocaleKeys.time,
-              LocaleKeys.profit
+            value: LocaleKeys.symbol.tr(),
+            options: [
+              LocaleKeys.symbol.tr(),
+              LocaleKeys.order.tr(),
+              LocaleKeys.time.tr(),
+              LocaleKeys.profit.tr()
             ],
           ),
           verticalSpaceSmall(context),
@@ -82,7 +83,7 @@ class FilterModal extends StatelessWidget {
                           ? const Color(0xFFD0D5DD)
                           : const Color(0xFF667085),
                     ),
-                  )
+                  ).tr()
                 ],
               ),
               horizontalSpaceSmall(context),
@@ -122,7 +123,7 @@ class FilterModal extends StatelessWidget {
                           ? const Color(0xFFD0D5DD)
                           : const Color(0xFF667085),
                     ),
-                  )
+                  ).tr()
                 ],
               ),
             ],
@@ -133,7 +134,7 @@ class FilterModal extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
             },
-            text: LocaleKeys.confirm,
+            text: LocaleKeys.confirm.tr(),
           ),
         ],
       ),

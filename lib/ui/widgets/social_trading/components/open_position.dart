@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -53,7 +54,7 @@ class OpenPositionsComponent extends StatelessWidget {
                             ? const Color(0xFFFFFFFF)
                             : const Color(0xFF667085),
                       ),
-                    ),
+                    ).tr(),
                     CustomSummaryTab(
                       firstTabName: "1W",
                       secondTabName: "2W",
@@ -109,7 +110,7 @@ class OpenPositionsComponent extends StatelessWidget {
                         ? const Color(0xFF98A2B3)
                         : const Color(0xFF667085),
                   ),
-                ),
+                ).tr(),
                 GestureDetector(
                   onTap: () {
                     showFilterModal(context);

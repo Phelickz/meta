@@ -1,5 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -49,7 +50,7 @@ class TradeHeaderDetails extends StatelessWidget {
                             ? const Color(0xFF98A2B3)
                             : const Color(0xFF667085),
                       ),
-                    ),
+                    ).tr(),
                     verticalSpaceXXSmall(context),
                     Text(
                       "509 082.18",
@@ -77,7 +78,7 @@ class TradeHeaderDetails extends StatelessWidget {
                             ? const Color(0xFF98A2B3)
                             : const Color(0xFF667085),
                       ),
-                    ),
+                    ).tr(),
                     verticalSpaceXXSmall(context),
                     Text(
                       "592 380.17",
@@ -104,7 +105,7 @@ class TradeHeaderDetails extends StatelessWidget {
                 Expanded(
                   child: _TwoTextBelow(
                     context,
-                    LocaleKeys.credit,
+                    LocaleKeys.credit.tr(),
                     "100 000.00",
                   ),
                 ),
@@ -112,7 +113,7 @@ class TradeHeaderDetails extends StatelessWidget {
               Expanded(
                 child: _TwoTextBelow(
                   context,
-                  LocaleKeys.margin,
+                  LocaleKeys.margin.tr(),
                   "113 436.65",
                 ),
               ),
@@ -120,7 +121,7 @@ class TradeHeaderDetails extends StatelessWidget {
               Expanded(
                 child: _TwoTextBelow(
                   context,
-                  LocaleKeys.freeMargin,
+                  LocaleKeys.freeMargin.tr(),
                   viewModel.isEmpty ? "-" : "478 944.06",
                 ),
               ),
@@ -128,7 +129,7 @@ class TradeHeaderDetails extends StatelessWidget {
               Expanded(
                 child: _TwoTextBelow(
                   context,
-                  LocaleKeys.marginLevel,
+                  LocaleKeys.marginLevel.tr(),
                   viewModel.isEmpty ? "-" : "522.21%",
                 ),
               ),
@@ -169,7 +170,7 @@ class TradeHeaderDetails extends StatelessWidget {
                     ? const Color(0xFFD0D5DD)
                     : const Color(0xFF667085),
               ),
-            ),
+            ).tr(),
           ],
         ),
       ],

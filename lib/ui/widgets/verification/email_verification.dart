@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -35,12 +36,12 @@ class EmailVerificationPage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: isDarkMode ? Colors.white : Colors.black87,
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                text: LocaleKeys.weSentAVerification,
+                text: LocaleKeys.weSentAVerification.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
                   color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -54,7 +55,7 @@ class EmailVerificationPage extends StatelessWidget {
                     ),
                   ),
                   TextSpan(
-                    text: LocaleKeys.pleaseTapLink,
+                    text: LocaleKeys.pleaseTapLink.tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.6),
                       color: isDarkMode ? Colors.white60 : Colors.black87,
@@ -71,7 +72,7 @@ class EmailVerificationPage extends StatelessWidget {
                 model.setVerificationViewEnum =
                     VerificationPageEnum.emailVerifySuccess;
               },
-              text: LocaleKeys.checkMail,
+              text: LocaleKeys.checkMail.tr(),
             ),
             verticalSpaceXSmall(context),
             CustomButtons.clearButton(
@@ -80,7 +81,7 @@ class EmailVerificationPage extends StatelessWidget {
                 model.setVerificationViewEnum =
                     VerificationPageEnum.emailVerifySuccess;
               },
-              text: LocaleKeys.resendCode,
+              text: LocaleKeys.resendCode.tr(),
               textColor: Theme.of(context).primaryColor,
             ),
           ],

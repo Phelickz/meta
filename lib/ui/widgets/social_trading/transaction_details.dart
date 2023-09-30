@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -32,8 +33,8 @@ class TransactionDetailsPage extends StatelessWidget {
             transaction.type == TransactionsTypeEnum.withdrawal
                 ? LocaleKeys.withdrawal
                 : transaction.type == TransactionsTypeEnum.deposit
-                    ? LocaleKeys.deposit
-                    : LocaleKeys.internalTransfer,
+                    ? LocaleKeys.deposit.tr()
+                    : LocaleKeys.internalTransfer.tr(),
             textAlign: TextAlign.left,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.9),
@@ -107,7 +108,7 @@ class TransactionDetailsPage extends StatelessWidget {
                                   fontSize: McGyver.textSize(context, 1.4),
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xFF98A2B3)),
-                            ),
+                            ).tr(),
                             Text(
                               "${transaction.date} ${transaction.time}",
                               style: CustomThemeData.generateStyle(
@@ -133,7 +134,7 @@ class TransactionDetailsPage extends StatelessWidget {
                                   fontSize: McGyver.textSize(context, 1.4),
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xFF98A2B3)),
-                            ),
+                            ).tr(),
                             Text(
                               "CT_Wallet",
                               style: CustomThemeData.generateStyle(
@@ -160,7 +161,7 @@ class TransactionDetailsPage extends StatelessWidget {
                                 fontWeight: FontWeight.w500,
                                 color: const Color(0xFF98A2B3),
                               ),
-                            ),
+                            ).tr(),
                             Text(
                               "BinancePay",
                               style: CustomThemeData.generateStyle(
@@ -186,7 +187,7 @@ class TransactionDetailsPage extends StatelessWidget {
                                   fontSize: McGyver.textSize(context, 1.4),
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xFF98A2B3)),
-                            ),
+                            ).tr(),
                             Text(
                               transaction.status.name,
                               style: CustomThemeData.generateStyle(
@@ -209,7 +210,7 @@ class TransactionDetailsPage extends StatelessWidget {
                                   fontSize: McGyver.textSize(context, 1.4),
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xFF98A2B3)),
-                            ),
+                            ).tr(),
                             Text(
                               "232443564642",
                               style: CustomThemeData.generateStyle(
@@ -231,7 +232,7 @@ class TransactionDetailsPage extends StatelessWidget {
           CustomButtons.generalButton(
             context: context,
             onTap: () {},
-            text: LocaleKeys.reportTransaction,
+            text: LocaleKeys.reportTransaction.tr(),
           ),
           verticalSpaceSmall(context),
           verticalSpaceSmall(context),

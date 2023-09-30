@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/locator/locator.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -40,7 +41,7 @@ class _RatingModalState extends State<RatingModal> {
                   ? const Color(0xFF98A2B3)
                   : const Color(0xFF667085),
             ),
-          ),
+          ).tr(),
           verticalSpaceSmall(context),
           Text(
             LocaleKeys
@@ -52,7 +53,7 @@ class _RatingModalState extends State<RatingModal> {
                   ? const Color(0xFFFFFFFF)
                   : const Color(0xFF475467),
             ),
-          ),
+          ).tr(),
           verticalSpaceXSmall(context),
           RatingStars(
             value: value,
@@ -120,7 +121,8 @@ class _RatingModalState extends State<RatingModal> {
           verticalSpaceSmall(context),
           CustomButtons.generalButton(
             text: LocaleKeys
-                .socialTradingWidget_socialTradingComponent_rateModel_submitFeedback,
+                .socialTradingWidget_socialTradingComponent_rateModel_submitFeedback
+                .tr(),
             context: context,
             onTap: () {
               Navigator.pop(context);

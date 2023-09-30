@@ -1,5 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -83,7 +84,7 @@ class WithdrawalDetailsCard extends StatelessWidget {
                           context: context,
                           darkTextColor: const Color(0xff98A2B3),
                           lightTextColor: const Color(0xff667085)),
-                    ),
+                    ).tr(),
                     Text(
                       "$date $time",
                       style: CustomThemeData.generateColoredStyle(
@@ -108,7 +109,7 @@ class WithdrawalDetailsCard extends StatelessWidget {
                           context: context,
                           darkTextColor: const Color(0xff98A2B3),
                           lightTextColor: const Color(0xff667085)),
-                    ),
+                    ).tr(),
                     Text(
                       sender,
                       style: CustomThemeData.generateColoredStyle(
@@ -133,7 +134,7 @@ class WithdrawalDetailsCard extends StatelessWidget {
                           context: context,
                           darkTextColor: const Color(0xff98A2B3),
                           lightTextColor: const Color(0xff667085)),
-                    ),
+                    ).tr(),
                     Text(
                       receiver,
                       style: CustomThemeData.generateColoredStyle(
@@ -158,20 +159,20 @@ class WithdrawalDetailsCard extends StatelessWidget {
                           context: context,
                           darkTextColor: const Color(0xff98A2B3),
                           lightTextColor: const Color(0xff667085)),
-                    ),
+                    ).tr(),
                     Text(
                       status,
                       style: CustomThemeData.generateColoredStyle(
                           fontSize: 8,
                           context: context,
-                          lightTextColor: (status == LocaleKeys.successful)
+                          lightTextColor: (status == LocaleKeys.successful.tr())
                               ? const Color(0xff20A0F3)
-                              : (status == LocaleKeys.pending)
+                              : (status == LocaleKeys.pending.tr())
                                   ? const Color(0xffF79009)
                                   : const Color(0xffF04438),
-                          darkTextColor: (status == LocaleKeys.successful)
+                          darkTextColor: (status == LocaleKeys.successful.tr())
                               ? const Color(0xff77C5F8)
-                              : (status == LocaleKeys.pending)
+                              : (status == LocaleKeys.pending.tr())
                                   ? const Color(0xffFEC84B)
                                   : const Color(0xffFDA29B)),
                     ),
@@ -190,7 +191,7 @@ class WithdrawalDetailsCard extends StatelessWidget {
                           context: context,
                           darkTextColor: const Color(0xff98A2B3),
                           lightTextColor: const Color(0xff667085)),
-                    ),
+                    ).tr(),
                     Text(
                       transactionId,
                       style: CustomThemeData.generateColoredStyle(
@@ -281,7 +282,7 @@ class DepositDetailsCard extends StatelessWidget {
                           context: context,
                           darkTextColor: const Color(0xff98A2B3),
                           lightTextColor: const Color(0xff667085)),
-                    ),
+                    ).tr(),
                     Text(
                       "$date $time",
                       style: CustomThemeData.generateColoredStyle(
@@ -303,7 +304,7 @@ class DepositDetailsCard extends StatelessWidget {
                           context: context,
                           darkTextColor: const Color(0xff98A2B3),
                           lightTextColor: const Color(0xff667085)),
-                    ),
+                    ).tr(),
                     Text(
                       sender,
                       style: CustomThemeData.generateColoredStyle(
@@ -325,7 +326,7 @@ class DepositDetailsCard extends StatelessWidget {
                           context: context,
                           darkTextColor: const Color(0xff98A2B3),
                           lightTextColor: const Color(0xff667085)),
-                    ),
+                    ).tr(),
                     Text(
                       receiver,
                       style: CustomThemeData.generateColoredStyle(
@@ -347,20 +348,20 @@ class DepositDetailsCard extends StatelessWidget {
                           context: context,
                           darkTextColor: const Color(0xff98A2B3),
                           lightTextColor: const Color(0xff667085)),
-                    ),
+                    ).tr(),
                     Text(
                       status,
                       style: CustomThemeData.generateColoredStyle(
                           fontSize: 8,
                           context: context,
-                          lightTextColor: (status == LocaleKeys.successful)
+                          lightTextColor: (status == LocaleKeys.successful.tr())
                               ? const Color(0xff20A0F3)
-                              : (status == LocaleKeys.pending)
+                              : (status == LocaleKeys.pending.tr())
                                   ? const Color(0xffF79009)
                                   : const Color(0xffF04438),
-                          darkTextColor: (status == LocaleKeys.successful)
+                          darkTextColor: (status == LocaleKeys.successful.tr())
                               ? const Color(0xff77C5F8)
-                              : (status == LocaleKeys.pending)
+                              : (status == LocaleKeys.pending.tr())
                                   ? const Color(0xffFEC84B)
                                   : const Color(0xffFDA29B)),
                     ),
@@ -376,7 +377,7 @@ class DepositDetailsCard extends StatelessWidget {
                           context: context,
                           darkTextColor: const Color(0xff98A2B3),
                           lightTextColor: const Color(0xff667085)),
-                    ),
+                    ).tr(),
                     Text(
                       transactionId,
                       style: CustomThemeData.generateColoredStyle(
@@ -463,7 +464,7 @@ class InternalTransferDetailsCard extends StatelessWidget {
                           context: context,
                           darkTextColor: const Color(0xff98A2B3),
                           lightTextColor: const Color(0xff667085)),
-                    ),
+                    ).tr(),
                     Text(
                       "$date $time",
                       style: CustomThemeData.generateColoredStyle(
@@ -485,7 +486,7 @@ class InternalTransferDetailsCard extends StatelessWidget {
                           context: context,
                           darkTextColor: const Color(0xff98A2B3),
                           lightTextColor: const Color(0xff667085)),
-                    ),
+                    ).tr(),
                     Text(
                       sender,
                       style: CustomThemeData.generateColoredStyle(
@@ -507,20 +508,20 @@ class InternalTransferDetailsCard extends StatelessWidget {
                           context: context,
                           darkTextColor: const Color(0xff98A2B3),
                           lightTextColor: const Color(0xff667085)),
-                    ),
+                    ).tr(),
                     Text(
                       status,
                       style: CustomThemeData.generateColoredStyle(
                           fontSize: 8,
                           context: context,
-                          lightTextColor: (status == LocaleKeys.successful)
+                          lightTextColor: (status == LocaleKeys.successful.tr())
                               ? const Color(0xff20A0F3)
                               : (status == LocaleKeys.pending)
                                   ? const Color(0xffF79009)
                                   : const Color(0xffF04438),
-                          darkTextColor: (status == LocaleKeys.successful)
+                          darkTextColor: (status == LocaleKeys.successful.tr())
                               ? const Color(0xff77C5F8)
-                              : (status == LocaleKeys.pending)
+                              : (status == LocaleKeys.pending.tr())
                                   ? const Color(0xffFEC84B)
                                   : const Color(0xffFDA29B)),
                     ),
@@ -539,7 +540,7 @@ class InternalTransferDetailsCard extends StatelessWidget {
                           context: context,
                           darkTextColor: const Color(0xff98A2B3),
                           lightTextColor: const Color(0xff667085)),
-                    ),
+                    ).tr(),
                     Text(
                       transactionId,
                       style: CustomThemeData.generateColoredStyle(

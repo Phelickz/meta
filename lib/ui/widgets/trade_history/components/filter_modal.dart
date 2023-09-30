@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -30,18 +31,18 @@ class FilterModal extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: const Color(0xFF98A2B3),
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             _twoText(
               context: context,
-              title: LocaleKeys.today,
+              title: LocaleKeys.today.tr(),
               subtitle: "16.01.2023",
               onTap: () {},
             ),
             verticalSpaceSmall(context),
             _twoText(
               context: context,
-              title: LocaleKeys.lastWeek,
+              title: LocaleKeys.lastWeek.tr(),
               subtitle: "7.01.2023 - 14.01.2023",
               onTap: () {},
             ),
@@ -49,7 +50,8 @@ class FilterModal extends StatelessWidget {
             _twoText(
               context: context,
               title: LocaleKeys
-                  .tradeHistoryWidget_TradeComponents_filterModal_lastMonth,
+                  .tradeHistoryWidget_TradeComponents_filterModal_lastMonth
+                  .tr(),
               subtitle: "1.12.2022 - 31.01.2022",
               onTap: () {},
             ),
@@ -57,14 +59,15 @@ class FilterModal extends StatelessWidget {
             _twoText(
               context: context,
               title: LocaleKeys
-                  .tradeHistoryWidget_TradeComponents_filterModal_last3Month,
+                  .tradeHistoryWidget_TradeComponents_filterModal_last3Month
+                  .tr(),
               subtitle: "1.11.2022 - 16.01.2023  ",
               onTap: () {},
             ),
             verticalSpaceSmall(context),
             _twoText(
               context: context,
-              title: LocaleKeys.customPeriod,
+              title: LocaleKeys.customPeriod.tr(),
               subtitle: "1.11.2022 - 16.01.2023",
               onTap: () {
                 Navigator.pop(context);
@@ -78,7 +81,7 @@ class FilterModal extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context);
               },
-              text: LocaleKeys.cancel,
+              text: LocaleKeys.cancel.tr(),
               color: isDarkMode
                   ? const Color(0xFF052844)
                   : const Color(0xFFD3ECFD),

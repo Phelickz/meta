@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
@@ -15,14 +16,14 @@ class MenuMainPage extends StatelessWidget {
       children: [
         verticalSpaceXSmall(context),
         OptionTile(
-          label: LocaleKeys.providerWidget_providerOption_myWallet,
+          label: LocaleKeys.providerWidget_providerOption_myWallet.tr(),
           assetName: "assets/images/wallet_money.svg",
           onTap: () {
             viewModel.setSocialTradingPageEnum = SocialTradingPageEnum.wallet;
           },
         ),
         OptionTile(
-          label: LocaleKeys.notification,
+          label: LocaleKeys.notification.tr(),
           assetName: "assets/images/notification.svg",
           onTap: () {
             // viewModel.setSocialTradingPageEnum =
@@ -32,14 +33,14 @@ class MenuMainPage extends StatelessWidget {
           },
         ),
         OptionTile(
-          label: LocaleKeys.support,
+          label: LocaleKeys.support.tr(),
           assetName: "assets/images/message_question.svg",
           onTap: () {
             viewModel.push(const HelpAndSupportRoute());
           },
         ),
-        const OptionTile(
-          label: LocaleKeys.socialTradingWidget_menuMain_aboutMT5,
+        OptionTile(
+          label: LocaleKeys.socialTradingWidget_menuMain_aboutMT5.tr(),
           assetName: "assets/icons/info-circle.svg",
         ),
       ],

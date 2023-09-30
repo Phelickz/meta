@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/locator/locator.dart';
@@ -197,7 +198,7 @@ AppBar socialTradingDashboardAppBar(
                         ? const Color(0xFF101828)
                         : Colors.white,
                   ),
-                ),
+                ).tr(),
               ),
             ),
             const SizedBox(width: 5),
@@ -227,7 +228,7 @@ AppBar socialTradingDashboardAppBar(
                             : Colors.white
                         : Colors.white,
                   ),
-                ),
+                ).tr(),
               ),
             ),
           ],

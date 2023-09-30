@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -50,7 +51,7 @@ class SummaryComponent extends StatelessWidget {
                               ? const Color(0xFF98A2B3)
                               : const Color(0xFF667085),
                         ),
-                      ),
+                      ).tr(),
                       SizedBox(
                         height: McGyver.rsDoubleH(context, 0.7),
                       ),
@@ -110,7 +111,7 @@ class SummaryComponent extends StatelessWidget {
                               ? const Color(0xFF98A2B3)
                               : const Color(0xFF667085),
                         ),
-                      ),
+                      ).tr(),
                       SizedBox(
                         height: McGyver.rsDoubleH(context, 0.7),
                       ),
@@ -171,7 +172,7 @@ class SummaryComponent extends StatelessWidget {
                               ? const Color(0xFF98A2B3)
                               : const Color(0xFF667085),
                         ),
-                      ),
+                      ).tr(),
                       SizedBox(
                         height: McGyver.rsDoubleH(context, 0.7),
                       ),
@@ -198,13 +199,13 @@ class SummaryComponent extends StatelessWidget {
           Column(
             children: [
               verticalSpaceXXSmall(context),
-              _twotext(context, LocaleKeys.equity, "233 899.12"),
+              _twotext(context, LocaleKeys.equity.tr(), "233 899.12"),
               verticalSpaceXXSmall(context),
-              _twotext(context, LocaleKeys.margin, "3 899.12"),
+              _twotext(context, LocaleKeys.margin.tr(), "3 899.12"),
               verticalSpaceXXSmall(context),
-              _twotext(context, LocaleKeys.freeMargin, "193 899.12"),
+              _twotext(context, LocaleKeys.freeMargin.tr(), "193 899.12"),
               verticalSpaceXXSmall(context),
-              _twotext(context, LocaleKeys.marginLevel, "121%"),
+              _twotext(context, LocaleKeys.marginLevel.tr(), "121%"),
             ],
           ),
         verticalSpaceSmall(context),
@@ -220,7 +221,7 @@ class SummaryComponent extends StatelessWidget {
                     ? const Color(0xFF98A2B3)
                     : const Color(0xFF667085),
               ),
-            ),
+            ).tr(),
             Text(
               LocaleKeys.loss,
               textAlign: TextAlign.end,
@@ -231,7 +232,7 @@ class SummaryComponent extends StatelessWidget {
                     ? const Color(0xFF98A2B3)
                     : const Color(0xFF667085),
               ),
-            ),
+            ).tr(),
           ],
         ),
         verticalSpaceXXSmall(context),

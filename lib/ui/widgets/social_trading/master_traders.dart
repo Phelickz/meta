@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -106,7 +107,7 @@ class PopularTraders extends StatelessWidget {
                     ? const Color(0xff98A2B3)
                     : const Color(0xff475467),
               ),
-            ),
+            ).tr(),
             TextButton(
               onPressed: () {
                 if (model.viewMoreEnum == ViewMoreEnum.pt) {
@@ -237,7 +238,7 @@ class HigherSuccessRatesCol extends StatelessWidget {
                     ? const Color(0xff98A2B3)
                     : const Color(0xff475467),
               ),
-            ),
+            ).tr(),
             TextButton(
               onPressed: () {
                 if (model.viewMoreEnum == ViewMoreEnum.hsr) {
@@ -380,7 +381,7 @@ class LowCommissionCol extends StatelessWidget {
                     ? const Color(0xff98A2B3)
                     : const Color(0xff475467),
               ),
-            ),
+            ).tr(),
             TextButton(
               onPressed: () {
                 if (model.viewMoreEnum == ViewMoreEnum.lc) {
@@ -391,8 +392,8 @@ class LowCommissionCol extends StatelessWidget {
               },
               child: Text(
                 model.viewMoreEnum == ViewMoreEnum.lc
-                    ? LocaleKeys.hideMore
-                    : LocaleKeys.viewMore,
+                    ? LocaleKeys.hideMore.tr()
+                    : LocaleKeys.viewMore.tr(),
               ),
             )
           ],

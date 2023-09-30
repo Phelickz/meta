@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 
@@ -41,7 +42,7 @@ class OrderHeaderDetails extends StatelessWidget {
                         ? const Color(0xFFD0D5DD)
                         : const Color(0xFF667085),
                   ),
-                ),
+                ).tr(),
                 Text(
                   "3",
                   style: CustomThemeData.generateStyle(
@@ -73,7 +74,7 @@ class OrderHeaderDetails extends StatelessWidget {
                         ? const Color(0xFFD0D5DD)
                         : const Color(0xFF667085),
                   ),
-                ),
+                ).tr(),
                 Text(
                   "0",
                   style: CustomThemeData.generateStyle(
@@ -105,7 +106,7 @@ class OrderHeaderDetails extends StatelessWidget {
                         ? const Color(0xFFD0D5DD)
                         : const Color(0xFF667085),
                   ),
-                ),
+                ).tr(),
                 Text(
                   "3",
                   style: CustomThemeData.generateStyle(

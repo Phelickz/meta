@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -36,7 +37,7 @@ class NetellerWithdraw extends StatelessWidget {
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 paymentInformationCard(
                     context, 'Neteller', model, PaymentMethodEnum.neteller),
@@ -49,7 +50,7 @@ class NetellerWithdraw extends StatelessWidget {
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 const CustomTextFields(
                   hintText: '0.00 USD',
@@ -64,10 +65,10 @@ class NetellerWithdraw extends StatelessWidget {
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
-                const CustomTextFields(
-                  hintText: LocaleKeys.leaveAMark,
+                CustomTextFields(
+                  hintText: LocaleKeys.leaveAMark.tr(),
                   password: false,
                 ),
               ],
@@ -78,7 +79,7 @@ class NetellerWithdraw extends StatelessWidget {
             onTap: () {
               model.setWithdrawFundViewEnum = WithdrawFundPageEnum.success;
             },
-            text: LocaleKeys.withdrawToBank,
+            text: LocaleKeys.withdrawToBank.tr(),
           ),
           verticalSpaceMedium(context),
         ],

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -36,7 +37,7 @@ class BlockBeeWithdraw extends StatelessWidget {
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 paymentInformationCard(
                     context, 'BlockBee', model, PaymentMethodEnum.binancePay),
@@ -49,7 +50,7 @@ class BlockBeeWithdraw extends StatelessWidget {
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 const CustomTextFields(
                   hintText: '0.00 USD',
@@ -74,11 +75,12 @@ class BlockBeeWithdraw extends StatelessWidget {
             ),
           ),
           CustomButtons.generalButton(
-              context: context,
-              onTap: () {
-                model.setWithdrawFundViewEnum = WithdrawFundPageEnum.success;
-              },
-              text: LocaleKeys.withdrawToBank),
+            context: context,
+            onTap: () {
+              model.setWithdrawFundViewEnum = WithdrawFundPageEnum.success;
+            },
+            text: LocaleKeys.withdrawToBank.tr(),
+          ),
           verticalSpaceMedium(context),
         ],
       ),

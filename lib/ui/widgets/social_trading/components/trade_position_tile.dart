@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/utils/capitalize.dart';
@@ -30,7 +31,7 @@ class TradePositionTile extends StatelessWidget {
         : const Color(0xFFF97066);
 
     String typeText =
-        tradeType == TradeType.buy ? LocaleKeys.buy : LocaleKeys.sell;
+        tradeType == TradeType.buy ? LocaleKeys.buy.tr() : LocaleKeys.sell.tr();
     String typeSign = tradeType == TradeType.buy ? "" : "-";
     return Container(
       margin: EdgeInsets.only(
