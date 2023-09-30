@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -42,7 +43,7 @@ class HigherSuccessRates extends StatelessWidget {
                       color: isDarkMode ? Colors.white70 : Colors.black54,
                       fontWeight: FontWeight.bold,
                     ),
-                  ),
+                  ).tr(),
                   const Spacer(),
                   Row(
                     children: [
@@ -81,7 +82,7 @@ class HigherSuccessRates extends StatelessWidget {
                 children: [
                   RichText(
                     text: TextSpan(
-                      text: LocaleKeys.home_higherSuccessRates_copiers,
+                      text: LocaleKeys.home_higherSuccessRates_copiers.tr(),
                       style: CustomThemeData.generateStyle(
                         fontSize: 10,
                         color: isDarkMode ? Colors.white : Colors.black45,
@@ -106,15 +107,16 @@ class HigherSuccessRates extends StatelessWidget {
                       padding: const EdgeInsets.all(5.0),
                       child: RichText(
                         text: TextSpan(
-                          text: LocaleKeys.home_higherSuccessRates_riskScore,
+                          text:
+                              LocaleKeys.home_higherSuccessRates_riskScore.tr(),
                           style: CustomThemeData.generateStyle(
                             fontSize: 8,
                             color: isDarkMode ? Colors.white : Colors.black,
                           ),
                           children: [
                             TextSpan(
-                              text:
-                                  LocaleKeys.home_higherSuccessRates_mediumCap,
+                              text: LocaleKeys.home_higherSuccessRates_mediumCap
+                                  .tr(),
                               style: CustomThemeData.generateStyle(
                                 fontSize: 8,
                                 fontWeight: FontWeight.bold,
@@ -146,7 +148,7 @@ class HigherSuccessRates extends StatelessWidget {
                               ),
                               children: [
                                 TextSpan(
-                                  text: LocaleKeys.days,
+                                  text: LocaleKeys.days.tr(),
                                   style: CustomThemeData.generateStyle(
                                     fontSize: 8,
                                     color: Theme.of(context).primaryColor,
@@ -161,7 +163,7 @@ class HigherSuccessRates extends StatelessWidget {
                               fontSize: 8,
                               color: isDarkMode ? Colors.white : Colors.black54,
                             ),
-                          )
+                          ).tr()
                         ],
                       ),
                       horizontalSpaceXSmall(context),
@@ -200,7 +202,7 @@ class HigherSuccessRates extends StatelessWidget {
                               fontSize: 8,
                               color: isDarkMode ? Colors.white : Colors.black54,
                             ),
-                          )
+                          ).tr()
                         ],
                       ),
                       horizontalSpaceXSmall(context),
@@ -239,7 +241,7 @@ class HigherSuccessRates extends StatelessWidget {
                               fontSize: 8,
                               color: isDarkMode ? Colors.white : Colors.black54,
                             ),
-                          )
+                          ).tr()
                         ],
                       ),
                     ],
@@ -264,7 +266,7 @@ class HigherSuccessRates extends StatelessWidget {
                                 fontSize: 11,
                                 color: isDarkMode ? Colors.white : Colors.white,
                               ),
-                            ),
+                            ).tr(),
                             const SizedBox(
                               width: 2,
                             ),

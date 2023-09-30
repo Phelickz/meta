@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -45,7 +46,7 @@ class SearchPriceSentiments extends StatelessWidget {
                     }
                   },
                   decoration: InputDecoration(
-                    hintText: LocaleKeys.search,
+                    hintText: LocaleKeys.search.tr(),
                     hintStyle: CustomThemeData.generateStyle(
                       fontSize: 15,
                       color: Theme.of(context).secondaryHeaderColor,
@@ -99,7 +100,7 @@ class SearchPriceSentiments extends StatelessWidget {
                   ? const Color(0xff98A2B3)
                   : const Color(0xff475467),
             ),
-          ),
+          ).tr(),
         ),
         verticalSpaceSmall(context),
         Expanded(

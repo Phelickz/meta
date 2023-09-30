@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../app/responsiveness/size.dart';
@@ -20,12 +21,12 @@ class SticPayPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 verticalSpaceXSmall(context),
-                const LabelTextField(
-                    label: LocaleKeys.emailAddress,
-                    hintText: LocaleKeys.auth_enterEmail),
-                const LabelTextField(
-                  label: LocaleKeys.payId,
-                  hintText: LocaleKeys.enterPayId,
+                LabelTextField(
+                    label: LocaleKeys.emailAddress.tr(),
+                    hintText: LocaleKeys.auth_enterEmail.tr()),
+                LabelTextField(
+                  label: LocaleKeys.payId.tr(),
+                  hintText: LocaleKeys.enterPayId.tr(),
                 ),
               ],
             ),
@@ -37,7 +38,7 @@ class SticPayPage extends StatelessWidget {
             viewModel.paymentMethodPageEnum =
                 PaymentMethodPageEnum.addPaymentMethodSuccess;
           },
-          text: LocaleKeys.save,
+          text: LocaleKeys.save.tr(),
         ),
         verticalSpaceSmall(context),
         verticalSpaceXSmall(context),

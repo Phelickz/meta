@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 
@@ -51,7 +52,7 @@ class AddPaymentMethodPage extends StatelessWidget {
             onTap: () {
               viewModel.onTap(viewModel.selectedAddPaymentMethodEnum);
             },
-            text: LocaleKeys.continueWord,
+            text: LocaleKeys.continueWord.tr(),
           ),
           verticalSpaceSmall(context),
           verticalSpaceXSmall(context),

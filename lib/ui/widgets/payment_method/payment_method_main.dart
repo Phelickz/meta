@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/ui/widgets/payment_method/payment_method_tile.dart';
 
@@ -33,7 +34,7 @@ class PaymentMethodMainPage extends StatelessWidget {
                         ? const Color(0xFF98A2B3)
                         : const Color(0xFF475467),
                   ),
-                ),
+                ).tr(),
                 PaymentMethodTile(
                   vm: viewModel,
                   paymentMethodEnum: PaymentMethodEnum.onlineBank,

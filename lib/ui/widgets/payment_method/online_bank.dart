@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 
@@ -23,27 +24,33 @@ class OnlineBankPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 verticalSpaceXSmall(context),
-                const LabelTextField(
-                  label:
-                      LocaleKeys.fundAccountWidget_onlineBankWidget_accountName,
+                LabelTextField(
+                  label: LocaleKeys
+                      .fundAccountWidget_onlineBankWidget_accountName
+                      .tr(),
                   hintText: "Susan Blake",
                   isEnabled: false,
                 ),
-                const LabelTextField(
+                LabelTextField(
                   label: LocaleKeys
-                      .fundAccountWidget_onlineBankWidget_accountNumber,
+                      .fundAccountWidget_onlineBankWidget_accountNumber
+                      .tr(),
                   hintText: "23458755632",
                 ),
-                const LabelTextField(
-                  label: LocaleKeys.paymentMethod_onlineBankWidgetP_bankName,
-                  hintText:
-                      LocaleKeys.paymentMethod_onlineBankWidgetP_enterBankName,
-                ),
-                const LabelTextField(
+                LabelTextField(
                   label:
-                      LocaleKeys.paymentMethod_onlineBankWidgetP_accountOpening,
+                      LocaleKeys.paymentMethod_onlineBankWidgetP_bankName.tr(),
                   hintText: LocaleKeys
-                      .paymentMethod_onlineBankWidgetP_enterBranchInformation,
+                      .paymentMethod_onlineBankWidgetP_enterBankName
+                      .tr(),
+                ),
+                LabelTextField(
+                  label: LocaleKeys
+                      .paymentMethod_onlineBankWidgetP_accountOpening
+                      .tr(),
+                  hintText: LocaleKeys
+                      .paymentMethod_onlineBankWidgetP_enterBranchInformation
+                      .tr(),
                 ),
               ],
             ),
@@ -55,7 +62,7 @@ class OnlineBankPage extends StatelessWidget {
             viewModel.paymentMethodPageEnum =
                 PaymentMethodPageEnum.addPaymentMethodSuccess;
           },
-          text: LocaleKeys.saveChanges,
+          text: LocaleKeys.saveChanges.tr(),
         ),
         verticalSpaceSmall(context),
         verticalSpaceXSmall(context),

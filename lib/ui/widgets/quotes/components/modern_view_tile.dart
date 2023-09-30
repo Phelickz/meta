@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -133,9 +134,10 @@ class _ModernViewTileState extends State<ModernViewTile> {
                   child: SizedBox(
                     width: 40.pWidth(context),
                     height: 40.pHeight(context),
-                    child: SvgPicture.asset(widget.trend == LocaleKeys.positive
-                        ? AssetManager.upTrendChart
-                        : AssetManager.downTrendChart),
+                    child: SvgPicture.asset(
+                        widget.trend == LocaleKeys.positive.tr()
+                            ? AssetManager.upTrendChart
+                            : AssetManager.downTrendChart),
                   ),
                 ),
                 const Spacer(),
@@ -156,7 +158,7 @@ class _ModernViewTileState extends State<ModernViewTile> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          widget.trend == LocaleKeys.positive
+                          widget.trend == LocaleKeys.positive.tr()
                               ? const Icon(
                                   Icons.arrow_upward,
                                   color: Colors.blue,

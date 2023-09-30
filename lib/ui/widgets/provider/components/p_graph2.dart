@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
@@ -37,7 +38,7 @@ class PGraph2 extends StatelessWidget {
                     fontSize: 16,
                     context: context,
                     fontWeight: FontWeight.w600),
-              ),
+              ).tr(),
               const Spacer(),
               CustomProviderTab(
                   firstTabName: "1W",

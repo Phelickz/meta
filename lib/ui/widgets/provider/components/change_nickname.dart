@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
@@ -32,14 +33,15 @@ class ChangeNickName extends StatelessWidget {
                 .providerWidget_providerComponent_changeNickName_changeNickNameT,
             style: CustomThemeData.generateColoredStyle(
                 fontSize: 14, context: context),
-          ),
+          ).tr(),
           SizedBox(
             height: 20.pHeight(context),
           ),
-          const LabelTextField(
-            label: LocaleKeys.nickName,
+          LabelTextField(
+            label: LocaleKeys.nickName.tr(),
             hintText: LocaleKeys
-                .providerWidget_providerComponent_changeNickName_enterNewNickName,
+                .providerWidget_providerComponent_changeNickName_enterNewNickName
+                .tr(),
           ),
           SizedBox(
             height: 80.pHeight(context),
@@ -49,7 +51,7 @@ class ChangeNickName extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
             },
-            text: LocaleKeys.confirm,
+            text: LocaleKeys.confirm.tr(),
           )
         ],
       ),

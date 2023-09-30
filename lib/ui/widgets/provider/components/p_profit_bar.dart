@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -40,7 +41,7 @@ class ProfitBar extends StatelessWidget {
                         fontSize: 12,
                         context: context,
                         fontWeight: FontWeight.w400),
-                  ),
+                  ).tr(),
                   SizedBox(
                     height: 8.pHeight(context),
                   ),
@@ -64,7 +65,7 @@ class ProfitBar extends StatelessWidget {
                         fontSize: 12,
                         context: context,
                         fontWeight: FontWeight.w400),
-                  ),
+                  ).tr(),
                   SizedBox(
                     height: 8.pHeight(context),
                   ),
@@ -97,7 +98,7 @@ class ProfitBar extends StatelessWidget {
                             fontSize: 12,
                             context: context,
                             fontWeight: FontWeight.w400),
-                      ),
+                      ).tr(),
                       SizedBox(
                         height: 4.pHeight(context),
                       ),
@@ -126,7 +127,7 @@ class ProfitBar extends StatelessWidget {
                             fontSize: 12,
                             context: context,
                             fontWeight: FontWeight.w400),
-                      ),
+                      ).tr(),
                       SizedBox(
                         height: 4.pHeight(context),
                       ),
@@ -156,7 +157,7 @@ class ProfitBar extends StatelessWidget {
                             fontSize: 12,
                             context: context,
                             fontWeight: FontWeight.w400),
-                      ),
+                      ).tr(),
                       SizedBox(
                         height: 4.pHeight(context),
                       ),

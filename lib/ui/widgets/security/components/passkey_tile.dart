@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -42,7 +43,7 @@ class PasskeyTile extends StatelessWidget {
                         ? const Color(0xFFD0D5DD)
                         : const Color(0xFF667085),
                   ),
-                ),
+                ).tr(),
                 SizedBox(
                   height: McGyver.rsDoubleH(context, 0.3),
                 ),
@@ -55,7 +56,7 @@ class PasskeyTile extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                     color: const Color(0xFF98A2B3),
                   ),
-                ),
+                ).tr(),
                 Text(
                   LocaleKeys
                       .securityWidget_securityComponents_passkeyTile_lastUsed,
@@ -65,7 +66,7 @@ class PasskeyTile extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                     color: const Color(0xFF98A2B3),
                   ),
-                ),
+                ).tr(),
               ],
             ),
           ),
@@ -122,7 +123,7 @@ class PasskeyTile extends StatelessWidget {
         alignment: Alignment.center,
         insetPadding: const EdgeInsets.all(10),
         child: DeletePopup(
-          title: LocaleKeys.passKeys,
+          title: LocaleKeys.passKeys.tr(),
           onDelete: () {},
         ),
       ),

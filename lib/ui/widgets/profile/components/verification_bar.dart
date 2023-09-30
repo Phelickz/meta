@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
@@ -60,7 +61,7 @@ class VerificationBar extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               color: Theme.of(context).primaryColor,
                             ),
-                          ),
+                          ).tr(),
                           alignment: Alignment.topLeft,
                         ),
                         SizedBox(
@@ -74,7 +75,7 @@ class VerificationBar extends StatelessWidget {
                               color: isDarkMode
                                   ? const Color(0xff98A2B3)
                                   : ColorManager.lightText),
-                        ),
+                        ).tr(),
                         verticalSpaceXXSmall(context),
                       ],
                     ),
@@ -87,7 +88,7 @@ class VerificationBar extends StatelessWidget {
                 onTap: () {
                   model.push(const VerificationRoute());
                 },
-                text: LocaleKeys.continueWord,
+                text: LocaleKeys.continueWord.tr(),
               )
             ],
           ),

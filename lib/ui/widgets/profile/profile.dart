@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
@@ -41,21 +42,21 @@ class ProfilePage extends StatelessWidget {
                   children: [
                     ProfileIconButton(
                       icon: AssetManager.manageAccountIcon,
-                      title: LocaleKeys.manageAccount,
+                      title: LocaleKeys.manageAccount.tr(),
                       onTap: () {
                         model.push(const ManageAccountRoute());
                       },
                     ),
                     ProfileIconButton(
                       icon: AssetManager.referralsIcon,
-                      title: LocaleKeys.logOut,
+                      title: LocaleKeys.logOut.tr(),
                       onTap: () {
                         model.push(const ReferralRoute());
                       },
                     ),
                     ProfileIconButton(
                       icon: AssetManager.tradeHistoryIcon,
-                      title: LocaleKeys.tradeHistory,
+                      title: LocaleKeys.tradeHistory.tr(),
                       onTap: () {
                         model.push(const TradeHistoryRoute());
                       },
@@ -70,21 +71,21 @@ class ProfilePage extends StatelessWidget {
                   children: [
                     ProfileIconButton(
                       icon: AssetManager.loyaltyRewards,
-                      title: LocaleKeys.loyaltyReward,
+                      title: LocaleKeys.loyaltyReward.tr(),
                       onTap: () {
                         model.push(const LoyaltyRewardsRoute());
                       },
                     ),
                     ProfileIconButton(
                       icon: AssetManager.notificationsIcon,
-                      title: LocaleKeys.notification,
+                      title: LocaleKeys.notification.tr(),
                       onTap: () {
                         model.push(const NotificationRoute());
                       },
                     ),
                     ProfileIconButton(
                       icon: AssetManager.security,
-                      title: LocaleKeys.security,
+                      title: LocaleKeys.security.tr(),
                       onTap: () {
                         model.push(const SecurityRoute());
                       },
@@ -93,8 +94,9 @@ class ProfilePage extends StatelessWidget {
                 ),
                 SizedBox(height: 32.pHeight(context)),
                 ProfileTiles(
-                  title: LocaleKeys.profile_profileWidget_viewYourWithD,
-                  subTitle: LocaleKeys.profile_profileWidget_viewWithDrawalH,
+                  title: LocaleKeys.profile_profileWidget_viewYourWithD.tr(),
+                  subTitle:
+                      LocaleKeys.profile_profileWidget_viewWithDrawalH.tr(),
                   leadingIcon: AssetManager.withdrawal,
                   trailingIcon: AssetManager.forwardArrow,
                   onTap: () {
@@ -102,8 +104,9 @@ class ProfilePage extends StatelessWidget {
                   },
                 ),
                 ProfileTiles(
-                  title: LocaleKeys.paymentMethod,
-                  subTitle: LocaleKeys.profile_profileWidget_updatePaymentM,
+                  title: LocaleKeys.paymentMethod.tr(),
+                  subTitle:
+                      LocaleKeys.profile_profileWidget_updatePaymentM.tr(),
                   leadingIcon: AssetManager.paymentMethod,
                   trailingIcon: AssetManager.forwardArrow,
                   onTap: () {
@@ -111,22 +114,24 @@ class ProfilePage extends StatelessWidget {
                   },
                 ),
                 ProfileTiles(
-                  title: LocaleKeys.helpAndSupport,
-                  subTitle: LocaleKeys.profile_profileWidget_fileAComplaint,
+                  title: LocaleKeys.helpAndSupport.tr(),
+                  subTitle:
+                      LocaleKeys.profile_profileWidget_fileAComplaint.tr(),
                   leadingIcon: AssetManager.withdrawal,
                   trailingIcon: AssetManager.forwardArrow,
                   onTap: () {
                     model.push(const HelpAndSupportRoute());
                   },
                 ),
-                const ProfileTiles(
-                  title: LocaleKeys.profile_profileWidget_rateTheApp,
-                  subTitle: LocaleKeys.profile_profileWidget_giveUsAReview,
+                ProfileTiles(
+                  title: LocaleKeys.profile_profileWidget_rateTheApp.tr(),
+                  subTitle: LocaleKeys.profile_profileWidget_giveUsAReview.tr(),
                   leadingIcon: AssetManager.rate,
                 ),
-                const ProfileTiles(
-                  title: LocaleKeys.logOut,
-                  subTitle: LocaleKeys.profile_profileWidget_viewWithDrawalH,
+                ProfileTiles(
+                  title: LocaleKeys.logOut.tr(),
+                  subTitle:
+                      LocaleKeys.profile_profileWidget_viewWithDrawalH.tr(),
                   leadingIcon: AssetManager.logout,
                 ),
               ],

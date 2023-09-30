@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
@@ -31,7 +32,7 @@ class PTradeHistory extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              LocaleKeys.positions,
+              LocaleKeys.positions.tr(),
               style: CustomThemeData.generateColoredStyle(
                   fontSize: 16,
                   context: context,

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -55,7 +56,7 @@ class AddPasskeyModal extends StatelessWidget {
                     ? const Color(0xFFD0D5DD)
                     : const Color(0xFF475467),
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             verticalSpaceSmall(context),
             _addPasskeyModalTile(
@@ -63,32 +64,38 @@ class AddPasskeyModal extends StatelessWidget {
               isDarkMode: isDarkMode,
               assetName: "assets/images/security_safe.svg",
               title: LocaleKeys
-                  .securityWidget_securityComponents_addPassKeyModel_noNeedToRemember,
+                  .securityWidget_securityComponents_addPassKeyModel_noNeedToRemember
+                  .tr(),
               subtitle: LocaleKeys
-                  .securityWidget_securityComponents_addPassKeyModel_withPasskey,
+                  .securityWidget_securityComponents_addPassKeyModel_withPasskey
+                  .tr(),
             ),
             _addPasskeyModalTile(
               context: context,
               isDarkMode: isDarkMode,
               assetName: "assets/images/devices.svg",
               title: LocaleKeys
-                  .securityWidget_securityComponents_addPassKeyModel_worksOnAll,
+                  .securityWidget_securityComponents_addPassKeyModel_worksOnAll
+                  .tr(),
               subtitle: LocaleKeys
-                  .securityWidget_securityComponents_addPassKeyModel_passkeysWill,
+                  .securityWidget_securityComponents_addPassKeyModel_passkeysWill
+                  .tr(),
             ),
             _addPasskeyModalTile(
               context: context,
               isDarkMode: isDarkMode,
               assetName: "assets/images/safe_home.svg",
               title: LocaleKeys
-                  .securityWidget_securityComponents_addPassKeyModel_keepYourAccountSafe,
+                  .securityWidget_securityComponents_addPassKeyModel_keepYourAccountSafe
+                  .tr(),
               subtitle: LocaleKeys
-                  .securityWidget_securityComponents_addPassKeyModel_passkeysOffer,
+                  .securityWidget_securityComponents_addPassKeyModel_passkeysOffer
+                  .tr(),
             ),
             verticalSpaceSmall(context),
             verticalSpaceSmall(context),
             CustomButtons.generalButton(
-              text: LocaleKeys.continueWord,
+              text: LocaleKeys.continueWord.tr(),
               context: context,
               onTap: () {
                 Navigator.pop(context);

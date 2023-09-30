@@ -23,8 +23,8 @@ class ProviderFollowerPage extends StatelessWidget {
       appBar: ProviderAppbar.simpleAppBar(
           viewModel,
           context,
-          LocaleKeys.followers,
-          LocaleKeys.views_providerView_viewYourFollowers,
+          LocaleKeys.followers.tr(),
+          LocaleKeys.views_providerView_viewYourFollowers.tr(),
           false,
           null),
       body: Column(
@@ -44,7 +44,7 @@ class ProviderFollowerPage extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                     lightTextColor: const Color(0xFF475467),
                     darkTextColor: const Color(0xFF98A2B3)),
-              ),
+              ).tr(),
               const Spacer(),
               // InkWell(
               //     onTap: () => showBottomSheet(
@@ -118,13 +118,12 @@ class ProviderFollowerPage extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  LocaleKeys.providerWidget_providerFollowers_startedFollowing
-                      .tr(args: [' ${followerDetail["date"]}']),
+                  LocaleKeys.providerWidget_providerFollowers_startedFollowing,
                   style: CustomThemeData.generateColoredStyle(
                       fontSize: 12,
                       context: context,
                       fontWeight: FontWeight.w400),
-                ),
+                ).tr(args: [' ${followerDetail["date"]}']),
                 SizedBox(
                   height: 4.pHeight(context),
                 )
@@ -141,7 +140,7 @@ class ProviderFollowerPage extends StatelessWidget {
                       fontSize: 12,
                       context: context,
                       fontWeight: FontWeight.w400),
-                ),
+                ).tr(),
                 Text(
                   followerDetail["location"],
                   style: CustomThemeData.generateColoredStyle(

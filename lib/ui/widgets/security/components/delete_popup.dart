@@ -37,7 +37,7 @@ class DeletePopup extends StatelessWidget {
                   ? const Color(0xFFD0D5DD)
                   : const Color(0xFF475467),
             ),
-          ),
+          ).tr(),
           verticalSpaceXXSmall(context),
           Text(
             LocaleKeys
@@ -51,7 +51,7 @@ class DeletePopup extends StatelessWidget {
                   ? const Color(0xFF98A2B3)
                   : const Color(0xFF475467),
             ),
-          ),
+          ).tr(),
           verticalSpaceSmall(context),
           verticalSpaceXSmall(context),
           Row(
@@ -71,7 +71,7 @@ class DeletePopup extends StatelessWidget {
               CustomButtons.textButton(
                 context: context,
                 onTap: () => Navigator.pop(context),
-                text: LocaleKeys.cancel,
+                text: LocaleKeys.cancel.tr(),
                 textColor: isDarkMode
                     ? const Color(0xFFD0D5DD)
                     : const Color(0xFF667085),

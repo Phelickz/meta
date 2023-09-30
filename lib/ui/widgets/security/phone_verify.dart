@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
@@ -49,7 +50,7 @@ class PhoneVerificationPage extends StatelessWidget {
                     ? const Color(0xFFF2F4F7)
                     : const Color(0xff475467),
               ),
-            ),
+            ).tr(),
           ),
           verticalSpaceXSmall(context),
           Padding(
@@ -59,7 +60,7 @@ class PhoneVerificationPage extends StatelessWidget {
             child: RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                  text: "We sent a verification code to ",
+                  text: LocaleKeys.weSentAVerification.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.6),
                     fontWeight: FontWeight.w500,
@@ -83,8 +84,8 @@ class PhoneVerificationPage extends StatelessWidget {
           ),
           verticalSpaceSmall(context),
           verticalSpaceXSmall(context),
-          const CustomTextFields(
-            hintText: "Enter 6-digits verification code",
+          CustomTextFields(
+            hintText: LocaleKeys.securityWidget_phoneVerify_enter6Digits.tr(),
           ),
           verticalSpaceMedium(context),
           CustomButtons.generalButton(
@@ -92,7 +93,7 @@ class PhoneVerificationPage extends StatelessWidget {
               onTap: () {
                 model.securityPageEnum = SecurityPageEnum.phoneVerifySuccess;
               },
-              text: 'Submit',
+              text: LocaleKeys.submit.tr(),
               color: isDarkMode
                   ? const Color(0xFF667085)
                   : const Color(0xFFD0D5DD)),
@@ -100,7 +101,7 @@ class PhoneVerificationPage extends StatelessWidget {
           CustomButtons.clearButton(
             context: context,
             onTap: () {},
-            text: 'Resend code',
+            text: LocaleKeys.resendCode.tr(),
             textColor: Theme.of(context).primaryColor,
           ),
         ],

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/locator/locator.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -51,7 +52,7 @@ class ManageAccountBottomSheet1 extends StatelessWidget {
                   fontSize: McGyver.textSize(context, 2),
                   color: isDarkMode ? Colors.white : Colors.black,
                   fontWeight: FontWeight.w600),
-            ),
+            ).tr(),
           ),
           SizedBox(
             height: 16.pHeight(context),
@@ -70,7 +71,7 @@ class ManageAccountBottomSheet1 extends StatelessWidget {
                   fontSize: McGyver.textSize(context, 2),
                   color: Colors.red,
                   fontWeight: FontWeight.w600),
-            ),
+            ).tr(),
           ),
           SizedBox(
             height: 16.pHeight(context),
@@ -80,7 +81,7 @@ class ManageAccountBottomSheet1 extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
             },
-            text: LocaleKeys.cancel,
+            text: LocaleKeys.cancel.tr(),
             textSize: 2,
           )
         ],
@@ -131,7 +132,7 @@ class ManageAccountBottomSheet2 extends StatelessWidget {
                   fontSize: McGyver.textSize(context, 2),
                   color: isDarkMode ? Colors.white : Colors.black,
                   fontWeight: FontWeight.w600),
-            ),
+            ).tr(),
           ),
           SizedBox(
             height: 12.pHeight(context),
@@ -150,7 +151,7 @@ class ManageAccountBottomSheet2 extends StatelessWidget {
                   fontSize: McGyver.textSize(context, 2),
                   color: isDarkMode ? Colors.white : Colors.black,
                   fontWeight: FontWeight.w600),
-            ),
+            ).tr(),
           ),
           SizedBox(
             height: 12.pHeight(context),
@@ -169,7 +170,7 @@ class ManageAccountBottomSheet2 extends StatelessWidget {
                   fontSize: McGyver.textSize(context, 2),
                   color: Colors.red,
                   fontWeight: FontWeight.w600),
-            ),
+            ).tr(),
           ),
           SizedBox(
             height: 20.pHeight(context),
@@ -179,7 +180,7 @@ class ManageAccountBottomSheet2 extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context);
               },
-              text: "Cancel",
+              text: LocaleKeys.cancel.tr(),
               textSize: 2)
         ],
       ),
@@ -217,13 +218,13 @@ class DeleteAccountDialog extends StatelessWidget {
                   .textTheme
                   .labelLarge
                   ?.copyWith(fontSize: 18),
-            ),
+            ).tr(),
             SizedBox(height: 12.pHeight(context)),
             Text(
               LocaleKeys
                   .manageAccounts_manageAccountsWidget_manageAccountBottomSheet_doYouReallyWant,
               style: Theme.of(context).textTheme.labelMedium,
-            ),
+            ).tr(),
             SizedBox(height: 24.pWidth(context)),
             Row(
               children: [
@@ -244,7 +245,7 @@ class DeleteAccountDialog extends StatelessWidget {
                             fontSize: McGyver.textSize(context, 2),
                             color: Colors.red,
                             fontWeight: FontWeight.w500),
-                      ),
+                      ).tr(),
                     ),
                   ),
                 ),
@@ -261,7 +262,7 @@ class DeleteAccountDialog extends StatelessWidget {
                         fontSize: McGyver.textSize(context, 2),
                         color: isDarkMode ? Colors.white : Colors.black,
                         fontWeight: FontWeight.w500),
-                  ),
+                  ).tr(),
                 ),
               ],
             )
@@ -302,7 +303,7 @@ class DetailDialog extends StatelessWidget {
                   fontSize: McGyver.textSize(context, 1.5),
                   color: isDarkMode ? Colors.white : const Color(0xFF98A2B3),
                   fontWeight: FontWeight.w500),
-            ),
+            ).tr(),
             SizedBox(height: 12.pHeight(context)),
             Text(
               LocaleKeys
@@ -311,7 +312,7 @@ class DetailDialog extends StatelessWidget {
                   fontSize: McGyver.textSize(context, 1.5),
                   color: isDarkMode ? Colors.white : Colors.black,
                   fontWeight: FontWeight.w500),
-            ),
+            ).tr(),
             Text(
               'FXPro limited ',
               style: CustomThemeData.generateStyle(
@@ -326,7 +327,7 @@ class DetailDialog extends StatelessWidget {
                   fontSize: McGyver.textSize(context, 1.5),
                   color: isDarkMode ? Colors.white : Colors.black,
                   fontWeight: FontWeight.w500),
-            ),
+            ).tr(),
             Text(
               LocaleKeys
                   .manageAccounts_manageAccountsWidget_manageAccountBottomSheet_demo_account,
@@ -334,14 +335,14 @@ class DetailDialog extends StatelessWidget {
                   fontSize: McGyver.textSize(context, 1.5),
                   color: isDarkMode ? Colors.white : Colors.black,
                   fontWeight: FontWeight.w500),
-            ),
+            ).tr(),
             SizedBox(height: 23.pHeight(context)),
             CustomButtons.clearButton(
                 context: context,
                 onTap: () {
                   Navigator.pop(context);
                 },
-                text: LocaleKeys.ok,
+                text: LocaleKeys.ok.tr(),
                 textSize: 2)
           ],
         ),

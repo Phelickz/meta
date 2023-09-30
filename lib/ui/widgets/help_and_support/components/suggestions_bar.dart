@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
@@ -28,7 +29,7 @@ class SuggestionBar extends StatelessWidget {
               fontSize: 10,
               context: context,
             ),
-          ),
+          ).tr(),
           SizedBox(
             height: 5.pHeight(context),
           ),

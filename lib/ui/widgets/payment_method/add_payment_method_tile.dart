@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -53,31 +54,32 @@ class AddPaymentMethodTile extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          _infoLeftText(LocaleKeys.averageTime, context),
-                          _infoRightText(LocaleKeys.instant, context),
+                          _infoLeftText(LocaleKeys.averageTime.tr(), context),
+                          _infoRightText(LocaleKeys.instant.tr(), context),
                         ],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          _infoLeftText(LocaleKeys.duration, context),
-                          _infoRightText(LocaleKeys.upTo, context),
+                          _infoLeftText(LocaleKeys.duration.tr(), context),
+                          _infoRightText(LocaleKeys.upTo.tr(), context),
                         ],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          _infoLeftText(LocaleKeys.fee, context),
+                          _infoLeftText(LocaleKeys.fee.tr(), context),
                           _infoRightText("0%", context),
                         ],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          _infoLeftText(LocaleKeys.limit, context),
+                          _infoLeftText(LocaleKeys.limit.tr(), context),
                           _infoRightText(
                               LocaleKeys
-                                  .paymentMethod_addPaymentMethodTile_figure,
+                                  .paymentMethod_addPaymentMethodTile_figure
+                                  .tr(),
                               context),
                         ],
                       ),

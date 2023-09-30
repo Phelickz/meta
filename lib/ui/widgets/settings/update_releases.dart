@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -37,7 +38,7 @@ class UpdateReleasePage extends StatelessWidget {
                 fontSize: 24,
                 color: isDarkMode ? Colors.white : const Color(0xff667085),
                 fontWeight: FontWeight.w400,
-              )),
+              )).tr(),
           SizedBox(height: 10.pHeight(context)),
           Expanded(
             child: SizedBox(
@@ -54,7 +55,7 @@ class UpdateReleasePage extends StatelessWidget {
                               ? Colors.white54
                               : const Color(0xff667085),
                           fontWeight: FontWeight.normal,
-                        )),
+                        )).tr(),
                     Expanded(
                       child: ListView.builder(
                         shrinkWrap: true,
@@ -98,11 +99,14 @@ class UpdateReleasePage extends StatelessWidget {
                 )),
           ),
           CustomButtons.generalButton(
-              context: context, onTap: () {}, text: LocaleKeys.update),
+            context: context,
+            onTap: () {},
+            text: LocaleKeys.update.tr(),
+          ),
           CustomButtons.generalTextButton(
             context: context,
             onTap: () {},
-            text: LocaleKeys.cancel,
+            text: LocaleKeys.cancel.tr(),
           ),
         ],
       ),

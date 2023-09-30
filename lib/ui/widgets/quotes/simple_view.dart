@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -32,7 +33,7 @@ class SimpleMarketView extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     context: context,
                   ),
-                ),
+                ).tr(),
               ),
               SizedBox(
                 width: 14.pWidth(context),
@@ -44,7 +45,7 @@ class SimpleMarketView extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   context: context,
                 ),
-              ),
+              ).tr(),
               SizedBox(
                 width: 44.pWidth(context),
               ),
@@ -54,7 +55,7 @@ class SimpleMarketView extends StatelessWidget {
                     fontSize: McGyver.textSize(context, 1.5),
                     fontWeight: FontWeight.bold,
                     context: context),
-              ),
+              ).tr(),
               SizedBox(
                 width: 34.pWidth(context),
               ),
@@ -65,7 +66,7 @@ class SimpleMarketView extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   context: context,
                 ),
-              ),
+              ).tr(),
             ],
           ),
           SizedBox(

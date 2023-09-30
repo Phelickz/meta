@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/quotes/quotes_view_model.dart';
@@ -29,7 +30,7 @@ class SearchSubgroupPage extends StatelessWidget {
                 horizontal: McGyver.textSize(context, 2),
               ),
               child: CustomTextFields(
-                hintText: LocaleKeys.searchPairs,
+                hintText: LocaleKeys.searchPairs.tr(),
                 suffixIcon: Icon(
                   Icons.search,
                   color: isDarkMode ? Colors.white38 : Colors.black,

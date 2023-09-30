@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -52,7 +53,7 @@ class _MarginBottomSheetCurrencyPairState
                       fontSize: McGyver.textSize(context, 1.8),
                       color: isDarkMode ? Colors.white : ColorManager.lightText,
                     ),
-                  ),
+                  ).tr(),
                   verticalSpaceSmall(context),
                   Expanded(
                     flex: 3,
@@ -72,7 +73,7 @@ class _MarginBottomSheetCurrencyPairState
                         setState(() {});
                       },
                       decoration: InputDecoration(
-                        hintText: LocaleKeys.search,
+                        hintText: LocaleKeys.search.tr(),
                         hintStyle: CustomThemeData.generateStyle(
                           fontSize: 15,
                           color: Theme.of(context).secondaryHeaderColor,

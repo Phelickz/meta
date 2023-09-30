@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -44,10 +45,10 @@ class QuotesBottomSheet extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: const Color(0xFF98A2B3),
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             QuotesBottomSheetTile(
-              label: LocaleKeys.trade,
+              label: LocaleKeys.trade.tr(),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -60,7 +61,7 @@ class QuotesBottomSheet extends StatelessWidget {
               },
             ),
             QuotesBottomSheetTile(
-              label: LocaleKeys.chart,
+              label: LocaleKeys.chart.tr(),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -73,7 +74,7 @@ class QuotesBottomSheet extends StatelessWidget {
               },
             ),
             QuotesBottomSheetTile(
-              label: LocaleKeys.details,
+              label: LocaleKeys.details.tr(),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -86,7 +87,7 @@ class QuotesBottomSheet extends StatelessWidget {
               },
             ),
             QuotesBottomSheetTile(
-              label: LocaleKeys.statistics,
+              label: LocaleKeys.statistics.tr(),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -99,7 +100,7 @@ class QuotesBottomSheet extends StatelessWidget {
               },
             ),
             QuotesBottomSheetTile(
-              label: LocaleKeys.depthOfMarket,
+              label: LocaleKeys.depthOfMarket.tr(),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -112,14 +113,14 @@ class QuotesBottomSheet extends StatelessWidget {
               },
             ),
             QuotesBottomSheetTile(
-                label: LocaleKeys.delete, isRed: true, onPressed: () {}),
+                label: LocaleKeys.delete.tr(), isRed: true, onPressed: () {}),
             verticalSpaceSmall(context),
             CustomButtons.generalButton(
               context: context,
               onTap: () {
                 Navigator.pop(context);
               },
-              text: LocaleKeys.cancel,
+              text: LocaleKeys.cancel.tr(),
               color: isDarkMode
                   ? const Color(0xFF052844)
                   : const Color(0xFFD3ECFD),

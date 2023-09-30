@@ -1,5 +1,7 @@
 import 'package:auto_route/annotations.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/manage_accounts/manage_accounts_view_model.dart';
 import 'package:meta_trader/ui/widgets/appbar.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
@@ -7,7 +9,6 @@ import 'package:meta_trader/ui/widgets/skeleton.dart';
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
 import '../../../app/utils/theme.dart';
-import '../../views/security/security_view_model.dart';
 import '../buttons/buttons.dart';
 import '../textfields/label_password_field.dart';
 
@@ -21,7 +22,7 @@ class ManageAccountPasswordPage extends StatelessWidget {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Skeleton(
       isBusy: model.isBusy,
-      appBar: globalAppBar(context, 'Change Password', '', () {
+      appBar: globalAppBar(context, LocaleKeys.changePassword.tr(), '', () {
         Navigator.pop(context);
       }, []),
       body: SingleChildScrollView(
@@ -63,17 +64,27 @@ class ManageAccountPasswordPage extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             verticalSpaceXSmall(context),
-            const LabelPasswordField(
-              label: "Current Password",
-              hintText: "Enter current password",
+            LabelPasswordField(
+              label: LocaleKeys
+                  .manageAccounts_existingAccountsForm_currentPassword
+                  .tr(),
+              hintText: LocaleKeys
+                  .manageAccounts_existingAccountsForm_enterCurrentPassword
+                  .tr(),
             ),
-            const LabelPasswordField(
-              label: "New Password",
-              hintText: "Enter new password",
+            LabelPasswordField(
+              label: LocaleKeys.manageAccounts_existingAccountsForm_newPassword
+                  .tr(),
+              hintText: LocaleKeys
+                  .manageAccounts_existingAccountsForm_enterNewPassword,
             ),
-            const LabelPasswordField(
-              label: "Re-enter Password",
-              hintText: "Re-enter new password",
+            LabelPasswordField(
+              label: LocaleKeys
+                  .manageAccounts_existingAccountsForm_reEnterPassword
+                  .tr(),
+              hintText: LocaleKeys
+                  .manageAccounts_existingAccountsForm_reEnterNewPassword
+                  .tr(),
             ),
             Row(
               children: [
@@ -104,7 +115,7 @@ class ManageAccountPasswordPage extends StatelessWidget {
                 ),
                 Expanded(
                   child: Text(
-                    "Save Password",
+                    LocaleKeys.savePassword.tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.7),
                       fontWeight: FontWeight.normal,
@@ -119,7 +130,7 @@ class ManageAccountPasswordPage extends StatelessWidget {
             verticalSpaceMedium(context),
             verticalSpaceSmall(context),
             CustomButtons.generalButton(
-              text: "Save Changes",
+              text: LocaleKeys.saveChanges.tr(),
               context: context,
               onTap: () {
                 Navigator.pop(context);
@@ -132,7 +143,7 @@ class ManageAccountPasswordPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Forgot password?",
+                  LocaleKeys.forgetPassword.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.6),
                     fontWeight: FontWeight.w500,
@@ -143,7 +154,7 @@ class ManageAccountPasswordPage extends StatelessWidget {
                 ),
                 CustomButtons.generalTextButton(
                   width: McGyver.rsDoubleW(context, 27),
-                  text: "Contact Broker",
+                  text: LocaleKeys.contactBroker.tr(),
                   padding: McGyver.rsDoubleH(context, 0.1),
                   context: context,
                   textColor: isDarkMode

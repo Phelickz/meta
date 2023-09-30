@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
@@ -33,7 +34,7 @@ class WelcomePage extends StatelessWidget {
           textAlign: TextAlign.center,
           style: CustomThemeData.generateColoredStyle(
               fontSize: 24, context: context, lightTextColor: Colors.black),
-        ),
+        ).tr(),
         SizedBox(
           height: 16.pHeight(context),
         ),
@@ -42,14 +43,14 @@ class WelcomePage extends StatelessWidget {
           textAlign: TextAlign.center,
           style: CustomThemeData.generateColoredStyle(
               fontSize: 14, context: context, fontWeight: FontWeight.w400),
-        ),
+        ).tr(),
         const Spacer(),
         CustomButtons.generalButton(
             context: context,
             onTap: () {
               viewModel.setProviderPageEnum = ProviderPageEnum.signUp;
             },
-            text: LocaleKeys.signIn,
+            text: LocaleKeys.signIn.tr(),
             width: double.infinity,
             textSize: 1.8),
         SizedBox(
@@ -60,7 +61,7 @@ class WelcomePage extends StatelessWidget {
             onTap: () {
               viewModel.setProviderPageEnum = ProviderPageEnum.login;
             },
-            text: LocaleKeys.providerWidget_welcomeProvider_loginInstead,
+            text: LocaleKeys.providerWidget_welcomeProvider_loginInstead.tr(),
             width: double.infinity,
             textSize: 1.8,
             textColor: viewModel.isDarkMode()

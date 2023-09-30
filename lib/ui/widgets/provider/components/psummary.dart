@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
@@ -36,7 +37,7 @@ class Psummary extends StatelessWidget {
                     fontSize: 16,
                     context: context,
                     fontWeight: FontWeight.w600),
-              ),
+              ).tr(),
               const Spacer(),
               CustomProviderTab(
                   firstTabName: "1W",
@@ -69,7 +70,8 @@ class Psummary extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12)),
                 child: Text(
                   LocaleKeys
-                      .providerWidget_providerComponent_pSummary_viewFollowers,
+                      .providerWidget_providerComponent_pSummary_viewFollowers
+                      .tr(),
                   style: CustomThemeData.generateColoredStyle(
                       fontSize: 12,
                       context: context,
@@ -119,7 +121,7 @@ class Psummary extends StatelessWidget {
                     fontSize: 12,
                     context: context,
                     fontWeight: FontWeight.w400),
-              ),
+              ).tr(),
               const Spacer(),
               Text(
                 auto,
@@ -139,7 +141,7 @@ class Psummary extends StatelessWidget {
                     fontSize: 12,
                     context: context,
                     fontWeight: FontWeight.w400),
-              ),
+              ).tr(),
               const Spacer(),
               Text(
                 fixed,
@@ -159,7 +161,7 @@ class Psummary extends StatelessWidget {
                     fontSize: 12,
                     context: context,
                     fontWeight: FontWeight.w400),
-              ),
+              ).tr(),
               const Spacer(),
               Text(
                 reverse,
@@ -179,7 +181,7 @@ class Psummary extends StatelessWidget {
                     fontSize: 12,
                     context: context,
                     fontWeight: FontWeight.w400),
-              ),
+              ).tr(),
               const Spacer(),
               Text(
                 "$fee%",
@@ -199,7 +201,7 @@ class Psummary extends StatelessWidget {
                     fontSize: 12,
                     context: context,
                     fontWeight: FontWeight.w400),
-              ),
+              ).tr(),
               const Spacer(),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -210,7 +212,7 @@ class Psummary extends StatelessWidget {
                         fontSize: 12,
                         context: context,
                         fontWeight: FontWeight.w400),
-                  ),
+                  ).tr(),
                   SizedBox(
                     height: 4.pHeight(context),
                   ),
@@ -237,7 +239,7 @@ class Psummary extends StatelessWidget {
                         fontSize: 12,
                         context: context,
                         fontWeight: FontWeight.w400),
-                  ),
+                  ).tr(),
                   SizedBox(
                     height: 4.pHeight(context),
                   ),

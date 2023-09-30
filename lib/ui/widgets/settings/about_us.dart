@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
@@ -45,32 +46,32 @@ class AboutUsPage extends StatelessWidget {
           SizedBox(
             height: 30.pHeight(context),
           ),
-          const AboutUsTile(
-              title: LocaleKeys.settings_aboutUs_serviceAgreement,
+          AboutUsTile(
+              title: LocaleKeys.settings_aboutUs_serviceAgreement.tr(),
               leading: AssetManager.agreement),
           SizedBox(
             height: 20.pHeight(context),
           ),
-          const AboutUsTile(
-              title: LocaleKeys.settings_aboutUs_likeUsOnFacebook,
-              leading: AssetManager.facebook),
-          SizedBox(
-            height: 20.pHeight(context),
-          ),
-          const AboutUsTile(
-              title: LocaleKeys.settings_aboutUs_followUsOnTwitter,
-              leading: AssetManager.facebook),
-          SizedBox(
-            height: 20.pHeight(context),
-          ),
-          const AboutUsTile(
-              title: LocaleKeys.settings_aboutUs_joinUsOnTelegram,
+          AboutUsTile(
+              title: LocaleKeys.settings_aboutUs_likeUsOnFacebook.tr(),
               leading: AssetManager.facebook),
           SizedBox(
             height: 20.pHeight(context),
           ),
           AboutUsTile(
-            title: LocaleKeys.settings_aboutUs_checkForUpdate,
+              title: LocaleKeys.settings_aboutUs_followUsOnTwitter.tr(),
+              leading: AssetManager.facebook),
+          SizedBox(
+            height: 20.pHeight(context),
+          ),
+          AboutUsTile(
+              title: LocaleKeys.settings_aboutUs_joinUsOnTelegram.tr(),
+              leading: AssetManager.facebook),
+          SizedBox(
+            height: 20.pHeight(context),
+          ),
+          AboutUsTile(
+            title: LocaleKeys.settings_aboutUs_checkForUpdate.tr(),
             leading: AssetManager.refresh,
             isArrowTrailing: false,
             secondaryTrailing: Text(

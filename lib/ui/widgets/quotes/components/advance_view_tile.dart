@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -99,7 +100,7 @@ class _AdvancedViewTileState extends State<AdvancedViewTile> {
                           fontSize: 10, context: context),
                     ),
                     TextSpan(
-                      text: LocaleKeys.spread,
+                      text: LocaleKeys.spread.tr(),
                       style: CustomThemeData.generateColoredStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 10,

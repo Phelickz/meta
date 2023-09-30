@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../app/responsiveness/size.dart';
@@ -20,17 +21,18 @@ class PerfectMoneyPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 verticalSpaceXSmall(context),
-                const LabelTextField(
-                  label: LocaleKeys.emailAddress,
-                  hintText: LocaleKeys.auth_enterEmail,
+                LabelTextField(
+                  label: LocaleKeys.emailAddress.tr(),
+                  hintText: LocaleKeys.auth_enterEmail.tr(),
                 ),
-                const LabelTextField(
-                  label: LocaleKeys.payId,
-                  hintText: LocaleKeys.enterPayId,
+                LabelTextField(
+                  label: LocaleKeys.payId.tr(),
+                  hintText: LocaleKeys.enterPayId.tr(),
                 ),
-                const LabelTextField(
-                  label:
-                      LocaleKeys.fundAccountWidget_onlineBankWidget_accountName,
+                LabelTextField(
+                  label: LocaleKeys
+                      .fundAccountWidget_onlineBankWidget_accountName
+                      .tr(),
                   hintText: "Susan Blake",
                   isEnabled: false,
                 ),
@@ -44,7 +46,7 @@ class PerfectMoneyPage extends StatelessWidget {
             viewModel.paymentMethodPageEnum =
                 PaymentMethodPageEnum.addPaymentMethodSuccess;
           },
-          text: LocaleKeys.save,
+          text: LocaleKeys.save.tr(),
         ),
         verticalSpaceSmall(context),
         verticalSpaceXSmall(context),

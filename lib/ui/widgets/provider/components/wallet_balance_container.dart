@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -35,7 +36,7 @@ class _WalletBalanceContainerState extends State<WalletBalanceContainer> {
               fontWeight: FontWeight.w500,
               color: isDarkMode ? const Color(0xffD0D5DD) : Colors.white,
             ),
-          ),
+          ).tr(),
           SizedBox(
             height: McGyver.rsDoubleH(context, 0.2),
           ),
@@ -92,7 +93,7 @@ class _WalletBalanceContainerState extends State<WalletBalanceContainer> {
                       color:
                           isDarkMode ? const Color(0xffD0D5DD) : Colors.white,
                     ),
-                  ),
+                  ).tr(),
                 ],
               ),
             ],

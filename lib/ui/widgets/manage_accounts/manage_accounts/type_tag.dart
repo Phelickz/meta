@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 
@@ -17,7 +18,7 @@ class TypeTag extends StatelessWidget {
       width: 39.pWidth(context),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.pWidth(context)),
-        color: tag == LocaleKeys.real ? Colors.red : Colors.green,
+        color: tag == LocaleKeys.real.tr() ? Colors.red : Colors.green,
       ),
       child: Center(
         child: Text(

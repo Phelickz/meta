@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
@@ -20,8 +21,9 @@ class HelpAndSupportPage extends StatelessWidget {
         children: [
           verticalSpaceXSmall(context),
           HelpAndSupportTile(
-            title:
-                LocaleKeys.helpAndSupport_helpAndSupportWidget_chatWithCustomer,
+            title: LocaleKeys
+                .helpAndSupport_helpAndSupportWidget_chatWithCustomer
+                .tr(),
             icon: AssetManager.chat,
             onTap: () {
               model.setHelpAndSupportPageEnum =
@@ -29,16 +31,17 @@ class HelpAndSupportPage extends StatelessWidget {
             },
           ),
           HelpAndSupportTile(
-            title:
-                LocaleKeys.helpAndSupport_helpAndSupportWidget_frequentlyAskedQ,
+            title: LocaleKeys
+                .helpAndSupport_helpAndSupportWidget_frequentlyAskedQ
+                .tr(),
             icon: AssetManager.faq,
             onTap: () {
               model.setHelpAndSupportPageEnum = HelpAndSupportPageEnum.faq;
             },
           ),
           HelpAndSupportTile(
-            title:
-                LocaleKeys.helpAndSupport_helpAndSupportWidget_sendUsAMessage,
+            title: LocaleKeys.helpAndSupport_helpAndSupportWidget_sendUsAMessage
+                .tr(),
             // icon: AssetManager.emptyNotifications,
             icon: 'assets/images/message-text.svg',
             onTap: () {

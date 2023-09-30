@@ -1,5 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
@@ -24,7 +25,7 @@ class QuotesPopUpMenu extends StatelessWidget {
       itemBuilder: (context) {
         return <PopupMenuEntry<String>>[
           PopupMenuItem<String>(
-            value: LocaleKeys.simpleView,
+            value: LocaleKeys.simpleView.tr(),
             child: Row(
               children: [
                 SvgPicture.asset(AssetManager.simpleQuoteIcon),
@@ -37,12 +38,12 @@ class QuotesPopUpMenu extends StatelessWidget {
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       context: context),
-                ),
+                ).tr(),
               ],
             ),
           ),
           PopupMenuItem<String>(
-            value: LocaleKeys.advancedView,
+            value: LocaleKeys.advancedView.tr(),
             child: Row(
               children: [
                 SvgPicture.asset(AssetManager.advancedQuoteIcon),
@@ -55,12 +56,12 @@ class QuotesPopUpMenu extends StatelessWidget {
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       context: context),
-                ),
+                ).tr(),
               ],
             ),
           ),
           PopupMenuItem<String>(
-            value: LocaleKeys.modernView,
+            value: LocaleKeys.modernView.tr(),
             child: Row(
               children: [
                 SvgPicture.asset(AssetManager.modernQuoteIcon),
@@ -73,22 +74,22 @@ class QuotesPopUpMenu extends StatelessWidget {
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       context: context),
-                ),
+                ).tr(),
               ],
             ),
           ),
         ];
       },
       onSelected: (String value) {
-        if (value == LocaleKeys.simpleView) {
+        if (value == LocaleKeys.simpleView.tr()) {
           model.setMarketViewEnum = MarketViewEnum.simpleView;
           model.setQuotesPageEnum = QuotesPageEnum.markets;
         }
-        if (value == LocaleKeys.modernView) {
+        if (value == LocaleKeys.modernView.tr()) {
           model.setMarketViewEnum = MarketViewEnum.modernView;
           model.setQuotesPageEnum = QuotesPageEnum.markets;
         }
-        if (value == LocaleKeys.advancedView) {
+        if (value == LocaleKeys.advancedView.tr()) {
           model.setMarketViewEnum = MarketViewEnum.advancedView;
           model.setQuotesPageEnum = QuotesPageEnum.markets;
         }

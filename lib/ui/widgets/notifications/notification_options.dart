@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -24,13 +25,14 @@ class NotificationOptionsBottomSheet extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             CustomButtons.generalButton(
-                context: context,
-                width: 150.pWidth(context),
-                onTap: () {
-                  model.setMarkAllAsRead = true;
-                  Navigator.pop(context);
-                },
-                text: LocaleKeys.notification_markAllAsRead),
+              context: context,
+              width: 150.pWidth(context),
+              onTap: () {
+                model.setMarkAllAsRead = true;
+                Navigator.pop(context);
+              },
+              text: LocaleKeys.notification_markAllAsRead.tr(),
+            ),
             CustomButtons.clearButton(
               context: context,
               width: 150.pWidth(context),
@@ -40,7 +42,7 @@ class NotificationOptionsBottomSheet extends StatelessWidget {
                 model.setNotificationStateEnum = NotificationStateEnum.empty;
                 Navigator.pop(context);
               },
-              text: LocaleKeys.notification_clearAll,
+              text: LocaleKeys.notification_clearAll.tr(),
             )
             // Add other widgets here
           ],

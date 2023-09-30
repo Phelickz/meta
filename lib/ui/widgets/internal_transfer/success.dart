@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -51,12 +52,12 @@ class InternalTransferSuccess extends StatelessWidget {
                   ? const Color(0xFFF2F4F7)
                   : const Color(0xff475467),
             ),
-          ),
+          ).tr(),
           verticalSpaceSmall(context),
           RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
-              text: LocaleKeys.internalTransfer_successWidget_fiveHunUSD,
+              text: LocaleKeys.internalTransfer_successWidget_fiveHunUSD.tr(),
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.5),
                 fontWeight: FontWeight.w500,
@@ -72,7 +73,7 @@ class InternalTransferSuccess extends StatelessWidget {
             onTap: () {
               model.push(const BottomNavBarRoute());
             },
-            text: LocaleKeys.close,
+            text: LocaleKeys.close.tr(),
           ),
         ],
       ),

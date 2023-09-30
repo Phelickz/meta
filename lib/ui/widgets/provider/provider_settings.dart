@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
@@ -32,7 +33,8 @@ class ProviderSettingsPage extends StatelessWidget {
               height: 24.pHeight(context),
             ),
             LabelTextField(
-              label: LocaleKeys.fundAccountWidget_onlineBankWidget_accountName,
+              label: LocaleKeys.fundAccountWidget_onlineBankWidget_accountName
+                  .tr(),
               hintText: viewModel.accountName,
               isEnabled: false,
             ),
@@ -44,7 +46,7 @@ class ProviderSettingsPage extends StatelessWidget {
                 viewModel.showCustomDialog(context);
               },
               isReadOnly: true,
-              label: LocaleKeys.nickName,
+              label: LocaleKeys.nickName.tr(),
               hintText: viewModel.nickname,
               suffixIcon: Transform.scale(
                   scale: 0.6, child: SvgPicture.asset(AssetManager.edit)),
@@ -72,14 +74,14 @@ class ProviderSettingsPage extends StatelessWidget {
                 viewModel.showCustomDialog(context);
               },
               isReadOnly: true,
-              label: LocaleKeys.phoneNumber,
+              label: LocaleKeys.phoneNumber.tr(),
               hintText: viewModel.phoneNumber,
               suffixIcon: Transform.scale(
                   scale: 0.6, child: SvgPicture.asset(AssetManager.edit)),
             ),
             verticalSpaceXSmall(context),
             Text(
-              LocaleKeys.strategyDescriptionText,
+              LocaleKeys.strategyDescriptionText.tr(),
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 fontWeight: FontWeight.w500,
@@ -122,7 +124,8 @@ class ProviderSettingsPage extends StatelessWidget {
             verticalSpaceSmall(context),
             LabelTextField(
               label: LocaleKeys
-                  .providerWidget_providerSettings_desiredFeeCommission,
+                  .providerWidget_providerSettings_desiredFeeCommission
+                  .tr(),
               hintText: "${viewModel.desiredFee}%",
               suffixIcon: IconButton(
                 onPressed: () {},
@@ -133,10 +136,11 @@ class ProviderSettingsPage extends StatelessWidget {
               height: 16.pHeight(context),
             ),
             LabelTextField(
-              label:
-                  LocaleKeys.providerWidget_providerSettings_publicVisibility,
-              hintText:
-                  LocaleKeys.providerWidget_providerSettings_visibilityPublic,
+              label: LocaleKeys.providerWidget_providerSettings_publicVisibility
+                  .tr(),
+              hintText: LocaleKeys
+                  .providerWidget_providerSettings_visibilityPublic
+                  .tr(),
               suffixIcon: Switch.adaptive(
                   value: viewModel.visibility,
                   onChanged: (bool visibility) {
@@ -152,7 +156,7 @@ class ProviderSettingsPage extends StatelessWidget {
             CustomButtons.generalButton(
               context: context,
               onTap: () {},
-              text: LocaleKeys.providerWidget_providerSettings_saveChanges,
+              text: LocaleKeys.providerWidget_providerSettings_saveChanges.tr(),
               width: double.infinity,
               textSize: 1.8,
             ),

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
@@ -57,7 +58,8 @@ class MessageBottomSheet extends StatelessWidget {
                           )),
                     ),
                     hintText: LocaleKeys
-                        .helpAndSupport_components_messageBottomSheet_writeYourMessage,
+                        .helpAndSupport_components_messageBottomSheet_writeYourMessage
+                        .tr(),
                   )),
               SizedBox(
                 height: 24.pHeight(context),

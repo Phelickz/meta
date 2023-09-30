@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import '../../../app/responsiveness/res.dart';
 import '../../../app/responsiveness/size.dart';
@@ -26,17 +27,18 @@ class BitcoinPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     verticalSpaceXSmall(context),
-                    const LabelTextField(
-                      label: LocaleKeys.walletAddress,
+                    LabelTextField(
+                      label: LocaleKeys.walletAddress.tr(),
                       hintText: LocaleKeys
-                          .paymentMethod_bitcoinWidgetP_enterBitcoinWallet,
+                          .paymentMethod_bitcoinWidgetP_enterBitcoinWallet
+                          .tr(),
                     ),
                     LabelDropdown(
-                      value: LocaleKeys.btcBeacon,
-                      label: LocaleKeys.chooseNetwork,
-                      options: const [
-                        LocaleKeys.btcBeacon,
-                        LocaleKeys.btcBeanBEP3,
+                      value: LocaleKeys.btcBeacon.tr(),
+                      label: LocaleKeys.chooseNetwork.tr(),
+                      options: [
+                        LocaleKeys.btcBeacon.tr(),
+                        LocaleKeys.btcBeanBEP3.tr(),
                       ],
                       onChanged: (val) {
                         // viewModel.onChanged(val);
@@ -57,7 +59,7 @@ class BitcoinPage extends StatelessWidget {
                 viewModel.paymentMethodPageEnum =
                     PaymentMethodPageEnum.addPaymentMethodSuccess;
               },
-              text: LocaleKeys.save,
+              text: LocaleKeys.save.tr(),
             ),
           ),
           verticalSpaceSmall(context),

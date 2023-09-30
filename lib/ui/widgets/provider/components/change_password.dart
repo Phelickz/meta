@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
@@ -30,23 +31,26 @@ class ChangePassword extends StatelessWidget {
             LocaleKeys.changePassword,
             style: CustomThemeData.generateColoredStyle(
                 fontSize: 14, context: context),
-          ),
+          ).tr(),
           SizedBox(
             height: 20.pHeight(context),
           ),
-          const LabelPasswordField(
-            label: LocaleKeys.password,
-            hintText:
-                LocaleKeys.manageAccounts_existingAccountsForm_enterNewPassword,
+          LabelPasswordField(
+            label: LocaleKeys.password.tr(),
+            hintText: LocaleKeys
+                .manageAccounts_existingAccountsForm_enterNewPassword
+                .tr(),
           ),
           SizedBox(
             height: 12.pHeight(context),
           ),
-          const LabelPasswordField(
+          LabelPasswordField(
             label: LocaleKeys
-                .providerWidget_providerComponent_changePasswordWidget_confirmPassword,
-            hintText:
-                LocaleKeys.manageAccounts_existingAccountsForm_reEnterPassword,
+                .providerWidget_providerComponent_changePasswordWidget_confirmPassword
+                .tr(),
+            hintText: LocaleKeys
+                .manageAccounts_existingAccountsForm_reEnterPassword
+                .tr(),
           ),
           SizedBox(
             height: 60.pHeight(context),
@@ -56,7 +60,7 @@ class ChangePassword extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
             },
-            text: LocaleKeys.confirm,
+            text: LocaleKeys.confirm.tr(),
           )
         ],
       ),

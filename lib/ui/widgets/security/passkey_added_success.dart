@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../app/responsiveness/res.dart';
@@ -44,7 +45,7 @@ class PasskeyAddedSuccessPage extends StatelessWidget {
                   ? const Color(0xFFF2F4F7)
                   : const Color(0xff475467),
             ),
-          ),
+          ).tr(),
         ),
         verticalSpaceSmall(context),
         Padding(
@@ -54,8 +55,9 @@ class PasskeyAddedSuccessPage extends StatelessWidget {
           child: RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
-                text:
-                    LocaleKeys.securityWidget_passkeyAddedSuccess_yourPasskeyIs,
+                text: LocaleKeys
+                    .securityWidget_passkeyAddedSuccess_yourPasskeyIs
+                    .tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   fontWeight: FontWeight.w500,
@@ -74,9 +76,10 @@ class PasskeyAddedSuccessPage extends StatelessWidget {
                           : const Color(0xff77C5F8),
                     ),
                   ),
-                  const TextSpan(
+                  TextSpan(
                     text: LocaleKeys
-                        .securityWidget_passkeyAddedSuccess_pleaseKeepThisPasskey,
+                        .securityWidget_passkeyAddedSuccess_pleaseKeepThisPasskey
+                        .tr(),
                   )
                 ]),
           ),
@@ -87,7 +90,7 @@ class PasskeyAddedSuccessPage extends StatelessWidget {
           onTap: () {
             model.securityPageEnum = SecurityPageEnum.passkey;
           },
-          text: LocaleKeys.continueWord,
+          text: LocaleKeys.continueWord.tr(),
         ),
       ],
     );

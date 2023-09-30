@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 
@@ -52,7 +53,7 @@ class EmailVerifiedSuccessPage extends StatelessWidget {
                   ? const Color(0xFFF2F4F7)
                   : const Color(0xff475467),
             ),
-          ),
+          ).tr(),
         ),
         verticalSpaceSmall(context),
         Padding(
@@ -62,7 +63,7 @@ class EmailVerifiedSuccessPage extends StatelessWidget {
           child: RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
-                text: LocaleKeys.yourEmailAccount,
+                text: LocaleKeys.yourEmailAccount.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
                   fontWeight: FontWeight.w500,
@@ -81,8 +82,8 @@ class EmailVerifiedSuccessPage extends StatelessWidget {
                           : const Color(0xff77C5F8),
                     ),
                   ),
-                  const TextSpan(
-                    text: LocaleKeys.hasBeenVerified,
+                  TextSpan(
+                    text: LocaleKeys.hasBeenVerified.tr(),
                   )
                 ]),
           ),
@@ -93,7 +94,7 @@ class EmailVerifiedSuccessPage extends StatelessWidget {
           onTap: () {
             model.securityPageEnum = SecurityPageEnum.addPasskeyEnter;
           },
-          text: LocaleKeys.continueWord,
+          text: LocaleKeys.continueWord.tr(),
         ),
       ],
     );

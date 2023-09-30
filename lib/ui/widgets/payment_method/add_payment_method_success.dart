@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 
@@ -49,14 +50,14 @@ class AddPaymentMethodSuccessPage extends StatelessWidget {
                   ? const Color(0xFFF2F4F7)
                   : const Color(0xff475467),
             ),
-          ),
+          ).tr(),
         ),
         verticalSpaceSmall(context),
         RichText(
           textAlign: TextAlign.center,
           text: TextSpan(
-            text:
-                LocaleKeys.paymentMethod_addPaymentMethodSuccess_nowYouCanMake,
+            text: LocaleKeys.paymentMethod_addPaymentMethodSuccess_nowYouCanMake
+                .tr(),
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 2),
               fontWeight: FontWeight.w500,
@@ -74,9 +75,10 @@ class AddPaymentMethodSuccessPage extends StatelessWidget {
                   color: const Color(0xff77C5F8),
                 ),
               ),
-              const TextSpan(
+              TextSpan(
                 text: LocaleKeys
-                    .paymentMethod_addPaymentMethodSuccess_usingInformation,
+                    .paymentMethod_addPaymentMethodSuccess_usingInformation
+                    .tr(),
               )
             ],
           ),
@@ -87,7 +89,7 @@ class AddPaymentMethodSuccessPage extends StatelessWidget {
           onTap: () {
             viewModel.paymentMethodPageEnum = PaymentMethodPageEnum.main;
           },
-          text: LocaleKeys.continueWord,
+          text: LocaleKeys.continueWord.tr(),
         ),
       ],
     );

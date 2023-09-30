@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -36,12 +37,12 @@ class SettingsPage extends StatelessWidget {
                 color: isDarkMode ? Colors.white54 : const Color(0xff667085),
                 fontWeight: FontWeight.w900,
               ),
-            ),
+            ).tr(),
             SizedBox(
               height: 28.pHeight(context),
             ),
             BasicSettingsTile(
-              title: LocaleKeys.settings_settingsPage_pushNotification,
+              title: LocaleKeys.settings_settingsPage_pushNotification.tr(),
               onTap: () {
                 model.setSettingsPageEnum =
                     SettingsPageEnum.notificationSettings;
@@ -49,7 +50,7 @@ class SettingsPage extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             BasicSettingsTile(
-              title: LocaleKeys.language,
+              title: LocaleKeys.language.tr(),
               onTap: () {
                 model.setSettingsPageEnum = SettingsPageEnum.languageSettings;
               },
@@ -64,19 +65,19 @@ class SettingsPage extends StatelessWidget {
                 color: isDarkMode ? Colors.white54 : const Color(0xff667085),
                 fontWeight: FontWeight.w900,
               ),
-            ),
+            ).tr(),
             SizedBox(
               height: 28.pHeight(context),
             ),
             NotificationSettingsTile(
-              title: LocaleKeys.settings_settingsPage_useDeviceTheme,
+              title: LocaleKeys.settings_settingsPage_useDeviceTheme.tr(),
               value: model.isSystemMode(context),
               onChanged: (value) {
                 model.toggleThemeModeSystem(context);
               },
             ),
             NotificationSettingsTile(
-              title: LocaleKeys.settings_settingsPage_darkMode,
+              title: LocaleKeys.settings_settingsPage_darkMode.tr(),
               value: CustomThemeData.isDarkMode(context),
               onChanged: (value) {
                 model.toggleThemeMode(context);
@@ -84,14 +85,14 @@ class SettingsPage extends StatelessWidget {
             ),
             verticalSpaceXSmall(context),
             BasicSettingsTile(
-              title: LocaleKeys.chartColor,
+              title: LocaleKeys.chartColor.tr(),
               onTap: () {
                 model.setSettingsPageEnum = SettingsPageEnum.chartColor;
               },
             ),
             verticalSpaceSmall(context),
             BasicSettingsTile(
-              title: LocaleKeys.colorPreference,
+              title: LocaleKeys.colorPreference.tr(),
               onTap: () {
                 model.setSettingsPageEnum = SettingsPageEnum.colorPreference;
               },
@@ -106,10 +107,10 @@ class SettingsPage extends StatelessWidget {
                 color: isDarkMode ? Colors.white54 : const Color(0xff667085),
                 fontWeight: FontWeight.w900,
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             BasicSettingsTile(
-              title: LocaleKeys.settings_changeBasis,
+              title: LocaleKeys.settings_changeBasis.tr(),
               onTap: () {
                 model.setSettingsPageEnum = SettingsPageEnum.changeBasis;
               },
@@ -124,10 +125,10 @@ class SettingsPage extends StatelessWidget {
                 color: isDarkMode ? Colors.white54 : const Color(0xff667085),
                 fontWeight: FontWeight.w900,
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             BasicSettingsTile(
-              title: LocaleKeys.privacyPolicyText,
+              title: LocaleKeys.privacyPolicyText.tr(),
               isArrowTrailing: false,
               secondaryTrailing: const SizedBox(),
               onTap: () {
@@ -136,14 +137,14 @@ class SettingsPage extends StatelessWidget {
             ),
             verticalSpaceSmall(context),
             BasicSettingsTile(
-              title: LocaleKeys.aboutUs,
+              title: LocaleKeys.aboutUs.tr(),
               onTap: () {
                 model.setSettingsPageEnum = SettingsPageEnum.aboutUs;
               },
             ),
             verticalSpaceSmall(context),
             BasicSettingsTile(
-              title: LocaleKeys.settings_settingsPage_currentVersion,
+              title: LocaleKeys.settings_settingsPage_currentVersion.tr(),
               isArrowTrailing: false,
               secondaryTrailing: const SizedBox(),
               onTap: () {

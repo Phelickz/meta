@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
@@ -26,9 +27,10 @@ class TradeAppbarExtension extends StatelessWidget {
               horizontal: McGyver.rsDoubleW(context, 5),
               vertical: 12,
             ),
-            child: const CustomTextFields(
-              hintText:
-                  LocaleKeys.quotesWidget_components_tradeAppBar_marketExec,
+            child: CustomTextFields(
+              hintText: LocaleKeys
+                  .quotesWidget_components_tradeAppBar_marketExec
+                  .tr(),
             ),
           ),
         ),

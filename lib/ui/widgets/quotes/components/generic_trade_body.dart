@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -33,7 +34,7 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
             color: isDarkMode ? ColorManager.darkText : const Color(0xFF98A2B3),
             fontWeight: FontWeight.bold,
           ),
-        ),
+        ).tr(),
         SizedBox(
           height: 8.pHeight(context),
         ),
@@ -58,7 +59,7 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
                             ? ColorManager.darkText
                             : const Color(0xFF98A2B3),
                         fontWeight: FontWeight.bold),
-                  ),
+                  ).tr(),
                   SizedBox(
                     height: 8.pHeight(context),
                   ),
@@ -86,7 +87,7 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
                             ? ColorManager.darkText
                             : const Color(0xFF98A2B3),
                         fontWeight: FontWeight.bold),
-                  ),
+                  ).tr(),
                   SizedBox(
                     height: 8.pHeight(context),
                   ),
@@ -106,7 +107,7 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
               color:
                   isDarkMode ? ColorManager.darkText : const Color(0xFF98A2B3),
               fontWeight: FontWeight.bold),
-        ),
+        ).tr(),
         SizedBox(
           height: 8.pHeight(context),
         ),
@@ -125,7 +126,7 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
                 fontSize: McGyver.textSize(context, 1.6),
                 color: const Color(0xff98A2B3),
                 fontWeight: FontWeight.w400),
-          ),
+          ).tr(),
         ),
 
         SizedBox(
@@ -150,12 +151,13 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(LocaleKeys.duration,
-                        style: CustomThemeData.generateStyle(
-                            fontSize: McGyver.textSize(context, 1.6),
-                            color: isDarkMode
-                                ? Colors.white
-                                : const Color(0xFF98A2B3),
-                            fontWeight: FontWeight.w400)),
+                            style: CustomThemeData.generateStyle(
+                                fontSize: McGyver.textSize(context, 1.6),
+                                color: isDarkMode
+                                    ? Colors.white
+                                    : const Color(0xFF98A2B3),
+                                fontWeight: FontWeight.w400))
+                        .tr(),
                     CupertinoSwitch(
                       value: isToggle,
                       onChanged: (_) {
@@ -240,10 +242,11 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(LocaleKeys.duration,
-                    style: CustomThemeData.generateStyle(
-                        fontSize: McGyver.textSize(context, 2.2),
-                        color: isDarkMode ? Colors.white : Colors.black54,
-                        fontWeight: FontWeight.w400)),
+                        style: CustomThemeData.generateStyle(
+                            fontSize: McGyver.textSize(context, 2.2),
+                            color: isDarkMode ? Colors.white : Colors.black54,
+                            fontWeight: FontWeight.w400))
+                    .tr(),
                 CupertinoSwitch(
                   value: isToggle,
                   activeColor: const Color(0xFF0C95EF),
@@ -284,7 +287,7 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
                                       ? ColorManager.darkText
                                       : const Color(0xFF98A2B3),
                                   fontWeight: FontWeight.w500),
-                            ),
+                            ).tr(),
                             SizedBox(
                               height: 8.pHeight(context),
                             ),
@@ -309,7 +312,7 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
                                       ? ColorManager.darkText
                                       : const Color(0xFF98A2B3),
                                   fontWeight: FontWeight.bold),
-                            ),
+                            ).tr(),
                             SizedBox(
                               height: 10.pHeight(context),
                             ),
@@ -330,7 +333,7 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
                             ? const Color(0xFF98A2B3)
                             : const Color(0xFF20A0F3),
                         fontWeight: FontWeight.w400),
-                  ),
+                  ).tr(),
                   SizedBox(
                     height: 10.pHeight(context),
                   )
@@ -354,12 +357,13 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
           ),
           child: Center(
               child: Text(
-                  LocaleKeys
-                      .quotesWidget_components_genericTradeBody_sellByMarket,
-                  style: CustomThemeData.generateStyle(
-                      fontSize: McGyver.textSize(context, 1.4),
-                      color: Colors.white,
-                      fontWeight: FontWeight.w400))),
+                      LocaleKeys
+                          .quotesWidget_components_genericTradeBody_sellByMarket,
+                      style: CustomThemeData.generateStyle(
+                          fontSize: McGyver.textSize(context, 1.4),
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400))
+                  .tr()),
         ),
       );
     });
@@ -378,12 +382,13 @@ class _GenericTradeBodyState extends State<GenericTradeBody> {
           ),
           child: Center(
               child: Text(
-                  LocaleKeys
-                      .quotesWidget_components_genericTradeBody_buyByMarket,
-                  style: CustomThemeData.generateStyle(
-                      fontSize: McGyver.textSize(context, 1.4),
-                      color: Colors.white,
-                      fontWeight: FontWeight.w400))),
+                      LocaleKeys
+                          .quotesWidget_components_genericTradeBody_buyByMarket,
+                      style: CustomThemeData.generateStyle(
+                          fontSize: McGyver.textSize(context, 1.4),
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400))
+                  .tr()),
         ),
       );
     });

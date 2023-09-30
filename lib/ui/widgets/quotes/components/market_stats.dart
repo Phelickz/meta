@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -13,50 +14,54 @@ class MarketStats extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        viewTile(LocaleKeys.quotesWidget_components_marketStats_initialMargin,
-            "2", false),
-        SizedBox(
-          height: 20.pHeight(context),
-        ),
-        viewTile(LocaleKeys.bid, "3.1", true),
-        SizedBox(
-          height: 20.pHeight(context),
-        ),
-        viewTile(LocaleKeys.quotesWidget_components_marketStats_bigHigh, "4.55",
-            true),
-        SizedBox(
-          height: 20.pHeight(context),
-        ),
         viewTile(
-            LocaleKeys.quotesWidget_components_marketStats_bigLow, "0", false),
-        SizedBox(
-          height: 20.pHeight(context),
-        ),
-        viewTile(LocaleKeys.ask, "1.4", false),
-        SizedBox(
-          height: 20.pHeight(context),
-        ),
-        viewTile(LocaleKeys.quotesWidget_components_marketStats_askHigh, "1.33",
+            LocaleKeys.quotesWidget_components_marketStats_initialMargin.tr(),
+            "2",
             false),
         SizedBox(
           height: 20.pHeight(context),
         ),
-        viewTile(
-            LocaleKeys.quotesWidget_components_marketStats_askLow, "0.3", true),
+        viewTile(LocaleKeys.bid.tr(), "3.1", true),
         SizedBox(
           height: 20.pHeight(context),
         ),
-        viewTile(LocaleKeys.quotesWidget_components_marketStats_priceChange,
+        viewTile(LocaleKeys.quotesWidget_components_marketStats_bigHigh.tr(),
+            "4.55", true),
+        SizedBox(
+          height: 20.pHeight(context),
+        ),
+        viewTile(LocaleKeys.quotesWidget_components_marketStats_bigLow.tr(),
+            "0", false),
+        SizedBox(
+          height: 20.pHeight(context),
+        ),
+        viewTile(LocaleKeys.ask.tr(), "1.4", false),
+        SizedBox(
+          height: 20.pHeight(context),
+        ),
+        viewTile(LocaleKeys.quotesWidget_components_marketStats_askHigh.tr(),
+            "1.33", false),
+        SizedBox(
+          height: 20.pHeight(context),
+        ),
+        viewTile(LocaleKeys.quotesWidget_components_marketStats_askLow.tr(),
             "0.3", true),
         SizedBox(
           height: 20.pHeight(context),
         ),
         viewTile(
-            LocaleKeys.views_priceCalculatorView_openingPrice, "2.1", false),
+            LocaleKeys.quotesWidget_components_marketStats_priceChange.tr(),
+            "0.3",
+            true),
         SizedBox(
           height: 20.pHeight(context),
         ),
-        viewTile(LocaleKeys.quotesWidget_components_marketStats_closePrice,
+        viewTile(LocaleKeys.views_priceCalculatorView_openingPrice.tr(), "2.1",
+            false),
+        SizedBox(
+          height: 20.pHeight(context),
+        ),
+        viewTile(LocaleKeys.quotesWidget_components_marketStats_closePrice.tr(),
             "2.3", true),
       ],
     );

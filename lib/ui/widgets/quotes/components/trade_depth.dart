@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -32,16 +33,16 @@ class TradeDepthGrid extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Expanded(
-                  child: genericButton(
-                      () => null, LocaleKeys.sell, const Color(0xFFF04438))),
+                  child: genericButton(() => null, LocaleKeys.sell.tr(),
+                      const Color(0xFFF04438))),
               SizedBox(width: 17.pWidth(context)),
               Expanded(
-                  child: genericButton(
-                      () => null, LocaleKeys.close, const Color(0xFF475467))),
+                  child: genericButton(() => null, LocaleKeys.close.tr(),
+                      const Color(0xFF475467))),
               SizedBox(width: 17.pWidth(context)),
               Expanded(
-                  child: genericButton(
-                      () => null, LocaleKeys.buy, const Color(0xFF0C95EF))),
+                  child: genericButton(() => null, LocaleKeys.buy.tr(),
+                      const Color(0xFF0C95EF))),
             ],
           ),
           verticalSpaceMedium(context),

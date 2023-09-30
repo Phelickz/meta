@@ -219,13 +219,13 @@ PreferredSize profileAppBar(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    LocaleKeys.welcome.tr(args: [' ${model.userName}']),
+                    LocaleKeys.welcome,
                     style: CustomThemeData.generateStyle(
                       fontSize: 18,
                       color: isDarkMode ? Colors.white : Colors.white,
                       fontWeight: FontWeight.w700,
                     ),
-                  ),
+                  ).tr(args: [' ${model.userName}']),
                   const SizedBox(
                     height: 4,
                   ),
@@ -267,8 +267,8 @@ PreferredSize profileAppBar(
                       isDarkMode
                           ? Text(
                               isVerified
-                                  ? LocaleKeys.verified
-                                  : LocaleKeys.unVerified,
+                                  ? LocaleKeys.verified.tr()
+                                  : LocaleKeys.unVerified.tr(),
                               style: CustomThemeData.generateStyle(
                                 fontSize: 14,
                                 color: Colors.red[400]!,
@@ -286,8 +286,8 @@ PreferredSize profileAppBar(
                                   children: [
                                     Text(
                                       isVerified
-                                          ? LocaleKeys.verified
-                                          : LocaleKeys.unVerified,
+                                          ? LocaleKeys.verified.tr()
+                                          : LocaleKeys.unVerified.tr(),
                                       style: CustomThemeData.generateStyle(
                                         fontSize: 9,
                                         color: isVerified

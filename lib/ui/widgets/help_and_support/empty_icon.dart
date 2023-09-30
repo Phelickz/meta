@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -47,7 +48,7 @@ class CustomerSupportEmptyIcon extends StatelessWidget {
               fontSize: McGyver.textSize(context, 1.6),
               color: isDarkMode ? Colors.white : const Color(0xff667085),
               fontWeight: FontWeight.w400,
-            ))
+            )).tr()
       ],
     );
   }

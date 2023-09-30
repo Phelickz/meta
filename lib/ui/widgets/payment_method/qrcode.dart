@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../app/responsiveness/res.dart';
@@ -36,7 +37,7 @@ class QrcodePage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       color: const Color(0xFFD0D5DD),
                     ),
-                  ),
+                  ).tr(),
                 ],
               ),
               verticalSpaceMedium(context),
@@ -61,7 +62,7 @@ class QrcodePage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       color: const Color(0xFFD0D5DD),
                     ),
-                  ),
+                  ).tr(),
                 ],
               ),
               verticalSpaceSmall(context),
@@ -70,7 +71,7 @@ class QrcodePage extends StatelessWidget {
                 onTap: () {
                   //TODO:
                 },
-                text: LocaleKeys.enterPayId,
+                text: LocaleKeys.enterPayId.tr(),
               ),
               verticalSpaceSmall(context),
               verticalSpaceXSmall(context),

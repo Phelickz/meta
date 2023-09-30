@@ -2,6 +2,7 @@
 
 import 'dart:io';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -42,7 +43,7 @@ AppBar maanageAccountAppBar(
           fontSize: McGyver.textSize(context, 2),
           color: isDarkMode ? Colors.white : Colors.white,
           fontWeight: FontWeight.bold),
-    ),
+    ).tr(),
     actions: [
       Padding(
         padding: EdgeInsets.only(right: 24.pWidth(context)),
@@ -128,7 +129,7 @@ class ManageAppbarExtension extends StatelessWidget {
                     fontSize: McGyver.textSize(context, 1.2),
                     color: isDarkMode ? Colors.white : Colors.white,
                     fontWeight: FontWeight.w300),
-              ),
+              ).tr(),
               SizedBox(
                 height: 8.pHeight(context),
               ),
@@ -152,7 +153,7 @@ class ManageAppbarExtension extends StatelessWidget {
               SizedBox(
                 height: 4.pHeight(context),
               ),
-              const StatusTag(status: LocaleKeys.active, color: Colors.green),
+              StatusTag(status: LocaleKeys.active.tr(), color: Colors.green),
             ],
           ),
           const Spacer(),
@@ -163,7 +164,7 @@ class ManageAppbarExtension extends StatelessWidget {
               SizedBox(
                 height: 8.pHeight(context),
               ),
-              const TypeTag(tag: LocaleKeys.real),
+              TypeTag(tag: LocaleKeys.real.tr()),
               SizedBox(
                 height: 8.pHeight(context),
               ),
@@ -184,7 +185,7 @@ class ManageAppbarExtension extends StatelessWidget {
                     fontSize: McGyver.textSize(context, 1),
                     color: isDarkMode ? Colors.white : Colors.white,
                     fontWeight: FontWeight.w400),
-              ),
+              ).tr(),
             ],
           )
         ],

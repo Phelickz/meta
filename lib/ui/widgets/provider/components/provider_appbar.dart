@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -130,7 +131,7 @@ class ProviderAppbar {
                     fontSize: 13,
                     color: Colors.white,
                   ),
-                ),
+                ).tr(),
               ),
             ],
           ),

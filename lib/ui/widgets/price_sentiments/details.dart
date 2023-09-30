@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -24,7 +25,7 @@ class PriceSentimentDetails extends StatelessWidget {
       appBar: globalAppBar(
         context,
         model.selectedPrice,
-        LocaleKeys.priceSentiments,
+        LocaleKeys.priceSentiments.tr(),
         () {
           Navigator.pop(context);
         },
@@ -66,7 +67,7 @@ class PriceSentimentDetails extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: isDarkMode ? Colors.white : const Color(0xff475467),
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             _summaryActivity(context, model),
             // Container(
@@ -90,7 +91,7 @@ class PriceSentimentDetails extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: isDarkMode ? Colors.white : const Color(0xff475467),
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             _summaryActivity(context, model),
             // Container(
@@ -114,7 +115,7 @@ class PriceSentimentDetails extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: isDarkMode ? Colors.white : const Color(0xff475467),
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             _summaryActivity(context, model),
             // Container(
@@ -138,7 +139,7 @@ class PriceSentimentDetails extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: isDarkMode ? Colors.white : const Color(0xff475467),
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             _summaryActivity(context, model),
             // Container(
@@ -193,7 +194,7 @@ class PriceSentimentDetails extends StatelessWidget {
                         ? const Color(0xFFFFFFFF)
                         : const Color(0xFF475467),
                   ),
-                ),
+                ).tr(),
                 CustomOverviewSummaryTab(
                   firstTabName: "2W",
                   secondTabName: "1M",
@@ -236,7 +237,7 @@ class PriceSentimentDetails extends StatelessWidget {
     return SfCartesianChart(
       primaryXAxis: CategoryAxis(
         title: AxisTitle(
-          text: LocaleKeys.days,
+          text: LocaleKeys.days.tr(),
           textStyle: CustomThemeData.generateStyle(
             fontSize: McGyver.textSize(context, 1.5),
             fontWeight: FontWeight.bold,
@@ -271,7 +272,7 @@ class PriceSentimentDetails extends StatelessWidget {
           color: isDarkMode ? const Color(0xFFFFFFFF) : const Color(0xFF667085),
         ),
         title: AxisTitle(
-          text: LocaleKeys.priceSentimentWidget_details_priceMovement,
+          text: LocaleKeys.priceSentimentWidget_details_priceMovement.tr(),
           textStyle: CustomThemeData.generateStyle(
             fontSize: McGyver.textSize(context, 1.5),
             fontWeight: FontWeight.bold,
@@ -299,7 +300,7 @@ class PriceSentimentDetails extends StatelessWidget {
           dataSource: viewModel.activityChartData,
           xValueMapper: (ActivityChartData sales, _) => sales.day,
           yValueMapper: (ActivityChartData sales, _) => sales.price,
-          name: LocaleKeys.price,
+          name: LocaleKeys.price.tr(),
         ),
       ],
     );

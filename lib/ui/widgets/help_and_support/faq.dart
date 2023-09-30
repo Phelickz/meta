@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -24,7 +25,7 @@ class FAQPage extends StatelessWidget {
           Text(
             LocaleKeys.helpAndSupport_faqWidget_ourFaq,
             style: Theme.of(context).textTheme.bodyLarge,
-          ),
+          ).tr(),
           SizedBox(height: 16.pHeight(context)),
           Expanded(
             child: ListView.builder(

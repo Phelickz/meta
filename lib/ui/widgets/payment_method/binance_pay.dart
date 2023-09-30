@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../app/responsiveness/size.dart';
@@ -19,14 +20,15 @@ class BinancePayPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               verticalSpaceXSmall(context),
-              const LabelTextField(
-                label: LocaleKeys.name,
+              LabelTextField(
+                label: LocaleKeys.name.tr(),
                 hintText: LocaleKeys
-                    .paymentMethod_binancePayWidgetP_enterWalletInformation,
+                    .paymentMethod_binancePayWidgetP_enterWalletInformation
+                    .tr(),
               ),
-              const LabelTextField(
-                label: LocaleKeys.payId,
-                hintText: LocaleKeys.enterPayId,
+              LabelTextField(
+                label: LocaleKeys.payId.tr(),
+                hintText: LocaleKeys.enterPayId.tr(),
               ),
             ],
           ),

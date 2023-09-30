@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -51,7 +52,7 @@ class LoyaltyRewardCard extends StatelessWidget {
                                 style: CustomThemeData.generateStyle(
                                   fontSize: McGyver.textSize(context, 1.2),
                                 ),
-                              ),
+                              ).tr(),
                               verticalSpaceXSmall(context),
                               Text(
                                 LocaleKeys
@@ -60,7 +61,7 @@ class LoyaltyRewardCard extends StatelessWidget {
                                   fontSize: McGyver.textSize(context, 2.4),
                                   fontWeight: FontWeight.bold,
                                 ),
-                              ),
+                              ).tr(),
                             ],
                           ),
                         ),
@@ -85,7 +86,7 @@ class LoyaltyRewardCard extends StatelessWidget {
                             fontSize: McGyver.textSize(context, 1.4),
                             // fontWeight: FontWeight.w500,
                           ),
-                        ),
+                        ).tr(),
                       ),
                     ),
                     verticalSpaceXXSmall(context),
@@ -161,21 +162,21 @@ class LoyaltyRewardCard extends StatelessWidget {
                               fontSize: McGyver.textSize(context, 1.4),
                               fontWeight: FontWeight.w500,
                             ),
-                          ),
+                          ).tr(),
                           Text(
                             LocaleKeys.gold,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.4),
                               fontWeight: FontWeight.w500,
                             ),
-                          ),
+                          ).tr(),
                           Text(
                             LocaleKeys.platinum,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.4),
                               fontWeight: FontWeight.w500,
                             ),
-                          ),
+                          ).tr(),
                         ],
                       ),
                     ),

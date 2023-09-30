@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -53,7 +54,7 @@ class ChangePasswordModal extends StatelessWidget {
                   ? const Color(0xFFD0D5DD)
                   : const Color(0xFF475467),
             ),
-          ),
+          ).tr(),
           verticalSpaceXSmall(context),
           Padding(
             padding: EdgeInsets.symmetric(
@@ -70,11 +71,11 @@ class ChangePasswordModal extends StatelessWidget {
                     ? const Color(0xFFD0D5DD)
                     : const Color(0xFF667085),
               ),
-            ),
+            ).tr(),
           ),
           verticalSpaceMedium(context),
           CustomButtons.generalButton(
-            text: LocaleKeys.continueWord,
+            text: LocaleKeys.continueWord.tr(),
             context: context,
             onTap: () {
               Navigator.pop(context);

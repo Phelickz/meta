@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -27,7 +28,7 @@ class MarketNews extends StatelessWidget {
                         fontSize: 12,
                         color: isDarkMode ? Colors.white60 : Colors.black45,
                       ),
-                    ),
+                    ).tr(),
                     const Padding(
                       padding: EdgeInsets.all(4.0),
                       child: CircleAvatar(
@@ -40,7 +41,7 @@ class MarketNews extends StatelessWidget {
                         fontSize: 12,
                         color: isDarkMode ? Colors.white60 : Colors.black45,
                       ),
-                    ),
+                    ).tr(),
                     const Padding(
                       padding: EdgeInsets.all(4.0),
                       child: CircleAvatar(
@@ -53,7 +54,7 @@ class MarketNews extends StatelessWidget {
                         fontSize: 12,
                         color: isDarkMode ? Colors.blue : Colors.blue,
                       ),
-                    ),
+                    ).tr(),
                   ],
                 ),
                 verticalSpaceXSmall(context),
@@ -63,7 +64,7 @@ class MarketNews extends StatelessWidget {
                     fontSize: McGyver.textSize(context, 1.4),
                     color: isDarkMode ? ColorManager.darkText : Colors.black45,
                   ),
-                ),
+                ).tr(),
               ],
             ),
           ),

@@ -2,6 +2,7 @@
 
 import 'dart:io';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -106,7 +107,7 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
                         fontSize: 13,
                         color: Colors.white,
                       ),
-                    ),
+                    ).tr(),
                   ),
                   TextButton(
                     style: model.quotesPageEnum == QuotesPageEnum.favorites
@@ -126,7 +127,7 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
                         fontSize: 13,
                         color: Colors.white,
                       ),
-                    ),
+                    ).tr(),
                   ),
                   // InkWell(
                   //   onTap: () {

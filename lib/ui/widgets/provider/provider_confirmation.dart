@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
@@ -33,7 +34,7 @@ class ProviderConfirmationPage extends StatelessWidget {
           textAlign: TextAlign.center,
           style: CustomThemeData.generateColoredStyle(
               fontSize: 24, context: context, lightTextColor: Colors.black),
-        ),
+        ).tr(),
         SizedBox(
           height: 16.pHeight(context),
         ),
@@ -42,7 +43,7 @@ class ProviderConfirmationPage extends StatelessWidget {
           textAlign: TextAlign.center,
           style: CustomThemeData.generateColoredStyle(
               fontSize: 14, context: context, fontWeight: FontWeight.w400),
-        ),
+        ).tr(),
         const Spacer(),
         CustomButtons.generalButton(
             context: context,

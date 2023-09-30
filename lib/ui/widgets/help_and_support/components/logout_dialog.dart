@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
@@ -30,12 +31,12 @@ class LogoutDialog extends StatelessWidget {
             Text(
               LocaleKeys.logOut,
               style: Theme.of(context).textTheme.labelLarge,
-            ),
+            ).tr(),
             SizedBox(height: 12.pHeight(context)),
             Text(
               LocaleKeys.helpAndSupport_components_logoutDialog_wantToLogout,
               style: Theme.of(context).textTheme.labelMedium,
-            ),
+            ).tr(),
             SizedBox(height: 24.pWidth(context)),
             Row(
               children: [
@@ -43,11 +44,14 @@ class LogoutDialog extends StatelessWidget {
                     context: context,
                     width: 154.pWidth(context),
                     onTap: () {},
-                    text: LocaleKeys.logOut,
+                    text: LocaleKeys.logOut.tr(),
                     textColor: Colors.red,
                     color: Colors.red),
                 CustomButtons.clearButton(
-                    context: context, onTap: () {}, text: "Cancel")
+                  context: context,
+                  onTap: () {},
+                  text: LocaleKeys.cancel.tr(),
+                )
               ],
             )
           ],

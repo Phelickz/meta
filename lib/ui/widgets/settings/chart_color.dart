@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
@@ -29,35 +30,35 @@ class ChartColorPage extends StatelessWidget {
               LocaleKeys.presets,
               style: CustomThemeData.generateColoredStyle(
                   fontSize: 16, fontWeight: FontWeight.bold, context: context),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             CustomRadioButton(
-                value: LocaleKeys.defaultText,
+                value: LocaleKeys.defaultText.tr(),
                 groupValue: model.chartColor,
                 onChanged: (chartColor) {
                   model.changeChartColor(chartColor);
                 },
-                label: LocaleKeys.defaultText,
+                label: LocaleKeys.defaultText.tr(),
                 colorA: Colors.green,
                 colorB: Colors.red),
             verticalSpaceSmall(context),
             CustomRadioButton(
-                value: LocaleKeys.warm,
+                value: LocaleKeys.warm.tr(),
                 groupValue: model.chartColor,
                 onChanged: (chartColor) {
                   model.changeChartColor(chartColor);
                 },
-                label: LocaleKeys.warm,
+                label: LocaleKeys.warm.tr(),
                 colorA: Colors.blue,
                 colorB: Colors.red),
             verticalSpaceSmall(context),
             CustomRadioButton(
-                value: LocaleKeys.marble,
+                value: LocaleKeys.marble.tr(),
                 groupValue: model.chartColor,
                 onChanged: (chartColor) {
                   model.changeChartColor(chartColor);
                 },
-                label: LocaleKeys.marble,
+                label: LocaleKeys.marble.tr(),
                 colorA: Colors.white,
                 colorB: Colors.grey)
           ],

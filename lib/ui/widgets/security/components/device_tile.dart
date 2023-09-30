@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -86,14 +87,14 @@ class DeviceTile extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    _infoLeftText(LocaleKeys.date, context),
+                    _infoLeftText(LocaleKeys.date.tr(), context),
                     _infoRightText(device.date, context),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    _infoLeftText(LocaleKeys.location, context),
+                    _infoLeftText(LocaleKeys.location.tr(), context),
                     _infoRightText(device.location, context),
                   ],
                 ),

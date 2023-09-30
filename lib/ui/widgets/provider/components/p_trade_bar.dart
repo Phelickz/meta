@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -180,7 +181,7 @@ class PTradeBar extends StatelessWidget {
                   fontWeight: FontWeight.w400,
                   lightTextColor: const Color(0xFF667085),
                   darkTextColor: const Color(0xFF98A2B3)),
-            ),
+            ).tr(),
             const Spacer(),
             Text(
               tradeInfo["date"],
@@ -206,7 +207,7 @@ class PTradeBar extends StatelessWidget {
                   fontWeight: FontWeight.w400,
                   lightTextColor: const Color(0xFF667085),
                   darkTextColor: const Color(0xFF98A2B3)),
-            ),
+            ).tr(),
             const Spacer(),
             Text(
               tradeInfo["orderID"],
@@ -233,7 +234,7 @@ class PTradeBar extends StatelessWidget {
                   fontWeight: FontWeight.w400,
                   lightTextColor: const Color(0xFF667085),
                   darkTextColor: const Color(0xFF98A2B3)),
-            ),
+            ).tr(),
             const Spacer(),
             Text(
               tradeInfo["commission"],

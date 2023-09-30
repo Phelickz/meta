@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -35,7 +36,7 @@ class EditStrategyDescription extends StatelessWidget {
                 .providerWidget_providerComponent_changePasswordWidget_confirmPassword,
             style: CustomThemeData.generateColoredStyle(
                 fontSize: 14, context: context),
-          ),
+          ).tr(),
           SizedBox(
             height: 20.pHeight(context),
           ),
@@ -50,7 +51,7 @@ class EditStrategyDescription extends StatelessWidget {
                       0xFF667085,
                     ),
             ),
-          ),
+          ).tr(),
           verticalSpaceXXSmall(context),
           CustomTextFields(
             hintText: viewModel.strategyDescription,
@@ -71,7 +72,7 @@ class EditStrategyDescription extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
             },
-            text: LocaleKeys.confirm,
+            text: LocaleKeys.confirm.tr(),
           )
         ],
       ),

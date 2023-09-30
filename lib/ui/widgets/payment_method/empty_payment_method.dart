@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -48,7 +49,7 @@ class EmptyPaymentMethod extends StatelessWidget {
                   ? const Color(0xFFD0D5DD)
                   : const Color(0xFF98A2B3),
             ),
-          ),
+          ).tr(),
           SizedBox(
             height: McGyver.rsDoubleH(context, 48),
           ),
@@ -58,7 +59,8 @@ class EmptyPaymentMethod extends StatelessWidget {
               viewModel.paymentMethodPageEnum =
                   PaymentMethodPageEnum.addPaymentMethod;
             },
-            text: LocaleKeys.paymentMethod_emptyPaymentWidgetP_addPayMethod,
+            text:
+                LocaleKeys.paymentMethod_emptyPaymentWidgetP_addPayMethod.tr(),
           ),
         ],
       ),

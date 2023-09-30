@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -38,7 +39,7 @@ class EmailVerificationPage extends StatelessWidget {
                     ? const Color(0xFFF2F4F7)
                     : const Color(0xff475467),
               ),
-            ),
+            ).tr(),
           ),
           verticalSpaceSmall(context),
           Padding(
@@ -48,7 +49,7 @@ class EmailVerificationPage extends StatelessWidget {
             child: RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                  text: LocaleKeys.weSentAVerification,
+                  text: LocaleKeys.weSentAVerification.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.6),
                     fontWeight: FontWeight.w500,
@@ -67,8 +68,8 @@ class EmailVerificationPage extends StatelessWidget {
                             : const Color(0xff77C5F8),
                       ),
                     ),
-                    const TextSpan(
-                      text: LocaleKeys.pleaseTapLink,
+                    TextSpan(
+                      text: LocaleKeys.pleaseTapLink.tr(),
                     )
                   ]),
             ),
@@ -79,13 +80,13 @@ class EmailVerificationPage extends StatelessWidget {
             onTap: () {
               model.securityPageEnum = SecurityPageEnum.emailVerifySuccess;
             },
-            text: LocaleKeys.checkMail,
+            text: LocaleKeys.checkMail.tr(),
           ),
           verticalSpaceXSmall(context),
           CustomButtons.outlineButton(
             context: context,
             onTap: () {},
-            text: LocaleKeys.resendCode,
+            text: LocaleKeys.resendCode.tr(),
             textColor: Theme.of(context).primaryColor,
           ),
           verticalSpaceMedium(context),

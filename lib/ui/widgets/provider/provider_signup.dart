@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
@@ -18,23 +19,25 @@ class ProviderSignUpPage extends StatelessWidget {
         SizedBox(
           height: 24.pHeight(context),
         ),
-        ProviderFormFields.simpleField(
-            LocaleKeys.auth_firstName, LocaleKeys.auth_enterFirstName),
+        ProviderFormFields.simpleField(LocaleKeys.auth_firstName.tr(),
+            LocaleKeys.auth_enterFirstName.tr()),
         SizedBox(
           height: 16.pHeight(context),
         ),
         ProviderFormFields.simpleField(
-            LocaleKeys.auth_lastName, LocaleKeys.auth_enterLastName),
+            LocaleKeys.auth_lastName.tr(), LocaleKeys.auth_enterLastName.tr()),
         SizedBox(
           height: 16.pHeight(context),
         ),
         ProviderFormFields.simpleField(
-            LocaleKeys.emailAddress, LocaleKeys.auth_enterEmail),
+          LocaleKeys.emailAddress.tr(),
+          LocaleKeys.auth_enterEmail.tr(),
+        ),
         SizedBox(
           height: 16.pHeight(context),
         ),
         ProviderFormFields.simpleFieldWithIcon(
-            LocaleKeys.country,
+            LocaleKeys.country.tr(),
             "USA",
             IconButton(
                 onPressed: () {},
@@ -43,18 +46,20 @@ class ProviderSignUpPage extends StatelessWidget {
           height: 16.pHeight(context),
         ),
         ProviderFormFields.simpleField(
-            LocaleKeys.phoneNumber, "+123 340 674 8"),
+            LocaleKeys.phoneNumber.tr(), "+123 340 674 8"),
         SizedBox(
           height: 16.pHeight(context),
         ),
         ProviderFormFields.simpleFieldWithPassword(
-            LocaleKeys.password, LocaleKeys.password),
+          LocaleKeys.password.tr(),
+          LocaleKeys.password.tr(),
+        ),
         SizedBox(
           height: 16.pHeight(context),
         ),
         ProviderFormFields.simpleFieldWithIcon(
-            LocaleKeys.attachment,
-            LocaleKeys.providerWidget_providerSignUp_uploadAttachment,
+            LocaleKeys.attachment.tr(),
+            LocaleKeys.providerWidget_providerSignUp_uploadAttachment.tr(),
             IconButton(onPressed: () {}, icon: const Icon(Icons.folder_copy))),
         SizedBox(
           height: 20.pHeight(context),
@@ -70,7 +75,7 @@ class ProviderSignUpPage extends StatelessWidget {
             Expanded(
                 child: RichText(
               text: TextSpan(
-                  text: LocaleKeys.providerWidget_providerLogin_iAgreeWith,
+                  text: LocaleKeys.providerWidget_providerLogin_iAgreeWith.tr(),
                   style: CustomThemeData.generateColoredStyle(
                       fontSize: 12,
                       context: context,
@@ -79,7 +84,7 @@ class ProviderSignUpPage extends StatelessWidget {
                       darkTextColor: const Color(0xFF98A2B3)),
                   children: [
                     TextSpan(
-                      text: LocaleKeys.termsAndCondition,
+                      text: LocaleKeys.termsAndCondition.tr(),
                       style: CustomThemeData.generateColoredStyle(
                           fontSize: 12,
                           context: context,
@@ -88,7 +93,8 @@ class ProviderSignUpPage extends StatelessWidget {
                           darkTextColor: const Color(0xFF47B0F5)),
                     ),
                     TextSpan(
-                      text: LocaleKeys.providerWidget_providerLogin_forOPening,
+                      text: LocaleKeys.providerWidget_providerLogin_forOPening
+                          .tr(),
                       style: CustomThemeData.generateColoredStyle(
                           fontSize: 12,
                           context: context,
@@ -98,7 +104,8 @@ class ProviderSignUpPage extends StatelessWidget {
                     ),
                     TextSpan(
                       text: LocaleKeys
-                          .providerWidget_providerLogin_dataProtectionPolicy,
+                          .providerWidget_providerLogin_dataProtectionPolicy
+                          .tr(),
                       style: CustomThemeData.generateColoredStyle(
                           fontSize: 12,
                           context: context,

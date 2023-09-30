@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
@@ -20,25 +21,26 @@ class ProviderOptionsPage extends StatelessWidget {
             onTap: () {
               viewModel.setProviderPageEnum = ProviderPageEnum.wallet;
             },
-            title: LocaleKeys.providerWidget_providerOption_myWallet,
+            title: LocaleKeys.providerWidget_providerOption_myWallet.tr(),
             leading: AssetManager.paymentMethod),
         SizedBox(height: 18.pHeight(context)),
         ProviderOptionsTile(
             onTap: () {
               viewModel.setProviderPageEnum = ProviderPageEnum.profileSettings;
             },
-            title: LocaleKeys.providerWidget_providerOption_profileSettings,
+            title:
+                LocaleKeys.providerWidget_providerOption_profileSettings.tr(),
             leading: AssetManager.editUserIcon),
         SizedBox(height: 18.pHeight(context)),
         ProviderOptionsTile(
             onTap: () {
               viewModel.setProviderPageEnum = ProviderPageEnum.notifications;
             },
-            title: LocaleKeys.notification,
+            title: LocaleKeys.notification.tr(),
             leading: AssetManager.notificationsIcon),
         SizedBox(height: 18.pHeight(context)),
         ProviderOptionsTile(
-          title: LocaleKeys.support,
+          title: LocaleKeys.support.tr(),
           leading: AssetManager.help,
           onTap: () {
             viewModel.push(const HelpAndSupportRoute());
@@ -46,7 +48,7 @@ class ProviderOptionsPage extends StatelessWidget {
         ),
         SizedBox(height: 18.pHeight(context)),
         ProviderOptionsTile(
-          title: LocaleKeys.logOut,
+          title: LocaleKeys.logOut.tr(),
           leading: AssetManager.logout,
           onTap: () {
             viewModel.push(const BottomNavBarRoute());

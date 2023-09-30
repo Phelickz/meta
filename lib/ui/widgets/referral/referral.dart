@@ -45,17 +45,18 @@ class ReferralPage extends StatelessWidget {
             ),
             Center(
               child: SizedBox(
-                  width: 300.pWidth(context),
-                  child: Text(
-                    LocaleKeys.referralWidget_referNowAndEarn.tr(args: ['\$']),
-                    textAlign: TextAlign.center,
-                    style: CustomThemeData.generateStyle(
-                      fontSize: McGyver.textSize(context, 2.4),
-                      color:
-                          isDarkMode ? Colors.white54 : const Color(0xff475467),
-                      fontWeight: FontWeight.bold,
-                    ),
-                  )),
+                width: 300.pWidth(context),
+                child: Text(
+                  LocaleKeys.referralWidget_referNowAndEarn,
+                  textAlign: TextAlign.center,
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 2.4),
+                    color:
+                        isDarkMode ? Colors.white54 : const Color(0xff475467),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ).tr(args: ['\$']),
+              ),
             ),
             SizedBox(
               height: 16.pHeight(context),
@@ -79,7 +80,7 @@ class ReferralPage extends StatelessWidget {
                       color: const Color(0xffECF7FE),
                       fontWeight: FontWeight.normal,
                     ),
-                  ),
+                  ).tr(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -111,10 +112,10 @@ class ReferralPage extends StatelessWidget {
                 color: isDarkMode ? Colors.white54 : Colors.black87,
                 fontWeight: FontWeight.bold,
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
-            const ReferralTile(
-              title: LocaleKeys.referralWidget_inviteYourFriends,
+            ReferralTile(
+              title: LocaleKeys.referralWidget_inviteYourFriends.tr(),
               icon: AssetManager.convert,
             ),
             SizedBox(
@@ -127,8 +128,8 @@ class ReferralPage extends StatelessWidget {
             SizedBox(
               height: 16.pHeight(context),
             ),
-            const ReferralTile(
-              title: LocaleKeys.referralWidget_yourRewardCredit,
+            ReferralTile(
+              title: LocaleKeys.referralWidget_yourRewardCredit.tr(),
               icon: AssetManager.reward,
             ),
             SizedBox(
@@ -137,9 +138,9 @@ class ReferralPage extends StatelessWidget {
             CustomButtons.generalButton(
               context: context,
               onTap: () async {
-                await Share.share(LocaleKeys.referralWidget_checkOutMyApp);
+                await Share.share(LocaleKeys.referralWidget_checkOutMyApp.tr());
               },
-              text: LocaleKeys.referralWidget_referNow,
+              text: LocaleKeys.referralWidget_referNow.tr(),
             ),
             verticalSpaceMedium(context),
           ],

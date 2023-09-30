@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 
@@ -50,7 +51,7 @@ class PhoneVerifiedSuccessPage extends StatelessWidget {
                   ? const Color(0xFFF2F4F7)
                   : const Color(0xff475467),
             ),
-          ),
+          ).tr(),
         ),
         verticalSpaceSmall(context),
         Padding(
@@ -61,7 +62,8 @@ class PhoneVerifiedSuccessPage extends StatelessWidget {
             textAlign: TextAlign.center,
             text: TextSpan(
                 text: LocaleKeys
-                    .securityWidget_phoneVerifiedSuccess_yourPhoneNumber,
+                    .securityWidget_phoneVerifiedSuccess_yourPhoneNumber
+                    .tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   fontWeight: FontWeight.w500,
@@ -80,7 +82,7 @@ class PhoneVerifiedSuccessPage extends StatelessWidget {
                           : const Color(0xff77C5F8),
                     ),
                   ),
-                  const TextSpan(text: LocaleKeys.hasBeenVerified)
+                  TextSpan(text: LocaleKeys.hasBeenVerified.tr())
                 ]),
           ),
         ),
@@ -90,7 +92,7 @@ class PhoneVerifiedSuccessPage extends StatelessWidget {
           onTap: () {
             model.securityPageEnum = SecurityPageEnum.main;
           },
-          text: LocaleKeys.continueWord,
+          text: LocaleKeys.continueWord.tr(),
         ),
       ],
     );

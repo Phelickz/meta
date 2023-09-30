@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/textfields/label_password_field.dart';
@@ -32,7 +33,7 @@ class AddPasskeyEnterPage extends StatelessWidget {
                     ? const Color(0xFFD0D5DD)
                     : const Color(0xFF344054),
               ),
-            ),
+            ).tr(),
             Text(
               LocaleKeys.securityWidget_addPasskeyEnter_yourPasskeyWillBe,
               style: CustomThemeData.generateStyle(
@@ -42,23 +43,24 @@ class AddPasskeyEnterPage extends StatelessWidget {
                     ? const Color(0xFF667085)
                     : const Color(0xFF667085),
               ),
-            ),
+            ).tr(),
           ],
         ),
         verticalSpaceSmall(context),
-        const LabelTextField(
+         LabelTextField(
           label: LocaleKeys.passkey,
           hintText:
-              LocaleKeys.securityWidget_addPasskeyEnter_enter4digitsPasskey,
+              LocaleKeys.securityWidget_addPasskeyEnter_enter4digitsPasskey
+              .tr(),
         ),
-        const LabelPasswordField(
-          label: LocaleKeys.password,
-          hintText: LocaleKeys.securityWidget_addPasskeyEnter_enterYourPassword,
+         LabelPasswordField(
+          label: LocaleKeys.password.tr(),
+          hintText: LocaleKeys.securityWidget_addPasskeyEnter_enterYourPassword.tr(),
         ),
         verticalSpaceSmall(context),
         verticalSpaceSmall(context),
         CustomButtons.generalButton(
-          text: LocaleKeys.continueWord,
+          text: LocaleKeys.continueWord.tr(),
           context: context,
           onTap: () {
             model.securityPageEnum = SecurityPageEnum.passkeyAddedSuccess;

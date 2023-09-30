@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -21,59 +22,63 @@ class MarketDetails extends StatelessWidget {
                   ? const Color(0xFF98A2B3)
                   : const Color(0xFF475467),
               fontWeight: FontWeight.bold),
-        ),
+        ).tr(),
         SizedBox(
           height: 20.pHeight(context),
         ),
-        viewTile(LocaleKeys.digits, "2"),
+        viewTile(LocaleKeys.digits.tr(), "2"),
         SizedBox(
           height: 20.pHeight(context),
         ),
-        viewTile(LocaleKeys.chart_specification_contractSize, "332"),
+        viewTile(LocaleKeys.chart_specification_contractSize.tr(), "332"),
         SizedBox(
           height: 20.pHeight(context),
         ),
-        viewTile(LocaleKeys.spread, "35"),
-        SizedBox(
-          height: 20.pHeight(context),
-        ),
-        viewTile(LocaleKeys.views_quotesView_quotesViewModel_stopLevel, "0"),
-        SizedBox(
-          height: 20.pHeight(context),
-        ),
-        viewTile(LocaleKeys.chart_specification_contractSize, "1211122212"),
-        SizedBox(
-          height: 20.pHeight(context),
-        ),
-        viewTile(LocaleKeys.spread, "1211122212"),
-        SizedBox(
-          height: 20.pHeight(context),
-        ),
-        viewTile(LocaleKeys.views_quotesView_quotesViewModel_stopLevel,
-            "1211122212"),
-        SizedBox(
-          height: 20.pHeight(context),
-        ),
-        viewTile(LocaleKeys.views_quotesView_quotesViewModel_marginCurrency,
-            "1211122212"),
-        SizedBox(
-          height: 20.pHeight(context),
-        ),
-        viewTile(LocaleKeys.views_quotesView_quotesViewModel_profitCurrency,
-            "1211122212"),
-        SizedBox(
-          height: 20.pHeight(context),
-        ),
-        viewTile(LocaleKeys.calculate, "1211122212"),
+        viewTile(LocaleKeys.spread.tr(), "35"),
         SizedBox(
           height: 20.pHeight(context),
         ),
         viewTile(
-            LocaleKeys.views_quotesView_quotesViewModel_tickSize, "1211122212"),
+            LocaleKeys.views_quotesView_quotesViewModel_stopLevel.tr(), "0"),
         SizedBox(
           height: 20.pHeight(context),
         ),
-        viewTile(LocaleKeys.views_quotesView_quotesViewModel_tickValue,
+        viewTile(
+            LocaleKeys.chart_specification_contractSize.tr(), "1211122212"),
+        SizedBox(
+          height: 20.pHeight(context),
+        ),
+        viewTile(LocaleKeys.spread.tr(), "1211122212"),
+        SizedBox(
+          height: 20.pHeight(context),
+        ),
+        viewTile(LocaleKeys.views_quotesView_quotesViewModel_stopLevel.tr(),
+            "1211122212"),
+        SizedBox(
+          height: 20.pHeight(context),
+        ),
+        viewTile(
+            LocaleKeys.views_quotesView_quotesViewModel_marginCurrency.tr(),
+            "1211122212"),
+        SizedBox(
+          height: 20.pHeight(context),
+        ),
+        viewTile(
+            LocaleKeys.views_quotesView_quotesViewModel_profitCurrency.tr(),
+            "1211122212"),
+        SizedBox(
+          height: 20.pHeight(context),
+        ),
+        viewTile(LocaleKeys.calculate.tr(), "1211122212"),
+        SizedBox(
+          height: 20.pHeight(context),
+        ),
+        viewTile(LocaleKeys.views_quotesView_quotesViewModel_tickSize.tr(),
+            "1211122212"),
+        SizedBox(
+          height: 20.pHeight(context),
+        ),
+        viewTile(LocaleKeys.views_quotesView_quotesViewModel_tickValue.tr(),
             "1211122212"),
         SizedBox(
           height: 20.pHeight(context),

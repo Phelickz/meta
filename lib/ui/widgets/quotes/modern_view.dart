@@ -1,4 +1,5 @@
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
@@ -17,20 +18,20 @@ class ModernMarketView extends StatelessWidget {
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return ContainedTabBarView(
-      tabs: const [
-        Text(LocaleKeys.popular),
-        Text(
+      tabs: [
+        const Text(LocaleKeys.popular).tr(),
+        const Text(
           LocaleKeys.quotesWidget_modernViewWidget_topMovers,
-        ),
-        Text(
+        ).tr(),
+        const Text(
           LocaleKeys.major,
-        ),
-        Text(
+        ).tr(),
+        const Text(
           LocaleKeys.metals,
-        ),
-        Text(
+        ).tr(),
+        const Text(
           LocaleKeys.crypto,
-        ),
+        ).tr(),
       ],
       tabBarProperties: TabBarProperties(
         background: Container(

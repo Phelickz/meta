@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -30,8 +31,8 @@ class ExistingAccountFormView extends StatelessWidget {
         SizedBox(
           height: 8.pHeight(context),
         ),
-        const CustomTextFields(
-          hintText: LocaleKeys.enterYourLoginId,
+        CustomTextFields(
+          hintText: LocaleKeys.enterYourLoginId.tr(),
         ),
         SizedBox(
           height: 16.pHeight(context),
@@ -46,8 +47,8 @@ class ExistingAccountFormView extends StatelessWidget {
         SizedBox(
           height: 8.pHeight(context),
         ),
-        const CustomTextFields(
-          hintText: LocaleKeys.password,
+        CustomTextFields(
+          hintText: LocaleKeys.password.tr(),
           password: true,
         ),
         SizedBox(
@@ -86,13 +87,14 @@ class ExistingAccountFormView2 extends StatelessWidget {
               fontSize: McGyver.textSize(context, 2.0),
               color: isDarkMode ? Colors.white : const Color(0xFF667085),
               fontWeight: FontWeight.w600),
-        ),
+        ).tr(),
         SizedBox(
           height: 8.pHeight(context),
         ),
-        const CustomTextFields(
+        CustomTextFields(
           hintText: LocaleKeys
-              .manageAccounts_existingAccountsForm_enterCurrentPassword,
+              .manageAccounts_existingAccountsForm_enterCurrentPassword
+              .tr(),
           password: true,
         ),
         SizedBox(
@@ -104,13 +106,14 @@ class ExistingAccountFormView2 extends StatelessWidget {
               fontSize: McGyver.textSize(context, 2.0),
               color: isDarkMode ? Colors.white : const Color(0xFF667085),
               fontWeight: FontWeight.w600),
-        ),
+        ).tr(),
         SizedBox(
           height: 8.pHeight(context),
         ),
-        const CustomTextFields(
-          hintText:
-              LocaleKeys.manageAccounts_existingAccountsForm_enterNewPassword,
+        CustomTextFields(
+          hintText: LocaleKeys
+              .manageAccounts_existingAccountsForm_enterNewPassword
+              .tr(),
           password: true,
         ),
         SizedBox(
@@ -122,13 +125,14 @@ class ExistingAccountFormView2 extends StatelessWidget {
               fontSize: McGyver.textSize(context, 2.0),
               color: isDarkMode ? Colors.white : const Color(0xFF667085),
               fontWeight: FontWeight.w600),
-        ),
+        ).tr(),
         SizedBox(
           height: 8.pHeight(context),
         ),
-        const CustomTextFields(
-          hintText:
-              LocaleKeys.manageAccounts_existingAccountsForm_reEnterNewPassword,
+        CustomTextFields(
+          hintText: LocaleKeys
+              .manageAccounts_existingAccountsForm_reEnterNewPassword
+              .tr(),
           password: true,
         )
       ],

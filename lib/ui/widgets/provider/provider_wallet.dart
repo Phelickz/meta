@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -32,7 +33,7 @@ class WalletPage extends StatelessWidget {
                     ? const Color(0xff98A2B3)
                     : const Color(0xFF475467),
               ),
-            ),
+            ).tr(),
             verticalSpaceXSmall(context),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -40,7 +41,7 @@ class WalletPage extends StatelessWidget {
                 bottomIcons(
                   context,
                   'assets/icons/money_receive_outline.svg',
-                  LocaleKeys.depositFunds,
+                  LocaleKeys.depositFunds.tr(),
                   () {
                     viewModel.push(const FundAccountRoute());
                   },
@@ -48,7 +49,7 @@ class WalletPage extends StatelessWidget {
                 bottomIcons(
                   context,
                   'assets/icons/money_send_outline.svg',
-                  LocaleKeys.withdrawFunds,
+                  LocaleKeys.withdrawFunds.tr(),
                   () {
                     viewModel.push(const WithdrawFundRoute());
                   },
@@ -56,7 +57,7 @@ class WalletPage extends StatelessWidget {
                 bottomIcons(
                   context,
                   'assets/icons/recovery_convert.svg',
-                  LocaleKeys.internalTransfer,
+                  LocaleKeys.internalTransfer.tr(),
                   () {
                     viewModel.push(const InternalTransferRoute());
                   },
@@ -64,7 +65,7 @@ class WalletPage extends StatelessWidget {
                 bottomIcons(
                   context,
                   'assets/images/message_question.svg',
-                  LocaleKeys.providerWidget_providerWallet_reportAnIssue,
+                  LocaleKeys.providerWidget_providerWallet_reportAnIssue.tr(),
                   () {
                     viewModel.push(const HelpAndSupportRoute());
                   },
@@ -88,7 +89,7 @@ class WalletPage extends StatelessWidget {
                         ? const Color(0xff98A2B3)
                         : const Color(0xFF475467),
                   ),
-                ),
+                ).tr(),
                 TextButton(
                   onPressed: () {
                     viewModel.push(const TransactionsRoute());
@@ -102,7 +103,7 @@ class WalletPage extends StatelessWidget {
                           ? const Color(0xff77C5F8)
                           : const Color(0xFF20A0F3),
                     ),
-                  ),
+                  ).tr(),
                 ),
               ],
             ),
@@ -113,7 +114,8 @@ class WalletPage extends StatelessWidget {
                 id: "1",
                 type: TransactionsTypeEnum.deposit,
                 title: LocaleKeys
-                    .providerWidget_providerWallet_depositFromNeteller,
+                    .providerWidget_providerWallet_depositFromNeteller
+                    .tr(),
                 amount: "55,000",
                 status: TransactionStatusEnum.successful,
                 date: "2.1.2023",
@@ -125,8 +127,9 @@ class WalletPage extends StatelessWidget {
               transaction: TransactionModel(
                 id: "1",
                 type: TransactionsTypeEnum.internalTransfer,
-                title:
-                    LocaleKeys.providerWidget_providerWallet_metaWalletToWallet,
+                title: LocaleKeys
+                    .providerWidget_providerWallet_metaWalletToWallet
+                    .tr(),
                 amount: "55,000",
                 status: TransactionStatusEnum.pending,
                 date: "2.1.2023",
@@ -138,8 +141,9 @@ class WalletPage extends StatelessWidget {
               transaction: TransactionModel(
                 id: "1",
                 type: TransactionsTypeEnum.withdrawal,
-                title:
-                    LocaleKeys.providerWidget_providerWallet_transferToSticPay,
+                title: LocaleKeys
+                    .providerWidget_providerWallet_transferToSticPay
+                    .tr(),
                 amount: "55,000",
                 status: TransactionStatusEnum.successful,
                 date: "2.1.2023",
@@ -151,7 +155,8 @@ class WalletPage extends StatelessWidget {
               transaction: TransactionModel(
                 id: "1",
                 type: TransactionsTypeEnum.deposit,
-                title: LocaleKeys.providerWidget_providerWallet_depositToDeriv,
+                title: LocaleKeys.providerWidget_providerWallet_depositToDeriv
+                    .tr(),
                 amount: "55,000",
                 status: TransactionStatusEnum.failed,
                 date: "2.1.2023",

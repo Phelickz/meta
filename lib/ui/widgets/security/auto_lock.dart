@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 
@@ -17,16 +18,16 @@ class AutoLockPage extends StatelessWidget {
         AutoLockTile(
           onChanged: model.onPatternLockChanged,
           assetName: "assets/images/routing_2.svg",
-          title: LocaleKeys.pattern,
-          subtitle: LocaleKeys.securityWidget_autoLockWidget_usingPattern,
+          title: LocaleKeys.pattern.tr(),
+          subtitle: LocaleKeys.securityWidget_autoLockWidget_usingPattern.tr(),
           value: model.isPatternLockEnabled,
         ),
         verticalSpaceXSmall(context),
         AutoLockTile(
           onChanged: model.onFaceLockChanged,
           assetName: "assets/images/user_octagon.svg",
-          title: LocaleKeys.securityWidget_autoLockWidget_faceUnlock,
-          subtitle: LocaleKeys.securityWidget_autoLockWidget_usingYourFace,
+          title: LocaleKeys.securityWidget_autoLockWidget_faceUnlock.tr(),
+          subtitle: LocaleKeys.securityWidget_autoLockWidget_usingYourFace.tr(),
           value: model.isFaceLockEnabled,
         )
       ],

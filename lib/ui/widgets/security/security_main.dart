@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -33,7 +34,7 @@ class SecurityMainPage extends StatelessWidget {
                     ? const Color(0xFFD0D5DD)
                     : const Color(0xFF344054),
               ),
-            ),
+            ).tr(),
             Text(
               LocaleKeys.securityWidget_securityMain_toProtectYourAccount,
               style: CustomThemeData.generateStyle(
@@ -43,7 +44,7 @@ class SecurityMainPage extends StatelessWidget {
                     ? const Color(0xFF667085)
                     : const Color(0xFF667085),
               ),
-            ),
+            ).tr(),
           ],
         ),
         verticalSpaceSmall(context),
@@ -52,7 +53,7 @@ class SecurityMainPage extends StatelessWidget {
           vm: model,
           hasLeadingIcon: true,
           hasStatus: true,
-          label: LocaleKeys.passkey,
+          label: LocaleKeys.passkey.tr(),
           status: SecurityOptionStatus.confirmed,
           onTap: () => model.securityPageEnum = SecurityPageEnum.passkey,
         ),
@@ -60,7 +61,7 @@ class SecurityMainPage extends StatelessWidget {
           assetName: "assets/images/message_text.svg",
           vm: model,
           hasLeadingIcon: true,
-          label: LocaleKeys.email,
+          label: LocaleKeys.email.tr(),
           status: SecurityOptionStatus.unconfirmed,
           hasStatus: true,
           onTap: () => model.securityPageEnum = SecurityPageEnum.emailVerify,
@@ -69,7 +70,7 @@ class SecurityMainPage extends StatelessWidget {
           assetName: "assets/images/mobile.svg",
           vm: model,
           hasLeadingIcon: true,
-          label: LocaleKeys.phoneNumber,
+          label: LocaleKeys.phoneNumber.tr(),
           status: SecurityOptionStatus.unconfirmed,
           hasStatus: true,
           onTap: () => model.securityPageEnum = SecurityPageEnum.phoneVerify,
@@ -77,7 +78,7 @@ class SecurityMainPage extends StatelessWidget {
         SecurityOptionTile(
           assetName: "assets/images/password_check.svg",
           vm: model,
-          label: LocaleKeys.password,
+          label: LocaleKeys.password.tr(),
           hasStatus: true,
           hasLeadingIcon: true,
           status: SecurityOptionStatus.confirmed,
@@ -93,25 +94,25 @@ class SecurityMainPage extends StatelessWidget {
             color:
                 isDarkMode ? const Color(0xFFD0D5DD) : const Color(0xFF344054),
           ),
-        ),
+        ).tr(),
         verticalSpaceXXSmall(context),
         SecurityOptionTile(
           assetName: "assets/images/password_check.svg",
           vm: model,
-          label: LocaleKeys.securityWidget_securityMain_autoLockText,
+          label: LocaleKeys.securityWidget_securityMain_autoLockText.tr(),
           onTap: () => model.securityPageEnum = SecurityPageEnum.autoLock,
         ),
         SecurityOptionTile(
           assetName: "assets/images/password_check.svg",
           vm: model,
-          label: LocaleKeys.devices,
+          label: LocaleKeys.devices.tr(),
           onTap: () => model.securityPageEnum = SecurityPageEnum.devices,
         ),
         verticalSpaceSmall(context),
         SecurityOptionTile(
           assetName: "assets/images/password_check.svg",
           vm: model,
-          label: LocaleKeys.securityWidget_securityMain_disableAccount,
+          label: LocaleKeys.securityWidget_securityMain_disableAccount.tr(),
           hasRedLabel: true,
           onTap: () {
             showDialog(
@@ -176,12 +177,12 @@ class DisableccountDialog extends StatelessWidget {
                   .textTheme
                   .labelLarge
                   ?.copyWith(fontSize: 17),
-            ),
+            ).tr(),
             SizedBox(height: 12.pHeight(context)),
             Text(
               LocaleKeys.securityWidget_securityMain_doYouReallyWantToDisable,
               style: Theme.of(context).textTheme.labelMedium,
-            ),
+            ).tr(),
             SizedBox(height: 24.pWidth(context)),
             Row(
               children: [
@@ -202,7 +203,7 @@ class DisableccountDialog extends StatelessWidget {
                             fontSize: McGyver.textSize(context, 2),
                             color: Colors.red,
                             fontWeight: FontWeight.w500),
-                      ),
+                      ).tr(),
                     ),
                   ),
                 ),
@@ -219,7 +220,7 @@ class DisableccountDialog extends StatelessWidget {
                         fontSize: McGyver.textSize(context, 2),
                         color: isDarkMode ? Colors.white : Colors.black,
                         fontWeight: FontWeight.w500),
-                  ),
+                  ).tr(),
                 ),
               ],
             )

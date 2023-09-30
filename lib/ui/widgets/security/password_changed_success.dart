@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 
@@ -49,7 +50,7 @@ class PasswordChangedSuccessPage extends StatelessWidget {
                   ? const Color(0xFFF2F4F7)
                   : const Color(0xff475467),
             ),
-          ),
+          ).tr(),
         ),
         verticalSpaceSmall(context),
         Padding(
@@ -59,8 +60,9 @@ class PasswordChangedSuccessPage extends StatelessWidget {
           child: RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
-              text:
-                  LocaleKeys.securityWidget_passwordChangedSuccess_itWillTake24,
+              text: LocaleKeys
+                  .securityWidget_passwordChangedSuccess_itWillTake24
+                  .tr(),
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.7),
                 fontWeight: FontWeight.w500,
@@ -79,7 +81,7 @@ class PasswordChangedSuccessPage extends StatelessWidget {
           child: CustomButtons.generalButton(
             context: context,
             onTap: () {},
-            text: LocaleKeys.continueWord,
+            text: LocaleKeys.continueWord.tr(),
           ),
         ),
       ],

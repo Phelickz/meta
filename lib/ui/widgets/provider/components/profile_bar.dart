@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
@@ -66,7 +67,7 @@ class ProfileBar extends StatelessWidget {
                     fontSize: 12,
                     context: context,
                     fontWeight: FontWeight.w400),
-              ),
+              ).tr(),
               Text(
                 nationality,
                 style: CustomThemeData.generateColoredStyle(

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
@@ -30,25 +31,29 @@ class ColorPreferencesPage extends StatelessWidget {
                 fontSize: McGyver.textSize(context, 2),
                 fontWeight: FontWeight.bold,
                 context: context),
-          ),
+          ).tr(),
           verticalSpaceSmall(context),
           CustomPreferenceRatioButton(
-              value: LocaleKeys.settings_colorPreferenceWidget_blueBuyRedSell,
+              value:
+                  LocaleKeys.settings_colorPreferenceWidget_blueBuyRedSell.tr(),
               groupValue: model.chartColor,
               onChanged: (chartColor) {
                 model.changeChartColor(chartColor);
               },
-              label: LocaleKeys.settings_colorPreferenceWidget_blueBuyRedSell,
+              label:
+                  LocaleKeys.settings_colorPreferenceWidget_blueBuyRedSell.tr(),
               colorA: Colors.red,
               colorB: Colors.blue),
           verticalSpaceSmall(context),
           CustomPreferenceRatioButton(
-              value: LocaleKeys.settings_colorPreferenceWidget_blueSellRedBuy,
+              value:
+                  LocaleKeys.settings_colorPreferenceWidget_blueSellRedBuy.tr(),
               groupValue: model.chartColor,
               onChanged: (chartColor) {
                 model.changeChartColor(chartColor);
               },
-              label: LocaleKeys.settings_colorPreferenceWidget_blueSellRedBuy,
+              label:
+                  LocaleKeys.settings_colorPreferenceWidget_blueSellRedBuy.tr(),
               colorA: Colors.blue,
               colorB: Colors.red),
           verticalSpaceSmall(context),

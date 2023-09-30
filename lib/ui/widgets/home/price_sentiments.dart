@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -38,7 +39,7 @@ class PriceSentiments extends StatelessWidget {
                   fontSize: 13,
                   color: isDarkMode ? Colors.white70 : Colors.black54,
                 ),
-              ),
+              ).tr(),
               const SizedBox(
                 width: 5,
               ),
@@ -61,7 +62,7 @@ class PriceSentiments extends StatelessWidget {
                   fontSize: 13,
                   color: isDarkMode ? Colors.white70 : Colors.black54,
                 ),
-              ),
+              ).tr(),
             ],
           ),
         ),

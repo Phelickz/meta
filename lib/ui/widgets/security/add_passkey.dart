@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -30,7 +31,7 @@ class AddPasskeyPage extends StatelessWidget {
                     ? const Color(0xFFD0D5DD)
                     : const Color(0xFF344054),
               ),
-            ),
+            ).tr(),
             Text(
               LocaleKeys.securityWidget_addPasskey_youNeedToCompleteAll,
               style: CustomThemeData.generateStyle(
@@ -40,7 +41,7 @@ class AddPasskeyPage extends StatelessWidget {
                     ? const Color(0xFF667085)
                     : const Color(0xFF667085),
               ),
-            ),
+            ).tr(),
           ],
         ),
         verticalSpaceSmall(context),
@@ -48,7 +49,7 @@ class AddPasskeyPage extends StatelessWidget {
           assetName: "assets/images/message_text.svg",
           vm: model,
           hasLeadingIcon: true,
-          label: LocaleKeys.verificationWidget_emailVerification,
+          label: LocaleKeys.verificationWidget_emailVerification.tr(),
           status: SecurityOptionStatus.unconfirmed,
           hasStatus: true,
           // onTap: () => model.securityPageEnum = SecurityPageEnum.emailVerify,
@@ -59,7 +60,7 @@ class AddPasskeyPage extends StatelessWidget {
           assetName: "assets/images/mobile.svg",
           vm: model,
           hasLeadingIcon: true,
-          label: LocaleKeys.phoneNumber,
+          label: LocaleKeys.phoneNumber.tr(),
           status: SecurityOptionStatus.unconfirmed,
           hasStatus: true,
           // onTap: () => model.securityPageEnum = SecurityPageEnum.phoneVerify,
