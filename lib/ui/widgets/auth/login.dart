@@ -30,24 +30,24 @@ class LoginPage extends StatelessWidget {
             loginListTile(context, 'Deriv Limited', 'Deriv', isDarkMode),
             verticalSpaceSmall(context),
             Text(
-              LocaleKeys.loginID.tr(),
+              LocaleKeys.loginID,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 color: isDarkMode ? Colors.white70 : const Color(0xff667085),
               ),
-            ),
+            ).tr(),
             verticalSpaceXSmall(context),
             CustomTextFields(
               hintText: LocaleKeys.enterYourLoginId.tr(),
             ),
             verticalSpaceSmall(context),
             Text(
-              LocaleKeys.password.tr(),
+              LocaleKeys.password,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 color: isDarkMode ? Colors.white70 : const Color(0xff667085),
               ),
-            ),
+            ).tr(),
             verticalSpaceXSmall(context),
             CustomTextFields(
               hintText: LocaleKeys.password.tr(),
@@ -92,14 +92,14 @@ class LoginPage extends StatelessWidget {
                 ),
                 // SizedBox(width: 1),
                 Text(
-                  LocaleKeys.savePassword.tr(),
+                  LocaleKeys.savePassword,
                   style: CustomThemeData.generateStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.normal,
                     color:
                         isDarkMode ? Colors.white54 : const Color(0xff98A2B3),
                   ),
-                )
+                ).tr()
               ],
             ),
             verticalSpaceSmall(context),
@@ -115,24 +115,24 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  LocaleKeys.forgetPassword.tr(),
+                  LocaleKeys.forgetPassword,
                   style: CustomThemeData.generateStyle(
                     fontSize: 13,
                     color: isDarkMode ? Colors.white : const Color(0xff667085),
                   ),
-                ),
+                ).tr(),
                 TextButton(
                   style: TextButton.styleFrom(
                       foregroundColor: Theme.of(context).primaryColor),
                   onPressed: () {},
                   child: Text(
-                    LocaleKeys.contactBroker.tr(),
+                    LocaleKeys.contactBroker,
                     style: CustomThemeData.generateStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
                       color: Theme.of(context).primaryColor,
                     ),
-                  ),
+                  ).tr(),
                 )
               ],
             )

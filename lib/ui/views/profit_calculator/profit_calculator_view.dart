@@ -36,7 +36,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
         horizontal: McGyver.rsDoubleW(context, 0),
       ),
       appBar: globalAppBar(
-          context, LocaleKeys.views_homeView_profitCalculator, '', () {
+          context, LocaleKeys.views_homeView_profitCalculator.tr(), '', () {
         Navigator.pop(context);
       }, []),
       body: Padding(
@@ -68,7 +68,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
                       Row(
                         children: [
                           Text(
-                            LocaleKeys.views_priceCalculatorView_profitUSD,
+                            LocaleKeys.views_priceCalculatorView_profitUSD.tr(),
                             style: CustomThemeData.generateStyle(
                                 fontSize: 13,
                                 color:
@@ -104,7 +104,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                LocaleKeys.accountCurrency,
+                LocaleKeys.accountCurrency.tr(),
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
@@ -159,7 +159,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
                       ? ColorManager.darkText
                       : ColorManager.lightText,
                 ),
-              ),
+              ).tr(),
               verticalSpaceXXSmall(context),
               GestureDetector(
                 onTap: () {
@@ -205,7 +205,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode ? Colors.white70 : const Color(0xff667085),
                 ),
-              ),
+              ).tr(),
               verticalSpaceXSmall(context),
               IgnorePointer(
                 ignoring: true,
@@ -233,7 +233,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
                               ? ColorManager.darkText
                               : ColorManager.lightText,
                         ),
-                      ),
+                      ).tr(),
                       verticalSpaceXXSmall(context),
                       SizedBox(
                         width: McGyver.rsDoubleW(context, 40),
@@ -281,7 +281,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
                               ? ColorManager.darkText
                               : ColorManager.lightText,
                         ),
-                      ),
+                      ).tr(),
                       verticalSpaceXXSmall(context),
                       SizedBox(
                         width: McGyver.rsDoubleW(context, 40),
@@ -321,14 +321,14 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                LocaleKeys.tradeSize.tr(args: ['(units)']),
+                LocaleKeys.tradeSize,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
                       ? ColorManager.darkText
                       : ColorManager.lightText,
                 ),
-              ),
+              ).tr(args: ['(units)']),
               verticalSpaceXXSmall(context),
               const CustomTextFields(
                 hintText: '0',

@@ -130,7 +130,7 @@ class ChartComponent extends StatelessWidget {
                     ),
                     horizontalSpaceXXSmall(context),
                     Text(
-                      LocaleKeys.indicators.tr(),
+                      LocaleKeys.indicators,
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.5),
                         fontWeight: FontWeight.w500,
@@ -138,7 +138,7 @@ class ChartComponent extends StatelessWidget {
                             ? const Color(0xFF98A2B3)
                             : const Color(0xFF344054),
                       ),
-                    ),
+                    ).tr(),
                   ],
                 ),
               ),

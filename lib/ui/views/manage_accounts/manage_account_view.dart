@@ -61,13 +61,14 @@ class ManageAccountView extends StackedView<ManageAccountViewModel> {
                   SizedBox(
                     height: 160.pHeight(context),
                   ),
-                  Text(LocaleKeys.connectTo.tr(),
-                      style: CustomThemeData.generateStyle(
-                          fontSize: McGyver.textSize(context, 2.2),
-                          color: CustomThemeData.isDarkMode(context)
-                              ? Colors.white
-                              : Colors.black,
-                          fontWeight: FontWeight.w600)),
+                  Text(LocaleKeys.connectTo,
+                          style: CustomThemeData.generateStyle(
+                              fontSize: McGyver.textSize(context, 2.2),
+                              color: CustomThemeData.isDarkMode(context)
+                                  ? Colors.white
+                                  : Colors.black,
+                              fontWeight: FontWeight.w600))
+                      .tr(),
                   SizedBox(
                     height: 16.pHeight(context),
                   ),

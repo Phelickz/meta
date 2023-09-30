@@ -41,7 +41,7 @@ class TraadingSignalTile extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Text(
-                        LocaleKeys.chart_tradingSignalTiles_intraday.tr(),
+                        LocaleKeys.chart_tradingSignalTiles_intraday,
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.8),
                           color: isDarkMode
@@ -49,20 +49,20 @@ class TraadingSignalTile extends StatelessWidget {
                               : const Color(0xFF667085),
                           fontWeight: FontWeight.bold,
                         ),
-                      ),
+                      ).tr(),
                     ),
                   ],
                 ),
               ),
               Text(
-                LocaleKeys.chart_tradingSignalTiles_timeText.tr(),
+                LocaleKeys.chart_tradingSignalTiles_timeText,
                 textAlign: TextAlign.right,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.6),
                   color: const Color(0xFF98A2B3),
                   fontWeight: FontWeight.w500,
                 ),
-              ),
+              ).tr(),
             ],
           ),
           verticalSpaceXXSmall(context),
@@ -75,7 +75,7 @@ class TraadingSignalTile extends StatelessWidget {
                   : const Color(0xFF98A2B3),
               fontWeight: FontWeight.w500,
             ),
-          ),
+          ).tr(),
         ],
       ),
     );

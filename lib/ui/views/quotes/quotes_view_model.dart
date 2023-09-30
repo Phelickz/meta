@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
@@ -60,9 +61,10 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPriceSecondary": "23",
       "low": "63.2018",
       "high": "11.8018",
-      "trend": LocaleKeys.positive,
+      "trend": LocaleKeys.positive.tr(),
       "currencyPairFull": LocaleKeys
-          .views_quotesView_quotesViewModel_quoteList_greatBritainPounds,
+          .views_quotesView_quotesViewModel_quoteList_greatBritainPounds
+          .tr(),
       "currencyIcon": AssetManager.gbpUSD
     },
     {
@@ -79,7 +81,7 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPriceSecondary": "23",
       "low": "63.2018",
       "high": "11.8018",
-      "trend": LocaleKeys.positive,
+      "trend": LocaleKeys.positive.tr(),
       "currencyPairFull": "Bitcoin",
       "currencyIcon": AssetManager.btc
     },
@@ -97,9 +99,10 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPriceSecondary": "23",
       "low": "63.2018",
       "high": "11.8018",
-      "trend": LocaleKeys.negative,
-      "currencyPairFull":
-          LocaleKeys.views_quotesView_quotesViewModel_quoteList_usDollarCan,
+      "trend": LocaleKeys.negative.tr(),
+      "currencyPairFull": LocaleKeys
+          .views_quotesView_quotesViewModel_quoteList_usDollarCan
+          .tr(),
       "currencyIcon": AssetManager.gbpUSD
     },
     {
@@ -116,9 +119,10 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPriceSecondary": "23",
       "low": "63.2018",
       "high": "11.8018",
-      "trend": LocaleKeys.negative,
+      "trend": LocaleKeys.negative.tr(),
       "currencyPairFull": LocaleKeys
-          .views_quotesView_quotesViewModel_quoteList_greatBritainPounds,
+          .views_quotesView_quotesViewModel_quoteList_greatBritainPounds
+          .tr(),
       "currencyIcon": AssetManager.btc
     },
     {
@@ -135,9 +139,10 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPriceSecondary": "23",
       "low": "63.2018",
       "high": "11.8018",
-      "trend": LocaleKeys.negative,
+      "trend": LocaleKeys.negative.tr(),
       "currencyPairFull": LocaleKeys
-          .views_quotesView_quotesViewModel_quoteList_greatBritainPounds,
+          .views_quotesView_quotesViewModel_quoteList_greatBritainPounds
+          .tr(),
       "currencyIcon": AssetManager.btc
     },
     {
@@ -154,9 +159,10 @@ class QuotesViewModel extends CustomBaseViewModel {
       "sellingPriceSecondary": "23",
       "low": "63.2018",
       "high": "11.8018",
-      "trend": LocaleKeys.negative,
+      "trend": LocaleKeys.negative.tr(),
       "currencyPairFull": LocaleKeys
-          .views_quotesView_quotesViewModel_quoteList_greatBritainPounds,
+          .views_quotesView_quotesViewModel_quoteList_greatBritainPounds
+          .tr(),
       "currencyIcon": AssetManager.btc
     },
   ];
@@ -226,57 +232,57 @@ class QuotesViewModel extends CustomBaseViewModel {
       "value": "21212122121",
     },
     {
-      "title": LocaleKeys.sector,
+      "title": LocaleKeys.sector.tr(),
       "value": "21212122121",
     },
     {
-      "title": LocaleKeys.industry,
+      "title": LocaleKeys.industry.tr(),
       "value": "21212122121",
     },
     {
-      "title": LocaleKeys.country,
+      "title": LocaleKeys.country.tr(),
       "value": "21212122121",
     },
     {
-      "title": LocaleKeys.digits,
+      "title": LocaleKeys.digits.tr(),
       "value": "21212122121",
     },
     {
-      "title": LocaleKeys.chart_specification_contractSize,
+      "title": LocaleKeys.chart_specification_contractSize.tr(),
       "value": "21212122121",
     },
     {
-      "title": LocaleKeys.spread,
+      "title": LocaleKeys.spread.tr(),
       "value": "21212122121",
     },
     {
-      "title": LocaleKeys.views_quotesView_quotesViewModel_stopLevel,
+      "title": LocaleKeys.views_quotesView_quotesViewModel_stopLevel.tr(),
       "value": "21212122121",
     },
     {
-      "title": LocaleKeys.views_quotesView_quotesViewModel_marginCurrency,
+      "title": LocaleKeys.views_quotesView_quotesViewModel_marginCurrency.tr(),
       "value": "21212122121",
     },
     {
-      "title": LocaleKeys.views_quotesView_quotesViewModel_profitCurrency,
+      "title": LocaleKeys.views_quotesView_quotesViewModel_profitCurrency.tr(),
       "value": "21212122121",
     },
     {
-      "title": LocaleKeys.views_quotesView_quotesViewModel_tickSize,
+      "title": LocaleKeys.views_quotesView_quotesViewModel_tickSize.tr(),
       "value": "21212122121",
     },
     {
-      "title": LocaleKeys.views_quotesView_quotesViewModel_tickValue,
+      "title": LocaleKeys.views_quotesView_quotesViewModel_tickValue.tr(),
       "value": "21212122121",
     },
   ];
 
   List symbolGroups = [
     {"title": "Forex", "subtitle": "inst\\forex"},
-    {"title": LocaleKeys.metals, "subtitle": "inst\\forx"},
+    {"title": LocaleKeys.metals.tr(), "subtitle": "inst\\forx"},
     {"title": "Comms", "subtitle": "inst\\comms"},
-    {"title": LocaleKeys.exotics, "subtitle": "inst\\exotic"},
-    {"title": LocaleKeys.minors, "subtitle": "inst\\minors"},
+    {"title": LocaleKeys.exotics.tr(), "subtitle": "inst\\exotic"},
+    {"title": LocaleKeys.minors.tr(), "subtitle": "inst\\minors"},
   ];
 
   List symbolSubgroup = [
@@ -375,13 +381,13 @@ class QuotesViewModel extends CustomBaseViewModel {
       case QuotesPageEnum.edit:
         return quotesAppBar(context, "", "", this);
       case QuotesPageEnum.search:
-        return quotesAppBar(context, LocaleKeys.quotes,
-            LocaleKeys.views_quotesView_quotesViewModel_addSymbol, this);
+        return quotesAppBar(context, LocaleKeys.quotes.tr(),
+            LocaleKeys.views_quotesView_quotesViewModel_addSymbol.tr(), this);
       case QuotesPageEnum.subGroups:
         return quotesAppBar(context, LocaleKeys.quotes,
-            LocaleKeys.views_quotesView_quotesViewModel_addSymbol, this);
+            LocaleKeys.views_quotesView_quotesViewModel_addSymbol.tr(), this);
       case QuotesPageEnum.details:
-        return quotesAppBar(context, "CORN", LocaleKeys.details, this);
+        return quotesAppBar(context, "CORN", LocaleKeys.details.tr(), this);
       default:
         return quotesAppBar(context, "", "", this);
     }

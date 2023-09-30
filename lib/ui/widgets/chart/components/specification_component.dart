@@ -42,7 +42,7 @@ class SpecificationComponent extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Text(
-                        LocaleKeys.chart_specification_marketIsOpen.tr(),
+                        LocaleKeys.chart_specification_marketIsOpen,
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.6),
                           fontWeight: FontWeight.bold,
@@ -50,7 +50,7 @@ class SpecificationComponent extends StatelessWidget {
                               ? const Color(0xFFD0D5DD)
                               : const Color(0xFFF2F4F7),
                         ),
-                      ),
+                      ).tr(),
                     ),
                     GestureDetector(
                       onTap: () {
@@ -65,7 +65,7 @@ class SpecificationComponent extends StatelessWidget {
           ),
           verticalSpaceXSmall(context),
           Text(
-            LocaleKeys.chart_specification_volumeLots.tr(),
+            LocaleKeys.chart_specification_volumeLots,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 1.9),
               fontWeight: FontWeight.bold,
@@ -73,7 +73,7 @@ class SpecificationComponent extends StatelessWidget {
                   ? const Color(0xFFD0D5DD)
                   : const Color(0xFF475467),
             ),
-          ),
+          ).tr(),
           verticalSpaceXXSmall(context),
           _twoText(
               context: context, left: LocaleKeys.minimum.tr(), right: "0.01"),

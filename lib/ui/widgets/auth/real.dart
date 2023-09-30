@@ -28,56 +28,56 @@ class RealPage extends StatelessWidget {
             loginListTile(context, 'Deriv Limited', 'Deriv', isDarkMode),
             verticalSpaceSmall(context),
             Text(
-              LocaleKeys.enterPersonalInformation.tr(),
+              LocaleKeys.enterPersonalInformation,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.6),
                 color: Theme.of(context).primaryColor,
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             Text(
-              LocaleKeys.auth_firstName.tr(),
+              LocaleKeys.auth_firstName,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 color: isDarkMode ? Colors.white : const Color(0xff667085),
               ),
-            ),
+            ).tr(),
             verticalSpaceXSmall(context),
             CustomTextFields(
               hintText: LocaleKeys.auth_enterFirstName.tr(),
             ),
             verticalSpaceSmall(context),
             Text(
-              LocaleKeys.auth_lastName.tr(),
+              LocaleKeys.auth_lastName,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 color: isDarkMode ? Colors.white : const Color(0xff667085),
               ),
-            ),
+            ).tr(),
             verticalSpaceXSmall(context),
             CustomTextFields(
               hintText: LocaleKeys.auth_enterLastName.tr(),
             ),
             verticalSpaceSmall(context),
             Text(
-              LocaleKeys.emailAddress.tr(),
+              LocaleKeys.emailAddress,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 color: isDarkMode ? Colors.white : const Color(0xff667085),
               ),
-            ),
+            ).tr(),
             verticalSpaceXSmall(context),
             CustomTextFields(
               hintText: LocaleKeys.auth_enterEmail.tr(),
             ),
             verticalSpaceSmall(context),
             Text(
-              LocaleKeys.phoneNumber.tr(),
+              LocaleKeys.phoneNumber,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
                 color: isDarkMode ? Colors.white : const Color(0xff667085),
               ),
-            ),
+            ).tr(),
             verticalSpaceXSmall(context),
             const CustomTextFields(
               hintText: '+1234567890',
@@ -167,14 +167,14 @@ class RealPage extends StatelessWidget {
                 // SizedBox(width: 1),
                 Expanded(
                   child: Text(
-                    LocaleKeys.termsAndCondition.tr(),
+                    LocaleKeys.termsAndCondition,
                     style: CustomThemeData.generateStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.normal,
                       color:
                           isDarkMode ? Colors.white : const Color(0xff98A2B3),
                     ),
-                  ),
+                  ).tr(),
                 )
               ],
             ),

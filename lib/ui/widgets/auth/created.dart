@@ -59,24 +59,24 @@ class CreatedPage extends StatelessWidget {
             verticalSpaceSmall(context),
             verticalSpaceSmall(context),
             Text(
-              LocaleKeys.auth_created_accountInformation.tr(),
+              LocaleKeys.auth_created_accountInformation,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.6),
                 color: Theme.of(context).primaryColor,
                 fontWeight: FontWeight.w500,
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  LocaleKeys.auth_created_FullName.tr(),
+                  LocaleKeys.auth_created_FullName,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode ? Colors.white60 : Colors.black,
                   ),
-                ),
+                ).tr(),
                 Text(
                   'Henry Richard',
                   style: CustomThemeData.generateStyle(
@@ -91,19 +91,19 @@ class CreatedPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  LocaleKeys.auth_created_accountType.tr(),
+                  LocaleKeys.auth_created_accountType,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode ? Colors.white60 : Colors.black,
                   ),
-                ),
+                ).tr(),
                 Text(
-                  LocaleKeys.auth_created_forexHedge.tr(),
+                  LocaleKeys.auth_created_forexHedge,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode ? Colors.white : Colors.black54,
                   ),
-                ),
+                ).tr(),
               ],
             ),
             verticalSpaceSmall(context),
@@ -111,12 +111,12 @@ class CreatedPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  LocaleKeys.deposit.tr(),
+                  LocaleKeys.deposit,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode ? Colors.white60 : Colors.black,
                   ),
-                ),
+                ).tr(),
                 Text(
                   '10000',
                   style: CustomThemeData.generateStyle(
@@ -151,12 +151,12 @@ class CreatedPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  LocaleKeys.password.tr(),
+                  LocaleKeys.password,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode ? Colors.white60 : Colors.black,
                   ),
-                ),
+                ).tr(),
                 Text(
                   'sadJAsda',
                   style: CustomThemeData.generateStyle(
@@ -171,12 +171,12 @@ class CreatedPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  LocaleKeys.investor.tr(),
+                  LocaleKeys.investor,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode ? Colors.white60 : Colors.black,
                   ),
-                ),
+                ).tr(),
                 Text(
                   'Donald',
                   style: CustomThemeData.generateStyle(

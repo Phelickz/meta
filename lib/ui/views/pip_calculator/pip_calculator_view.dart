@@ -67,13 +67,13 @@ class PipCalculatorView extends StackedView<PipCalculatorViewModel> {
                       Row(
                         children: [
                           Text(
-                            LocaleKeys.views_pipCalculatorView_pipValue.tr(),
+                            LocaleKeys.views_pipCalculatorView_pipValue,
                             style: CustomThemeData.generateStyle(
                                 fontSize: 13,
                                 color:
                                     isDarkMode ? Colors.white70 : Colors.white,
                                 fontWeight: FontWeight.w700),
-                          ),
+                          ).tr(),
                           const Spacer(),
                           IconButton(
                             onPressed: () {},
@@ -110,7 +110,7 @@ class PipCalculatorView extends StackedView<PipCalculatorViewModel> {
                       ? ColorManager.darkText
                       : ColorManager.lightText,
                 ),
-              ),
+              ).tr(),
               verticalSpaceXXSmall(context),
               GestureDetector(
                 onTap: () {
@@ -158,7 +158,7 @@ class PipCalculatorView extends StackedView<PipCalculatorViewModel> {
                       ? ColorManager.darkText
                       : ColorManager.lightText,
                 ),
-              ),
+              ).tr(),
               verticalSpaceXXSmall(context),
               GestureDetector(
                 onTap: () {
@@ -199,14 +199,14 @@ class PipCalculatorView extends StackedView<PipCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                LocaleKeys.tradeSize.tr(args: ['(units)']),
+                LocaleKeys.tradeSize,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
                       ? ColorManager.darkText
                       : ColorManager.lightText,
                 ),
-              ),
+              ).tr(args: ['(units)']),
               verticalSpaceXXSmall(context),
               const CustomTextFields(
                 hintText: '0',
@@ -214,15 +214,14 @@ class PipCalculatorView extends StackedView<PipCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                LocaleKeys.views_pipCalculatorView_numberOfPips
-                    .tr(args: ['(optional)']),
+                LocaleKeys.views_pipCalculatorView_numberOfPips,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
                       ? ColorManager.darkText
                       : ColorManager.lightText,
                 ),
-              ),
+              ).tr(args: ['(optional)']),
               verticalSpaceXXSmall(context),
               const CustomTextFields(
                 hintText: '0',
@@ -232,7 +231,7 @@ class PipCalculatorView extends StackedView<PipCalculatorViewModel> {
               CustomButtons.generalButton(
                 context: context,
                 onTap: () {},
-                text: LocaleKeys.calculate,
+                text: LocaleKeys.calculate.tr(),
               ),
               verticalSpaceSmall(context),
             ],

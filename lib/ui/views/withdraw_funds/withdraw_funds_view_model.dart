@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
@@ -110,25 +111,29 @@ class WithdrawFundViewModel extends CustomBaseViewModel {
   AppBar? returnAppbar(BuildContext context) {
     switch (_withdrawFundPageEnum) {
       case WithdrawFundPageEnum.selectAccount:
-        return withdrawFundAppBar(context, LocaleKeys.withdrawFunds,
-            LocaleKeys.views_withdrawFundsView_selectAccountToWithdraw, this);
+        return withdrawFundAppBar(
+            context,
+            LocaleKeys.withdrawFunds.tr(),
+            LocaleKeys.views_withdrawFundsView_selectAccountToWithdraw.tr(),
+            this);
       case WithdrawFundPageEnum.paymentMethods:
-        return withdrawFundAppBar(context, LocaleKeys.paymentMethod, '', this);
+        return withdrawFundAppBar(
+            context, LocaleKeys.paymentMethod.tr(), '', this);
       case WithdrawFundPageEnum.onlineBank:
-        return withdrawFundAppBar(context, LocaleKeys.onlineBankTransfer,
-            LocaleKeys.withdrawToBank, this);
+        return withdrawFundAppBar(context, LocaleKeys.onlineBankTransfer.tr(),
+            LocaleKeys.withdrawToBank.tr(), this);
       // case FundAccountPageEnum.bitcoin:
       //   return fundAccountAppBar(
       //       context, 'Bitcoin (BTC)', 'Fund using Bitcoin wallet', this);
       case WithdrawFundPageEnum.binancePay:
         return withdrawFundAppBar(context, 'BinancePay',
-            LocaleKeys.views_withdrawFundsView_withdrawToBinancePay, this);
+            LocaleKeys.views_withdrawFundsView_withdrawToBinancePay.tr(), this);
       case WithdrawFundPageEnum.blockBee:
         return withdrawFundAppBar(context, 'BlockBee',
-            LocaleKeys.views_withdrawFundsView_withdrawToBlockBee, this);
+            LocaleKeys.views_withdrawFundsView_withdrawToBlockBee.tr(), this);
       case WithdrawFundPageEnum.neteller:
         return withdrawFundAppBar(context, 'Neteller',
-            LocaleKeys.views_withdrawFundsView_withdrawToNeteller, this);
+            LocaleKeys.views_withdrawFundsView_withdrawToNeteller.tr(), this);
       // case FundAccountPageEnum.perfectMoney:
       //   return fundAccountAppBar(
       //       context, 'Perfect Money', 'Fund using Perfect Money', this);

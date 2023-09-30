@@ -67,14 +67,14 @@ class MarginCalculatorView extends StackedView<MarginCalculatorViewModel> {
                       Row(
                         children: [
                           Text(
-                            LocaleKeys.views_marginCalculatorView_requiredMargin
-                                .tr(args: ['(USD)']),
+                            LocaleKeys
+                                .views_marginCalculatorView_requiredMargin,
                             style: CustomThemeData.generateStyle(
                                 fontSize: 13,
                                 color:
                                     isDarkMode ? Colors.white70 : Colors.white,
                                 fontWeight: FontWeight.w500),
-                          ),
+                          ).tr(args: ['(USD)']),
                           const Spacer(),
                           IconButton(
                             onPressed: () {},
@@ -104,14 +104,14 @@ class MarginCalculatorView extends StackedView<MarginCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                LocaleKeys.accountCurrency.tr(),
+                LocaleKeys.accountCurrency,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
                       ? ColorManager.darkText
                       : ColorManager.lightText,
                 ),
-              ),
+              ).tr(),
               verticalSpaceXXSmall(context),
               GestureDetector(
                 onTap: () {
@@ -152,14 +152,14 @@ class MarginCalculatorView extends StackedView<MarginCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                LocaleKeys.currencyPair.tr(),
+                LocaleKeys.currencyPair,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
                       ? ColorManager.darkText
                       : ColorManager.lightText,
                 ),
-              ),
+              ).tr(),
               verticalSpaceXXSmall(context),
               GestureDetector(
                 onTap: () {
@@ -200,14 +200,14 @@ class MarginCalculatorView extends StackedView<MarginCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                LocaleKeys.tradeSize.tr(),
+                LocaleKeys.tradeSize,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode
                       ? ColorManager.darkText
                       : ColorManager.lightText,
                 ),
-              ),
+              ).tr(),
               verticalSpaceXXSmall(context),
               const CustomTextFields(
                 hintText: '0',
@@ -215,12 +215,12 @@ class MarginCalculatorView extends StackedView<MarginCalculatorViewModel> {
               ),
               verticalSpaceSmall(context),
               Text(
-                LocaleKeys.leverage.tr(),
+                LocaleKeys.leverage,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.8),
                   color: isDarkMode ? Colors.white70 : const Color(0xff667085),
                 ),
-              ),
+              ).tr(),
               verticalSpaceXSmall(context),
               IgnorePointer(
                 ignoring: true,

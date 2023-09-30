@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
 import 'package:meta_trader/ui/widgets/social_trading/app_bar.dart';
@@ -171,26 +172,35 @@ class SocialTradingViewModel extends CustomBaseViewModel {
       case SocialTradingPageEnum.copiedTraderPosition:
         return socialTradingAvatarAppBar(context, this);
       case SocialTradingPageEnum.menuMain:
-        return socialTradingCustomAppBar(context, LocaleKeys.options, '', this);
-      case SocialTradingPageEnum.wallet:
-        return socialTradingCustomAppBar(context, LocaleKeys.wallet, '', this);
-      case SocialTradingPageEnum.transactionHistory:
         return socialTradingCustomAppBar(
-            context, LocaleKeys.views_homeView_transactionHistory, '', this);
-      case SocialTradingPageEnum.transactionDetails:
+            context, LocaleKeys.options.tr(), '', this);
+      case SocialTradingPageEnum.wallet:
+        return socialTradingCustomAppBar(
+            context, LocaleKeys.wallet.tr(), '', this);
+      case SocialTradingPageEnum.transactionHistory:
         return socialTradingCustomAppBar(context,
-            LocaleKeys.views_socialTradingView_transactionDetails, '', this);
+            LocaleKeys.views_homeView_transactionHistory.tr(), '', this);
+      case SocialTradingPageEnum.transactionDetails:
+        return socialTradingCustomAppBar(
+            context,
+            LocaleKeys.views_socialTradingView_transactionDetails.tr(),
+            '',
+            this);
       case SocialTradingPageEnum.notification:
         return socialTradingCustomAppBar(
-            context, LocaleKeys.notification, '', this);
+            context, LocaleKeys.notification.tr(), '', this);
       case SocialTradingPageEnum.subscriptionSetup:
-        return socialTradingCustomAppBar(context,
-            LocaleKeys.views_socialTradingView_subscriptionSetup, '', this);
+        return socialTradingCustomAppBar(
+            context,
+            LocaleKeys.views_socialTradingView_subscriptionSetup.tr(),
+            '',
+            this);
       case SocialTradingPageEnum.subscriptionGuide:
         return socialTradingCustomAppBar(
             context,
-            LocaleKeys.subscriptionGuide,
-            LocaleKeys.socialTradingWidget_subscriptionGuideWidget_learnAbout,
+            LocaleKeys.subscriptionGuide.tr(),
+            LocaleKeys.socialTradingWidget_subscriptionGuideWidget_learnAbout
+                .tr(),
             this);
       default:
         return null;
@@ -250,7 +260,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "1",
       type: TransactionsTypeEnum.withdrawal,
-      title: LocaleKeys.transferToBank,
+      title: LocaleKeys.transferToBank.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -259,7 +269,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "2",
       type: TransactionsTypeEnum.withdrawal,
-      title: LocaleKeys.views_socialTradingView_transferToBinance,
+      title: LocaleKeys.views_socialTradingView_transferToBinance.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -268,7 +278,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "3",
       type: TransactionsTypeEnum.withdrawal,
-      title: LocaleKeys.transferToBank,
+      title: LocaleKeys.transferToBank.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -277,7 +287,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "4",
       type: TransactionsTypeEnum.withdrawal,
-      title: LocaleKeys.transferToPerfect,
+      title: LocaleKeys.transferToPerfect.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.failed,
       date: "2.1.2023",
@@ -290,7 +300,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "1",
       type: TransactionsTypeEnum.deposit,
-      title: LocaleKeys.onlineBankTransfer,
+      title: LocaleKeys.onlineBankTransfer.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -299,7 +309,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "2",
       type: TransactionsTypeEnum.deposit,
-      title: LocaleKeys.views_socialTradingView_depositToBinance,
+      title: LocaleKeys.views_socialTradingView_depositToBinance.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -308,7 +318,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "3",
       type: TransactionsTypeEnum.deposit,
-      title: LocaleKeys.views_socialTradingView_depositToNeteller,
+      title: LocaleKeys.views_socialTradingView_depositToNeteller.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -317,7 +327,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "4",
       type: TransactionsTypeEnum.deposit,
-      title: LocaleKeys.views_socialTradingView_depositToPerfect,
+      title: LocaleKeys.views_socialTradingView_depositToPerfect.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.failed,
       date: "2.1.2023",
@@ -326,7 +336,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "5",
       type: TransactionsTypeEnum.deposit,
-      title: LocaleKeys.depositFromBinancePay,
+      title: LocaleKeys.depositFromBinancePay.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -335,7 +345,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "6",
       type: TransactionsTypeEnum.deposit,
-      title: LocaleKeys.onlineBankTransfer,
+      title: LocaleKeys.onlineBankTransfer.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.pending,
       date: "2.1.2023",
@@ -348,7 +358,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "1",
       type: TransactionsTypeEnum.internalTransfer,
-      title: LocaleKeys.fxtmToWallet,
+      title: LocaleKeys.fxtmToWallet.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -357,7 +367,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "2",
       type: TransactionsTypeEnum.internalTransfer,
-      title: LocaleKeys.walletToDeriv,
+      title: LocaleKeys.walletToDeriv.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.failed,
       date: "2.1.2023",
@@ -366,7 +376,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "3",
       type: TransactionsTypeEnum.internalTransfer,
-      title: LocaleKeys.walletToDeriv,
+      title: LocaleKeys.walletToDeriv.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -384,7 +394,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "5",
       type: TransactionsTypeEnum.internalTransfer,
-      title: LocaleKeys.fxtmToWallet,
+      title: LocaleKeys.fxtmToWallet.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -393,7 +403,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "6",
       type: TransactionsTypeEnum.internalTransfer,
-      title: LocaleKeys.walletToDeriv,
+      title: LocaleKeys.walletToDeriv.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.pending,
       date: "2.1.2023",
@@ -414,7 +424,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "2",
       type: TransactionsTypeEnum.deposit,
-      title: LocaleKeys.providerWidget_providerWallet_depositFromNeteller,
+      title: LocaleKeys.providerWidget_providerWallet_depositFromNeteller.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -423,7 +433,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "3",
       type: TransactionsTypeEnum.internalTransfer,
-      title: LocaleKeys.fxtmToWallet,
+      title: LocaleKeys.fxtmToWallet.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -432,7 +442,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "4",
       type: TransactionsTypeEnum.internalTransfer,
-      title: LocaleKeys.walletToDeriv,
+      title: LocaleKeys.walletToDeriv.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -441,7 +451,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "5",
       type: TransactionsTypeEnum.internalTransfer,
-      title: LocaleKeys.walletToDeriv,
+      title: LocaleKeys.walletToDeriv.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.failed,
       date: "2.1.2023",
@@ -450,7 +460,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "6",
       type: TransactionsTypeEnum.withdrawal,
-      title: LocaleKeys.transferToBank,
+      title: LocaleKeys.transferToBank.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -459,7 +469,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "7",
       type: TransactionsTypeEnum.withdrawal,
-      title: LocaleKeys.views_socialTradingView_transferToBinance,
+      title: LocaleKeys.views_socialTradingView_transferToBinance.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -468,7 +478,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "8",
       type: TransactionsTypeEnum.withdrawal,
-      title: LocaleKeys.transferToBank,
+      title: LocaleKeys.transferToBank.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -477,7 +487,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "9",
       type: TransactionsTypeEnum.internalTransfer,
-      title: LocaleKeys.fxtmToWallet,
+      title: LocaleKeys.fxtmToWallet.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",
@@ -486,7 +496,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "10",
       type: TransactionsTypeEnum.internalTransfer,
-      title: LocaleKeys.walletToDeriv,
+      title: LocaleKeys.walletToDeriv.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.pending,
       date: "2.1.2023",
@@ -497,21 +507,21 @@ class SocialTradingViewModel extends CustomBaseViewModel {
   List notifications = [
     {
       "title": LocaleKeys.views_socialTradingView_subSuccessful,
-      "description": LocaleKeys.views_socialTradingView_copyingSatoshi,
+      "description": LocaleKeys.views_socialTradingView_copyingSatoshi.tr(),
       "date": "2.1.2023 ",
       "time": "16:23:41",
       "isRead": false
     },
     {
       "title": LocaleKeys.views_socialTradingView_subTerminated,
-      "description": LocaleKeys.youHaveSuccessCopied,
+      "description": LocaleKeys.youHaveSuccessCopied.tr(),
       "date": "2.1.2023 ",
       "time": "16:23:41",
       "isRead": false
     },
     {
       "title": "Subscription terminated",
-      "description": LocaleKeys.youHaveSuccessCopied,
+      "description": LocaleKeys.youHaveSuccessCopied.tr(),
       "date": "2.1.2023 ",
       "time": "16:23:41",
       "isRead": false

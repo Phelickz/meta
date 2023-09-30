@@ -53,13 +53,12 @@ class _CurrencyConverterBottomSheetCurrencyState
                 children: [
                   verticalSpaceSmall(context),
                   Text(
-                    LocaleKeys.currencyConverterWidget_selectAccountCurrency
-                        .tr(),
+                    LocaleKeys.currencyConverterWidget_selectAccountCurrency,
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.8),
                       color: isDarkMode ? Colors.white : ColorManager.lightText,
                     ),
-                  ),
+                  ).tr(),
                   verticalSpaceSmall(context),
                   Expanded(
                     flex: 3,

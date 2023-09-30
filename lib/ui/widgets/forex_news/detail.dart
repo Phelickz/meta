@@ -34,12 +34,12 @@ class DetailNews extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  LocaleKeys.forexNewsWidget_allWidget_text2.tr(),
+                  LocaleKeys.forexNewsWidget_allWidget_text2,
                   style: CustomThemeData.generateStyle(
                     fontSize: 11,
                     color: isDarkMode ? Colors.white : Colors.black87,
                   ),
-                ),
+                ).tr(),
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(18),
@@ -49,13 +49,12 @@ class DetailNews extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(5.0),
                     child: Text(
-                      LocaleKeys.forexNewsWidget_detailsWidget_coinTelegraph
-                          .tr(),
+                      LocaleKeys.forexNewsWidget_detailsWidget_coinTelegraph,
                       style: CustomThemeData.generateStyle(
                         fontSize: 10,
                         color: isDarkMode ? Colors.white : Colors.black87,
                       ),
-                    ),
+                    ).tr(),
                   ),
                 ),
               ],

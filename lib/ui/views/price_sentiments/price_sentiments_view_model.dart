@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
 import 'package:meta_trader/app/utils/theme.dart';
@@ -94,8 +95,8 @@ class PriceSentimentViewModel extends CustomBaseViewModel {
       case PriceSentimentPageEnum.search:
         return globalAppBar(
           context,
-          LocaleKeys.views_priceSentiments_marketSentiments,
-          LocaleKeys.views_priceSentiments_sentimentsAcrossM,
+          LocaleKeys.views_priceSentiments_marketSentiments.tr(),
+          LocaleKeys.views_priceSentiments_sentimentsAcrossM.tr(),
           () {
             setPriceSentimentPageEnum = PriceSentimentPageEnum.home;
           },
@@ -178,7 +179,7 @@ class PriceSentimentViewModel extends CustomBaseViewModel {
                         fontSize: 13,
                         color: Colors.white,
                       ),
-                    ),
+                    ).tr(),
                   ),
                 ],
               ),

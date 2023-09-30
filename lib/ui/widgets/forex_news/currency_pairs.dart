@@ -32,7 +32,7 @@ class CurrencyPairs extends StatelessWidget {
                   ? ColorManager.darkText
                   : Theme.of(context).primaryColor,
             ),
-          ),
+          ).tr(),
           verticalSpaceXSmall(context),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -62,15 +62,15 @@ class CurrencyPairs extends StatelessWidget {
                               fontWeight: FontWeight.w800,
                               color: isDarkMode ? Colors.white : Colors.white,
                             ),
-                          ),
+                          ).tr(),
                           Text(
-                            LocaleKeys.forexNewsWidget_allWidget_text2.tr(),
+                            LocaleKeys.forexNewsWidget_allWidget_text2,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.5),
                               fontWeight: FontWeight.normal,
                               color: isDarkMode ? Colors.white : Colors.white,
                             ),
-                          ),
+                          ).tr(),
                         ],
                       ),
                     ),
@@ -101,15 +101,15 @@ class CurrencyPairs extends StatelessWidget {
                               fontWeight: FontWeight.w800,
                               color: isDarkMode ? Colors.white : Colors.white,
                             ),
-                          ),
+                          ).tr(),
                           Text(
-                            LocaleKeys.forexNewsWidget_allWidget_text2.tr(),
+                            LocaleKeys.forexNewsWidget_allWidget_text2,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.5),
                               fontWeight: FontWeight.normal,
                               color: isDarkMode ? Colors.white : Colors.white,
                             ),
-                          ),
+                          ).tr(),
                         ],
                       ),
                     ),
@@ -140,15 +140,15 @@ class CurrencyPairs extends StatelessWidget {
                               fontWeight: FontWeight.w800,
                               color: isDarkMode ? Colors.white : Colors.white,
                             ),
-                          ),
+                          ).tr(),
                           Text(
-                            LocaleKeys.forexNewsWidget_allWidget_text2.tr(),
+                            LocaleKeys.forexNewsWidget_allWidget_text2,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.5),
                               fontWeight: FontWeight.normal,
                               color: isDarkMode ? Colors.white : Colors.white,
                             ),
-                          ),
+                          ).tr(),
                         ],
                       ),
                     ),
@@ -219,7 +219,8 @@ class CurrencyPairs extends StatelessWidget {
                       : const Color(0xff475467),
                 ),
               ),
-              TextButton(onPressed: () {}, child: const Text('View more'))
+              TextButton(
+                  onPressed: () {}, child: const Text(LocaleKeys.viewMore).tr())
             ],
           ),
           verticalSpaceXXSmall(context),
@@ -277,7 +278,7 @@ class CurrencyPairs extends StatelessWidget {
                 ),
               ),
               TextButton(
-                  onPressed: () {}, child: Text(LocaleKeys.viewMore.tr()))
+                  onPressed: () {}, child: const Text(LocaleKeys.viewMore).tr())
             ],
           ),
           verticalSpaceXXSmall(context),
@@ -335,7 +336,7 @@ class CurrencyPairs extends StatelessWidget {
                 ),
               ),
               TextButton(
-                  onPressed: () {}, child: Text(LocaleKeys.viewMore.tr()))
+                  onPressed: () {}, child: const Text(LocaleKeys.viewMore).tr())
             ],
           ),
           verticalSpaceXXSmall(context),

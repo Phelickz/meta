@@ -65,20 +65,20 @@ class SettingsViewModel extends CustomBaseViewModel {
 
   List get timezones => _timeZones;
   List _updateFeatures = [
-    LocaleKeys.views_settings_whatsappAddition,
-    LocaleKeys.views_settings_addNoticeOfUpcoming,
-    LocaleKeys.views_settings_addingDifferentViews
+    LocaleKeys.views_settings_whatsappAddition.tr(),
+    LocaleKeys.views_settings_addNoticeOfUpcoming.tr(),
+    LocaleKeys.views_settings_addingDifferentViews.tr()
   ];
 
   List get updateFeatures => _updateFeatures;
 
-  String _selectedTimezone = LocaleKeys.last2Hrs;
+  String _selectedTimezone = LocaleKeys.last2Hrs.tr();
   String get selectedTimeZone => _selectedTimezone;
 
-  String _chartColor = LocaleKeys.defaultText;
+  String _chartColor = LocaleKeys.defaultText.tr();
   String get chartColor => _chartColor;
 
-  String _colorPreference = LocaleKeys.views_settings_blueBuy;
+  String _colorPreference = LocaleKeys.views_settings_blueBuy.tr();
   String get colorPreference => _colorPreference;
 
   String _selectedLanguage = "English";
@@ -91,53 +91,58 @@ class SettingsViewModel extends CustomBaseViewModel {
   SettingsPageEnum get settingsPageEnum => _settingsPageEnum;
 
   Map privacyPolicy = {
-    "introduction": LocaleKeys.views_settings_privacyPolicy_privacyPolicyIntro,
+    "introduction":
+        LocaleKeys.views_settings_privacyPolicy_privacyPolicyIntro.tr(),
     "data": [
       {
-        "heading": LocaleKeys.views_settings_privacyPolicy_privacyPolicyHead1,
-        "description": LocaleKeys.views_settings_privacyPolicy_privacyPolicyD2,
+        "heading":
+            LocaleKeys.views_settings_privacyPolicy_privacyPolicyHead1.tr(),
+        "description":
+            LocaleKeys.views_settings_privacyPolicy_privacyPolicyD2.tr(),
         "data": [
           {
             "subheading":
-                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH,
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH.tr(),
             "description":
-                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD3
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD3.tr()
           },
           {
             "subheading":
-                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH1,
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH1.tr(),
             "description":
-                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD4
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD4.tr()
           },
           {
             "subheading":
-                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH2,
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH2.tr(),
             "description":
-                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD5
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD5.tr()
           },
           {
             "subheading":
-                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH3,
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH3.tr(),
             "description":
-                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD6
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD6.tr()
           },
         ]
       },
       {
-        "heading": LocaleKeys.views_settings_privacyPolicy_privacyPolicyHead2,
-        "description": LocaleKeys.views_settings_privacyPolicy_privacyPolicyD7,
+        "heading":
+            LocaleKeys.views_settings_privacyPolicy_privacyPolicyHead2.tr(),
+        "description":
+            LocaleKeys.views_settings_privacyPolicy_privacyPolicyD7.tr(),
         "data": [
           {
             "subheading":
-                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH4,
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH4.tr(),
             "description":
-                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD8
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD8.tr()
           },
           {
             "subheading":
-                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH5,
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicySubH5.tr(),
             "description":
-                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD9
+                LocaleKeys.views_settings_privacyPolicy_privacyPolicyD9.tr()
           },
         ]
       },
@@ -242,42 +247,46 @@ class SettingsViewModel extends CustomBaseViewModel {
   AppBar? returnAppBar(BuildContext context) {
     switch (_settingsPageEnum) {
       case SettingsPageEnum.settings:
-        return settingsAppBar(
-            context, LocaleKeys.settings, '', this, SettingsPageEnum.settings);
+        return settingsAppBar(context, LocaleKeys.settings.tr(), '', this,
+            SettingsPageEnum.settings);
       case SettingsPageEnum.notificationSettings:
         return settingsAppBar(
             context,
-            LocaleKeys.views_settings_notificationSettings,
+            LocaleKeys.views_settings_notificationSettings.tr(),
             '',
             this,
             SettingsPageEnum.notificationSettings);
       case SettingsPageEnum.languageSettings:
         return settingsAppBar(
             context,
-            LocaleKeys.views_settings_languageSettings,
-            LocaleKeys.views_settings_changeAppLanguage,
+            LocaleKeys.views_settings_languageSettings.tr(),
+            LocaleKeys.views_settings_changeAppLanguage.tr(),
             this,
             SettingsPageEnum.languageSettings);
       case SettingsPageEnum.chartColor:
-        return settingsAppBar(context, LocaleKeys.chartColor, '', this,
+        return settingsAppBar(context, LocaleKeys.chartColor.tr(), '', this,
             SettingsPageEnum.chartColor);
       case SettingsPageEnum.colorPreference:
-        return settingsAppBar(context, LocaleKeys.colorPreference, "", this,
-            SettingsPageEnum.colorPreference);
+        return settingsAppBar(context, LocaleKeys.colorPreference.tr(), "",
+            this, SettingsPageEnum.colorPreference);
       case SettingsPageEnum.changeBasis:
-        return settingsAppBar(context, LocaleKeys.settings_changeBasis, '',
+        return settingsAppBar(context, LocaleKeys.settings_changeBasis.tr(), '',
             this, SettingsPageEnum.changeBasis);
       case SettingsPageEnum.aboutUs:
-        return settingsAppBar(
-            context, LocaleKeys.aboutUs, '', this, SettingsPageEnum.aboutUs);
+        return settingsAppBar(context, LocaleKeys.aboutUs.tr(), '', this,
+            SettingsPageEnum.aboutUs);
 
       case SettingsPageEnum.privacyPolicy:
-        return settingsAppBar(context, LocaleKeys.privacyPolicyText, '', this,
-            SettingsPageEnum.privacyPolicy);
+        return settingsAppBar(context, LocaleKeys.privacyPolicyText.tr(), '',
+            this, SettingsPageEnum.privacyPolicy);
 
       case SettingsPageEnum.termsOfUSe:
-        return settingsAppBar(context, LocaleKeys.views_settings_TermsOfUse, '',
-            this, SettingsPageEnum.termsOfUSe);
+        return settingsAppBar(
+            context,
+            LocaleKeys.views_settings_TermsOfUse.tr(),
+            '',
+            this,
+            SettingsPageEnum.termsOfUSe);
       case SettingsPageEnum.updateReleases:
         return null;
       default:

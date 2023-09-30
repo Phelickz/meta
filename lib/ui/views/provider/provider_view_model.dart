@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -94,7 +95,7 @@ class ProviderViewModel extends CustomBaseViewModel {
       "amount": "284.57",
       "sell": true,
       "quantity": "3",
-      "available": "open",
+      "available": LocaleKeys.open.tr(),
       "date": "2023.7.13 20:40:08",
       "orderID": "23162111",
       "commission": "\$400.00"
@@ -106,7 +107,7 @@ class ProviderViewModel extends CustomBaseViewModel {
       "amount": "284.57",
       "sell": false,
       "quantity": "10",
-      "available": "open",
+      "available": LocaleKeys.open.tr(),
       "date": "2023.7.13 20:40:08",
       "orderID": "23162111",
       "commission": "\$400.00"
@@ -118,7 +119,7 @@ class ProviderViewModel extends CustomBaseViewModel {
       "amount": "284.57",
       "sell": true,
       "quantity": "5",
-      "available": LocaleKeys.open,
+      "available": LocaleKeys.open.tr(),
       "date": "2023.7.13 20:40:08",
       "orderID": "23162111",
       "commission": "\$400.00"
@@ -130,7 +131,7 @@ class ProviderViewModel extends CustomBaseViewModel {
       "amount": "284.57",
       "sell": true,
       "quantity": "7",
-      "available": LocaleKeys.open,
+      "available": LocaleKeys.open.tr(),
       "date": "2023.7.13 20:40:08",
       "orderID": "23162111",
       "commission": "\$400.00"
@@ -142,7 +143,7 @@ class ProviderViewModel extends CustomBaseViewModel {
       "amount": "284.57",
       "sell": false,
       "quantity": "3",
-      "available": LocaleKeys.open,
+      "available": LocaleKeys.open.tr(),
       "date": "2023.7.13 20:40:08",
       "orderID": "23162111",
       "commission": "\$400.00"
@@ -169,7 +170,7 @@ class ProviderViewModel extends CustomBaseViewModel {
   int get desiredFee => _desiredFee;
 
   String _strategyDescription =
-      LocaleKeys.views_providerView_strategyDescription;
+      LocaleKeys.views_providerView_strategyDescription.tr();
   String get strategyDescription => _strategyDescription;
 
   bool _visibility = true;
@@ -232,36 +233,48 @@ class ProviderViewModel extends CustomBaseViewModel {
 
   List notifications = [
     {
-      "title":
-          LocaleKeys.views_providerView_notificationList_notificationListTitle,
+      "title": LocaleKeys
+          .views_providerView_notificationList_notificationListTitle
+          .tr(),
       "description": LocaleKeys
-          .views_providerView_notificationList_notificationListDescription,
-      "date":
-          LocaleKeys.views_providerView_notificationList_notificationListDate,
-      "time":
-          LocaleKeys.views_providerView_notificationList_notificationListTime,
+          .views_providerView_notificationList_notificationListDescription
+          .tr(),
+      "date": LocaleKeys
+          .views_providerView_notificationList_notificationListDate
+          .tr(),
+      "time": LocaleKeys
+          .views_providerView_notificationList_notificationListTime
+          .tr(),
       "isRead": false
     },
     {
-      "title":
-          LocaleKeys.views_providerView_notificationList_notificationListTitle1,
+      "title": LocaleKeys
+          .views_providerView_notificationList_notificationListTitle1
+          .tr(),
       "description": LocaleKeys
-          .views_providerView_notificationList_notificationListDescription1,
-      "date":
-          LocaleKeys.views_providerView_notificationList_notificationListDate,
-      "time":
-          LocaleKeys.views_providerView_notificationList_notificationListTime,
+          .views_providerView_notificationList_notificationListDescription1
+          .tr(),
+      "date": LocaleKeys
+          .views_providerView_notificationList_notificationListDate
+          .tr(),
+      "time": LocaleKeys
+          .views_providerView_notificationList_notificationListTime
+          .tr(),
       "isRead": false
     },
     {
-      "title":
-          LocaleKeys.views_providerView_notificationList_notificationListTitle1,
+      "title": LocaleKeys
+          .views_providerView_notificationList_notificationListTitle1
+          .tr(),
       "description": LocaleKeys
-          .views_providerView_notificationList_notificationListDescription1,
-      "date":
-          LocaleKeys.views_providerView_notificationList_notificationListDate,
-      "time":
-          LocaleKeys.views_providerView_notificationList_notificationListTime,
+          .views_providerView_notificationList_notificationListDescription1
+          .tr(),
+      "date": LocaleKeys
+          .views_providerView_notificationList_notificationListDate
+          .tr(),
+      "time": LocaleKeys
+          .views_providerView_notificationList_notificationListTime
+          .tr(),
       "isRead": false
     },
   ];
@@ -322,8 +335,8 @@ class ProviderViewModel extends CustomBaseViewModel {
         return ProviderAppbar.simpleAppBar(
             this,
             context,
-            LocaleKeys.views_providerView_signUpAsProvider,
-            LocaleKeys.views_providerView_enterYourInformation,
+            LocaleKeys.views_providerView_signUpAsProvider.tr(),
+            LocaleKeys.views_providerView_enterYourInformation.tr(),
             true,
             IconButton(
                 onPressed: () {},
@@ -337,32 +350,37 @@ class ProviderViewModel extends CustomBaseViewModel {
         return ProviderAppbar.simpleAppBar(
             this,
             context,
-            LocaleKeys.views_providerView_providerLogin,
-            LocaleKeys.views_providerView_approvedRegistration,
+            LocaleKeys.views_providerView_providerLogin.tr(),
+            LocaleKeys.views_providerView_approvedRegistration.tr(),
             true,
             null);
       case ProviderPageEnum.options:
         return ProviderAppbar.simpleAppBar(
-            this, context, LocaleKeys.options, "", false, null);
+            this, context, LocaleKeys.options.tr(), "", false, null);
       case ProviderPageEnum.notifications:
         return ProviderAppbar.simpleAppBar(
-            this, context, LocaleKeys.notification, "", false, null);
+            this, context, LocaleKeys.notification.tr(), "", false, null);
       case ProviderPageEnum.profileSettings:
         return ProviderAppbar.simpleAppBar(
             this,
             context,
-            LocaleKeys.views_providerView_profileSettings,
-            LocaleKeys.views_providerView_changeYourProfileInfo,
+            LocaleKeys.views_providerView_profileSettings.tr(),
+            LocaleKeys.views_providerView_changeYourProfileInfo.tr(),
             true,
             null);
       case ProviderPageEnum.dashboard:
         return ProviderAppbar.appBarTwo(this, context);
       case ProviderPageEnum.wallet:
         return ProviderAppbar.walletAppBar(
-            context, LocaleKeys.wallet, "", this);
+            context, LocaleKeys.wallet.tr(), "", this);
       case ProviderPageEnum.followers:
-        return ProviderAppbar.simpleAppBar(this, context, LocaleKeys.followers,
-            LocaleKeys.views_providerView_viewYourFollowers, true, null);
+        return ProviderAppbar.simpleAppBar(
+            this,
+            context,
+            LocaleKeys.followers.tr(),
+            LocaleKeys.views_providerView_viewYourFollowers.tr(),
+            true,
+            null);
       default:
         return AppBar();
     }

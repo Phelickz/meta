@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -61,7 +62,7 @@ class TradeCloseScreen extends StackedView<QuotesViewModel> {
                               ? const Color(0xFFD0D5DD)
                               : const Color(0xFFF2F4F7),
                           fontWeight: FontWeight.w400),
-                    ),
+                    ).tr(),
                   ),
                 ),
                 SizedBox(
@@ -88,7 +89,7 @@ class TradeCloseScreen extends StackedView<QuotesViewModel> {
                               fontSize: McGyver.textSize(context, 1.0),
                               color: const Color(0xFF98A2B3),
                               fontWeight: FontWeight.w400),
-                        ),
+                        ).tr(),
                       )
                     ],
                   ),

@@ -70,7 +70,7 @@ class OverviewComponent extends StatelessWidget {
             },
           ),
           Text(
-            LocaleKeys.tradingSignal.tr(),
+            LocaleKeys.tradingSignal,
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 2),
               fontWeight: FontWeight.bold,
@@ -78,7 +78,7 @@ class OverviewComponent extends StatelessWidget {
                   ? const Color(0xFFD0D5DD)
                   : const Color(0xFF475467),
             ),
-          ),
+          ).tr(),
           verticalSpaceXSmall(context),
           // Replaced with ListView
           TraadingSignalTile(

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -70,7 +71,7 @@ class SelectDepositMethod extends StatelessWidget {
                 model.setFundAccountPageEnum = FundAccountPageEnum.blockBee;
               }
             },
-            text: LocaleKeys.next,
+            text: LocaleKeys.next.tr(),
           ),
           verticalSpaceMedium(context),
         ],
@@ -150,14 +151,14 @@ class SelectDepositMethod extends StatelessWidget {
                               fontSize: McGyver.textSize(context, 1.4),
                               color: isDarkMode ? Colors.white : Colors.black45,
                             ),
-                          ),
+                          ).tr(),
                           Text(
                             LocaleKeys.instant,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.4),
                               color: isDarkMode ? Colors.white : Colors.black45,
                             ),
-                          ),
+                          ).tr(),
                         ],
                       ),
                       // verticalSpaceXXSmall(context),
@@ -173,14 +174,14 @@ class SelectDepositMethod extends StatelessWidget {
                               fontSize: McGyver.textSize(context, 1.4),
                               color: isDarkMode ? Colors.white : Colors.black45,
                             ),
-                          ),
+                          ).tr(),
                           Text(
                             LocaleKeys.upTo,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.4),
                               color: isDarkMode ? Colors.white : Colors.black45,
                             ),
-                          ),
+                          ).tr(),
                         ],
                       ),
                       const SizedBox(
@@ -195,7 +196,7 @@ class SelectDepositMethod extends StatelessWidget {
                               fontSize: McGyver.textSize(context, 1.4),
                               color: isDarkMode ? Colors.white : Colors.black45,
                             ),
-                          ),
+                          ).tr(),
                           Text(
                             '0%',
                             style: CustomThemeData.generateStyle(
@@ -217,7 +218,7 @@ class SelectDepositMethod extends StatelessWidget {
                               fontSize: McGyver.textSize(context, 1.4),
                               color: isDarkMode ? Colors.white : Colors.black45,
                             ),
-                          ),
+                          ).tr(),
                           Text(
                             LocaleKeys
                                 .fundAccountWidget_selectDepositMethodWidget_tenUsd,
@@ -225,7 +226,7 @@ class SelectDepositMethod extends StatelessWidget {
                               fontSize: McGyver.textSize(context, 1.4),
                               color: isDarkMode ? Colors.white : Colors.black45,
                             ),
-                          ),
+                          ).tr(),
                         ],
                       ),
                     ],

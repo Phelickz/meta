@@ -28,14 +28,14 @@ class Bitcoin extends StatelessWidget {
             child: ListView(
               children: [
                 Text(
-                  LocaleKeys.walletAddress.tr(),
+                  LocaleKeys.walletAddress,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 IgnorePointer(
                   ignoring: true,
@@ -57,14 +57,14 @@ class Bitcoin extends StatelessWidget {
                 ),
                 verticalSpaceSmall(context),
                 Text(
-                  LocaleKeys.amountToFund.tr(),
+                  LocaleKeys.amountToFund,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 const CustomTextFields(
                   hintText: '0 BTC',
@@ -72,14 +72,14 @@ class Bitcoin extends StatelessWidget {
                 ),
                 verticalSpaceSmall(context),
                 Text(
-                  LocaleKeys.chooseNetwork.tr(),
+                  LocaleKeys.chooseNetwork,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 CustomTextFields(
                   hintText: LocaleKeys.btcBeacon.tr(),
@@ -104,15 +104,14 @@ class Bitcoin extends StatelessWidget {
                     Expanded(
                       child: Text(
                         LocaleKeys
-                            .fundAccountWidget_bitcoinWidget_makeSureToFund
-                            .tr(),
+                            .fundAccountWidget_bitcoinWidget_makeSureToFund,
                         style: CustomThemeData.generateStyle(
                           fontSize: 13,
                           color: isDarkMode
                               ? ColorManager.darkText
                               : ColorManager.lightText,
                         ),
-                      ),
+                      ).tr(),
                     )
                   ],
                 ),

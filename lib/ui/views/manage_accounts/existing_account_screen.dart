@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -18,8 +19,10 @@ class ExistingAccountView extends StackedView<ManageAccountViewModel> {
         isBusy: viewModel.isBusy,
         appBar: existingAccountAppbar(
             context,
-            LocaleKeys.views_manageAccount_existingAccountScreen_searchBroker,
-            LocaleKeys.views_manageAccount_existingAccountScreen_findBroker),
+            LocaleKeys.views_manageAccount_existingAccountScreen_searchBroker
+                .tr(),
+            LocaleKeys.views_manageAccount_existingAccountScreen_findBroker
+                .tr()),
         body: SafeArea(
             child: Column(
           children: [

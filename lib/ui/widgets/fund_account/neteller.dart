@@ -28,14 +28,14 @@ class Neteller extends StatelessWidget {
             child: ListView(
               children: [
                 Text(
-                  LocaleKeys.amountToFund.tr(),
+                  LocaleKeys.amountToFund,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 const CustomTextFields(
                   hintText: '0.00 USD',
@@ -50,7 +50,7 @@ class Neteller extends StatelessWidget {
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 IgnorePointer(
                   ignoring: true,
@@ -79,7 +79,7 @@ class Neteller extends StatelessWidget {
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 const IgnorePointer(
                   ignoring: true,
@@ -93,7 +93,7 @@ class Neteller extends StatelessWidget {
             ),
           ),
           CustomButtons.generalButton(
-              context: context, onTap: () {}, text: LocaleKeys.next),
+              context: context, onTap: () {}, text: LocaleKeys.next.tr()),
           verticalSpaceMedium(context),
         ],
       ),

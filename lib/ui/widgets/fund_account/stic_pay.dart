@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -34,7 +35,7 @@ class SticPay extends StatelessWidget {
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 const CustomTextFields(
                   hintText: '0.00 USD',
@@ -49,7 +50,7 @@ class SticPay extends StatelessWidget {
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 IgnorePointer(
                   ignoring: true,
@@ -78,7 +79,7 @@ class SticPay extends StatelessWidget {
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 const IgnorePointer(
                   ignoring: true,
@@ -108,7 +109,7 @@ class SticPay extends StatelessWidget {
                               ? ColorManager.darkText
                               : ColorManager.lightText,
                         ),
-                      ),
+                      ).tr(),
                     )
                   ],
                 ),
@@ -116,7 +117,7 @@ class SticPay extends StatelessWidget {
             ),
           ),
           CustomButtons.generalButton(
-              context: context, onTap: () {}, text: LocaleKeys.next),
+              context: context, onTap: () {}, text: LocaleKeys.next.tr()),
           verticalSpaceMedium(context),
         ],
       ),

@@ -76,10 +76,10 @@ class LabelDropdown extends StatelessWidget {
             value: value,
             underline: const SizedBox.shrink(),
             hint: Text(
-              value ?? LocaleKeys.select.tr(),
+              value ?? LocaleKeys.select,
               style: const TextStyle(
                   fontWeight: FontWeight.w500, color: Colors.grey),
-            ),
+            ).tr(),
             style: textStyle,
             icon: dropDownIcon,
             onChanged: onChanged,

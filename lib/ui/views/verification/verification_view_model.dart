@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_final_fields
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -89,13 +90,13 @@ class VerificationViewModel extends CustomBaseViewModel {
   AppBar? returnAppBar(BuildContext context) {
     switch (_verificationPageEnum) {
       case VerificationPageEnum.verifyLanding:
-        return verifyAppBar(context, LocaleKeys.verifyAccount,
-            LocaleKeys.views_providerView_enterYourInformation, this);
+        return verifyAppBar(context, LocaleKeys.verifyAccount.tr(),
+            LocaleKeys.views_providerView_enterYourInformation.tr(), this);
       case VerificationPageEnum.selectIdentity:
         return verifyAppBar(
             context,
-            LocaleKeys.views_verificationView_VerifyIdentity,
-            LocaleKeys.views_verificationView_selectIdToCapture,
+            LocaleKeys.views_verificationView_VerifyIdentity.tr(),
+            LocaleKeys.views_verificationView_selectIdToCapture.tr(),
             this);
       default:
         return null;

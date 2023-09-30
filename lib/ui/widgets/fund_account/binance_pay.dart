@@ -28,14 +28,14 @@ class BinancePay extends StatelessWidget {
             child: ListView(
               children: [
                 Text(
-                  LocaleKeys.amountToFund.tr(),
+                  LocaleKeys.amountToFund,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.8),
                     color: isDarkMode
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 const CustomTextFields(
                   hintText: '0 BTC',
@@ -43,12 +43,11 @@ class BinancePay extends StatelessWidget {
                 ),
                 verticalSpaceSmall(context),
                 Text(
-                  LocaleKeys.fundAccountWidget_binancePayWidget_binancePayId
-                      .tr(),
+                  LocaleKeys.fundAccountWidget_binancePayWidget_binancePayId,
                   style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.8),
                       color: ColorManager.lightText),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 IgnorePointer(
                   ignoring: true,

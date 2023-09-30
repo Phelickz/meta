@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -61,7 +62,7 @@ class TradeViewModel extends CustomBaseViewModel {
         return tradeAppBar(
           context,
           "EURUSD",
-          LocaleKeys.euroVsUs,
+          LocaleKeys.euroVsUs.tr(),
           this,
           "",
         );

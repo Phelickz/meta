@@ -525,13 +525,13 @@ class HomeView extends StackedView<HomeViewModel> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              LocaleKeys.views_homeView_welcome.tr(),
+              LocaleKeys.views_homeView_welcome,
               style: CustomThemeData.generateStyle(
                 fontSize: 18,
                 color: isDarkMode ? Colors.white : Colors.white,
                 fontWeight: FontWeight.w700,
               ),
-            ),
+            ).tr(),
             const SizedBox(
               height: 4,
             ),
@@ -555,14 +555,14 @@ class HomeView extends StackedView<HomeViewModel> {
                           width: 5,
                         ),
                         Text(
-                          LocaleKeys.sliver.tr(),
+                          LocaleKeys.sliver,
                           style: CustomThemeData.generateStyle(
                               fontSize: 9,
                               fontWeight: FontWeight.w500,
                               color: isDarkMode
                                   ? Colors.white
                                   : const Color(0xffD0D5DD)),
-                        )
+                        ).tr()
                       ],
                     ),
                   ),
@@ -579,13 +579,13 @@ class HomeView extends StackedView<HomeViewModel> {
                     child: Row(
                       children: [
                         Text(
-                          LocaleKeys.verifiedCap.tr(),
+                          LocaleKeys.verifiedCap,
                           style: CustomThemeData.generateStyle(
                             fontSize: 9,
                             fontWeight: FontWeight.w400,
                             color: Theme.of(context).primaryColor,
                           ),
-                        ),
+                        ).tr(),
                         const SizedBox(
                           width: 5,
                         ),
@@ -620,14 +620,14 @@ class HomeView extends StackedView<HomeViewModel> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                LocaleKeys.views_homeView_walletBalance.tr(),
+                LocaleKeys.views_homeView_walletBalance,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.5),
                   color: isDarkMode
                       ? const Color(0xffD0D5DD)
                       : const Color(0xffD3ECFD),
                 ),
-              ),
+              ).tr(),
               RichText(
                 text: TextSpan(
                   text: LocaleKeys.marginWithP.tr(args: ['%', ':']),

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -35,7 +36,7 @@ class Tether extends StatelessWidget {
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 IgnorePointer(
                   ignoring: true,
@@ -64,7 +65,7 @@ class Tether extends StatelessWidget {
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 const CustomTextFields(
                   hintText: '0 USDT',
@@ -79,10 +80,10 @@ class Tether extends StatelessWidget {
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 CustomTextFields(
-                  hintText: LocaleKeys.btcBeacon,
+                  hintText: LocaleKeys.btcBeacon.tr(),
                   password: false,
                   suffixIcon: Icon(
                     Icons.arrow_forward_ios,
@@ -111,7 +112,7 @@ class Tether extends StatelessWidget {
                               ? ColorManager.darkText
                               : ColorManager.lightText,
                         ),
-                      ),
+                      ).tr(),
                     )
                   ],
                 ),
@@ -121,7 +122,9 @@ class Tether extends StatelessWidget {
             ),
           ),
           CustomButtons.generalButton(
-              context: context, onTap: () {}, text: LocaleKeys.fundAccount),
+              context: context,
+              onTap: () {},
+              text: LocaleKeys.fundAccount.tr()),
           verticalSpaceMedium(context),
         ],
       ),

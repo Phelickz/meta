@@ -85,8 +85,7 @@ class Search extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        LocaleKeys.forexNewsWidget_searchWidget_searchResult
-                            .tr(),
+                        LocaleKeys.forexNewsWidget_searchWidget_searchResult,
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 2),
                           fontWeight: FontWeight.bold,
@@ -94,7 +93,7 @@ class Search extends StatelessWidget {
                               ? const Color(0xff98A2B3)
                               : const Color(0xff475467),
                         ),
-                      ),
+                      ).tr(),
                     ],
                   ),
                   verticalSpaceXXSmall(context),
@@ -141,7 +140,7 @@ class Search extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        LocaleKeys.forexNewsWidget_searchWidget_moreResult.tr(),
+                        LocaleKeys.forexNewsWidget_searchWidget_moreResult,
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 2),
                           fontWeight: FontWeight.bold,
@@ -149,7 +148,7 @@ class Search extends StatelessWidget {
                               ? const Color(0xff98A2B3)
                               : const Color(0xff475467),
                         ),
-                      ),
+                      ).tr(),
                     ],
                   ),
                   verticalSpaceXXSmall(context),

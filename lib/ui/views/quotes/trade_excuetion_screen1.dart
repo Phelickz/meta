@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
@@ -19,7 +20,7 @@ class TradeExecutionScreen extends StackedView<QuotesViewModel> {
     // var isDarkMode = CustomThemeData.isDarkMode(context);
     return Skeleton(
       isBusy: viewModel.isBusy,
-      appBar: tradeAppBars(context, false, "EURUSD", LocaleKeys.euroVsUs),
+      appBar: tradeAppBars(context, false, "EURUSD", LocaleKeys.euroVsUs.tr()),
       bodyPadding: EdgeInsets.zero,
       body: SafeArea(
         child: SingleChildScrollView(
@@ -44,7 +45,7 @@ class TradeExecutionScreen extends StackedView<QuotesViewModel> {
                   ),
                   Expanded(
                     child: Text(
-                      LocaleKeys.theTradeWill,
+                      LocaleKeys.theTradeWill.tr(),
                       style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.0),
                           color: const Color(0xFF98A2B3),

@@ -29,7 +29,7 @@ class ForexNewsAll extends StatelessWidget {
                 fontSize: McGyver.textSize(context, 1.8),
                 fontWeight: FontWeight.bold,
                 color: isDarkMode ? ColorManager.darkText : Colors.black),
-          ),
+          ).tr(),
           verticalSpaceXSmall(context),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -59,15 +59,15 @@ class ForexNewsAll extends StatelessWidget {
                               fontWeight: FontWeight.w800,
                               color: isDarkMode ? Colors.white : Colors.white,
                             ),
-                          ),
+                          ).tr(),
                           Text(
-                            LocaleKeys.forexNewsWidget_allWidget_text2.tr(),
+                            LocaleKeys.forexNewsWidget_allWidget_text2,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.5),
                               fontWeight: FontWeight.normal,
                               color: isDarkMode ? Colors.white : Colors.white,
                             ),
-                          ),
+                          ).tr(),
                         ],
                       ),
                     ),
@@ -98,15 +98,15 @@ class ForexNewsAll extends StatelessWidget {
                               fontWeight: FontWeight.w800,
                               color: isDarkMode ? Colors.white : Colors.white,
                             ),
-                          ),
+                          ).tr(),
                           Text(
-                            LocaleKeys.forexNewsWidget_allWidget_text2.tr(),
+                            LocaleKeys.forexNewsWidget_allWidget_text2,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.5),
                               fontWeight: FontWeight.normal,
                               color: isDarkMode ? Colors.white : Colors.white,
                             ),
-                          ),
+                          ).tr(),
                         ],
                       ),
                     ),
@@ -137,15 +137,15 @@ class ForexNewsAll extends StatelessWidget {
                               fontWeight: FontWeight.w800,
                               color: isDarkMode ? Colors.white : Colors.white,
                             ),
-                          ),
+                          ).tr(),
                           Text(
-                            LocaleKeys.forexNewsWidget_allWidget_text2.tr(),
+                            LocaleKeys.forexNewsWidget_allWidget_text2,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.5),
                               fontWeight: FontWeight.normal,
                               color: isDarkMode ? Colors.white : Colors.white,
                             ),
-                          ),
+                          ).tr(),
                         ],
                       ),
                     ),
@@ -212,7 +212,7 @@ class ForexNewsAll extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                LocaleKeys.currencyPair.tr(),
+                LocaleKeys.currencyPair,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2),
                   fontWeight: FontWeight.bold,
@@ -220,8 +220,9 @@ class ForexNewsAll extends StatelessWidget {
                       ? const Color(0xff98A2B3)
                       : const Color(0xff475467),
                 ),
-              ),
-              TextButton(onPressed: () {}, child: const Text('View more'))
+              ).tr(),
+              TextButton(
+                  onPressed: () {}, child: const Text(LocaleKeys.viewMore).tr())
             ],
           ),
           verticalSpaceXXSmall(context),
@@ -268,7 +269,7 @@ class ForexNewsAll extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                LocaleKeys.metals.tr(),
+                LocaleKeys.metals,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2),
                   fontWeight: FontWeight.bold,
@@ -276,8 +277,9 @@ class ForexNewsAll extends StatelessWidget {
                       ? const Color(0xff98A2B3)
                       : const Color(0xff475467),
                 ),
-              ),
-              TextButton(onPressed: () {}, child: const Text('View more'))
+              ).tr(),
+              TextButton(
+                  onPressed: () {}, child: const Text(LocaleKeys.viewMore))
             ],
           ),
           verticalSpaceXXSmall(context),
@@ -324,7 +326,7 @@ class ForexNewsAll extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                LocaleKeys.cryptoNews.tr(),
+                LocaleKeys.cryptoNews,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2),
                   fontWeight: FontWeight.bold,
@@ -332,8 +334,9 @@ class ForexNewsAll extends StatelessWidget {
                       ? const Color(0xff98A2B3)
                       : const Color(0xff475467),
                 ),
-              ),
-              TextButton(onPressed: () {}, child: const Text('View more'))
+              ).tr(),
+              TextButton(
+                  onPressed: () {}, child: const Text(LocaleKeys.viewMore))
             ],
           ),
           verticalSpaceXXSmall(context),

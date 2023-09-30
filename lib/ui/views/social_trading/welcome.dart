@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/locator/locator.dart';
@@ -43,7 +44,7 @@ class SocialTradingWelcome extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: isDarkMode ? Colors.white : Colors.black87,
                 ),
-              ),
+              ).tr(),
               verticalSpaceSmall(context),
               Text(
                 LocaleKeys
@@ -54,17 +55,19 @@ class SocialTradingWelcome extends StatelessWidget {
                   fontWeight: FontWeight.normal,
                   color: isDarkMode ? Colors.white : Colors.black54,
                 ),
-              ),
+              ).tr(),
               verticalSpaceSmall(context),
               verticalSpaceMedium(context),
               CustomButtons.generalButton(
-                  context: context,
-                  onTap: () {
-                    final routerService = locator<RouterService>();
-                    routerService.router.push(const SocialTradingDasboard());
-                  },
-                  text: LocaleKeys
-                      .views_socialTradingView_socialTradingWelcome_getStarted),
+                context: context,
+                onTap: () {
+                  final routerService = locator<RouterService>();
+                  routerService.router.push(const SocialTradingDasboard());
+                },
+                text: LocaleKeys
+                    .views_socialTradingView_socialTradingWelcome_getStarted
+                    .tr(),
+              ),
               verticalSpaceSmall(context),
             ],
           ),

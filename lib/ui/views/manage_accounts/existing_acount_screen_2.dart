@@ -53,13 +53,13 @@ class ExistingAccountView2 extends StackedView<ManageAccountViewModel> {
                   Checkbox(value: false, onChanged: (value) => {}),
                   // SizedBox(width: 6.pWidth(context),),
                   Text(
-                    LocaleKeys.savePassword.tr(),
+                    LocaleKeys.savePassword,
                     style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.7),
                         color:
                             isDarkMode ? Colors.white : const Color(0xFF667085),
                         fontWeight: FontWeight.w500),
-                  )
+                  ).tr()
                 ],
               ),
               SizedBox(

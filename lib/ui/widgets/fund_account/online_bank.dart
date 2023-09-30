@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
@@ -35,11 +36,12 @@ class OnlineBank extends StatelessWidget {
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 CustomTextFields(
                   hintText: LocaleKeys
-                      .fundAccountWidget_onlineBankWidget_chooseAvailableBank,
+                      .fundAccountWidget_onlineBankWidget_chooseAvailableBank
+                      .tr(),
                   password: false,
                   suffixIcon: Icon(
                     Icons.arrow_forward_ios,
@@ -56,7 +58,7 @@ class OnlineBank extends StatelessWidget {
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 const CustomTextFields(
                   hintText: '0.00 USD',
@@ -71,7 +73,7 @@ class OnlineBank extends StatelessWidget {
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 IgnorePointer(
                   ignoring: true,
@@ -100,7 +102,7 @@ class OnlineBank extends StatelessWidget {
                         ? ColorManager.darkText
                         : ColorManager.lightText,
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 const IgnorePointer(
                   ignoring: true,
@@ -114,7 +116,7 @@ class OnlineBank extends StatelessWidget {
             ),
           ),
           CustomButtons.generalButton(
-              context: context, onTap: () {}, text: LocaleKeys.next),
+              context: context, onTap: () {}, text: LocaleKeys.next.tr()),
           verticalSpaceMedium(context),
         ],
       ),

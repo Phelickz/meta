@@ -93,15 +93,14 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                       horizontal: McGyver.rsDoubleW(context, 5),
                     ),
                     child: Text(
-                      LocaleKeys.views_loyaltyRewardsView_yourSilverBenefits
-                          .tr(),
+                      LocaleKeys.views_loyaltyRewardsView_yourSilverBenefits,
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 2.2),
                         fontWeight: FontWeight.bold,
                         color:
                             isDarkMode ? Colors.white : const Color(0xff475467),
                       ),
-                    ),
+                    ).tr(),
                   ),
                   verticalSpaceSmall(context),
                   silverBenefits(
@@ -138,8 +137,8 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                       child: Row(
                         children: [
                           Text(
-                            LocaleKeys.views_loyaltyRewardsView_earnDailyRewards
-                                .tr(),
+                            LocaleKeys
+                                .views_loyaltyRewardsView_earnDailyRewards,
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 2),
                               color: isDarkMode
@@ -147,7 +146,7 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                                   : const Color(0xff475467),
                               fontWeight: FontWeight.bold,
                             ),
-                          ),
+                          ).tr(),
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
@@ -168,15 +167,14 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                                   children: [
                                     Text(
                                       LocaleKeys
-                                          .views_loyaltyRewardsView_todayTask
-                                          .tr(),
+                                          .views_loyaltyRewardsView_todayTask,
                                       style: CustomThemeData.generateStyle(
                                         fontSize: 12,
                                         color: isDarkMode
                                             ? const Color(0xffD0D5DD)
                                             : const Color(0xffD0D5DD),
                                       ),
-                                    ),
+                                    ).tr(),
                                     Icon(
                                       viewModel.viewDailyRewards
                                           ? Icons.keyboard_arrow_down_rounded
@@ -227,8 +225,7 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          LocaleKeys.views_loyaltyRewardsView_recentActivity
-                              .tr(),
+                          LocaleKeys.views_loyaltyRewardsView_recentActivity,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.8),
                             fontWeight: FontWeight.bold,
@@ -236,7 +233,7 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                                 ? const Color(0xff98A2B3)
                                 : const Color(0xff475467),
                           ),
-                        ),
+                        ).tr(),
                         TextButton(
                             onPressed: () {
                               viewModel.push(RecentActivity(model: viewModel));
@@ -307,7 +304,7 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                   fontSize: McGyver.textSize(context, 1.4),
                   color: isDarkMode ? Colors.white : const Color(0xff475467),
                 ),
-              ),
+              ).tr(),
               verticalSpaceXXSmall(context),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -360,7 +357,7 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                     fontWeight: FontWeight.bold,
                     color: isDarkMode ? Colors.white : const Color(0xff475467),
                   ),
-                ),
+                ).tr(),
                 verticalSpaceXXSmall(context),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -369,48 +366,48 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          LocaleKeys.views_loyaltyRewardsView_status.tr(),
+                          LocaleKeys.views_loyaltyRewardsView_status,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.2),
                             color: isDarkMode
                                 ? Colors.white
                                 : const Color(0xff475467),
                           ),
-                        ),
+                        ).tr(),
                         verticalSpaceXXSmall(context),
                         Text(
-                          LocaleKeys.reward.tr(),
+                          LocaleKeys.reward,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.2),
                             color: isDarkMode
                                 ? Colors.white
                                 : const Color(0xff475467),
                           ),
-                        ),
+                        ).tr(),
                       ],
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          LocaleKeys.views_loyaltyRewardsView_notComplete.tr(),
+                          LocaleKeys.views_loyaltyRewardsView_notComplete,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.2),
                             color: isDarkMode
                                 ? Colors.white
                                 : const Color(0xff475467),
                           ),
-                        ),
+                        ).tr(),
                         verticalSpaceXXSmall(context),
                         Text(
-                          LocaleKeys.views_loyaltyRewardsView_points.tr(),
+                          LocaleKeys.views_loyaltyRewardsView_points,
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.2),
                             color: isDarkMode
                                 ? Colors.white
                                 : const Color(0xff475467),
                           ),
-                        ),
+                        ).tr(),
                       ],
                     ),
                     Icon(
@@ -452,7 +449,7 @@ class LoyaltyRewardsView extends StackedView<LoyaltyRewardsViewModel> {
                   fontWeight: FontWeight.bold,
                   color: isDarkMode ? Colors.white : const Color(0xff475467),
                 ),
-              ),
+              ).tr(),
               Text(
                 subtitle,
                 style: CustomThemeData.generateStyle(

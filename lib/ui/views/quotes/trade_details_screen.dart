@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
@@ -16,7 +17,7 @@ class TradeDetailsScreen extends StackedView<QuotesViewModel> {
     // TODO: implement builder
     return Skeleton(
         isBusy: viewModel.isBusy,
-        appBar: tradeAppBars(context, true, "EURUSD", LocaleKeys.details),
+        appBar: tradeAppBars(context, true, "EURUSD", LocaleKeys.details.tr()),
         bodyPadding: EdgeInsets.symmetric(
             vertical: 16.pHeight(context), horizontal: 24.pWidth(context)),
         body: const SafeArea(

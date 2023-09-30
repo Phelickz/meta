@@ -36,34 +36,32 @@ class BrokerInfomationView extends StackedView<ManageAccountViewModel> {
                 height: 40.pHeight(context),
               ),
               Text(
-                LocaleKeys.views_manageAccount_brokerInformationView_regAddress
-                    .tr(),
+                LocaleKeys.views_manageAccount_brokerInformationView_regAddress,
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.5),
                     color: isDarkMode ? Colors.white : Colors.black,
                     fontWeight: FontWeight.w500),
-              ),
+              ).tr(),
               SizedBox(
                 height: 4.pHeight(context),
               ),
               Text(
-                LocaleKeys.views_manageAccount_brokerInformationView_level2
-                    .tr(),
+                LocaleKeys.views_manageAccount_brokerInformationView_level2,
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.5),
                     color: isDarkMode ? Colors.white : const Color(0xFF667085),
                     fontWeight: FontWeight.w500),
-              ),
+              ).tr(),
               SizedBox(
                 height: 24.pHeight(context),
               ),
               Text(
-                LocaleKeys.website.tr(),
+                LocaleKeys.website,
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.5),
                     color: isDarkMode ? Colors.white : Colors.black,
                     fontWeight: FontWeight.w500),
-              ),
+              ).tr(),
               SizedBox(
                 height: 4.pHeight(context),
               ),
@@ -73,7 +71,7 @@ class BrokerInfomationView extends StackedView<ManageAccountViewModel> {
                     fontSize: McGyver.textSize(context, 1.4),
                     color: ColorManager.lightHeaderColor,
                     fontWeight: FontWeight.w600),
-              ),
+              ).tr(),
               SizedBox(
                 height: 24.pHeight(context),
               ),
@@ -83,18 +81,18 @@ class BrokerInfomationView extends StackedView<ManageAccountViewModel> {
                     fontSize: McGyver.textSize(context, 1.5),
                     color: isDarkMode ? Colors.white : Colors.black,
                     fontWeight: FontWeight.w500),
-              ),
+              ).tr(),
               SizedBox(
                 height: 4.pHeight(context),
               ),
               Text(
-                LocaleKeys.views_manageAccount_brokerInformationView_supportSite
-                    .tr(),
+                LocaleKeys
+                    .views_manageAccount_brokerInformationView_supportSite,
                 style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.4),
                     color: ColorManager.lightHeaderColor,
                     fontWeight: FontWeight.w600),
-              ),
+              ).tr(),
               SizedBox(
                 height: 24.pHeight(context),
               ),
@@ -104,7 +102,7 @@ class BrokerInfomationView extends StackedView<ManageAccountViewModel> {
                     fontSize: McGyver.textSize(context, 1.5),
                     color: isDarkMode ? Colors.white : Colors.black,
                     fontWeight: FontWeight.w500),
-              ),
+              ).tr(),
               SizedBox(
                 height: 4.pHeight(context),
               ),
