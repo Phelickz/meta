@@ -27,7 +27,7 @@ class CodegenLoader extends AssetLoader{
   "sliver": "Silver",
   "gold": "Gold",
   "platinum": "Platinum",
-  "login": "login",
+  "login": "Login",
   "close": "Close",
   "verifiedCap": "VERIFIED",
   "charts": "Chart",
@@ -181,7 +181,7 @@ class CodegenLoader extends AssetLoader{
   "unVerified": "Unverified",
   "referrals": "Referrals",
   "nickName": "Nickname",
-  "confirm": "confirm",
+  "confirm": "Confirm",
   "filter": "Filter",
   "profits": "Profits",
   "profit": "Profit",
@@ -207,7 +207,7 @@ class CodegenLoader extends AssetLoader{
   "ask": "Ask",
   "bid": "Bid",
   "symbol": "Symbol",
-  "major": "major",
+  "major": "Major",
   "crypto": "Crypto",
   "searchPairs": "Search pairs",
   "deleteWithArgument": "Delete {}",
@@ -311,7 +311,7 @@ class CodegenLoader extends AssetLoader{
           "chooseAccount": "chooseAccount",
           "demoAccount": "demoAccount,",
           "realAccount": "realAccount,",
-          "login": "login,",
+          "login": "Login,",
           "created": "created"
         },
         "created_account_page_enum": {
@@ -656,7 +656,7 @@ class CodegenLoader extends AssetLoader{
       "stopLevelPips": "Stop level, pips"
     },
     "tradingSignalTiles": {
-      "intraday": "Intraday: under pressure",
+      "intraday": "Intraday: Under pressure",
       "timeText": "6:00 PM",
       "miamiCryptoText": "Miami Crypto Aspirations",
       "miamiCryptoTextContinue": "Boosted by Borderless Capital’s 25 Milion Fund"
@@ -774,6 +774,7 @@ class CodegenLoader extends AssetLoader{
     }
   },
   "loyaltyReward": {
+    "loyaltyRewardText": "Loyalty Rewards",
     "cardWidget": {
       "totalPointsBalance": "Total Points Balance",
       "fiveThousandPoints": "5000 Pts",
@@ -810,7 +811,11 @@ class CodegenLoader extends AssetLoader{
   "notification": {
     "noNotifications": "No Notifications Yet",
     "markAllAsRead": "Mark all as read",
-    "clearAll": "Clear All"
+    "clearAll": "Clear All",
+    "notificationText": "Notifications",
+    "depositSuccessful": "Deposit Successful",
+    "loginFromNewIP": "Login from new IP",
+    "withdrawalSuccessful": "Withdrawal Successful"
   },
   "paymentMethod": {
     "addPaymentMethodSuccess": {
@@ -854,7 +859,7 @@ class CodegenLoader extends AssetLoader{
       "tradingActivity": "Trading Activity",
       "priceRange": "Price Range",
       "priceVolatility": "Price Volatility",
-      "priceMovement": "price Movement"
+      "priceMovement": "Price Movement"
     },
     "searchResults": "Search Results:"
   },
@@ -1069,6 +1074,7 @@ class CodegenLoader extends AssetLoader{
     }
   },
   "settings": {
+    "settingsText": "Settings",
     "aboutUs": {
       "serviceAgreement": "Service Agreement",
       "likeUsOnFacebook": "Like us on facebook",
@@ -1542,7 +1548,7 @@ static const Map<String,dynamic> fa = {
   "credit": "اعتبار",
   "customPeriod": "دوره سفارشی",
   "swap": "تعویض کنید",
-  "deals": "Deals",
+  "deals": "معاملات",
   "views": {
     "auth": {
       "auth_view": {
@@ -1604,8 +1610,8 @@ static const Map<String,dynamic> fa = {
         "addOnlineBank": "اضافه کردن بانک آنلاین",
         "bitcoin": "بیت کوین",
         "fundUsingBitcoin": "با استفاده از کیف پول بیت کوین سرمایه گذاری کنید",
-        "binancePay": "بایننس پرداخت",
-        "neteller": "نتلر",
+        "binancePay": "BinancePay",
+        "neteller": "Neteller",
         "fundUsingNeteller": "با استفاده از Neteller سرمایه گذاری کنید",
         "perfectMoney": "بهترین پول",
         "fundUsingPerfectMoney": "با استفاده از پرفکت مانی سرمایه گذاری کنید",
@@ -2015,6 +2021,7 @@ static const Map<String,dynamic> fa = {
     }
   },
   "loyaltyReward": {
+    "loyaltyRewardText": "جوایز وفاداری",
     "cardWidget": {
       "totalPointsBalance": "موجودی کل امتیازات",
       "fiveThousandPoints": "5000 امتیاز",
@@ -2051,7 +2058,11 @@ static const Map<String,dynamic> fa = {
   "notification": {
     "noNotifications": "هنوز اطلاعیه ای وجود ندارد",
     "markAllAsRead": "همه را به عنوان خوانده شده علامت بزن",
-    "clearAll": "همه را پاک کن"
+    "clearAll": "همه را پاک کن",
+    "notificationText": "اطلاعیه",
+    "depositSuccessful": "سپرده موفقیت آمیز",
+    "loginFromNewIP": "از IP جدید وارد شوید",
+    "withdrawalSuccessful": "برداشت با موفقیت انجام شد"
   },
   "paymentMethod": {
     "addPaymentMethodSuccess": {
@@ -2310,6 +2321,7 @@ static const Map<String,dynamic> fa = {
     }
   },
   "settings": {
+    "settingsText": "تنظیمات",
     "aboutUs": {
       "serviceAgreement": "توافق نامه خدمات",
       "likeUsOnFacebook": "ما را در فیس‌بوک دنبال کنید",
@@ -2783,7 +2795,7 @@ static const Map<String,dynamic> ar = {
   "credit": "ائتمان",
   "customPeriod": "فترة مخصصة",
   "swap": "تبديل",
-  "deals": "Deals",
+  "deals": "صفقات",
   "views": {
     "auth": {
       "auth_view": {
@@ -2845,8 +2857,8 @@ static const Map<String,dynamic> ar = {
         "addOnlineBank": "إضافة البنك عبر الإنترنت",
         "bitcoin": "بيتكوين",
         "fundUsingBitcoin": "التمويل باستخدام محفظة بيتكوين",
-        "binancePay": "الدفع بينانس",
-        "neteller": "نيتيلر",
+        "binancePay": "BinancePay",
+        "neteller": "Neteller",
         "fundUsingNeteller": "التمويل باستخدام نيتيلر",
         "perfectMoney": "مال مناسب",
         "fundUsingPerfectMoney": "الصندوق باستخدام المال المثالي",
@@ -3256,6 +3268,7 @@ static const Map<String,dynamic> ar = {
     }
   },
   "loyaltyReward": {
+    "loyaltyRewardText": "جوایز وفاداری",
     "cardWidget": {
       "totalPointsBalance": "إجمالي رصيد النقاط",
       "fiveThousandPoints": "5000 نقطة",
@@ -3292,7 +3305,11 @@ static const Map<String,dynamic> ar = {
   "notification": {
     "noNotifications": "لا توجد إخطارات حتى الآن",
     "markAllAsRead": "ضع علامة على كل شيء كمقروء",
-    "clearAll": "امسح الكل"
+    "clearAll": "امسح الكل",
+    "notificationText": "إشعارات",
+    "depositSuccessful": "نجاح الإيداع",
+    "loginFromNewIP": "تسجيل الدخول من عنوان IP جديد",
+    "withdrawalSuccessful": "نجاح السحب"
   },
   "paymentMethod": {
     "addPaymentMethodSuccess": {
@@ -3551,6 +3568,7 @@ static const Map<String,dynamic> ar = {
     }
   },
   "settings": {
+    "settingsText": "إعدادات",
     "aboutUs": {
       "serviceAgreement": "اتفاقية الخدمة",
       "likeUsOnFacebook": "قم بالإعجاب بصفحتنا على فيسبوك",

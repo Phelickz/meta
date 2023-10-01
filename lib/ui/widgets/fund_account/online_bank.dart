@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
+import 'package:meta_trader/app/utils/constants.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/fund_account/fund_account_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
@@ -84,7 +85,7 @@ class OnlineBank extends StatelessWidget {
                     suffixIconConstraints:
                         const BoxConstraints(minHeight: 30, minWidth: 30),
                     suffixIcon: Padding(
-                      padding: const EdgeInsets.only(right: 9.0),
+                      padding: Constants.getPadding(context, 9),
                       child: SvgPicture.asset(
                         'assets/icons/copy.svg',
                         width: 2,

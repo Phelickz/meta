@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
+import 'package:meta_trader/app/utils/constants.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/profit_calculator/profit_calculator_view_model.dart';
@@ -142,7 +143,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
                       suffixIconConstraints:
                           const BoxConstraints(minHeight: 30, minWidth: 30),
                       suffixIcon: Padding(
-                        padding: const EdgeInsets.only(right: 13.0),
+                        padding: Constants.getPadding(context, 13),
                         child: SvgPicture.asset(
                             'assets/icons/arrow-swap-horizontal.svg'),
                       ),
@@ -190,7 +191,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
                       suffixIconConstraints:
                           const BoxConstraints(minHeight: 30, minWidth: 30),
                       suffixIcon: Padding(
-                        padding: const EdgeInsets.only(right: 13.0),
+                        padding: Constants.getPadding(context, 13),
                         child: SvgPicture.asset(
                             'assets/icons/arrow-swap-horizontal.svg'),
                       ),
@@ -339,7 +340,7 @@ class ProfitCalculatorView extends StackedView<ProfitCalculatorViewModel> {
               CustomButtons.generalButton(
                 context: context,
                 onTap: () {},
-                text: LocaleKeys.calculate,
+                text: LocaleKeys.calculate.tr(),
               ),
               verticalSpaceSmall(context),
             ],

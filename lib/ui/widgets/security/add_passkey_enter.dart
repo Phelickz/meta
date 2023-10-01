@@ -34,6 +34,7 @@ class AddPasskeyEnterPage extends StatelessWidget {
                     : const Color(0xFF344054),
               ),
             ).tr(),
+            verticalSpaceXXSmall(context),
             Text(
               LocaleKeys.securityWidget_addPasskeyEnter_yourPasskeyWillBe,
               style: CustomThemeData.generateStyle(
@@ -47,15 +48,17 @@ class AddPasskeyEnterPage extends StatelessWidget {
           ],
         ),
         verticalSpaceSmall(context),
-         LabelTextField(
-          label: LocaleKeys.passkey,
-          hintText:
-              LocaleKeys.securityWidget_addPasskeyEnter_enter4digitsPasskey
+        LabelTextField(
+          label: LocaleKeys.passkey.tr(),
+          hintText: LocaleKeys
+              .securityWidget_addPasskeyEnter_enter4digitsPasskey
               .tr(),
         ),
-         LabelPasswordField(
+        verticalSpaceXSmall(context),
+        LabelPasswordField(
           label: LocaleKeys.password.tr(),
-          hintText: LocaleKeys.securityWidget_addPasskeyEnter_enterYourPassword.tr(),
+          hintText:
+              LocaleKeys.securityWidget_addPasskeyEnter_enterYourPassword.tr(),
         ),
         verticalSpaceSmall(context),
         verticalSpaceSmall(context),

@@ -11,7 +11,7 @@
   "sliver": "Silver",
   "gold": "Gold",
   "platinum": "Platinum",
-  "login": "login",
+  "login": "Login",
   "close": "Close",
   "verifiedCap": "VERIFIED",
   "charts": "Chart",
@@ -30,19 +30,19 @@
   "phoneNumber": "Phone Number",
   "forexPro": "ForexPro",
   "connectTo": "Connect to",
-  "marginCalculator": "Margin calculator",  
-  "leverage": "Leverage",  
-  "calculate": "Calculate",  
-  "continueWord": "Continue",  
-  "next": "Next",  
-  "pipsCalculator": "Pips calculator", 
+  "marginCalculator": "Margin calculator",
+  "leverage": "Leverage",
+  "calculate": "Calculate",
+  "continueWord": "Continue",
+  "next": "Next",
+  "pipsCalculator": "Pips calculator",
   "accountCurrency": "Account Currency",
   "currencyPair": "Currency Pair",
   "tradeSize": "Trade Size {}",
   "search": "Search",
   "deposit": "Deposit",
   "login_existing_account": "Login to Existing Account",
-  "savePassword" : "Save Password",
+  "savePassword": "Save Password",
   "password": "Password",
   "investor": "Investor",
   "changePassword": "Change Password",
@@ -51,24 +51,24 @@
   "delete": "Delete",
   "properties": "Properties",
   "done": "Done",
-  "email":"Email",
-  "days":"Days",
-  "indicators":"Indicators",
-  "experience":"Experience",
-  "hour":"Hour",
-  "today":"Today",
-  "week":"Week",
-  "month":"Month",
-  "year":"Year",
-  "maximum":"Maximum",
-  "minimum":"Minimum",
+  "email": "Email",
+  "days": "Days",
+  "indicators": "Indicators",
+  "experience": "Experience",
+  "hour": "Hour",
+  "today": "Today",
+  "week": "Week",
+  "month": "Month",
+  "year": "Year",
+  "maximum": "Maximum",
+  "minimum": "Minimum",
   "fundAccount": "Fund Account",
   "manageAccount": "Manage Account",
   "amount": "Amount",
   "save": "Save",
-  "metals":"Metals",
-  "cryptoNews":"Crypto News",
-  "step":"Step",
+  "metals": "Metals",
+  "cryptoNews": "Crypto News",
+  "step": "Step",
   "btcText": "0 BTC",
   "loginID": "Login ID",
   "forgetPassword": "Forgot Password? ",
@@ -101,7 +101,7 @@
   "lastActivity": "Last Activity: 23.12.2023",
   "enterYourLoginId": "Enter your login ID",
   "enterLoginDetails": "Enter login details",
-  "enterPayId":"Enter Pay ID",
+  "enterPayId": "Enter Pay ID",
   "selectCurrencyPair": "Select currency pair",
   "selectAccountCurrency": "Select Account Currency",
   "fundUsingBinancePay": "Fund using BinancePay",
@@ -144,39 +144,39 @@
   "aboutUs": "About Us",
   "overView": "Overview",
   "tradingHistory": "Trading History",
-  "transferToBank":"Transfer to Bank",
-  "transferToPerfect":"Transfer to Perfect Money",
-  "onlineBankTransfer":"Online Bank Transfer",
-  "walletToDeriv":"Wallet to deriv",
-  "fxtmToWallet":"FXTM  to Wallet",
-  "tradeHistory":"Trade History",
-  "transactions":"Transactions",
-  "failed":"Failed",
-  "successful":"Successful",
-  "deposits":"Deposits",
-  "pending":"Pending",
-  "withdrawal":"Withdrawal",
-  "internalTransferText":"Internal Transfer",
-  "fiftyFiveThousand":"55,000",
-  "activity":"Activity",
-  "price":"Price",
-  "welcome":"Welcome, {}",
-  "verified":"Verified",
-  "unVerified":"Unverified",
-  "referrals":"Referrals",
-  "nickName":"Nickname",
-  "confirm":"confirm",
-  "filter":"Filter",
-  "profits":"Profits",
-  "profit":"Profit",
-  "loss":"Loss",
-  "ascending":"Ascending",
-  "descending":"Descending",
-  "location":"Location",
-  "summary":"Summary ",
-  "status":"Status",
-  "inActive":"InActive",
-  "Register":"Register",
+  "transferToBank": "Transfer to Bank",
+  "transferToPerfect": "Transfer to Perfect Money",
+  "onlineBankTransfer": "Online Bank Transfer",
+  "walletToDeriv": "Wallet to deriv",
+  "fxtmToWallet": "FXTM  to Wallet",
+  "tradeHistory": "Trade History",
+  "transactions": "Transactions",
+  "failed": "Failed",
+  "successful": "Successful",
+  "deposits": "Deposits",
+  "pending": "Pending",
+  "withdrawal": "Withdrawal",
+  "internalTransferText": "Internal Transfer",
+  "fiftyFiveThousand": "55,000",
+  "activity": "Activity",
+  "price": "Price",
+  "welcome": "Welcome, {}",
+  "verified": "Verified",
+  "unVerified": "Unverified",
+  "referrals": "Referrals",
+  "nickName": "Nickname",
+  "confirm": "Confirm",
+  "filter": "Filter",
+  "profits": "Profits",
+  "profit": "Profit",
+  "loss": "Loss",
+  "ascending": "Ascending",
+  "descending": "Descending",
+  "location": "Location",
+  "summary": "Summary ",
+  "status": "Status",
+  "inActive": "InActive",
+  "Register": "Register",
   "strategyDescriptionText": "Strategy Description",
   "attachment": "Attachment",
   "submit": "Submit",
@@ -191,7 +191,7 @@
   "ask": "Ask",
   "bid": "Bid",
   "symbol": "Symbol",
-  "major": "major",
+  "major": "Major",
   "crypto": "Crypto",
   "searchPairs": "Search pairs",
   "deleteWithArgument": "Delete {}",
@@ -209,8 +209,8 @@
   "language": "Language",
   "appearance": "Appearance",
   "market": "Market",
-  "chartColor" : "Chart Color",
-  "colorPreference" : "Color Preference",
+  "chartColor": "Chart Color",
+  "colorPreference": "Color Preference",
   "privacyPolicyText": "Privacy policy",
   "update": "Update",
   "proceed": "Proceed",
@@ -224,18 +224,18 @@
   "gain": "Gain",
   "copiers": "Copiers",
   "performance": "Performance",
-  "subscriptionGuide":"Subscription Guide",
-  "equal1":"Equal 1x",
-  "double2":"Double 2x",
-  "triple3":"Triple 3x",
+  "subscriptionGuide": "Subscription Guide",
+  "equal1": "Equal 1x",
+  "double2": "Double 2x",
+  "triple3": "Triple 3x",
   "addSupportFunds": "Add Support Funds",
   "supportFunds": "Support Funds:",
   "copyProportion": "Copy proportion:",
   "custom": "Custom",
   "sender": "Sender",
   "receiver": "Receiver",
-  "walletBalance":"Wallet Balance",
-  "over24hours":"over 24 Hrs",
+  "walletBalance": "Wallet Balance",
+  "over24hours": "over 24 Hrs",
   "recentTransaction": "Recent Transactions",
   "order": "Order",
   "time": "Time",
@@ -245,7 +245,7 @@
   "closeAllLosing": "Close losing positions",
   "freeMargin": "Free Margin",
   "marginLevel": "Margin Level",
-  "last2Hrs" : "Last 24 Hrs",
+  "last2Hrs": "Last 24 Hrs",
   "depthOfMarket": "Depth of market",
   "notSet": "Not set",
   "lastWeek": "Last week",
@@ -270,24 +270,23 @@
   "verifyAccount": "Verify Account",
   "financialRegulation": "Financial regulations require us to verify your ID. This helps prevent someone else from creating a MT5 account in your name.",
   "withdrawToBank": "Withdraw to bank",
-  "paymentInformation" :"Payment Information",
-  "amountToWithdraw" :"Amount To Withdraw",
-  "leaveAMark" :"Leave a remark",
-  "additionalInformation" :"Additional Information (Optional)",
-  "depositFromBinancePay" :"Deposit from BinancePay",
-  "priceSentiments" :"Price sentiments",
-  "sell" :"Sell",
-  "pattern" :"Pattern",
-  "phoneVerification" :"Phone Verification",
-  "changePreference" :"Change Preference",
-  "lowCommission" :"Low Commission",
-  "viewAll" :"View All",
-  "closeBuyPosition" :"Close Buy positions",
-  "credit" :"Credit",
-  "customPeriod" :"Custom Period",
-  "swap" :"Swap",
-  "deals" :"Deals",
-
+  "paymentInformation": "Payment Information",
+  "amountToWithdraw": "Amount To Withdraw",
+  "leaveAMark": "Leave a remark",
+  "additionalInformation": "Additional Information (Optional)",
+  "depositFromBinancePay": "Deposit from BinancePay",
+  "priceSentiments": "Price sentiments",
+  "sell": "Sell",
+  "pattern": "Pattern",
+  "phoneVerification": "Phone Verification",
+  "changePreference": "Change Preference",
+  "lowCommission": "Low Commission",
+  "viewAll": "View All",
+  "closeBuyPosition": "Close Buy positions",
+  "credit": "Credit",
+  "customPeriod": "Custom Period",
+  "swap": "Swap",
+  "deals": "Deals",
 
   "views": {
     "auth": {
@@ -297,22 +296,22 @@
           "chooseAccount": "chooseAccount",
           "demoAccount": "demoAccount,",
           "realAccount": "realAccount,",
-          "login": "login,",
+          "login": "Login,",
           "created": "created"
         },
-      "created_account_page_enum": {
+        "created_account_page_enum": {
           "demo": "demo,",
           "real": "real"
         },
-        
-      "return_app_bar": {
-        "find_broker": "Find a broker",
-        "enter_login": "Enter login details",
-        "open_demo_account": "Open A Demo Account",
-        "enter_information": "Enter your information",
-        "open_real_account": "Open A Real Account",
-        "created_account_info": "Created account information"
-      } 
+
+        "return_app_bar": {
+          "find_broker": "Find a broker",
+          "enter_login": "Enter login details",
+          "open_demo_account": "Open A Demo Account",
+          "enter_information": "Enter your information",
+          "open_real_account": "Open A Real Account",
+          "created_account_info": "Created account information"
+        }
       }
     },
     "bottomNav": {
@@ -323,7 +322,6 @@
       "profile": "Profile"
     },
 
-
     "currencyConverter": {
       "twentyThree": "23",
       "currency1": "Currency 1",
@@ -331,19 +329,19 @@
       "enterCurrency1": "Enter Amount (Currency 1)",
       "enterCurrency2": "Enter Amount (Currency 2)"
     },
-    "dashboard":{
+    "dashboard": {
       "dashboard": "Dashboard"
     },
-    "forexNews":{
-      "forexNewsView":{
+    "forexNews": {
+      "forexNewsView": {
         "exploreForex": "Explore Forex news across the world"
       },
       "forexModel": {
-         "all" : "All",
-         "currencyPairs" : "Currency pairs",
-         "metals" : "Metals",
-         "cryptoCurrency" : "Cryptocurrency"
-      }  
+        "all": "All",
+        "currencyPairs": "Currency pairs",
+        "metals": "Metals",
+        "cryptoCurrency": "Cryptocurrency"
+      }
     },
     "fundAccountView": {
       "fundAccountAppBar": {
@@ -368,20 +366,20 @@
         "fundUsingBlockBee": "Fund using BlockBee"
       }
     },
-    "helpAndSupportView":{
+    "helpAndSupportView": {
       "question": "question",
       "answer": "answer",
       "helpAndSupport": "Help and Support",
       "faq": "FAQ",
       "customerCare": "Customer care",
       "online": "Online",
-      
+
       "faqList": {
         "question1": "How do i make withdrawals?",
         "answer1": "I wanted to take this opportunity to reiterate my enthusiasm for the position and my strong interest in becoming a valuable member of the [Company Name] team. After our conversation, I am even more convinced that this is a role where I can contribute my expertise and make a positive impact.\n\n",
         "answer1Continue": "I was particularly impressed by [specific aspect or project discussed during the interview], and I believe my background in [relevant experience] would allow me to bring fresh perspectives and valuable insights to the team"
       },
-      "suggestionList":{
+      "suggestionList": {
         "suggestion1": "I need a favor",
         "suggestion2": "How do I withdraw",
         "suggestion3": "I cant fund my wallet"
@@ -392,18 +390,17 @@
       "internalTransfer": "Internal Transfer",
       "transactionHistory": "Transaction History",
       "tradeFeatures": "Trade Features",
-      "chartAnalysis": "Chart Analysis",      
-      "tradingTools": "Trading Tools",      
-      "profitCalculator": "Profit calculator",                
-      "marketNews": "Market News",  
-      "priceSentiments": "Price Sentiments",  
-      "TradeFeaturesSub":{
+      "chartAnalysis": "Chart Analysis",
+      "tradingTools": "Trading Tools",
+      "profitCalculator": "Profit calculator",
+      "marketNews": "Market News",
+      "priceSentiments": "Price Sentiments",
+      "TradeFeaturesSub": {
         "subtitle": "Copy and earn with experienced traders",
         "subtitle1": "Stay up to date with forex news"
       },
       "welcome": "Welcome, Susan",
       "walletBalance": "Wallet balance"
-      
     },
     "internalTransferView": {
       "transferFunds": "Transfer Funds",
@@ -429,74 +426,74 @@
       "recentActivity": "Recent Activity",
       "activityTileText": "You earned 23 points",
       "activityTileTextSub": "{} credits awarded for using 5 lot sizes",
-      "status":"Status",
-      "notComplete":"Not Completed",
-      "points":"3 Points"
+      "status": "Status",
+      "notComplete": "Not Completed",
+      "points": "3 Points"
     },
-    "manageAccount":{
+    "manageAccount": {
       "brokerInformationView": {
         "regAddress": "Registration Address",
         "brokersInformation": "Broker Information",
-        "level2" : "Level 2, ken Lee building, 20 Edith Cavell street, Port Luis, Mauritius",
+        "level2": "Level 2, ken Lee building, 20 Edith Cavell street, Port Luis, Mauritius",
         "supportSite": "support@fxpro.com"
       },
       "existingAccountScreen": {
         "searchBroker": "Search Broker",
         "findBroker": "Find a broker"
       }
-  },
-  "marginCalculatorView":{
-    "requiredMargin": "Required Margin {}"
-  },
-    "paymentMethodPageView":{
-    "paymentMethod": "Payment Methods",
-    "addBinancePay": "Add BinancePay details",
-    "enterNetellerAccount": "Enter Neteller account details",
-    "addBitcoinDetails": "Add Bitcoin details",
-    "enterSkrillAccount": "Enter Skrill account details",
-    "enterPaymentDetails": "Enter payment details",
-    "enterSticPayAccount": "Enter SticPay account details",
-    "enterTetherDetails": "Add TetherUSD details",
-    "scanQr": "Scan QR code",
-    "editOnlineBank": "Edit online bank"
-  },
-   "pipCalculatorView":{
-    "pipValue": "Pip value (USD)",
-    "numberOfPips": "Number of Pips {}" 
-  },
-  "priceSentiments": {
-      "marketSentiments" : "Market Sentiments",
-      "sentimentsAcrossM" : "Sentiments across markets"
+    },
+    "marginCalculatorView": {
+      "requiredMargin": "Required Margin {}"
+    },
+    "paymentMethodPageView": {
+      "paymentMethod": "Payment Methods",
+      "addBinancePay": "Add BinancePay details",
+      "enterNetellerAccount": "Enter Neteller account details",
+      "addBitcoinDetails": "Add Bitcoin details",
+      "enterSkrillAccount": "Enter Skrill account details",
+      "enterPaymentDetails": "Enter payment details",
+      "enterSticPayAccount": "Enter SticPay account details",
+      "enterTetherDetails": "Add TetherUSD details",
+      "scanQr": "Scan QR code",
+      "editOnlineBank": "Edit online bank"
+    },
+    "pipCalculatorView": {
+      "pipValue": "Pip value (USD)",
+      "numberOfPips": "Number of Pips {}"
+    },
+    "priceSentiments": {
+      "marketSentiments": "Market Sentiments",
+      "sentimentsAcrossM": "Sentiments across markets"
     },
     "priceCalculatorView": {
-      "profitUSD" : "Profit (USD)",
-      "buyOrSell" : "Buy or Sell",
-      "openingPrice" : "Opening price",
-      "closingPrice" : "Closing Price"
+      "profitUSD": "Profit (USD)",
+      "buyOrSell": "Buy or Sell",
+      "openingPrice": "Opening price",
+      "closingPrice": "Closing Price"
     },
     "providerView": {
-      "notificationList":{
-      "notificationListTitle": "Subscription Successful",
-      "notificationListTitle1": "subscription terminated",
-      "notificationListTime": "16:23:41",
-      "notificationListDate": "2.1.2023",
-      "notificationListDescription": "You are now copying satoshi nakamoto.",
-      "notificationListDescription1": "You have successfully terminated your copy trading with satoshi nakamoto."
+      "notificationList": {
+        "notificationListTitle": "Subscription Successful",
+        "notificationListTitle1": "subscription terminated",
+        "notificationListTime": "16:23:41",
+        "notificationListDate": "2.1.2023",
+        "notificationListDescription": "You are now copying satoshi nakamoto.",
+        "notificationListDescription1": "You have successfully terminated your copy trading with satoshi nakamoto."
       },
-      "strategyDescription":"Hello Everyone, 👉 this account is totally safe to copy for all investors, Newbies and Professionals. I will try my best to make 25-50% profits weekly 💪. Our first priority is to keep safety of your funds.Happy trading ✨",
-      "signUpAsProvider" : "Sign up as a Provider",
-      "enterYourInformation" : "Enter your information",
-      "providerLogin" : "Provider Login",
-      "approvedRegistration" : "Approved provider registration",
-      "profileSettings" : "Profile Settings",
-      "changeYourProfileInfo" : "Change your profile information",
-      "viewYourFollowers" : "View your followers"
+      "strategyDescription": "Hello Everyone, 👉 this account is totally safe to copy for all investors, Newbies and Professionals. I will try my best to make 25-50% profits weekly 💪. Our first priority is to keep safety of your funds.Happy trading ✨",
+      "signUpAsProvider": "Sign up as a Provider",
+      "enterYourInformation": "Enter your information",
+      "providerLogin": "Provider Login",
+      "approvedRegistration": "Approved provider registration",
+      "profileSettings": "Profile Settings",
+      "changeYourProfileInfo": "Change your profile information",
+      "viewYourFollowers": "View your followers"
     },
     "quotesView": {
       "quotesViewModel": {
-        "quoteList" : {
-          "greatBritainPounds" : "Great Britain Pound vs US Dollar",
-          "usDollarCan" : "US Dollar vs Canadian Dollar"
+        "quoteList": {
+          "greatBritainPounds": "Great Britain Pound vs US Dollar",
+          "usDollarCan": "US Dollar vs Canadian Dollar"
         },
         "stopLevel": "Stop Level",
         "marginCurrency": "Margin currency",
@@ -505,7 +502,7 @@
         "tickValue": "Tick value",
         "addSymbol": "Add symbol to market list"
       },
-      "tradeCloseScreen" : {
+      "tradeCloseScreen": {
         "closeBuy": "Close #312443 buy 0.1 by Market with loss of 0.80"
       },
       "tradeDepthScreen": {
@@ -513,22 +510,22 @@
       }
     },
     "security": {
-      "autoLock":"Auto-Lock",
-      "enableToLock":"Enable to lock app automatically",
-      "addPasskey":"Add Passkey"
+      "autoLock": "Auto-Lock",
+      "enableToLock": "Enable to lock app automatically",
+      "addPasskey": "Add Passkey"
     },
     "settings": {
-      "whatsappAddition" : "WhatsApp addition",
-      "addNoticeOfUpcoming" : "add notice of upcoming signals",
-      "addingDifferentViews" : "adding different views on the market section",
+      "whatsappAddition": "WhatsApp addition",
+      "addNoticeOfUpcoming": "add notice of upcoming signals",
+      "addingDifferentViews": "adding different views on the market section",
 
-      "blueBuy" : "Blue-Buy/Red-Sell",
-      "notificationSettings" : "Notification Settings",
-      "languageSettings" : "Language Settings",
-      "changeAppLanguage" : "Change app language",
-      "changeBasis" : "Change Basis",
+      "blueBuy": "Blue-Buy/Red-Sell",
+      "notificationSettings": "Notification Settings",
+      "languageSettings": "Language Settings",
+      "changeAppLanguage": "Change app language",
+      "changeBasis": "Change Basis",
       "TermsOfUse": "Terms of use",
-      "privacyPolicy" : {
+      "privacyPolicy": {
         "privacyPolicyHead1": "Information Collection",
         "privacyPolicyHead2": "Data Sharing And Disclosure",
         "privacyPolicySubH": "Personal Information",
@@ -537,31 +534,31 @@
         "privacyPolicySubH3": "Cookies and Tracking Technologies",
         "privacyPolicySubH4": "Account Creation",
         "privacyPolicySubH5": "Forex Trading Services",
-        "privacyPolicyIntro" : "Thank you for choosing Meta trader  as your trusted forex trading platform. We are committed to safeguarding your privacy and protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data. By accessing or using our services, you agree to the practices described in this policy.",
-        "privacyPolicyD2" : "We may collect various types of information from you when you use our platform or services, including:",
-        "privacyPolicyD3" : "This may include your name, email address, phone number, residential address, date of birth, government-issued identification, and other necessary details required for account registration and compliance with financial regulations.",
-        "privacyPolicyD4" : "To facilitate transactions, we may collect details related to your bank account, credit/debit card information, and transaction history.",
-        "privacyPolicyD5" : "We may automatically collect information about your device, operating system, browser type, IP address, and interactions with our platform to improve our services and user experience.",
-        "privacyPolicyD6" : "We may use cookies and similar technologies to gather information about your usage patterns and preferences while using our platform. This helps us to optimize our website, improve navigation, and personalize your experience",
-        "privacyPolicyD7" : "We use the collected information for the following purposes",
-        "privacyPolicyD8" : "To create and maintain your account, verify your identity, and provide customer support.",
-        "privacyPolicyD9" : "To process your trades, transactions, and withdrawals in accordance with your instructions."
+        "privacyPolicyIntro": "Thank you for choosing Meta trader  as your trusted forex trading platform. We are committed to safeguarding your privacy and protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data. By accessing or using our services, you agree to the practices described in this policy.",
+        "privacyPolicyD2": "We may collect various types of information from you when you use our platform or services, including:",
+        "privacyPolicyD3": "This may include your name, email address, phone number, residential address, date of birth, government-issued identification, and other necessary details required for account registration and compliance with financial regulations.",
+        "privacyPolicyD4": "To facilitate transactions, we may collect details related to your bank account, credit/debit card information, and transaction history.",
+        "privacyPolicyD5": "We may automatically collect information about your device, operating system, browser type, IP address, and interactions with our platform to improve our services and user experience.",
+        "privacyPolicyD6": "We may use cookies and similar technologies to gather information about your usage patterns and preferences while using our platform. This helps us to optimize our website, improve navigation, and personalize your experience",
+        "privacyPolicyD7": "We use the collected information for the following purposes",
+        "privacyPolicyD8": "To create and maintain your account, verify your identity, and provide customer support.",
+        "privacyPolicyD9": "To process your trades, transactions, and withdrawals in accordance with your instructions."
       }
     },
-    "socialTradingView":{
-      "transactionDetails":"Transaction Details",
-      "subscriptionSetup":"Subscription Setup",
-      "transferToBinance":"Transfer to BinancePay",
-      "depositToBinance":"Deposit from BinancePay",
-      "depositToNeteller":"Deposit from Neteller",
-      "depositToPerfect":"Deposit from Perfect Money",
-      "subSuccessful":"Subscription Successful",
-      "subTerminated":"Subscription terminated",
-      "copyingSatoshi":"You are now copying satoshi nakamoto.",
+    "socialTradingView": {
+      "transactionDetails": "Transaction Details",
+      "subscriptionSetup": "Subscription Setup",
+      "transferToBinance": "Transfer to BinancePay",
+      "depositToBinance": "Deposit from BinancePay",
+      "depositToNeteller": "Deposit from Neteller",
+      "depositToPerfect": "Deposit from Perfect Money",
+      "subSuccessful": "Subscription Successful",
+      "subTerminated": "Subscription terminated",
+      "copyingSatoshi": "You are now copying satoshi nakamoto.",
       "socialTradingWelcome": {
-        "welcomeToMT5":"Welcome to MT5 Social Trading Platform",
-        "nowYouCanStart":"Now you can start investing with top master traders, track and manage your subscriptions.",
-        "getStarted":"Get Started"
+        "welcomeToMT5": "Welcome to MT5 Social Trading Platform",
+        "nowYouCanStart": "Now you can start investing with top master traders, track and manage your subscriptions.",
+        "getStarted": "Get Started"
       }
     },
     "verificationView": {
@@ -576,7 +573,6 @@
     }
   },
 
-
   "onboarding": {
     "onboarding_one": {
       "title1": "Trade at the cutting edge with our",
@@ -586,46 +582,46 @@
     }
   },
   "onboarding2": {
-     "onboarding_two": {
+    "onboarding_two": {
       "text": "Secure ",
       "text1": "your growth  ",
       "text2": "with our abundant resources and unwavering support",
       "bodyText": "Secure your future with our comprehensive resources and unwavering support for sustainable growth."
     }
- },
+  },
   "onboarding3": {
-     "onboarding_three": {
+    "onboarding_three": {
       "text": "Deposit ",
       "text1": "and ",
       "text2": "withdraw funds ",
       "text3": "seamlessly on our cutting edge platform",
       "bodyText": "Enjoy seamless fund management with our platform's wide range of options, allowing you to effortlessly deposit and withdraw funds."
     }
-},
+  },
   "onboarding4": {
-     "onboarding_four": {
+    "onboarding_four": {
       "text": "Unlock the power ",
       "text1": "of diverse tools tailored for your success",
       "bodyText": "Embark on a successful trading journey with our extensive range of tools, meticulously crafted to ensure your triumph."
     }
-},
- "auth" : {
-  "chooseAccount": {
-    "offersYouVirtual": "Offers you virtual funds to learn forex trading and test your strategies and setups before using a real account.",
-    "demoAccount": "Demo Account",
-    "realAccount": "Real Account",
-    "forLiveTrading": "For live trading. additional verification is required. Not advisable for beginners"
   },
-  "created": {
-    "yourModelCreated": {
-      "demo": "Your {model} account has been created successfully ",
-      "real": "Your {model} account has been created successfully "
+  "auth": {
+    "chooseAccount": {
+      "offersYouVirtual": "Offers you virtual funds to learn forex trading and test your strategies and setups before using a real account.",
+      "demoAccount": "Demo Account",
+      "realAccount": "Real Account",
+      "forLiveTrading": "For live trading. additional verification is required. Not advisable for beginners"
     },
-    "accountInformation": "Account Information",
-    "FullName": "Full Name",
-    "accountType": "Account Type",
-    "forexHedge": "Forex Hedge 100"
-  },
+    "created": {
+      "yourModelCreated": {
+        "demo": "Your {model} account has been created successfully ",
+        "real": "Your {model} account has been created successfully "
+      },
+      "accountInformation": "Account Information",
+      "FullName": "Full Name",
+      "accountType": "Account Type",
+      "forexHedge": "Forex Hedge 100"
+    },
     "firstName": "First Name",
     "enterFirstName": "Enter your first name",
     "lastName": "Last Name",
@@ -633,43 +629,43 @@
     "enterEmail": "Enter your Email",
     "enterPhone": "Enter your phone number",
 
-    "realWidget":{
+    "realWidget": {
       "enterPersonalInformation": "Enter your login ID",
       "preliminaryAccount": "Preliminary Account"
     }
   },
- "chart" : {
-  "sellAt": "Sell at 1.234564",
-  "text": "23%",
-  "buyAt": "Buy at 1.234564",
-  "text1": "77%",
-  "text2": "1.2",
-  "specification": {
-    "marketIsOpen" : "Market is open. Closes tomorrow, 12:58 AM",
-    "contractSize": "Contract Size",
-    "spreadUnits": "Spread Units",
-    "volumeLots": "Volume, lots",
-    "stopLevelPips": "Stop level, pips"
+  "chart": {
+    "sellAt": "Sell at 1.234564",
+    "text": "23%",
+    "buyAt": "Buy at 1.234564",
+    "text1": "77%",
+    "text2": "1.2",
+    "specification": {
+      "marketIsOpen": "Market is open. Closes tomorrow, 12:58 AM",
+      "contractSize": "Contract Size",
+      "spreadUnits": "Spread Units",
+      "volumeLots": "Volume, lots",
+      "stopLevelPips": "Stop level, pips"
+    },
+    "tradingSignalTiles": {
+      "intraday": "Intraday: Under pressure",
+      "timeText": "6:00 PM",
+      "miamiCryptoText": "Miami Crypto Aspirations",
+      "miamiCryptoTextContinue": "Boosted by Borderless Capital’s 25 Milion Fund"
+    }
   },
-  "tradingSignalTiles": {
-    "intraday" : "Intraday: under pressure",
-    "timeText": "6:00 PM",
-    "miamiCryptoText": "Miami Crypto Aspirations",
-    "miamiCryptoTextContinue": "Boosted by Borderless Capital’s 25 Milion Fund"
-  }
- },
- "currencyConverterWidget" : {
-  "selectAccountCurrency":"Select Account Currency"
- },
- "datePicker" : {},
- "dropDown" : {},
- "forexNewsWidget" : {
+  "currencyConverterWidget": {
+    "selectAccountCurrency": "Select Account Currency"
+  },
+  "datePicker": {},
+  "dropDown": {},
+  "forexNewsWidget": {
     "allWidget": {
       "text": "recovers following mixed NFPs from the US",
       "text2": "Aug 4, 2034 15:07 GMT"
     },
     "detailsWidget": {
-     "coinTelegraph": "Coin Telegraph",
+      "coinTelegraph": "Coin Telegraph",
       "text": "Thank you for choosing Meta trader  as your trusted forex trading platform. We are committed to safeguarding your privacy and protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data. By accessing or using our services, you agree to the practices described in this policy.",
       "text1": "Personal Information: This may include your name, email address, phone number, residential address, date of birth, government-issued identification, and other necessary details required for account registration and compliance with",
       "text2": "Financial Information: To facilitate transactions, we may collect details related to your bank account, credit/debit card information, and transaction history.",
@@ -680,42 +676,42 @@
       "text7": "Account Creation: To create and maintain your account, verify your identity, and provide customer support.",
       "text8": "Forex Trading Services: To process your trades, transactions, and withdrawals in accordance with your instructions."
     },
-      "searchWidget": {
-        "searchResult": "Search Results:",
-        "moreResult": "More Results"
+    "searchWidget": {
+      "searchResult": "Search Results:",
+      "moreResult": "More Results"
     }
- },
-    "fundAccountWidget" : {
-      "binancePayWidget": {
-        "binancePayId": "Binancepay ID"
+  },
+  "fundAccountWidget": {
+    "binancePayWidget": {
+      "binancePayId": "Binancepay ID"
     },
-      "bitcoinWidget": {
-        "makeSureToFund": "Make sure to fund using the chosen network, otherwise, your asset will be lost."
+    "bitcoinWidget": {
+      "makeSureToFund": "Make sure to fund using the chosen network, otherwise, your asset will be lost."
     },
-      "blockBeeWidget": {
-        "blockBeePayId": "BlockBee ID"
+    "blockBeeWidget": {
+      "blockBeePayId": "BlockBee ID"
     },
-      "onlineBankWidget": {
-        "selectBank": "Select Bank",
-        "chooseAvailableBank": "Choose available bank",
-        "accountNumber": "Account Number",
-        "accountName": "Account Name"
+    "onlineBankWidget": {
+      "selectBank": "Select Bank",
+      "chooseAvailableBank": "Choose available bank",
+      "accountNumber": "Account Number",
+      "accountName": "Account Name"
     },
-      "perfectMoneyWidget": {
-        "noteThat": "Note that it might take up to 24 hours for your deposit to reflect on your dashboard"
+    "perfectMoneyWidget": {
+      "noteThat": "Note that it might take up to 24 hours for your deposit to reflect on your dashboard"
     },
-      "selectDepositMethodWidget": {
-        "tenUsd": "10-200,00 USD"
+    "selectDepositMethodWidget": {
+      "tenUsd": "10-200,00 USD"
     },
-      "successWidget": {
-        "yourTransaction": "Your Transaction is Being Processed",
-        "youCan": "You can skip this step but you will not be able to withdraw your funds."
+    "successWidget": {
+      "yourTransaction": "Your Transaction is Being Processed",
+      "youCan": "You can skip this step but you will not be able to withdraw your funds."
     },
-      "tetherWidget": {
-        "makeSureToChoose": "Make sure to fund using the chosen network, otherwise, your asset will be lost."
+    "tetherWidget": {
+      "makeSureToChoose": "Make sure to fund using the chosen network, otherwise, your asset will be lost."
     }
- },
- "helpAndSupport" : {
+  },
+  "helpAndSupport": {
     "components": {
       "logoutDialog": {
         "wantToLogout": "Do you want to logout from your account?"
@@ -728,282 +724,285 @@
       }
     },
     "emptyIcon": {
-        "noMessage": "No Messages Yet"
+      "noMessage": "No Messages Yet"
     },
     "faqWidget": {
-        "ourFaq": "Our FAQs,"
+      "ourFaq": "Our FAQs,"
     },
     "helpAndSupportWidget": {
-        "chatWithCustomer": "Chat with customer care",
-        "frequentlyAskedQ": "Frequently asked questions",
-        "sendUsAMessage": "Send us a message"
+      "chatWithCustomer": "Chat with customer care",
+      "frequentlyAskedQ": "Frequently asked questions",
+      "sendUsAMessage": "Send us a message"
     }
- },
- "home" : {
+  },
+  "home": {
     "higherSuccessRates": {
-        "profit_goddess": "Profit_goddess",
-        "copiers": "Copiers",
-        "riskScore": "Risk score: ",
-        "mediumCap": "MEDIUM",
-        "successRate": "Success Rate"
+      "profit_goddess": "Profit_goddess",
+      "copiers": "Copiers",
+      "riskScore": "Risk score: ",
+      "mediumCap": "MEDIUM",
+      "successRate": "Success Rate"
     },
     "marketNewsWidget": {
-        "hoursAgo": "18 hours ago",
-        "usdCoin": "USD Coin",
-        "maimiCryptoAsp": "Maimi Crypto Aspirations Boosted by Borderless Capital's 25 Million Fund Lorem Ipsum "
+      "hoursAgo": "18 hours ago",
+      "usdCoin": "USD Coin",
+      "maimiCryptoAsp": "Maimi Crypto Aspirations Boosted by Borderless Capital's 25 Million Fund Lorem Ipsum "
     },
     "priceSentiments": {
-        "buySixty": "65% Buy",
-        "sellThirty": "35% Sell"
+      "buySixty": "65% Buy",
+      "sellThirty": "35% Sell"
     }
- },
- "internalTransfer" : {
-     "amountWidget": {
-        "enterAmountToTransfer": "Enter amount to transfer",
-        "sendingAccountPassword": "Sending Account Password",
-        "enterAccountPassword": "Enter Account Password"
+  },
+  "internalTransfer": {
+    "amountWidget": {
+      "enterAmountToTransfer": "Enter amount to transfer",
+      "sendingAccountPassword": "Sending Account Password",
+      "enterAccountPassword": "Enter Account Password"
     },
-     "successWidget": {
-        "transferSuccessful": "Transfer Successful",
-        "fiveHunUSD": "500 USD has been successfully transferred from Deriv to FXPro",
-        "enterAccountPassword": "Enter Account Password"
+    "successWidget": {
+      "transferSuccessful": "Transfer Successful",
+      "fiveHunUSD": "500 USD has been successfully transferred from Deriv to FXPro",
+      "enterAccountPassword": "Enter Account Password"
     }
- },
- "loyaltyReward" : {
+  },
+  "loyaltyReward": {
+    "loyaltyRewardText": "Loyalty Rewards",
     "cardWidget": {
-        "totalPointsBalance": "Total Points Balance",
-        "fiveThousandPoints": "5000 Pts",
-        "youAreAtThePeak": "You are at the peak!"
+      "totalPointsBalance": "Total Points Balance",
+      "fiveThousandPoints": "5000 Pts",
+      "youAreAtThePeak": "You are at the peak!"
     },
     "recentActivityWidget": {
-        "activityTile1": "You earned 23 points",
-        "activityTile2": "23 credits awarded for using 5 lot sizes"
+      "activityTile1": "You earned 23 points",
+      "activityTile2": "23 credits awarded for using 5 lot sizes"
     }
- },
- "manageAccounts" : {
-    "manageAccountsWidget":{
-      "manageAccountBottomSheet":{
+  },
+  "manageAccounts": {
+    "manageAccountsWidget": {
+      "manageAccountBottomSheet": {
         "doYouReallyWant": "Do you really want to delete account?",
         "figure": "23299752",
         "fxLimited": "FXPro limited",
         "twelveUsd": "USD 12 000 000.00",
         "demo_account": "demo-account"
       },
-      "manageAccountAppBar":{
+      "manageAccountAppBar": {
         "doYouReallyWant": "Do you really want to delete account?",
         "accessPointHedge": "Access point EU 3 1:100, Hedge"
       }
     },
-    "existingAccountsForm":{
-        "currentPassword": "Current Password",
-        "enterCurrentPassword": "Enter Current Password",
-        "newPassword": "New Password",
-        "enterNewPassword": "Enter new Password",
-        "reEnterPassword": "Re-enter Password",
-        "reEnterNewPassword": "Re-enter new Password"
+    "existingAccountsForm": {
+      "currentPassword": "Current Password",
+      "enterCurrentPassword": "Enter Current Password",
+      "newPassword": "New Password",
+      "enterNewPassword": "Enter new Password",
+      "reEnterPassword": "Re-enter Password",
+      "reEnterNewPassword": "Re-enter new Password"
     }
- },
- "notification" : {
-  "noNotifications":"No Notifications Yet",
-  "markAllAsRead":"Mark all as read",
-  "clearAll":"Clear All"
- },
- "paymentMethod" : {
-  "addPaymentMethodSuccess" : {
-   "paymentMethodAddSuccess": "Payment Method Added Successfully",
-   "nowYouCanMake": "Now you can make withdrawals via",
-   "usingInformation": "using the information you provided"
   },
-  "addPaymentMethodTile" : {
-    "figure":"10-200,000 USD"
+  "notification": {
+    "noNotifications": "No Notifications Yet",
+    "markAllAsRead": "Mark all as read",
+    "clearAll": "Clear All",
+    "notificationText": "Notifications",
+    "depositSuccessful": "Deposit Successful",
+    "loginFromNewIP": "Login from new IP",
+    "withdrawalSuccessful": "Withdrawal Successful"
   },
-  "binancePayWidgetP" : {
-    "enterWalletInformation":"Enter Wallet Information"
-  },
-  "bitcoinWidgetP" : {
-    "enterBitcoinWallet":"Enter Bitcoin Wallet Address"
-  },
-  "emptyPaymentWidgetP" : {
-    "noPaymentMethod":"No payment method added",
-    "addPayMethod":"Add Payment Method"
-  },
-  "onlineBankWidgetP" : {
-    "bankName":"Bank Name",
-    "enterBankName":"Enter bank name",
-    "accountOpening":"Account opening branch (optional)",
-    "enterBranchInformation":"Enter bank branch information"
-  },
-  "paymentMethodWidgetP" : {
-    "manageYourCash":"Manage your cash payment methods"
-  },
-  "qrCodeP" : {
-    "pointCamera":"Point the camera at the QR code",
-    "enterBinancePay":"Or enter BinancePay ID Instead"
-  },
-  "tetherWidgetP" : {
-    "enterTetherUSd":"Enter  TetherUSD Wallet Address"
-  }
-
- },
- "priceSentimentWidget": {
-  "details":{
-    "clientSentiment": "Client Sentiment:",
-    "tradingActivity": "Trading Activity",
-    "priceRange": "Price Range",
-    "priceVolatility": "Price Volatility",
-    "priceMovement": "price Movement"
-  },
-  "searchResults": "Search Results:"
- },
- "profile": {
-  "verificationBar":{
-    "verifyYourAccount" : "Verify your account",
-    "toMakeFirstD" : "To make your first deposit, we would like to know you better. click ‘continue’ to get started"
-  },
-  "profileWidget": {
-    "viewYourWithD":"Withdrawal/Deposit History",
-    "updatePaymentM":"update payment methods",
-    "fileAComplaint":"file a complaint with our team",
-    "rateTheApp":"Rate the app",
-    "giveUsAReview":"give us a review on appstore",
-    "viewWithDrawalH":"view your withdrawal and deposit history"
-  }
- },
- "providerWidget": {
-  "providerComponent": {
-    "changeNickName": {
-      "changeNickNameT": "Change NickName",
-      "enterNewNickName": "Enter new nickname"
+  "paymentMethod": {
+    "addPaymentMethodSuccess": {
+      "paymentMethodAddSuccess": "Payment Method Added Successfully",
+      "nowYouCanMake": "Now you can make withdrawals via",
+      "usingInformation": "using the information you provided"
     },
-    "changePasswordWidget": {
-      "confirmPassword": "Confirm Password"
+    "addPaymentMethodTile": {
+      "figure": "10-200,000 USD"
     },
-
-    "pGraph": {
-      "myPerformance": "My Performance"
+    "binancePayWidgetP": {
+      "enterWalletInformation": "Enter Wallet Information"
     },
-    "pGraph2": {
-      "followersStats": "Follower Stats"
+    "bitcoinWidgetP": {
+      "enterBitcoinWallet": "Enter Bitcoin Wallet Address"
     },
-    "pModelBottomSheet": {
-      "startDate": "Start Date",
-      "endDate": "End Date",
-      "openPosition": "Open Position",
-      "selectCountry": "Select Country"
+    "emptyPaymentWidgetP": {
+      "noPaymentMethod": "No payment method added",
+      "addPayMethod": "Add Payment Method"
     },
-    "pProfitsBar": {
-      "totalTrade":"Total Trades"
+    "onlineBankWidgetP": {
+      "bankName": "Bank Name",
+      "enterBankName": "Enter bank name",
+      "accountOpening": "Account opening branch (optional)",
+      "enterBranchInformation": "Enter bank branch information"
     },
-    "pTradeBar": {
-      "dateW":"Date:",
-      "orderId":"Order ID:",
-      "followersCommission":"Followers commission:"
+    "paymentMethodWidgetP": {
+      "manageYourCash": "Manage your cash payment methods"
     },
-    "pSummary": {
-      "viewFollowers":"View followers",
-      "followersAutoScale":"Followers Auto scale",
-      "followersFixedLot":"Followers Fixed Lot",
-      "followersReverse":"Followers Reverse",
-      "performanceFee":"Performance fee"
+    "qrCodeP": {
+      "pointCamera": "Point the camera at the QR code",
+      "enterBinancePay": "Or enter BinancePay ID Instead"
     },
-    "updatePhoneNumber": {
-      "updatePhoneNumberText":"Update Phone Number"
+    "tetherWidgetP": {
+      "enterTetherUSd": "Enter  TetherUSD Wallet Address"
     }
-
   },
-  "providerConfirmation": {
-    "yourRequestHas": "Your request has been\nsubmitted successfully",
-    "youWillReceive": "You will receive a feedback within 3-4\nworking days via email on successful\nverification"
-  },
-  "providerFollowers": {
-    "followedRecently": "Followed Recently",
-    "startedFollowing": "Started Following: {}s"
-  },
-  "providerLogin": {
-    "enterYourAccount": "Enter your account ID",
-    "accountID": "Account ID",
-    "desiredFee": "Desired Fee",
-    "iAgreeWith": "I agree with the",
-    "termsAndConditionProvider": "terms and conditions",
-    "forOPening": "for opening an account and the",
-    "dataProtectionPolicy": "data protection policy"
-  },
-  "providerOption": {
-    "myWallet": "My Wallet",
-    "profileSettings": "Profile Settings"
-  },
-  "providerSettings": {
-    "desiredFeeCommission": "Desired Fees (Commission)",
-    "publicVisibility": "Public Visibility",
-    "visibilityPublic": "Visibility: Public",
-    "saveChanges": "Save changes"
-  },
-  "providerSignUp": {
-    "uploadAttachment": "Upload Attachment"
-  },
-  "providerWallet": {
-    "reportAnIssue": "Report an Issue",
-
-    "depositFromNeteller": "Deposit from Neteller",
-    "metaWalletToWallet": "Metawallet to Wallet",
-    "transferToSticPay": "Transfer to SticPay",
-    "depositToDeriv": "Deposit to deriv"
-  },
-  "welcomeProvider": {
-    "startGenerating": "Start Generating Income\nFor Your Followers",
-    "becomeAProvider": "Become a Provider on our\nplatform, showcasing your trading\nskills and earning income from\nyour followers",
-    "loginInstead": "Login Instead"
-  } 
- },
- "quotesWidget": {
-  "components": {
-    "genericTradeBody":{
-      "lotSize": "Lot Size",
-      "stopLoss": "Stop Loss",
-      "takeProfit": "Take Profit",
-      "fillPolicy": "Fill Policy",
-      "fillOrKill": "Fill or Kill",
-      "timeFrame": "Time Frame",
-      "currencyPrice": "Current Price",
-      "inOneHour": "In 1 Hour at 10:41 on 29th July 2023 your trade will automatically close",
-      "sellByMarket": "Sell by Market",
-      "buyByMarket": "Buy by Market"
+  "priceSentimentWidget": {
+    "details": {
+      "clientSentiment": "Client Sentiment:",
+      "tradingActivity": "Trading Activity",
+      "priceRange": "Price Range",
+      "priceVolatility": "Price Volatility",
+      "priceMovement": "Price Movement"
     },
-    "marketStats": {
-      "initialMargin": "Initial Margin",
-      "bigHigh": "Bid High",
-      "bigLow": "Bid Low",
-      "askHigh": "Ask High",
-      "askLow": "Ask Low",
-      "priceChange": "Price Change",
-      "openPrice": "Open Price",
-      "closePrice": "Close Price"
+    "searchResults": "Search Results:"
+  },
+  "profile": {
+    "verificationBar": {
+      "verifyYourAccount": "Verify your account",
+      "toMakeFirstD": "To make your first deposit, we would like to know you better. click ‘continue’ to get started"
     },
-    "quotesBottomSheet": {
-      "euroVsDollar": "EURUSDs: Euro vs US Dollar"
-    },
-    "tradeAppBar": {
-      "marketExec": "Market Execution"
+    "profileWidget": {
+      "viewYourWithD": "Withdrawal/Deposit History",
+      "updatePaymentM": "update payment methods",
+      "fileAComplaint": "file a complaint with our team",
+      "rateTheApp": "Rate the app",
+      "giveUsAReview": "give us a review on appstore",
+      "viewWithDrawalH": "view your withdrawal and deposit history"
     }
-  }, 
+  },
+  "providerWidget": {
+    "providerComponent": {
+      "changeNickName": {
+        "changeNickNameT": "Change NickName",
+        "enterNewNickName": "Enter new nickname"
+      },
+      "changePasswordWidget": {
+        "confirmPassword": "Confirm Password"
+      },
 
-  "modernViewWidget": {
-    "topMovers": "Top Movers"
-  }
- },
- "referralWidget":{
-  "referNowAndEarn": "Refer now and earn {}10 credit on your next trade",
-  "referralCode": "Referral Code",
-  "howDoesItWork": "How does it work",
-  "inviteYourFriends": "Invite your friends to register on Meta Trader 5 ",
-  "whenYourFriend": "When your friend registers on app, both of you will get {}10 reward credit",
-  "yourRewardCredit": "Your reward credit can then be used on your next trade",
-  "checkOutMyApp": "check out my app https://example.com",
-  "referNow": "Refer Now"
- },
- "securityWidget": {
-  "securityComponents":{
-        "addPassKeyModel" : {
+      "pGraph": {
+        "myPerformance": "My Performance"
+      },
+      "pGraph2": {
+        "followersStats": "Follower Stats"
+      },
+      "pModelBottomSheet": {
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "openPosition": "Open Position",
+        "selectCountry": "Select Country"
+      },
+      "pProfitsBar": {
+        "totalTrade": "Total Trades"
+      },
+      "pTradeBar": {
+        "dateW": "Date:",
+        "orderId": "Order ID:",
+        "followersCommission": "Followers commission:"
+      },
+      "pSummary": {
+        "viewFollowers": "View followers",
+        "followersAutoScale": "Followers Auto scale",
+        "followersFixedLot": "Followers Fixed Lot",
+        "followersReverse": "Followers Reverse",
+        "performanceFee": "Performance fee"
+      },
+      "updatePhoneNumber": {
+        "updatePhoneNumberText": "Update Phone Number"
+      }
+    },
+    "providerConfirmation": {
+      "yourRequestHas": "Your request has been\nsubmitted successfully",
+      "youWillReceive": "You will receive a feedback within 3-4\nworking days via email on successful\nverification"
+    },
+    "providerFollowers": {
+      "followedRecently": "Followed Recently",
+      "startedFollowing": "Started Following: {}s"
+    },
+    "providerLogin": {
+      "enterYourAccount": "Enter your account ID",
+      "accountID": "Account ID",
+      "desiredFee": "Desired Fee",
+      "iAgreeWith": "I agree with the",
+      "termsAndConditionProvider": "terms and conditions",
+      "forOPening": "for opening an account and the",
+      "dataProtectionPolicy": "data protection policy"
+    },
+    "providerOption": {
+      "myWallet": "My Wallet",
+      "profileSettings": "Profile Settings"
+    },
+    "providerSettings": {
+      "desiredFeeCommission": "Desired Fees (Commission)",
+      "publicVisibility": "Public Visibility",
+      "visibilityPublic": "Visibility: Public",
+      "saveChanges": "Save changes"
+    },
+    "providerSignUp": {
+      "uploadAttachment": "Upload Attachment"
+    },
+    "providerWallet": {
+      "reportAnIssue": "Report an Issue",
+
+      "depositFromNeteller": "Deposit from Neteller",
+      "metaWalletToWallet": "Metawallet to Wallet",
+      "transferToSticPay": "Transfer to SticPay",
+      "depositToDeriv": "Deposit to deriv"
+    },
+    "welcomeProvider": {
+      "startGenerating": "Start Generating Income\nFor Your Followers",
+      "becomeAProvider": "Become a Provider on our\nplatform, showcasing your trading\nskills and earning income from\nyour followers",
+      "loginInstead": "Login Instead"
+    }
+  },
+  "quotesWidget": {
+    "components": {
+      "genericTradeBody": {
+        "lotSize": "Lot Size",
+        "stopLoss": "Stop Loss",
+        "takeProfit": "Take Profit",
+        "fillPolicy": "Fill Policy",
+        "fillOrKill": "Fill or Kill",
+        "timeFrame": "Time Frame",
+        "currencyPrice": "Current Price",
+        "inOneHour": "In 1 Hour at 10:41 on 29th July 2023 your trade will automatically close",
+        "sellByMarket": "Sell by Market",
+        "buyByMarket": "Buy by Market"
+      },
+      "marketStats": {
+        "initialMargin": "Initial Margin",
+        "bigHigh": "Bid High",
+        "bigLow": "Bid Low",
+        "askHigh": "Ask High",
+        "askLow": "Ask Low",
+        "priceChange": "Price Change",
+        "openPrice": "Open Price",
+        "closePrice": "Close Price"
+      },
+      "quotesBottomSheet": {
+        "euroVsDollar": "EURUSDs: Euro vs US Dollar"
+      },
+      "tradeAppBar": {
+        "marketExec": "Market Execution"
+      }
+    },
+
+    "modernViewWidget": {
+      "topMovers": "Top Movers"
+    }
+  },
+  "referralWidget": {
+    "referNowAndEarn": "Refer now and earn {}10 credit on your next trade",
+    "referralCode": "Referral Code",
+    "howDoesItWork": "How does it work",
+    "inviteYourFriends": "Invite your friends to register on Meta Trader 5 ",
+    "whenYourFriend": "When your friend registers on app, both of you will get {}10 reward credit",
+    "yourRewardCredit": "Your reward credit can then be used on your next trade",
+    "checkOutMyApp": "check out my app https://example.com",
+    "referNow": "Refer Now"
+  },
+  "securityWidget": {
+    "securityComponents": {
+      "addPassKeyModel": {
         "appPasskey": "Add Passkey",
         "noNeedToRemember": "No need to remember a password",
         "withPasskey": "With passkeys, you can use things like your fingerprint or face to login",
@@ -1011,249 +1010,249 @@
         "passkeysWill": "Passkeys will automatically be available across your synced devices",
         "keepYourAccountSafe": "keep your account safe",
         "passkeysOffer": "passkeys offer state-of-the-art phishing resistance"
-    },
-    "changePasswordModel":{
-      "inOrderToProtect": "In order to protect your account, withdrawals will be disabled for 24 hours after you change your password"
-    },
-    "deletePopUP":{
-      "doYouReallyWantToDelete": "Do you really want to delete this {}"
-    },
-    "emptyPasskey":{
-      "passkeyAddedYet": "Passkeys added Yet"
-    },
-    "passkeyTile":{
-      "added12": "Added: 12 July, 2023",
-      "lastUsed": "Last used: 2 days ago"
-    }
-  },
-  "addPasskeyEnter": {
-    "enterAUnique": "Enter a unique 4-digit passkey",
-    "yourPasskeyWillBe": "Your passkey will be used to authorize your withdrawals. Please you are not advised to share this with anyone.",
-    "enter4digitsPasskey": "Enter 4-digits passkey",
-    "enterYourPassword": "Enter Your password"
-  },
-  "addPasskey": {
-    "securityVerification": "Security Verification Requirements",
-    "youNeedToCompleteAll": "You need to complete all of the following verification to continue"
-  },
-  "autoLockWidget": {
-    "usingPattern": "using pattern to unlock app",
-    "usingYourFace": "using your face to unlock app",
-    "faceUnlock": "Face lock"
-  },
-
-  "emailVerify": {
-    "passKeyAdded": "Passkey Added Successfully"
-  },
-  "passkeyAddedSuccess": {
-    "passkeyAddedSuccessfully": "Passkey Added Successfully",
-    "yourPasskeyIs": "Your passkey is",
-    "pleaseKeepThisPasskey": " please keep this passkey safe, so you won’t forget it"
-  },
-  "passwordChangedSuccess": {
-    "passwordChangedSuccessText": "Password Changed Successfully",
-    "itWillTake24": "It will take 24 hours before you can make withdrawals. Please wait patiently"
-  },
-  "phoneVerifiedSuccess": {
-    "phoneVerifiedSuccessFully": "Phone Verified Successfully",
-    "yourPhoneNumber": "Your phone number "
-  },
-  "phoneVerify": {
-    "weSentVerificationCode": "We sent a verification code to ",
-    "enter6Digits": "Enter 6-digits verification code"
-  },
-  "securityMain": {
-    "twoFactorAuthentication": "Two-Factor Authentication",
-    "toProtectYourAccount": "To protect your account, it is required for you to turn on at least one 2FA",
-    "autoLockText": "Auto-Lock",
-    "disableAccount": "Disable Account",
-    "doYouReallyWantToDisable": "Do you really want to disable account?"
-  }
-
- },
- "settings":{
-  "aboutUs": {
-    "serviceAgreement": "Service Agreement",
-    "likeUsOnFacebook": "Like us on facebook",
-    "followUsOnTwitter": "Follow us on Twitter",
-    "joinUsOnTelegram": "Join us on Telegram",
-    "checkForUpdate": "Check for updates"
-  },
-  "colorPreferenceWidget": {
-    "blueBuyRedSell": "Blue-Buy/Red-Sell",
-    "blueSellRedBuy": "Blue-Sell/Red-Buy"
-  },
-  "changeBasis": {
-    "whenYouSwitch": "When you switch to a new UTC time zone, the change (%) for markets and trades will be calculated based on the new time zone "
-  },
-  "settingsPage": {
-    "pushNotification": "Push Notifications",
-    "useDeviceTheme": "Use Device Theme",
-    "darkMode": "Dark Mode",
-    "changeBasisText" : "Change Basis",
-    "currentVersion ":"Current Version"
-  },
-  "updateRelease": {
-    "updateReleaseText": "Update release",
-    "thisUpdate": "This update"
-  }
- },
- "socialTradingWidget": {
-  "socialTradingComponent":{
-    "cancelSub": {
-      "cancelCoping": "Cancel Copying?",
-      "onceYouCancel": "Once you cancel your subscription, your open trades with the master trader will be terminated automatically"
-    },
-    "copiedTrader": {
-      "followingSince": "Following since:"
-    },
-    "filterModel": {
-      "searchTransaction": "Search Transaction",
-      "enterYourSearch": "Enter your search term"
-    },
-    "filterPosition": {
-      "closedPositions": "Closed positions",
-      "openPositions": "Open positions"
-    },
-    "rateModel": {
-      "rateSatoshi": "Rate Satoshi Nakamoto",
-      "takeAMoment": "Take a moment and rate me",
-      "submitFeedback": "Submit Feedback"
-    },
-    "summaryWidget": {
-      "successRate": "successRate",
-      "riskScoreSummary": "Risk Score"
-    }
-  },
-  "socialTradeAppBar": {
-    "masterTraders": "Master Traders",
-    "myTrade": "My Trades"
-  },
-  "copiedTraderSuccess": {
-    "masterTradeCopiedS": "Master trader copied Successfully"
-  },
-  "copiedTraderTerminated": {
-    "subscriptionTerminated": "Subscription Terminated Successfully"
-  },
-  "masterTrader": {
-    "popularTraders": "Popular Traders",
-    "higherSuccessRatesText": "Higher Success Rates"
-  },
-  "menuMain": {
-    "aboutMT5": "About MT 5 Copy Trading"
-  },
-  "myTrades": {
-    "copiedTraders": "Copied Traders",
-    "youAreNotCopying": "You Are Not Copying Any Master Trader  Yet",
-    "startCopying": "Start Copying"
-  },
-  "overViewWidget": {
-    "setupCopying": "Setup Copying",
-    "totalCopiers": "Total Copiers:",
-    "successRateOverview": "Success Rate:",
-    "accountDetails": "Account Details",
-    "floatingProfit": "Floating profit",
-    "masterTraderBonus": "Master Trader Bonus",
-    "riskManagement": "Risk Management",
-    "maxUnrealizedLoss": "Max Unrealized Loss",
-    "maxDrawDownDuration": "Max drawdown Duration",
-    "priceMovement": "price Movement",
-    "helloEveryOne": "Hello Everyone, 👉 this account is totally safe to copy for all investors, Newbies and Professionals. I will try my best to make 25-50% profits weekly 💪. Our first priority is to keep safety of your funds. \n\nHappy trading ✨"
-  },
-  "subscriptionGuideWidget": {
-    "learnAbout": "Learn about subscription setup",
-    "copyProportion": "Copy Proportion",
-    "selectTheSize": "Select the size of your investment that will be engaged in copy trading",
-    "theVolumeOf": "The volume of your copied orders will equal the volume of the master trader’s orders.",
-    "toFacilitate": "To facilitate transactions, we may collect details related to your bank account, credit/debit card information, and transaction history.",
-    "weMayAutomatically": "We may automatically collect information about your device, operating system, browser type, IP address, and interactions with our platform to improve our services and user experience.",
-    "supportFundsHelp": "Support funds help to protect your investments from unexpected market movement.\n\nIdeally, you should add support funds that will be at least 50% of the required investment."
-  },
-  "subscriptionSetupWidget": {
-    "subscriptionSetup": "Subscription Setup",
-    "fundInWallet": "Funds In Wallet:",
-    "argumentItemRequired": "{} required",
-    "argumentTradeVolume": "{} trade volume",
-    "enterValue": "Enter value",
-    "supportAmount": "Support amount",
-    "enterAmount": "Enter amount",
-    "55OfTheRequired": "55% of the required investment",
-    "supportFundsProtect": "Support funds protect your business from unexpected market movements",
-    "requiredInvestment": "Required Investment"
-  }
- },
- "tradeWidget":{
-  "tradeBulkOperation": {
-    "closeAUDJPYPosition": "Close AUDJPYs positions",
-    "reverseAUDJPYBuy": "Reverse AUDJPY buy"
-  },
-  "tradeModal": {
-    "australianDollarVsJap": "Australian dollar vs Japanese Yen",
-    "swap0": "Swap: 0.00",
-    "modifyPosition": "Modify position",
-    "bulkOPerationsW": "Bulk operations..."
-  },
-  "modifyTrade": {
-    "in1hour": "In 1 Hour at 10:41 on 29th July 2023 your trade will automatically close",
-    "theMarketWill": "The trade will be executed at market conditions. Difference with requested price maybe significant"
-  }
- },
- "tradeHistoryWidget":{
-   "TradeComponents":{
-      "filterModal" :{
-          "lastMonth": "Last Month",
-          "last3Month": "Last 3 Month"
+      },
+      "changePasswordModel": {
+        "inOrderToProtect": "In order to protect your account, withdrawals will be disabled for 24 hours after you change your password"
+      },
+      "deletePopUP": {
+        "doYouReallyWantToDelete": "Do you really want to delete this {}"
+      },
+      "emptyPasskey": {
+        "passkeyAddedYet": "Passkeys added Yet"
+      },
+      "passkeyTile": {
+        "added12": "Added: 12 July, 2023",
+        "lastUsed": "Last used: 2 days ago"
       }
-   }
- },
- "transactionWidget":{
-  "TransactionComponents":{
-    "filledPop": {
-      "searchTerm": "Search Term",
-      "enterYourSearchTerm": "Enter your search term"
+    },
+    "addPasskeyEnter": {
+      "enterAUnique": "Enter a unique 4-digit passkey",
+      "yourPasskeyWillBe": "Your passkey will be used to authorize your withdrawals. Please you are not advised to share this with anyone.",
+      "enter4digitsPasskey": "Enter 4-digits passkey",
+      "enterYourPassword": "Enter Your password"
+    },
+    "addPasskey": {
+      "securityVerification": "Security Verification Requirements",
+      "youNeedToCompleteAll": "You need to complete all of the following verification to continue"
+    },
+    "autoLockWidget": {
+      "usingPattern": "using pattern to unlock app",
+      "usingYourFace": "using your face to unlock app",
+      "faceUnlock": "Face lock"
+    },
+
+    "emailVerify": {
+      "passKeyAdded": "Passkey Added Successfully"
+    },
+    "passkeyAddedSuccess": {
+      "passkeyAddedSuccessfully": "Passkey Added Successfully",
+      "yourPasskeyIs": "Your passkey is",
+      "pleaseKeepThisPasskey": " please keep this passkey safe, so you won’t forget it"
+    },
+    "passwordChangedSuccess": {
+      "passwordChangedSuccessText": "Password Changed Successfully",
+      "itWillTake24": "It will take 24 hours before you can make withdrawals. Please wait patiently"
+    },
+    "phoneVerifiedSuccess": {
+      "phoneVerifiedSuccessFully": "Phone Verified Successfully",
+      "yourPhoneNumber": "Your phone number "
+    },
+    "phoneVerify": {
+      "weSentVerificationCode": "We sent a verification code to ",
+      "enter6Digits": "Enter 6-digits verification code"
+    },
+    "securityMain": {
+      "twoFactorAuthentication": "Two-Factor Authentication",
+      "toProtectYourAccount": "To protect your account, it is required for you to turn on at least one 2FA",
+      "autoLockText": "Auto-Lock",
+      "disableAccount": "Disable Account",
+      "doYouReallyWantToDisable": "Do you really want to disable account?"
     }
-  }
- },
- "verificationWidget": {
-  "emailVerification": {
-    "verifyYourEmail": "Verify Your Email"
   },
-  "emailVerifiedSuccessfully": {
-    "nextVerify": "Next: Verify Identity"
+  "settings": {
+    "settingsText": "Settings",
+    "aboutUs": {
+      "serviceAgreement": "Service Agreement",
+      "likeUsOnFacebook": "Like us on facebook",
+      "followUsOnTwitter": "Follow us on Twitter",
+      "joinUsOnTelegram": "Join us on Telegram",
+      "checkForUpdate": "Check for updates"
+    },
+    "colorPreferenceWidget": {
+      "blueBuyRedSell": "Blue-Buy/Red-Sell",
+      "blueSellRedBuy": "Blue-Sell/Red-Buy"
+    },
+    "changeBasis": {
+      "whenYouSwitch": "When you switch to a new UTC time zone, the change (%) for markets and trades will be calculated based on the new time zone "
+    },
+    "settingsPage": {
+      "pushNotification": "Push Notifications",
+      "useDeviceTheme": "Use Device Theme",
+      "darkMode": "Dark Mode",
+      "changeBasisText": "Change Basis",
+      "currentVersion ": "Current Version"
+    },
+    "updateRelease": {
+      "updateReleaseText": "Update release",
+      "thisUpdate": "This update"
+    }
   },
-  "identityVerificationLanding": {
-    "verifyYourIdentity": "Verify Your Identity",
-    "toSuccessfullyVerify": "To successfully verify your identity, we accept either a snapshot of your:",
-    "itTakes8hours": "It takes 8-24 hrs for your ID to be verified."
+  "socialTradingWidget": {
+    "socialTradingComponent": {
+      "cancelSub": {
+        "cancelCoping": "Cancel Copying?",
+        "onceYouCancel": "Once you cancel your subscription, your open trades with the master trader will be terminated automatically"
+      },
+      "copiedTrader": {
+        "followingSince": "Following since:"
+      },
+      "filterModel": {
+        "searchTransaction": "Search Transaction",
+        "enterYourSearch": "Enter your search term"
+      },
+      "filterPosition": {
+        "closedPositions": "Closed positions",
+        "openPositions": "Open positions"
+      },
+      "rateModel": {
+        "rateSatoshi": "Rate Satoshi Nakamoto",
+        "takeAMoment": "Take a moment and rate me",
+        "submitFeedback": "Submit Feedback"
+      },
+      "summaryWidget": {
+        "successRate": "successRate",
+        "riskScoreSummary": "Risk Score"
+      }
+    },
+    "socialTradeAppBar": {
+      "masterTraders": "Master Traders",
+      "myTrade": "My Trades"
+    },
+    "copiedTraderSuccess": {
+      "masterTradeCopiedS": "Master trader copied Successfully"
+    },
+    "copiedTraderTerminated": {
+      "subscriptionTerminated": "Subscription Terminated Successfully"
+    },
+    "masterTrader": {
+      "popularTraders": "Popular Traders",
+      "higherSuccessRatesText": "Higher Success Rates"
+    },
+    "menuMain": {
+      "aboutMT5": "About MT 5 Copy Trading"
+    },
+    "myTrades": {
+      "copiedTraders": "Copied Traders",
+      "youAreNotCopying": "You Are Not Copying Any Master Trader  Yet",
+      "startCopying": "Start Copying"
+    },
+    "overViewWidget": {
+      "setupCopying": "Setup Copying",
+      "totalCopiers": "Total Copiers:",
+      "successRateOverview": "Success Rate:",
+      "accountDetails": "Account Details",
+      "floatingProfit": "Floating profit",
+      "masterTraderBonus": "Master Trader Bonus",
+      "riskManagement": "Risk Management",
+      "maxUnrealizedLoss": "Max Unrealized Loss",
+      "maxDrawDownDuration": "Max drawdown Duration",
+      "priceMovement": "price Movement",
+      "helloEveryOne": "Hello Everyone, 👉 this account is totally safe to copy for all investors, Newbies and Professionals. I will try my best to make 25-50% profits weekly 💪. Our first priority is to keep safety of your funds. \n\nHappy trading ✨"
+    },
+    "subscriptionGuideWidget": {
+      "learnAbout": "Learn about subscription setup",
+      "copyProportion": "Copy Proportion",
+      "selectTheSize": "Select the size of your investment that will be engaged in copy trading",
+      "theVolumeOf": "The volume of your copied orders will equal the volume of the master trader’s orders.",
+      "toFacilitate": "To facilitate transactions, we may collect details related to your bank account, credit/debit card information, and transaction history.",
+      "weMayAutomatically": "We may automatically collect information about your device, operating system, browser type, IP address, and interactions with our platform to improve our services and user experience.",
+      "supportFundsHelp": "Support funds help to protect your investments from unexpected market movement.\n\nIdeally, you should add support funds that will be at least 50% of the required investment."
+    },
+    "subscriptionSetupWidget": {
+      "subscriptionSetup": "Subscription Setup",
+      "fundInWallet": "Funds In Wallet:",
+      "argumentItemRequired": "{} required",
+      "argumentTradeVolume": "{} trade volume",
+      "enterValue": "Enter value",
+      "supportAmount": "Support amount",
+      "enterAmount": "Enter amount",
+      "55OfTheRequired": "55% of the required investment",
+      "supportFundsProtect": "Support funds protect your business from unexpected market movements",
+      "requiredInvestment": "Required Investment"
+    }
   },
-  "identityVerificationSuccess": {
-    "yourIdHasBeen": "Your ID has been submitted successfully",
-    "youWillReceiveFeedback": "You will receive a feedback",
-    "within24": "within 24 hours ",
-    "viaEmailOnSuccessful": "via email on successful verification"
+  "tradeWidget": {
+    "tradeBulkOperation": {
+      "closeAUDJPYPosition": "Close AUDJPYs positions",
+      "reverseAUDJPYBuy": "Reverse AUDJPY buy"
+    },
+    "tradeModal": {
+      "australianDollarVsJap": "Australian dollar vs Japanese Yen",
+      "swap0": "Swap: 0.00",
+      "modifyPosition": "Modify position",
+      "bulkOPerationsW": "Bulk operations..."
+    },
+    "modifyTrade": {
+      "in1hour": "In 1 Hour at 10:41 on 29th July 2023 your trade will automatically close",
+      "theMarketWill": "The trade will be executed at market conditions. Difference with requested price maybe significant"
+    }
   },
-  "selectIdentity": {
-    "validDriverL": "Valid Drivers License"
+  "tradeHistoryWidget": {
+    "TradeComponents": {
+      "filterModal": {
+        "lastMonth": "Last Month",
+        "last3Month": "Last 3 Month"
+      }
+    }
   },
-  "verifyLanding": {
-    "letStart": "Let's Start Your Verification Process",
-    "emailVerificationText": "Email Verification",
-    "weWillSend": "We will send a link to the email address you provided. Please tap the link to complete your email verification",
-    "identityVerification": "Identity Verification",
-    "toHelpProtect": "To help protect you from fraud and to comply with federal regulations, we need some information. It can be either a snapshot of your:"
-  }
- },
- "withdrawFunds": {
-  "paymentInformationWidget":{
+  "transactionWidget": {
+    "TransactionComponents": {
+      "filledPop": {
+        "searchTerm": "Search Term",
+        "enterYourSearchTerm": "Enter your search term"
+      }
+    }
+  },
+  "verificationWidget": {
+    "emailVerification": {
+      "verifyYourEmail": "Verify Your Email"
+    },
+    "emailVerifiedSuccessfully": {
+      "nextVerify": "Next: Verify Identity"
+    },
+    "identityVerificationLanding": {
+      "verifyYourIdentity": "Verify Your Identity",
+      "toSuccessfullyVerify": "To successfully verify your identity, we accept either a snapshot of your:",
+      "itTakes8hours": "It takes 8-24 hrs for your ID to be verified."
+    },
+    "identityVerificationSuccess": {
+      "yourIdHasBeen": "Your ID has been submitted successfully",
+      "youWillReceiveFeedback": "You will receive a feedback",
+      "within24": "within 24 hours ",
+      "viaEmailOnSuccessful": "via email on successful verification"
+    },
+    "selectIdentity": {
+      "validDriverL": "Valid Drivers License"
+    },
+    "verifyLanding": {
+      "letStart": "Let's Start Your Verification Process",
+      "emailVerificationText": "Email Verification",
+      "weWillSend": "We will send a link to the email address you provided. Please tap the link to complete your email verification",
+      "identityVerification": "Identity Verification",
+      "toHelpProtect": "To help protect you from fraud and to comply with federal regulations, we need some information. It can be either a snapshot of your:"
+    }
+  },
+  "withdrawFunds": {
+    "paymentInformationWidget": {
       "accountNumberW": "Account number:",
       "124Hours": "1-24 hours"
-  },
-  "paymentMethodWidget":{
+    },
+    "paymentMethodWidget": {
       "selectPreferred": "Select preferred payment method"
-  },
-  "withdrawSuccessWidget":{
+    },
+    "withdrawSuccessWidget": {
       "yourTransactionIsBeing": "Your Transaction is Being Processed",
       "youCanSkip": "You can skip this step but you will not be able to withdraw your funds. "
+    }
   }
- }
 }

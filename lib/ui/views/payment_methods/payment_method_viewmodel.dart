@@ -198,7 +198,7 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
         return LocaleKeys.views_fundAccountView_fundAccountAppBar_perfectMoney
             .tr();
       case PaymentMethodEnum.skrill:
-        return LocaleKeys.views_fundAccountView_fundAccountAppBar_skrill;
+        return LocaleKeys.views_fundAccountView_fundAccountAppBar_skrill.tr();
       case PaymentMethodEnum.sticPay:
         return LocaleKeys.views_fundAccountView_fundAccountAppBar_sticPay.tr();
       case PaymentMethodEnum.tether:
@@ -242,7 +242,7 @@ class PaymentMethodViewModel extends CustomBaseViewModel {
       case PaymentMethodPageEnum.main:
         return paymentMethodAppBar2(
           context,
-          LocaleKeys.paymentMethod.tr(),
+          LocaleKeys.views_paymentMethodPageView_paymentMethod.tr(),
           '',
           this,
           'assets/images/add_square.svg',

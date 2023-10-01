@@ -18,6 +18,8 @@ class PasskeyAddedSuccessPage extends StatelessWidget {
     return Column(
       children: [
         verticalSpaceSmall(context),
+        verticalSpaceSmall(context),
+        verticalSpaceSmall(context),
         SizedBox(
           height: McGyver.rsDoubleH(context, 50),
           width: McGyver.rsDoubleW(context, 100),
@@ -39,7 +41,7 @@ class PasskeyAddedSuccessPage extends StatelessWidget {
                 .securityWidget_passkeyAddedSuccess_passkeyAddedSuccessfully,
             textAlign: TextAlign.center,
             style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 3),
+              fontSize: McGyver.textSize(context, 2.7),
               fontWeight: FontWeight.w700,
               color: isDarkMode
                   ? const Color(0xFFF2F4F7)
@@ -67,7 +69,7 @@ class PasskeyAddedSuccessPage extends StatelessWidget {
                 ),
                 children: [
                   TextSpan(
-                    text: "2345",
+                    text: " 2345 ",
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 2),
                       fontWeight: FontWeight.w500,

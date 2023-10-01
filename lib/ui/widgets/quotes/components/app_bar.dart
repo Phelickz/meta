@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:meta_trader/app/utils/constants.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/quotes/components/pop_up_menu.dart';
@@ -168,7 +169,7 @@ AppBar quotesAppBar(BuildContext context, String title, String subtitle,
               model.quotesPageEnum == QuotesPageEnum.details
           ? const SizedBox()
           : Padding(
-              padding: EdgeInsets.only(right: 24.pWidth(context)),
+              padding: Constants.getPadding(context, 24.pWidth(context)),
               child: Row(
                 children: [
                   model.quotesPageEnum == QuotesPageEnum.edit

@@ -61,14 +61,15 @@ class ManageAccountView extends StackedView<ManageAccountViewModel> {
                   SizedBox(
                     height: 160.pHeight(context),
                   ),
-                  Text(LocaleKeys.connectTo,
-                          style: CustomThemeData.generateStyle(
-                              fontSize: McGyver.textSize(context, 2.2),
-                              color: CustomThemeData.isDarkMode(context)
-                                  ? Colors.white
-                                  : Colors.black,
-                              fontWeight: FontWeight.w600))
-                      .tr(),
+                  Text(
+                    LocaleKeys.connectTo,
+                    style: CustomThemeData.generateStyle(
+                        fontSize: McGyver.textSize(context, 2.2),
+                        color: CustomThemeData.isDarkMode(context)
+                            ? Colors.white
+                            : Colors.black,
+                        fontWeight: FontWeight.w600),
+                  ).tr(),
                   SizedBox(
                     height: 16.pHeight(context),
                   ),
@@ -77,13 +78,35 @@ class ManageAccountView extends StackedView<ManageAccountViewModel> {
                         itemCount: viewModel.brokers_list.length,
                         // padding: EdgeInsets.symmetric(horizontal: 15.pWidth(context),),
                         itemBuilder: (context, index) {
-                          return AccountTile(
-                              type: viewModel.brokers_list[index]["type"],
-                              email: viewModel.brokers_list[index]["email"],
-                              brokerLogoPath: viewModel.brokers_list[index]
-                                  ["brokerImage"],
-                              details: viewModel.brokers_list[index]["details"],
-                              amount: viewModel.brokers_list[index]["Balance"]);
+                          return GestureDetector(
+                            onTap: () {
+                              showModalBottomSheet(
+                                  context: context,
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(12),
+                                      topRight: Radius.circular(12),
+                                    ),
+                                  ),
+                                  backgroundColor:
+                                      Theme.of(context).scaffoldBackgroundColor,
+                                  builder: (context) {
+                                    return ManageAccountBottomSheet1(
+                                      accountDetail: "44291097-Deriv-Real",
+                                      model: viewModel,
+                                    );
+                                  });
+                            },
+                            child: AccountTile(
+                                type: viewModel.brokers_list[index]["type"],
+                                email: viewModel.brokers_list[index]["email"],
+                                brokerLogoPath: viewModel.brokers_list[index]
+                                    ["brokerImage"],
+                                details: viewModel.brokers_list[index]
+                                    ["details"],
+                                amount: viewModel.brokers_list[index]
+                                    ["Balance"]),
+                          );
                         }),
                   )
                 ],

@@ -92,7 +92,7 @@ class EmailVerifiedSuccessPage extends StatelessWidget {
         CustomButtons.generalButton(
           context: context,
           onTap: () {
-            model.securityPageEnum = SecurityPageEnum.addPasskeyEnter;
+            model.securityPageEnum = SecurityPageEnum.main;
           },
           text: LocaleKeys.continueWord.tr(),
         ),

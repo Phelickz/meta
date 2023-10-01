@@ -208,7 +208,7 @@ class TransactionsViewModel extends CustomBaseViewModel {
       "time": LocaleKeys
           .views_providerView_notificationList_notificationListTime
           .tr(),
-      "status": LocaleKeys.failed,
+      "status": LocaleKeys.failed.tr(),
       "transactionId": "232443564642"
     },
     {
@@ -240,7 +240,7 @@ class TransactionsViewModel extends CustomBaseViewModel {
           .views_providerView_notificationList_notificationListTime
           .tr(),
       "status": LocaleKeys.successful.tr(),
-      "type": LocaleKeys.internalTransfer.tr(),
+      "type": LocaleKeys.views_homeView_internalTransfer.tr(),
       "transactionId": "232443564642"
     },
     {
@@ -250,7 +250,7 @@ class TransactionsViewModel extends CustomBaseViewModel {
       "date": "2.1.2023",
       "time": "16:23:41",
       "status": LocaleKeys.successful.tr(),
-      "type": LocaleKeys.internalTransfer.tr(),
+      "type": LocaleKeys.views_homeView_internalTransfer.tr(),
       "transactionId": "232443564642"
     },
     {
@@ -264,7 +264,7 @@ class TransactionsViewModel extends CustomBaseViewModel {
           .views_providerView_notificationList_notificationListTime
           .tr(),
       "status": LocaleKeys.pending.tr(),
-      "type": LocaleKeys.internalTransfer.tr(),
+      "type": LocaleKeys.views_homeView_internalTransfer.tr(),
       "transactionId": "232443564642"
     },
     {
@@ -278,7 +278,7 @@ class TransactionsViewModel extends CustomBaseViewModel {
           .views_providerView_notificationList_notificationListTime
           .tr(),
       "status": LocaleKeys.successful.tr(),
-      "type": LocaleKeys.internalTransfer.tr(),
+      "type": LocaleKeys.views_homeView_internalTransfer.tr(),
       "transactionId": "232443564642"
     },
     {
@@ -305,7 +305,7 @@ class TransactionsViewModel extends CustomBaseViewModel {
           .views_providerView_notificationList_notificationListTime
           .tr(),
       "status": LocaleKeys.successful.tr(),
-      "type": LocaleKeys.internalTransfer.tr(),
+      "type": LocaleKeys.views_homeView_internalTransfer.tr(),
       "transactionId": "232443564642"
     },
   ];

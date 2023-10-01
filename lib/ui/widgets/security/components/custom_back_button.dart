@@ -22,13 +22,17 @@ class CustomBackButton extends StatelessWidget {
         ),
         height: McGyver.rsDoubleH(context, 5),
         width: McGyver.rsDoubleH(context, 5),
-        child: SvgPicture.asset(
-          "assets/images/arrow_left.svg",
-          colorFilter: ColorFilter.mode(
-            isDarkMode ? const Color(0xff98A2B3) : const Color(0xFF667085),
-            BlendMode.srcIn,
-          ),
+        child: Icon(
+          Icons.arrow_back_ios,
+          color: isDarkMode ? const Color(0xff98A2B3) : const Color(0xFF667085),
         ),
+        // child: SvgPicture.asset(
+        //   "assets/images/arrow_left.svg",
+        //   colorFilter: ColorFilter.mode(
+        //     isDarkMode ? const Color(0xff98A2B3) : const Color(0xFF667085),
+        //     BlendMode.srcIn,
+        //   ),
+        // ),
       ),
     );
   }

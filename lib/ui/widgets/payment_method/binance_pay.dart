@@ -40,7 +40,7 @@ class BinancePayPage extends StatelessWidget {
           viewModel.paymentMethodPageEnum =
               PaymentMethodPageEnum.addPaymentMethodSuccess;
         },
-        text: LocaleKeys.save,
+        text: LocaleKeys.save.tr(),
       ),
       verticalSpaceSmall(context),
       verticalSpaceXSmall(context),

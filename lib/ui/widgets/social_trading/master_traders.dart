@@ -118,8 +118,8 @@ class PopularTraders extends StatelessWidget {
               },
               child: Text(
                 model.viewMoreEnum == ViewMoreEnum.pt
-                    ? LocaleKeys.hideMore
-                    : LocaleKeys.viewMore,
+                    ? LocaleKeys.hideMore.tr()
+                    : LocaleKeys.viewMore.tr(),
               ),
             )
           ],
@@ -127,13 +127,18 @@ class PopularTraders extends StatelessWidget {
         verticalSpaceXSmall(context),
         Column(
           children: [
-            GestureDetector(onTap: () {
-              model.push(MasterTraderOverview(model: model));
-            }, child: HigherSuccessRates(
-              copyOnTap: () {
-                model.push(MasterTraderOverview(model: model));
+            GestureDetector(
+              onTap: () {
+                model.push(
+                  MasterTraderOverview(model: model),
+                );
               },
-            )),
+              child: HigherSuccessRates(
+                copyOnTap: () {
+                  model.push(MasterTraderOverview(model: model));
+                },
+              ),
+            ),
             verticalSpaceSmall(context),
             GestureDetector(onTap: () {
               model.push(MasterTraderOverview(model: model));

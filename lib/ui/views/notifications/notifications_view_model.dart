@@ -35,7 +35,7 @@ class NotificationViewModel extends CustomBaseViewModel {
 
   List notifications = [
     {
-      "title": "Deposit Successful",
+      "title": LocaleKeys.notification_depositSuccessful.tr(),
       "description":
           "View your withdrawal and deposit history in the deposit of the history at 12.3.2023",
       "date": "2.1.2023 ",
@@ -43,7 +43,7 @@ class NotificationViewModel extends CustomBaseViewModel {
       "isRead": false
     },
     {
-      "title": "Deposit Successful",
+      "title": LocaleKeys.notification_depositSuccessful.tr(),
       "description":
           "View your withdrawal and deposit history in the deposit of the history at 12.3.2023",
       "date": "2.1.2023 ",
@@ -51,7 +51,7 @@ class NotificationViewModel extends CustomBaseViewModel {
       "isRead": false
     },
     {
-      "title": "Login from new IP",
+      "title": LocaleKeys.notification_loginFromNewIP.tr(),
       "description":
           "This system has detected a login from a new IP address...",
       "date": "2.1.2023",
@@ -59,7 +59,7 @@ class NotificationViewModel extends CustomBaseViewModel {
       "isRead": false
     },
     {
-      "title": "Login from new IP",
+      "title": LocaleKeys.notification_loginFromNewIP.tr(),
       "description":
           "This system has detected a login from a new IP address...",
       "date": "2.1.2023",
@@ -67,7 +67,7 @@ class NotificationViewModel extends CustomBaseViewModel {
       "isRead": false
     },
     {
-      "title": "Login from new IP",
+      "title": LocaleKeys.notification_loginFromNewIP.tr(),
       "description":
           "This system has detected a login from a new IP address...",
       "date": "2.1.2023",
@@ -75,7 +75,7 @@ class NotificationViewModel extends CustomBaseViewModel {
       "isRead": false
     },
     {
-      "title": "Login from new IP",
+      "title": LocaleKeys.notification_loginFromNewIP.tr(),
       "description":
           "This system has detected a login from a new IP address...",
       "date": "2.1.2023",
@@ -83,7 +83,7 @@ class NotificationViewModel extends CustomBaseViewModel {
       "isRead": false
     },
     {
-      "title": "Login from new IP",
+      "title": LocaleKeys.notification_loginFromNewIP.tr(),
       "description":
           "This system has detected a login from a new IP address...",
       "date": "2.1.2023",
@@ -91,7 +91,7 @@ class NotificationViewModel extends CustomBaseViewModel {
       "isRead": false
     },
     {
-      "title": "Withdrawal Successful",
+      "title": LocaleKeys.notification_withdrawalSuccessful.tr(),
       "description":
           "View your withdrawal and deposit history in the deposit of the history at 12.3.2023",
       "date": "2.1.2023",
@@ -136,10 +136,16 @@ class NotificationViewModel extends CustomBaseViewModel {
   AppBar? returnAppBar(BuildContext context) {
     switch (_notificationStateEnum) {
       case NotificationStateEnum.empty:
-        return notificationsAppBar(context, LocaleKeys.notification.tr(), this,
+        return notificationsAppBar(
+            context,
+            LocaleKeys.notification_notificationText.tr(),
+            this,
             NotificationStateEnum.empty);
       case NotificationStateEnum.hasNotifications:
-        return notificationsAppBar(context, LocaleKeys.notification.tr(), this,
+        return notificationsAppBar(
+            context,
+            LocaleKeys.notification_notificationText.tr(),
+            this,
             NotificationStateEnum.hasNotifications);
       default:
         return null;

@@ -113,12 +113,15 @@ class WithdrawFundViewModel extends CustomBaseViewModel {
       case WithdrawFundPageEnum.selectAccount:
         return withdrawFundAppBar(
             context,
-            LocaleKeys.withdrawFunds.tr(),
+            LocaleKeys.views_homeView_withdrawFunds.tr(),
             LocaleKeys.views_withdrawFundsView_selectAccountToWithdraw.tr(),
             this);
       case WithdrawFundPageEnum.paymentMethods:
         return withdrawFundAppBar(
-            context, LocaleKeys.paymentMethod.tr(), '', this);
+            context,
+            LocaleKeys.views_paymentMethodPageView_paymentMethod.tr(),
+            '',
+            this);
       case WithdrawFundPageEnum.onlineBank:
         return withdrawFundAppBar(context, LocaleKeys.onlineBankTransfer.tr(),
             LocaleKeys.withdrawToBank.tr(), this);

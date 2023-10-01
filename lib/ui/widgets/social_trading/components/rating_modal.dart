@@ -5,6 +5,7 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/services/router_service.dart';
+import 'package:meta_trader/app/utils/constants.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
@@ -83,7 +84,7 @@ class _RatingModalState extends State<RatingModal> {
             animationDuration: const Duration(milliseconds: 1000),
             valueLabelPadding:
                 const EdgeInsets.symmetric(vertical: 1, horizontal: 8),
-            valueLabelMargin: const EdgeInsets.only(right: 8),
+            valueLabelMargin: Constants.getPadding(context, 8),
             starOffColor: const Color(0xffe7e8ea),
             starColor: Colors.yellow,
           ),

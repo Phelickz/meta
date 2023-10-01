@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../app/responsiveness/res.dart';
 import '../../../app/utils/strings_manager.dart';
@@ -19,27 +20,27 @@ class LanguageSettingsPage extends StatelessWidget {
 
     return Column(
       children: [
-        Container(
-          color: isDarkMode
-              ? const Color(0xff052844)
-              : Theme.of(context).scaffoldBackgroundColor,
-          width: double.infinity,
-          height: 100,
-          child: Center(
-            child: Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: McGyver.textSize(context, 2),
-              ),
-              child: CustomTextFields(
-                hintText: SettingsStringsManager.search,
-                suffixIcon: Icon(
-                  Icons.search,
-                  color: isDarkMode ? Colors.white38 : Colors.black,
-                ),
-              ),
-            ),
-          ),
-        ),
+        // Container(
+        //   color: isDarkMode
+        //       ? const Color(0xff052844)
+        //       : Theme.of(context).scaffoldBackgroundColor,
+        //   width: double.infinity,
+        //   height: 100,
+        //   child: Center(
+        //     child: Padding(
+        //       padding: EdgeInsets.symmetric(
+        //         horizontal: McGyver.textSize(context, 2),
+        //       ),
+        //       child: CustomTextFields(
+        //         hintText: LocaleKeys.search.tr(),
+        //         suffixIcon: Icon(
+        //           Icons.search,
+        //           color: isDarkMode ? Colors.white38 : Colors.black,
+        //         ),
+        //       ),
+        //     ),
+        //   ),
+        // ),
         verticalSpaceSmall(context),
         Expanded(
           child: Padding(

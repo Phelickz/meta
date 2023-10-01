@@ -35,7 +35,7 @@ class PasskeyTile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  LocaleKeys.passkey,
+                  LocaleKeys.passkey.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 2.1),
                     fontWeight: FontWeight.bold,

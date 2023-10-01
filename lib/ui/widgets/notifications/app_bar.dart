@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
+import 'package:meta_trader/app/utils/constants.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 
 import '../../../../app/utils/theme.dart';
@@ -38,7 +39,7 @@ AppBar notificationsAppBar(BuildContext context, String title,
     actions: [
       model.notificationStateEnum == NotificationStateEnum.hasNotifications
           ? Padding(
-              padding: EdgeInsets.only(right: 24.pWidth(context)),
+              padding: Constants.getPadding(context, 24.pWidth(context)),
               child: InkWell(
                 onTap: () {
                   model.openOptionsBottomSheet(context);

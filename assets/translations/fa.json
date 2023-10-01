@@ -30,19 +30,19 @@
   "forexPro": "فارکس پرو",
   "phoneNumber": "شماره تلفن",
   "connectTo": "اتصال به",
-  "marginCalculator": "ماشین حساب حاشیه",  
-  "leverage": "قدرت نفوذ",  
-  "calculate": "محاسبه",  
-  "continueWord": "ادامه هید",  
-  "next": "بعد",  
-  "pipsCalculator": "ماشین حساب پیپ", 
+  "marginCalculator": "ماشین حساب حاشیه",
+  "leverage": "قدرت نفوذ",
+  "calculate": "محاسبه",
+  "continueWord": "ادامه هید",
+  "next": "بعد",
+  "pipsCalculator": "ماشین حساب پیپ",
   "accountCurrency": "ارز حساب",
   "currencyPair": "جفت ارز",
   "tradeSize": "اندازه تجارت {}",
   "search": "جستجو کردن",
   "deposit": "سپرده",
   "login_existing_account": "به حساب موجود وارد شوید",
-  "savePassword" : "ذخیره رمز عبور",
+  "savePassword": "ذخیره رمز عبور",
   "password": "کلمه عبور",
   "investor": "سرمایه گذار",
   "changePassword": "رمز عبور را تغییر دهید",
@@ -51,24 +51,24 @@
   "delete": "حذف",
   "properties": "خواص",
   "done": "انجام شده",
-  "email":"پست الکترونیک",
-  "days":"روزها",
-  "indicators":"شاخص ها",
-  "experience":"تجربه",
-  "hour":"مدت کم",
-  "today":"امروز",
-  "week":"هفته",
-  "month":"ماه",
-  "year":"سال",
-  "maximum":"بیشترین",
-  "minimum":"کمترین",
+  "email": "پست الکترونیک",
+  "days": "روزها",
+  "indicators": "شاخص ها",
+  "experience": "تجربه",
+  "hour": "مدت کم",
+  "today": "امروز",
+  "week": "هفته",
+  "month": "ماه",
+  "year": "سال",
+  "maximum": "بیشترین",
+  "minimum": "کمترین",
   "fundAccount": "حساب صندوق",
   "manageAccount": "مدیریت حساب",
   "amount": "میزان",
   "save": "صرفه جویی",
-  "metals":"فلزات",
-  "cryptoNews":"اخبار رمزنگاری",
-  "step":"گام",
+  "metals": "فلزات",
+  "cryptoNews": "اخبار رمزنگاری",
+  "step": "گام",
   "btcText": "0 بیت کوین",
   "loginID": "شناسه ورود",
   "forgetPassword": "رمز عبور را فراموش کرده اید؟ ",
@@ -101,7 +101,7 @@
   "lastActivity": "آخرین فعالیت: 23.12.2023",
   "enterYourLoginId": "شناسه ورود خود را وارد کنید",
   "enterLoginDetails": "جزئیات ورود را وارد کنید",
-  "enterPayId":"شناسه پرداخت را وارد کنید",
+  "enterPayId": "شناسه پرداخت را وارد کنید",
   "selectCurrencyPair": "جفت ارز را انتخاب کنید",
   "selectAccountCurrency": "ارز حساب را انتخاب کنید",
   "fundUsingBinancePay": "سرمایه گذاری با استفاده از BinancePay",
@@ -209,8 +209,8 @@
   "language": "زبان",
   "appearance": "ظاهر",
   "market": "بازار",
-  "chartColor" : "رنگ نمودار",
-  "colorPreference" : "ترجیح رنگ",
+  "chartColor": "رنگ نمودار",
+  "colorPreference": "ترجیح رنگ",
   "privacyPolicyText": "سیاست حفظ حریم خصوصی",
   "update": "به‌روزرسانی",
   "proceed": "ادامه دهید",
@@ -224,18 +224,18 @@
   "gain": "سود",
   "copiers": "کپی کنندگان",
   "performance": "عملکرد",
-  "subscriptionGuide":"راهنمای اشتراک",
-  "equal1":"برابر 1x",
-  "double2":"دوبرابر 2x",
-  "triple3":"سه‌برابر 3x",
+  "subscriptionGuide": "راهنمای اشتراک",
+  "equal1": "برابر 1x",
+  "double2": "دوبرابر 2x",
+  "triple3": "سه‌برابر 3x",
   "addSupportFunds": "افزودن اعتبار حمایتی",
   "supportFunds": "اعتبار حمایتی:",
   "copyProportion": "نسبت کپی",
   "custom": "سفارشی",
   "sender": "فرستنده",
   "receiver": "دریافت‌کننده",
-  "walletBalance":"موجودی کیف پول",
-  "over24hours":"بیش از 24 ساعت",
+  "walletBalance": "موجودی کیف پول",
+  "over24hours": "بیش از 24 ساعت",
   "recentTransaction": "تراکنش‌های اخیر",
   "order": "سفارش",
   "time": "زمان",
@@ -245,7 +245,7 @@
   "closeAllLosing": "بستن موقعیت‌های ضررآور",
   "freeMargin": "مارجین آزاد",
   "marginLevel": "سطح مارجین",
-  "last2Hrs" : "آخرین 24 ساعت",
+  "last2Hrs": "آخرین 24 ساعت",
   "depthOfMarket": "عمق بازار",
   "notSet": "تنظیم نشده",
   "lastWeek": "هفته گذشته",
@@ -270,25 +270,23 @@
   "verifyAccount": "تایید حساب",
   "financialRegulation": "مقررات مالی از ما درخواست تایید هویت شما را دارند. این به جلوگیری از ایجاد حساب MT5 توسط کسی دیگر با نام شما کمک می‌کند.",
   "withdrawToBank": "برداشت به بانک",
-  "paymentInformation" :"اطلاعات پرداخت",
-  "amountToWithdraw" :"مقدار برداشتی",
-  "leaveAMark" :"گذاشتن نشان",
-  "additionalInformation" :"اطلاعات اضافی (اختیاری)",
-  "depositFromBinancePay" :"سپرده از BinancePay",
-  "priceSentiments" :"احساسات قیمت",
-  "sell" :"فروش",
-  "pattern" :"الگو",
-  "phoneVerification" :"تأیید تلفن",
-  "changePreference" :"تغییر اولویت",
-  "lowCommission" :"کمیسیون کم",
-  "viewAll" :"مشاهده همه",
-  "closeBuyPosition" :"بستن موقعیت های خرید",
-  "credit" :"اعتبار",
-  "customPeriod" :"دوره سفارشی",
-  "swap" :"تعویض کنید",
-  "deals" :"Deals",
-
-
+  "paymentInformation": "اطلاعات پرداخت",
+  "amountToWithdraw": "مقدار برداشتی",
+  "leaveAMark": "گذاشتن نشان",
+  "additionalInformation": "اطلاعات اضافی (اختیاری)",
+  "depositFromBinancePay": "سپرده از BinancePay",
+  "priceSentiments": "احساسات قیمت",
+  "sell": "فروش",
+  "pattern": "الگو",
+  "phoneVerification": "تأیید تلفن",
+  "changePreference": "تغییر اولویت",
+  "lowCommission": "کمیسیون کم",
+  "viewAll": "مشاهده همه",
+  "closeBuyPosition": "بستن موقعیت های خرید",
+  "credit": "اعتبار",
+  "customPeriod": "دوره سفارشی",
+  "swap": "تعویض کنید",
+  "deals": "معاملات",
 
   "views": {
     "auth": {
@@ -301,19 +299,19 @@
           "login": "وارد شدن،",
           "created": "ایجاد شده"
         },
-      "created_account_page_enum": {
+        "created_account_page_enum": {
           "demo": "نسخه ی نمایشی،",
           "real": "واقعی"
         },
 
-      "return_app_bar": {
-        "find_broker": "یک دلال پیدا کنید",
-        "enter_login": "جزئیات ورود را وارد کنید",
-        "open_demo_account": "یک حساب آزمایشی باز کنید",
-        "enter_information": "اطلاعات خود را وارد کنید",
-        "open_real_account": "یک حساب واقعی باز کنید",
-        "created_account_info": "اطلاعات حساب ایجاد کرد"
-      }
+        "return_app_bar": {
+          "find_broker": "یک دلال پیدا کنید",
+          "enter_login": "جزئیات ورود را وارد کنید",
+          "open_demo_account": "یک حساب آزمایشی باز کنید",
+          "enter_information": "اطلاعات خود را وارد کنید",
+          "open_real_account": "یک حساب واقعی باز کنید",
+          "created_account_info": "اطلاعات حساب ایجاد کرد"
+        }
       }
     },
     "bottomNav": {
@@ -324,7 +322,6 @@
       "profile": "مشخصات"
     },
 
-
     "currencyConverter": {
       "twentyThree": "بیست و سه",
       "currency1": "واحد پول 1",
@@ -332,19 +329,19 @@
       "enterCurrency1": "مقدار را وارد کنید (واحد پول 1)",
       "enterCurrency2": "مقدار را وارد کنید (واحد پول 2)"
     },
-    "dashboard":{
+    "dashboard": {
       "dashboard": "داشبورد"
     },
-    "forexNews":{
-      "forexNewsView":{
+    "forexNews": {
+      "forexNewsView": {
         "exploreForex": "اخبار فارکس را در سراسر جهان کاوش کنید"
       },
       "forexModel": {
-         "all" : "همه",
-         "currencyPairs" : "جفت ارز",
-         "metals" : "فلزات",
-         "cryptoCurrency" : "ارز رمزنگاری شده"
-      }  
+        "all": "همه",
+        "currencyPairs": "جفت ارز",
+        "metals": "فلزات",
+        "cryptoCurrency": "ارز رمزنگاری شده"
+      }
     },
     "fundAccountView": {
       "fundAccountAppBar": {
@@ -354,8 +351,8 @@
         "addOnlineBank": "اضافه کردن بانک آنلاین",
         "bitcoin": "بیت کوین",
         "fundUsingBitcoin": "با استفاده از کیف پول بیت کوین سرمایه گذاری کنید",
-        "binancePay": "بایننس پرداخت",
-        "neteller": "نتلر",
+        "binancePay": "BinancePay",
+        "neteller": "Neteller",
         "fundUsingNeteller": "با استفاده از Neteller سرمایه گذاری کنید",
         "perfectMoney": "بهترین پول",
         "fundUsingPerfectMoney": "با استفاده از پرفکت مانی سرمایه گذاری کنید",
@@ -369,20 +366,20 @@
         "fundUsingBlockBee": "با استفاده از BlockBee سرمایه گذاری کنید"
       }
     },
-    "helpAndSupportView":{
+    "helpAndSupportView": {
       "question": "پرسش",
       "answer": "جواب",
       "helpAndSupport": "کمک و پشتیبانی",
       "faq": "سوالات متداول",
       "customerCare": "مراقبت از مشتری",
       "online": "برخط",
-      
+
       "faqList": {
         "question1": "چگونه برداشت کنم؟",
         "answer1": "می‌خواستم از این فرصت استفاده کنم و اشتیاق خود را برای این موقعیت و علاقه شدید خود به تبدیل شدن به عضوی ارزشمند در تیم [نام شرکت] تکرار کنم. پس از گفتگوی ما، من حتی بیشتر متقاعد شدم که این نقشی است که می توانم در آن تخصص خود را به اشتراک بگذارم و تأثیر مثبت بگذارم.\n\n",
         "answer1Continue": "من به ویژه تحت تأثیر [جنبه یا پروژه خاصی که در طول مصاحبه مورد بحث قرار گرفت] شدم، و معتقدم پیشینه من در [تجربه مربوطه] به من اجازه می دهد دیدگاه های تازه و بینش ارزشمندی را به تیم بیاورم."
       },
-      "suggestionList":{
+      "suggestionList": {
         "suggestion1": "به کمک نیاز دارم",
         "suggestion2": "چگونه برداشت کنم؟",
         "suggestion3": "من نمی توانم کیف پولم را تامین کنم"
@@ -393,18 +390,17 @@
       "internalTransfer": "انتقال داخلی",
       "transactionHistory": "تاریخچه معاملات",
       "tradeFeatures": "ویژگی های تجارت",
-      "chartAnalysis": "تجزیه و تحلیل نمودار",      
-      "tradingTools": "ابزارهای معاملاتی",      
-      "profitCalculator": "ماشین حساب سود",                
-      "marketNews": "اخبار بازار",  
-      "priceSentiments": "احساسات قیمت",  
-      "TradeFeaturesSub":{
+      "chartAnalysis": "تجزیه و تحلیل نمودار",
+      "tradingTools": "ابزارهای معاملاتی",
+      "profitCalculator": "ماشین حساب سود",
+      "marketNews": "اخبار بازار",
+      "priceSentiments": "احساسات قیمت",
+      "TradeFeaturesSub": {
         "subtitle": "کپی کنید و با معامله گران با تجربه کسب درآمد کنید",
         "subtitle1": "با اخبار فارکس به روز باشید"
       },
       "welcome": "خوش اومدی سوزان",
       "walletBalance": "موجودی کیف پول"
-      
     },
     "internalTransferView": {
       "transferFunds": "انتقال وجه",
@@ -430,44 +426,44 @@
       "recentActivity": "فعالیت اخیر",
       "activityTileText": "شما 23 امتیاز کسب کردید",
       "activityTileTextSub": "{} اعتبار برای استفاده از 5 اندازه لات تعلق می گیرد",
-      "status:":"وضعیت:",
-      "notComplete:":"تکمیل نشده:",
-      "points:":"3 امتیاز"
+      "status:": "وضعیت:",
+      "notComplete:": "تکمیل نشده:",
+      "points:": "3 امتیاز"
     },
-    "manageAccount":{
+    "manageAccount": {
       "brokerInformationView": {
         "regAddress": "آدرس ثبت نام",
         "brokersInformation": "اطلاعات کارگزار",
-        "level2" : "سطح 2، ساختمان کن لی، خیابان ادیت کاول 20، پورت لوئیس، موریس",
+        "level2": "سطح 2، ساختمان کن لی، خیابان ادیت کاول 20، پورت لوئیس، موریس",
         "supportSite": "support@fxpro.com"
       },
       "existingAccountScreen": {
         "searchBroker": "کارگزار جستجو کنید",
         "findBroker": "یک دلال پیدا کنید"
       }
-  },
-  "marginCalculatorView":{
-    "requiredMargin": "حاشیه مورد نیاز {}"
-  },
-    "paymentMethodPageView":{
-    "paymentMethod": "روش های پرداخت",
-    "addBinancePay": "جزئیات BinancePay را اضافه کنید",
-    "enterNetellerAccount": "جزئیات حساب Neteller را وارد کنید",
-    "addBitcoinDetails": "جزئیات بیت کوین را اضافه کنید",
-    "enterSkrillAccount": "جزئیات حساب Skrill را وارد کنید",
-    "enterPaymentDetails": "جزئیات پرداخت را وارد کنید",
-    "enterSticPayAccount": "جزئیات حساب SticPay را وارد کنید",
-    "enterTetherDetails": "جزئیات TetherUSD را اضافه کنید",
-    "scanQr": "کد QR را اسکن کنید",
-    "editOnlineBank": "ویرایش بانک آنلاین"
-  },
-   "pipCalculatorView":{
-    "pipValue": "ارزش پیپ (دلار آمریکا)",
-    "numberOfPips": "تعداد پیپ ها {}"
-  },
- "priceSentiments": {
-    "marketSentiments": "احساسات بازار",
-    "sentimentsAcrossM": "احساسات در سراسر بازارها"
+    },
+    "marginCalculatorView": {
+      "requiredMargin": "حاشیه مورد نیاز {}"
+    },
+    "paymentMethodPageView": {
+      "paymentMethod": "روش های پرداخت",
+      "addBinancePay": "جزئیات BinancePay را اضافه کنید",
+      "enterNetellerAccount": "جزئیات حساب Neteller را وارد کنید",
+      "addBitcoinDetails": "جزئیات بیت کوین را اضافه کنید",
+      "enterSkrillAccount": "جزئیات حساب Skrill را وارد کنید",
+      "enterPaymentDetails": "جزئیات پرداخت را وارد کنید",
+      "enterSticPayAccount": "جزئیات حساب SticPay را وارد کنید",
+      "enterTetherDetails": "جزئیات TetherUSD را اضافه کنید",
+      "scanQr": "کد QR را اسکن کنید",
+      "editOnlineBank": "ویرایش بانک آنلاین"
+    },
+    "pipCalculatorView": {
+      "pipValue": "ارزش پیپ (دلار آمریکا)",
+      "numberOfPips": "تعداد پیپ ها {}"
+    },
+    "priceSentiments": {
+      "marketSentiments": "احساسات بازار",
+      "sentimentsAcrossM": "احساسات در سراسر بازارها"
     },
     "priceCalculatorView": {
       "profitUSD": "سود (دلار آمریکا)",
@@ -523,14 +519,13 @@
       "addNoticeOfUpcoming": "اضافه کردن اعلان‌های نزدیک",
       "addingDifferentViews": "اضافه کردن نمای‌های مختلف در بخش بازار",
 
-
       "blueBuy": "خرید آبی / فروش قرمز",
       "notificationSettings": "تنظیمات اعلان",
       "languageSettings": "تنظیمات زبان",
       "changeAppLanguage": "تغییر زبان برنامه",
       "changeBasis": "تغییر پایه",
       "TermsOfUse": "شرایط استفاده",
-      "privacyPolicy" : {
+      "privacyPolicy": {
         "privacyPolicyHead1": "جمع‌آوری اطلاعات",
         "privacyPolicyHead2": "اشتراک‌گذاری و افشاء داده‌ها",
         "privacyPolicySubH": "اطلاعات شخصی",
@@ -550,7 +545,7 @@
         "privacyPolicyD9": "برای پردازش معاملات، تراکنش‌ها و برداشت‌های شما طبق دستورات شما."
       }
     },
-    "socialTradingView":{
+    "socialTradingView": {
       "transactionDetails": "جزئیات تراکنش",
       "subscriptionSetup": "راه‌اندازی اشتراک",
       "transferToBinance": "انتقال به BinancePay",
@@ -559,7 +554,7 @@
       "depositToPerfect": "واریز از Perfect Money",
       "subSuccessful": "اشتراک موفقیت‌آمیز",
       "subTerminated": "اشتراک پایان یافت",
-      "copyingSatoshi":"شما اکنون در حال کپی برداری از ساتوشی ناکاموتو هستید",
+      "copyingSatoshi": "شما اکنون در حال کپی برداری از ساتوشی ناکاموتو هستید",
       "socialTradingWelcome": {
         "welcomeToMT5": "به پلتفرم معاملات اجتماعی MT5 خوش آمدید",
         "nowYouCanStart": "اکنون می‌توانید با بهترین معامله‌گران اصلی سرمایه‌گذاری کنید، اشتراک‌های خود را پیگیری و مدیریت کنید.",
@@ -578,8 +573,6 @@
     }
   },
 
-
-
   "onboarding": {
     "onboarding_one": {
       "title1": "تجارت در لبه برش با ما",
@@ -588,16 +581,16 @@
       "bodyText": "با پلتفرم 360 درجه ما، راحتی کامل را برای سفر تجاری خود کاوش کنید. از تجارت یکپارچه لذت ببرید و به ویژگی های اضافی برای ارتقاء تجربه مالی خود دسترسی داشته باشید."
     }
   },
-    "onboarding2": {
-     "onboarding_two": {
+  "onboarding2": {
+    "onboarding_two": {
       "text": "امن است ",
       "text1": "رشد شما ",
       "text2": "با منابع فراوان و حمایت بی دریغ ما",
       "bodyText": "آینده خود را با منابع جامع و حمایت تزلزل ناپذیر ما برای رشد پایدار تضمین کنید."
     }
-},
+  },
   "onboarding3": {
-     "onboarding_three": {
+    "onboarding_three": {
       "text": "سپرده",
       "text1": "و",
       "text2": "برداشت وجوه",
@@ -605,30 +598,30 @@
       "bodyText": "از مدیریت یکپارچه وجوه با طیف وسیعی از گزینه‌های پلتفرم ما لذت ببرید، که به شما امکان می‌دهد بدون زحمت وجوه را واریز و برداشت کنید."
     }
   },
-    "onboarding4": {
-     "onboarding_four": {
+  "onboarding4": {
+    "onboarding_four": {
       "text": "قفل برق را باز کنید",
       "text1": "ابزارهای متنوعی که برای موفقیت شما طراحی شده است",
       "bodyText": "با طیف گسترده ای از ابزارهای ما که به دقت ساخته شده اند تا پیروزی شما را تضمین کنند، یک سفر تجاری موفق را آغاز کنید."
     }
-},
-"auth" : {
-  "chooseAccount": {
-    "offersYouVirtual": "به شما وجوه مجازی ارائه می دهد تا تجارت فارکس را یاد بگیرید و استراتژی ها و تنظیمات خود را قبل از استفاده از یک حساب واقعی آزمایش کنید.",
-    "demoAccount": "حساب آزمایشی",
-    "realAccount": "حساب واقعی",
-    "forLiveTrading": "برای تجارت زنده تأیید اضافی مورد نیاز است. برای مبتدیان توصیه نمی شود"
   },
-  "created": {
-    "yourModelCreated": {
-      "demo": "حساب {مدل} شما با موفقیت ایجاد شد ",
-      "real": "حساب {مدل} شما با موفقیت ایجاد شد "
+  "auth": {
+    "chooseAccount": {
+      "offersYouVirtual": "به شما وجوه مجازی ارائه می دهد تا تجارت فارکس را یاد بگیرید و استراتژی ها و تنظیمات خود را قبل از استفاده از یک حساب واقعی آزمایش کنید.",
+      "demoAccount": "حساب آزمایشی",
+      "realAccount": "حساب واقعی",
+      "forLiveTrading": "برای تجارت زنده تأیید اضافی مورد نیاز است. برای مبتدیان توصیه نمی شود"
     },
-    "accountInformation": "اطلاعات حساب",
-    "FullName": "نام و نام خانوادگی",
-    "accountType": "نوع حساب",
-    "forexHedge": "فارکس هج 100"
-  },
+    "created": {
+      "yourModelCreated": {
+        "demo": "حساب {مدل} شما با موفقیت ایجاد شد ",
+        "real": "حساب {مدل} شما با موفقیت ایجاد شد "
+      },
+      "accountInformation": "اطلاعات حساب",
+      "FullName": "نام و نام خانوادگی",
+      "accountType": "نوع حساب",
+      "forexHedge": "فارکس هج 100"
+    },
     "firstName": "نام کوچک",
     "enterFirstName": "نام خود را وارد نمایید",
     "lastName": "نام خانوادگی",
@@ -636,43 +629,43 @@
     "enterEmail": "ایمیل خود را وارد کنید",
     "enterPhone": "شماره تلفن خود را وارد کنید",
 
-    "realWidget":{
+    "realWidget": {
       "enterPersonalInformation": "شناسه ورود خود را وارد کنید",
       "preliminaryAccount": "حساب اولیه"
     }
   },
- "chart" : {
-  "sellAt": "فروش به قیمت 1.234564",
-  "text": "23%",
-  "buyAt": "با 1.234564 خرید کنید",
-  "text1": "77%",
-  "text2": "1.2",
-  "specification": {
-    "marketIsOpen" : "بازار باز است فردا ساعت 12:58 بسته می شود",
-    "contractSize": "اندازه قرارداد",
-    "spreadUnits": "واحدهای پخش",
-    "volumeLots": "حجم، تعداد زیادی",
-    "stopLevelPips": "سطح توقف، پیپ"
+  "chart": {
+    "sellAt": "فروش به قیمت 1.234564",
+    "text": "23%",
+    "buyAt": "با 1.234564 خرید کنید",
+    "text1": "77%",
+    "text2": "1.2",
+    "specification": {
+      "marketIsOpen": "بازار باز است فردا ساعت 12:58 بسته می شود",
+      "contractSize": "اندازه قرارداد",
+      "spreadUnits": "واحدهای پخش",
+      "volumeLots": "حجم، تعداد زیادی",
+      "stopLevelPips": "سطح توقف، پیپ"
+    },
+    "tradingSignalTiles": {
+      "intraday": "روزانه: تحت فشار",
+      "timeText": "ساعت 6 بعد از ظهر",
+      "miamiCryptoText": "میامی Crypto Aspirations",
+      "miamiCryptoTextContinue": "توسط صندوق 25 میلیونی Borderless Capital تقویت شده است"
+    }
   },
-  "tradingSignalTiles": {
-    "intraday" : "روزانه: تحت فشار",
-    "timeText": "ساعت 6 بعد از ظهر",
-    "miamiCryptoText": "میامی Crypto Aspirations",
-    "miamiCryptoTextContinue": "توسط صندوق 25 میلیونی Borderless Capital تقویت شده است"
-  }
- },
- "currencyConverterWidget" : {
-  "selectAccountCurrency":"ارز حساب را انتخاب کنید"
- },
- "datePicker" : {},
- "dropDown" : {},
- "forexNewsWidget" : {
+  "currencyConverterWidget": {
+    "selectAccountCurrency": "ارز حساب را انتخاب کنید"
+  },
+  "datePicker": {},
+  "dropDown": {},
+  "forexNewsWidget": {
     "allWidget": {
       "text": "پس از NFP های مختلط از ایالات متحده بهبود می یابد",
       "text2": "4 اوت 2034، 15:07 به وقت گرینویچ"
     },
     "detailsWidget": {
-     "coinTelegraph": "کوین تلگراف",
+      "coinTelegraph": "کوین تلگراف",
       "text": "از اینکه متا تریدر را به عنوان پلتفرم معاملاتی فارکس مورد اعتماد خود انتخاب کردید متشکریم. ما متعهد به حفظ حریم خصوصی شما و حفاظت از اطلاعات شخصی شما هستیم. این خط‌مشی رازداری نحوه جمع‌آوری، استفاده، افشای و حفاظت از داده‌های شما را تشریح می‌کند. با دسترسی یا استفاده از خدمات ما، با روش‌های توضیح داده شده در این خط‌مشی موافقت می‌کنید.",
       "text1": "اطلاعات شخصی: این اطلاعات ممکن است شامل نام، آدرس ایمیل، شماره تلفن، آدرس محل سکونت، تاریخ تولد، شناسنامه صادر شده توسط دولت و سایر جزئیات لازم برای ثبت حساب و مطابقت با",
       "text2": "اطلاعات مالی: برای تسهیل تراکنش ها، ممکن است جزئیات مربوط به حساب بانکی، اطلاعات کارت اعتباری/دبیت و سابقه تراکنش شما را جمع آوری کنیم.",
@@ -683,184 +676,188 @@
       "text7": "ایجاد حساب: برای ایجاد و نگهداری حساب خود، تأیید هویت خود و ارائه پشتیبانی مشتری.",
       "text8": "خدمات تجارت فارکس: برای پردازش معاملات، تراکنش ها و برداشت های خود مطابق با دستورالعمل های شما."
     },
-       "searchWidget": {
+    "searchWidget": {
       "searchResult": "نتایج جستجو:",
       "moreResult": "نتایج بیشتر"
     }
- },
- "fundAccountWidget" : {
-   "binancePayWidget": {
-     "binancePayId": "شناسه پرداخت بایننس"
- },
-   "bitcoinWidget": {
-     "makeSureToFund": "اطمینان حاصل کنید که با استفاده از شبکه انتخابی سرمایه گذاری کنید، در غیر این صورت، دارایی شما از بین خواهد رفت."
- },
-   "blockBeeWidget": {
-     "blockBeePayId": "BlockBee شناسه "
- },
-   "onlineBankWidget": {
-     "selectBank": "بانک را انتخاب کنید",
-     "chooseAvailableBank": "بانک موجود را انتخاب کنید",
-     "accountNumber": "شماره حساب",
-     "accountName": "شماره حساب"
- },
-   "perfectMoneyWidget": {
-     "noteThat": "توجه داشته باشید که ممکن است تا 24 ساعت طول بکشد تا سپرده شما در داشبورد شما منعکس شود"
- },
-   "selectDepositMethodWidget": {
-     "tenUsd": "10-200،00 دلار"
- },
-   "successWidget": {
-     "yourTransaction": "تراکنش شما در حال پردازش است",
-     "financialRegulation": "مقررات مالی ما را ملزم به تایید هویت شما می کند. این به جلوگیری از ایجاد یک حساب MT5 به نام شما توسط شخص دیگری کمک می کند.",
-     "youCan": "شما می توانید از این مرحله صرف نظر کنید اما نمی توانید وجوه خود را برداشت کنید."
- },
-   "tetherWidget": {
-     "makeSureToChoose": "اطمینان حاصل کنید که با استفاده از شبکه انتخابی سرمایه گذاری کنید، در غیر این صورت، دارایی شما از بین خواهد رفت."
- }
-},
-"helpAndSupport" : {
- "components": {
-   "logoutDialog": {
-     "wantToLogout": "آیا می خواهید از حساب خود خارج شوید؟"
-   },
-   "messageBottomSheet": {
-     "writeYourMessage": "پیام خود را بنویسید"
-   },
-   "suggestionsBar": {
-     "suggestion": "پیشنهادات"
-   }
- },
- "emptyIcon": {
-     "noMessage": "هنوز پیامی وجود ندارد"
- },
- "faqWidget": {
-     "ourFaq": "سوالات متداول ما،"
- },
- "helpAndSupportWidget": {
-     "chatWithCustomer": "با مراقبت از مشتری چت کنید",
-     "frequentlyAskedQ": "سوالات متداول",
-     "sendUsAMessage": "برای ما پیام ارسال کنید"
- }
-},
-"home" : {
- "higherSuccessRates": {
-     "profit_goddess": "الهه سود",
-     "copiers": "دستگاه های کپی",
-     "riskScore": "امتیاز ریسک: ",
-     "mediumCap": "متوسط",
-     "successRate": "میزان موفقیت"
- },
- "marketNewsWidget": {
-     "hoursAgo": "18 ساعت پیش",
-     "usdCoin": "سکه دلار",
-     "maimiCryptoAsp": "آرزوهای رمزنگاری میامی توسط صندوق 25 میلیون دلاری Lorem Ipsum Borderless Capital تقویت شده است."
- },
- "priceSentiments": {
-     "buySixty": "65% خرید",
-     "sellThirty": "35 درصد فروش"
- }
-},
-"internalTransfer" : {
-  "amountWidget": {
-     "enterAmountToTransfer": "مبلغ انتقال را وارد کنید",
-     "sendingAccountPassword": "ارسال رمز اکانت",
-     "enterAccountPassword": "رمز عبور حساب را وارد کنید"
- },
-  "successWidget": {
-     "transferSuccessful": "انتقال با موفقیت انجام شد",
-     "fiveHunUSD": "500 دلار با موفقیت از Deriv به FXPro منتقل شد",
-     "enterAccountPassword": "رمز عبور حساب را وارد کنید"
- }
-},
-"loyaltyReward" : {
- "cardWidget": {
-     "totalPointsBalance": "موجودی کل امتیازات",
-     "fiveThousandPoints": "5000 امتیاز",
-     "youAreAtThePeak": "شما در اوج هستید!"
- },
- "recentActivityWidget": {
-     "activityTile1": "شما 23 امتیاز کسب کردید",
-     "activityTile2": "23 دلار اعتبار برای استفاده از 5 اندازه لات اعطا می شود"
- }
-},
-"manageAccounts" : {
- "manageAccountsWidget":{
-   "manageAccountBottomSheet":{
-     "doYouReallyWant": "آیا واقعاً می خواهید حساب کاربری را حذف کنید؟",
-     "figure": "23299752",
-     "fxLimited": "FXPro محدود است",
-     "twelveUsd": "12 000 000 USD",
-     "demo_account": "حساب آزمایشی"
-   },
-   "manageAccountAppBar":{
-     "doYouReallyWant": "آیا واقعاً می خواهید حساب کاربری را حذف کنید؟",
-     "accessPointHedge": "نقطه دسترسی EU 3 1:100، پرچین"
-   }
- },
- "existingAccountsForm":{
-     "currentPassword": "رمز عبور فعلی",
-     "enterCurrentPassword": "رمز عبور فعلی را وارد کنید",
-     "newPassword": "رمز عبور جدید",
-     "enterNewPassword": "رمز عبور جدید را وارد کنید",
-     "reEnterPassword": "رمز عبور را دوباره وارد کنید",
-     "reEnterNewPassword": "رمز عبور جدید را دوباره وارد کنید"
- }
-},
-"notification" : {
-"noNotifications":"هنوز اطلاعیه ای وجود ندارد",
-"markAllAsRead":"همه را به عنوان خوانده شده علامت بزن",
-"clearAll":"همه را پاک کن"
-},
-"paymentMethod" : {
-"addPaymentMethodSuccess" : {
-"paymentMethodAddSuccess": "روش پرداخت با موفقیت اضافه شد",
-"nowYouCanMake": "اکنون می توانید از طریق آن برداشت انجام دهید",
-"usingInformation": "با استفاده از اطلاعاتی که ارائه کردید"
-},
-"addPaymentMethodTile" : {
- "figure":"10-200,000 USD"
-},
-"binancePayWidgetP" : {
- "enterWalletInformation":"اطلاعات کیف پول را وارد کنید"
-},
-"bitcoinWidgetP" : {
- "enterBitcoinWallet":"آدرس کیف پول بیت کوین را وارد کنید"
-},
-"emptyPaymentWidgetP" : {
- "noPaymentMethod":"روش پرداخت اضافه نشده است",
- "addPayMethod":"افزودن روش پرداخت"
-},
-"onlineBankWidgetP" : {
- "bankName":"نام بانک",
- "enterBankName":"نام بانک را وارد کنید",
- "accountOpening":"شعبه افتتاح حساب (اختیاری)",
- "enterBranchInformation":"اطلاعات شعبه بانک را وارد کنید"
-},
-"paymentMethodWidgetP" : {
- "manageYourCash":"روش های پرداخت نقدی خود را مدیریت کنید"
-},
-"qrCodeP" : {
- "pointCamera":"دوربین را به سمت کد QR بگیرید",
- "enterBinancePay":"یا به جای آن شناسه BinancePay را وارد کنید"
-},
-"tetherWidgetP" : {
- "enterTetherUSd":"آدرس کیف پول TetherUSD را وارد کنید"
-}
-
-},
+  },
+  "fundAccountWidget": {
+    "binancePayWidget": {
+      "binancePayId": "شناسه پرداخت بایننس"
+    },
+    "bitcoinWidget": {
+      "makeSureToFund": "اطمینان حاصل کنید که با استفاده از شبکه انتخابی سرمایه گذاری کنید، در غیر این صورت، دارایی شما از بین خواهد رفت."
+    },
+    "blockBeeWidget": {
+      "blockBeePayId": "BlockBee شناسه "
+    },
+    "onlineBankWidget": {
+      "selectBank": "بانک را انتخاب کنید",
+      "chooseAvailableBank": "بانک موجود را انتخاب کنید",
+      "accountNumber": "شماره حساب",
+      "accountName": "شماره حساب"
+    },
+    "perfectMoneyWidget": {
+      "noteThat": "توجه داشته باشید که ممکن است تا 24 ساعت طول بکشد تا سپرده شما در داشبورد شما منعکس شود"
+    },
+    "selectDepositMethodWidget": {
+      "tenUsd": "10-200،00 دلار"
+    },
+    "successWidget": {
+      "yourTransaction": "تراکنش شما در حال پردازش است",
+      "financialRegulation": "مقررات مالی ما را ملزم به تایید هویت شما می کند. این به جلوگیری از ایجاد یک حساب MT5 به نام شما توسط شخص دیگری کمک می کند.",
+      "youCan": "شما می توانید از این مرحله صرف نظر کنید اما نمی توانید وجوه خود را برداشت کنید."
+    },
+    "tetherWidget": {
+      "makeSureToChoose": "اطمینان حاصل کنید که با استفاده از شبکه انتخابی سرمایه گذاری کنید، در غیر این صورت، دارایی شما از بین خواهد رفت."
+    }
+  },
+  "helpAndSupport": {
+    "components": {
+      "logoutDialog": {
+        "wantToLogout": "آیا می خواهید از حساب خود خارج شوید؟"
+      },
+      "messageBottomSheet": {
+        "writeYourMessage": "پیام خود را بنویسید"
+      },
+      "suggestionsBar": {
+        "suggestion": "پیشنهادات"
+      }
+    },
+    "emptyIcon": {
+      "noMessage": "هنوز پیامی وجود ندارد"
+    },
+    "faqWidget": {
+      "ourFaq": "سوالات متداول ما،"
+    },
+    "helpAndSupportWidget": {
+      "chatWithCustomer": "با مراقبت از مشتری چت کنید",
+      "frequentlyAskedQ": "سوالات متداول",
+      "sendUsAMessage": "برای ما پیام ارسال کنید"
+    }
+  },
+  "home": {
+    "higherSuccessRates": {
+      "profit_goddess": "الهه سود",
+      "copiers": "دستگاه های کپی",
+      "riskScore": "امتیاز ریسک: ",
+      "mediumCap": "متوسط",
+      "successRate": "میزان موفقیت"
+    },
+    "marketNewsWidget": {
+      "hoursAgo": "18 ساعت پیش",
+      "usdCoin": "سکه دلار",
+      "maimiCryptoAsp": "آرزوهای رمزنگاری میامی توسط صندوق 25 میلیون دلاری Lorem Ipsum Borderless Capital تقویت شده است."
+    },
+    "priceSentiments": {
+      "buySixty": "65% خرید",
+      "sellThirty": "35 درصد فروش"
+    }
+  },
+  "internalTransfer": {
+    "amountWidget": {
+      "enterAmountToTransfer": "مبلغ انتقال را وارد کنید",
+      "sendingAccountPassword": "ارسال رمز اکانت",
+      "enterAccountPassword": "رمز عبور حساب را وارد کنید"
+    },
+    "successWidget": {
+      "transferSuccessful": "انتقال با موفقیت انجام شد",
+      "fiveHunUSD": "500 دلار با موفقیت از Deriv به FXPro منتقل شد",
+      "enterAccountPassword": "رمز عبور حساب را وارد کنید"
+    }
+  },
+  "loyaltyReward": {
+    "loyaltyRewardText": "جوایز وفاداری",
+    "cardWidget": {
+      "totalPointsBalance": "موجودی کل امتیازات",
+      "fiveThousandPoints": "5000 امتیاز",
+      "youAreAtThePeak": "شما در اوج هستید!"
+    },
+    "recentActivityWidget": {
+      "activityTile1": "شما 23 امتیاز کسب کردید",
+      "activityTile2": "23 دلار اعتبار برای استفاده از 5 اندازه لات اعطا می شود"
+    }
+  },
+  "manageAccounts": {
+    "manageAccountsWidget": {
+      "manageAccountBottomSheet": {
+        "doYouReallyWant": "آیا واقعاً می خواهید حساب کاربری را حذف کنید؟",
+        "figure": "23299752",
+        "fxLimited": "FXPro محدود است",
+        "twelveUsd": "12 000 000 USD",
+        "demo_account": "حساب آزمایشی"
+      },
+      "manageAccountAppBar": {
+        "doYouReallyWant": "آیا واقعاً می خواهید حساب کاربری را حذف کنید؟",
+        "accessPointHedge": "نقطه دسترسی EU 3 1:100، پرچین"
+      }
+    },
+    "existingAccountsForm": {
+      "currentPassword": "رمز عبور فعلی",
+      "enterCurrentPassword": "رمز عبور فعلی را وارد کنید",
+      "newPassword": "رمز عبور جدید",
+      "enterNewPassword": "رمز عبور جدید را وارد کنید",
+      "reEnterPassword": "رمز عبور را دوباره وارد کنید",
+      "reEnterNewPassword": "رمز عبور جدید را دوباره وارد کنید"
+    }
+  },
+  "notification": {
+    "noNotifications": "هنوز اطلاعیه ای وجود ندارد",
+    "markAllAsRead": "همه را به عنوان خوانده شده علامت بزن",
+    "clearAll": "همه را پاک کن",
+    "notificationText": "اطلاعیه",
+    "depositSuccessful": "سپرده موفقیت آمیز",
+    "loginFromNewIP": "از IP جدید وارد شوید",
+    "withdrawalSuccessful": "برداشت با موفقیت انجام شد"
+  },
+  "paymentMethod": {
+    "addPaymentMethodSuccess": {
+      "paymentMethodAddSuccess": "روش پرداخت با موفقیت اضافه شد",
+      "nowYouCanMake": "اکنون می توانید از طریق آن برداشت انجام دهید",
+      "usingInformation": "با استفاده از اطلاعاتی که ارائه کردید"
+    },
+    "addPaymentMethodTile": {
+      "figure": "10-200,000 USD"
+    },
+    "binancePayWidgetP": {
+      "enterWalletInformation": "اطلاعات کیف پول را وارد کنید"
+    },
+    "bitcoinWidgetP": {
+      "enterBitcoinWallet": "آدرس کیف پول بیت کوین را وارد کنید"
+    },
+    "emptyPaymentWidgetP": {
+      "noPaymentMethod": "روش پرداخت اضافه نشده است",
+      "addPayMethod": "افزودن روش پرداخت"
+    },
+    "onlineBankWidgetP": {
+      "bankName": "نام بانک",
+      "enterBankName": "نام بانک را وارد کنید",
+      "accountOpening": "شعبه افتتاح حساب (اختیاری)",
+      "enterBranchInformation": "اطلاعات شعبه بانک را وارد کنید"
+    },
+    "paymentMethodWidgetP": {
+      "manageYourCash": "روش های پرداخت نقدی خود را مدیریت کنید"
+    },
+    "qrCodeP": {
+      "pointCamera": "دوربین را به سمت کد QR بگیرید",
+      "enterBinancePay": "یا به جای آن شناسه BinancePay را وارد کنید"
+    },
+    "tetherWidgetP": {
+      "enterTetherUSd": "آدرس کیف پول TetherUSD را وارد کنید"
+    }
+  },
   "priceSentimentWidget": {
     "details": {
-        "clientSentiment": "نظر مشتریان:",
-        "tradingActivity": "فعالیت معاملاتی",
-        "priceRange": "محدوده قیمت",
-        "priceVolatility": "تغییرات قیمت",
-        "priceMovement": "حرکت قیمت"
-      },
-      "searchResults": "نتایج جستجو:"
+      "clientSentiment": "نظر مشتریان:",
+      "tradingActivity": "فعالیت معاملاتی",
+      "priceRange": "محدوده قیمت",
+      "priceVolatility": "تغییرات قیمت",
+      "priceMovement": "حرکت قیمت"
+    },
+    "searchResults": "نتایج جستجو:"
   },
   "profile": {
-    "verificationBar":{
+    "verificationBar": {
       "verifyYourAccount": "حساب کاربری خود را تأیید کنید",
       "toMakeFirstD": "برای انجام اولین واریز خود، ما می‌خواهی شما را بهتر بشناسیم. برای شروع، روی 'ادامه' کلیک کنید."
     },
@@ -913,15 +910,14 @@
       "updatePhoneNumber": {
         "updatePhoneNumberText": "به‌روزرسانی شماره تلفن"
       }
-
     },
     "providerConfirmation": {
-    "yourRequestHas": "درخواست شما با موفقیت ارسال شد",
-    "youWillReceive": "شما در مدت 3-4 روز کاری بعد از تأیید موفقیت‌آمیز، پاسخی از طریق ایمیل دریافت خواهید کرد."
+      "yourRequestHas": "درخواست شما با موفقیت ارسال شد",
+      "youWillReceive": "شما در مدت 3-4 روز کاری بعد از تأیید موفقیت‌آمیز، پاسخی از طریق ایمیل دریافت خواهید کرد."
     },
     "providerFollowers": {
-    "followedRecently": "آخرین دنبال‌کنندگان",
-    "startedFollowing": "شروع دنبال‌کردن: {}s"
+      "followedRecently": "آخرین دنبال‌کنندگان",
+      "startedFollowing": "شروع دنبال‌کردن: {}s"
     },
     "providerLogin": {
       "enterYourAccount": "شماره حساب خود را وارد کنید",
@@ -956,11 +952,11 @@
       "startGenerating": "شروع تولید درآمد\nبرای دنبال‌کنندگان خود",
       "becomeAProvider": "به عنوان یک ارائه‌دهنده در پلتفرم ما ثبت‌نام کنید، مهارت‌های معامله خود را به نمایش بگذارید و درآمد از دنبال‌کنندگان خود کسب کنید",
       "loginInstead": "ورود به جای آن"
-    } 
+    }
   },
   "quotesWidget": {
     "components": {
-      "genericTradeBody":{
+      "genericTradeBody": {
         "lotSize": "سایز لات",
         "stopLoss": "توقف زیان",
         "takeProfit": "دریافت سود",
@@ -988,13 +984,13 @@
       "tradeAppBar": {
         "marketExec": "اجرای بازار"
       }
-    }, 
+    },
 
     "modernViewWidget": {
-       "topMovers": "بالاترین تغییر دهندگان"
+      "topMovers": "بالاترین تغییر دهندگان"
     }
   },
-  "referralWidget":{
+  "referralWidget": {
     "referNowAndEarn": "هم‌اکنون معرفی کنید و{}10 اعتبار در معامله بعدی‌تان کسب کنید",
     "referralCode": "کد معرفی",
     "howDoesItWork": "چگونه کار می‌کند",
@@ -1005,104 +1001,104 @@
     "referNow": "هم‌اکنون معرفی کنید"
   },
   "securityWidget": {
-    "securityComponents":{
-          "addPassKeyModel" : {
-            "appPasskey": "افزودن پس‌کی",
-            "noNeedToRemember": "نیازی به یادآوری یک رمز عبور نیست",
-            "withPasskey": "با استفاده از پس‌کی‌ها، می‌توانید از امکاناتی مانند اثر انگشت یا تشخیص چهره برای ورود به حساب خود استفاده کنید",
-            "worksOnAll": "بر روی تمام دستگاه‌های شما کار می‌کند",
-            "passkeysWill": "پس‌کی‌ها به طور خودکار در تمام دستگاه‌های همگام‌سازی شده شما قابل دسترسی خواهند بود",
-            "keepYourAccountSafe": "حساب خود را ایمن نگه دارید",
-            "passkeysOffer": "پس‌کی‌ها مقاومت برجسته در برابر نفوذهای مالیاتی ارائه می‌دهند"
-          },
-          "changePasswordModel": {
-            "inOrderToProtect": "برای حفاظت از حساب خود، بعد از تغییر رمز عبور، عملیات برداشت به مدت 24 ساعت غیرفعال خواهد شد"
-          },
-          "deletePopUP": {
-            "doYouReallyWantToDelete": "آیا واقعاً می‌خواهید این {} را حذف کنید؟"
-          },
-          "emptyPasskey": {
-            "passkeyAddedYet": "هنوز پس‌کی افزوده نشده است"
-          },
-          "passkeyTile": {
-            "added12": "افزوده شده: 12 ژوئیه 2023",
-            "lastUsed": "آخرین استفاده: 2 روز پیش"
+    "securityComponents": {
+      "addPassKeyModel": {
+        "appPasskey": "افزودن پس‌کی",
+        "noNeedToRemember": "نیازی به یادآوری یک رمز عبور نیست",
+        "withPasskey": "با استفاده از پس‌کی‌ها، می‌توانید از امکاناتی مانند اثر انگشت یا تشخیص چهره برای ورود به حساب خود استفاده کنید",
+        "worksOnAll": "بر روی تمام دستگاه‌های شما کار می‌کند",
+        "passkeysWill": "پس‌کی‌ها به طور خودکار در تمام دستگاه‌های همگام‌سازی شده شما قابل دسترسی خواهند بود",
+        "keepYourAccountSafe": "حساب خود را ایمن نگه دارید",
+        "passkeysOffer": "پس‌کی‌ها مقاومت برجسته در برابر نفوذهای مالیاتی ارائه می‌دهند"
+      },
+      "changePasswordModel": {
+        "inOrderToProtect": "برای حفاظت از حساب خود، بعد از تغییر رمز عبور، عملیات برداشت به مدت 24 ساعت غیرفعال خواهد شد"
+      },
+      "deletePopUP": {
+        "doYouReallyWantToDelete": "آیا واقعاً می‌خواهید این {} را حذف کنید؟"
+      },
+      "emptyPasskey": {
+        "passkeyAddedYet": "هنوز پس‌کی افزوده نشده است"
+      },
+      "passkeyTile": {
+        "added12": "افزوده شده: 12 ژوئیه 2023",
+        "lastUsed": "آخرین استفاده: 2 روز پیش"
       }
     },
     "addPasskeyEnter": {
-        "enterAUnique": "یک پس‌کی 4-رقمی منحصر به فرد وارد کنید",
-        "yourPasskeyWillBe": "پس‌کی شما برای تأیید برداشت‌های شما استفاده می‌شود. لطفاً آن را با دیگران به اشتراک نگذارید.",
-        "enter4digitsPasskey": "یک پس‌کی 4-رقمی وارد کنید",
-        "enterYourPassword": "رمز عبور خود را وارد کنید"
-      },
-      "addPasskey": {
-        "securityVerification": "موردنیازی‌های تأیید امنیتی",
-        "youNeedToCompleteAll": "شما باید همه موارد زیر را برای ادامه تکمیل کنید"
-      },
-      "autoLockWidget": {
-        "usingPattern": "استفاده از الگو برای قفل کردن اپلیکیشن",
-        "usingYourFace": "استفاده از تشخیص چهره برای قفل کردن اپلیکیشن",
-        "faceUnlock": "قفل چهره"
+      "enterAUnique": "یک پس‌کی 4-رقمی منحصر به فرد وارد کنید",
+      "yourPasskeyWillBe": "پس‌کی شما برای تأیید برداشت‌های شما استفاده می‌شود. لطفاً آن را با دیگران به اشتراک نگذارید.",
+      "enter4digitsPasskey": "یک پس‌کی 4-رقمی وارد کنید",
+      "enterYourPassword": "رمز عبور خود را وارد کنید"
+    },
+    "addPasskey": {
+      "securityVerification": "موردنیازی‌های تأیید امنیتی",
+      "youNeedToCompleteAll": "شما باید همه موارد زیر را برای ادامه تکمیل کنید"
+    },
+    "autoLockWidget": {
+      "usingPattern": "استفاده از الگو برای قفل کردن اپلیکیشن",
+      "usingYourFace": "استفاده از تشخیص چهره برای قفل کردن اپلیکیشن",
+      "faceUnlock": "قفل چهره"
     },
 
-   "emailVerify": {
-    "passKeyAdded": "پس‌کی با موفقیت اضافه شد"
-  },
-  "passkeyAddedSuccess": {
-    "passkeyAddedSuccessfully": "پس‌کی با موفقیت اضافه شد",
-    "yourPasskeyIs": "پس‌کی شما:",
-    "pleaseKeepThisPasskey": " لطفاً این پس‌کی را ایمن نگه دارید تا فراموش نشود"
-  },
-  "passwordChangedSuccess": {
-    "passwordChangedSuccessText": "رمز عبور با موفقیت تغییر کرد",
-    "itWillTake24": "پیشنهاد می‌شود که 24 ساعت صبر کنید تا بتوانید برداشت انجام دهید"
-  },
-  "phoneVerifiedSuccess": {
-    "phoneVerifiedSuccessFully": "شماره تلفن با موفقیت تأیید شد",
-    "yourPhoneNumber": "شماره تلفن شما: "
-  },
-  "phoneVerify": {
-    "weSentVerificationCode": "ما یک کد تأیید به ",
-    "enter6Digits": "وارد کردن کد تأیید 6-رقمی"
-  },
-  "securityMain": {
-    "twoFactorAuthentication": "تأیید دو مرحله‌ای",
-    "toProtectYourAccount": "برای حفاظت از حساب خود، حداقل یک تأیید دو مرحله‌ای را روشن کنید",
-    "autoLockText": "قفل خودکار",
-    "disableAccount": "غیرفعال کردن حساب",
-    "doYouReallyWantToDisable": "آیا واقعاً می‌خواهید حساب را غیرفعال کنید؟"
+    "emailVerify": {
+      "passKeyAdded": "پس‌کی با موفقیت اضافه شد"
+    },
+    "passkeyAddedSuccess": {
+      "passkeyAddedSuccessfully": "پس‌کی با موفقیت اضافه شد",
+      "yourPasskeyIs": "پس‌کی شما:",
+      "pleaseKeepThisPasskey": " لطفاً این پس‌کی را ایمن نگه دارید تا فراموش نشود"
+    },
+    "passwordChangedSuccess": {
+      "passwordChangedSuccessText": "رمز عبور با موفقیت تغییر کرد",
+      "itWillTake24": "پیشنهاد می‌شود که 24 ساعت صبر کنید تا بتوانید برداشت انجام دهید"
+    },
+    "phoneVerifiedSuccess": {
+      "phoneVerifiedSuccessFully": "شماره تلفن با موفقیت تأیید شد",
+      "yourPhoneNumber": "شماره تلفن شما: "
+    },
+    "phoneVerify": {
+      "weSentVerificationCode": "ما یک کد تأیید به ",
+      "enter6Digits": "وارد کردن کد تأیید 6-رقمی"
+    },
+    "securityMain": {
+      "twoFactorAuthentication": "تأیید دو مرحله‌ای",
+      "toProtectYourAccount": "برای حفاظت از حساب خود، حداقل یک تأیید دو مرحله‌ای را روشن کنید",
+      "autoLockText": "قفل خودکار",
+      "disableAccount": "غیرفعال کردن حساب",
+      "doYouReallyWantToDisable": "آیا واقعاً می‌خواهید حساب را غیرفعال کنید؟"
     }
-
   },
-  "settings":{
-      "aboutUs": {
-        "serviceAgreement": "توافق نامه خدمات",
-        "likeUsOnFacebook": "ما را در فیس‌بوک دنبال کنید",
-        "followUsOnTwitter": "ما را در توییتر دنبال کنید",
-        "joinUsOnTelegram": "به ما در تلگرام بپیوندید",
-        "checkForUpdate": "بررسی برای به‌روزرسانی"
-      },
- "colorPreferenceWidget": {
-    "blueBuyRedSell": "آبی-خرید/قرمز-فروش",
-    "blueSellRedBuy": "«آبی-فروش/قرمز-خرید"
-  },
-      "changeBasis": {
-        "whenYouSwitch": "زمانی که به منطقه زمانی جدید UTC تغییر دهید، تغییر (%) برای بازارها و معاملات بر اساس منطقه زمانی جدید محاسبه خواهد شد."
-      },
-      "settingsPage": {
-        "pushNotification": "اعلان‌های پوش",
-        "useDeviceTheme": "استفاده از تم دستگاه",
-        "darkMode": "حالت تاریک",
-        "changeBasisText": "تغییر مبنا",
-        "currentVersion": "نسخه فعلی"
-      },
-      "updateRelease": {
-        "updateReleaseText": "آپدیت منتشر شده",
-        "thisUpdate": "این آپدیت"
+  "settings": {
+    "settingsText": "تنظیمات",
+    "aboutUs": {
+      "serviceAgreement": "توافق نامه خدمات",
+      "likeUsOnFacebook": "ما را در فیس‌بوک دنبال کنید",
+      "followUsOnTwitter": "ما را در توییتر دنبال کنید",
+      "joinUsOnTelegram": "به ما در تلگرام بپیوندید",
+      "checkForUpdate": "بررسی برای به‌روزرسانی"
+    },
+    "colorPreferenceWidget": {
+      "blueBuyRedSell": "آبی-خرید/قرمز-فروش",
+      "blueSellRedBuy": "«آبی-فروش/قرمز-خرید"
+    },
+    "changeBasis": {
+      "whenYouSwitch": "زمانی که به منطقه زمانی جدید UTC تغییر دهید، تغییر (%) برای بازارها و معاملات بر اساس منطقه زمانی جدید محاسبه خواهد شد."
+    },
+    "settingsPage": {
+      "pushNotification": "اعلان‌های پوش",
+      "useDeviceTheme": "استفاده از تم دستگاه",
+      "darkMode": "حالت تاریک",
+      "changeBasisText": "تغییر مبنا",
+      "currentVersion": "نسخه فعلی"
+    },
+    "updateRelease": {
+      "updateReleaseText": "آپدیت منتشر شده",
+      "thisUpdate": "این آپدیت"
     }
   },
   "socialTradingWidget": {
-      "socialTradingComponent": {
+    "socialTradingComponent": {
       "cancelSub": {
         "cancelCoping": "لغو کپی کردن؟",
         "onceYouCancel": "هنگامی که اشتراک خود را لغو می‌کنید، معاملات باز شما با معامله‌گر اصلی به طور خودکار پایان خواهد یافت."
@@ -1128,40 +1124,40 @@
         "riskScoreSummary": "امتیاز ریسک"
       }
     },
-      "socialTradeAppBar": {
-        "masterTraders": "معامله‌گران اصلی",
-        "myTrade": "معاملات من"
-      },
-      "copiedTraderSuccess": {
-        "masterTradeCopiedS": "معامله‌گر اصلی با موفقیت کپی شد"
-      },
-      "copiedTraderTerminated": {
-        "subscriptionTerminated": "اشتراک با موفقیت لغو شد"
-      },
-      "masterTrader": {
-        "popularTraders": "معامله‌گران محبوب",
-        "higherSuccessRatesText": "نرخ موفقیت بالا"
-      },
-      "menuMain": {
-        "aboutMT5": "درباره MT 5 کپی تریدینگ"
-      },
+    "socialTradeAppBar": {
+      "masterTraders": "معامله‌گران اصلی",
+      "myTrade": "معاملات من"
+    },
+    "copiedTraderSuccess": {
+      "masterTradeCopiedS": "معامله‌گر اصلی با موفقیت کپی شد"
+    },
+    "copiedTraderTerminated": {
+      "subscriptionTerminated": "اشتراک با موفقیت لغو شد"
+    },
+    "masterTrader": {
+      "popularTraders": "معامله‌گران محبوب",
+      "higherSuccessRatesText": "نرخ موفقیت بالا"
+    },
+    "menuMain": {
+      "aboutMT5": "درباره MT 5 کپی تریدینگ"
+    },
     "myTrades": {
-        "copiedTraders": "معامله‌گران کپی شده",
-        "youAreNotCopying": "هنوز از هیچ معامله‌گر اصلی کپی نمی‌کنید",
-        "startCopying": "شروع کپی"
-      },
-      "overViewWidget": {
-        "setupCopying": "تنظیم کپی کردن",
-        "totalCopiers": "تعداد کپی کنندگان کل:",
-        "successRateOverview": "نرخ موفقیت:",
-        "accountDetails": "جزئیات حساب",
-        "floatingProfit": "سود معلق",
-        "masterTraderBonus": "پاداش معامله‌گر اصلی",
-        "riskManagement": "مدیریت ریسک",
-        "maxUnrealizedLoss": "بیشترین زیان عدم تحقق یافته",
-        "maxDrawDownDuration": "مدت زمان بیشترین کاهش قیمت",
-        "priceMovement": "حرکت قیمت",
-        "helloEveryOne": "سلام به همه، 👉 این حساب برای همه سرمایه گذاران، تازه کارها و حرفه ای ها کاملا امن است. تمام تلاشم را می کنم که 25 تا 50 درصد سود هفتگی داشته باشم 💪. اولویت اول ما حفظ امنیت سرمایه شماست. \n\nمعامله مبارک ✨"
+      "copiedTraders": "معامله‌گران کپی شده",
+      "youAreNotCopying": "هنوز از هیچ معامله‌گر اصلی کپی نمی‌کنید",
+      "startCopying": "شروع کپی"
+    },
+    "overViewWidget": {
+      "setupCopying": "تنظیم کپی کردن",
+      "totalCopiers": "تعداد کپی کنندگان کل:",
+      "successRateOverview": "نرخ موفقیت:",
+      "accountDetails": "جزئیات حساب",
+      "floatingProfit": "سود معلق",
+      "masterTraderBonus": "پاداش معامله‌گر اصلی",
+      "riskManagement": "مدیریت ریسک",
+      "maxUnrealizedLoss": "بیشترین زیان عدم تحقق یافته",
+      "maxDrawDownDuration": "مدت زمان بیشترین کاهش قیمت",
+      "priceMovement": "حرکت قیمت",
+      "helloEveryOne": "سلام به همه، 👉 این حساب برای همه سرمایه گذاران، تازه کارها و حرفه ای ها کاملا امن است. تمام تلاشم را می کنم که 25 تا 50 درصد سود هفتگی داشته باشم 💪. اولویت اول ما حفظ امنیت سرمایه شماست. \n\nمعامله مبارک ✨"
     },
     "subscriptionGuideWidget": {
       "learnAbout": "آموزش راجع به راه‌اندازی اشتراک",
@@ -1201,16 +1197,16 @@
       "theMarketWill": "معامله به شرایط بازار اجرا می‌شود. تفاوت با قیمت درخواستی ممکن است قابل توجه باشد"
     }
   },
-  "tradeHistoryWidget":{
-    "TradeComponents":{
-        "filterModal" :{
+  "tradeHistoryWidget": {
+    "TradeComponents": {
+      "filterModal": {
         "lastMonth": "ماه گذشته",
         "last3Month": "3 ماه گذشته"
-        }
+      }
     }
   },
-  "transactionWidget":{
-    "TransactionComponents":{
+  "transactionWidget": {
+    "TransactionComponents": {
       "filledPop": {
         "searchTerm": "متن جستجو",
         "enterYourSearchTerm": "متن جستجوی خود را وارد کنید"
@@ -1219,7 +1215,7 @@
   },
   "verificationWidget": {
     "emailVerification": {
-        "verifyYourEmail": "تایید ایمیل خود را انجام دهید"
+      "verifyYourEmail": "تایید ایمیل خود را انجام دهید"
     },
     "emailVerifiedSuccessfully": {
       "nextVerify": "مرحله بعد: تایید هویت"
@@ -1247,14 +1243,14 @@
     }
   },
   "withdrawFunds": {
-    "paymentInformationWidget":{
+    "paymentInformationWidget": {
       "accountNumberW": "شماره حساب:",
       "124Hours": "1-24 ساعت"
     },
-    "paymentMethodWidget":{
+    "paymentMethodWidget": {
       "selectPreferred": "روش پرداخت دلخواه خود را انتخاب کنید"
     },
-    "withdrawSuccessWidget":{
+    "withdrawSuccessWidget": {
       "yourTransactionIsBeing": "تراکنش شما در حال پردازش است",
       "youCanSkip": "شما می‌توانید این مرحله را رد کنید، اما نخواهید توانست وجه خود را برداشت کنید."
     }

@@ -49,7 +49,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                     ProfileIconButton(
                       icon: AssetManager.referralsIcon,
-                      title: LocaleKeys.logOut.tr(),
+                      title: LocaleKeys.referrals.tr(),
                       onTap: () {
                         model.push(const ReferralRoute());
                       },
@@ -71,14 +71,14 @@ class ProfilePage extends StatelessWidget {
                   children: [
                     ProfileIconButton(
                       icon: AssetManager.loyaltyRewards,
-                      title: LocaleKeys.loyaltyReward.tr(),
+                      title: LocaleKeys.loyaltyReward_loyaltyRewardText.tr(),
                       onTap: () {
                         model.push(const LoyaltyRewardsRoute());
                       },
                     ),
                     ProfileIconButton(
                       icon: AssetManager.notificationsIcon,
-                      title: LocaleKeys.notification.tr(),
+                      title: LocaleKeys.notification_notificationText.tr(),
                       onTap: () {
                         model.push(const NotificationRoute());
                       },
@@ -104,7 +104,8 @@ class ProfilePage extends StatelessWidget {
                   },
                 ),
                 ProfileTiles(
-                  title: LocaleKeys.paymentMethod.tr(),
+                  title:
+                      LocaleKeys.views_paymentMethodPageView_paymentMethod.tr(),
                   subTitle:
                       LocaleKeys.profile_profileWidget_updatePaymentM.tr(),
                   leadingIcon: AssetManager.paymentMethod,
@@ -114,7 +115,8 @@ class ProfilePage extends StatelessWidget {
                   },
                 ),
                 ProfileTiles(
-                  title: LocaleKeys.helpAndSupport.tr(),
+                  title:
+                      LocaleKeys.views_helpAndSupportView_helpAndSupport.tr(),
                   subTitle:
                       LocaleKeys.profile_profileWidget_fileAComplaint.tr(),
                   leadingIcon: AssetManager.withdrawal,

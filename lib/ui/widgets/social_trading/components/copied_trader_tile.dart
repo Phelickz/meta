@@ -65,14 +65,11 @@ class CopiedTraderTile extends StatelessWidget {
                 SizedBox(
                   height: McGyver.rsDoubleW(context, 4),
                   width: McGyver.rsDoubleW(context, 4),
-                  child: SvgPicture.asset(
-                    "assets/images/arrow_right.svg",
-                    colorFilter: ColorFilter.mode(
-                      isDarkMode
-                          ? const Color(0xff98A2B3)
-                          : const Color(0xFF667085),
-                      BlendMode.srcIn,
-                    ),
+                  child: Icon(
+                    Icons.arrow_forward_ios,
+                    color: isDarkMode
+                        ? const Color(0xff98A2B3)
+                        : const Color(0xFF667085),
                   ),
                 ),
               ],

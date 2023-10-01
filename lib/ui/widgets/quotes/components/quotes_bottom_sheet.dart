@@ -61,7 +61,7 @@ class QuotesBottomSheet extends StatelessWidget {
               },
             ),
             QuotesBottomSheetTile(
-              label: LocaleKeys.chart.tr(),
+              label: LocaleKeys.views_bottomNav_chart.tr(),
               onPressed: () {
                 Navigator.push(
                   context,

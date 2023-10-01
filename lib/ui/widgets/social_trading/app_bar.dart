@@ -189,7 +189,8 @@ AppBar socialTradingDashboardAppBar(
                       )
                     : null,
                 child: Text(
-                  LocaleKeys.socialTradingWidget_masterTrader,
+                  LocaleKeys.socialTradingWidget_socialTradeAppBar_masterTraders
+                      .tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w500,
@@ -198,7 +199,7 @@ AppBar socialTradingDashboardAppBar(
                         ? const Color(0xFF101828)
                         : Colors.white,
                   ),
-                ).tr(),
+                ),
               ),
             ),
             const SizedBox(width: 5),
@@ -217,7 +218,7 @@ AppBar socialTradingDashboardAppBar(
                       )
                     : null,
                 child: Text(
-                  LocaleKeys.socialTradingWidget_myTrades,
+                  LocaleKeys.socialTradingWidget_socialTradeAppBar_myTrade.tr(),
                   style: CustomThemeData.generateStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w500,

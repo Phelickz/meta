@@ -154,7 +154,7 @@ class PriceSentimentViewModel extends CustomBaseViewModel {
                       setPrcieTypeEnum = PriceTypeEnum.sentiments;
                     },
                     child: Text(
-                      LocaleKeys.sentiments,
+                      LocaleKeys.sentiments.tr(),
                       style: CustomThemeData.generateStyle(
                         fontSize: 13,
                         color: Colors.white,

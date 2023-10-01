@@ -32,6 +32,7 @@ class AddPasskeyPage extends StatelessWidget {
                     : const Color(0xFF344054),
               ),
             ).tr(),
+            verticalSpaceXXSmall(context),
             Text(
               LocaleKeys.securityWidget_addPasskey_youNeedToCompleteAll,
               style: CustomThemeData.generateStyle(
@@ -49,13 +50,15 @@ class AddPasskeyPage extends StatelessWidget {
           assetName: "assets/images/message_text.svg",
           vm: model,
           hasLeadingIcon: true,
-          label: LocaleKeys.verificationWidget_emailVerification.tr(),
+          label: LocaleKeys.verificationWidget_emailVerification_verifyYourEmail
+              .tr(),
           status: SecurityOptionStatus.unconfirmed,
           hasStatus: true,
           // onTap: () => model.securityPageEnum = SecurityPageEnum.emailVerify,
           onTap: () =>
               model.securityPageEnum = SecurityPageEnum.addPasskeyEnter,
         ),
+        verticalSpaceXSmall(context),
         SecurityOptionTile(
           assetName: "assets/images/mobile.svg",
           vm: model,

@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
+import 'package:meta_trader/app/utils/constants.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 
 import '../../../../app/utils/theme.dart';
@@ -62,7 +63,7 @@ AppBar helpAndSupportAppBar(
     actions: [
       model.helpAndSupportPageEnum == HelpAndSupportPageEnum.faq
           ? Padding(
-              padding: EdgeInsets.only(right: 24.pWidth(context)),
+              padding: Constants.getPadding(context, 24.pWidth(context)),
               child: InkWell(
                 onTap: () {},
                 child: SvgPicture.asset(

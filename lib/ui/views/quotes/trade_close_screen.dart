@@ -20,7 +20,8 @@ class TradeCloseScreen extends StackedView<QuotesViewModel> {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Skeleton(
         isBusy: viewModel.isBusy,
-        appBar: tradeAppBars(context, false, "EURUSD", LocaleKeys.euroVsUs),
+        appBar:
+            tradeAppBars(context, false, "EURUSD", LocaleKeys.euroVsUs.tr()),
         bodyPadding: EdgeInsets.zero,
         body: SafeArea(
           child: SingleChildScrollView(

@@ -24,7 +24,7 @@ class ChartPage extends StatelessWidget {
         Column(
           children: [
             CustomHeadTab(
-              firstTabName: LocaleKeys.chart.tr(),
+              firstTabName: LocaleKeys.views_bottomNav_chart.tr(),
               secondTabName: LocaleKeys.overview.tr(),
               thirdTabName: LocaleKeys.specification.tr(),
               tabIndex: viewModel.tabSelectedNotifier.value,

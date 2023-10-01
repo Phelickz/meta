@@ -247,8 +247,8 @@ class SettingsViewModel extends CustomBaseViewModel {
   AppBar? returnAppBar(BuildContext context) {
     switch (_settingsPageEnum) {
       case SettingsPageEnum.settings:
-        return settingsAppBar(context, LocaleKeys.settings.tr(), '', this,
-            SettingsPageEnum.settings);
+        return settingsAppBar(context, LocaleKeys.settings_settingsText.tr(),
+            '', this, SettingsPageEnum.settings);
       case SettingsPageEnum.notificationSettings:
         return settingsAppBar(
             context,
@@ -270,8 +270,12 @@ class SettingsViewModel extends CustomBaseViewModel {
         return settingsAppBar(context, LocaleKeys.colorPreference.tr(), "",
             this, SettingsPageEnum.colorPreference);
       case SettingsPageEnum.changeBasis:
-        return settingsAppBar(context, LocaleKeys.settings_changeBasis.tr(), '',
-            this, SettingsPageEnum.changeBasis);
+        return settingsAppBar(
+            context,
+            LocaleKeys.views_settings_changeBasis.tr(),
+            '',
+            this,
+            SettingsPageEnum.changeBasis);
       case SettingsPageEnum.aboutUs:
         return settingsAppBar(context, LocaleKeys.aboutUs.tr(), '', this,
             SettingsPageEnum.aboutUs);

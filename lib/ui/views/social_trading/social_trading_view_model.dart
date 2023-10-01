@@ -415,7 +415,7 @@ class SocialTradingViewModel extends CustomBaseViewModel {
     TransactionModel(
       id: "1",
       type: TransactionsTypeEnum.deposit,
-      title: LocaleKeys.depositFromBinancePay,
+      title: LocaleKeys.depositFromBinancePay.tr(),
       amount: "55,000",
       status: TransactionStatusEnum.successful,
       date: "2.1.2023",

@@ -31,7 +31,7 @@ class SubscriptionSetupPage extends StatelessWidget {
       appBar: globalAppBar(
           context,
           LocaleKeys
-              .socialTradingWidget_subscriptionSetupWidget_supportFundsProtect
+              .socialTradingWidget_subscriptionSetupWidget_subscriptionSetup
               .tr(),
           '', () {
         Navigator.pop(context);
@@ -263,8 +263,8 @@ class SubscriptionSetupPage extends StatelessWidget {
                               viewModel.isCustomCopyProportionNotifier,
                           builder: (context, isCustom, child) => Text(
                             isCustom
-                                ? LocaleKeys.custom
-                                : LocaleKeys.defaultText,
+                                ? LocaleKeys.custom.tr()
+                                : LocaleKeys.defaultText.tr(),
                             style: CustomThemeData.generateStyle(
                               fontSize: McGyver.textSize(context, 1.5),
                               fontWeight: FontWeight.normal,
@@ -343,7 +343,8 @@ class SubscriptionSetupPage extends StatelessWidget {
                                               const SizedBox(height: 7),
                                               Text(
                                                 LocaleKeys
-                                                    .socialTradingWidget_subscriptionSetupWidget_argumentItemRequired,
+                                                    .socialTradingWidget_subscriptionSetupWidget_argumentItemRequired
+                                                    .tr(),
                                                 style: CustomThemeData
                                                     .generateStyle(
                                                   fontSize: McGyver.textSize(
@@ -362,7 +363,8 @@ class SubscriptionSetupPage extends StatelessWidget {
                                               const SizedBox(height: 3),
                                               Text(
                                                 LocaleKeys
-                                                    .socialTradingWidget_subscriptionSetupWidget_argumentTradeVolume,
+                                                    .socialTradingWidget_subscriptionSetupWidget_argumentTradeVolume
+                                                    .tr(),
                                                 style: CustomThemeData
                                                     .generateStyle(
                                                   fontSize: McGyver.textSize(
@@ -387,7 +389,8 @@ class SubscriptionSetupPage extends StatelessWidget {
                         : PlusMinusText(
                             value: "x4",
                             label: LocaleKeys
-                                .socialTradingWidget_subscriptionSetupWidget_enterValue,
+                                .socialTradingWidget_subscriptionSetupWidget_enterValue
+                                .tr(),
                             onPlus: () {},
                             onMinus: () {},
                             onTextChanged: (val) {},
@@ -422,7 +425,7 @@ class SubscriptionSetupPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          LocaleKeys.addSupportFunds,
+                          LocaleKeys.addSupportFunds.tr(),
                           style: CustomThemeData.generateStyle(
                             fontSize: McGyver.textSize(context, 1.8),
                             fontWeight: FontWeight.w500,
@@ -482,7 +485,8 @@ class SubscriptionSetupPage extends StatelessWidget {
                                   ),
                                   Text(
                                     LocaleKeys
-                                        .socialTradingWidget_subscriptionSetupWidget_55OfTheRequired,
+                                        .socialTradingWidget_subscriptionSetupWidget_55OfTheRequired
+                                        .tr(),
                                     textAlign: TextAlign.start,
                                     style: CustomThemeData.generateStyle(
                                       fontSize: McGyver.textSize(context, 1.3),
@@ -522,7 +526,8 @@ class SubscriptionSetupPage extends StatelessWidget {
                 Expanded(
                   child: Text(
                     LocaleKeys
-                        .socialTradingWidget_subscriptionSetupWidget_supportFundsProtect,
+                        .socialTradingWidget_subscriptionSetupWidget_supportFundsProtect
+                        .tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.4),
                       fontWeight: FontWeight.w500,
@@ -555,7 +560,7 @@ class SubscriptionSetupPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        LocaleKeys.summary,
+                        LocaleKeys.summary.tr(),
                         style: CustomThemeData.generateStyle(
                           fontSize: McGyver.textSize(context, 1.9),
                           fontWeight: FontWeight.bold,
@@ -583,7 +588,7 @@ class SubscriptionSetupPage extends StatelessWidget {
                           .tr(),
                       "\$26.00"),
                   verticalSpaceXSmall(context),
-                  _twotext(context, LocaleKeys.supportFunds, "\$0.00"),
+                  _twotext(context, LocaleKeys.supportFunds.tr(), "\$0.00"),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

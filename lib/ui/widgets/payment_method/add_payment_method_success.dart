@@ -44,7 +44,7 @@ class AddPaymentMethodSuccessPage extends StatelessWidget {
                 .paymentMethod_addPaymentMethodSuccess_paymentMethodAddSuccess,
             textAlign: TextAlign.center,
             style: CustomThemeData.generateStyle(
-              fontSize: McGyver.textSize(context, 3),
+              fontSize: McGyver.textSize(context, 2.6),
               fontWeight: FontWeight.w700,
               color: isDarkMode
                   ? const Color(0xFFF2F4F7)
@@ -67,8 +67,11 @@ class AddPaymentMethodSuccessPage extends StatelessWidget {
             ),
             children: [
               TextSpan(
-                text: viewModel
-                    .paymentMethodLabel(viewModel.selectedAddPaymentMethodEnum),
+                text: ' ' +
+                    viewModel.paymentMethodLabel(
+                      viewModel.selectedAddPaymentMethodEnum,
+                    ) +
+                    ' ',
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2),
                   fontWeight: FontWeight.w500,

@@ -1,4 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart' as intl;
+import 'package:meta_trader/app/utils/utils.dart';
 
 extension TimeOfDayExtensions on TimeOfDay {
   String format12Hour(BuildContext context) {
@@ -16,4 +19,8 @@ extension TimeOfDayExtensions on TimeOfDay {
 
     return '$buffer';
   }
+}
+
+bool isDirectionRTL(BuildContext context) {
+  return intl.Bidi.isRtlLanguage(context.locale.toString());
 }

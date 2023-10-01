@@ -70,7 +70,7 @@ class PhoneVerificationPage extends StatelessWidget {
                   ),
                   children: [
                     TextSpan(
-                      text: "123***554",
+                      text: " 123***554",
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.6),
                         fontWeight: FontWeight.w500,

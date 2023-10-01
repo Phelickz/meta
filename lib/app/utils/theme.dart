@@ -109,6 +109,7 @@ class CustomThemeData {
       double? lineHeight}) {
     return GoogleFonts.dmSans(
         // fontFamily: 'Gilroy',
+
         color: color,
         fontSize: fontSize,
         fontWeight: fontWeight,

@@ -30,7 +30,8 @@ class EmailVerificationPage extends StatelessWidget {
               horizontal: McGyver.rsDoubleW(context, 4),
             ),
             child: Text(
-              LocaleKeys.securityWidget_emailVerify_passKeyAdded,
+              LocaleKeys.verificationWidget_emailVerification_verifyYourEmail
+                  .tr(),
               textAlign: TextAlign.center,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 2.6),
@@ -59,7 +60,7 @@ class EmailVerificationPage extends StatelessWidget {
                   ),
                   children: [
                     TextSpan(
-                      text: "Susan@gmail.com",
+                      text: " Susan@gmail.com ",
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.6),
                         fontWeight: FontWeight.w500,

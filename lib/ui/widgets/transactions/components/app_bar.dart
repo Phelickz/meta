@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
+import 'package:meta_trader/app/utils/constants.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/ui/widgets/social_trading/components/filter_modal.dart';
 
@@ -47,7 +48,7 @@ AppBar transactionsAppBar(
     actions: [
       model.transactionsPageEnum == TransactionsPageEnum.transactions
           ? Padding(
-              padding: EdgeInsets.only(right: 24.pWidth(context)),
+              padding: Constants.getPadding(context, 24.pWidth(context)),
               child: InkWell(
                 onTap: () {
                   showFilterModal(context);

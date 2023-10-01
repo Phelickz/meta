@@ -671,6 +671,7 @@ abstract class  LocaleKeys {
   static const internalTransfer_successWidget_enterAccountPassword = 'internalTransfer.successWidget.enterAccountPassword';
   static const internalTransfer_successWidget = 'internalTransfer.successWidget';
   static const internalTransfer = 'internalTransfer';
+  static const loyaltyReward_loyaltyRewardText = 'loyaltyReward.loyaltyRewardText';
   static const loyaltyReward_cardWidget_totalPointsBalance = 'loyaltyReward.cardWidget.totalPointsBalance';
   static const loyaltyReward_cardWidget_fiveThousandPoints = 'loyaltyReward.cardWidget.fiveThousandPoints';
   static const loyaltyReward_cardWidget_youAreAtThePeak = 'loyaltyReward.cardWidget.youAreAtThePeak';
@@ -700,6 +701,10 @@ abstract class  LocaleKeys {
   static const notification_noNotifications = 'notification.noNotifications';
   static const notification_markAllAsRead = 'notification.markAllAsRead';
   static const notification_clearAll = 'notification.clearAll';
+  static const notification_notificationText = 'notification.notificationText';
+  static const notification_depositSuccessful = 'notification.depositSuccessful';
+  static const notification_loginFromNewIP = 'notification.loginFromNewIP';
+  static const notification_withdrawalSuccessful = 'notification.withdrawalSuccessful';
   static const notification = 'notification';
   static const paymentMethod_addPaymentMethodSuccess_paymentMethodAddSuccess = 'paymentMethod.addPaymentMethodSuccess.paymentMethodAddSuccess';
   static const paymentMethod_addPaymentMethodSuccess_nowYouCanMake = 'paymentMethod.addPaymentMethodSuccess.nowYouCanMake';
@@ -899,6 +904,7 @@ abstract class  LocaleKeys {
   static const securityWidget_securityMain_doYouReallyWantToDisable = 'securityWidget.securityMain.doYouReallyWantToDisable';
   static const securityWidget_securityMain = 'securityWidget.securityMain';
   static const securityWidget = 'securityWidget';
+  static const settings_settingsText = 'settings.settingsText';
   static const settings_aboutUs_serviceAgreement = 'settings.aboutUs.serviceAgreement';
   static const settings_aboutUs_likeUsOnFacebook = 'settings.aboutUs.likeUsOnFacebook';
   static const settings_aboutUs_followUsOnTwitter = 'settings.aboutUs.followUsOnTwitter';

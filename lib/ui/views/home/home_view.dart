@@ -126,7 +126,7 @@ class HomeView extends StackedView<HomeViewModel> {
           ),
           child: ListView(
             children: [
-              verticalSpaceSmall(context),
+              // verticalSpaceSmall(context),
               Text(
                 LocaleKeys.views_homeView_tradeFeatures.tr(),
                 style: CustomThemeData.generateStyle(

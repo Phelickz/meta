@@ -516,7 +516,7 @@ class InternalTransferDetailsCard extends StatelessWidget {
                           context: context,
                           lightTextColor: (status == LocaleKeys.successful.tr())
                               ? const Color(0xff20A0F3)
-                              : (status == LocaleKeys.pending)
+                              : (status == LocaleKeys.pending.tr())
                                   ? const Color(0xffF79009)
                                   : const Color(0xffF04438),
                           darkTextColor: (status == LocaleKeys.successful.tr())

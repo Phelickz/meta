@@ -12,6 +12,7 @@ class SearchQuotesTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var isDarkMode = CustomThemeData.isDarkMode(context);
     return ListTile(
       contentPadding: EdgeInsets.zero,
       leading: SvgPicture.asset(AssetManager.folder),
@@ -25,7 +26,13 @@ class SearchQuotesTile extends StatelessWidget {
         style: CustomThemeData.generateColoredStyle(
             fontSize: 10, context: context),
       ),
-      trailing: SvgPicture.asset(AssetManager.forwardArrow),
+      // trailing: SvgPicture.asset(AssetManager.forwardArrow),
+      trailing: Icon(
+        Icons.arrow_forward_ios,
+        color: isDarkMode
+            ? const Color(0xff98A2B3)
+            : const Color(0xFF667085).withOpacity(0.7),
+      ),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meta_trader/app/utils/extension.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 
 class CustomTextFields extends StatefulWidget {
@@ -72,6 +73,8 @@ class _SignupTextFieldsState extends State<CustomTextFields> {
   Widget build(BuildContext context) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return TextFormField(
+      textDirection:
+          isDirectionRTL(context) ? TextDirection.rtl : TextDirection.ltr,
       textAlign: widget.textAlign,
       keyboardType: widget.keyboardType,
       validator: widget.validator,
@@ -94,7 +97,8 @@ class _SignupTextFieldsState extends State<CustomTextFields> {
       //       color: Colors.black87,
       //     ),
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.only(left: 10, top: 20, bottom: 20),
+        contentPadding:
+            const EdgeInsets.only(left: 10, top: 20, bottom: 20, right: 10),
         filled: widget.filledWithColor ?? false,
 
         fillColor: widget.filledWithColor == true
@@ -127,6 +131,8 @@ class _SignupTextFieldsState extends State<CustomTextFields> {
         //   color: _focusNode.hasFocus ? Constants.purple : Colors.white,
         // ),
         hintText: widget.hintText,
+        hintTextDirection:
+            isDirectionRTL(context) ? TextDirection.rtl : TextDirection.ltr,
         hintStyle: CustomThemeData.generateStyle(
           fontSize: 15,
           color: const Color(0xff98A2B3),

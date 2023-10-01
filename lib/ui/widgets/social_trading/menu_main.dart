@@ -23,7 +23,7 @@ class MenuMainPage extends StatelessWidget {
           },
         ),
         OptionTile(
-          label: LocaleKeys.notification.tr(),
+          label: LocaleKeys.notification_notificationText.tr(),
           assetName: "assets/images/notification.svg",
           onTap: () {
             // viewModel.setSocialTradingPageEnum =

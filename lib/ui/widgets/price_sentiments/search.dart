@@ -92,7 +92,7 @@ class SearchPriceSentiments extends StatelessWidget {
             horizontal: McGyver.rsDoubleW(context, 5),
           ),
           child: Text(
-            LocaleKeys.search,
+            LocaleKeys.search.tr(),
             style: CustomThemeData.generateStyle(
               fontSize: McGyver.textSize(context, 2),
               fontWeight: FontWeight.bold,

@@ -138,7 +138,7 @@ class WalletPage extends StatelessWidget {
                   bottomIcons(
                     context,
                     'assets/icons/money_send_outline.svg',
-                    LocaleKeys.withdrawFunds.tr(),
+                    LocaleKeys.views_homeView_withdrawFunds.tr(),
                     () {
                       viewModel.push(const WithdrawFundRoute());
                     },
@@ -146,7 +146,7 @@ class WalletPage extends StatelessWidget {
                   bottomIcons(
                     context,
                     'assets/icons/recovery_convert.svg',
-                    LocaleKeys.internalTransfer.tr(),
+                    LocaleKeys.views_homeView_internalTransfer.tr(),
                     () {
                       viewModel.push(const InternalTransferRoute());
                     },

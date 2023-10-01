@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -153,9 +154,11 @@ class MasterTraderOverview extends StatelessWidget {
                   : const Color(0xffD3ECFD), // Container color
               child: TabBar(
                 // isScrollable: true,
-                tabs: const [
-                  Tab(text: LocaleKeys.overview),
-                  Tab(text: LocaleKeys.tradingHistory),
+                tabs: [
+                  Tab(text: LocaleKeys.overview.tr()),
+                  Tab(
+                    text: LocaleKeys.tradingHistory.tr(),
+                  ),
                 ],
                 isScrollable: true,
                 unselectedLabelColor: isDarkMode

@@ -34,7 +34,7 @@ class TransactionHistory extends StatelessWidget {
                   text: LocaleKeys.deposit.tr(),
                 ),
                 Tab(
-                  text: LocaleKeys.internalTransfer.tr(),
+                  text: LocaleKeys.views_homeView_internalTransfer.tr(),
                 ),
               ],
               isScrollable: true,

@@ -55,7 +55,15 @@ class ProfileTiles extends StatelessWidget {
           alignment: Alignment.center,
           width: 20,
           height: 20,
-          child: SvgPicture.asset(trailingIcon ?? ""),
+          child: trailingIcon != null
+              ? Icon(
+                  Icons.arrow_forward_ios,
+                  color: isDarkMode
+                      ? const Color(0xff98A2B3)
+                      : const Color(0xFF667085).withOpacity(0.7),
+                )
+              : Container(),
+          // child: SvgPicture.asset(trailingIcon ?? ""),
         ),
       ),
     );

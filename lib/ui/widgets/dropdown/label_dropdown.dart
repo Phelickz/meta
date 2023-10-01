@@ -32,14 +32,9 @@ class LabelDropdown extends StatelessWidget {
     Widget dropDownIcon = SizedBox(
       height: 20,
       width: 20,
-      child: SvgPicture.asset(
-        "assets/images/arrow_right.svg",
-        width: 18,
-        height: 18,
-        colorFilter: ColorFilter.mode(
-          isDarkMode ? const Color(0xff98A2B3) : const Color(0xFF667085),
-          BlendMode.srcIn,
-        ),
+      child: Icon(
+        Icons.arrow_forward_ios,
+        color: isDarkMode ? const Color(0xff98A2B3) : const Color(0xFF667085),
       ),
     );
     return Column(

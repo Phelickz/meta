@@ -97,24 +97,24 @@ class SettingsPage extends StatelessWidget {
                 model.setSettingsPageEnum = SettingsPageEnum.colorPreference;
               },
             ),
-            SizedBox(
-              height: 48.pHeight(context),
-            ),
-            Text(
-              LocaleKeys.market,
-              style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.7),
-                color: isDarkMode ? Colors.white54 : const Color(0xff667085),
-                fontWeight: FontWeight.w900,
-              ),
-            ).tr(),
-            verticalSpaceSmall(context),
-            BasicSettingsTile(
-              title: LocaleKeys.settings_changeBasis.tr(),
-              onTap: () {
-                model.setSettingsPageEnum = SettingsPageEnum.changeBasis;
-              },
-            ),
+            // SizedBox(
+            //   height: 48.pHeight(context),
+            // ),
+            // Text(
+            //   LocaleKeys.market,
+            //   style: CustomThemeData.generateStyle(
+            //     fontSize: McGyver.textSize(context, 1.7),
+            //     color: isDarkMode ? Colors.white54 : const Color(0xff667085),
+            //     fontWeight: FontWeight.w900,
+            //   ),
+            // ).tr(),
+            // verticalSpaceSmall(context),
+            // BasicSettingsTile(
+            //   title: LocaleKeys.views_settings_changeBasis.tr(),
+            //   onTap: () {
+            //     model.setSettingsPageEnum = SettingsPageEnum.changeBasis;
+            //   },
+            // ),
             SizedBox(
               height: 52.pHeight(context),
             ),

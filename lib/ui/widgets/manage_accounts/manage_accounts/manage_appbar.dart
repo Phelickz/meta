@@ -8,6 +8,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
+import 'package:meta_trader/app/utils/constants.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/ui/views/manage_accounts/manage_accounts_view_model.dart';
@@ -46,7 +47,7 @@ AppBar maanageAccountAppBar(
     ).tr(),
     actions: [
       Padding(
-        padding: EdgeInsets.only(right: 24.pWidth(context)),
+        padding: Constants.getPadding(context, 24.pWidth(context)),
         child: InkWell(
           onTap: () {
             showModalBottomSheet(
@@ -71,7 +72,7 @@ AppBar maanageAccountAppBar(
         ),
       ),
       Padding(
-        padding: EdgeInsets.only(right: 24.pWidth(context)),
+        padding: Constants.getPadding(context, 24.pWidth(context)),
         child: InkWell(
           onTap: () {
             showModalBottomSheet(

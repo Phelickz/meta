@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 
 import '../../../../app/utils/theme.dart';
@@ -64,7 +66,7 @@ class TransactionTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    transaction.title,
+                    transaction.title.tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.9),
                       fontWeight: FontWeight.bold,
@@ -87,7 +89,11 @@ class TransactionTile extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    transaction.status.name,
+                    transaction.status == TransactionStatusEnum.successful
+                        ? LocaleKeys.successful.tr()
+                        : transaction.status == TransactionStatusEnum.pending
+                            ? LocaleKeys.pending.tr()
+                            : LocaleKeys.failed.tr(),
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.3),
                       color: viewModel.statusColorForTransactionType(

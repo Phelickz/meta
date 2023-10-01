@@ -384,7 +384,7 @@ class QuotesViewModel extends CustomBaseViewModel {
         return quotesAppBar(context, LocaleKeys.quotes.tr(),
             LocaleKeys.views_quotesView_quotesViewModel_addSymbol.tr(), this);
       case QuotesPageEnum.subGroups:
-        return quotesAppBar(context, LocaleKeys.quotes,
+        return quotesAppBar(context, LocaleKeys.quotes.tr(),
             LocaleKeys.views_quotesView_quotesViewModel_addSymbol.tr(), this);
       case QuotesPageEnum.details:
         return quotesAppBar(context, "CORN", LocaleKeys.details.tr(), this);

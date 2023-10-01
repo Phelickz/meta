@@ -89,7 +89,7 @@ class HigherSuccessRates extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          text: '326,587',
+                          text: ' 326,587',
                           style: CustomThemeData.generateStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.bold,
