@@ -1,13 +1,16 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/locator/locator.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
+import 'package:meta_trader/ui/views/auth/auth_view.dart';
 import 'package:meta_trader/ui/views/auth/auth_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/textfields/textfield.dart';
 
 import '../../../app/responsiveness/res.dart';
+import '../../../app/services/router_service.dart';
 import '../../../app/utils/theme.dart';
 
 class LoginPage extends StatelessWidget {
@@ -106,7 +109,13 @@ class LoginPage extends StatelessWidget {
             CustomButtons.generalButton(
               context: context,
               onTap: () {
-                model.push(const VerificationRoute());
+                if (isDemo.value == true) {
+                  // model.push(const BottomNavBarRoute());
+                  final router = locator<RouterService>();
+                  router.router.replaceAll([const BottomNavBarRoute()]);
+                } else {
+                  model.push(const VerificationRoute());
+                }
               },
               text: LocaleKeys.signIn.tr(),
             ),

@@ -322,6 +322,11 @@
       "profile": "حساب تعريفي"
     },
 
+    "rewardsCard": {
+      "earnPointsWhileTrading": "كلما شاركت بنشاط في التداول، تتراكم نقاطك",
+      "body": "لم يكن الوصول إلى هذه النقاط والاستمتاع بمكافآتها المذهلة أسهل من ذلك"
+    },
+
     "currencyConverter": {
       "twentyThree": "ثلاثة وعشرون",
       "currency1": "العملة 1",
@@ -397,7 +402,7 @@
       "priceSentiments": "مشاعر السعر",
       "TradeFeaturesSub": {
         "subtitle": "انسخ واربح مع المتداولين ذوي الخبرة",
-        "subtitle1": "ابق على اطلاع بأخبار الفوركس"
+        "subtitle1": "\nابق على اطلاع بأخبار الفوركس"
       },
       "welcome": "مرحباً سوزان",
       "walletBalance": "رصيد المحفظة"
@@ -640,6 +645,8 @@
     "buyAt": "شراء بسعر 1.234564",
     "text1": "77%",
     "text2": "1.2",
+    "youHaveBought": "لقد اشتريت USDJPY بسعر 23.32",
+    "youHaveSold": "لقد باعت USDJPY بسعر 23.32",
     "specification": {
       "marketIsOpen": "السوق مفتوح. يغلق غدا، 12:58 صباحا",
       "contractSize": "حجم العقد",

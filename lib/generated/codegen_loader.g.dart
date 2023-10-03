@@ -335,6 +335,10 @@ class CodegenLoader extends AssetLoader{
       "trade": "Trade",
       "profile": "Profile"
     },
+    "rewardsCard": {
+      "earnPointsWhileTrading": "As you actively participate in trading, your points accumulate",
+      "body": "Accessing these points and enjoying their remarkable rewards has never been easier"
+    },
     "currencyConverter": {
       "twentyThree": "23",
       "currency1": "Currency 1",
@@ -648,6 +652,8 @@ class CodegenLoader extends AssetLoader{
     "buyAt": "Buy at 1.234564",
     "text1": "77%",
     "text2": "1.2",
+    "youHaveBought": "You have bought USDJPY at 23.32",
+    "youHaveSold": "You have sold USDJPY at 23.32",
     "specification": {
       "marketIsOpen": "Market is open. Closes tomorrow, 12:58 AM",
       "contractSize": "Contract Size",
@@ -1581,6 +1587,10 @@ static const Map<String,dynamic> fa = {
       "trade": "تجارت",
       "profile": "مشخصات"
     },
+    "rewardsCard": {
+      "earnPointsWhileTrading": "هر چه فعال‌تر در معاملات شرکت کنید، امتیازات شما بیشتر می‌شود",
+      "body": "دستیابی به این امتیازات و لذت بردن از پاداش‌های شگفت‌انگیز آن آسان‌تر از همیشه است"
+    },
     "currencyConverter": {
       "twentyThree": "بیست و سه",
       "currency1": "واحد پول 1",
@@ -1655,7 +1665,7 @@ static const Map<String,dynamic> fa = {
       "priceSentiments": "احساسات قیمت",
       "TradeFeaturesSub": {
         "subtitle": "کپی کنید و با معامله گران با تجربه کسب درآمد کنید",
-        "subtitle1": "با اخبار فارکس به روز باشید"
+        "subtitle1": "\nبا اخبار فارکس به روز باشید"
       },
       "welcome": "خوش اومدی سوزان",
       "walletBalance": "موجودی کیف پول"
@@ -1894,6 +1904,8 @@ static const Map<String,dynamic> fa = {
     "buyAt": "با 1.234564 خرید کنید",
     "text1": "77%",
     "text2": "1.2",
+    "youHaveBought": "شما USDJPY را با قیمت 23.32 خریداری کرده‌اید",
+    "youHaveSold": "شما USDJPY را با قیمت 23.32 فروخته‌اید",
     "specification": {
       "marketIsOpen": "بازار باز است فردا ساعت 12:58 بسته می شود",
       "contractSize": "اندازه قرارداد",
@@ -2828,6 +2840,10 @@ static const Map<String,dynamic> ar = {
       "trade": "تجارة",
       "profile": "حساب تعريفي"
     },
+    "rewardsCard": {
+      "earnPointsWhileTrading": "كلما شاركت بنشاط في التداول، تتراكم نقاطك",
+      "body": "لم يكن الوصول إلى هذه النقاط والاستمتاع بمكافآتها المذهلة أسهل من ذلك"
+    },
     "currencyConverter": {
       "twentyThree": "ثلاثة وعشرون",
       "currency1": "العملة 1",
@@ -2902,7 +2918,7 @@ static const Map<String,dynamic> ar = {
       "priceSentiments": "مشاعر السعر",
       "TradeFeaturesSub": {
         "subtitle": "انسخ واربح مع المتداولين ذوي الخبرة",
-        "subtitle1": "ابق على اطلاع بأخبار الفوركس"
+        "subtitle1": "\nابق على اطلاع بأخبار الفوركس"
       },
       "welcome": "مرحباً سوزان",
       "walletBalance": "رصيد المحفظة"
@@ -3141,6 +3157,8 @@ static const Map<String,dynamic> ar = {
     "buyAt": "شراء بسعر 1.234564",
     "text1": "77%",
     "text2": "1.2",
+    "youHaveBought": "لقد اشتريت USDJPY بسعر 23.32",
+    "youHaveSold": "لقد باعت USDJPY بسعر 23.32",
     "specification": {
       "marketIsOpen": "السوق مفتوح. يغلق غدا، 12:58 صباحا",
       "contractSize": "حجم العقد",

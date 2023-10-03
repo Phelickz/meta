@@ -3,6 +3,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/core/custom_base_view_model.dart';
+import 'package:meta_trader/ui/views/auth/auth_view.dart';
 import 'package:meta_trader/ui/widgets/auth/created.dart';
 import 'package:meta_trader/ui/widgets/auth/demo.dart';
 import 'package:meta_trader/ui/widgets/auth/real.dart';
@@ -93,6 +94,7 @@ class AuthViewModel extends CustomBaseViewModel {
 
   set setRadio(String val) {
     _radioItem = val;
+    isDemo.value = val == LocaleKeys.demo.tr();
     rebuildUi();
   }
 

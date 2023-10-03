@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_trader/ui/views/auth/auth_view.dart';
 import 'package:meta_trader/ui/widgets/profile/components/verification_bar.dart';
 import 'package:meta_trader/ui/widgets/profile/profile.dart';
 
@@ -51,15 +52,19 @@ class ProfileViewModel extends CustomBaseViewModel {
   }
 
   Widget returnVerifiedBar() {
-    switch (_profileStateEnum) {
-      case ProfileStateEnum.unVerified:
-        return VerificationBar(model: this);
-      case ProfileStateEnum.halfVerified:
-        return VerificationBar(model: this);
-      case ProfileStateEnum.verified:
-        return const SizedBox();
-      default:
-        return const SizedBox();
+    if (isDemo.value == false) {
+      switch (_profileStateEnum) {
+        case ProfileStateEnum.unVerified:
+          return VerificationBar(model: this);
+        case ProfileStateEnum.halfVerified:
+          return VerificationBar(model: this);
+        case ProfileStateEnum.verified:
+          return const SizedBox();
+        default:
+          return const SizedBox();
+      }
+    } else {
+      return const SizedBox();
     }
   }
 

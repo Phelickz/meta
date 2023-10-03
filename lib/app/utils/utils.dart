@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/extension.dart';
 import 'package:easy_localization/easy_localization.dart' as el;
 
+// create a value notifier for TextDirection
+ValueNotifier<TextDirection> textDirection = ValueNotifier(TextDirection.ltr);
+
 class Utils {
   // Helper function to determine text direction
   static getTextDirection(BuildContext context) {

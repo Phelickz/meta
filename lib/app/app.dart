@@ -13,6 +13,7 @@ class MetaTraderApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final RouterService _routerService = locator<RouterService>();
+    textDirection.value = Utils.getTextDirection(context);
 
     return Directionality(
       // Determine the text direction based on the current locale.

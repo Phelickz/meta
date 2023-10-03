@@ -9,8 +9,11 @@ import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
+import 'package:meta_trader/app/utils/capitalize.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/app/utils/utils.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
+import 'package:meta_trader/ui/views/auth/auth_view.dart';
 import 'package:meta_trader/ui/views/price_sentiments/price_sentiments_view_model.dart';
 import 'package:meta_trader/ui/views/social_trading/social_trading_view_model.dart';
 import 'package:meta_trader/ui/widgets/home/price_sentiments.dart';
@@ -396,16 +399,61 @@ class HomeView extends StackedView<HomeViewModel> {
                 ),
               ),
               verticalSpaceSmall(context),
-              GestureDetector(
-                onTap: () {
-                  viewModel.push(const LoyaltyRewardsRoute());
-                },
-                child: Image.asset(
-                  'assets/images/rewards.png',
-                  width: double.infinity,
-                  fit: BoxFit.cover,
+              Container(
+                height: 230,
+                width: McGyver.rsDoubleW(context, 100),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  image: const DecorationImage(
+                    image: AssetImage('assets/images/rewardsb.png'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      verticalSpaceXXSmall(context),
+                      Text(
+                        LocaleKeys.views_rewardsCard_earnPointsWhileTrading
+                            .tr(),
+                        style: CustomThemeData.generateStyle(
+                          fontSize: McGyver.textSize(context, 2.4),
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      verticalSpaceSmall(context),
+                      Text(
+                        LocaleKeys.views_rewardsCard_body.tr(),
+                        style: CustomThemeData.generateStyle(
+                          fontSize: McGyver.textSize(context, 1.7),
+                          fontWeight: FontWeight.normal,
+                          color: Colors.white,
+                        ),
+                      ),
+                      verticalSpaceXSmall(context),
+                      Icon(
+                        Utils.getTextDirection(context) == TextDirection.LTR
+                            ? Icons.arrow_forward
+                            : Icons.arrow_forward,
+                        color: Colors.white,
+                      )
+                    ],
+                  ),
                 ),
               ),
+              //Color.fromARGB(255, 128, 117, 117)ctor(
+              //   onTap: () {
+              //     viewModel.push(const LoyaltyRewardsRoute());
+              //   },
+              //   child: Image.asset(
+              //     'assets/images/rewards.png',
+              //     width: double.infinity,
+              //     fit: BoxFit.cover,
+              //   ),
+              // ),
               verticalSpaceSmall(context),
               verticalSpaceXSmall(context),
               Row(
@@ -579,7 +627,9 @@ class HomeView extends StackedView<HomeViewModel> {
                     child: Row(
                       children: [
                         Text(
-                          LocaleKeys.verifiedCap,
+                          isDemo.value == true
+                              ? LocaleKeys.demo.capitalize()
+                              : LocaleKeys.verifiedCap,
                           style: CustomThemeData.generateStyle(
                             fontSize: 9,
                             fontWeight: FontWeight.w400,

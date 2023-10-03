@@ -321,7 +321,10 @@
       "trade": "Trade",
       "profile": "Profile"
     },
-
+    "rewardsCard": {
+      "earnPointsWhileTrading": "As you actively participate in trading, your points accumulate",
+      "body": "Accessing these points and enjoying their remarkable rewards has never been easier"
+    },
     "currencyConverter": {
       "twentyThree": "23",
       "currency1": "Currency 1",
@@ -640,6 +643,8 @@
     "buyAt": "Buy at 1.234564",
     "text1": "77%",
     "text2": "1.2",
+    "youHaveBought": "You have bought USDJPY at 23.32",
+    "youHaveSold": "You have sold USDJPY at 23.32",
     "specification": {
       "marketIsOpen": "Market is open. Closes tomorrow, 12:58 AM",
       "contractSize": "Contract Size",

@@ -7,8 +7,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/asset_manager.dart';
+import 'package:meta_trader/app/utils/capitalize.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
+import 'package:meta_trader/ui/views/auth/auth_view.dart';
 import 'package:meta_trader/ui/views/profile/profile_view_model.dart';
 
 import '../../../app/responsiveness/res.dart';
@@ -266,12 +268,16 @@ PreferredSize profileAppBar(
                       horizontalSpaceXSmall(context),
                       isDarkMode
                           ? Text(
-                              isVerified
-                                  ? LocaleKeys.verified.tr()
-                                  : LocaleKeys.unVerified.tr(),
+                              isDemo.value == true
+                                  ? LocaleKeys.demo
+                                  : isVerified
+                                      ? LocaleKeys.verified.tr()
+                                      : LocaleKeys.unVerified.tr(),
                               style: CustomThemeData.generateStyle(
                                 fontSize: 14,
-                                color: Colors.red[400]!,
+                                color: isDemo.value == true
+                                    ? Theme.of(context).primaryColor
+                                    : Colors.red[400]!,
                               ),
                             )
                           : Container(
@@ -285,14 +291,18 @@ PreferredSize profileAppBar(
                                 child: Row(
                                   children: [
                                     Text(
-                                      isVerified
-                                          ? LocaleKeys.verified.tr()
-                                          : LocaleKeys.unVerified.tr(),
+                                      isDemo.value == true
+                                          ? LocaleKeys.demo.tr().capitalize()
+                                          : isVerified
+                                              ? LocaleKeys.verified.tr()
+                                              : LocaleKeys.unVerified.tr(),
                                       style: CustomThemeData.generateStyle(
                                         fontSize: 9,
-                                        color: isVerified
-                                            ? Colors.green
-                                            : Colors.red,
+                                        color: isDemo.value == true
+                                            ? Theme.of(context).primaryColor
+                                            : isVerified
+                                                ? Colors.green
+                                                : Colors.red,
                                       ),
                                     ),
                                     const SizedBox(
@@ -302,7 +312,9 @@ PreferredSize profileAppBar(
                                         ? const SizedBox()
                                         : Icon(
                                             Icons.info_outline,
-                                            color: Colors.red,
+                                            color: isDemo.value == true
+                                                ? Theme.of(context).primaryColor
+                                                : Colors.red,
                                             size: 12.pWidth(context),
                                           )
                                   ],

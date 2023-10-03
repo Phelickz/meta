@@ -280,7 +280,7 @@ class ModifyTrade extends StatelessWidget {
             CustomButtons.generalButton(
               context: context,
               onTap: () {
-                Navigator.pop(context);
+                viewModel.tradePageEnum = TradePageEnum.trade;
               },
               text: "Modify",
               color: isDarkMode

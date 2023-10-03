@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/chart/chart_view_model.dart';
@@ -70,7 +71,9 @@ class ChartPage extends StatelessWidget {
                           CustomButtons.generalButton(
                             width: McGyver.rsDoubleW(context, 42),
                             context: context,
-                            onTap: () {},
+                            onTap: () {
+                              viewModel.push(BuySellSuccess(isBuy: false));
+                            },
                             text: LocaleKeys.chart_sellAt.tr(),
                             color: const Color(0xFFF04438),
                           ),
@@ -102,7 +105,9 @@ class ChartPage extends StatelessWidget {
                           CustomButtons.generalButton(
                             width: McGyver.rsDoubleW(context, 42),
                             context: context,
-                            onTap: () {},
+                            onTap: () {
+                              viewModel.push(BuySellSuccess(isBuy: true));
+                            },
                             text: LocaleKeys.chart_buyAt.tr(),
                             color: isDarkMode
                                 ? const Color(0xFF0B7FCB)
