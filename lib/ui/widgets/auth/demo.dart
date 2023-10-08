@@ -30,16 +30,16 @@ class DemoPage extends StatelessWidget {
             Text(
               LocaleKeys.enterPersonalInformation,
               style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.6),
-                color: Theme.of(context).primaryColor,
-              ),
+                  fontSize: McGyver.textSize(context, 1.83),
+                  color: isDarkMode ? Colors.white70 : Colors.black87,
+                  fontWeight: FontWeight.w600),
             ).tr(),
             verticalSpaceSmall(context),
             Text(
               LocaleKeys.auth_firstName,
               style: CustomThemeData.generateStyle(
                 fontSize: McGyver.textSize(context, 1.8),
-                color: isDarkMode ? Colors.white70 : const Color(0xff667085),
+                color: isDarkMode ? Colors.white70 : const Color(0xff667090),
               ),
             ).tr(),
             verticalSpaceXSmall(context),
