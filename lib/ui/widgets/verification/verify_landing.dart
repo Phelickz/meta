@@ -33,7 +33,7 @@ class VerifyLandingPage extends StatelessWidget {
                 color: isDarkMode ? Colors.white : Colors.black,
               ),
             ).tr(),
-            verticalSpaceMedium(context),
+            verticalSpaceSmall(context),
             vListTile(
                 context,
                 LocaleKeys
@@ -159,9 +159,7 @@ class VerifyLandingPage extends StatelessWidget {
         title,
         style: CustomThemeData.generateStyle(
           fontSize: McGyver.textSize(context, 2),
-          color: isDarkMode
-              ? const Color(0xff77C5F8)
-              : Theme.of(context).primaryColor,
+          color: isDarkMode ? Colors.white : Colors.black87,
           fontWeight: FontWeight.bold,
         ),
       ),

@@ -48,10 +48,17 @@ class EmailVerificationPage extends StatelessWidget {
                 ),
                 children: [
                   TextSpan(
-                    text: 'Susan@gmail.com. ',
+                    text: ' Susan@gmail.com ',
+                    style: CustomThemeData.generateStyle(
+                      fontSize: McGyver.textSize(context, 2),
+                      color: Theme.of(context).primaryColor,
+                    ),
+                  ),
+                  TextSpan(
+                    text: ' .',
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.6),
-                      color: Theme.of(context).primaryColor,
+                      color: isDarkMode ? Colors.white70 : Colors.black87,
                     ),
                   ),
                   TextSpan(
@@ -75,15 +82,29 @@ class EmailVerificationPage extends StatelessWidget {
               text: LocaleKeys.checkMail.tr(),
             ),
             verticalSpaceXSmall(context),
-            CustomButtons.clearButton(
-              context: context,
-              onTap: () {
-                model.setVerificationViewEnum =
-                    VerificationPageEnum.emailVerifySuccess;
-              },
-              text: LocaleKeys.resendCode.tr(),
-              textColor: Theme.of(context).primaryColor,
+            SizedBox(
+              child: GestureDetector(
+                onTap: () {
+                  model.setVerificationViewEnum =
+                      VerificationPageEnum.emailVerifySuccess;
+                },
+                child: Text(
+                  LocaleKeys.resendCode.tr(),
+                  style: TextStyle(
+                    color: Theme.of(context).primaryColor,
+                  ),
+                ),
+              ),
             ),
+            // CustomButtons.clearButton(
+            //   context: context,
+            //   onTap: () {
+            //     model.setVerificationViewEnum =
+            //         VerificationPageEnum.emailVerifySuccess;
+            //   },
+            //   text: LocaleKeys.resendCode.tr(),
+            //   textColor: Theme.of(context).primaryColor,
+            // ),
           ],
         ),
       ),
