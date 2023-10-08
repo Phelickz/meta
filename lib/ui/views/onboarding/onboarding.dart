@@ -104,14 +104,9 @@ class OnboardingView extends StackedView<OnboardingViewModel> {
                 CustomButtons.generalButton(
                     context: context,
                     onTap: () {
-                      if (viewModel.counter.value < 3) {
-                        viewModel.incrementCounter(
-                            viewModel.counter.value + 1, true);
-                      } else {
-                        viewModel.push(const AuthRoute());
-                      }
+                      viewModel.push(const AuthRoute());
                     },
-                    text: LocaleKeys.next.tr()),
+                    text: LocaleKeys.skip.tr()),
                 Platform.isIOS
                     ? verticalSpaceMedium(context)
                     : verticalSpaceSmall(context)
