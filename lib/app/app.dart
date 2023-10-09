@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/locator/locator.dart';
 import 'package:meta_trader/app/services/router_service.dart';
-import 'package:meta_trader/app/utils/extension.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/app/utils/utils.dart';
 import 'package:stacked_themes/stacked_themes.dart';

@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/security/components/change_password_modal.dart';
@@ -85,6 +86,17 @@ class SecurityMainPage extends StatelessWidget {
           // onTap: () => model.securityPageEnum = SecurityPageEnum.password,
           onTap: () => showChangePasswordModal(context),
         ),
+        SecurityOptionTile(
+            assetName: "assets/images/password_check.svg",
+            vm: model,
+            label: LocaleKeys.securityWidget_faceId_faceIdText.tr(),
+            hasStatus: true,
+            hasLeadingIcon: true,
+            status: SecurityOptionStatus.confirmed,
+            // onTap: () => model.securityPageEnum = SecurityPageEnum.password,
+            onTap: () {
+              model.push(const FaceIDRoute());
+            }),
         verticalSpaceMedium(context),
         Text(
           LocaleKeys.others,

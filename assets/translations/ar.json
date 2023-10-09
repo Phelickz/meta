@@ -1073,6 +1073,19 @@
       "autoLockText": "القفل التلقائي",
       "disableAccount": "تعطيل الحساب",
       "doYouReallyWantToDisable": "هل ترغب حقًا في تعطيل الحساب؟"
+    },
+    "faceId": {
+      "faceIdText": "Face ID",
+      "enableFaceId": "تمكين Face ID",
+      "faceIdDescription": "قم بإعداد Face ID لتمكينك من إجراء المعاملات بسهولة",
+      "faceIdSuccess": "تم تسجيل Face ID بنجاح",
+      "disableFaceId": "تعطيل Face ID",
+      "continue": "استمرار",
+      "quit": "إنهاء",
+      "exit": "خروج",
+      "faceIdNotSupported": "Face ID غير مدعوم",
+      "faceIdNotSupportedDescription": "عذرًا، جهازك لا يدعم التعرف على الوجه حاليًا. يمكنك المصادقة باستخدام طرق أخرى متاحة.",
+      "faceIdNotEnrolled": "Face ID غير مسجل"
     }
   },
   "settings": {
