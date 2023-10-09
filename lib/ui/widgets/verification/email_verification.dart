@@ -48,9 +48,9 @@ class EmailVerificationPage extends StatelessWidget {
                 ),
                 children: [
                   TextSpan(
-                    text: ' Susan@gmail.com ',
+                    text: ' Susan@gmail.com',
                     style: CustomThemeData.generateStyle(
-                      fontSize: McGyver.textSize(context, 2),
+                      fontSize: McGyver.textSize(context, 1.6),
                       color: Theme.of(context).primaryColor,
                     ),
                   ),

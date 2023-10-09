@@ -279,7 +279,7 @@ class ForexNewsAll extends StatelessWidget {
                 ),
               ).tr(),
               TextButton(
-                  onPressed: () {}, child: const Text(LocaleKeys.viewMore))
+                  onPressed: () {}, child: const Text(LocaleKeys.viewMore).tr())
             ],
           ),
           verticalSpaceXXSmall(context),
@@ -336,7 +336,7 @@ class ForexNewsAll extends StatelessWidget {
                 ),
               ).tr(),
               TextButton(
-                  onPressed: () {}, child: const Text(LocaleKeys.viewMore))
+                  onPressed: () {}, child: const Text(LocaleKeys.viewMore).tr())
             ],
           ),
           verticalSpaceXXSmall(context),

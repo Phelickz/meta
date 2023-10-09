@@ -58,12 +58,12 @@ class WithdrawalTile extends StatelessWidget {
         children: [
           Text(
             "\$$amount",
-            style: Theme.of(context).textTheme.titleSmall,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
           Text(
             status,
             style: CustomThemeData.generateColoredStyle(
-                fontSize: 8,
+                fontSize: 14,
                 context: context,
                 lightTextColor: (status == LocaleKeys.successful.tr())
                     ? const Color(0xff20A0F3)
@@ -146,12 +146,12 @@ class DepositTile extends StatelessWidget {
         children: [
           Text(
             "\$$amount",
-            style: Theme.of(context).textTheme.titleSmall,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
           Text(
             status,
             style: CustomThemeData.generateColoredStyle(
-                fontSize: 8,
+                fontSize: 14,
                 context: context,
                 lightTextColor: (status == LocaleKeys.successful.tr())
                     ? const Color(0xff20A0F3)
@@ -232,12 +232,12 @@ class InternalTransferTile extends StatelessWidget {
         children: [
           Text(
             "\$$amount",
-            style: Theme.of(context).textTheme.titleSmall,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
           Text(
             status,
             style: CustomThemeData.generateColoredStyle(
-                fontSize: 8,
+                fontSize: 14,
                 context: context,
                 lightTextColor: (status == LocaleKeys.successful.tr())
                     ? const Color(0xff20A0F3)

@@ -63,6 +63,7 @@ class IdentityVerificationLandingPage extends StatelessWidget {
                 ),
               ).tr(),
             ),
+            verticalSpaceSmall(context),
             Row(
               // mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -132,21 +133,15 @@ class IdentityVerificationLandingPage extends StatelessWidget {
                 ).tr()
               ],
             ),
-            Align(
-              alignment: Alignment.center,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                child: Text(
-                  LocaleKeys
-                      .verificationWidget_identityVerificationLanding_itTakes8hours,
-                  textAlign: TextAlign.left,
-                  style: CustomThemeData.generateStyle(
-                    fontSize: McGyver.textSize(context, 1.6),
-                    color: isDarkMode ? Colors.white70 : Colors.black54,
-                  ),
-                ).tr(),
+            Text(
+              LocaleKeys
+                  .verificationWidget_identityVerificationLanding_itTakes8hours,
+              textAlign: TextAlign.left,
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 1.6),
+                color: isDarkMode ? Colors.white70 : Colors.black54,
               ),
-            ),
+            ).tr(),
             verticalSpaceSmall(context),
             verticalSpaceMedium(context),
             CustomButtons.generalButton(
@@ -158,14 +153,27 @@ class IdentityVerificationLandingPage extends StatelessWidget {
               text: LocaleKeys.continueWord.tr(),
             ),
             verticalSpaceXSmall(context),
-            CustomButtons.clearButton(
-              context: context,
+            GestureDetector(
               onTap: () {
                 model.push(const BottomNavBarRoute());
               },
-              text: LocaleKeys.skip.tr(),
-              textColor: Theme.of(context).primaryColor,
+              child: Text(
+                LocaleKeys.skip.tr(),
+                style: CustomThemeData.generateStyle(
+                  fontSize: McGyver.textSize(context, 1.5),
+                  fontWeight: FontWeight.w500,
+                  color: Theme.of(context).primaryColor,
+                ),
+              ),
             ),
+            // CustomButtons.clearButton(
+            //   context: context,
+            //   onTap: () {
+            //     model.push(const BottomNavBarRoute());
+            //   },
+            //   text: LocaleKeys.skip.tr(),
+            //   textColor: Theme.of(context).primaryColor,
+            // ),
           ],
         ),
       ),

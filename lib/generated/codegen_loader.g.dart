@@ -681,7 +681,7 @@ class CodegenLoader extends AssetLoader{
     "detailsWidget": {
       "coinTelegraph": "Coin Telegraph",
       "text": "Thank you for choosing Meta trader  as your trusted forex trading platform. We are committed to safeguarding your privacy and protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data. By accessing or using our services, you agree to the practices described in this policy.",
-      "text1": "Personal Information: This may include your name, email address, phone number, residential address, date of birth, government-issued identification, and other necessary details required for account registration and compliance with",
+      "text1": " Personal Information: This may include your name, email address, phone number, residential address, date of birth, government-issued identification, and other necessary details required for account registration and compliance with.",
       "text2": "Financial Information: To facilitate transactions, we may collect details related to your bank account, credit/debit card information, and transaction history.",
       "text3": "Device and Usage Information: We may automatically collect information about your device, operating system, browser type, IP address, and interactions with our platform to improve our services and user experience.",
       "text4": "Cookies and Tracking Technologies: We may use cookies and similar technologies to gather information about your usage patterns and preferences while using our platform. This helps us to optimize our website, improve navigation, and personalize your experience.",

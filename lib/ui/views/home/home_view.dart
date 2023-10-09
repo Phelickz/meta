@@ -618,7 +618,9 @@ class HomeView extends StackedView<HomeViewModel> {
                 horizontalSpaceXSmall(context),
                 Container(
                   decoration: BoxDecoration(
-                    color: isDarkMode ? const Color(0xff052844) : Colors.white,
+                    color: isDarkMode
+                        ? const Color(0xff56E39F)
+                        : const Color(0xff56E39F),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Padding(
@@ -632,8 +634,8 @@ class HomeView extends StackedView<HomeViewModel> {
                               : LocaleKeys.verifiedCap,
                           style: CustomThemeData.generateStyle(
                             fontSize: 9,
-                            fontWeight: FontWeight.w400,
-                            color: Theme.of(context).primaryColor,
+                            fontWeight: FontWeight.w800,
+                            color: Colors.white,
                           ),
                         ).tr(),
                         const SizedBox(

@@ -73,20 +73,40 @@ class DetailNews extends StatelessWidget {
               ),
             ),
             verticalSpaceMedium(context),
-            Text(
-              '''${LocaleKeys.forexNewsWidget_detailsWidget_text.tr()},
-              ${LocaleKeys.forexNewsWidget_detailsWidget_text1.tr()} 
-              ${LocaleKeys.forexNewsWidget_detailsWidget_text2.tr()} 
-              ${LocaleKeys.forexNewsWidget_detailsWidget_text3.tr()} 
-              ${LocaleKeys.forexNewsWidget_detailsWidget_text4.tr()} 
-              ${LocaleKeys.forexNewsWidget_detailsWidget_text5.tr()} 
-              ${LocaleKeys.forexNewsWidget_detailsWidget_text6.tr()} 
-              ${LocaleKeys.forexNewsWidget_detailsWidget_text7.tr()} 
-              ${LocaleKeys.forexNewsWidget_detailsWidget_text8.tr()} ''',
-              style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.5),
-                color: isDarkMode ? Colors.white : Colors.black87,
-              ),
+            RichText(
+              text: TextSpan(
+                  text:
+                      "${LocaleKeys.forexNewsWidget_detailsWidget_text.tr()}\n\n",
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 1.5),
+                    color: isDarkMode ? Colors.white : Colors.black87,
+                  ),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text:
+                            "${LocaleKeys.forexNewsWidget_detailsWidget_text1.tr()}\n"),
+                    TextSpan(
+                        text:
+                            "\n${LocaleKeys.forexNewsWidget_detailsWidget_text2.tr()}\n\n"),
+                    TextSpan(
+                        text:
+                            "${LocaleKeys.forexNewsWidget_detailsWidget_text3.tr()}\n\n"),
+                    TextSpan(
+                        text:
+                            "${LocaleKeys.forexNewsWidget_detailsWidget_text4.tr()}\n\n"),
+                    TextSpan(
+                        text:
+                            "${LocaleKeys.forexNewsWidget_detailsWidget_text5.tr()}\n"),
+                    TextSpan(
+                        text:
+                            "${LocaleKeys.forexNewsWidget_detailsWidget_text6.tr()}\n\n"),
+                    TextSpan(
+                        text:
+                            "${LocaleKeys.forexNewsWidget_detailsWidget_text7.tr()}\n\n"),
+                    TextSpan(
+                        text:
+                            "${LocaleKeys.forexNewsWidget_detailsWidget_text8.tr()}\n"),
+                  ]),
             ),
             verticalSpaceMedium(context)
           ],

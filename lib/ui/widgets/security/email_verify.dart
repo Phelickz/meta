@@ -60,13 +60,21 @@ class EmailVerificationPage extends StatelessWidget {
                   ),
                   children: [
                     TextSpan(
-                      text: " Susan@gmail.com ",
+                      text: " Susan@gmail.com",
                       style: CustomThemeData.generateStyle(
                         fontSize: McGyver.textSize(context, 1.6),
                         fontWeight: FontWeight.w500,
                         color: isDarkMode
                             ? const Color(0xFF47B0F5)
                             : const Color(0xff77C5F8),
+                      ),
+                    ),
+                    TextSpan(
+                      text: ". ",
+                      style: CustomThemeData.generateStyle(
+                        fontSize: McGyver.textSize(context, 1.6),
+                        fontWeight: FontWeight.w500,
+                        color: isDarkMode ? Colors.white70 : Colors.black87,
                       ),
                     ),
                     TextSpan(
@@ -84,12 +92,23 @@ class EmailVerificationPage extends StatelessWidget {
             text: LocaleKeys.checkMail.tr(),
           ),
           verticalSpaceXSmall(context),
-          CustomButtons.outlineButton(
-            context: context,
+          GestureDetector(
             onTap: () {},
-            text: LocaleKeys.resendCode.tr(),
-            textColor: Theme.of(context).primaryColor,
+            child: Text(
+              LocaleKeys.resendCode.tr(),
+              style: CustomThemeData.generateStyle(
+                fontSize: McGyver.textSize(context, 1.5),
+                fontWeight: FontWeight.w500,
+                color: Theme.of(context).primaryColor,
+              ),
+            ),
           ),
+          // CustomButtons.outlineButton(
+          //   context: context,
+          //   onTap: () {},
+          //   text: LocaleKeys.resendCode.tr(),
+          //   textColor: Theme.of(context).primaryColor,
+          // ),
           verticalSpaceMedium(context),
         ],
       ),
