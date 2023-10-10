@@ -8,7 +8,10 @@ import 'chart_view_model.dart';
 
 @RoutePage()
 class ChartView extends StackedView<ChartViewModel> {
-  const ChartView({super.key, this.showBackButton = false});
+  const ChartView({
+    super.key,
+    this.showBackButton = false,
+  });
   final bool? showBackButton;
 
   @override

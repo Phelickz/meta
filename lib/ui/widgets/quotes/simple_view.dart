@@ -19,6 +19,8 @@ class SimpleMarketView extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: McGyver.rsDoubleW(context, 6)),
       child: Column(
+        // mainAxisAlignment: MainAxisAlignment.start,
+        // crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
           verticalSpaceSmall(context),

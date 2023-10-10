@@ -10,7 +10,6 @@ class StatusTag extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var isDarkMode = CustomThemeData.isDarkMode(context);
     return Container(
       height: 18.pHeight(context),
       width: 50.pWidth(context),
@@ -34,7 +33,7 @@ class StatusTag extends StatelessWidget {
               status,
               style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 1.2),
-                  color: isDarkMode ? Colors.white : Colors.black,
+                  color: Colors.black,
                   fontWeight: FontWeight.w300),
             )
           ],

@@ -53,7 +53,7 @@ class TradeFeatures extends StatelessWidget {
                   title,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.7),
-                    color: isDarkMode ? Colors.white70 : Colors.black,
+                    color: isDarkMode ? Colors.white : Colors.black,
                     fontWeight: FontWeight.normal,
                   ),
                 ),
