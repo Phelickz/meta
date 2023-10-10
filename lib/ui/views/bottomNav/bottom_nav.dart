@@ -13,6 +13,8 @@ import 'package:meta_trader/ui/views/trade/trade_view.dart';
 
 import '../profile/profile_view.dart';
 
+ValueNotifier<int> currentIndex = ValueNotifier<int>(0);
+
 @RoutePage()
 class BottomNavBarView extends StatefulWidget {
   const BottomNavBarView({super.key});
@@ -22,26 +24,30 @@ class BottomNavBarView extends StatefulWidget {
 }
 
 class _BottomNavBarViewState extends State<BottomNavBarView> {
-  int _currentIndex = 0;
-
-  final List<Widget> _tabs = [
-    const HomeView(),
-    const QuotesView(),
-    const ChartView(),
-    const TradeView(),
-    // const TabScreen(title: 'Tab 5'),
-    const ProfileView(),
-  ];
+  // int currentIndex.value = 0;
 
   @override
   Widget build(BuildContext context) {
+    final List<Widget> _tabs = [
+      const HomeView(),
+      const QuotesView(),
+      ChartView(
+        onPressed: () {
+          currentIndex.value = 0;
+          setState(() {});
+        },
+      ),
+      const TradeView(),
+      // const TabScreen(title: 'Tab 5'),
+      const ProfileView(),
+    ];
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return WillPopScope(
       onWillPop: () async {
         return false;
       },
       child: Scaffold(
-        body: _tabs[_currentIndex],
+        body: _tabs[currentIndex.value],
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           elevation: 0,
@@ -58,19 +64,21 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
             fontSize: 13,
             color: isDarkMode ? Colors.white : Theme.of(context).primaryColor,
           ),
-          currentIndex: _currentIndex,
+          currentIndex: currentIndex.value,
           onTap: (index) {
-            setState(() {
-              _currentIndex = index;
-            });
+            // setState(() {
+            //   currentIndex.value = index;
+            // });
+            currentIndex.value = index;
+            setState(() {});
           },
           items: [
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
-                _currentIndex != 0
+                currentIndex.value != 0
                     ? 'assets/images/home_inactive.svg'
                     : 'assets/images/home.svg',
-                color: _currentIndex != 0
+                color: currentIndex.value != 0
                     ? const Color(0xff667085)
                     : Theme.of(context).primaryColor,
                 height: 20,
@@ -80,10 +88,10 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 height: 20,
-                _currentIndex == 1
+                currentIndex.value == 1
                     ? 'assets/images/quotes_selected.svg'
                     : 'assets/images/chart-success.svg',
-                color: _currentIndex != 1
+                color: currentIndex.value != 1
                     ? const Color(0xff667085)
                     : Theme.of(context).primaryColor,
               ),
@@ -92,10 +100,10 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 height: 20,
-                _currentIndex == 2
+                currentIndex.value == 2
                     ? 'assets/images/chart_selected.svg'
                     : 'assets/images/chart.svg',
-                color: _currentIndex != 2
+                color: currentIndex.value != 2
                     ? const Color(0xff667085)
                     : Theme.of(context).primaryColor,
               ),
@@ -104,10 +112,10 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 height: 20,
-                _currentIndex == 3
+                currentIndex.value == 3
                     ? 'assets/images/trade_selected.svg'
                     : 'assets/images/status-up.svg',
-                color: _currentIndex != 3
+                color: currentIndex.value != 3
                     ? const Color(0xff667085)
                     : Theme.of(context).primaryColor,
               ),
@@ -116,10 +124,10 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 height: 20,
-                _currentIndex == 4
+                currentIndex.value == 4
                     ? 'assets/images/user_selected.svg'
                     : 'assets/images/user.svg',
-                color: _currentIndex != 4
+                color: currentIndex.value != 4
                     ? const Color(0xff667085)
                     : Theme.of(context).primaryColor,
               ),

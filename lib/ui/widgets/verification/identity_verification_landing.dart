@@ -152,7 +152,7 @@ class IdentityVerificationLandingPage extends StatelessWidget {
               },
               text: LocaleKeys.continueWord.tr(),
             ),
-            verticalSpaceXSmall(context),
+            verticalSpaceSmall(context),
             GestureDetector(
               onTap: () {
                 model.push(const BottomNavBarRoute());
@@ -160,7 +160,7 @@ class IdentityVerificationLandingPage extends StatelessWidget {
               child: Text(
                 LocaleKeys.skip.tr(),
                 style: CustomThemeData.generateStyle(
-                  fontSize: McGyver.textSize(context, 1.5),
+                  fontSize: McGyver.textSize(context, 1.6),
                   fontWeight: FontWeight.w500,
                   color: Theme.of(context).primaryColor,
                 ),
