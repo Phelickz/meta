@@ -66,7 +66,7 @@ class WithdrawalTile extends StatelessWidget {
                 fontSize: 14,
                 context: context,
                 lightTextColor: (status == LocaleKeys.successful.tr())
-                    ? const Color(0xff20A0F3)
+                    ? Colors.green
                     : (status == LocaleKeys.pending.tr())
                         ? const Color(0xffF79009)
                         : const Color(0xffF04438),
@@ -154,7 +154,7 @@ class DepositTile extends StatelessWidget {
                 fontSize: 14,
                 context: context,
                 lightTextColor: (status == LocaleKeys.successful.tr())
-                    ? const Color(0xff20A0F3)
+                    ? Colors.green
                     : (status == LocaleKeys.pending.tr())
                         ? const Color(0xffF79009)
                         : const Color(0xffF04438),
@@ -240,7 +240,7 @@ class InternalTransferTile extends StatelessWidget {
                 fontSize: 14,
                 context: context,
                 lightTextColor: (status == LocaleKeys.successful.tr())
-                    ? const Color(0xff20A0F3)
+                    ? Colors.green
                     : (status == LocaleKeys.pending.tr())
                         ? const Color(0xffF79009)
                         : const Color(0xffF04438),

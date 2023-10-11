@@ -155,12 +155,15 @@ class VerifyLandingPage extends StatelessWidget {
           ),
         ),
       ),
-      title: Text(
-        title,
-        style: CustomThemeData.generateStyle(
-          fontSize: McGyver.textSize(context, 2),
-          color: isDarkMode ? Colors.white : Colors.black87,
-          fontWeight: FontWeight.bold,
+      title: Padding(
+        padding: const EdgeInsets.only(top: 8.0),
+        child: Text(
+          title,
+          style: CustomThemeData.generateStyle(
+            fontSize: McGyver.textSize(context, 2),
+            color: isDarkMode ? Colors.white : Colors.black87,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
       subtitle: Padding(

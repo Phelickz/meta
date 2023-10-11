@@ -1073,6 +1073,19 @@
       "autoLockText": "قفل خودکار",
       "disableAccount": "غیرفعال کردن حساب",
       "doYouReallyWantToDisable": "آیا واقعاً می‌خواهید حساب را غیرفعال کنید؟"
+    },
+    "faceId": {
+      "faceIdText": "Face ID",
+      "enableFaceId": "فعال‌سازی Face ID",
+      "faceIdDescription": "برای انجام معاملات با سهولت، Face ID را تنظیم کنید",
+      "faceIdSuccess": "Face ID با موفقیت ثبت شد",
+      "disableFaceId": "غیرفعال‌سازی Face ID",
+      "continue": "ادامه",
+      "quit": "خروج",
+      "exit": "خروج",
+      "faceIdNotSupported": "Face ID پشتیبانی نمی‌شود",
+      "faceIdNotSupportedDescription": "متأسفیم، دستگاه شما در حال حاضر از تشخیص چهره پشتیبانی نمی‌کند. شما می‌توانید با استفاده از روش‌های دیگر موجود، احراز هویت کنید.",
+      "faceIdNotEnrolled": "Face ID ثبت نشده است"
     }
   },
   "settings": {

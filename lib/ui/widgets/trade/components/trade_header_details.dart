@@ -96,7 +96,12 @@ class TradeHeaderDetails extends StatelessWidget {
             ],
           ),
           verticalSpaceSmall(context),
-          _TwoTextPercent(context),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              _TwoTextPercent(context),
+            ],
+          ),
           verticalSpaceSmall(context),
           verticalSpaceXSmall(context),
           Row(
@@ -143,16 +148,16 @@ class TradeHeaderDetails extends StatelessWidget {
   Widget _TwoTextPercent(BuildContext context, [bool increment = true]) {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
               "20%",
               style: CustomThemeData.generateStyle(
-                  fontSize: McGyver.textSize(context, 1.8),
-                  fontWeight: FontWeight.w500,
+                  fontSize: McGyver.textSize(context, 2.5),
+                  fontWeight: FontWeight.w800,
                   color: increment
                       ? isDarkMode
                           ? const Color(0xFF69E77C)
@@ -164,7 +169,7 @@ class TradeHeaderDetails extends StatelessWidget {
             Text(
               LocaleKeys.last2Hrs,
               style: CustomThemeData.generateStyle(
-                fontSize: McGyver.textSize(context, 1.3),
+                fontSize: McGyver.textSize(context, 1.5),
                 fontWeight: FontWeight.w500,
                 color: isDarkMode
                     ? const Color(0xFFD0D5DD)

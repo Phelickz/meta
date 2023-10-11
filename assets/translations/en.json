@@ -1072,6 +1072,19 @@
       "autoLockText": "Auto-Lock",
       "disableAccount": "Disable Account",
       "doYouReallyWantToDisable": "Do you really want to disable account?"
+    },
+    "faceId": {
+      "faceIdText": "Face ID",
+      "enableFaceId": "Enable Face ID",
+      "faceIdDescription": "Set up face ID to enable you make transactions with ease",
+      "faceIdSuccess": "Face ID has been registered successfully",
+      "disableFaceId": "Disable Face ID",
+      "continue": "Continue",
+      "quit": "Quit",
+      "exit": "Exit",
+      "faceIdNotSupported": "Face ID not supported",
+      "faceIdNotSupportedDescription": "Sorry, your device does not currently support facial recognition. You can authenticate using other available methods.",
+      "faceIdNotEnrolled": "Face ID not enrolled"
     }
   },
   "settings": {

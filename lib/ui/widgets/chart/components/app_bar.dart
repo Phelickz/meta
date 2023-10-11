@@ -2,13 +2,17 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:meta_trader/app/locator/locator.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
+import 'package:meta_trader/app/services/router_service.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/ui/views/bottomNav/bottom_nav.dart';
 import 'package:meta_trader/ui/views/chart/chart_view_model.dart';
 
 AppBar chartAppBar(
     BuildContext context, String title, String subtitle, ChartViewModel model,
-    {bool showBackButton = false}) {
+    {bool showBackButton = false, void Function()? build}) {
   var isDarkMode = CustomThemeData.isDarkMode(context);
   return AppBar(
     elevation: 0,
@@ -16,15 +20,16 @@ AppBar chartAppBar(
         ? const Color(0xff052844)
         : Theme.of(context).scaffoldBackgroundColor,
     automaticallyImplyLeading: false,
-    leading: showBackButton == true
-        ? IconButton(
-            icon: Icon(
-                Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
-                color: isDarkMode ? const Color(0xffD2D2D2) : Colors.black),
-            onPressed: () {
-              Navigator.pop(context);
-            })
-        : null,
+    leading: IconButton(
+        icon: Icon(Platform.isAndroid ? Icons.arrow_back : Icons.arrow_back_ios,
+            color: isDarkMode ? const Color(0xffD2D2D2) : Colors.black),
+        onPressed: () {
+          if (showBackButton == true) {
+            Navigator.pop(context);
+          } else {
+            build!();
+          }
+        }),
     centerTitle: true,
     title: Row(
       mainAxisAlignment: MainAxisAlignment.center,

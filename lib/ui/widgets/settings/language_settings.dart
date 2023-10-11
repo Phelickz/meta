@@ -1,13 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
-import 'package:meta_trader/generated/locale_keys.g.dart';
 
 import '../../../app/responsiveness/res.dart';
-import '../../../app/utils/strings_manager.dart';
 import '../../../app/utils/theme.dart';
 import '../../views/settings/settings_view_model.dart';
-import '../textfields/textfield.dart';
 
 class LanguageSettingsPage extends StatelessWidget {
   final SettingsViewModel model;

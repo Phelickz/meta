@@ -55,7 +55,7 @@ class EmailVerificationPage extends StatelessWidget {
                     ),
                   ),
                   TextSpan(
-                    text: ' .',
+                    text: '. ',
                     style: CustomThemeData.generateStyle(
                       fontSize: McGyver.textSize(context, 1.6),
                       color: isDarkMode ? Colors.white70 : Colors.black87,
@@ -81,7 +81,7 @@ class EmailVerificationPage extends StatelessWidget {
               },
               text: LocaleKeys.checkMail.tr(),
             ),
-            verticalSpaceXSmall(context),
+            verticalSpaceSmall(context),
             SizedBox(
               child: GestureDetector(
                 onTap: () {
@@ -90,7 +90,8 @@ class EmailVerificationPage extends StatelessWidget {
                 },
                 child: Text(
                   LocaleKeys.resendCode.tr(),
-                  style: TextStyle(
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 1.6),
                     color: Theme.of(context).primaryColor,
                   ),
                 ),

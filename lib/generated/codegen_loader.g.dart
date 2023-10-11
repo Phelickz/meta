@@ -1077,6 +1077,19 @@ class CodegenLoader extends AssetLoader{
       "autoLockText": "Auto-Lock",
       "disableAccount": "Disable Account",
       "doYouReallyWantToDisable": "Do you really want to disable account?"
+    },
+    "faceId": {
+      "faceIdText": "Face ID",
+      "enableFaceId": "Enable Face ID",
+      "faceIdDescription": "Set up face ID to enable you make transactions with ease",
+      "faceIdSuccess": "Face ID has been registered successfully",
+      "disableFaceId": "Disable Face ID",
+      "continue": "Continue",
+      "quit": "Quit",
+      "exit": "Exit",
+      "faceIdNotSupported": "Face ID not supported",
+      "faceIdNotSupportedDescription": "Sorry, your device does not currently support facial recognition. You can authenticate using other available methods.",
+      "faceIdNotEnrolled": "Face ID not enrolled"
     }
   },
   "settings": {
@@ -2330,6 +2343,19 @@ static const Map<String,dynamic> fa = {
       "autoLockText": "قفل خودکار",
       "disableAccount": "غیرفعال کردن حساب",
       "doYouReallyWantToDisable": "آیا واقعاً می‌خواهید حساب را غیرفعال کنید؟"
+    },
+    "faceId": {
+      "faceIdText": "Face ID",
+      "enableFaceId": "فعال‌سازی Face ID",
+      "faceIdDescription": "برای انجام معاملات با سهولت، Face ID را تنظیم کنید",
+      "faceIdSuccess": "Face ID با موفقیت ثبت شد",
+      "disableFaceId": "غیرفعال‌سازی Face ID",
+      "continue": "ادامه",
+      "quit": "خروج",
+      "exit": "خروج",
+      "faceIdNotSupported": "Face ID پشتیبانی نمی‌شود",
+      "faceIdNotSupportedDescription": "متأسفیم، دستگاه شما در حال حاضر از تشخیص چهره پشتیبانی نمی‌کند. شما می‌توانید با استفاده از روش‌های دیگر موجود، احراز هویت کنید.",
+      "faceIdNotEnrolled": "Face ID ثبت نشده است"
     }
   },
   "settings": {
@@ -3583,6 +3609,19 @@ static const Map<String,dynamic> ar = {
       "autoLockText": "القفل التلقائي",
       "disableAccount": "تعطيل الحساب",
       "doYouReallyWantToDisable": "هل ترغب حقًا في تعطيل الحساب؟"
+    },
+    "faceId": {
+      "faceIdText": "Face ID",
+      "enableFaceId": "تمكين Face ID",
+      "faceIdDescription": "قم بإعداد Face ID لتمكينك من إجراء المعاملات بسهولة",
+      "faceIdSuccess": "تم تسجيل Face ID بنجاح",
+      "disableFaceId": "تعطيل Face ID",
+      "continue": "استمرار",
+      "quit": "إنهاء",
+      "exit": "خروج",
+      "faceIdNotSupported": "Face ID غير مدعوم",
+      "faceIdNotSupportedDescription": "عذرًا، جهازك لا يدعم التعرف على الوجه حاليًا. يمكنك المصادقة باستخدام طرق أخرى متاحة.",
+      "faceIdNotEnrolled": "Face ID غير مسجل"
     }
   },
   "settings": {

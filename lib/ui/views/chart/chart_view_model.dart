@@ -29,15 +29,10 @@ class ChartViewModel extends CustomBaseViewModel {
     return ChartPage(viewModel: this);
   }
 
-  AppBar? returnAppBar(BuildContext context, bool showBackButton) {
-    return chartAppBar(
-      context,
-      "USDJPY",
-      "",
-      this,
-      // TODO: set the dynamic field properly
-      showBackButton: true,
-    );
+  AppBar? returnAppBar(
+      BuildContext context, bool showBackButton, void Function()? onPressed) {
+    return chartAppBar(context, "USDJPY", "", this,
+        showBackButton: showBackButton, build: onPressed);
   }
 
   final tabSelectedNotifier = ValueNotifier(0);
