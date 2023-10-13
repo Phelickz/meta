@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
@@ -33,7 +34,9 @@ class PriceSentimentDetails extends StatelessWidget {
           IconButton(
             padding: EdgeInsets.zero,
             onPressed: () {
-              print(model.stars);
+              if (kDebugMode) {
+                print(model.stars);
+              }
               if (model.stars.contains(1)) {
                 model.removeStar(1);
               } else {

@@ -14,6 +14,7 @@ import 'package:stacked_themes/stacked_themes.dart';
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+  // GText.init(enableCaching: true);
 
   /// Sets logging level
   Logger.level = Level.debug;
@@ -55,3 +56,7 @@ Future main() async {
 
 // dart run easy_localization:generate --source-dir ./assets/translations
 // dart run easy_localization:generate --source-dir ./assets/translations -f keys -o locale_keys.g.dart
+
+
+
+//flutter pub run build_runner build --delete-conflicting-outputs

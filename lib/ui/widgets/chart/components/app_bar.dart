@@ -2,12 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:meta_trader/app/locator/locator.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
-import 'package:meta_trader/app/router/router.gr.dart';
-import 'package:meta_trader/app/services/router_service.dart';
 import 'package:meta_trader/app/utils/theme.dart';
-import 'package:meta_trader/ui/views/bottomNav/bottom_nav.dart';
 import 'package:meta_trader/ui/views/chart/chart_view_model.dart';
 
 AppBar chartAppBar(

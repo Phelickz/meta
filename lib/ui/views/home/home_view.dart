@@ -20,8 +20,10 @@ import 'package:meta_trader/ui/widgets/home/price_sentiments.dart';
 import 'package:meta_trader/ui/widgets/home/trading_tools.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:meta_trader/ui/widgets/sliverappbar/fade_scroll_app_bar.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:stacked/stacked.dart';
 
+import '../forex_news/forex_news_view_model.dart';
 import './home_view_model.dart';
 import '../../widgets/home/higher_success_rates.dart';
 import '../../widgets/home/market_news.dart';
@@ -259,31 +261,40 @@ class HomeView extends StackedView<HomeViewModel> {
                 ],
               ),
               verticalSpaceXSmall(context),
-              SizedBox(
-                // height: McGyver.rsDoubleH(context, 35),
-                width: McGyver.rsDoubleW(context, 100),
-                child: Column(
-                  children: [
-                    GestureDetector(
-                        onTap: () {
-                          viewModel.push(const ForexNewsRoute());
-                        },
-                        child: const MarketNews()),
-                    verticalSpaceSmall(context),
-                    GestureDetector(
-                        onTap: () {
-                          viewModel.push(const ForexNewsRoute());
-                        },
-                        child: const MarketNews()),
-                    verticalSpaceSmall(context),
-                    GestureDetector(
-                        onTap: () {
-                          viewModel.push(const ForexNewsRoute());
-                        },
-                        child: const MarketNews()),
-                  ],
-                ),
-              ),
+              (viewModel.allForexNews == null ||
+                      viewModel.allForexNews!.data == null)
+                  ? SizedBox(
+                      height: 100,
+                      width: 100,
+                      child: Shimmer.fromColors(
+                          enabled: (viewModel.allForexNews == null ||
+                              viewModel.allForexNews!.data == null),
+                          baseColor: Colors.grey[300]!,
+                          highlightColor: Colors.white,
+                          child: Container(
+                            color: Colors.red,
+                          )),
+                    )
+                  : Column(
+                      children: viewModel.allForexNews!.data!.take(3).map((e) {
+                        return GestureDetector(
+                            onTap: () {
+                              final m =
+                                  ForexNewsViewModel(loadForexNews: false);
+                              m.setSelectedNews = e;
+                              m.setForexNewsViewEnum =
+                                  ForexNewsViewEnum.details;
+                              viewModel.push(const ForexNewsRoute());
+                            },
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 3.0),
+                              child: MarketNewsOriginal(
+                                newsData: e,
+                              ),
+                            ));
+                      }).toList(),
+                    ),
               // SizedBox(
               //   height: McGyver.rsDoubleH(context, 35),
               //   width: McGyver.rsDoubleW(context, 100),

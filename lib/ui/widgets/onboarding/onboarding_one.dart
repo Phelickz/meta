@@ -7,7 +7,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
-import 'package:meta_trader/generated/codegen_loader.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 

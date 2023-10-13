@@ -3,6 +3,7 @@ import 'package:meta_trader/app/locator/locator.dart';
 import 'package:meta_trader/app/services/router_service.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/app/utils/utils.dart';
+import 'package:one_context/one_context.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 import 'package:easy_localization/easy_localization.dart' as el;
 
@@ -31,12 +32,15 @@ class MetaTraderApp extends StatelessWidget {
             themeMode: themeMode,
             darkTheme: darkTheme,
             builder: (context, child) {
+              child = OneContext().builder(context, child);
               final mediaQueryData = MediaQuery.of(context);
               final scale = mediaQueryData.textScaleFactor.clamp(0.8, 0.9);
-              return MediaQuery(
-                child: child ?? Container(),
+              child = MediaQuery(
+                child: child,
                 data: MediaQuery.of(context).copyWith(textScaleFactor: scale),
               );
+
+              return child;
             },
             localizationsDelegates: context.localizationDelegates,
             supportedLocales: context.supportedLocales,
