@@ -8,7 +8,7 @@ import '../utils/theme.dart';
 
 @lazySingleton
 class SnackBarService {
-  void showSnackBar1(String message) {
+  void showSnackBar(String message) {
     // context.sh
     OneContext.instance.showSnackBar(
       builder: (context) => SnackBar(

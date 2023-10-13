@@ -129,6 +129,7 @@ abstract class $MetaTraderRouter extends _i48.RootStackRouter {
         child: _i4.ChartView(
           key: args.key,
           showBackButton: args.showBackButton,
+          onPressed: args.onPressed,
         ),
       );
     },
@@ -513,12 +514,14 @@ class ChartRoute extends _i48.PageRouteInfo<ChartRouteArgs> {
   ChartRoute({
     _i49.Key? key,
     bool? showBackButton = false,
+    void Function()? onPressed,
     List<_i48.PageRouteInfo>? children,
   }) : super(
           ChartRoute.name,
           args: ChartRouteArgs(
             key: key,
             showBackButton: showBackButton,
+            onPressed: onPressed,
           ),
           initialChildren: children,
         );
@@ -533,15 +536,18 @@ class ChartRouteArgs {
   const ChartRouteArgs({
     this.key,
     this.showBackButton = false,
+    this.onPressed,
   });
 
   final _i49.Key? key;
 
   final bool? showBackButton;
 
+  final void Function()? onPressed;
+
   @override
   String toString() {
-    return 'ChartRouteArgs{key: $key, showBackButton: $showBackButton}';
+    return 'ChartRouteArgs{key: $key, showBackButton: $showBackButton, onPressed: $onPressed}';
   }
 }
 

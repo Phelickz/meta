@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_final_fields, duplicate_ignore
+
 import 'dart:io';
 
 import 'package:easy_localization/easy_localization.dart';

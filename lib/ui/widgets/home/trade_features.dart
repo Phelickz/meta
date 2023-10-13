@@ -51,6 +51,8 @@ class TradeFeatures extends StatelessWidget {
                 verticalSpaceXSmall(context),
                 Text(
                   title,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.7),
                     color: isDarkMode ? Colors.white70 : Colors.black,
@@ -60,6 +62,8 @@ class TradeFeatures extends StatelessWidget {
                 verticalSpaceXSmall(context),
                 Text(
                   subtitle,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                   style: CustomThemeData.generateStyle(
                     fontSize: McGyver.textSize(context, 1.3),
                     color: isDarkMode ? Colors.white70 : Colors.black54,

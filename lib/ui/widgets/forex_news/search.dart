@@ -7,6 +7,7 @@ import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/forex_news/forex_news_view_model.dart';
 import 'package:meta_trader/ui/widgets/home/market_news.dart';
+import 'package:shimmer/shimmer.dart';
 
 class Search extends StatelessWidget {
   const Search({super.key, required this.model});
@@ -35,6 +36,10 @@ class Search extends StatelessWidget {
                     model.setTyping = true;
                   } else {
                     model.setTyping = false;
+                  }
+                  model.setSearchText = value;
+                  if (value != null && value.length > 2) {
+                    model.fetchAllSearchNews(value);
                   }
                 },
                 decoration: InputDecoration(
@@ -97,30 +102,42 @@ class Search extends StatelessWidget {
                     ],
                   ),
                   verticalSpaceXXSmall(context),
-                  Column(
-                    children: [
-                      GestureDetector(
-                          onTap: () {
-                            model.setForexNewsViewEnum =
-                                ForexNewsViewEnum.details;
-                          },
-                          child: const MarketNews()),
-                      verticalSpaceSmall(context),
-                      GestureDetector(
-                          onTap: () {
-                            model.setForexNewsViewEnum =
-                                ForexNewsViewEnum.details;
-                          },
-                          child: const MarketNews()),
-                      verticalSpaceSmall(context),
-                      GestureDetector(
-                          onTap: () {
-                            model.setForexNewsViewEnum =
-                                ForexNewsViewEnum.details;
-                          },
-                          child: const MarketNews())
-                    ],
-                  ),
+                  (model.searchForexNews == null ||
+                          model.searchForexNews!.data == null)
+                      ? Container()
+                      : (model.searchForexNews == null ||
+                                  model.searchForexNews!.data == null) &&
+                              (model.searchText ?? "").isNotEmpty
+                          ? SizedBox(
+                              height: 100,
+                              width: 100,
+                              child: Shimmer.fromColors(
+                                  enabled: (model.searchForexNews == null ||
+                                      model.searchForexNews!.data == null),
+                                  baseColor: Colors.grey[300]!,
+                                  highlightColor: Colors.white,
+                                  child: Container(
+                                    color: Colors.red,
+                                  )),
+                            )
+                          : Column(
+                              children:
+                                  model.searchForexNews!.data!.take(3).map((e) {
+                                return GestureDetector(
+                                    onTap: () {
+                                      model.setSelectedNews = e;
+                                      model.setForexNewsViewEnum =
+                                          ForexNewsViewEnum.details;
+                                    },
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 3.0),
+                                      child: MarketNewsOriginal(
+                                        newsData: e,
+                                      ),
+                                    ));
+                              }).toList(),
+                            ),
                   // SizedBox(
                   //   height: McGyver.rsDoubleH(context, 33),
                   //   width: McGyver.rsDoubleW(context, 100),
@@ -136,61 +153,61 @@ class Search extends StatelessWidget {
                   //   ),
                   // ),
                   verticalSpaceMedium(context),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        LocaleKeys.forexNewsWidget_searchWidget_moreResult,
-                        style: CustomThemeData.generateStyle(
-                          fontSize: McGyver.textSize(context, 2),
-                          fontWeight: FontWeight.bold,
-                          color: isDarkMode
-                              ? const Color(0xff98A2B3)
-                              : const Color(0xff475467),
-                        ),
-                      ).tr(),
-                    ],
-                  ),
-                  verticalSpaceXXSmall(context),
-                  Column(
-                    children: [
-                      GestureDetector(
-                          onTap: () {
-                            model.setForexNewsViewEnum =
-                                ForexNewsViewEnum.details;
-                          },
-                          child: const MarketNews()),
-                      verticalSpaceSmall(context),
-                      GestureDetector(
-                          onTap: () {
-                            model.setForexNewsViewEnum =
-                                ForexNewsViewEnum.details;
-                          },
-                          child: const MarketNews()),
-                      verticalSpaceSmall(context),
-                      GestureDetector(
-                          onTap: () {
-                            model.setForexNewsViewEnum =
-                                ForexNewsViewEnum.details;
-                          },
-                          child: const MarketNews())
-                    ],
-                  ),
-                  verticalSpaceSmall(context),
-                  // SizedBox(
-                  //   height: McGyver.rsDoubleH(context, 33),
-                  //   width: McGyver.rsDoubleW(context, 100),
-                  //   child: ListView.separated(
-                  //     physics: const NeverScrollableScrollPhysics(),
-                  //     itemCount: 3,
-                  //     itemBuilder: (context, index) {
-                  //       return const MarketNews();
-                  //     },
-                  //     separatorBuilder: (BuildContext context, int index) {
-                  //       return verticalSpaceSmall(context);
-                  //     },
-                  //   ),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //   children: [
+                  //     Text(
+                  //       LocaleKeys.forexNewsWidget_searchWidget_moreResult,
+                  //       style: CustomThemeData.generateStyle(
+                  //         fontSize: McGyver.textSize(context, 2),
+                  //         fontWeight: FontWeight.bold,
+                  //         color: isDarkMode
+                  //             ? const Color(0xff98A2B3)
+                  //             : const Color(0xff475467),
+                  //       ),
+                  //     ).tr(),
+                  //   ],
                   // ),
+                  // verticalSpaceXXSmall(context),
+                  // Column(
+                  //   children: [
+                  //     GestureDetector(
+                  //         onTap: () {
+                  //           model.setForexNewsViewEnum =
+                  //               ForexNewsViewEnum.details;
+                  //         },
+                  //         child: const MarketNews()),
+                  //     verticalSpaceSmall(context),
+                  //     GestureDetector(
+                  //         onTap: () {
+                  //           model.setForexNewsViewEnum =
+                  //               ForexNewsViewEnum.details;
+                  //         },
+                  //         child: const MarketNews()),
+                  //     verticalSpaceSmall(context),
+                  //     GestureDetector(
+                  //         onTap: () {
+                  //           model.setForexNewsViewEnum =
+                  //               ForexNewsViewEnum.details;
+                  //         },
+                  //         child: const MarketNews())
+                  //   ],
+                  // ),
+                  // verticalSpaceSmall(context),
+                  // // SizedBox(
+                  // //   height: McGyver.rsDoubleH(context, 33),
+                  // //   width: McGyver.rsDoubleW(context, 100),
+                  // //   child: ListView.separated(
+                  // //     physics: const NeverScrollableScrollPhysics(),
+                  // //     itemCount: 3,
+                  // //     itemBuilder: (context, index) {
+                  // //       return const MarketNews();
+                  // //     },
+                  // //     separatorBuilder: (BuildContext context, int index) {
+                  // //       return verticalSpaceSmall(context);
+                  // //     },
+                  // //   ),
+                  // // ),
                 ],
               ),
             ),

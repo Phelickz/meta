@@ -39,6 +39,7 @@ class ForexNewsView extends StackedView<ForexNewsViewModel> {
           : viewModel.forexNewsViewEnum == ForexNewsViewEnum.details
               ? DetailNews(model: viewModel)
               : ContainedTabBarView(
+                  key: viewModel.key,
                   tabs: [
                     Text(
                       LocaleKeys.views_forexNews_forexModel_all.tr(),
