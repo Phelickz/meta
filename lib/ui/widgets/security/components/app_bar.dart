@@ -1,7 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/locator/locator.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
+import 'package:meta_trader/app/router/router.gr.dart';
+import 'package:meta_trader/app/services/router_service.dart';
 
 import '../../../../app/utils/theme.dart';
 import '../../../views/security/security_view_model.dart';
@@ -98,6 +101,8 @@ PreferredSizeWidget securityAppBar2(BuildContext context, String title,
           onTap: () {
             if (model.securityPageEnum == SecurityPageEnum.main) {
               Navigator.pop(context);
+              final router = locator<RouterService>();
+              router.router.replaceAll([const BottomNavBarRoute()]);
             }
 
             if (model.securityPageEnum == SecurityPageEnum.passkey) {

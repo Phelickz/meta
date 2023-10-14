@@ -4,10 +4,10 @@ import 'package:flutter_svg/svg.dart';
 import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/app/utils/utils.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/forex_news/forex_news_view_model.dart';
 import 'package:meta_trader/ui/widgets/home/market_news.dart';
-import 'package:shimmer/shimmer.dart';
 
 class Search extends StatelessWidget {
   const Search({super.key, required this.model});
@@ -111,14 +111,11 @@ class Search extends StatelessWidget {
                           ? SizedBox(
                               height: 100,
                               width: 100,
-                              child: Shimmer.fromColors(
-                                  enabled: (model.searchForexNews == null ||
-                                      model.searchForexNews!.data == null),
-                                  baseColor: Colors.grey[300]!,
-                                  highlightColor: Colors.white,
-                                  child: Container(
-                                    color: Colors.red,
-                                  )),
+                              child: Utils.showShimmer(
+                                enabled: (model.searchForexNews == null ||
+                                    model.searchForexNews!.data == null),
+                                context: context,
+                              ),
                             )
                           : Column(
                               children:

@@ -17,6 +17,7 @@ class SecurityView extends StackedView<SecurityViewModel> {
     SecurityViewModel viewModel,
     Widget? child,
   ) {
+    viewModel.updateValue();
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Skeleton(
       isBusy: viewModel.isBusy,

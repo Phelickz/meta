@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/router/router.gr.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
+import 'package:meta_trader/app/utils/extension.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/security/components/change_password_modal.dart';
 
@@ -49,15 +50,27 @@ class SecurityMainPage extends StatelessWidget {
           ],
         ),
         verticalSpaceSmall(context),
+        // SecurityOptionTile(
+        //   assetName: "assets/images/shield_security.svg",
+        //   vm: model,
+        //   hasLeadingIcon: true,
+        //   hasStatus: true,
+        //   label: LocaleKeys.passkey.tr(),
+        //   status: SecurityOptionStatus.confirmed,
+        //   onTap: () => model.securityPageEnum = SecurityPageEnum.passkey,
+        // ),
         SecurityOptionTile(
-          assetName: "assets/images/shield_security.svg",
-          vm: model,
-          hasLeadingIcon: true,
-          hasStatus: true,
-          label: LocaleKeys.passkey.tr(),
-          status: SecurityOptionStatus.confirmed,
-          onTap: () => model.securityPageEnum = SecurityPageEnum.passkey,
-        ),
+            assetName: "assets/images/shield_security.svg",
+            vm: model,
+            hasLeadingIcon: true,
+            hasStatus: true,
+            label: LocaleKeys.securityWidget_passcode_passcodeText.tr(),
+            status: model.currentPasscode.isNullOrEmpty
+                ? SecurityOptionStatus.unconfirmed
+                : SecurityOptionStatus.confirmed,
+            onTap: () {
+              model.push(const PasscodeRoute());
+            }),
         SecurityOptionTile(
           assetName: "assets/images/message_text.svg",
           vm: model,
@@ -87,12 +100,14 @@ class SecurityMainPage extends StatelessWidget {
           onTap: () => showChangePasswordModal(context),
         ),
         SecurityOptionTile(
-            assetName: "assets/images/password_check.svg",
+            assetName: "assets/icons/faceidicon.svg",
             vm: model,
             label: LocaleKeys.securityWidget_faceId_faceIdText.tr(),
             hasStatus: true,
             hasLeadingIcon: true,
-            status: SecurityOptionStatus.confirmed,
+            status: model.isFaceIdEnabled == true
+                ? SecurityOptionStatus.confirmed
+                : SecurityOptionStatus.unconfirmed,
             // onTap: () => model.securityPageEnum = SecurityPageEnum.password,
             onTap: () {
               model.push(const FaceIDRoute());

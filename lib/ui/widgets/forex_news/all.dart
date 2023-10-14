@@ -9,7 +9,6 @@ import 'package:meta_trader/app/utils/utils.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/forex_news/forex_news_view_model.dart';
 import 'package:meta_trader/ui/widgets/home/market_news.dart';
-import 'package:shimmer/shimmer.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 class ForexNewsAll extends StatelessWidget {
@@ -68,14 +67,11 @@ class ForexNewsAll extends StatelessWidget {
               ? SizedBox(
                   height: 100,
                   width: 100,
-                  child: Shimmer.fromColors(
-                      enabled: (model.allCurrencyPairNews == null ||
-                          model.allCurrencyPairNews!.data == null),
-                      baseColor: Colors.grey[300]!,
-                      highlightColor: Colors.white,
-                      child: Container(
-                        color: Colors.red,
-                      )),
+                  child: Utils.showShimmer(
+                    enabled: (model.allCurrencyPairNews == null ||
+                        model.allCurrencyPairNews!.data == null),
+                    context: context,
+                  ),
                 )
               : Column(
                   children: model.allCurrencyPairNews!.data!.take(3).map((e) {
@@ -122,14 +118,11 @@ class ForexNewsAll extends StatelessWidget {
               ? SizedBox(
                   height: 100,
                   width: 100,
-                  child: Shimmer.fromColors(
-                      enabled: (model.allMetalNews == null ||
-                          model.allMetalNews!.data == null),
-                      baseColor: Colors.grey[300]!,
-                      highlightColor: Colors.white,
-                      child: Container(
-                        color: Colors.red,
-                      )),
+                  child: Utils.showShimmer(
+                    enabled: (model.allMetalNews == null ||
+                        model.allMetalNews!.data == null),
+                    context: context,
+                  ),
                 )
               : Column(
                   children: model.allMetalNews!.data!.take(3).map((e) {
@@ -176,14 +169,11 @@ class ForexNewsAll extends StatelessWidget {
               ? SizedBox(
                   height: 100,
                   width: 100,
-                  child: Shimmer.fromColors(
-                      enabled: (model.allForexNews == null ||
-                          model.allForexNews!.data == null),
-                      baseColor: Colors.grey[300]!,
-                      highlightColor: Colors.white,
-                      child: Container(
-                        color: Colors.red,
-                      )),
+                  child: Utils.showShimmer(
+                    enabled: (model.allForexNews == null ||
+                        model.allForexNews!.data == null),
+                    context: context,
+                  ),
                 )
               : Column(
                   children: model.allForexNews!.data!.take(3).map((e) {
@@ -222,14 +212,11 @@ class TrendingWidget extends StatelessWidget {
           ? SizedBox(
               height: 100,
               width: 400,
-              child: Shimmer.fromColors(
-                  enabled: (model.trendingHeadline == null ||
-                      model.trendingHeadline!.data == null),
-                  baseColor: Colors.grey[300]!,
-                  highlightColor: Colors.white,
-                  child: Container(
-                    color: Colors.red,
-                  )),
+              child: Utils.showShimmer(
+                enabled: (model.trendingHeadline == null ||
+                    model.trendingHeadline!.data == null),
+                context: context,
+              ),
             )
           : Row(
               children: model.trendingHeadline!.data!

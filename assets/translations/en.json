@@ -1085,6 +1085,21 @@
       "faceIdNotSupported": "Face ID not supported",
       "faceIdNotSupportedDescription": "Sorry, your device does not currently support facial recognition. You can authenticate using other available methods.",
       "faceIdNotEnrolled": "Face ID not enrolled"
+    },
+    "passcode": {
+      "passcodeText": "Passcode",
+      "enablePasscode": "Enable Passcode",
+      "passcodeDescription": "Set up passcode to enable you make transactions with ease",
+      "passcodeSuccess": "Passcode has been registered successfully",
+      "disablePasscode": "Disable Passcode",
+      "enterPasscode": "Enter Passcode",
+      "reenterPasscode": "Re-enter Passcode",
+      "passcodeNotMatched": "Passcode not matched",
+      "invalidPasscode": "Invalid Passcode",
+      "resetPasscode": "Reset",
+      "continue": "Continue",
+      "quit": "Quit",
+      "exit": "Exit"
     }
   },
   "settings": {

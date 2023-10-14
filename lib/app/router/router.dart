@@ -50,6 +50,7 @@ class MetaTraderRouter extends $MetaTraderRouter {
         AdaptiveRoute(page: ManageAccountPasswordPage.page),
         AdaptiveRoute(page: ManageAccountLoginPage.page),
         AdaptiveRoute(page: BuySellSuccess.page),
-        AdaptiveRoute(page: FaceIDRoute.page)
+        AdaptiveRoute(page: FaceIDRoute.page),
+        AdaptiveRoute(page: PasscodeRoute.page),
       ];
 }

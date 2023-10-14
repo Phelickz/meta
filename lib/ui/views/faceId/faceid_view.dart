@@ -10,7 +10,7 @@ import 'package:meta_trader/app/services/router_service.dart';
 import 'package:meta_trader/app/utils/dimensions.dart';
 import 'package:meta_trader/app/utils/theme.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
-import 'package:meta_trader/ui/views/faceId/faceId_view_model.dart';
+import 'package:meta_trader/ui/views/faceId/faceid_view_model.dart';
 import 'package:meta_trader/ui/widgets/buttons/buttons.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:stacked/stacked.dart';
@@ -34,9 +34,9 @@ class FaceIDView extends StackedView<FaceIDViewModel> {
     var isDarkMode = CustomThemeData.isDarkMode(context);
     return Skeleton(
       isBusy: viewModel.isBusy,
-      bodyPadding: EdgeInsets.symmetric(
-        horizontal: McGyver.rsDoubleW(context, 0),
-      ),
+      // bodyPadding: EdgeInsets.symmetric(
+      //   horizontal: McGyver.rsDoubleW(context, 0),
+      // ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -54,7 +54,9 @@ class FaceIDView extends StackedView<FaceIDViewModel> {
                 horizontal: McGyver.rsDoubleW(context, 4),
               ),
               child: Text(
-                LocaleKeys.securityWidget_faceId_enableFaceId.tr(),
+                viewModel.isFaceIdEnabled == true
+                    ? LocaleKeys.securityWidget_faceId_disableFaceId.tr()
+                    : LocaleKeys.securityWidget_faceId_enableFaceId.tr(),
                 textAlign: TextAlign.center,
                 style: CustomThemeData.generateStyle(
                   fontSize: McGyver.textSize(context, 2.6),
@@ -66,68 +68,137 @@ class FaceIDView extends StackedView<FaceIDViewModel> {
               ).tr(),
             ),
             verticalSpaceSmall(context),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: McGyver.rsDoubleW(context, 4),
+            if (viewModel.isFaceIdEnabled == true) ...[
+              verticalSpaceMedium(context),
+              CustomButtons.generalButton(
+                context: context,
+                onTap: () async {
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        backgroundColor:
+                            Theme.of(context).scaffoldBackgroundColor,
+                        // backgroundColor:
+                        //     isDarkMode ? const Color(0xff073961) : Colors.white,
+                        title: Text(
+                          LocaleKeys.securityWidget_faceId_disableFaceId.tr(),
+                          style: CustomThemeData.generateStyle(
+                            fontSize: 18,
+                            color: isDarkMode ? Colors.white : Colors.black87,
+                          ),
+                        ),
+                        actions: <Widget>[
+                          // usually buttons at the bottom of the dialog
+                          TextButton(
+                            child: Text(
+                              LocaleKeys.cancel.tr(),
+                              style: CustomThemeData.generateStyle(
+                                fontSize: 18,
+                                color: Theme.of(context).primaryColor,
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.maybePop(context);
+                            },
+                          ),
+                          TextButton(
+                            child: Text(
+                              LocaleKeys.confirm.tr(),
+                              style: CustomThemeData.generateStyle(
+                                fontSize: 18,
+                                color: Theme.of(context).primaryColor,
+                              ),
+                            ),
+                            onPressed: () {
+                              viewModel.removeFaceIdEnabled();
+                              Navigator.maybePop(context);
+                            },
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
+                text: LocaleKeys.securityWidget_faceId_disableFaceId.tr(),
               ),
-              child: Text(
-                LocaleKeys.securityWidget_faceId_faceIdDescription.tr(),
-                textAlign: TextAlign.center,
-                style: CustomThemeData.generateStyle(
-                  fontSize: McGyver.textSize(context, 1.8),
-                  fontWeight: FontWeight.w500,
-                  color: isDarkMode
-                      ? const Color(0xff98A2B3)
-                      : const Color(0xFF667085),
+              verticalSpaceXSmall(context),
+              CustomButtons.outlineButton(
+                context: context,
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                text: LocaleKeys.securityWidget_faceId_quit.tr(),
+                textColor: Theme.of(context).primaryColor,
+              ),
+              verticalSpaceMedium(context),
+            ],
+            if (viewModel.isFaceIdEnabled != true) ...[
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: McGyver.rsDoubleW(context, 4),
+                ),
+                child: Text(
+                  LocaleKeys.securityWidget_faceId_faceIdDescription.tr(),
+                  textAlign: TextAlign.center,
+                  style: CustomThemeData.generateStyle(
+                    fontSize: McGyver.textSize(context, 1.8),
+                    fontWeight: FontWeight.w500,
+                    color: isDarkMode
+                        ? const Color(0xff98A2B3)
+                        : const Color(0xFF667085),
+                  ),
                 ),
               ),
-            ),
-            verticalSpaceMedium(context),
-            CustomButtons.generalButton(
-              context: context,
-              onTap: () async {
-                final LocalAuthentication auth = LocalAuthentication();
-                // ···
-                final bool canAuthenticateWithBiometrics =
-                    await auth.canCheckBiometrics;
-                final bool canAuthenticate = canAuthenticateWithBiometrics ||
-                    await auth.isDeviceSupported();
+              verticalSpaceMedium(context),
+              CustomButtons.generalButton(
+                context: context,
+                onTap: () async {
+                  final LocalAuthentication auth = LocalAuthentication();
+                  // ···
+                  final bool canAuthenticateWithBiometrics =
+                      await auth.canCheckBiometrics;
+                  final bool canAuthenticate = canAuthenticateWithBiometrics ||
+                      await auth.isDeviceSupported();
 
-                if (canAuthenticate == true) {
-                  final bool didAuthenticate = await auth.authenticate(
-                    localizedReason:
-                        LocaleKeys.securityWidget_faceId_faceIdDescription,
-                    options: const AuthenticationOptions(
-                        biometricOnly: true, stickyAuth: true),
-                  );
+                  if (canAuthenticate == true) {
+                    final bool didAuthenticate = await auth.authenticate(
+                      localizedReason:
+                          LocaleKeys.securityWidget_faceId_faceIdDescription,
+                      options: const AuthenticationOptions(
+                          biometricOnly: true, stickyAuth: true),
+                    );
 
-                  if (didAuthenticate) {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const FaceIDSuccessful()));
+                    if (didAuthenticate) {
+                      viewModel.setIsFaceIdEnabled = true;
+                      await viewModel.saveFaceIdEnabled();
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const FaceIDSuccessful()));
+                    }
+                  } else {
+                    //show error
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return const FaceIDNotSupportedDialog();
+                        });
                   }
-                } else {
-                  //show error
-                  showDialog(
-                      context: context,
-                      builder: (context) {
-                        return const FaceIDNotSupportedDialog();
-                      });
-                }
-              },
-              text: LocaleKeys.securityWidget_faceId_continue.tr(),
-            ),
-            verticalSpaceXSmall(context),
-            CustomButtons.outlineButton(
-              context: context,
-              onTap: () {
-                Navigator.pop(context);
-              },
-              text: LocaleKeys.securityWidget_faceId_quit.tr(),
-              textColor: Theme.of(context).primaryColor,
-            ),
-            verticalSpaceMedium(context),
+                },
+                text: LocaleKeys.securityWidget_faceId_continue.tr(),
+              ),
+              verticalSpaceXSmall(context),
+              CustomButtons.outlineButton(
+                context: context,
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                text: LocaleKeys.securityWidget_faceId_quit.tr(),
+                textColor: Theme.of(context).primaryColor,
+              ),
+              verticalSpaceMedium(context),
+            ]
           ],
         ),
       ),
@@ -319,20 +390,28 @@ class FaceIDSuccessful extends StatelessWidget {
               context: context,
               onTap: () async {
                 final router = locator<RouterService>();
-                router.router.replaceAll([const BottomNavBarRoute()]);
+                // router.router.replaceAll([const BottomNavBarRoute()]);
+                router.router.pushAndPopUntil(
+                  const SecurityRoute(),
+                  predicate: (route) => false,
+                );
               },
               text: LocaleKeys.securityWidget_faceId_exit.tr(),
             ),
             verticalSpaceXSmall(context),
-            CustomButtons.outlineButton(
-              context: context,
-              onTap: () {
-                final router = locator<RouterService>();
-                router.router.replaceAll([const BottomNavBarRoute()]);
-              },
-              text: LocaleKeys.securityWidget_faceId_disableFaceId.tr(),
-              textColor: Theme.of(context).primaryColor,
-            ),
+            // CustomButtons.outlineButton(
+            //   context: context,
+            //   onTap: () {
+            //     final router = locator<RouterService>();
+            //     // router.router.replaceAll([const BottomNavBarRoute()]);
+            //     router.router.pushAndPopUntil(
+            //       const SecurityRoute(),
+            //       predicate: (route) => false,
+            //     );
+            //   },
+            //   text: LocaleKeys.securityWidget_faceId_disableFaceId.tr(),
+            //   textColor: Theme.of(context).primaryColor,
+            // ),
             verticalSpaceMedium(context),
           ],
         ),

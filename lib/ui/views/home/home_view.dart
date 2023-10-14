@@ -20,7 +20,6 @@ import 'package:meta_trader/ui/widgets/home/price_sentiments.dart';
 import 'package:meta_trader/ui/widgets/home/trading_tools.dart';
 import 'package:meta_trader/ui/widgets/skeleton.dart';
 import 'package:meta_trader/ui/widgets/sliverappbar/fade_scroll_app_bar.dart';
-import 'package:shimmer/shimmer.dart';
 import 'package:stacked/stacked.dart';
 
 import '../forex_news/forex_news_view_model.dart';
@@ -266,14 +265,11 @@ class HomeView extends StackedView<HomeViewModel> {
                   ? SizedBox(
                       height: 100,
                       width: 100,
-                      child: Shimmer.fromColors(
-                          enabled: (viewModel.allForexNews == null ||
-                              viewModel.allForexNews!.data == null),
-                          baseColor: Colors.grey[300]!,
-                          highlightColor: Colors.white,
-                          child: Container(
-                            color: Colors.red,
-                          )),
+                      child: Utils.showShimmer(
+                        enabled: (viewModel.allForexNews == null ||
+                            viewModel.allForexNews!.data == null),
+                        context: context,
+                      ),
                     )
                   : Column(
                       children: viewModel.allForexNews!.data!.take(3).map((e) {

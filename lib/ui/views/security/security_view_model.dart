@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:meta_trader/app/utils/constants.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/widgets/security/add_passkey.dart';
 import 'package:meta_trader/ui/widgets/security/auto_lock.dart';
@@ -10,6 +11,7 @@ import 'package:meta_trader/ui/widgets/security/passkey_added_success.dart';
 import 'package:meta_trader/ui/widgets/security/phone_verified_success.dart';
 import 'package:meta_trader/ui/widgets/security/phone_verify.dart';
 import 'package:meta_trader/ui/widgets/security/security_main.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../app/core/custom_base_view_model.dart';
 import '../../widgets/security/add_passkey_enter.dart';
@@ -33,6 +35,18 @@ enum SecurityPageEnum {
 }
 
 class SecurityViewModel extends CustomBaseViewModel {
+  SecurityViewModel() {
+    getPasscode().then((value) {
+      _currentPasscode = value;
+      rebuildUi();
+    });
+
+    getFaceIdEnabled().then((value) {
+      _isFaceIdEnabled = value ?? false;
+      rebuildUi();
+    });
+  }
+
   SecurityPageEnum _securityPageEnum = SecurityPageEnum.main;
   SecurityPageEnum get securityPageEnum => _securityPageEnum;
 
@@ -41,8 +55,26 @@ class SecurityViewModel extends CustomBaseViewModel {
     rebuildUi();
   }
 
+  void updateValue() {
+    getPasscode().then((value) {
+      _currentPasscode = value;
+      rebuildUi();
+    });
+
+    getFaceIdEnabled().then((value) {
+      _isFaceIdEnabled = value ?? false;
+      rebuildUi();
+    });
+  }
+
   bool isPatternLockEnabled = false;
   bool isFaceLockEnabled = false;
+
+  String? _currentPasscode;
+  String? get currentPasscode => _currentPasscode;
+
+  bool _isFaceIdEnabled = false;
+  bool get isFaceIdEnabled => _isFaceIdEnabled;
 
   void onPatternLockChanged(bool val) {
     isPatternLockEnabled = val;
@@ -52,6 +84,18 @@ class SecurityViewModel extends CustomBaseViewModel {
   void onFaceLockChanged(bool val) {
     isFaceLockEnabled = val;
     rebuildUi();
+  }
+
+  // get passcode
+  Future<String?> getPasscode() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getString(Constants.passcode);
+  }
+
+  // get faceIdEnabled
+  Future<bool?> getFaceIdEnabled() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(Constants.faceIdEnabled);
   }
 
   bool get isPasskeyEmpty => true;

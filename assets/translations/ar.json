@@ -1086,6 +1086,21 @@
       "faceIdNotSupported": "Face ID غير مدعوم",
       "faceIdNotSupportedDescription": "عذرًا، جهازك لا يدعم التعرف على الوجه حاليًا. يمكنك المصادقة باستخدام طرق أخرى متاحة.",
       "faceIdNotEnrolled": "Face ID غير مسجل"
+    },
+    "passcode": {
+      "passcodeText": "رمز المرور",
+      "enablePasscode": "تمكين رمز المرور",
+      "passcodeDescription": "قم بإعداد رمز المرور لتمكينك من إجراء المعاملات بسهولة",
+      "passcodeSuccess": "تم تسجيل رمز المرور بنجاح",
+      "disablePasscode": "تعطيل رمز المرور",
+      "enterPasscode": "أدخل رمز المرور",
+      "reenterPasscode": "أعد إدخال رمز المرور",
+      "passcodeNotMatched": "رمز المرور غير متطابق",
+      "invalidPasscode": "رمز المرور غير صالح",
+      "resetPasscode": "إعادة تعيين",
+      "continue": "استمرار",
+      "quit": "إنهاء",
+      "exit": "خروج"
     }
   },
   "settings": {

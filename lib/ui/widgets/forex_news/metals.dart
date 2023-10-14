@@ -4,11 +4,11 @@ import 'package:meta_trader/app/responsiveness/res.dart';
 import 'package:meta_trader/app/responsiveness/size.dart';
 import 'package:meta_trader/app/utils/color_manager.dart';
 import 'package:meta_trader/app/utils/theme.dart';
+import 'package:meta_trader/app/utils/utils.dart';
 import 'package:meta_trader/generated/locale_keys.g.dart';
 import 'package:meta_trader/ui/views/forex_news/forex_news_view_model.dart';
 import 'package:meta_trader/ui/widgets/forex_news/all.dart';
 import 'package:meta_trader/ui/widgets/home/market_news.dart';
-import 'package:shimmer/shimmer.dart';
 
 class Metals extends StatelessWidget {
   const Metals({super.key, required this.model});
@@ -98,14 +98,11 @@ class Metals extends StatelessWidget {
               ? SizedBox(
                   height: 100,
                   width: 100,
-                  child: Shimmer.fromColors(
-                      enabled: (model.allMetalNews == null ||
-                          model.allMetalNews!.data == null),
-                      baseColor: Colors.grey[300]!,
-                      highlightColor: Colors.white,
-                      child: Container(
-                        color: Colors.red,
-                      )),
+                  child: Utils.showShimmer(
+                    enabled: (model.allMetalNews == null ||
+                        model.allMetalNews!.data == null),
+                    context: context,
+                  ),
                 )
               : Column(
                   children: model.allMetalNews!.data!.map((e) {

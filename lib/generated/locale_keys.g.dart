@@ -1411,6 +1411,31 @@ abstract class LocaleKeys {
   static const securityWidget_faceId_faceIdNotEnrolled =
       'securityWidget.faceId.faceIdNotEnrolled';
   static const securityWidget_faceId = 'securityWidget.faceId';
+  static const securityWidget_passcode_passcodeText =
+      'securityWidget.passcode.passcodeText';
+  static const securityWidget_passcode_enablePasscode =
+      'securityWidget.passcode.enablePasscode';
+  static const securityWidget_passcode_passcodeDescription =
+      'securityWidget.passcode.passcodeDescription';
+  static const securityWidget_passcode_passcodeSuccess =
+      'securityWidget.passcode.passcodeSuccess';
+  static const securityWidget_passcode_disablePasscode =
+      'securityWidget.passcode.disablePasscode';
+  static const securityWidget_passcode_enterPasscode =
+      'securityWidget.passcode.enterPasscode';
+  static const securityWidget_passcode_reenterPasscode =
+      'securityWidget.passcode.reenterPasscode';
+  static const securityWidget_passcode_passcodeNotMatched =
+      'securityWidget.passcode.passcodeNotMatched';
+  static const securityWidget_passcode_invalidPasscode =
+      'securityWidget.passcode.invalidPasscode';
+  static const securityWidget_passcode_resetPasscode =
+      'securityWidget.passcode.resetPasscode';
+  static const securityWidget_passcode_continue =
+      'securityWidget.passcode.continue';
+  static const securityWidget_passcode_quit = 'securityWidget.passcode.quit';
+  static const securityWidget_passcode_exit = 'securityWidget.passcode.exit';
+  static const securityWidget_passcode = 'securityWidget.passcode';
   static const securityWidget = 'securityWidget';
   static const settings_settingsText = 'settings.settingsText';
   static const settings_aboutUs_serviceAgreement =

@@ -23,3 +23,9 @@ extension TimeOfDayExtensions on TimeOfDay {
 bool isDirectionRTL(BuildContext context) {
   return intl.Bidi.isRtlLanguage(context.locale.toString());
 }
+
+// extension on variable for checking if it is null or empty
+
+extension StringExtension on String? {
+  bool get isNullOrEmpty => this == null || this!.isEmpty;
+}

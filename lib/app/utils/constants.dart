@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:meta_trader/app/utils/utils.dart';
 
 class Constants {
-  /// For Example
-  /// static const String MY_AWESOME_CONSTANT = 'yazeed';
-  ///
+  static const String faceIdEnabled = 'faceIdEnabled';
+  static const String passcode = 'passcode';
 
   static EdgeInsets getPadding(BuildContext context, dynamic padding) {
     // Define a variable to store the padding value.

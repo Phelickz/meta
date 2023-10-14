@@ -1086,6 +1086,21 @@
       "faceIdNotSupported": "Face ID پشتیبانی نمی‌شود",
       "faceIdNotSupportedDescription": "متأسفیم، دستگاه شما در حال حاضر از تشخیص چهره پشتیبانی نمی‌کند. شما می‌توانید با استفاده از روش‌های دیگر موجود، احراز هویت کنید.",
       "faceIdNotEnrolled": "Face ID ثبت نشده است"
+    },
+    "passcode": {
+      "passcodeText": "رمز عبور",
+      "enablePasscode": "فعال‌سازی رمز عبور",
+      "passcodeDescription": "برای انجام معاملات با سهولت، رمز عبور را تنظیم کنید",
+      "passcodeSuccess": "رمز عبور با موفقیت ثبت شد",
+      "disablePasscode": "غیرفعال‌سازی رمز عبور",
+      "enterPasscode": "رمز عبور را وارد کنید",
+      "reenterPasscode": "رمز عبور را مجدداً وارد کنید",
+      "passcodeNotMatched": "رمز عبور مطابقت ندارد",
+      "invalidPasscode": "رمز عبور نامعتبر است",
+      "resetPasscode": "بازنشانی",
+      "continue": "ادامه",
+      "quit": "خروج",
+      "exit": "خروج"
     }
   },
   "settings": {

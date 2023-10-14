@@ -1090,6 +1090,21 @@ class CodegenLoader extends AssetLoader{
       "faceIdNotSupported": "Face ID not supported",
       "faceIdNotSupportedDescription": "Sorry, your device does not currently support facial recognition. You can authenticate using other available methods.",
       "faceIdNotEnrolled": "Face ID not enrolled"
+    },
+    "passcode": {
+      "passcodeText": "Passcode",
+      "enablePasscode": "Enable Passcode",
+      "passcodeDescription": "Set up passcode to enable you make transactions with ease",
+      "passcodeSuccess": "Passcode has been registered successfully",
+      "disablePasscode": "Disable Passcode",
+      "enterPasscode": "Enter Passcode",
+      "reenterPasscode": "Re-enter Passcode",
+      "passcodeNotMatched": "Passcode not matched",
+      "invalidPasscode": "Invalid Passcode",
+      "resetPasscode": "Reset",
+      "continue": "Continue",
+      "quit": "Quit",
+      "exit": "Exit"
     }
   },
   "settings": {
@@ -2356,6 +2371,21 @@ static const Map<String,dynamic> fa = {
       "faceIdNotSupported": "Face ID پشتیبانی نمی‌شود",
       "faceIdNotSupportedDescription": "متأسفیم، دستگاه شما در حال حاضر از تشخیص چهره پشتیبانی نمی‌کند. شما می‌توانید با استفاده از روش‌های دیگر موجود، احراز هویت کنید.",
       "faceIdNotEnrolled": "Face ID ثبت نشده است"
+    },
+    "passcode": {
+      "passcodeText": "رمز عبور",
+      "enablePasscode": "فعال‌سازی رمز عبور",
+      "passcodeDescription": "برای انجام معاملات با سهولت، رمز عبور را تنظیم کنید",
+      "passcodeSuccess": "رمز عبور با موفقیت ثبت شد",
+      "disablePasscode": "غیرفعال‌سازی رمز عبور",
+      "enterPasscode": "رمز عبور را وارد کنید",
+      "reenterPasscode": "رمز عبور را مجدداً وارد کنید",
+      "passcodeNotMatched": "رمز عبور مطابقت ندارد",
+      "invalidPasscode": "رمز عبور نامعتبر است",
+      "resetPasscode": "بازنشانی",
+      "continue": "ادامه",
+      "quit": "خروج",
+      "exit": "خروج"
     }
   },
   "settings": {
@@ -3622,6 +3652,21 @@ static const Map<String,dynamic> ar = {
       "faceIdNotSupported": "Face ID غير مدعوم",
       "faceIdNotSupportedDescription": "عذرًا، جهازك لا يدعم التعرف على الوجه حاليًا. يمكنك المصادقة باستخدام طرق أخرى متاحة.",
       "faceIdNotEnrolled": "Face ID غير مسجل"
+    },
+    "passcode": {
+      "passcodeText": "رمز المرور",
+      "enablePasscode": "تمكين رمز المرور",
+      "passcodeDescription": "قم بإعداد رمز المرور لتمكينك من إجراء المعاملات بسهولة",
+      "passcodeSuccess": "تم تسجيل رمز المرور بنجاح",
+      "disablePasscode": "تعطيل رمز المرور",
+      "enterPasscode": "أدخل رمز المرور",
+      "reenterPasscode": "أعد إدخال رمز المرور",
+      "passcodeNotMatched": "رمز المرور غير متطابق",
+      "invalidPasscode": "رمز المرور غير صالح",
+      "resetPasscode": "إعادة تعيين",
+      "continue": "استمرار",
+      "quit": "إنهاء",
+      "exit": "خروج"
     }
   },
   "settings": {

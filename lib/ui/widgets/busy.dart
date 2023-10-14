@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:meta_trader/app/utils/theme.dart';
 
 import '../../app/responsiveness/res.dart';
 
@@ -9,10 +10,13 @@ class Busy extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = CustomThemeData.isDarkMode(context);
     return Stack(
       children: [
         Container(
-          color: Colors.white60,
+          color: isDarkMode
+              ? const Color(0xff073961).withOpacity(0.5)
+              : Colors.white60,
           height: McGyver.rsDoubleH(context, 100),
         ),
         const Busy1(),
@@ -31,6 +35,7 @@ class Busy1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = CustomThemeData.isDarkMode(context);
     return Center(
       child: Card(
         elevation: 1,
@@ -42,7 +47,7 @@ class Busy1 extends StatelessWidget {
           height: 80.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            color: Colors.white,
+            color: isDarkMode ? const Color(0xff073961) : Colors.white,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
